@@ -1,0 +1,15 @@
+.. title:: Help
+
+.. meta::
+    :description: Report any issues with MIRTK or request new features on GitHub.
+
+============
+Getting Help
+============
+
+Please report any issues with the MIRTK libraries and command-line tools,
+including bug reports, feature requests, or support questions, on GitHub.
+
+- `View or report issues with core modules <https://github.com/MIRTK/MIRTK/issues>`__.
+- `View or report issues with Deformable module <https://github.com/MIRTK/Deformable/issues>`__.
+- `View or report issues with VolumetricMapping module <https://github.com/MIRTK/VolumetricMapping/issues>`__.

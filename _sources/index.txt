@@ -1,0 +1,59 @@
+.. title:: Home
+
+==========================================
+Medical Image Registration ToolKit (MIRTK)
+==========================================
+
+The MIRTK is a research-focused image processing toolkit, developed at the
+BioMedIA_ research group. It provides a collection of libraries and command-line
+tools to assist in processing and analyzing imaging data.
+The main application of the MIRTK is in adult and neonatal brain MR image registration
+as well as the reconstruction of cortical surface meshes. The modular project
+organization of the MIRTK enables the installation of selected modules.
+
+In the event you found the MIRTK useful, please consider giving appropriate credit
+to the software with a citation of the research article(s) describing the implemented
+algorithm(s). See the :doc:`list of publications <publications>` for suitable references.
+
+===================  ==============================================================================
+Module               Brief Description
+===================  ==============================================================================
+|Common|             Base classes and common functions. (required)
+|Image|              Image readers/writers and basic image processing filters.
+|Numerics|           Utility types such as matrices and functions for numerical optimization.
+|PointSet|           VTK point set/surface filters. Required for point set/surface registration.
+|Registration|       Image and point set registration library.
+|Transformation|     Image and point set transformation types and regularization terms.
+|Deformable|         Library for Euler integration of deformable meshes such as cortical surfaces.
+|VolumetricMapping|  Filters for the volumetric mapping of brain volumes.
+|LBFGS|              Limited memory Broyden–Fletcher–Goldfarb–Shanno (BFGS) optimizer.
+|NIfTI|              NIfTI image reader and writer.
+===================  ==============================================================================
+
+.. include:: module_refs.rst
+
+Parts of the Common, Numerics, Image, Transformation, and Registration modules of
+the MIRTK originated from the `Legacy IRTK`_ written by `Daniel Rueckert`_ and `Julia Schnabel`_.
+All of the transformation and registration code of the IRTK was rewritten from scratch by `Andreas Schuh`_
+during his PhD studies, with a new modular and extended registration framework. Additional
+modules for the reconstruction and inflation of cortical surface meshes, the registration
+of surface meshes, and the harmonic mapping of brain volumes were subsequently added to the MIRTK.
+The source code of the MIRTK library became the foundation of the `IRTK 2`_, whose development
+is currently in progress.
+
+.. note::
+
+    Latest bug fixes and additional features are currently only available in the MIRTK.
+    Other applications and command-line tools such as the image viewer, basic image manipulation
+    tools, and the Segmentation module of the Legacy IRTK are not included in the MIRTK.
+    An installation of the MIRTK will not be required as soon as a IRTK 2 release which
+    includes all MIRTK modules is available. Until then, an installation of both the MIRTK
+    and IRTK 2 is recommended.
+
+
+.. _BioMedIA: https://biomedia.doc.ic.ac.uk/
+.. _Daniel Rueckert: http://www.imperial.ac.uk/people/d.rueckert
+.. _Julia Schnabel: http://www.imagingcdt.com/about/cdt-management/professor-julia-schnabel
+.. _Andreas Schuh: http://www.andreasschuh.com/
+.. _Legacy IRTK: https://github.com/BioMedIA/irtk-legacy
+.. _IRTK 2: https://github.com/BioMedIA/IRTK

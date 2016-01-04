@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['s2i',['S2I',['../classmirtk_1_1BaseImage.html#a299eb7f11bb568c28d3435d12e65ecf2aa7905c0e7d1a8e48c10841a607bba0e9',1,'mirtk::BaseImage']]],
+  ['selfintersection',['SelfIntersection',['../classmirtk_1_1SurfaceCollisions.html#a4fed86a64222a6738f8f0e7911eee58aa37935f63fe3759d1e9cdf3bcc12ed40d',1,'mirtk::SurfaceCollisions']]],
+  ['shortest_5fedge',['SHORTEST_EDGE',['../classmirtk_1_1PolyDataRemeshing.html#a4c01955dc5dcfe6321754270e576f3c2aafc270a3fca2f6a667b6817d9c6a3952',1,'mirtk::PolyDataRemeshing']]],
+  ['sim_5fcc',['SIM_CC',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5badcc266d58fc5c857cb91c0a76276f298',1,'mirtk']]],
+  ['sim_5fcr_5fxy',['SIM_CR_XY',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5baa2e200ad52e2b99c70a8c4522d83762b',1,'mirtk']]],
+  ['sim_5fcr_5fyx',['SIM_CR_YX',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5ba51551cf7b7dc4f19be8b3e6bfe0cbc3d',1,'mirtk']]],
+  ['sim_5fje',['SIM_JE',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5ba24f96dc61ba1a69f5e235e1c9e14996b',1,'mirtk']]],
+  ['sim_5flncc',['SIM_LNCC',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5ba841246096d8c3b78b5977edaaa470a91',1,'mirtk']]],
+  ['sim_5fmi',['SIM_MI',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5babf17be98e3a496074e4365d38619b65e',1,'mirtk']]],
+  ['sim_5fngf_5fcos',['SIM_NGF_COS',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5bacea25a05a11e585376a14851b64137e0',1,'mirtk']]],
+  ['sim_5fnmi',['SIM_NMI',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5ba0426fc5835f1dfb44e2976c868c7ae17',1,'mirtk']]],
+  ['sim_5fssd',['SIM_SSD',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5bafa5d1dd790e51cdafe421a2d6590b46f',1,'mirtk']]],
+  ['sim_5funknown',['SIM_Unknown',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5baac0a8609ca085ee88c5dabef367011b7',1,'mirtk']]],
+  ['spectralmatch',['SpectralMatch',['../classmirtk_1_1PointCorrespondence.html#a395d3a470b911e2432a5ad75f0bd0474ac7d506bd6141cad69f75ad3151762303',1,'mirtk::PointCorrespondence']]],
+  ['squared',['Squared',['../classmirtk_1_1RadialErrorFunction.html#aaedf1ab900d502f62829a058a1430cf5a8742850f0c175551e369b2387294e9b2',1,'mirtk::RadialErrorFunction']]],
+  ['startevent',['StartEvent',['../namespacemirtk.html#a713bab184e30352ae34d9d6b0605744dabe6d89095930a04bc023eea0155b4118',1,'mirtk']]],
+  ['statusevent',['StatusEvent',['../namespacemirtk.html#a713bab184e30352ae34d9d6b0605744da47876da7a63c4f80b254f1bd4d7e299b',1,'mirtk']]]
+];

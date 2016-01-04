@@ -1,0 +1,4 @@
+<map id="mirtk::ConvolutionFunction::ConvolveMirroredForegroundInX&lt; TKernel &gt;" name="mirtk::ConvolutionFunction::ConvolveMirroredForegroundInX&lt; TKernel &gt;">
+<area shape="rect" id="node2" href="$classmirtk_1_1ConvolutionFunction_1_1MirroredForegroundConvolution1D.html" title="Base class of 1D convolution functions which mirror the foreground into background. " alt="" coords="5,160,253,325"/>
+<area shape="rect" id="node3" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n||+ join()\l+ split()\l+ IsReduction()\l}" alt="" coords="58,5,201,112"/>
+</map>

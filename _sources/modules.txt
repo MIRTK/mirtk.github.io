@@ -1,0 +1,128 @@
+.. _Modules:
+
+=======
+Modules
+=======
+
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+
+   module/core/common
+   module/core/numerics
+   module/core/image
+   module/core/pointset
+   module/core/transformation
+   module/core/registration
+   module/external/deformable
+   module/external/volumetricmapping
+   module/thirdparty/nifti
+   module/thirdparty/lbfgs
+
+
+.. _CoreModules:
+
+Core Modules
+============
+
+The core modules are always included in the MIRTK source tree.
+
+Common
+------
+
+.. include:: module/core/common_abstract.rst
+
+:doc:`[more] <module/core/common>`
+
+
+Numerics
+--------
+
+.. include:: module/core/numerics_abstract.rst
+
+:doc:`[more] <module/core/numerics>`
+
+
+Image
+-----
+
+.. include:: module/core/image_abstract.rst
+
+:doc:`[more] <module/core/image>`
+
+
+Point Set
+---------
+
+.. include:: module/core/pointset_abstract.rst
+
+:doc:`[more] <module/core/pointset>`
+
+
+Transformation
+--------------
+
+.. include:: module/core/transformation_abstract.rst
+
+:doc:`[more] <module/core/transformation>`
+
+
+.. _RegistrationAbstract:
+
+Registration
+------------
+
+.. include:: module/core/registration_abstract.rst
+
+:doc:`[more] <module/core/registration>`
+
+
+
+.. _ExternalModules:
+
+External Modules
+================
+
+Additional modules which are developed and maintained separate from the core
+modules in their own respective repository are referred to as external modules.
+These are either loosely bound optional modules or modules contributed by users.
+
+Deformable
+----------
+
+.. include:: module/external/deformable_abstract.rst
+
+:doc:`[more] <module/external/deformable>`
+
+
+Volumetric Mapping
+------------------
+
+.. include:: module/external/volumetricmapping_abstract.rst
+
+:doc:`[more] <module/external/volumetricmapping>`
+
+
+
+.. _ThirdPartyModules:
+
+Third-party Modules
+===================
+
+The following modules provide features of third-party libraries such as additional
+image file formats and numerical optimization methods.
+
+NIfTI
+-----
+
+.. include:: module/thirdparty/nifti_abstract.rst
+
+:doc:`[more] <module/thirdparty/nifti>`
+
+
+LBFGS
+-----
+
+.. include:: module/thirdparty/lbfgs_abstract.rst
+
+:doc:`[more] <module/thirdparty/lbfgs>`

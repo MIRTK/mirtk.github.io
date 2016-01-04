@@ -1,0 +1,5 @@
+<map id="mirtk::ConvolutionFunction::DownsampleConvolvedExtendedForegroundInZ&lt; TVoxel, TKernel &gt;" name="mirtk::ConvolutionFunction::DownsampleConvolvedExtendedForegroundInZ&lt; TVoxel, TKernel &gt;">
+<area shape="rect" id="node2" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveExtendedForegroundInZ.html" title="Compute convolution for given voxel along z dimension. " alt="" coords="31,373,274,524"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1ConvolutionFunction_1_1ExtendedForegroundConvolution1D.html" title="Base class of 1D convolution functions which extends the foreground into background. " alt="" coords="25,160,280,325"/>
+<area shape="rect" id="node4" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n||+ join()\l+ split()\l+ IsReduction()\l}" alt="" coords="81,5,224,112"/>
+</map>

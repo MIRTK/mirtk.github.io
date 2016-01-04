@@ -1,0 +1,5 @@
+=========================
+Volumetric Mapping Module
+=========================
+
+.. include:: volumetricmapping_abstract.rst

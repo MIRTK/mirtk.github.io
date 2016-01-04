@@ -1,0 +1,183 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Home &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v1.0 (215e970)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="sidebar.html" />
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="sidebar.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="modules.html" title="Modules"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="sidebar.html" title="&lt;no title&gt;"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="sidebar.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="medical-image-registration-toolkit-mirtk">
+<h1>Medical Image Registration ToolKit (MIRTK)<a class="headerlink" href="#medical-image-registration-toolkit-mirtk" title="Permalink to this headline">¶</a></h1>
+<p>The MIRTK is a research-focused image processing toolkit, developed at the
+<a class="reference external" href="https://biomedia.doc.ic.ac.uk/">BioMedIA</a> research group. It provides a collection of libraries and command-line
+tools to assist in processing and analyzing imaging data.
+The main application of the MIRTK is in adult and neonatal brain MR image registration
+as well as the reconstruction of cortical surface meshes. The modular project
+organization of the MIRTK enables the installation of selected modules.</p>
+<p>In the event you found the MIRTK useful, please consider giving appropriate credit
+to the software with a citation of the research article(s) describing the implemented
+algorithm(s). See the <a class="reference internal" href="publications.html"><em>list of publications</em></a> for suitable references.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Module</th>
+<th class="head">Brief Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="module/core/common.html"><em>Common</em></a></td>
+<td>Base classes and common functions. (required)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="module/core/image.html"><em>Image</em></a></td>
+<td>Image readers/writers and basic image processing filters.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a></td>
+<td>Utility types such as matrices and functions for numerical optimization.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a></td>
+<td>VTK point set/surface filters. Required for point set/surface registration.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="module/core/registration.html"><em>Registration</em></a></td>
+<td>Image and point set registration library.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="module/core/transformation.html"><em>Transformation</em></a></td>
+<td>Image and point set transformation types and regularization terms.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="module/external/deformable.html"><em>Deformable</em></a></td>
+<td>Library for Euler integration of deformable meshes such as cortical surfaces.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="module/external/volumetricmapping.html"><em>VolumetricMapping</em></a></td>
+<td>Filters for the volumetric mapping of brain volumes.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="module/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
+<td>Limited memory Broyden–Fletcher–Goldfarb–Shanno (BFGS) optimizer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="module/thirdparty/nifti.html"><em>NIfTI</em></a></td>
+<td>NIfTI image reader and writer.</td>
+</tr>
+</tbody>
+</table>
+<p>Parts of the Common, Numerics, Image, Transformation, and Registration modules of
+the MIRTK originated from the <a class="reference external" href="https://github.com/BioMedIA/irtk-legacy">Legacy IRTK</a> written by <a class="reference external" href="http://www.imperial.ac.uk/people/d.rueckert">Daniel Rueckert</a> and <a class="reference external" href="http://www.imagingcdt.com/about/cdt-management/professor-julia-schnabel">Julia Schnabel</a>.
+All of the transformation and registration code of the IRTK was rewritten from scratch by <a class="reference external" href="http://www.andreasschuh.com/">Andreas Schuh</a>
+during his PhD studies, with a new modular and extended registration framework. Additional
+modules for the reconstruction and inflation of cortical surface meshes, the registration
+of surface meshes, and the harmonic mapping of brain volumes were subsequently added to the MIRTK.
+The source code of the MIRTK library became the foundation of the <a class="reference external" href="https://github.com/BioMedIA/IRTK">IRTK 2</a>, whose development
+is currently in progress.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Latest bug fixes and additional features are currently only available in the MIRTK.
+Other applications and command-line tools such as the image viewer, basic image manipulation
+tools, and the Segmentation module of the Legacy IRTK are not included in the MIRTK.
+An installation of the MIRTK will not be required as soon as a IRTK 2 release which
+includes all MIRTK modules is available. Until then, an installation of both the MIRTK
+and IRTK 2 is recommended.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="modules.html" title="Modules"
+             >next</a></li>
+        <li class="right" >
+          <a href="sidebar.html" title="&lt;no title&gt;"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

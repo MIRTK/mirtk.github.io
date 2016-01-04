@@ -1,0 +1,5 @@
+============
+NIfTI Module
+============
+
+.. include:: nifti_abstract.rst

@@ -1,0 +1,180 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="Download the MIRTK software." name="description" />
+
+    <title>Download &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v1.0 (215e970)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="sidebar.html" />
+    <link rel="next" title="Installation" href="install.html" />
+    <link rel="prev" title="Release Notes" href="changelog.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="install.html" title="Installation"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="changelog.html" title="Release Notes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">News</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Download</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#source-code">Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-license">Software License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="download">
+<h1>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="source-code">
+<span id="downloadsources"></span><h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
+<p>The source code of the Medical Image Registration ToolKit (MIRTK) is hosted on <a class="reference external" href="https://github.com/">GitHub</a>
+under the <a class="reference external" href="https://github.com/MIRTK/">MIRTK Organization</a> from which all releases and latest development
+versions can be downloaded. See the <a class="reference internal" href="changelog.html"><em>Release Notes</em></a> for a summary of changes in each release.</p>
+<p>To download the MIRTK source files using <a class="reference external" href="https://git-scm.com">Git</a>, run</p>
+<div class="highlight-bash"><div class="highlight"><pre>git clone --depth<span class="o">=</span><span class="m">1</span> -- https://github.com/MIRTK/MIRTK.git
+<span class="nb">export </span><span class="nv">MIRTK_SOURCE_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PWD</span><span class="s2">/MIRTK&quot;</span>
+<span class="nb">export </span><span class="nv">MIRTK_BINARY_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$MIRTK_SOURCE_DIR</span><span class="s2">/Build&quot;</span>
+<span class="nb">cd</span> <span class="nv">$MIRTK_SOURCE_DIR</span>
+</pre></div>
+</div>
+<p>where the <cite>&#8211;depth=1</cite> option requests a shallow clone of the current
+development files excluding previous revisions in order to save bandwidth,
+download time, and disk space. It may be omitted if you want to see the
+development history and contribute to the MIRTK.</p>
+<p>The MIRTK repository includes copies of the Boost and Eigen library header files
+required to build some of the core modules of the MIRTK. Either install these
+libraries using the official installation packages for your operating system
+or initialize the desired Git submodules before configuring the MIRTK build:</p>
+<div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- Modules/ThirdParty/Boost
+git submodule update --init -- Modules/ThirdParty/Eigen
+</pre></div>
+</div>
+<p>The source files of commonly used MIRTK modules are directly included in the
+top-level MIRTK project under the Modules/ subdirectory. Further optional
+modules which are developed and distributed in their own respective Git
+repository are included as Git submodules in the Modules/External/ directory.
+To also build these optional modules, initialize and update the needed Git
+submodules before (re-)configuring the build files, e.g.:</p>
+<div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- Modules/External/Deformable
+git submodule update --init -- Modules/External/VolumetricMapping
+</pre></div>
+</div>
+<p>To build the online documentation from the reStructuredText (.rst) files in
+the Documentation subdirectory, clone also the MIRTK Documentation repository:</p>
+<div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- Documentation
+</pre></div>
+</div>
+</div>
+<div class="section" id="system-requirements">
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<p><strong>Operating System:</strong>  Linux, Mac OS X, Microsoft Windows</p>
+</div>
+<div class="section" id="software-license">
+<h2>Software License<a class="headerlink" href="#software-license" title="Permalink to this headline">¶</a></h2>
+<p>The MIRTK is distributed under the terms of the
+<a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License Version 2</a>.
+The license enables usage of MIRTK in both commercial and non-commercial applications,
+without restrictions on the licensing applied to the combined work.</p>
+<p>The MIRTK Git repository includes source files and references to Git submodule repositories
+whose source files are covered by their own respective license terms which are compatible
+with the MIRTK license. See the following links for details:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/MIRTK/Boost">ThirdParty/Boost</a>: <a class="reference external" href="http://www.boost.org/users/license.html">Boost Software License Version 1.0</a></li>
+<li><a class="reference external" href="https://github.com/MIRTK/Eigen">ThirdParty/Eigen</a>: <a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a></li>
+<li><a class="reference external" href="https://github.com/MIRTK/MIRTK/tree/master/ThirdParty/LBFGS">ThirdParty/LBFGS</a>: <a class="reference external" href="https://opensource.org/licenses/MIT">The MIT License</a></li>
+<li><a class="reference external" href="https://github.com/MIRTK/MIRTK/tree/master/ThirdParty/NIfTI">ThirdParty/NIfTI</a>: <a class="reference external" href="https://en.wikipedia.org/wiki/Public_domain">Public domain</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="install.html" title="Installation"
+             >next</a></li>
+        <li class="right" >
+          <a href="changelog.html" title="Release Notes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

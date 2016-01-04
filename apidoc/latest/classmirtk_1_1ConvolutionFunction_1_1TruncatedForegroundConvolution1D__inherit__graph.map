@@ -1,0 +1,7 @@
+<map id="mirtk::ConvolutionFunction::TruncatedForegroundConvolution1D&lt; TKernel &gt;" name="mirtk::ConvolutionFunction::TruncatedForegroundConvolution1D&lt; TKernel &gt;">
+<area shape="rect" id="node3" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInT.html" title="Compute convolution for given voxel along t dimension. " alt="" coords="5,439,252,605"/>
+<area shape="rect" id="node4" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInX.html" title="Compute convolution of voxel with kernel in x dimension. " alt="" coords="276,439,523,605"/>
+<area shape="rect" id="node5" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInY.html" title="Compute convolution for given voxel along y dimension. " alt="" coords="547,432,793,612"/>
+<area shape="rect" id="node6" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInZ.html" title="Compute convolution for given voxel along z dimension. " alt="" coords="817,432,1064,612"/>
+<area shape="rect" id="node2" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n||+ join()\l+ split()\l+ IsReduction()\l}" alt="" coords="463,5,605,112"/>
+</map>

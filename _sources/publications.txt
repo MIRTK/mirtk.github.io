@@ -1,0 +1,51 @@
+.. title:: Publications
+
+.. meta::
+   :description: MIRTK Publications. Academic articles/papers about MIRTK tools.
+   :keywords: MIRTK Publication, MIRTK Validation, MIRTK FFD, MIRTK Applications.
+
+.. role:: red
+.. role:: blue
+.. role:: underline
+
+.. |br| raw:: html
+
+   <br />
+
+============
+Publications
+============
+
+
+Classic FFD
+===========
+
+The following papers introduce the classic B-spline free-form deformation (FFD) algorithm.
+
+.. [MICCAI01] A generic framework for non-rigid registration based on non-uniform multi-level free-form deformations. |br| J. A. Schnabel, D. Rueckert, M. Quist, J. M. Blackall, A. D. Castellano Smith, T. Hartkens, G. P. Penney, |br| W. A. Hall, H. Liu, C. L. Truwit, F. A. Gerritsen, D. L. G. Hill, and D. J. Hawkes. |br| In Fourth Int. Conf. on Medical Image Computing and Computer-Assisted Intervention (MICCAI '01), |br| pages 573-581, Utrecht, NL, October 2001.
+
+.. [TMI99] Non-rigid registration using free-form deformations: Application to breast MR images. |br| D. Rueckert, L. I. Sonoda, C. Hayes, D. L. G. Hill, M. O. Leach, and D. J. Hawkes. |br| IEEE Transactions on Medical Imaging, 18(8):712-721, 1999.
+
+.. [JCAT99] Comparison and evaluation of rigid and non-rigid registration of breast MR images. |br| E. R. E. Denton, L. I. Sonoda, D. Rueckert, S. C. Rankin, C. Hayes, M. Leach, D. L. G. Hill, and D. J. Hawkes. |br| Journal of Computer Assisted Tomography, 23:800-805, 1999.
+
+
+Sparse FFD
+==========
+
+The use of the sparsity constraint for the spatio-temporal registration of cardiac image sequences
+was first published in the following conference article.
+
+.. [MICCAI12] Registration Using Sparse Free-Form Deformations. |br| W. Shi, X. Zhuang, L. Pizarro, W. Bai, H. Wang, K.-P. Tung, P. Edwards, and D. Rueckert. |br| In 15th Int. Conf. on Medical Image Computing. and Computer-Assisted Intervention (MICCAI '12), |br| LNCS 7511:659-666, 2012.
+
+
+Symmetric SVFFD
+===============
+
+The details and application of the symmetric diffeomorphic registration which parameterizes the
+non-rigid transformation by a stationary velocity field with B-spline interpolation can be found
+in the following workshop paper.
+
+.. [STIA14] Construction of a 4D Brain Atlas and Growth Model using Diffeomorphic Registration. |br| A. Schuh, M. Murgasova, A. Makropoulos, C. Ledig, S. J. Counsell, J. V. Hajnal, P. Aljabar D. Rueckert (2014). |br| In 3rd MICCAI Workshop on Spatiotemporal Image Analysis for Longitudinal and Time-Series Image Data (STIA), |br| LNCS 8682, pp. 27-37, Boston, MA (2014)
+
+|br|
+

@@ -1,0 +1,423 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="Build and installation instructions for &lt;project&gt;." name="description" />
+
+    <title>Installation &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v1.0 (215e970)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="sidebar.html" />
+    <link rel="next" title="Getting Help" href="help.html" />
+    <link rel="prev" title="Download" href="download.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="help.html" title="Getting Help"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="download.html" title="Download"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cmake-gui-example">CMake GUI Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-by-step">Step-by-step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dependency-not-found">Dependency not found</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#build">Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="dependencies">
+<span id="builddependencies"></span><h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>The MIRTK source code requires the following third-party libraries to be installed.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="5%" />
+<col width="18%" />
+<col width="35%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Third-party library</th>
+<th class="head">Version</th>
+<th class="head">Included as</th>
+<th class="head">Required by module(s)</th>
+<th class="head">Optionally used by</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://www.threadingbuildingblocks.org">Intel TBB</a></td>
+<td>any</td>
+<td>System</td>
+<td>No module</td>
+<td>All modules</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.boost.org">Boost</a></td>
+<td>1.48</td>
+<td>System or Git submodule</td>
+<td><a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a>, <a class="reference internal" href="module/core/transformation.html"><em>Transformation</em></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://eigen.tuxfamily.org">Eigen</a></td>
+<td>3.0</td>
+<td>System or Git submodule</td>
+<td><a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/external/volumetricmapping.html"><em>VolumetricMapping</em></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.caam.rice.edu/software/ARPACK/">ARPACK</a> / <a class="reference external" href="https://people.sc.fsu.edu/~jburkardt/cpp_src/umfpack/umfpack.html">UMFPACK</a></td>
+<td>any</td>
+<td>System</td>
+<td>No module</td>
+<td><a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://www.vtk.org">VTK</a></td>
+<td>6.0</td>
+<td>System</td>
+<td><a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a>, <a class="reference internal" href="module/external/deformable.html"><em>Deformable</em></a>, <a class="reference internal" href="module/external/volumetricmapping.html"><em>VolumetricMapping</em></a></td>
+<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a>, <a class="reference internal" href="module/core/registration.html"><em>Registration</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.libpng.org">libpng</a></td>
+<td>any</td>
+<td>System</td>
+<td>No module</td>
+<td><a class="reference internal" href="module/core/image.html"><em>Image</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://sourceforge.net/projects/niftilib/">NiftiCLib</a></td>
+<td>any</td>
+<td>System or Source code</td>
+<td>No module</td>
+<td><a class="reference internal" href="module/thirdparty/nifti.html"><em>NIfTI</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.chokkan.org/software/liblbfgs/">libLBFGS</a></td>
+<td>any</td>
+<td>Source code</td>
+<td>No module</td>
+<td><a class="reference internal" href="module/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
+</tr>
+</tbody>
+</table>
+<p>Only libraries marked as &#8220;Included as&#8221; <strong>System</strong> must be installed separately
+before building the MIRTK libraries and command-line tools. <a class="reference external" href="http://www.boost.org">Boost</a> and <a class="reference external" href="http://eigen.tuxfamily.org">Eigen</a> are a minimum
+requirement to build MIRTK. The needed source files of these header-only libraries can
+optionally be copied into the MIRTK <cite>ThirdParty/</cite> directory as described in the
+<a class="reference internal" href="download.html#downloadsources"><span>download instructions</span></a>.</p>
+<p>The intra-module dependencies are as follows. When a module is enabled,
+all modules required by this module are automatically enabled as well.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="49%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Module</th>
+<th class="head">Requires module(s)</th>
+<th class="head">Optionally uses module(s)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="module/core/common.html"><em>Common</em></a></td>
+<td>No other module</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a></td>
+<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="module/core/image.html"><em>Image</em></a></td>
+<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="module/core/transformation.html"><em>Transformation</em></a></td>
+<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a></td>
+<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a>, <a class="reference internal" href="module/core/transformation.html"><em>Transformation</em></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="module/core/registration.html"><em>Registration</em></a></td>
+<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a>, <a class="reference internal" href="module/core/transformation.html"><em>Transformation</em></a></td>
+<td><a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a>, <a class="reference internal" href="module/external/deformable.html"><em>Deformable</em></a>, <a class="reference internal" href="module/thirdparty/nifti.html"><em>NIfTI</em></a>, <a class="reference internal" href="module/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="module/external/deformable.html"><em>Deformable</em></a></td>
+<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a>, <a class="reference internal" href="module/core/transformation.html"><em>Transformation</em></a>, <a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="module/external/volumetricmapping.html"><em>VolumetricMapping</em></a></td>
+<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a>, <a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="module/thirdparty/nifti.html"><em>NIfTI</em></a></td>
+<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="module/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
+<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For a complete list of module dependencies, see the <cite>BasisProject.cmake</cite> file
+in the respective module directory (e.g., <cite>Modules/Registration/BasisProject.cmake</cite>).</p>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cmake-gui-example">
+<h3>CMake GUI Example<a class="headerlink" href="#cmake-gui-example" title="Permalink to this headline">¶</a></h3>
+<p>After obtaining a copy of the MIRTK source files, generate the build configuration
+files for your build tool of choice using <a class="reference external" href="http://cmake.org/">CMake</a>.
+We recommend the use of the CMake GUI with the &#8220;Grouped&#8221; checkbox enabled.
+Advanced options should normally not be required to be modified.</p>
+<p>An example screenshot of a CMake configuration is shown below.</p>
+<img alt="Screenshot of example MIRTK CMake configuration" src="_images/CMakeGUIDefaultConfig.png" />
+</div>
+<div class="section" id="step-by-step">
+<h3>Step-by-step<a class="headerlink" href="#step-by-step" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first"><strong>Set source code and build directory paths.</strong></p>
+<p>For the build directory path, a subdirectory within the MIRTK source
+directory named &#8220;Build&#8221; is recommended.</p>
+</li>
+<li><p class="first"><strong>Click &#8220;Configure&#8221; to initialize the build system.</strong></p>
+<p>CMake will ask for the build tool for which configuration files are to be generated.
+For Linux, the Makefile (i.e., GNU Make), Ninja, or CodeBlocks/Qt Creator
+generators are recommended. On OS X, the Xcode generator should be selected.</p>
+</li>
+<li><p class="first"><strong>Enable/disable MIRTK Modules to be build and features to be enabled.</strong></p>
+<p>Which <a class="reference internal" href="modules.html"><em>MIRTK Modules</em></a> are enabled is specified by the <em>MODULE</em> family of options.
+Optional library features are enabled by forcing the use of the respective
+external libraries required by the implementation of the feature using
+the <em>WITH</em> family of options. After the change of an option or other CMake
+variable, re-configure the build system by clicking on &#8220;Configure&#8221; again
+until no further changes are made and the &#8220;Generate&#8221; button is enabled.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option/Variable</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>BUILD_APPLICATIONS</td>
+<td>Build command-line tools of enabled modules.</td>
+</tr>
+<tr class="row-odd"><td>BUILD_DOCUMENTATION</td>
+<td>Configure build of online documentation (&#8220;doc&#8221; target).</td>
+</tr>
+<tr class="row-even"><td>BUILD_TESTING</td>
+<td>Build the regression tests. (advanced, unused)</td>
+</tr>
+<tr class="row-odd"><td>CMAKE_BUILD_TYPE</td>
+<td>Build configuration (e.g. &#8220;Release&#8221; for optimized code).</td>
+</tr>
+<tr class="row-even"><td>CMAKE_INSTALL_PREFIX</td>
+<td>Installation directory (default on Linux and OS X is <cite>/opt/mirtk-&lt;version&gt;</cite>).</td>
+</tr>
+<tr class="row-odd"><td>WITH_ARPACK</td>
+<td>Enable eigendecomposition of sparse matrices. Required for spectral surface matching.</td>
+</tr>
+<tr class="row-even"><td>WITH_MATLAB</td>
+<td>Enable output of matrices to .mat files and use of MATLAB functions.</td>
+</tr>
+<tr class="row-odd"><td>WITH_NiftiCLib</td>
+<td>Use system installation of <a class="reference external" href="http://sourceforge.net/projects/niftilib/">NiftiCLib</a> for build of NIfTI module.</td>
+</tr>
+<tr class="row-even"><td>WITH_PNG</td>
+<td>Enable writing of 2D images in <a class="reference external" href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG</a> file format.</td>
+</tr>
+<tr class="row-odd"><td>WITH_PROFILING</td>
+<td>Enable profiling of code execution to find runtime bottlenecks.</td>
+</tr>
+<tr class="row-even"><td>WITH_TBB</td>
+<td>Enable multi-threaded execution using Intel Threading Building Blocks. (recommended)</td>
+</tr>
+<tr class="row-odd"><td>WITH_UMFPACK</td>
+<td>Automatically enabled when WITH_ARPACK is ON.</td>
+</tr>
+<tr class="row-even"><td>WITH_VTK</td>
+<td>Enable processing of VTK files. Automatically enabled when PointSet module is enabled.</td>
+</tr>
+<tr class="row-odd"><td>WITH_ZLIB</td>
+<td>Enable reading/writing of compressed files using <a class="reference external" href="http://www.zlib.net">zlib</a>. (recommended)</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<ol class="arabic" start="5">
+<li><p class="first"><strong>Generate build tool configuration files.</strong></p>
+<p>When done, click the &#8220;Generate&#8221; button to write the configuration
+files for the build tool selected in step 2.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Enabling a module may require additional external libraries or add
+further <em>WITH</em> options. The location of required external libraries is
+specified by the <em>DEPENDS</em> family of variables. These are marked as advanced
+and hence hidden from the default view when an installation of the external
+library was found automatically. To see which external libraries the MIRTK
+will be linked with, enable the &#8220;Advanced&#8221; checkbox at the top of the CMake GUI.</p>
+</div>
+</div>
+<div class="section" id="dependency-not-found">
+<h3>Dependency not found<a class="headerlink" href="#dependency-not-found" title="Permalink to this headline">¶</a></h3>
+<p>When a <a class="reference internal" href="#builddependencies"><span>build dependency</span></a> such as VTK, for example, was not found,
+a <em>DEPENDS</em> variable becomes visible in the GUI (i.e. not marked as advanced) which must be set
+to either the installation prefix of the dependency or the directory containing a CMake package
+configuration file (e.g., <cite>VTKConfig.cmake</cite>). See the following screenshot for an example where
+VTK was not found automatically and the path to the <cite>VTKConfig.cmake</cite> file in the VTK build directory
+was set manually after the error was reported.</p>
+<img alt="VTK not found error in CMake GUI" src="_images/CMakeGUIVTKNotFound.png" />
+</div>
+</div>
+<div class="section" id="build">
+<h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h2>
+<p>After the configuration files for the chosen build tool were generated by CMake,
+open the corresponding project file in case of an IDE such as Xcode or a
+Terminal window in case of the GNU Make or Ninja build tools to build the MIRTK.</p>
+<p>The following assumes the build directory to be located at</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">export </span><span class="nv">MIRTK_BINARY_DIR</span><span class="o">=</span><span class="nv">$MIRTK_SOURCE_DIR</span>/Build
+<span class="nb">cd</span> <span class="nv">$MIRTK_BINARY_DIR</span>
+</pre></div>
+</div>
+<p>Using GNU Make, run:</p>
+<div class="highlight-python"><div class="highlight"><pre>make -j 8
+</pre></div>
+</div>
+<p>Using Ninja, run:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ninja</span>
+</pre></div>
+</div>
+<p>When <cite>BUILD_DOCUMENTATION</cite> was set to ON during the build configuration, the
+documentation files can be build (before installation!) using the &#8220;doc&#8221; target.</p>
+<p>Using GNU Make, run:</p>
+<div class="highlight-python"><div class="highlight"><pre>make doc
+</pre></div>
+</div>
+<p>Using Ninja, run:</p>
+<div class="highlight-python"><div class="highlight"><pre>ninja doc
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>After the successful build of the MIRTK, the package can be installed by
+building the &#8220;install&#8221; target.</p>
+<p>Using GNU Make, run:</p>
+<div class="highlight-python"><div class="highlight"><pre>make install
+</pre></div>
+</div>
+<p>Using Ninja, run:</p>
+<div class="highlight-python"><div class="highlight"><pre>ninja install
+</pre></div>
+</div>
+<p>Finally, to enable the convenient use of the MIRTK command-line tools, it is recommended
+to permanently add the <cite>&lt;CMAKE_INSTALL_PREFIX&gt;/bin</cite> directory to the <a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH environment variable</a>
+in the shell setup script (e.g., <cite>$HOME/.bashrc</cite> or <cite>$HOME/.profile</cite>).</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="help.html" title="Getting Help"
+             >next</a></li>
+        <li class="right" >
+          <a href="download.html" title="Download"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<map id="mirtk::ConvolutionFunction::ExtendedForegroundConvolution1D&lt; TKernel &gt;" name="mirtk::ConvolutionFunction::ExtendedForegroundConvolution1D&lt; TKernel &gt;">
+<area shape="rect" id="node3" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveExtendedForegroundInT.html" title="Compute convolution for given voxel along t dimension. " alt="" coords="5,373,248,524"/>
+<area shape="rect" id="node4" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveExtendedForegroundInX.html" title="Compute convolution of voxel with kernel in x dimension. " alt="" coords="272,381,515,517"/>
+<area shape="rect" id="node6" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveExtendedForegroundInY.html" title="Compute convolution for given voxel along y dimension. " alt="" coords="539,373,781,524"/>
+<area shape="rect" id="node8" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveExtendedForegroundInZ.html" title="Compute convolution for given voxel along z dimension. " alt="" coords="832,373,1075,524"/>
+<area shape="rect" id="node2" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n||+ join()\l+ split()\l+ IsReduction()\l}" alt="" coords="455,5,598,112"/>
+<area shape="rect" id="node5" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedExtendedForegroundInX.html" title="Downsample image using convolution of original voxels with kernel in x dimension. ..." alt="" coords="194,572,489,767"/>
+<area shape="rect" id="node7" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedExtendedForegroundInY.html" title="Downsample image using convolution of original voxels with kernel in y dimension. ..." alt="" coords="513,572,807,767"/>
+<area shape="rect" id="node9" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedExtendedForegroundInZ.html" title="Downsample image using convolution of original voxels with kernel in z dimension. ..." alt="" coords="831,572,1126,767"/>
+</map>

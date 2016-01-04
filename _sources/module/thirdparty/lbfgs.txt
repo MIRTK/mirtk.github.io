@@ -1,0 +1,5 @@
+============
+LBFGS Module
+============
+
+.. include:: lbfgs_abstract.rst
