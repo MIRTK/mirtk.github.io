@@ -22,12 +22,12 @@ Contributors
 
 - Stefan Pszczolkowski Parraguez
   
-  - *Implemented the image gradient similarities measures of the Registration module.*
+  - *Implemented the image gradient similarity measures of the Registration module.*
   - *Added statistical free-form deformation class to the Transformation module.*
 
 - Ghislain Antony Vaillant
 
-  - *Reimplemented the transformation inversion code base on Boost instead of GSL.*
+  - *Reimplemented the transformation inversion code using Boost instead of GSL.*
 
 Advisors
 --------

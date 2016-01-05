@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     'v1.0 (215e970)',
+        VERSION:     'v1.0 (9491efa)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -89,14 +89,15 @@
   <div class="section" id="deformable-module">
 <h1>Deformable Module<a class="headerlink" href="#deformable-module" title="Permalink to this headline">¶</a></h1>
 <p>The Deformable module of the Medical Image Registration ToolKit (MIRTK) is a library
-for the Euler integration of deformable meshes such as cortical surfaces. The MIRTK
-command <em>deformmesh</em> can be used to deform an initial mesh such as the convex hull
+for the Euler integration of deformable meshes such as cortical surfaces.
+The <em>deformmesh</em> tool can be used to deform an initial mesh such as the convex hull
 of an input segmentation or a bounding sphere based on internal and external
 point set/surface forces. The integration is stopped when a suitable stopping criterion
 is fullfilled such as a fixed number of iterations, target objective function value,
 or surface smoothness (e.g., for cortical surface inflation). The internal forces
-can further be utilized by the MIRTK Registration module to constrain the transformation,
-for example, to constrain the cortical surface to remain smooth after transformation.</p>
+can further be utilized by the <cite>Registration &lt;#RegistrationAbstract&gt;</cite> module to constrain
+the transformation, for example, to constrain the cortical surface to remain smooth after
+transformation.</p>
 </div>
 
 
