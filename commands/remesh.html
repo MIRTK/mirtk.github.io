@@ -1,0 +1,234 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>remesh &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v1.0 (f096eae)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="next" title="resample-image" href="resample-image.html" />
+    <link rel="prev" title="register" href="register.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="resample-image.html" title="resample-image"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="register.html" title="register"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="remesh">
+<h1>remesh<a class="headerlink" href="#remesh" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>mirtk remesh &lt;input&gt; &lt;output&gt; [options]
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Remeshes a surface mesh such that the resulting mesh has an average
+edge length within the specified limits.</p>
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-remesh-write-all">
+<code class="descname">-write-all</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-write-all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write also intermediate meshes when more than one
+desired average edge length was specified. Output file
+names contain the level number as suffix. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-target">
+<code class="descname">-target</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-remesh-target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find closest cell points on target surface
+and use these as new point locations.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-edgelength">
+<code class="descname">-edgelength</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-edgelength" title="Permalink to this definition">¶</a></dt>
+<dd><p>&lt;float&gt;...          Average edge length.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-minedgelength">
+<code class="descname">-minedgelength</code><code class="descclassname"> &lt;float&gt;...</code><a class="headerlink" href="#cmdoption-remesh-minedgelength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum edge length. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-maxedgelength">
+<code class="descname">-maxedgelength</code><code class="descclassname"> &lt;float&gt;...</code><a class="headerlink" href="#cmdoption-remesh-maxedgelength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum edge length. (default: inf)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-adaptiveedgelength">
+<code class="descname">-adaptiveedgelength</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-remesh-adaptiveedgelength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of point data array to use for adapting the edge length range. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-meltorder">
+<code class="descname">-meltorder</code><code class="descclassname"> &lt;index|area|shortest&gt;</code><a class="headerlink" href="#cmdoption-remesh-meltorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Order in which to process cells in melting pass. (default: area)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-meltnodes">
+<code class="descname">-meltnodes</code><code class="descclassname"> | -nomeltnodes</code><a class="headerlink" href="#cmdoption-remesh-meltnodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to allow removal of nodes with connectivity 3. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-melttriangles">
+<code class="descname">-melttriangles</code><code class="descclassname"> | -nomelttriangles</code><a class="headerlink" href="#cmdoption-remesh-melttriangles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to melt triangles when all three edges are too short. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-ascii">
+<code class="descname">-ascii</code><code class="descclassname">/-binary</code><a class="headerlink" href="#cmdoption-remesh-ascii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write legacy VTK in ASCII or binary format. (default: binary)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-compress">
+<code class="descname">-compress</code><code class="descclassname"> | -nocompress</code><a class="headerlink" href="#cmdoption-remesh-compress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write XML VTK file with or without compression. (default: compress)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-remesh-v">
+<code class="descname">-v</code><code class="descclassname"> -verbose [n]</code><a class="headerlink" href="#cmdoption-remesh-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-remesh-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-remesh-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-h">
+<code class="descname">-h</code><code class="descclassname"> -help</code><a class="headerlink" href="#cmdoption-remesh-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="resample-image.html" title="resample-image"
+             >next</a></li>
+        <li class="right" >
+          <a href="register.html" title="register"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

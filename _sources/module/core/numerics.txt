@@ -1,5 +1,0 @@
-===============
-Numerics Module
-===============
-
-.. include:: numerics_abstract.rst

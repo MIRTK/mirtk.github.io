@@ -1,0 +1,226 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>calculate-logarithmic-map &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v1.0 (f096eae)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="next" title="calculate-surface-attributes" href="calculate-surface-attributes.html" />
+    <link rel="prev" title="calculate-lie-bracket" href="calculate-lie-bracket.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="calculate-surface-attributes.html" title="calculate-surface-attributes"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="calculate-lie-bracket.html" title="calculate-lie-bracket"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="calculate-logarithmic-map">
+<h1>calculate-logarithmic-map<a class="headerlink" href="#calculate-logarithmic-map" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>mirtk calculate-logarithmic-map &lt;disp&gt; &lt;velo&gt; [options]
+mirtk calculate-logarithmic-map &lt;dx&gt; &lt;dy&gt; [&lt;dz&gt;] &lt;vx&gt; &lt;vy&gt; [&lt;vz&gt;] [options]
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Reads a dense 3D (2D) displacement field, computes the corresponding
+stationary 3D (2D) velocity field, and writes the resulting vector field.</p>
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-ss">
+<code class="descname">-ss</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-ss" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use scaling and squaring (SS) method for exponentiation. (default)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-euler">
+<code class="descname">-euler</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-euler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use forward Euler method for exponentiation.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-steps">
+<code class="descname">-steps</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-steps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of integration steps (2^n in case of SS). (default: 64)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-terms">
+<code class="descname">-terms</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-terms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of BCH approximation terms (either 2 or 3). (default: 6)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-iters">
+<code class="descname">-iters</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-iters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of BCH update steps. (default: 8)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-smooth">
+<code class="descname">-smooth</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-smooth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Smooth velocities before each update. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-jac">
+<code class="descname">-jac</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-jac" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use Jacobian for Lie bracket computation. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-v">
+<code class="descname">-v</code><code class="descclassname"> -verbose [n]</code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-h">
+<code class="descname">-h</code><code class="descclassname"> -help</code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="terminal-options">
+<h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-color">
+<code class="descname">-color</code><code class="descclassname"> | -nocolor</code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable colored output. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="parallelization-options">
+<h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-logarithmic-map-threads">
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-calculate-logarithmic-map-threads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="calculate-surface-attributes.html" title="calculate-surface-attributes"
+             >next</a></li>
+        <li class="right" >
+          <a href="calculate-lie-bracket.html" title="calculate-lie-bracket"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

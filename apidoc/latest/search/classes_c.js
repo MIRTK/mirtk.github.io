@@ -2,8 +2,10 @@ var searchData=
 [
   ['nearestneighborextrapolateimagefunction',['NearestNeighborExtrapolateImageFunction',['../classmirtk_1_1NearestNeighborExtrapolateImageFunction.html',1,'mirtk']]],
   ['nearestneighborinterpolateimagefunction',['NearestNeighborInterpolateImageFunction',['../classmirtk_1_1NearestNeighborInterpolateImageFunction.html',1,'mirtk']]],
+  ['neighborhoodoffsets',['NeighborhoodOffsets',['../classmirtk_1_1NeighborhoodOffsets.html',1,'mirtk']]],
   ['neighborinfo',['NeighborInfo',['../structmirtk_1_1CurvatureConstraint_1_1NeighborInfo.html',1,'mirtk::CurvatureConstraint']]],
   ['niftiimage',['NiftiImage',['../classmirtk_1_1NiftiImage.html',1,'mirtk']]],
+  ['niftiimageinfo',['NiftiImageInfo',['../structmirtk_1_1NiftiImageInfo.html',1,'mirtk']]],
   ['niftiimagereader',['NiftiImageReader',['../classmirtk_1_1NiftiImageReader.html',1,'mirtk']]],
   ['niftiimagewriter',['NiftiImageWriter',['../classmirtk_1_1NiftiImageWriter.html',1,'mirtk']]],
   ['nonselfintersectionconstraint',['NonSelfIntersectionConstraint',['../classmirtk_1_1NonSelfIntersectionConstraint.html',1,'mirtk']]],

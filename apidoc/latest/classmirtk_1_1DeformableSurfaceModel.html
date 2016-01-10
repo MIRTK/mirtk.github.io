@@ -174,7 +174,7 @@ vtkSmartPointer&lt; vtkPointSet &gt;&#160;</td><td class="memItemRight" valign="
 <tr class="memdesc:a08afd563e1ecf389ac0dc64898e962a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output surface mesh. <br /></td></tr>
 <tr class="separator:a08afd563e1ecf389ac0dc64898e962a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef6b6450d43c14eb835ce88b6d2cd997"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef6b6450d43c14eb835ce88b6d2cd997"></a>
-virtual <a class="el" href="namespacemirtk.html#a61dba4dcf2bdd7cfd8633b5533612f6f">ParameterList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1DeformableSurfaceModel.html#aef6b6450d43c14eb835ce88b6d2cd997">Parameter</a> () const </td></tr>
+virtual <a class="el" href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">ParameterList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1DeformableSurfaceModel.html#aef6b6450d43c14eb835ce88b6d2cd997">Parameter</a> () const </td></tr>
 <tr class="memdesc:aef6b6450d43c14eb835ce88b6d2cd997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameter as key/value as string map. <br /></td></tr>
 <tr class="separator:aef6b6450d43c14eb835ce88b6d2cd997"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae896c3e209803e33df2f77ce88010d52"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1DeformableSurfaceModel.html#ae896c3e209803e33df2f77ce88010d52">Put</a> (const double *x)</td></tr>
@@ -279,7 +279,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="separator:a362a0bbd622ce66727c1de8ecd6288a3 inherit pub_methods_classmirtk_1_1Observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmirtk_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmirtk_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmirtk_1_1Object.html">mirtk::Object</a></td></tr>
 <tr class="memitem:a0d9e2c339196faf470bdcfcf581cc5ee inherit pub_methods_classmirtk_1_1Object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d9e2c339196faf470bdcfcf581cc5ee"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1Object.html#a0d9e2c339196faf470bdcfcf581cc5ee">Parameter</a> (const <a class="el" href="namespacemirtk.html#a61dba4dcf2bdd7cfd8633b5533612f6f">ParameterList</a> &amp;param)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1Object.html#a0d9e2c339196faf470bdcfcf581cc5ee">Parameter</a> (const <a class="el" href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">ParameterList</a> &amp;param)</td></tr>
 <tr class="memdesc:a0d9e2c339196faf470bdcfcf581cc5ee inherit pub_methods_classmirtk_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set parameters from name/value pairs. <br /></td></tr>
 <tr class="separator:a0d9e2c339196faf470bdcfcf581cc5ee inherit pub_methods_classmirtk_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9348f3aed24c7c5d638afe18b8e34f9d inherit pub_methods_classmirtk_1_1Object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9348f3aed24c7c5d638afe18b8e34f9d"></a>
@@ -345,22 +345,22 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a48174b1ce6f317ab469205a9949ce1de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48174b1ce6f317ab469205a9949ce1de"></a>
-std::vector&lt; vtkSmartPointer&lt; vtkPolyData &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1DeformableSurfaceModel.html#a48174b1ce6f317ab469205a9949ce1de">_BoundaryConstraint</a></td></tr>
-<tr class="memdesc:a48174b1ce6f317ab469205a9949ce1de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input surface meshes which the deformed surface mesh may not intersect. <br /></td></tr>
-<tr class="separator:a48174b1ce6f317ab469205a9949ce1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ae9aaf1fd01d22d6f58ca2d8724e775"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ae9aaf1fd01d22d6f58ca2d8724e775"></a>
-std::vector&lt; <a class="el" href="classmirtk_1_1TransformationConstraint.html">TransformationConstraint</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1DeformableSurfaceModel.html#a0ae9aaf1fd01d22d6f58ca2d8724e775">_Constraint</a></td></tr>
-<tr class="memdesc:a0ae9aaf1fd01d22d6f58ca2d8724e775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Energy terms which regularize the parametric transformation. <br /></td></tr>
-<tr class="separator:a0ae9aaf1fd01d22d6f58ca2d8724e775"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5ddbd49d3c83efa0519087899f5a114"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5ddbd49d3c83efa0519087899f5a114"></a>
-std::vector&lt; class <a class="el" href="classmirtk_1_1ExternalForce.html">ExternalForce</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1DeformableSurfaceModel.html#ae5ddbd49d3c83efa0519087899f5a114">_ExternalForce</a></td></tr>
-<tr class="memdesc:ae5ddbd49d3c83efa0519087899f5a114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Energy terms corresponding to external forces. <br /></td></tr>
-<tr class="separator:ae5ddbd49d3c83efa0519087899f5a114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac4bde02b6e5a805dc3678f20188ef85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac4bde02b6e5a805dc3678f20188ef85"></a>
-std::vector&lt; class <a class="el" href="classmirtk_1_1InternalForce.html">InternalForce</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1DeformableSurfaceModel.html#aac4bde02b6e5a805dc3678f20188ef85">_InternalForce</a></td></tr>
-<tr class="memdesc:aac4bde02b6e5a805dc3678f20188ef85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Energy terms corresponding to internal forces. <br /></td></tr>
-<tr class="separator:aac4bde02b6e5a805dc3678f20188ef85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf95fbf722197a571ec7fc14958827d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf95fbf722197a571ec7fc14958827d6"></a>
+Array&lt; vtkSmartPointer&lt; vtkPolyData &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1DeformableSurfaceModel.html#acf95fbf722197a571ec7fc14958827d6">_BoundaryConstraint</a></td></tr>
+<tr class="memdesc:acf95fbf722197a571ec7fc14958827d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input surface meshes which the deformed surface mesh may not intersect. <br /></td></tr>
+<tr class="separator:acf95fbf722197a571ec7fc14958827d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9560150865702da3d0a28eeb3104562a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9560150865702da3d0a28eeb3104562a"></a>
+Array&lt; <a class="el" href="classmirtk_1_1TransformationConstraint.html">TransformationConstraint</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1DeformableSurfaceModel.html#a9560150865702da3d0a28eeb3104562a">_Constraint</a></td></tr>
+<tr class="memdesc:a9560150865702da3d0a28eeb3104562a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Energy terms which regularize the parametric transformation. <br /></td></tr>
+<tr class="separator:a9560150865702da3d0a28eeb3104562a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239fa7195b9c34d2c605a2bd02e34190"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a239fa7195b9c34d2c605a2bd02e34190"></a>
+Array&lt; class <a class="el" href="classmirtk_1_1ExternalForce.html">ExternalForce</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1DeformableSurfaceModel.html#a239fa7195b9c34d2c605a2bd02e34190">_ExternalForce</a></td></tr>
+<tr class="memdesc:a239fa7195b9c34d2c605a2bd02e34190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Energy terms corresponding to external forces. <br /></td></tr>
+<tr class="separator:a239fa7195b9c34d2c605a2bd02e34190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab233e4ab5cd34577a391f5f70ad0db06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab233e4ab5cd34577a391f5f70ad0db06"></a>
+Array&lt; class <a class="el" href="classmirtk_1_1InternalForce.html">InternalForce</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1DeformableSurfaceModel.html#ab233e4ab5cd34577a391f5f70ad0db06">_InternalForce</a></td></tr>
+<tr class="memdesc:ab233e4ab5cd34577a391f5f70ad0db06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Energy terms corresponding to internal forces. <br /></td></tr>
+<tr class="separator:ab233e4ab5cd34577a391f5f70ad0db06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40dc856e65269d973bf01297ab400c21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40dc856e65269d973bf01297ab400c21"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1DeformableSurfaceModel.html#a40dc856e65269d973bf01297ab400c21">_LowPassCounter</a></td></tr>
 <tr class="memdesc:a40dc856e65269d973bf01297ab400c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of iterations since last low-pass filtering. <br /></td></tr>
@@ -802,7 +802,7 @@ ObserverSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><!-- contents -->
 
 <div class="footer">
-&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Tue Jan 5 2016 02:39:16. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
+&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Sun Jan 10 2016 02:51:59. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
 </div>
 </body>
 </html>

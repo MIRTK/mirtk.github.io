@@ -71,6 +71,7 @@ var searchData=
   ['genericimage',['GenericImage',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20cpvalue_20_3e',['GenericImage&lt; CPValue &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20double_20_3e',['GenericImage&lt; double &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
+  ['genericimage_3c_20greypixel_20_3e',['GenericImage&lt; GreyPixel &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20realpixel_20_3e',['GenericImage&lt; RealPixel &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20realtype_20_3e',['GenericImage&lt; RealType &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20tdata_20_3e',['GenericImage&lt; TData &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],

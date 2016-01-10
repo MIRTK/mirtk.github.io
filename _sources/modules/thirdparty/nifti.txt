@@ -1,0 +1,7 @@
+============
+NIfTI Module
+============
+
+.. include:: ../_descriptions/nifti.rst
+
+.. todo:: Document main module classes and their usage.

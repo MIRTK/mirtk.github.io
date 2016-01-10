@@ -40,7 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_a5c35b8750cbcca5bb1b9a6e3a0d7a3d.html">External</a></li><li class="navelem"><a class="el" href="dir_027964c501f4520aabaa2df199691ca6.html">VolumetricMapping</a></li><li class="navelem"><a class="el" href="dir_6c698180786031d4d674e8e27ee5b345.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_e80f1c405926e9ef4eea7d6e1eccbf42.html">Packages</a></li><li class="navelem"><a class="el" href="dir_0d7c8c17db8558376c778a457b1b3d87.html">VolumetricMapping</a></li><li class="navelem"><a class="el" href="dir_3659d144eabd3079ce49270430ee624e.html">include</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -71,9 +71,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define MIRTK_AsConformalAsPossibleVolumeParameterizer_H</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;mirtkLinearTetrahedralVolumeParameterizer.h&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;mirtkMatrix3x3.h&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;mirtkArray.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;mirtkMatrix3x3.h&gt;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemirtk.html">mirtk</a> {</div>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"></span>  mirtkPublicAttributeMacro(<span class="keywordtype">double</span>, UniformWeight);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">  /// Local orientation of tetrahedron (rotation matrix)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span>  mirtkAttributeMacro(std::vector&lt;Matrix3x3&gt;, Orientation);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span>  mirtkAttributeMacro(Array&lt;Matrix3x3&gt;, Orientation);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">  /// Copy attributes of this class from another instance</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span>  <span class="keywordtype">void</span> CopyAttributes(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1AsConformalAsPossibleVolumeParameterizer.html">AsConformalAsPossibleVolumeParameterizer</a> &amp;);</div>
@@ -159,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classmirtk_1_1AsConformalAsPossibleVolumeParameterizer_html_af066899f8d2e2ec95365751def3040a8"><div class="ttname"><a href="classmirtk_1_1AsConformalAsPossibleVolumeParameterizer.html#af066899f8d2e2ec95365751def3040a8">mirtk::AsConformalAsPossibleVolumeParameterizer::operator=</a></div><div class="ttdeci">AsConformalAsPossibleVolumeParameterizer &amp; operator=(const AsConformalAsPossibleVolumeParameterizer &amp;)</div><div class="ttdoc">Assignment operator. </div></div>
 <div class="ttc" id="classmirtk_1_1AsConformalAsPossibleVolumeParameterizer_html_a69f1692b0b160591c3927b6bcd87dce2"><div class="ttname"><a href="classmirtk_1_1AsConformalAsPossibleVolumeParameterizer.html#a69f1692b0b160591c3927b6bcd87dce2">mirtk::AsConformalAsPossibleVolumeParameterizer::AsConformalAsPossibleVolumeParameterizer</a></div><div class="ttdeci">AsConformalAsPossibleVolumeParameterizer()</div><div class="ttdoc">Default constructor. </div></div>
 <div class="ttc" id="classmirtk_1_1AsConformalAsPossibleVolumeParameterizer_html_abe7032c07309713618de24cf54de1251"><div class="ttname"><a href="classmirtk_1_1AsConformalAsPossibleVolumeParameterizer.html#abe7032c07309713618de24cf54de1251">mirtk::AsConformalAsPossibleVolumeParameterizer::GetWeight</a></div><div class="ttdeci">virtual Matrix3x3 GetWeight(vtkIdType cellId, const double v0[3], const double v1[3], const double v2[3], const double v3[3], double volume) const </div></div>
-<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAllocate_8h_source.html#l00026">mirtkAllocate.h:26</a></div></div>
+<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAlgorithm_8h_source.html#l00028">mirtkAlgorithm.h:28</a></div></div>
 <div class="ttc" id="classmirtk_1_1AsConformalAsPossibleVolumeParameterizer_html_aa99fb65ca402a43c2cd18fc6153e9f1f"><div class="ttname"><a href="classmirtk_1_1AsConformalAsPossibleVolumeParameterizer.html#aa99fb65ca402a43c2cd18fc6153e9f1f">mirtk::AsConformalAsPossibleVolumeParameterizer::~AsConformalAsPossibleVolumeParameterizer</a></div><div class="ttdeci">virtual ~AsConformalAsPossibleVolumeParameterizer()</div><div class="ttdoc">Destructor. </div></div>
 <div class="ttc" id="classmirtk_1_1LinearTetrahedralVolumeParameterizer_html"><div class="ttname"><a href="classmirtk_1_1LinearTetrahedralVolumeParameterizer.html">mirtk::LinearTetrahedralVolumeParameterizer</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkLinearTetrahedralVolumeParameterizer_8h_source.html#l00044">mirtkLinearTetrahedralVolumeParameterizer.h:44</a></div></div>
 <div class="ttc" id="classmirtk_1_1AsConformalAsPossibleVolumeParameterizer_html"><div class="ttname"><a href="classmirtk_1_1AsConformalAsPossibleVolumeParameterizer.html">mirtk::AsConformalAsPossibleVolumeParameterizer</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAsConformalAsPossibleVolumeParameterizer_8h_source.html#l00038">mirtkAsConformalAsPossibleVolumeParameterizer.h:38</a></div></div>
@@ -168,7 +168,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 
 <div class="footer">
-&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Tue Jan 5 2016 02:39:13. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
+&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Sun Jan 10 2016 02:51:56. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
 </div>
 </body>
 </html>

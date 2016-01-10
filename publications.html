@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0 (9491efa)',
+        VERSION:     'v1.0 (f096eae)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -67,6 +67,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
 </ul>
 <ul class="current">
@@ -74,12 +75,7 @@
 <li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Getting Help</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Publications</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#classic-ffd">Classic FFD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sparse-ffd">Sparse FFD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#symmetric-svffd">Symmetric SVFFD</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
 </ul>
 
@@ -93,8 +89,7 @@
             
   <div class="section" id="publications">
 <h1>Publications<a class="headerlink" href="#publications" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="classic-ffd">
-<h2>Classic FFD<a class="headerlink" href="#classic-ffd" title="Permalink to this headline">¶</a></h2>
+<p><strong>Classic free-form deformation</strong></p>
 <p>The following papers introduce the classic B-spline free-form deformation (FFD) algorithm.</p>
 <table class="docutils citation" frame="void" id="miccai01" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
@@ -122,9 +117,7 @@ E. R. E. Denton, L. I. Sonoda, D. Rueckert, S. C. Rankin, C. Hayes, M. Leach, D.
 Journal of Computer Assisted Tomography, 23:800-805, 1999.</td></tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="sparse-ffd">
-<h2>Sparse FFD<a class="headerlink" href="#sparse-ffd" title="Permalink to this headline">¶</a></h2>
+<p><strong>Sparse free-from deformation</strong></p>
 <p>The use of the sparsity constraint for the spatio-temporal registration of cardiac image sequences
 was first published in the following conference article.</p>
 <table class="docutils citation" frame="void" id="miccai12" rules="none">
@@ -136,9 +129,18 @@ In 15th Int. Conf. on Medical Image Computing. and Computer-Assisted Interventio
 LNCS 7511:659-666, 2012.</td></tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="symmetric-svffd">
-<h2>Symmetric SVFFD<a class="headerlink" href="#symmetric-svffd" title="Permalink to this headline">¶</a></h2>
+<p><strong>Statistical free-from deformation</strong></p>
+<p>The following publications learn a statistical free-form deformation model from a training dataset
+to restrict the deformation on new unseen images.</p>
+<table class="docutils citation" frame="void" id="spie12" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[SPIE12]</td><td><a class="reference external" href="http://pubs.doc.ic.ac.uk/SDM-nonrigid-registration/SDM-nonrigid-registration.pdf">Nonrigid free-form registration using landmark-based statistical deformation models.</a>. <br />
+S. Pszczolkowski, L. Pizarro, R. Guerrero, D. Rueckert.
+Proc. SPIE 8314, Medical Imaging 2012: Image Processing, 831418 (February 23, 2012)</td></tr>
+</tbody>
+</table>
+<p><strong>Symmetric/Diffeomorphic free-form deformation</strong></p>
 <p>The details and application of the symmetric diffeomorphic registration which parameterizes the
 non-rigid transformation by a stationary velocity field with B-spline interpolation can be found
 in the following workshop paper.</p>
@@ -151,7 +153,6 @@ In 3rd MICCAI Workshop on Spatiotemporal Image Analysis for Longitudinal and Tim
 LNCS 8682, pp. 27-37, Boston, MA (2014)</td></tr>
 </tbody>
 </table>
-</div>
 </div>
 
 

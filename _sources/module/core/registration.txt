@@ -1,5 +1,0 @@
-===================
-Registration Module
-===================
-
-.. include:: registration_abstract.rst

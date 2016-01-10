@@ -8,16 +8,20 @@ Modules
    :hidden:
    :maxdepth: 2
 
-   module/core/common
-   module/core/numerics
-   module/core/image
-   module/core/pointset
-   module/core/transformation
-   module/core/registration
-   module/external/deformable
-   module/external/volumetricmapping
-   module/thirdparty/nifti
-   module/thirdparty/lbfgs
+   modules/core/common
+   modules/core/numerics
+   modules/core/image
+   modules/core/pointset
+   modules/core/transformation
+   modules/core/registration
+   modules/packages/deformable
+   modules/packages/volumetricmapping
+   modules/thirdparty/nifti
+   modules/thirdparty/lbfgs
+
+.. Replacements for use by descriptions included below to refer to other modules
+
+.. include:: modules/_refs.rst
 
 
 .. _CoreModules:
@@ -30,41 +34,41 @@ The core modules are always included in the MIRTK source tree.
 Common
 ------
 
-.. include:: module/core/common_abstract.rst
+.. include:: modules/_descriptions/common.rst
 
-:doc:`[more] <module/core/common>`
+:doc:`[more] <modules/core/common>`
 
 
 Numerics
 --------
 
-.. include:: module/core/numerics_abstract.rst
+.. include:: modules/_descriptions/numerics.rst
 
-:doc:`[more] <module/core/numerics>`
+:doc:`[more] <modules/core/numerics>`
 
 
 Image
 -----
 
-.. include:: module/core/image_abstract.rst
+.. include:: modules/_descriptions/image.rst
 
-:doc:`[more] <module/core/image>`
+:doc:`[more] <modules/core/image>`
 
 
 Point Set
 ---------
 
-.. include:: module/core/pointset_abstract.rst
+.. include:: modules/_descriptions/pointset.rst
 
-:doc:`[more] <module/core/pointset>`
+:doc:`[more] <modules/core/pointset>`
 
 
 Transformation
 --------------
 
-.. include:: module/core/transformation_abstract.rst
+.. include:: modules/_descriptions/transformation.rst
 
-:doc:`[more] <module/core/transformation>`
+:doc:`[more] <modules/core/transformation>`
 
 
 .. _RegistrationAbstract:
@@ -72,42 +76,42 @@ Transformation
 Registration
 ------------
 
-.. include:: module/core/registration_abstract.rst
+.. include:: modules/_descriptions/registration.rst
 
-:doc:`[more] <module/core/registration>`
+:doc:`[more] <modules/core/registration>`
 
 
 
 .. _ExternalModules:
 
-External Modules
-================
+External Packages
+=================
 
 Additional modules which are developed and maintained separate from the core
-modules in their own respective repository are referred to as external modules.
+modules in their own respective repository are referred to as external packages.
 These are either loosely bound optional modules or modules contributed by users.
 
 Deformable
 ----------
 
-.. include:: module/external/deformable_abstract.rst
+.. include:: modules/_descriptions/deformable.rst
 
-:doc:`[more] <module/external/deformable>`
+:doc:`[more] <modules/packages/deformable>`
 
 
 Volumetric Mapping
 ------------------
 
-.. include:: module/external/volumetricmapping_abstract.rst
+.. include:: modules/_descriptions/volumetricmapping.rst
 
-:doc:`[more] <module/external/volumetricmapping>`
+:doc:`[more] <modules/packages/volumetricmapping>`
 
 
 
 .. _ThirdPartyModules:
 
-Third-party Modules
-===================
+Third-party Libraries
+=====================
 
 The following modules provide features of third-party libraries such as additional
 image file formats and numerical optimization methods.
@@ -115,14 +119,14 @@ image file formats and numerical optimization methods.
 NIfTI
 -----
 
-.. include:: module/thirdparty/nifti_abstract.rst
+.. include:: modules/_descriptions/nifti.rst
 
-:doc:`[more] <module/thirdparty/nifti>`
+:doc:`[more] <modules/thirdparty/nifti>`
 
 
 LBFGS
 -----
 
-.. include:: module/thirdparty/lbfgs_abstract.rst
+.. include:: modules/_descriptions/lbfgs.rst
 
-:doc:`[more] <module/thirdparty/lbfgs>`
+:doc:`[more] <modules/thirdparty/lbfgs>`

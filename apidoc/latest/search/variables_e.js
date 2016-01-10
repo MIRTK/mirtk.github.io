@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weightlookuptable',['WeightLookupTable',['../classmirtk_1_1BSpline.html#a2851569b35e2e170b00100111fad8bd9',1,'mirtk::BSpline']]]
+  ['radius',['Radius',['../classmirtk_1_1Sinc.html#a1aeb66fa15dad1ef7fa1dff409f2abe3',1,'mirtk::Sinc']]]
 ];

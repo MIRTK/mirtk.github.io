@@ -5,6 +5,7 @@
 
     Overview <index>
     modules
+    commands
     Reference <apidoc>
 
 .. toctree::

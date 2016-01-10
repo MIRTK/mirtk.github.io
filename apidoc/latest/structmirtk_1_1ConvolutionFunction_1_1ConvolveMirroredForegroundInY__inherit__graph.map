@@ -1,5 +1,5 @@
 <map id="mirtk::ConvolutionFunction::ConvolveMirroredForegroundInY&lt; TKernel &gt;" name="mirtk::ConvolutionFunction::ConvolveMirroredForegroundInY&lt; TKernel &gt;">
-<area shape="rect" id="node4" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedMirroredForegroundInY.html" title="Downsample image using convolution of original voxels with kernel in y dimension. ..." alt="" coords="5,572,293,767"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1ConvolutionFunction_1_1MirroredForegroundConvolution1D.html" title="Base class of 1D convolution functions which mirror the foreground into background. " alt="" coords="25,160,273,325"/>
-<area shape="rect" id="node3" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n||+ join()\l+ split()\l+ IsReduction()\l}" alt="" coords="78,5,221,112"/>
+<area shape="rect" id="node4" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedMirroredForegroundInY.html" title="Downsample image using convolution of original voxels with kernel in y dimension. ..." alt="" coords="5,587,293,781"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1ConvolutionFunction_1_1MirroredForegroundConvolution1D.html" title="Base class of 1D convolution functions which mirror the foreground into background. " alt="" coords="25,175,273,340"/>
+<area shape="rect" id="node3" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="78,5,221,127"/>
 </map>

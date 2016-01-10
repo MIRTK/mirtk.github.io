@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['validatecorrespondencemap',['ValidateCorrespondenceMap',['../classmirtk_1_1FiducialMatch.html#a1103d7a3399600cec8d0e3b5d01fa303',1,'mirtk::FiducialMatch']]],
+  ['validatecorrespondencemap',['ValidateCorrespondenceMap',['../classmirtk_1_1FiducialMatch.html#ab28f31bc56f6e578205d4a16c8dea37a',1,'mirtk::FiducialMatch']]],
   ['valtobin',['ValToBin',['../classmirtk_1_1Histogram1D.html#a82d0576152a7cff69796d4526c8b9838',1,'mirtk::Histogram1D']]],
   ['valtobinx',['ValToBinX',['../classmirtk_1_1Histogram2D.html#a0d09b5511b25323444033bf33e6aafe6',1,'mirtk::Histogram2D']]],
   ['valtobiny',['ValToBinY',['../classmirtk_1_1Histogram2D.html#a3a91ee4ac70100e3f63fb797071b8fb6',1,'mirtk::Histogram2D']]],
@@ -29,6 +29,7 @@ var searchData=
   ['volumepreservationconstraint',['VolumePreservationConstraint',['../classmirtk_1_1VolumePreservationConstraint.html#a4c226e363d1034f7a69f073da8d0219c',1,'mirtk::VolumePreservationConstraint']]],
   ['volumetricmap',['VolumetricMap',['../classmirtk_1_1VolumetricMap.html#a0b9595e86ef2b77bcd2c35e0b15abaf7',1,'mirtk::VolumetricMap::VolumetricMap()'],['../classmirtk_1_1VolumetricMap.html#a2833ee5fcbe7884790097ab39f989e98',1,'mirtk::VolumetricMap::VolumetricMap(const VolumetricMap &amp;)']]],
   ['voxel',['Voxel',['../classmirtk_1_1ConstImageIterator.html#a6d5c2cc59746e9764d5c1f00885b7167',1,'mirtk::ConstImageIterator::Voxel(int &amp;, int &amp;) const '],['../classmirtk_1_1ConstImageIterator.html#aef408ff8c9951849300f39bd90a9dfdc',1,'mirtk::ConstImageIterator::Voxel(int &amp;, int &amp;, int &amp;) const '],['../classmirtk_1_1ConstImageIterator.html#abbd09cd077d6923d0dea789369831053',1,'mirtk::ConstImageIterator::Voxel(int &amp;, int &amp;, int &amp;, int &amp;) const ']]],
+  ['voxelfunction',['VoxelFunction',['../structmirtk_1_1VoxelFunction.html#a8505c7898ac7c99fd53ded108a072468',1,'mirtk::VoxelFunction']]],
   ['voxeltoindex',['VoxelToIndex',['../classmirtk_1_1BaseImage.html#ab5aabcd155209944acdf5d7adf519a6b',1,'mirtk::BaseImage::VoxelToIndex()'],['../classmirtk_1_1ConstImageIterator.html#a5d02133cfb16ee8b5745e0446350c20f',1,'mirtk::ConstImageIterator::VoxelToIndex(int, int, int=0, int=0) const '],['../classmirtk_1_1ConstImageIterator.html#ad29c151fb05dd3468e5caec32d1f4fc0',1,'mirtk::ConstImageIterator::VoxelToIndex(const Vector4D&lt; int &gt; &amp;) const '],['../classmirtk_1_1GenericImage.html#a69ac06b74d6f1980656a87ec57153fa8',1,'mirtk::GenericImage::VoxelToIndex()']]],
   ['voxeltopos',['VoxelToPos',['../classmirtk_1_1ConstImageIterator.html#aca5e83a2b4429dd2dd57c311a5cc6543',1,'mirtk::ConstImageIterator::VoxelToPos(int, int, int=0, int=0) const '],['../classmirtk_1_1ConstImageIterator.html#a514685b2b1160854d4a17d56fd0e3b68',1,'mirtk::ConstImageIterator::VoxelToPos(const Vector4D&lt; int &gt; &amp;) const ']]]
 ];

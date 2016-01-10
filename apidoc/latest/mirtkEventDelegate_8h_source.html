@@ -71,9 +71,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define MIRTK_EventDelegate_H</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;mirtkObserver.h&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;mirtkFastDelegate.h&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;mirtkFastDelegate.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;mirtkUnorderedMap.h&gt;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemirtk.html">mirtk</a> {</div>
@@ -180,8 +180,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">void</span> Forward(Callback &amp;func, <a class="code" href="classmirtk_1_1Observable.html">Observable</a> *obj, <a class="code" href="namespacemirtk.html#a713bab184e30352ae34d9d6b0605744d">Event</a> event, <span class="keyword">const</span> <span class="keywordtype">void</span> *data);</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  std::map&lt;Event, Callback&gt; _SingleEventDelegate; <span class="comment">///&lt; Event delegates</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"></span>  Callback                  _AnyEventDelegate;    <span class="comment">///&lt; AnyEvent delegate</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  UnorderedMap&lt;Event, Callback&gt; _SingleEventDelegate; <span class="comment">///&lt; Event delegates</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"></span>  Callback                      _AnyEventDelegate;    <span class="comment">///&lt; AnyEvent delegate</span></div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"></span>};</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment">////////////////////////////////////////////////////////////////////////////////</span></div>
@@ -281,7 +281,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="classmirtk_1_1EventDelegate.html#a7fe4d53b530ba79816f9ba959e6e74b4">  231</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classmirtk_1_1EventDelegate.html#a7fe4d53b530ba79816f9ba959e6e74b4">EventDelegate::HandleEvent</a>(<a class="code" href="classmirtk_1_1Observable.html">Observable</a> *obj, <a class="code" href="namespacemirtk.html#a713bab184e30352ae34d9d6b0605744d">Event</a> event, <span class="keyword">const</span> <span class="keywordtype">void</span> *data)</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  Forward(_AnyEventDelegate, obj, event, data);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  std::map&lt;Event, Callback&gt;::iterator it = _SingleEventDelegate.find(event);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  UnorderedMap&lt;Event, Callback&gt;::iterator it = _SingleEventDelegate.find(event);</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keywordflow">if</span> (it != _SingleEventDelegate.end()) Forward(it-&gt;second, obj, event, data);</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
@@ -293,15 +293,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classmirtk_1_1EventDelegate_html_a23858bf02352b89262f9cb1cfb074111"><div class="ttname"><a href="classmirtk_1_1EventDelegate.html#a23858bf02352b89262f9cb1cfb074111">mirtk::EventDelegate::EventDelegate</a></div><div class="ttdeci">EventDelegate()</div><div class="ttdoc">Default constructor. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkEventDelegate_8h_source.html#l00142">mirtkEventDelegate.h:142</a></div></div>
 <div class="ttc" id="classmirtk_1_1EventDelegate_html"><div class="ttname"><a href="classmirtk_1_1EventDelegate.html">mirtk::EventDelegate</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkEventDelegate_8h_source.html#l00053">mirtkEventDelegate.h:53</a></div></div>
 <div class="ttc" id="classmirtk_1_1Observable_html"><div class="ttname"><a href="classmirtk_1_1Observable.html">mirtk::Observable</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkObservable_8h_source.html#l00043">mirtkObservable.h:43</a></div></div>
-<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAllocate_8h_source.html#l00026">mirtkAllocate.h:26</a></div></div>
+<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAlgorithm_8h_source.html#l00028">mirtkAlgorithm.h:28</a></div></div>
 <div class="ttc" id="classmirtk_1_1Observer_html"><div class="ttname"><a href="classmirtk_1_1Observer.html">mirtk::Observer</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkObserver_8h_source.html#l00039">mirtkObserver.h:39</a></div></div>
-<div class="ttc" id="namespacemirtk_html_a713bab184e30352ae34d9d6b0605744d"><div class="ttname"><a href="namespacemirtk.html#a713bab184e30352ae34d9d6b0605744d">mirtk::Event</a></div><div class="ttdeci">Event</div><div class="ttdoc">Events that can be observed. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkEvent_8h_source.html#l00031">mirtkEvent.h:31</a></div></div>
+<div class="ttc" id="namespacemirtk_html_a713bab184e30352ae34d9d6b0605744d"><div class="ttname"><a href="namespacemirtk.html#a713bab184e30352ae34d9d6b0605744d">mirtk::Event</a></div><div class="ttdeci">Event</div><div class="ttdoc">Events that can be observed. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkEvent_8h_source.html#l00032">mirtkEvent.h:32</a></div></div>
 <div class="ttc" id="classmirtk_1_1EventDelegate_html_af0e7d1c03885ad4860a1ee64f56d27b1"><div class="ttname"><a href="classmirtk_1_1EventDelegate.html#af0e7d1c03885ad4860a1ee64f56d27b1">mirtk::EventDelegate::Bind</a></div><div class="ttdeci">void Bind(Delegate0)</div><div class="ttdoc">Bind callback (member) function for any event with no arguments. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkEventDelegate_8h_source.html#l00152">mirtkEventDelegate.h:152</a></div></div>
 <div class="ttc" id="classmirtk_1_1EventDelegate_html_a4eef1fd0769fa919120f77fade7d7523"><div class="ttname"><a href="classmirtk_1_1EventDelegate.html#a4eef1fd0769fa919120f77fade7d7523">mirtk::EventDelegate::~EventDelegate</a></div><div class="ttdeci">~EventDelegate()</div><div class="ttdoc">Destructor. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkEventDelegate_8h_source.html#l00147">mirtkEventDelegate.h:147</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 
 <div class="footer">
-&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Tue Jan 5 2016 02:39:14. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
+&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Sun Jan 10 2016 02:51:56. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
 </div>
 </body>
 </html>

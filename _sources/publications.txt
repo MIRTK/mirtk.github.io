@@ -17,8 +17,7 @@ Publications
 ============
 
 
-Classic FFD
-===========
+**Classic free-form deformation**
 
 The following papers introduce the classic B-spline free-form deformation (FFD) algorithm.
 
@@ -37,8 +36,7 @@ The following papers introduce the classic B-spline free-form deformation (FFD) 
             Journal of Computer Assisted Tomography, 23:800-805, 1999.
 
 
-Sparse FFD
-==========
+**Sparse free-from deformation**
 
 The use of the sparsity constraint for the spatio-temporal registration of cardiac image sequences
 was first published in the following conference article.
@@ -49,8 +47,17 @@ was first published in the following conference article.
               LNCS 7511:659-666, 2012.
 
 
-Symmetric SVFFD
-===============
+**Statistical free-from deformation**
+
+The following publications learn a statistical free-form deformation model from a training dataset
+to restrict the deformation on new unseen images.
+
+.. [SPIE12] `Nonrigid free-form registration using landmark-based statistical deformation models. <http://pubs.doc.ic.ac.uk/SDM-nonrigid-registration/SDM-nonrigid-registration.pdf>`__. |br|
+            S. Pszczolkowski, L. Pizarro, R. Guerrero, D. Rueckert.
+            Proc. SPIE 8314, Medical Imaging 2012: Image Processing, 831418 (February 23, 2012)
+
+
+**Symmetric/Diffeomorphic free-form deformation**
 
 The details and application of the symmetric diffeomorphic registration which parameterizes the
 non-rigid transformation by a stationary velocity field with B-spline interpolation can be found

@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;mirtkObserver.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;mirtkArray.h&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemirtk.html">mirtk</a> {</div>
@@ -104,56 +104,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">  /// Whether to use level specific file name prefix</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span>  mirtkPublicAttributeMacro(<span class="keywordtype">bool</span>, LevelPrefix);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">int</span> _Level;                                 <span class="comment">///&lt; Current level</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span>  <span class="keywordtype">int</span> _Iteration;                             <span class="comment">///&lt; Current iteration</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span>  <span class="keywordtype">int</span> _LineIteration;                         <span class="comment">///&lt; Current line iteration</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>  std::vector&lt;ImageSimilarity *&gt; _Similarity; <span class="comment">///&lt; Similarity terms</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span><span class="comment"></span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">  /// Reference to the registration filter object</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1GenericRegistrationFilter.html">GenericRegistrationFilter</a> *_Registration;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">// ---------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment">// Construction/Destruction</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">  /// Current level</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span>  mirtkAttributeMacro(<span class="keywordtype">int</span>, Level);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">  /// Current iteration</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span>  mirtkAttributeMacro(<span class="keywordtype">int</span>, <a class="code" href="structmirtk_1_1Iteration.html">Iteration</a>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">  /// Current line iteration</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span>  mirtkAttributeMacro(<span class="keywordtype">int</span>, LineIteration);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">  /// Similarity terms</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span>  mirtkAttributeMacro(Array&lt;ImageSimilarity *&gt;, Similarity);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">  /// Copy construction</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">  /// \note Intentionally not implemented.</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html">GenericRegistrationDebugger</a>(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html">GenericRegistrationDebugger</a> &amp;);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">  /// Assignment operator</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">  /// \note Intentionally not implemented.</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html">GenericRegistrationDebugger</a> &amp;operator =(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html">GenericRegistrationDebugger</a> &amp;);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">  /// Constructor</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html">GenericRegistrationDebugger</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">  /// Destructor</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html#a73234960aedce6d6b7cd8ecba077e8e7">~GenericRegistrationDebugger</a>();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">  /// Handle event and print message to output stream</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"></span>  <span class="keywordtype">void</span> <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html#a008d628559f78777c8cd41b8d978b1cd">HandleEvent</a>(<a class="code" href="classmirtk_1_1Observable.html">Observable</a> *, <a class="code" href="namespacemirtk.html#a713bab184e30352ae34d9d6b0605744d">Event</a>, <span class="keyword">const</span> <span class="keywordtype">void</span> *);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <span class="comment">// namespace mirtk</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif // MIRTK_GenericRegistrationDebugger_H</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">  /// Reference to the registration filter object</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span>  mirtkAggregateMacro(<a class="code" href="classmirtk_1_1GenericRegistrationFilter.html">GenericRegistrationFilter</a>, Registration);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="comment">// Construction/Destruction</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">  /// Copy construction</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">  /// \note Intentionally not implemented.</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html">GenericRegistrationDebugger</a>(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html">GenericRegistrationDebugger</a> &amp;);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">  /// Assignment operator</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">  /// \note Intentionally not implemented.</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html">GenericRegistrationDebugger</a> &amp;operator =(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html">GenericRegistrationDebugger</a> &amp;);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">  /// Constructor</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html">GenericRegistrationDebugger</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">  /// Destructor</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html#a73234960aedce6d6b7cd8ecba077e8e7">~GenericRegistrationDebugger</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">  /// Handle event and print message to output stream</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"></span>  <span class="keywordtype">void</span> <a class="code" href="classmirtk_1_1GenericRegistrationDebugger.html#a008d628559f78777c8cd41b8d978b1cd">HandleEvent</a>(<a class="code" href="classmirtk_1_1Observable.html">Observable</a> *, <a class="code" href="namespacemirtk.html#a713bab184e30352ae34d9d6b0605744d">Event</a>, <span class="keyword">const</span> <span class="keywordtype">void</span> *);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;} <span class="comment">// namespace mirtk</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif // MIRTK_GenericRegistrationDebugger_H</span></div>
 <div class="ttc" id="classmirtk_1_1GenericRegistrationDebugger_html_a008d628559f78777c8cd41b8d978b1cd"><div class="ttname"><a href="classmirtk_1_1GenericRegistrationDebugger.html#a008d628559f78777c8cd41b8d978b1cd">mirtk::GenericRegistrationDebugger::HandleEvent</a></div><div class="ttdeci">void HandleEvent(Observable *, Event, const void *)</div><div class="ttdoc">Handle event and print message to output stream. </div></div>
 <div class="ttc" id="classmirtk_1_1Observable_html"><div class="ttname"><a href="classmirtk_1_1Observable.html">mirtk::Observable</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkObservable_8h_source.html#l00043">mirtkObservable.h:43</a></div></div>
 <div class="ttc" id="classmirtk_1_1GenericRegistrationDebugger_html_a73234960aedce6d6b7cd8ecba077e8e7"><div class="ttname"><a href="classmirtk_1_1GenericRegistrationDebugger.html#a73234960aedce6d6b7cd8ecba077e8e7">mirtk::GenericRegistrationDebugger::~GenericRegistrationDebugger</a></div><div class="ttdeci">~GenericRegistrationDebugger()</div><div class="ttdoc">Destructor. </div></div>
-<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAllocate_8h_source.html#l00026">mirtkAllocate.h:26</a></div></div>
+<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAlgorithm_8h_source.html#l00028">mirtkAlgorithm.h:28</a></div></div>
 <div class="ttc" id="classmirtk_1_1Observer_html"><div class="ttname"><a href="classmirtk_1_1Observer.html">mirtk::Observer</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkObserver_8h_source.html#l00039">mirtkObserver.h:39</a></div></div>
-<div class="ttc" id="namespacemirtk_html_a713bab184e30352ae34d9d6b0605744d"><div class="ttname"><a href="namespacemirtk.html#a713bab184e30352ae34d9d6b0605744d">mirtk::Event</a></div><div class="ttdeci">Event</div><div class="ttdoc">Events that can be observed. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkEvent_8h_source.html#l00031">mirtkEvent.h:31</a></div></div>
+<div class="ttc" id="namespacemirtk_html_a713bab184e30352ae34d9d6b0605744d"><div class="ttname"><a href="namespacemirtk.html#a713bab184e30352ae34d9d6b0605744d">mirtk::Event</a></div><div class="ttdeci">Event</div><div class="ttdoc">Events that can be observed. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkEvent_8h_source.html#l00032">mirtkEvent.h:32</a></div></div>
+<div class="ttc" id="structmirtk_1_1Iteration_html"><div class="ttname"><a href="structmirtk_1_1Iteration.html">mirtk::Iteration</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkEvent_8h_source.html#l00074">mirtkEvent.h:74</a></div></div>
 <div class="ttc" id="classmirtk_1_1GenericRegistrationDebugger_html"><div class="ttname"><a href="classmirtk_1_1GenericRegistrationDebugger.html">mirtk::GenericRegistrationDebugger</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkGenericRegistrationDebugger_8h_source.html#l00045">mirtkGenericRegistrationDebugger.h:45</a></div></div>
-<div class="ttc" id="classmirtk_1_1GenericRegistrationFilter_html"><div class="ttname"><a href="classmirtk_1_1GenericRegistrationFilter.html">mirtk::GenericRegistrationFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkGenericRegistrationFilter_8h_source.html#l00074">mirtkGenericRegistrationFilter.h:74</a></div></div>
+<div class="ttc" id="classmirtk_1_1GenericRegistrationFilter_html"><div class="ttname"><a href="classmirtk_1_1GenericRegistrationFilter.html">mirtk::GenericRegistrationFilter</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkGenericRegistrationFilter_8h_source.html#l00072">mirtkGenericRegistrationFilter.h:72</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 
 <div class="footer">
-&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Tue Jan 5 2016 02:39:14. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
+&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Sun Jan 10 2016 02:51:57. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
 </div>
 </body>
 </html>

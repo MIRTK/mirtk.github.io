@@ -40,7 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_a5c35b8750cbcca5bb1b9a6e3a0d7a3d.html">External</a></li><li class="navelem"><a class="el" href="dir_e2d14a16bf0f7016c3c4e02d614fc794.html">Deformable</a></li><li class="navelem"><a class="el" href="dir_bfdd1459ff4bf538716b0bece8f643c5.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_e80f1c405926e9ef4eea7d6e1eccbf42.html">Packages</a></li><li class="navelem"><a class="el" href="dir_30036fb89eb03fa39f52d7a30b29f487.html">Deformable</a></li><li class="navelem"><a class="el" href="dir_67311d335e285e535bbb013d2ddade68.html">include</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;mirtkSurfaceConstraint.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;mirtkArray.h&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemirtk.html">mirtk</a> {</div>
@@ -105,7 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"></span>  };</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">  /// Array of computed distances to neighboring nodes</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classmirtk_1_1MetricDistortion.html#aeb0c1c3014cb2c7b20eebf73834d687f">   58</a></span>&#160;<span class="comment"></span>  <span class="keyword">typedef</span> std::vector&lt;NodeDistances&gt; <a class="code" href="classmirtk_1_1MetricDistortion.html#aeb0c1c3014cb2c7b20eebf73834d687f">DistancesArray</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classmirtk_1_1MetricDistortion.html#a24f4d35fd66e7b7d9321fb8879fe25d0">   58</a></span>&#160;<span class="comment"></span>  <span class="keyword">typedef</span> Array&lt;NodeDistances&gt; <a class="code" href="classmirtk_1_1MetricDistortion.html#a24f4d35fd66e7b7d9321fb8879fe25d0">DistancesArray</a>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">// ---------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="comment">// Attributes</span></div>
@@ -117,7 +117,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1MetricDistortion.html#a3f57ac4f35f52f9e1f085385b4e57bb2">mirtkAttributeMacro</a>(<span class="keywordtype">double</span>, InitialArea);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">  /// For each node, the initial and current distances to their neighboring nodes</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1MetricDistortion.html#a3f57ac4f35f52f9e1f085385b4e57bb2">mirtkAttributeMacro</a>(std::vector&lt;DistancesArray&gt;, Distances);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1MetricDistortion.html#a3f57ac4f35f52f9e1f085385b4e57bb2">mirtkAttributeMacro</a>(Array&lt;DistancesArray&gt;, Distances);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">  /// Copy attributes of this class from another instance</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"></span>  <span class="keywordtype">void</span> <a class="code" href="classmirtk_1_1MetricDistortion.html#a010cb57ecb3157c74e483edeb15c12d8">CopyAttributes</a>(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1MetricDistortion.html">MetricDistortion</a> &amp;);</div>
@@ -153,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keyword">using</span> <a class="code" href="classmirtk_1_1EnergyTerm.html#ab13986c6f65e2a2bc8c779aae5d58fbb">SurfaceConstraint::Parameter</a>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">  /// Get parameter name/value pairs</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <a class="code" href="namespacemirtk.html#a61dba4dcf2bdd7cfd8633b5533612f6f">ParameterList</a> <a class="code" href="classmirtk_1_1MetricDistortion.html#a9894bea8c2096402660ac01246855234">Parameter</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <a class="code" href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">ParameterList</a> <a class="code" href="classmirtk_1_1MetricDistortion.html#a9894bea8c2096402660ac01246855234">Parameter</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="comment">// ---------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="comment">// Evaluation</span></div>
@@ -185,15 +185,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;} <span class="comment">// namespace mirtk</span></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif // MIRTK_MetricDistortion_H</span></div>
-<div class="ttc" id="namespacemirtk_html_a4e2bd5047994f20f19a5cff74da68956aa41c9db937693b3ad98f7915757770a1"><div class="ttname"><a href="namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956aa41c9db937693b3ad98f7915757770a1">mirtk::EM_MetricDistortion</a></div><div class="ttdoc">Minimize metric distortion. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkEnergyMeasure_8h_source.html#l00076">mirtkEnergyMeasure.h:76</a></div></div>
-<div class="ttc" id="classmirtk_1_1MetricDistortion_html_aeb0c1c3014cb2c7b20eebf73834d687f"><div class="ttname"><a href="classmirtk_1_1MetricDistortion.html#aeb0c1c3014cb2c7b20eebf73834d687f">mirtk::MetricDistortion::DistancesArray</a></div><div class="ttdeci">std::vector&lt; NodeDistances &gt; DistancesArray</div><div class="ttdoc">Array of computed distances to neighboring nodes. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkMetricDistortion_8h_source.html#l00058">mirtkMetricDistortion.h:58</a></div></div>
+<div class="ttc" id="namespacemirtk_html_a4e2bd5047994f20f19a5cff74da68956aa41c9db937693b3ad98f7915757770a1"><div class="ttname"><a href="namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956aa41c9db937693b3ad98f7915757770a1">mirtk::EM_MetricDistortion</a></div><div class="ttdoc">Minimize metric distortion. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkEnergyMeasure_8h_source.html#l00077">mirtkEnergyMeasure.h:77</a></div></div>
 <div class="ttc" id="classmirtk_1_1MetricDistortion_html_a3f57ac4f35f52f9e1f085385b4e57bb2"><div class="ttname"><a href="classmirtk_1_1MetricDistortion.html#a3f57ac4f35f52f9e1f085385b4e57bb2">mirtk::MetricDistortion::mirtkAttributeMacro</a></div><div class="ttdeci">mirtkAttributeMacro(double, InitialArea)</div><div class="ttdoc">Area of initial surface mesh. </div></div>
 <div class="ttc" id="classmirtk_1_1MetricDistortion_html_a3b57eda74948ba76f1655399971820b7"><div class="ttname"><a href="classmirtk_1_1MetricDistortion.html#a3b57eda74948ba76f1655399971820b7">mirtk::MetricDistortion::operator=</a></div><div class="ttdeci">MetricDistortion &amp; operator=(const MetricDistortion &amp;)</div><div class="ttdoc">Assignment operator. </div></div>
 <div class="ttc" id="classmirtk_1_1MetricDistortion_html_a010cb57ecb3157c74e483edeb15c12d8"><div class="ttname"><a href="classmirtk_1_1MetricDistortion.html#a010cb57ecb3157c74e483edeb15c12d8">mirtk::MetricDistortion::CopyAttributes</a></div><div class="ttdeci">void CopyAttributes(const MetricDistortion &amp;)</div><div class="ttdoc">Copy attributes of this class from another instance. </div></div>
+<div class="ttc" id="classmirtk_1_1MetricDistortion_html_a24f4d35fd66e7b7d9321fb8879fe25d0"><div class="ttname"><a href="classmirtk_1_1MetricDistortion.html#a24f4d35fd66e7b7d9321fb8879fe25d0">mirtk::MetricDistortion::DistancesArray</a></div><div class="ttdeci">Array&lt; NodeDistances &gt; DistancesArray</div><div class="ttdoc">Array of computed distances to neighboring nodes. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkMetricDistortion_8h_source.html#l00058">mirtkMetricDistortion.h:58</a></div></div>
 <div class="ttc" id="classmirtk_1_1MetricDistortion_html_a7c3ccaf50322c8841b7928f70e3d3ec8"><div class="ttname"><a href="classmirtk_1_1MetricDistortion.html#a7c3ccaf50322c8841b7928f70e3d3ec8">mirtk::MetricDistortion::Evaluate</a></div><div class="ttdeci">virtual double Evaluate()</div><div class="ttdoc">Compute penalty for current transformation estimate. </div></div>
 <div class="ttc" id="classmirtk_1_1MetricDistortion_html_acf257e03befb41d1985f9f3f30b9966e"><div class="ttname"><a href="classmirtk_1_1MetricDistortion.html#acf257e03befb41d1985f9f3f30b9966e">mirtk::MetricDistortion::~MetricDistortion</a></div><div class="ttdeci">virtual ~MetricDistortion()</div><div class="ttdoc">Destructor. </div></div>
-<div class="ttc" id="namespacemirtk_html_a61dba4dcf2bdd7cfd8633b5533612f6f"><div class="ttname"><a href="namespacemirtk.html#a61dba4dcf2bdd7cfd8633b5533612f6f">mirtk::ParameterList</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; string, string &gt; &gt; ParameterList</div><div class="ttdoc">Ordered list of parameter name/value pairs. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkObject_8h_source.html#l00038">mirtkObject.h:38</a></div></div>
-<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAllocate_8h_source.html#l00026">mirtkAllocate.h:26</a></div></div>
+<div class="ttc" id="namespacemirtk_html_a848997e3f86ef7bba3c6710a54443bc0"><div class="ttname"><a href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">mirtk::ParameterList</a></div><div class="ttdeci">Array&lt; Pair&lt; string, string &gt; &gt; ParameterList</div><div class="ttdoc">Ordered list of parameter name/value pairs. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkObject_8h_source.html#l00037">mirtkObject.h:37</a></div></div>
+<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAlgorithm_8h_source.html#l00028">mirtkAlgorithm.h:28</a></div></div>
 <div class="ttc" id="classmirtk_1_1MetricDistortion_html_aad9d4588899d4304a08a874ddabbc11c"><div class="ttname"><a href="classmirtk_1_1MetricDistortion.html#aad9d4588899d4304a08a874ddabbc11c">mirtk::MetricDistortion::mirtkPublicAttributeMacro</a></div><div class="ttdeci">mirtkPublicAttributeMacro(int, Radius)</div><div class="ttdoc">Radius of node neighborhood (i.e., maximum edge-connectivity) </div></div>
 <div class="ttc" id="classmirtk_1_1MetricDistortion_html_ac1bba26401f24dcbd99be40936306858"><div class="ttname"><a href="classmirtk_1_1MetricDistortion.html#ac1bba26401f24dcbd99be40936306858">mirtk::MetricDistortion::SetWithoutPrefix</a></div><div class="ttdeci">virtual bool SetWithoutPrefix(const char *, const char *)</div><div class="ttdoc">Set parameter value from string. </div></div>
 <div class="ttc" id="classmirtk_1_1MetricDistortion_html_a02d976e537c2e559b41b766ed68dd1a1"><div class="ttname"><a href="classmirtk_1_1MetricDistortion.html#a02d976e537c2e559b41b766ed68dd1a1">mirtk::MetricDistortion::EvaluateGradient</a></div><div class="ttdeci">virtual void EvaluateGradient(double *, double, double)</div><div class="ttdoc">Compute internal force w.r.t. transformation parameters. </div></div>
@@ -209,7 +209,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 
 <div class="footer">
-&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Tue Jan 5 2016 02:39:15. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
+&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Sun Jan 10 2016 02:51:57. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
 </div>
 </body>
 </html>

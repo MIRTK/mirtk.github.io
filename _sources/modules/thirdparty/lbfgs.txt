@@ -1,0 +1,7 @@
+============
+LBFGS Module
+============
+
+.. include:: ../_descriptions/lbfgs.rst
+
+.. todo:: Document main module classes and their usage.

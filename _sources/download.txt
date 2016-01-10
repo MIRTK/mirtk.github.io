@@ -12,23 +12,36 @@ Download
 Source Code
 ===========
 
-The source code of the Medical Image Registration ToolKit (MIRTK) is hosted on `GitHub <https://github.com/>`__
+The source code of the Medical Image Registration ToolKit (MIRTK) is hosted on GitHub
 under the `MIRTK Organization <https://github.com/MIRTK/>`__ from which all releases and latest development
 versions can be downloaded. See the :doc:`changelog` for a summary of changes in each release.
 
-To download the MIRTK source files using Git_, run
+To download the MIRTK source files using Git_, use the following
+`git clone <https://git-scm.com/docs/git-clone>`__ command:
 
 .. code-block:: bash
 
-    git clone --depth=1 -- https://github.com/MIRTK/MIRTK.git
-    export MIRTK_SOURCE_DIR="$PWD/MIRTK"
-    export MIRTK_BINARY_DIR="$MIRTK_SOURCE_DIR/Build"
-    cd $MIRTK_SOURCE_DIR
+    git clone --branch release --depth 1 -- https://github.com/MIRTK/MIRTK.git
+    MIRTK_SOURCE_DIR="$PWD/MIRTK"
 
-where the `--depth=1` option requests a shallow clone of the current
-development files excluding previous revisions in order to save bandwidth,
-download time, and disk space. It may be omitted if you want to see the
-development history and contribute to the MIRTK.
+where the ``--branch release --depth 1`` options request a shallow clone of the latest
+release files excluding previous revisions in order to save bandwidth,
+download time, and disk space. The ``--depth`` option may be omitted if you want to
+see the development history and contribute to the MIRTK. To download the latest
+(more or less) stable development version, skip the ``--branch`` option or use
+``--branch master``. The most current development version is in the ``develop``
+branch. Note that branches can be switched also after the initial clone command
+using the `git checkout <https://git-scm.com/docs/git-checkout>`__ command.
+
+.. note::
+
+   To download the entire MIRTK distribution including documentation source files,
+   third-party library modules, and external packages, run the command::
+
+       git submodule update --init
+
+   after the initial clone command without any directory path argument. To download
+   only selected additional files, run one or more of the following commands.
 
 The MIRTK repository includes copies of the Boost and Eigen library header files
 required to build some of the core modules of the MIRTK. Either install these
@@ -37,20 +50,19 @@ or initialize the desired Git submodules before configuring the MIRTK build:
 
 .. code-block:: bash
 
-    git submodule update --init -- Modules/ThirdParty/Boost
-    git submodule update --init -- Modules/ThirdParty/Eigen
+    git submodule update --init -- ThirdParty/Boost
+    git submodule update --init -- ThirdParty/Eigen
 
-The source files of commonly used MIRTK modules are directly included in the
-top-level MIRTK project under the Modules/ subdirectory. Further optional
-modules which are developed and distributed in their own respective Git
-repository are included as Git submodules in the Modules/External/ directory.
-To also build these optional modules, initialize and update the needed Git
-submodules before (re-)configuring the build files, e.g.:
+The source files of core MIRTK modules are included in the top-level MIRTK repository
+under the Modules/ subdirectory. Further optional modules which are developed and
+distributed in their own respective Git repository are included as Git submodules
+in the Packages/ directory. To also build these optional modules, initialize and
+update the desired Git submodules before (re-)configuring the build files, e.g.:
 
 .. code-block:: bash
 
-    git submodule update --init -- Modules/External/Deformable
-    git submodule update --init -- Modules/External/VolumetricMapping
+    git submodule update --init -- Packages/Deformable
+    git submodule update --init -- Packages/VolumetricMapping
 
 To build the online documentation from the reStructuredText (.rst) files in
 the Documentation subdirectory, clone also the MIRTK Documentation repository:

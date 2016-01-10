@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0 (9491efa)',
+        VERSION:     'v1.0 (f096eae)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -63,8 +63,14 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="sidebar.html">Table Of Contents</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#modules">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -95,6 +101,8 @@ organization of the MIRTK enables the installation of selected modules.</p>
 <p>In the event you found the MIRTK useful, please consider giving appropriate credit
 to the software with a citation of the research article(s) describing the implemented
 algorithm(s). See the <a class="reference internal" href="publications.html"><em>list of publications</em></a> for suitable references.</p>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="20%" />
@@ -106,54 +114,142 @@ algorithm(s). See the <a class="reference internal" href="publications.html"><em
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="module/core/common.html"><em>Common</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a></td>
 <td>Base classes and common functions. (required)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="module/core/image.html"><em>Image</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/core/image.html"><em>Image</em></a></td>
 <td>Image readers/writers and basic image processing filters.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a></td>
 <td>Utility types such as matrices and functions for numerical optimization.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a></td>
 <td>VTK point set/surface filters. Required for point set/surface registration.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="module/core/registration.html"><em>Registration</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/core/registration.html"><em>Registration</em></a></td>
 <td>Image and point set registration library.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="module/core/transformation.html"><em>Transformation</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/core/transformation.html"><em>Transformation</em></a></td>
 <td>Image and point set transformation types and regularization terms.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="module/external/deformable.html"><em>Deformable</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/packages/deformable.html"><em>Deformable</em></a></td>
 <td>Library for Euler integration of deformable meshes such as cortical surfaces.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="module/external/volumetricmapping.html"><em>VolumetricMapping</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/packages/volumetricmapping.html"><em>Volumetric Mapping</em></a></td>
 <td>Filters for the volumetric mapping of brain volumes.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="module/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
 <td>Limited memory Broyden–Fletcher–Goldfarb–Shanno (BFGS) optimizer.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="module/thirdparty/nifti.html"><em>NIfTI</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/thirdparty/nifti.html"><em>NIfTI</em></a></td>
 <td>NIfTI image reader and writer.</td>
 </tr>
 </tbody>
 </table>
-<p>Parts of the Common, Numerics, Image, Transformation, and Registration modules of
-the MIRTK originated from the <a class="reference external" href="https://github.com/BioMedIA/irtk-legacy">Legacy IRTK</a> written by <a class="reference external" href="http://www.imperial.ac.uk/people/d.rueckert">Daniel Rueckert</a> and <a class="reference external" href="http://www.imagingcdt.com/about/cdt-management/professor-julia-schnabel">Julia Schnabel</a>.
-All of the transformation and registration code of the IRTK was rewritten from scratch by <a class="reference external" href="http://www.andreasschuh.com/">Andreas Schuh</a>
-during his PhD studies, with a new modular and extended registration framework. Additional
-modules for the reconstruction and inflation of cortical surface meshes, the registration
+</div>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="commands/average-dofs.html"><em>average-dofs</em></a></td>
+<td><a class="reference internal" href="commands/average-images.html"><em>average-images</em></a></td>
+<td><a class="reference internal" href="commands/calculate.html"><em>calculate</em></a></td>
+<td><a class="reference internal" href="commands/calculate-distance-map.html"><em>calculate-distance-map</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/calculate-exponential-map.html"><em>calculate-exponential-map</em></a></td>
+<td><a class="reference internal" href="commands/calculate-lie-bracket.html"><em>calculate-lie-bracket</em></a></td>
+<td><a class="reference internal" href="commands/calculate-logarithmic-map.html"><em>calculate-logarithmic-map</em></a></td>
+<td><a class="reference internal" href="commands/calculate-surface-attributes.html"><em>calculate-surface-attributes</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/calculate-surface-spectrum.html"><em>calculate-surface-spectrum</em></a></td>
+<td><a class="reference internal" href="commands/close-image.html"><em>close-image</em></a></td>
+<td><a class="reference internal" href="commands/concatenate-dofs.html"><em>concatenate-dofs</em></a></td>
+<td><a class="reference internal" href="commands/concatenate-images.html"><em>concatenate-images</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/convert-dof.html"><em>convert-dof</em></a></td>
+<td><a class="reference internal" href="commands/convert-image.html"><em>convert-image</em></a></td>
+<td><a class="reference internal" href="commands/convert-pointset.html"><em>convert-pointset</em></a></td>
+<td><a class="reference internal" href="commands/copy-pointset-attributes.html"><em>copy-pointset-attributes</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/cut-brain.html"><em>cut-brain</em></a></td>
+<td><a class="reference internal" href="commands/decimate-surface.html"><em>decimate-surface</em></a></td>
+<td><a class="reference internal" href="commands/deform-mesh.html"><em>deform-mesh</em></a></td>
+<td><a class="reference internal" href="commands/delete-pointset-attributes.html"><em>delete-pointset-attributes</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/detect-edges.html"><em>detect-edges</em></a></td>
+<td><a class="reference internal" href="commands/dilate-image.html"><em>dilate-image</em></a></td>
+<td><a class="reference internal" href="commands/downsample-image.html"><em>downsample-image</em></a></td>
+<td><a class="reference internal" href="commands/edit-dof.html"><em>edit-dof</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/edit-image.html"><em>edit-image</em></a></td>
+<td><a class="reference internal" href="commands/erode-image.html"><em>erode-image</em></a></td>
+<td><a class="reference internal" href="commands/evaluate-distance.html"><em>evaluate-distance</em></a></td>
+<td><a class="reference internal" href="commands/evaluate-distortion.html"><em>evaluate-distortion</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/evaluate-dof.html"><em>evaluate-dof</em></a></td>
+<td><a class="reference internal" href="commands/evaluate-jacobian.html"><em>evaluate-jacobian</em></a></td>
+<td><a class="reference internal" href="commands/evaluate-overlap.html"><em>evaluate-overlap</em></a></td>
+<td><a class="reference internal" href="commands/evaluate-surface-overlap.html"><em>evaluate-surface-overlap</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/extract-connected-components.html"><em>extract-connected-components</em></a></td>
+<td><a class="reference internal" href="commands/extract-connected-points.html"><em>extract-connected-points</em></a></td>
+<td><a class="reference internal" href="commands/extract-image-region.html"><em>extract-image-region</em></a></td>
+<td><a class="reference internal" href="commands/extract-pointset-surface.html"><em>extract-pointset-surface</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/extract-surface.html"><em>extract-surface</em></a></td>
+<td><a class="reference internal" href="commands/flip-image.html"><em>flip-image</em></a></td>
+<td><a class="reference internal" href="commands/info.html"><em>info</em></a></td>
+<td><a class="reference internal" href="commands/init-dof.html"><em>init-dof</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/invert-dof.html"><em>invert-dof</em></a></td>
+<td><a class="reference internal" href="commands/map.html"><em>map</em></a></td>
+<td><a class="reference internal" href="commands/match-points.html"><em>match-points</em></a></td>
+<td><a class="reference internal" href="commands/offset-surface.html"><em>offset-surface</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/open-image.html"><em>open-image</em></a></td>
+<td><a class="reference internal" href="commands/project-onto-surface.html"><em>project-onto-surface</em></a></td>
+<td><a class="reference internal" href="commands/reflect-image.html"><em>reflect-image</em></a></td>
+<td><a class="reference internal" href="commands/register.html"><em>register</em></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/remesh.html"><em>remesh</em></a></td>
+<td><a class="reference internal" href="commands/resample-image.html"><em>resample-image</em></a></td>
+<td><a class="reference internal" href="commands/smooth-image.html"><em>smooth-image</em></a></td>
+<td><a class="reference internal" href="commands/smooth-surface.html"><em>smooth-surface</em></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/transform-image.html"><em>transform-image</em></a></td>
+<td><a class="reference internal" href="commands/transform-points.html"><em>transform-points</em></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>Parts of the Common, Numerics, Image, Transformation, and Registration modules and
+command-line tools of the MIRTK originated from the <a class="reference external" href="https://github.com/BioMedIA/irtk-legacy">Legacy IRTK</a> written by
+<a class="reference external" href="http://www.imperial.ac.uk/people/d.rueckert">Daniel Rueckert</a> and <a class="reference external" href="http://www.imagingcdt.com/about/cdt-management/professor-julia-schnabel">Julia Schnabel</a>. All of the transformation and registration code
+of the IRTK was rewritten from scratch by <a class="reference external" href="http://www.andreasschuh.com/">Andreas Schuh</a> during his PhD studies,
+with a new modular and extended registration framework. Additional modules and commands
+for the reconstruction and inflation of cortical surface meshes, the registration
 of surface meshes, and the harmonic mapping of brain volumes were subsequently added to the MIRTK.
-The source code of the MIRTK library became the foundation of the <a class="reference external" href="https://github.com/BioMedIA/IRTK">IRTK 2</a>, whose development
-is currently in progress.</p>
+The source code of the MIRTK library became the foundation of the <a class="reference external" href="https://github.com/BioMedIA/IRTK">IRTK 2</a>,
+the development of which is currently in progress.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Latest bug fixes and additional features are currently only available in the MIRTK.
 Other applications and command-line tools such as the image viewer, basic image manipulation
 tools, and the Segmentation module of the Legacy IRTK are not included in the MIRTK.
-An installation of the MIRTK will not be required as soon as a IRTK 2 release which
-includes all MIRTK modules is available. Until then, an installation of both the MIRTK
+An installation of the MIRTK will not be required once the IRTK 2 is released with
+all MIRTK modules and recent updates. Until then, an installation of both the MIRTK
 and IRTK 2 is recommended.</p>
+</div>
 </div>
 </div>
 

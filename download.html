@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0 (9491efa)',
+        VERSION:     'v1.0 (f096eae)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -66,6 +66,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
 </ul>
 <ul class="current">
@@ -94,36 +95,48 @@
 <h1>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="source-code">
 <span id="downloadsources"></span><h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
-<p>The source code of the Medical Image Registration ToolKit (MIRTK) is hosted on <a class="reference external" href="https://github.com/">GitHub</a>
+<p>The source code of the Medical Image Registration ToolKit (MIRTK) is hosted on GitHub
 under the <a class="reference external" href="https://github.com/MIRTK/">MIRTK Organization</a> from which all releases and latest development
 versions can be downloaded. See the <a class="reference internal" href="changelog.html"><em>Release Notes</em></a> for a summary of changes in each release.</p>
-<p>To download the MIRTK source files using <a class="reference external" href="https://git-scm.com">Git</a>, run</p>
-<div class="highlight-bash"><div class="highlight"><pre>git clone --depth<span class="o">=</span><span class="m">1</span> -- https://github.com/MIRTK/MIRTK.git
-<span class="nb">export </span><span class="nv">MIRTK_SOURCE_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PWD</span><span class="s2">/MIRTK&quot;</span>
-<span class="nb">export </span><span class="nv">MIRTK_BINARY_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$MIRTK_SOURCE_DIR</span><span class="s2">/Build&quot;</span>
-<span class="nb">cd</span> <span class="nv">$MIRTK_SOURCE_DIR</span>
+<p>To download the MIRTK source files using <a class="reference external" href="https://git-scm.com">Git</a>, use the following
+<a class="reference external" href="https://git-scm.com/docs/git-clone">git clone</a> command:</p>
+<div class="highlight-bash"><div class="highlight"><pre>git clone --branch release --depth <span class="m">1</span> -- https://github.com/MIRTK/MIRTK.git
+<span class="nv">MIRTK_SOURCE_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PWD</span><span class="s2">/MIRTK&quot;</span>
 </pre></div>
 </div>
-<p>where the <cite>&#8211;depth=1</cite> option requests a shallow clone of the current
-development files excluding previous revisions in order to save bandwidth,
-download time, and disk space. It may be omitted if you want to see the
-development history and contribute to the MIRTK.</p>
+<p>where the <code class="docutils literal"><span class="pre">--branch</span> <span class="pre">release</span> <span class="pre">--depth</span> <span class="pre">1</span></code> options request a shallow clone of the latest
+release files excluding previous revisions in order to save bandwidth,
+download time, and disk space. The <code class="docutils literal"><span class="pre">--depth</span></code> option may be omitted if you want to
+see the development history and contribute to the MIRTK. To download the latest
+(more or less) stable development version, skip the <code class="docutils literal"><span class="pre">--branch</span></code> option or use
+<code class="docutils literal"><span class="pre">--branch</span> <span class="pre">master</span></code>. The most current development version is in the <code class="docutils literal"><span class="pre">develop</span></code>
+branch. Note that branches can be switched also after the initial clone command
+using the <a class="reference external" href="https://git-scm.com/docs/git-checkout">git checkout</a> command.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>To download the entire MIRTK distribution including documentation source files,
+third-party library modules, and external packages, run the command:</p>
+<div class="highlight-python"><div class="highlight"><pre>git submodule update --init
+</pre></div>
+</div>
+<p class="last">after the initial clone command without any directory path argument. To download
+only selected additional files, run one or more of the following commands.</p>
+</div>
 <p>The MIRTK repository includes copies of the Boost and Eigen library header files
 required to build some of the core modules of the MIRTK. Either install these
 libraries using the official installation packages for your operating system
 or initialize the desired Git submodules before configuring the MIRTK build:</p>
-<div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- Modules/ThirdParty/Boost
-git submodule update --init -- Modules/ThirdParty/Eigen
+<div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- ThirdParty/Boost
+git submodule update --init -- ThirdParty/Eigen
 </pre></div>
 </div>
-<p>The source files of commonly used MIRTK modules are directly included in the
-top-level MIRTK project under the Modules/ subdirectory. Further optional
-modules which are developed and distributed in their own respective Git
-repository are included as Git submodules in the Modules/External/ directory.
-To also build these optional modules, initialize and update the needed Git
-submodules before (re-)configuring the build files, e.g.:</p>
-<div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- Modules/External/Deformable
-git submodule update --init -- Modules/External/VolumetricMapping
+<p>The source files of core MIRTK modules are included in the top-level MIRTK repository
+under the Modules/ subdirectory. Further optional modules which are developed and
+distributed in their own respective Git repository are included as Git submodules
+in the Packages/ directory. To also build these optional modules, initialize and
+update the desired Git submodules before (re-)configuring the build files, e.g.:</p>
+<div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- Packages/Deformable
+git submodule update --init -- Packages/VolumetricMapping
 </pre></div>
 </div>
 <p>To build the online documentation from the reStructuredText (.rst) files in

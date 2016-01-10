@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef MIRTK_Indent_H</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define MIRTK_Indent_H</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;mirtkStream.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemirtk.html">mirtk</a> {</div>
@@ -195,7 +195,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">// ---------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">// Streaming operator</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">inline</span> std::ostream &amp;operator&lt;&lt; (std::ostream &amp;os, <span class="keyword">const</span> Indent &amp;indent)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">inline</span> ostream &amp;operator&lt;&lt; (ostream &amp;os, <span class="keyword">const</span> Indent &amp;indent)</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;{</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; indent.Spaces(); ++i) os &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordflow">return</span> os;</div>
@@ -214,7 +214,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classmirtk_1_1Indent_html_ae57fca7786fcf44908e402c9b5698aa7"><div class="ttname"><a href="classmirtk_1_1Indent.html#ae57fca7786fcf44908e402c9b5698aa7">mirtk::Indent::operator+=</a></div><div class="ttdeci">Indent &amp; operator+=(const Indent &amp;indent)</div><div class="ttdoc">Add indentation to this indentation. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkIndent_8h_source.html#l00096">mirtkIndent.h:96</a></div></div>
 <div class="ttc" id="classmirtk_1_1Indent_html_a75c97bec554a922e40514f63bdfadfa3"><div class="ttname"><a href="classmirtk_1_1Indent.html#a75c97bec554a922e40514f63bdfadfa3">mirtk::Indent::operator+</a></div><div class="ttdeci">Indent operator+(const Indent &amp;indent) const </div><div class="ttdoc">Add two indentations. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkIndent_8h_source.html#l00103">mirtkIndent.h:103</a></div></div>
 <div class="ttc" id="classmirtk_1_1Indent_html_a4368823bdf06457cda0386804db04e70"><div class="ttname"><a href="classmirtk_1_1Indent.html#a4368823bdf06457cda0386804db04e70">mirtk::Indent::operator-=</a></div><div class="ttdeci">Indent &amp; operator-=(const Indent &amp;indent)</div><div class="ttdoc">Subtract indentation from this indentation. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkIndent_8h_source.html#l00109">mirtkIndent.h:109</a></div></div>
-<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAllocate_8h_source.html#l00026">mirtkAllocate.h:26</a></div></div>
+<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAlgorithm_8h_source.html#l00028">mirtkAlgorithm.h:28</a></div></div>
 <div class="ttc" id="classmirtk_1_1Indent_html_a5cf10650a49a9c10ce689908d73dc08f"><div class="ttname"><a href="classmirtk_1_1Indent.html#a5cf10650a49a9c10ce689908d73dc08f">mirtk::Indent::_NumberOfSpaces</a></div><div class="ttdeci">int _NumberOfSpaces</div><div class="ttdoc">Number of whitespace characters per indentation level. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkIndent_8h_source.html#l00040">mirtkIndent.h:40</a></div></div>
 <div class="ttc" id="classmirtk_1_1Indent_html_acad64855737438f3e82c18df75dd9b1f"><div class="ttname"><a href="classmirtk_1_1Indent.html#acad64855737438f3e82c18df75dd9b1f">mirtk::Indent::operator-</a></div><div class="ttdeci">Indent operator-(const Indent &amp;indent) const </div><div class="ttdoc">Subtract two indentations from another. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkIndent_8h_source.html#l00116">mirtkIndent.h:116</a></div></div>
 <div class="ttc" id="classmirtk_1_1Indent_html_a8e040d0cf9f4ad26dfc8d906a9290a81"><div class="ttname"><a href="classmirtk_1_1Indent.html#a8e040d0cf9f4ad26dfc8d906a9290a81">mirtk::Indent::Spaces</a></div><div class="ttdeci">int Spaces() const </div><div class="ttdoc">Number of space characters. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkIndent_8h_source.html#l00140">mirtkIndent.h:140</a></div></div>
@@ -225,7 +225,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 
 <div class="footer">
-&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Tue Jan 5 2016 02:39:15. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
+&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Sun Jan 10 2016 02:51:57. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
 </div>
 </body>
 </html>

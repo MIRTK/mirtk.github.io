@@ -1,13 +1,6 @@
 var searchData=
 [
   ['i2s',['I2S',['../classmirtk_1_1BaseImage.html#a299eb7f11bb568c28d3435d12e65ecf2a81024901d63ea23eea923d2e5533c0a0',1,'mirtk::BaseImage']]],
-  ['ift_5fcurvature',['IFT_Curvature',['../namespacemirtk.html#a4a62ab25a1e9333526084dbf11aabbb7ade18fc84d253a39582997ba37e18a33e',1,'mirtk']]],
-  ['ift_5fdistortion',['IFT_Distortion',['../namespacemirtk.html#a4a62ab25a1e9333526084dbf11aabbb7ad2cc3e230a78936e23e2b871d708db25',1,'mirtk']]],
-  ['ift_5finflation',['IFT_Inflation',['../namespacemirtk.html#a4a62ab25a1e9333526084dbf11aabbb7a7738cd7247a30fa70967e8c05a361550',1,'mirtk']]],
-  ['ift_5fnonselfintersection',['IFT_NonSelfIntersection',['../namespacemirtk.html#a4a62ab25a1e9333526084dbf11aabbb7a373865b9c538528e28936ec63e49c52d',1,'mirtk']]],
-  ['ift_5frepulsion',['IFT_Repulsion',['../namespacemirtk.html#a4a62ab25a1e9333526084dbf11aabbb7ac1a8e563061c569fd8a114df3d787c91',1,'mirtk']]],
-  ['ift_5fstretching',['IFT_Stretching',['../namespacemirtk.html#a4a62ab25a1e9333526084dbf11aabbb7a958ba4c2b6914fd650e34df70b55ee72',1,'mirtk']]],
-  ['ift_5funknown',['IFT_Unknown',['../namespacemirtk.html#a4a62ab25a1e9333526084dbf11aabbb7a07974d1a325edc24e7db2388c8b1ccd9',1,'mirtk']]],
   ['index',['INDEX',['../classmirtk_1_1PolyDataRemeshing.html#a4c01955dc5dcfe6321754270e576f3c2ad3889fa288217628950a317cc6624f31',1,'mirtk::PolyDataRemeshing']]],
   ['initevent',['InitEvent',['../namespacemirtk.html#a713bab184e30352ae34d9d6b0605744da4251e3f156cc4fd25e03e2c2d340e1c8',1,'mirtk']]],
   ['intersection',['Intersection',['../classmirtk_1_1SurfaceCollisions.html#a4fed86a64222a6738f8f0e7911eee58aa68347e4df745dc9fb212398f00252eb3',1,'mirtk::SurfaceCollisions']]],

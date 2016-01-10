@@ -1,5 +1,0 @@
-=============
-Common Module
-=============
-
-.. include:: common_abstract.rst

@@ -1,0 +1,539 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Commands &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v1.0 (f096eae)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="sidebar.html" />
+    <link rel="next" title="average-dofs" href="commands/average-dofs.html" />
+    <link rel="prev" title="LBFGS Module" href="modules/thirdparty/lbfgs.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="commands/average-dofs.html" title="average-dofs"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="modules/thirdparty/lbfgs.html" title="LBFGS Module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="sidebar.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#average-dofs">average-dofs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#average-images">average-images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate">calculate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-distance-map">calculate-distance-map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-exponential-map">calculate-exponential-map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-lie-bracket">calculate-lie-bracket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-logarithmic-map">calculate-logarithmic-map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-surface-attributes">calculate-surface-attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-surface-spectrum">calculate-surface-spectrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#close-image">close-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#concatenate-dofs">concatenate-dofs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#concatenate-images">concatenate-images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convert-dof">convert-dof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convert-image">convert-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convert-pointset">convert-pointset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#copy-pointset-attributes">copy-pointset-attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cut-brain">cut-brain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#decimate-surface">decimate-surface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deform-mesh">deform-mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-pointset-attributes">delete-pointset-attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#detect-edges">detect-edges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dilate-image">dilate-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downsample-image">downsample-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-dof">edit-dof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-image">edit-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#erode-image">erode-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#evaluate-distance">evaluate-distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#evaluate-distortion">evaluate-distortion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#evaluate-dof">evaluate-dof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#evaluate-jacobian">evaluate-jacobian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#evaluate-overlap">evaluate-overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#evaluate-surface-overlap">evaluate-surface-overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extract-connected-components">extract-connected-components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extract-connected-points">extract-connected-points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extract-image-region">extract-image-region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extract-pointset-surface">extract-pointset-surface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extract-surface">extract-surface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flip-image">flip-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#info">info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#init-dof">init-dof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#invert-dof">invert-dof</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#map">map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#match-points">match-points</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#offset-surface">offset-surface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#open-image">open-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#project-onto-surface">project-onto-surface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reflect-image">reflect-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#register">register</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remesh">remesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resample-image">resample-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#smooth-image">smooth-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#smooth-surface">smooth-surface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transform-image">transform-image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transform-points">transform-points</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="commands">
+<span id="id1"></span><h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="average-dofs">
+<span id="id2"></span><h2>average-dofs<a class="headerlink" href="#average-dofs" title="Permalink to this headline">¶</a></h2>
+<p>This command averages a number of input transformations.
+It can be used to construct a brain image atlas and has been
+utilized for the construction of the spatio-temporal fetal/neonatal
+brain atlases available at <a class="reference external" href="http://brain-development.org/brain-atlases/">http://brain-development.org/brain-atlases/</a>.</p>
+<p><a class="reference internal" href="commands/average-dofs.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="average-images">
+<span id="id3"></span><h2>average-images<a class="headerlink" href="#average-images" title="Permalink to this headline">¶</a></h2>
+<p>Computes voxelwise average image of the given (transformed) input images.</p>
+<p><a class="reference internal" href="commands/average-images.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate">
+<span id="id4"></span><h2>calculate<a class="headerlink" href="#calculate" title="Permalink to this headline">¶</a></h2>
+<p>This tool can be used for basic calculations from a sequence of data values read
+either from an image or a VTK pointset. It can be used, for example, to add two
+data sequences and to divide the result by a constant. The current sequence can
+be written to an output file again using the -out option. Additionally, statistics
+of the current data sequence can be computed such as the mean or variance.
+The order of the data transformations and calculation of statistics is determined
+by the order of the command-line arguments.</p>
+<p><a class="reference internal" href="commands/calculate.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate-distance-map">
+<span id="id5"></span><h2>calculate-distance-map<a class="headerlink" href="#calculate-distance-map" title="Permalink to this headline">¶</a></h2>
+<p>Computes distance transformation of binary object mask.</p>
+<p><a class="reference internal" href="commands/calculate-distance-map.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate-exponential-map">
+<span id="id6"></span><h2>calculate-exponential-map<a class="headerlink" href="#calculate-exponential-map" title="Permalink to this headline">¶</a></h2>
+<p>Reads a dense 3D (2D) stationary velocity field, computes the corresponding
+dense 3D (2D) displacement field, and writes the resulting vector field.</p>
+<p><a class="reference internal" href="commands/calculate-exponential-map.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate-lie-bracket">
+<span id="id7"></span><h2>calculate-lie-bracket<a class="headerlink" href="#calculate-lie-bracket" title="Permalink to this headline">¶</a></h2>
+<p>Computes the Lie bracket of two vector fiels z = [x, y].</p>
+<p><a class="reference internal" href="commands/calculate-lie-bracket.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate-logarithmic-map">
+<span id="id8"></span><h2>calculate-logarithmic-map<a class="headerlink" href="#calculate-logarithmic-map" title="Permalink to this headline">¶</a></h2>
+<p>Reads a dense 3D (2D) displacement field, computes the corresponding
+stationary 3D (2D) velocity field, and writes the resulting vector field.</p>
+<p><a class="reference internal" href="commands/calculate-logarithmic-map.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate-surface-attributes">
+<span id="id9"></span><h2>calculate-surface-attributes<a class="headerlink" href="#calculate-surface-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Calculate attributes of input surface such as normals and curvature.
+If required, as in case of the curvature calculations, the input mesh
+is triangulated beforehand if it contains non-triangular faces.</p>
+<p><a class="reference internal" href="commands/calculate-surface-attributes.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate-surface-spectrum">
+<span id="id10"></span><h2>calculate-surface-spectrum<a class="headerlink" href="#calculate-surface-spectrum" title="Permalink to this headline">¶</a></h2>
+<p>Performs a spectral analysis of the general graph Laplacian matrix
+computed from the given input surface mesh(es). If a -target surface
+is specified, the eigenvectors are reordered and their sign flipped
+to match the eigenvectors of the target surface mesh.</p>
+<p><a class="reference internal" href="commands/calculate-surface-spectrum.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="close-image">
+<span id="id11"></span><h2>close-image<a class="headerlink" href="#close-image" title="Permalink to this headline">¶</a></h2>
+<p>Closes holes by first dilating and then eroding an input image.</p>
+<p><a class="reference internal" href="commands/close-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="concatenate-dofs">
+<span id="id12"></span><h2>concatenate-dofs<a class="headerlink" href="#concatenate-dofs" title="Permalink to this headline">¶</a></h2>
+<p>Computes the composition T of the given input transformations such that</p>
+<p><a class="reference internal" href="commands/concatenate-dofs.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="concatenate-images">
+<span id="id13"></span><h2>concatenate-images<a class="headerlink" href="#concatenate-images" title="Permalink to this headline">¶</a></h2>
+<p>Concatenate two or more either 2D images to form a 3D volume,
+or 3D volumes to form a 3D+t temporal sequence. All input images
+must have the same image attributes, except in either the third (2D)
+or the third and fourth (3D) image dimension.</p>
+<p><a class="reference internal" href="commands/concatenate-images.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="convert-dof">
+<span id="id14"></span><h2>convert-dof<a class="headerlink" href="#convert-dof" title="Permalink to this headline">¶</a></h2>
+<p>Converts between different transformation file formats.</p>
+<p><a class="reference internal" href="commands/convert-dof.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="convert-image">
+<span id="id15"></span><h2>convert-image<a class="headerlink" href="#convert-image" title="Permalink to this headline">¶</a></h2>
+<p>Converts an image from one voxel type to another.</p>
+<p><a class="reference internal" href="commands/convert-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="convert-pointset">
+<span id="id16"></span><h2>convert-pointset<a class="headerlink" href="#convert-pointset" title="Permalink to this headline">¶</a></h2>
+<p>Convert point set from one (file) format to another.</p>
+<p><a class="reference internal" href="commands/convert-pointset.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="copy-pointset-attributes">
+<span id="id17"></span><h2>copy-pointset-attributes<a class="headerlink" href="#copy-pointset-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Copies point and/or cell data from a source point set to a target point set
+and writes the resulting amended point set to the specified output file.
+When no separate output file is specified, the target point set is overwritten.</p>
+<p><a class="reference internal" href="commands/copy-pointset-attributes.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="cut-brain">
+<span id="id18"></span><h2>cut-brain<a class="headerlink" href="#cut-brain" title="Permalink to this headline">¶</a></h2>
+<p>Cut input brain volume/mask into left and/or right hemisphere(s).</p>
+<p><a class="reference internal" href="commands/cut-brain.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="decimate-surface">
+<span id="id19"></span><h2>decimate-surface<a class="headerlink" href="#decimate-surface" title="Permalink to this headline">¶</a></h2>
+<p>Decimates a (triangular) mesh using VTK&#8217;s vtkQuadricDecimation filter.
+If the -pro option is given, the vtkDecimatePro filter is used instead.</p>
+<p><a class="reference internal" href="commands/decimate-surface.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="deform-mesh">
+<span id="id20"></span><h2>deform-mesh<a class="headerlink" href="#deform-mesh" title="Permalink to this headline">¶</a></h2>
+<p>Iteratively minimizes a deformable surface model energy functional.
+The gradient of the energy terms are the internal and external forces
+of the deformable surface model.</p>
+<p><a class="reference internal" href="commands/deform-mesh.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="delete-pointset-attributes">
+<span id="id21"></span><h2>delete-pointset-attributes<a class="headerlink" href="#delete-pointset-attributes" title="Permalink to this headline">¶</a></h2>
+<p>Remove point data and/or cell data from input point set.</p>
+<p><a class="reference internal" href="commands/delete-pointset-attributes.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="detect-edges">
+<span id="id22"></span><h2>detect-edges<a class="headerlink" href="#detect-edges" title="Permalink to this headline">¶</a></h2>
+<p>Convolves the input image with an edge detection operator.</p>
+<p><a class="reference internal" href="commands/detect-edges.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="dilate-image">
+<span id="id23"></span><h2>dilate-image<a class="headerlink" href="#dilate-image" title="Permalink to this headline">¶</a></h2>
+<p>Dilates an input image by replacing a voxel&#8217;s value by the maximum
+of the values of its neighboring voxels.</p>
+<p><a class="reference internal" href="commands/dilate-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="downsample-image">
+<span id="id24"></span><h2>downsample-image<a class="headerlink" href="#downsample-image" title="Permalink to this headline">¶</a></h2>
+<p>Downsamples an image using an iterative Gaussian pyramid filter.</p>
+<p><a class="reference internal" href="commands/downsample-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="edit-dof">
+<span id="id25"></span><h2>edit-dof<a class="headerlink" href="#edit-dof" title="Permalink to this headline">¶</a></h2>
+<p>This tool provides a generic way of modifying the parameters of a
+transformation (linear as well as non-linear). It uses the generic
+interface member function Transformation::Set whose arguments
+are the name of the parameter and the value to be set as string.</p>
+<p><a class="reference internal" href="commands/edit-dof.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="edit-image">
+<span id="id26"></span><h2>edit-image<a class="headerlink" href="#edit-image" title="Permalink to this headline">¶</a></h2>
+<p>Modifies the attributes of an image stored in the header.</p>
+<p><a class="reference internal" href="commands/edit-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="erode-image">
+<span id="id27"></span><h2>erode-image<a class="headerlink" href="#erode-image" title="Permalink to this headline">¶</a></h2>
+<p>Erodes an input image by replacing a voxel&#8217;s value by the minimum
+of the values of its neighboring voxels.</p>
+<p><a class="reference internal" href="commands/erode-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="evaluate-distance">
+<span id="id28"></span><h2>evaluate-distance<a class="headerlink" href="#evaluate-distance" title="Permalink to this headline">¶</a></h2>
+<p>Evaluate distance between two given point sets.</p>
+<p><a class="reference internal" href="commands/evaluate-distance.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="evaluate-distortion">
+<span id="id29"></span><h2>evaluate-distortion<a class="headerlink" href="#evaluate-distortion" title="Permalink to this headline">¶</a></h2>
+<p>Computes the distortion of a surface mesh under deformation and stores
+the results in the output dataset. If no output dataset is given, the
+mean and standard deviation are reported only.</p>
+<p><a class="reference internal" href="commands/evaluate-distortion.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="evaluate-dof">
+<span id="id30"></span><h2>evaluate-dof<a class="headerlink" href="#evaluate-dof" title="Permalink to this headline">¶</a></h2>
+<p>Calculates registration transformation quality measures such as the voxel-wise
+cumulative or mean inverse-consistency error (CICE/MICE) for pairs of forward
+transformation from target to source and backward transformation from source
+to target image. Another voxel-wise measure that can be computed using this
+program are the cumulative or mean transitivity error (CTE/MTE) given three
+transformations, from target (A) to B, from B to C, and from C to A again.</p>
+<p><a class="reference internal" href="commands/evaluate-dof.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="evaluate-jacobian">
+<span id="id31"></span><h2>evaluate-jacobian<a class="headerlink" href="#evaluate-jacobian" title="Permalink to this headline">¶</a></h2>
+<p>Computes the Jacobian determinant of the given transformation at
+each target image voxel. If no &lt;output&gt; image name is given,
+the statistics of the Jacobian determinant distribution are printed
+to STDOUT instead, such as min, max, and mean.</p>
+<p><a class="reference internal" href="commands/evaluate-jacobian.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="evaluate-overlap">
+<span id="id32"></span><h2>evaluate-overlap<a class="headerlink" href="#evaluate-overlap" title="Permalink to this headline">¶</a></h2>
+<p>Computes the overlap of either two intensity images (average SI)
+or two segmentations (-label option). If more than one source image
+is given, the overlap between each of these and the target is evaluated.</p>
+<p><a class="reference internal" href="commands/evaluate-overlap.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="evaluate-surface-overlap">
+<span id="id33"></span><h2>evaluate-surface-overlap<a class="headerlink" href="#evaluate-surface-overlap" title="Permalink to this headline">¶</a></h2>
+<p>Reports label statistics given two surface meshes and a text file
+listing the indices of corresponding points. The labels have to be
+stored as named point data array in both datasets.</p>
+<p><a class="reference internal" href="commands/evaluate-surface-overlap.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="extract-connected-components">
+<span id="id34"></span><h2>extract-connected-components<a class="headerlink" href="#extract-connected-components" title="Permalink to this headline">¶</a></h2>
+<p>Extracts connected components from input segmentation label image.
+By default, the largest connected component is extracted.
+When the -output-component-labels option is given, the labels
+of the components are written instead.</p>
+<p><a class="reference internal" href="commands/extract-connected-components.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="extract-connected-points">
+<span id="id35"></span><h2>extract-connected-points<a class="headerlink" href="#extract-connected-points" title="Permalink to this headline">¶</a></h2>
+<p>Extract (largest) connected components of the input point set.
+The connected components are sorted by size, where the largest
+connected component has index 0.</p>
+<p><a class="reference internal" href="commands/extract-connected-points.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="extract-image-region">
+<span id="id36"></span><h2>extract-image-region<a class="headerlink" href="#extract-image-region" title="Permalink to this headline">¶</a></h2>
+<p>Crop/pad image by extracting a region of interest. The output image region
+is chosen such that it contains the union of all specified axis-aligned
+rectangular input image regions. If the -pad option is given, the output
+region does not have to be fully contained within the input image.
+Values outside are then set to the specified padding value.</p>
+<p><a class="reference internal" href="commands/extract-image-region.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="extract-pointset-surface">
+<span id="id37"></span><h2>extract-pointset-surface<a class="headerlink" href="#extract-pointset-surface" title="Permalink to this headline">¶</a></h2>
+<p>Extract surface of point set. If more than one input point set is given,
+it computes the boundary of the union, intersection, or difference volume
+computed from the volumes defined by the individual input surfaces.</p>
+<p><a class="reference internal" href="commands/extract-pointset-surface.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="extract-surface">
+<span id="id38"></span><h2>extract-surface<a class="headerlink" href="#extract-surface" title="Permalink to this headline">¶</a></h2>
+<p>Extract the isosurface from an intensity image or segmentation.</p>
+<p><a class="reference internal" href="commands/extract-surface.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="flip-image">
+<span id="id39"></span><h2>flip-image<a class="headerlink" href="#flip-image" title="Permalink to this headline">¶</a></h2>
+<p>Swaps the two image dimensions at a time, in the order of the input
+options. Both, the image data and the coordinates of the image origin
+are swapped each time an input option is processed.</p>
+<p><a class="reference internal" href="commands/flip-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="info">
+<span id="id40"></span><h2>info<a class="headerlink" href="#info" title="Permalink to this headline">¶</a></h2>
+<p>Prints some useful information about the given input file.</p>
+<p><a class="reference internal" href="commands/info.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="init-dof">
+<span id="id41"></span><h2>init-dof<a class="headerlink" href="#init-dof" title="Permalink to this headline">¶</a></h2>
+<p>This tool either creates a new affine transformation with the given parameters
+or approximates an affine transformation or non-rigid deformation given
+a set of corresponding landmarks or point displacements (cf. -disp option).</p>
+<p><a class="reference internal" href="commands/init-dof.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="invert-dof">
+<span id="id42"></span><h2>invert-dof<a class="headerlink" href="#invert-dof" title="Permalink to this headline">¶</a></h2>
+<p>Inverts any transformation. In case of a non-rigid transformation
+the output transformation only approximates the true inverse.
+When the inverse mapping is not defined at a given point, the
+output transformation at this point depends on the interpolation
+numerical approximate solution found.</p>
+<p><a class="reference internal" href="commands/invert-dof.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="map">
+<span id="id43"></span><h2>map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h2>
+<p>This tool parameterizes a shape embedded in 3D space. The generated output
+map assigns each point in the input domain a point in the output domain.</p>
+<p><a class="reference internal" href="commands/map.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="match-points">
+<span id="id44"></span><h2>match-points<a class="headerlink" href="#match-points" title="Permalink to this headline">¶</a></h2>
+<p>Writes for each point in a target point set its corresponding point in
+the source point set. The found correspondences can be either written
+to an output point set with indices and difference vectors stored as
+point data, or a text file listing for each target point index the
+index of the corresponding source point.</p>
+<p><a class="reference internal" href="commands/match-points.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="offset-surface">
+<span id="id45"></span><h2>offset-surface<a class="headerlink" href="#offset-surface" title="Permalink to this headline">¶</a></h2>
+<p>Displaces surface mesh points by a given amount along the surface normal
+to create an offset surface mesh. To prevent self-intersections, a dense
+offset surface can optionally first be sampled from an implicit offset
+surface model onto which each point of the input surface is projected.</p>
+<p><a class="reference internal" href="commands/offset-surface.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="open-image">
+<span id="id46"></span><h2>open-image<a class="headerlink" href="#open-image" title="Permalink to this headline">¶</a></h2>
+<p>Removes small connections between objects by first eroding and then
+dilating an input image.</p>
+<p><a class="reference internal" href="commands/open-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="project-onto-surface">
+<span id="id47"></span><h2>project-onto-surface<a class="headerlink" href="#project-onto-surface" title="Permalink to this headline">¶</a></h2>
+<p>Assign scalars or labels to either the vertices or the cells of a surface mesh.
+When the input as a real-valued image, the values are linearly interpolated.
+When the input is a segmentation labels image, the value assigned to a vertex/cell
+is the label of the nearest voxel in the given segmentation image. For the projection
+of cortical labels onto the WM/cGM or cGM/CSF boundary, use the -white or -pial option.</p>
+<p><a class="reference internal" href="commands/project-onto-surface.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="reflect-image">
+<span id="id48"></span><h2>reflect-image<a class="headerlink" href="#reflect-image" title="Permalink to this headline">¶</a></h2>
+<p>Applies a sequence of one or more spatial reflections to an image.
+The reflection options are processed in the order given and changing
+the order can change the result.</p>
+<p><a class="reference internal" href="commands/reflect-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="register">
+<span id="id49"></span><h2>register<a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h2>
+<p>Registers a set of images, polygonal surface meshes, and/or point clouds (e.g. fiducial markers).
+The set of input images can be comprised of multiple channels (e.g., acquired with different imaging
+modalities) at different time points. For longitudinal data, the temporal origin in the NIfTI header
+identifies the time point that each input image belongs to. How all input images and polydata sets are
+registered with one another is determined by an energy function. This energy function is formulated in
+a simplified math expression using MATLAB-style indexing for the individual input files, i.e.,</p>
+<p><a class="reference internal" href="commands/register.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="remesh">
+<span id="id50"></span><h2>remesh<a class="headerlink" href="#remesh" title="Permalink to this headline">¶</a></h2>
+<p>Remeshes a surface mesh such that the resulting mesh has an average
+edge length within the specified limits.</p>
+<p><a class="reference internal" href="commands/remesh.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="resample-image">
+<span id="id51"></span><h2>resample-image<a class="headerlink" href="#resample-image" title="Permalink to this headline">¶</a></h2>
+<p>Resamples an image on a lattice with specified voxel size.</p>
+<p><a class="reference internal" href="commands/resample-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="smooth-image">
+<span id="id52"></span><h2>smooth-image<a class="headerlink" href="#smooth-image" title="Permalink to this headline">¶</a></h2>
+<p>This program blurs an &lt;input&gt; image using a Gaussian filter with a standard
+deviation of &lt;sigma&gt;. The dimensions in which the filter recursively
+applied can be specified by the respective options below. Note that
+more than one of these options can be specified and that each can
+also be given more than once. The blurring of the respective dimensions
+is then performed in the order of the given blurring options.</p>
+<p><a class="reference internal" href="commands/smooth-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="smooth-surface">
+<span id="id53"></span><h2>smooth-surface<a class="headerlink" href="#smooth-surface" title="Permalink to this headline">¶</a></h2>
+<p>Smooths the node positions and/or scalar data of a surface mesh.</p>
+<p><a class="reference internal" href="commands/smooth-surface.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="transform-image">
+<span id="id54"></span><h2>transform-image<a class="headerlink" href="#transform-image" title="Permalink to this headline">¶</a></h2>
+<p>Applies a transformation to an input image. Each voxel center of
+the target image is mapped by the given transformation to the space of
+the source image. The output intensity for the target voxel is the
+source image intensity interpolated at the mapped point.</p>
+<p><a class="reference internal" href="commands/transform-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="transform-points">
+<span id="id55"></span><h2>transform-points<a class="headerlink" href="#transform-points" title="Permalink to this headline">¶</a></h2>
+<p>Applies one or more transformations to a set of points. Input point
+x, y, and z coordinates are either read from STDIN (space separated) or from a
+point set file. The corresponding transformed coordinates are then written
+either to STDOUT or an output point set file, respectively. If multiple
+transformations are specified, these are applied in the order as they appear
+on the command line.</p>
+<p><a class="reference internal" href="commands/transform-points.html"><em>[more]</em></a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="commands/average-dofs.html" title="average-dofs"
+             >next</a></li>
+        <li class="right" >
+          <a href="modules/thirdparty/lbfgs.html" title="LBFGS Module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

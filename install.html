@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0 (9491efa)',
+        VERSION:     'v1.0 (f096eae)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -66,6 +66,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
 </ul>
 <ul class="current">
@@ -127,52 +128,52 @@
 <tr class="row-odd"><td><a class="reference external" href="http://www.boost.org">Boost</a></td>
 <td>1.48</td>
 <td>System or Git submodule</td>
-<td><a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a>, <a class="reference internal" href="module/core/transformation.html"><em>Transformation</em></a></td>
+<td><a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a>, <a class="reference internal" href="modules/core/transformation.html"><em>Transformation</em></a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="http://eigen.tuxfamily.org">Eigen</a></td>
 <td>3.0</td>
 <td>System or Git submodule</td>
-<td><a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/external/volumetricmapping.html"><em>VolumetricMapping</em></a></td>
+<td><a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/packages/volumetricmapping.html"><em>Volumetric Mapping</em></a></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td><a class="reference external" href="http://www.caam.rice.edu/software/ARPACK/">ARPACK</a> / <a class="reference external" href="https://people.sc.fsu.edu/~jburkardt/cpp_src/umfpack/umfpack.html">UMFPACK</a></td>
 <td>any</td>
 <td>System</td>
 <td>No module</td>
-<td><a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a></td>
+<td><a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="http://www.vtk.org">VTK</a></td>
 <td>6.0</td>
 <td>System</td>
-<td><a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a>, <a class="reference internal" href="module/external/deformable.html"><em>Deformable</em></a>, <a class="reference internal" href="module/external/volumetricmapping.html"><em>VolumetricMapping</em></a></td>
-<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a>, <a class="reference internal" href="module/core/registration.html"><em>Registration</em></a></td>
+<td><a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a>, <a class="reference internal" href="modules/packages/deformable.html"><em>Deformable</em></a>, <a class="reference internal" href="modules/packages/volumetricmapping.html"><em>Volumetric Mapping</em></a></td>
+<td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a>, <a class="reference internal" href="modules/core/registration.html"><em>Registration</em></a></td>
 </tr>
 <tr class="row-odd"><td><a class="reference external" href="http://www.libpng.org">libpng</a></td>
 <td>any</td>
 <td>System</td>
 <td>No module</td>
-<td><a class="reference internal" href="module/core/image.html"><em>Image</em></a></td>
+<td><a class="reference internal" href="modules/core/image.html"><em>Image</em></a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="http://sourceforge.net/projects/niftilib/">NiftiCLib</a></td>
 <td>any</td>
 <td>System or Source code</td>
 <td>No module</td>
-<td><a class="reference internal" href="module/thirdparty/nifti.html"><em>NIfTI</em></a></td>
+<td><a class="reference internal" href="modules/thirdparty/nifti.html"><em>NIfTI</em></a></td>
 </tr>
 <tr class="row-odd"><td><a class="reference external" href="http://www.chokkan.org/software/liblbfgs/">libLBFGS</a></td>
 <td>any</td>
 <td>Source code</td>
 <td>No module</td>
-<td><a class="reference internal" href="module/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
+<td><a class="reference internal" href="modules/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
 </tr>
 </tbody>
 </table>
-<p>Only libraries marked as &#8220;Included as&#8221; <strong>System</strong> must be installed separately
-before building the MIRTK libraries and command-line tools. <a class="reference external" href="http://www.boost.org">Boost</a> and <a class="reference external" href="http://eigen.tuxfamily.org">Eigen</a> are a minimum
-requirement to build MIRTK. The needed source files of these header-only libraries can
-optionally be copied into the MIRTK <cite>ThirdParty/</cite> directory as described in the
-<a class="reference internal" href="download.html#downloadsources"><span>download instructions</span></a>.</p>
+<p>Only libraries marked as &#8220;Included as&#8221; <strong>System</strong> alone which are required by the modules
+to be build must be installed separately before building the MIRTK libraries and command-line
+tools. <a class="reference external" href="http://www.boost.org">Boost</a> and <a class="reference external" href="http://eigen.tuxfamily.org">Eigen</a> are a minimum requirement to build MIRTK. The needed source files of
+these header-only libraries can optionally be copied into the MIRTK <cite>ThirdParty/</cite> directory
+as described in the <a class="reference internal" href="download.html#downloadsources"><span>download instructions</span></a>.</p>
 <p>The intra-module dependencies are as follows. When a module is enabled,
 all modules required by this module are automatically enabled as well.</p>
 <table border="1" class="docutils">
@@ -188,44 +189,44 @@ all modules required by this module are automatically enabled as well.</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="module/core/common.html"><em>Common</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a></td>
 <td>No other module</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a></td>
-<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a></td>
+<td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="module/core/image.html"><em>Image</em></a></td>
-<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/core/image.html"><em>Image</em></a></td>
+<td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="module/core/transformation.html"><em>Transformation</em></a></td>
-<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/core/transformation.html"><em>Transformation</em></a></td>
+<td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a></td>
-<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a>, <a class="reference internal" href="module/core/transformation.html"><em>Transformation</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a></td>
+<td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a>, <a class="reference internal" href="modules/core/transformation.html"><em>Transformation</em></a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="module/core/registration.html"><em>Registration</em></a></td>
-<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a>, <a class="reference internal" href="module/core/transformation.html"><em>Transformation</em></a></td>
-<td><a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a>, <a class="reference internal" href="module/external/deformable.html"><em>Deformable</em></a>, <a class="reference internal" href="module/thirdparty/nifti.html"><em>NIfTI</em></a>, <a class="reference internal" href="module/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/core/registration.html"><em>Registration</em></a></td>
+<td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a>, <a class="reference internal" href="modules/core/transformation.html"><em>Transformation</em></a></td>
+<td><a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a>, <a class="reference internal" href="modules/packages/deformable.html"><em>Deformable</em></a>, <a class="reference internal" href="modules/thirdparty/nifti.html"><em>NIfTI</em></a>, <a class="reference internal" href="modules/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="module/external/deformable.html"><em>Deformable</em></a></td>
-<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a>, <a class="reference internal" href="module/core/transformation.html"><em>Transformation</em></a>, <a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/packages/deformable.html"><em>Deformable</em></a></td>
+<td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a>, <a class="reference internal" href="modules/core/transformation.html"><em>Transformation</em></a>, <a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="module/external/volumetricmapping.html"><em>VolumetricMapping</em></a></td>
-<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a>, <a class="reference internal" href="module/core/pointset.html"><em>PointSet</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/packages/volumetricmapping.html"><em>Volumetric Mapping</em></a></td>
+<td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a>, <a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="module/thirdparty/nifti.html"><em>NIfTI</em></a></td>
-<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="module/core/image.html"><em>Image</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/thirdparty/nifti.html"><em>NIfTI</em></a></td>
+<td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="module/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
-<td><a class="reference internal" href="module/core/common.html"><em>Common</em></a>, <a class="reference internal" href="module/core/numerics.html"><em>Numerics</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
+<td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
@@ -260,10 +261,10 @@ For Linux, the Makefile (i.e., GNU Make), Ninja, or CodeBlocks/Qt Creator
 generators are recommended. On OS X, the Xcode generator should be selected.</p>
 </li>
 <li><p class="first"><strong>Enable/disable MIRTK Modules to be build and features to be enabled.</strong></p>
-<p>Which <a class="reference internal" href="modules.html"><em>MIRTK Modules</em></a> are enabled is specified by the <em>MODULE</em> family of options.
+<p>Which <a class="reference internal" href="modules.html"><em>modules</em></a> are enabled is specified by the MODULE family of options.
 Optional library features are enabled by forcing the use of the respective
 external libraries required by the implementation of the feature using
-the <em>WITH</em> family of options. After the change of an option or other CMake
+the WITH family of options. After the change of an option or other CMake
 variable, re-configure the build system by clicking on &#8220;Configure&#8221; again
 until no further changes are made and the &#8220;Generate&#8221; button is enabled.</p>
 <table border="1" class="docutils">
@@ -332,8 +333,8 @@ files for the build tool selected in step 2.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Enabling a module may require additional external libraries or add
-further <em>WITH</em> options. The location of required external libraries is
-specified by the <em>DEPENDS</em> family of variables. These are marked as advanced
+further WITH options. The location of required external libraries is
+specified by the DEPENDS family of variables. These are marked as advanced
 and hence hidden from the default view when an installation of the external
 library was found automatically. To see which external libraries the MIRTK
 will be linked with, enable the &#8220;Advanced&#8221; checkbox at the top of the CMake GUI.</p>
@@ -355,11 +356,13 @@ was set manually after the error was reported.</p>
 <p>After the configuration files for the chosen build tool were generated by CMake,
 open the corresponding project file in case of an IDE such as Xcode or a
 Terminal window in case of the GNU Make or Ninja build tools to build the MIRTK.</p>
-<p>The following assumes the build directory to be located at</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nb">export </span><span class="nv">MIRTK_BINARY_DIR</span><span class="o">=</span><span class="nv">$MIRTK_SOURCE_DIR</span>/Build
+<p>The following assumes the build directory to be located at,</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">MIRTK_BINARY_DIR</span><span class="o">=</span><span class="nv">$MIRTK_SOURCE_DIR</span>/Build
 <span class="nb">cd</span> <span class="nv">$MIRTK_BINARY_DIR</span>
 </pre></div>
 </div>
+<p>where <code class="docutils literal"><span class="pre">MIRTK_SOURCE_DIR</span></code> is the top-level directory containing the MIRTK source
+files (see <a class="reference internal" href="download.html"><em>Download</em></a> command).</p>
 <p>Using GNU Make, run:</p>
 <div class="highlight-python"><div class="highlight"><pre>make -j 8
 </pre></div>
@@ -368,7 +371,7 @@ Terminal window in case of the GNU Make or Ninja build tools to build the MIRTK.
 <div class="highlight-python"><div class="highlight"><pre><span class="n">ninja</span>
 </pre></div>
 </div>
-<p>When <cite>BUILD_DOCUMENTATION</cite> was set to ON during the build configuration, the
+<p>When <code class="docutils literal"><span class="pre">BUILD_DOCUMENTATION</span></code> was set to <code class="docutils literal"><span class="pre">ON</span></code> during the build configuration, the
 documentation files can be build (before installation!) using the &#8220;doc&#8221; target.</p>
 <p>Using GNU Make, run:</p>
 <div class="highlight-python"><div class="highlight"><pre>make doc
@@ -392,8 +395,8 @@ building the &#8220;install&#8221; target.</p>
 </pre></div>
 </div>
 <p>Finally, to enable the convenient use of the MIRTK command-line tools, it is recommended
-to permanently add the <cite>&lt;CMAKE_INSTALL_PREFIX&gt;/bin</cite> directory to the <a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH environment variable</a>
-in the shell setup script (e.g., <cite>$HOME/.bashrc</cite> or <cite>$HOME/.profile</cite>).</p>
+to permanently add the <code class="docutils literal"><span class="pre">&lt;CMAKE_INSTALL_PREFIX&gt;/bin</span></code> directory to the <a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH environment variable</a>
+in the shell setup script (e.g., <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> or <code class="docutils literal"><span class="pre">$HOME/.profile</span></code>).</p>
 </div>
 </div>
 

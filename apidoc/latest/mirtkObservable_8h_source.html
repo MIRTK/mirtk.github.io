@@ -70,10 +70,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef MIRTK_Observable_H</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define MIRTK_Observable_H</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;mirtkObject.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;mirtkObject.h&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;mirtkObserver.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;mirtkObserver.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;mirtkOrderedSet.h&gt;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;mirtkEvent.h&gt;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classmirtk_1_1Observable.html#ae86e43e09d333f95f7b267aaa742f893">   45</a></span>&#160;  mirtkAbstractMacro(<a class="code" href="classmirtk_1_1Observable.html">Observable</a>);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">  /// Container storing pointers to observers</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span>  <span class="keyword">typedef</span> std::set&lt;Observer *&gt; ObserverSet;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span>  <span class="keyword">typedef</span> OrderedSet&lt;Observer *&gt; ObserverSet;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">  /// Iterator for registered observers</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span>  <span class="keyword">typedef</span> ObserverSet::iterator ObserverIterator;</div>
@@ -152,7 +152,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">/// Broadcast a LogEvent message</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span><span class="preprocessor">#define MIRTK_LOG_EVENT(msg) \</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">  do { \</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">    std::ostringstream ss; \</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">    ostringstream ss; \</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">    ss &lt;&lt; msg; \</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">    Broadcast(mirtk::LogEvent, ss.str().c_str()); \</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">  } while(false)</span></div>
@@ -270,20 +270,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classmirtk_1_1Observable_html"><div class="ttname"><a href="classmirtk_1_1Observable.html">mirtk::Observable</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkObservable_8h_source.html#l00043">mirtkObservable.h:43</a></div></div>
 <div class="ttc" id="classmirtk_1_1Observable_html_a15582958f18e00d11ecaf6804fa3d21d"><div class="ttname"><a href="classmirtk_1_1Observable.html#a15582958f18e00d11ecaf6804fa3d21d">mirtk::Observable::NotifyObservers</a></div><div class="ttdeci">void NotifyObservers(Event, const void *=NULL)</div><div class="ttdoc">Notify all observers about given event if this object has changed. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkObservable_8h_source.html#l00203">mirtkObservable.h:203</a></div></div>
 <div class="ttc" id="classmirtk_1_1Observable_html_a20dea4f9200b7f957960215cb62477c3"><div class="ttname"><a href="classmirtk_1_1Observable.html#a20dea4f9200b7f957960215cb62477c3">mirtk::Observable::NumberOfObservers</a></div><div class="ttdeci">int NumberOfObservers() const </div><div class="ttdoc">Number of current observers. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkObservable_8h_source.html#l00171">mirtkObservable.h:171</a></div></div>
-<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAllocate_8h_source.html#l00026">mirtkAllocate.h:26</a></div></div>
+<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAlgorithm_8h_source.html#l00028">mirtkAlgorithm.h:28</a></div></div>
 <div class="ttc" id="classmirtk_1_1Observer_html"><div class="ttname"><a href="classmirtk_1_1Observer.html">mirtk::Observer</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkObserver_8h_source.html#l00039">mirtkObserver.h:39</a></div></div>
 <div class="ttc" id="classmirtk_1_1Observable_html_a7d7de1b38cc50633ec3deadd413cbae3"><div class="ttname"><a href="classmirtk_1_1Observable.html#a7d7de1b38cc50633ec3deadd413cbae3">mirtk::Observable::ClearObservers</a></div><div class="ttdeci">void ClearObservers()</div><div class="ttdoc">Delete all observers. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkObservable_8h_source.html#l00152">mirtkObservable.h:152</a></div></div>
 <div class="ttc" id="classmirtk_1_1Observable_html_a162d76b2c08fbe70dbe623be5e21fb8c"><div class="ttname"><a href="classmirtk_1_1Observable.html#a162d76b2c08fbe70dbe623be5e21fb8c">mirtk::Observable::Observable</a></div><div class="ttdeci">Observable()</div><div class="ttdoc">Default constructor. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkObservable_8h_source.html#l00119">mirtkObservable.h:119</a></div></div>
-<div class="ttc" id="namespacemirtk_html_a713bab184e30352ae34d9d6b0605744d"><div class="ttname"><a href="namespacemirtk.html#a713bab184e30352ae34d9d6b0605744d">mirtk::Event</a></div><div class="ttdeci">Event</div><div class="ttdoc">Events that can be observed. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkEvent_8h_source.html#l00031">mirtkEvent.h:31</a></div></div>
+<div class="ttc" id="namespacemirtk_html_a713bab184e30352ae34d9d6b0605744d"><div class="ttname"><a href="namespacemirtk.html#a713bab184e30352ae34d9d6b0605744d">mirtk::Event</a></div><div class="ttdeci">Event</div><div class="ttdoc">Events that can be observed. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkEvent_8h_source.html#l00032">mirtkEvent.h:32</a></div></div>
 <div class="ttc" id="classmirtk_1_1Observable_html_a362a0bbd622ce66727c1de8ecd6288a3"><div class="ttname"><a href="classmirtk_1_1Observable.html#a362a0bbd622ce66727c1de8ecd6288a3">mirtk::Observable::~Observable</a></div><div class="ttdeci">virtual ~Observable()</div><div class="ttdoc">Destructor. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkObservable_8h_source.html#l00161">mirtkObservable.h:161</a></div></div>
 <div class="ttc" id="classmirtk_1_1Observable_html_a41dbf6bde09d428034756f8bb49b2ab4"><div class="ttname"><a href="classmirtk_1_1Observable.html#a41dbf6bde09d428034756f8bb49b2ab4">mirtk::Observable::_Changed</a></div><div class="ttdeci">bool _Changed</div><div class="ttdoc">Whether this object has changed and should notify observers upon request. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkObservable_8h_source.html#l00054">mirtkObservable.h:54</a></div></div>
-<div class="ttc" id="classmirtk_1_1Object_html"><div class="ttname"><a href="classmirtk_1_1Object.html">mirtk::Object</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkObject_8h_source.html#l00050">mirtkObject.h:50</a></div></div>
+<div class="ttc" id="classmirtk_1_1Object_html"><div class="ttname"><a href="classmirtk_1_1Object.html">mirtk::Object</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkObject_8h_source.html#l00049">mirtkObject.h:49</a></div></div>
 <div class="ttc" id="classmirtk_1_1Observable_html_ae3413459ace0fa61465fa1293a84b687"><div class="ttname"><a href="classmirtk_1_1Observable.html#ae3413459ace0fa61465fa1293a84b687">mirtk::Observable::operator=</a></div><div class="ttdeci">Observable &amp; operator=(const Observable &amp;)</div><div class="ttdoc">Assignment operator. </div><div class="ttdef"><b>Definition:</b> <a href="mirtkObservable_8h_source.html#l00141">mirtkObservable.h:141</a></div></div>
 <div class="ttc" id="classmirtk_1_1Observable_html_ae9b203ce77074d89942f92d1894d4f81"><div class="ttname"><a href="classmirtk_1_1Observable.html#ae9b203ce77074d89942f92d1894d4f81">mirtk::Observable::Changed</a></div><div class="ttdeci">bool &amp; Changed()</div><div class="ttdef"><b>Definition:</b> <a href="mirtkObservable_8h_source.html#l00054">mirtkObservable.h:54</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 
 <div class="footer">
-&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Tue Jan 5 2016 02:39:15. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
+&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Sun Jan 10 2016 02:51:58. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
 </div>
 </body>
 </html>

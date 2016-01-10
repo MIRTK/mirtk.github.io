@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['eft_5fballoonforce',['EFT_BalloonForce',['../namespacemirtk.html#a60301de4a6d4132b8ae7b75f1fe598d5a640c71e861146577890c2efdfb3ceaeb',1,'mirtk']]],
-  ['eft_5fimageedgeforce',['EFT_ImageEdgeForce',['../namespacemirtk.html#a60301de4a6d4132b8ae7b75f1fe598d5a4f04e20afa1640db87d9d3de16b62ade',1,'mirtk']]],
-  ['eft_5fimplicitsurfacedistance',['EFT_ImplicitSurfaceDistance',['../namespacemirtk.html#a60301de4a6d4132b8ae7b75f1fe598d5a7fa9e5fd25b54c1c47b0a323c9ee41d0',1,'mirtk']]],
-  ['eft_5funknown',['EFT_Unknown',['../namespacemirtk.html#a60301de4a6d4132b8ae7b75f1fe598d5ae9160337cb60f2d1a97b9254c39b7fef',1,'mirtk']]],
   ['em_5fballoonforce',['EM_BalloonForce',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a059e8f2ce0f4a443d5e095f982276425',1,'mirtk']]],
   ['em_5fbendingenergy',['EM_BendingEnergy',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a960edd62811e521aa2573ab9dc0e43bc',1,'mirtk']]],
   ['em_5fcc',['EM_CC',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a7fab3a70fe207f5de2dfc269eed2387e',1,'mirtk']]],
@@ -15,6 +11,7 @@ var searchData=
   ['em_5ffre',['EM_FRE',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a23b53a467e96a56483dc59e7931f6f1c',1,'mirtk']]],
   ['em_5fimageedgeforce',['EM_ImageEdgeForce',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a771c95d9f8d3c81f893d8a65d27bcb04',1,'mirtk']]],
   ['em_5fimplicitsurfacedistance',['EM_ImplicitSurfaceDistance',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956ac62fd9dca1ddd7c055951c1f48289140',1,'mirtk']]],
+  ['em_5fimplicitsurfacespringforce',['EM_ImplicitSurfaceSpringForce',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956ac1c1d72329c63f6ea2ce8cc15b47a588',1,'mirtk']]],
   ['em_5finflationforce',['EM_InflationForce',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956ad3cb6189c82f5ca877867c4065f15847',1,'mirtk']]],
   ['em_5fje',['EM_JE',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a5b37c7b76c6f1fe00f27c760051b6cd1',1,'mirtk']]],
   ['em_5fl0norm',['EM_L0Norm',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a95fbb4223c543b4ed7570d8250d0d649',1,'mirtk']]],
@@ -28,8 +25,10 @@ var searchData=
   ['em_5fngf_5fcos',['EM_NGF_COS',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956ab535eaa39d11004c5b8eff1d3782128a',1,'mirtk']]],
   ['em_5fnmi',['EM_NMI',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a69e219374a8b901d816117caf8d26dc5',1,'mirtk']]],
   ['em_5fnonselfintersection',['EM_NonSelfIntersection',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a64de3a9dde383eeff2dd17f46b9158b7',1,'mirtk']]],
+  ['em_5fquadraticcurvature',['EM_QuadraticCurvature',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a7f7530902f4d1893b5b337c5f5596735',1,'mirtk']]],
   ['em_5frepulsiveforce',['EM_RepulsiveForce',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956aa92bb6047d8d909b153f73db37db6a1e',1,'mirtk']]],
   ['em_5fsparsity',['EM_Sparsity',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956af633e501ea3fff4431a7974b776f99e3',1,'mirtk']]],
+  ['em_5fspringforce',['EM_SpringForce',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956afd0f75012767d4c51e1060ea0fc2aff3',1,'mirtk']]],
   ['em_5fsqlogdetjac',['EM_SqLogDetJac',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a648c42f00aae941fecde66dbacaf3d3a',1,'mirtk']]],
   ['em_5fssd',['EM_SSD',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a25ae839b581e5831022fc4a1d3041843',1,'mirtk']]],
   ['em_5fstretching',['EM_Stretching',['../namespacemirtk.html#a4e2bd5047994f20f19a5cff74da68956a208b2902e2c267992240b435cbb33114',1,'mirtk']]],

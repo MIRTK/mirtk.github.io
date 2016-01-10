@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0 (9491efa)',
+        VERSION:     'v1.0 (f096eae)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="sidebar.html" />
-    <link rel="next" title="Common Module" href="module/core/common.html" />
+    <link rel="next" title="Common Module" href="modules/core/common.html" />
     <link rel="prev" title="Medical Image Registration ToolKit (MIRTK)" href="index.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
@@ -38,7 +38,7 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="module/core/common.html" title="Common Module"
+          <a href="modules/core/common.html" title="Common Module"
              accesskey="N">next</a></li>
         <li class="right" >
           <a href="index.html" title="Medical Image Registration ToolKit (MIRTK)"
@@ -74,18 +74,19 @@
 <li class="toctree-l3"><a class="reference internal" href="#registration">Registration</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#external-modules">External Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#external-packages">External Packages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#deformable">Deformable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#volumetric-mapping">Volumetric Mapping</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#third-party-modules">Third-party Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#third-party-libraries">Third-party Libraries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#nifti">NIfTI</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#lbfgs">LBFGS</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -117,14 +118,14 @@
 <p>The Common module of the Medical Image Registration ToolKit (MIRTK) defines the base
 classes from which other MIRTK classes are derived. It further contains common
 auxiliary functions and a simple command-line parsing library.</p>
-<p><a class="reference internal" href="module/core/common.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/core/common.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="numerics">
 <h3>Numerics<a class="headerlink" href="#numerics" title="Permalink to this headline">¶</a></h3>
 <p>The Numerics module of the Medical Image Registration ToolKit (MIRTK) provides basic
 support for linear algebra computations. It further defines an abstract interface
 for objective functions to be minimized by one of the available iterative optimizers.</p>
-<p><a class="reference internal" href="module/core/numerics.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/core/numerics.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="image">
 <h3>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h3>
@@ -133,7 +134,7 @@ and basic filters for imaging data sampled on a uniform grid. It contains image
 interpolation functions which enable the evaluation of these finite discrete images
 in an infinite continuous domain. This is in particular needed for the deformation of
 an image during and after registration.</p>
-<p><a class="reference internal" href="module/core/image.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/core/image.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="point-set">
 <h3>Point Set<a class="headerlink" href="#point-set" title="Permalink to this headline">¶</a></h3>
@@ -141,9 +142,9 @@ an image during and after registration.</p>
 support for general point sets such as fidicual markers, surface meshes, and
 volumetric tetrahedral meshes. It defines different auxiliary types used to
 establish point correspondences between two given point sets/surface meshes.
-These correpondences can be utilized by the <a class="reference internal" href="#registrationabstract"><span>Registration</span></a>
-module to find a transformation that aligns two given point sets.</p>
-<p><a class="reference internal" href="module/core/pointset.html"><em>[more]</em></a></p>
+These correpondences can be utilized by the <a class="reference internal" href="modules/core/registration.html"><em>Registration</em></a> module to find a
+transformation that aligns two given point sets.</p>
+<p><a class="reference internal" href="modules/core/pointset.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="transformation">
 <h3>Transformation<a class="headerlink" href="#transformation" title="Permalink to this headline">¶</a></h3>
@@ -153,7 +154,7 @@ module. These include linear homogeneous transformation types and non-rigid
 free-form deformations. The Transformation module further includes a number
 of transformation constraint terms which can be used to regularize the
 registration problem.</p>
-<p><a class="reference internal" href="module/core/transformation.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/core/transformation.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="registration">
 <span id="registrationabstract"></span><h3>Registration<a class="headerlink" href="#registration" title="Permalink to this headline">¶</a></h3>
@@ -164,45 +165,44 @@ minimization problem. The object function, referred to as registration energy
 in this context, is put together using the various energy terms. An energy
 term can be either an image (dis-)similarity measure, a transformation
 constraint, or a point set/surface constraint.</p>
-<p><a class="reference internal" href="module/core/registration.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/core/registration.html"><em>[more]</em></a></p>
 </div>
 </div>
-<div class="section" id="external-modules">
-<span id="externalmodules"></span><h2>External Modules<a class="headerlink" href="#external-modules" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="external-packages">
+<span id="externalmodules"></span><h2>External Packages<a class="headerlink" href="#external-packages" title="Permalink to this headline">¶</a></h2>
 <p>Additional modules which are developed and maintained separate from the core
-modules in their own respective repository are referred to as external modules.
+modules in their own respective repository are referred to as external packages.
 These are either loosely bound optional modules or modules contributed by users.</p>
 <div class="section" id="deformable">
 <h3>Deformable<a class="headerlink" href="#deformable" title="Permalink to this headline">¶</a></h3>
 <p>The Deformable module of the Medical Image Registration ToolKit (MIRTK) is a library
 for the Euler integration of deformable meshes such as cortical surfaces.
-The <em>deformmesh</em> tool can be used to deform an initial mesh such as the convex hull
+The <a class="reference internal" href="commands/deform-mesh.html"><em>deform-mesh</em></a> command can be used to deform an initial mesh such as the convex hull
 of an input segmentation or a bounding sphere based on internal and external
 point set/surface forces. The integration is stopped when a suitable stopping criterion
 is fullfilled such as a fixed number of iterations, target objective function value,
 or surface smoothness (e.g., for cortical surface inflation). The internal forces
-can further be utilized by the <cite>Registration &lt;#RegistrationAbstract&gt;</cite> module to constrain
-the transformation, for example, to constrain the cortical surface to remain smooth after
-transformation.</p>
-<p><a class="reference internal" href="module/external/deformable.html"><em>[more]</em></a></p>
+can further be utilized by the <a class="reference internal" href="modules/core/registration.html"><em>Registration</em></a> module to constrain the transformation,
+for example, to constrain the cortical surface to remain smooth after transformation.</p>
+<p><a class="reference internal" href="modules/packages/deformable.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="volumetric-mapping">
 <h3>Volumetric Mapping<a class="headerlink" href="#volumetric-mapping" title="Permalink to this headline">¶</a></h3>
 <p>The Volumetric Mapping module of the Medical Image Registration ToolKit (MIRTK) is a library
-for the volumetric mapping of brain volumes. The <em>volumemap</em> tool can be used to
+for the volumetric mapping of brain volumes. The <a class="reference internal" href="commands/map.html"><em>map</em></a> command can be used to
 compute such volumetric map and to apply it to an input tetrahedral mesh.</p>
-<p><a class="reference internal" href="module/external/volumetricmapping.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/packages/volumetricmapping.html"><em>[more]</em></a></p>
 </div>
 </div>
-<div class="section" id="third-party-modules">
-<span id="thirdpartymodules"></span><h2>Third-party Modules<a class="headerlink" href="#third-party-modules" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="third-party-libraries">
+<span id="thirdpartymodules"></span><h2>Third-party Libraries<a class="headerlink" href="#third-party-libraries" title="Permalink to this headline">¶</a></h2>
 <p>The following modules provide features of third-party libraries such as additional
 image file formats and numerical optimization methods.</p>
 <div class="section" id="nifti">
 <h3>NIfTI<a class="headerlink" href="#nifti" title="Permalink to this headline">¶</a></h3>
 <p>The NIfTI module of the Medical Image Registration ToolKit (MIRTK) enables the
 reading and writing of image files in the <a class="reference external" href="http://nifti.nimh.nih.gov">NIfTI file format</a>.</p>
-<p><a class="reference internal" href="module/thirdparty/nifti.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/thirdparty/nifti.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="lbfgs">
 <h3>LBFGS<a class="headerlink" href="#lbfgs" title="Permalink to this headline">¶</a></h3>
@@ -211,7 +211,7 @@ an iterative optimizer based on the
 <a class="reference external" href="https://en.wikipedia.org/wiki/Broyden–Fletcher–Goldfarb–Shanno_algorithm">limited memory Broyden–Fletcher–Goldfarb–Shanno (BFGS)</a>
 algorithm. The implementation uses the <a class="reference external" href="http://www.chokkan.org/software/liblbfgs/">libLBFGS</a> library
 written by Naoaki Okazaki whose source files are included in this module.</p>
-<p><a class="reference internal" href="module/thirdparty/lbfgs.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/thirdparty/lbfgs.html"><em>[more]</em></a></p>
 </div>
 </div>
 </div>
@@ -226,7 +226,7 @@ written by Naoaki Okazaki whose source files are included in this module.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="module/core/common.html" title="Common Module"
+          <a href="modules/core/common.html" title="Common Module"
              >next</a></li>
         <li class="right" >
           <a href="index.html" title="Medical Image Registration ToolKit (MIRTK)"

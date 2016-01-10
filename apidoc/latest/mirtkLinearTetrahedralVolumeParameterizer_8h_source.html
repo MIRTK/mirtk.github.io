@@ -40,7 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_a5c35b8750cbcca5bb1b9a6e3a0d7a3d.html">External</a></li><li class="navelem"><a class="el" href="dir_027964c501f4520aabaa2df199691ca6.html">VolumetricMapping</a></li><li class="navelem"><a class="el" href="dir_6c698180786031d4d674e8e27ee5b345.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_e80f1c405926e9ef4eea7d6e1eccbf42.html">Packages</a></li><li class="navelem"><a class="el" href="dir_0d7c8c17db8558376c778a457b1b3d87.html">VolumetricMapping</a></li><li class="navelem"><a class="el" href="dir_3659d144eabd3079ce49270430ee624e.html">include</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;mirtkTetrahedralVolumeParameterizer.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;mirtkArray.h&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemirtk.html">mirtk</a> {</div>
@@ -108,10 +108,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span>  mirtkPublicAttributeMacro(<span class="keywordtype">double</span>, RelaxationFactor);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">  /// Original ID of n-th interior point</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>  mirtkReadOnlyAttributeMacro(std::vector&lt;int&gt;, InteriorPointId);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>  mirtkReadOnlyAttributeMacro(Array&lt;int&gt;, InteriorPointId);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">  /// Variable/linear equation offset of n-th interior point</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span>  mirtkReadOnlyAttributeMacro(std::vector&lt;int&gt;, InteriorPointPos);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span>  mirtkReadOnlyAttributeMacro(Array&lt;int&gt;, InteriorPointPos);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">  /// Copy attributes of this class from another instance</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"></span>  <span class="keywordtype">void</span> CopyAttributes(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1LinearTetrahedralVolumeParameterizer.html">LinearTetrahedralVolumeParameterizer</a> &amp;);</div>
@@ -181,7 +181,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classmirtk_1_1LinearTetrahedralVolumeParameterizer_html_ac1e75cf1c728f27cebc7b2f0e89c5724"><div class="ttname"><a href="classmirtk_1_1LinearTetrahedralVolumeParameterizer.html#ac1e75cf1c728f27cebc7b2f0e89c5724">mirtk::LinearTetrahedralVolumeParameterizer::operator=</a></div><div class="ttdeci">LinearTetrahedralVolumeParameterizer &amp; operator=(const LinearTetrahedralVolumeParameterizer &amp;)</div><div class="ttdoc">Assignment operator. </div></div>
 <div class="ttc" id="classmirtk_1_1LinearTetrahedralVolumeParameterizer_html_a2d7a9401e3de689fabeff9b25566696e"><div class="ttname"><a href="classmirtk_1_1LinearTetrahedralVolumeParameterizer.html#a2d7a9401e3de689fabeff9b25566696e">mirtk::LinearTetrahedralVolumeParameterizer::Solve</a></div><div class="ttdeci">void Solve(const LinearTetrahedralVolumeParameterizer *)</div><div class="ttdoc">Solve linear system with operator weights computed using the passed object. </div></div>
 <div class="ttc" id="classmirtk_1_1LinearTetrahedralVolumeParameterizer_html_abec90c4e904a94d54954e8a3323d9e92"><div class="ttname"><a href="classmirtk_1_1LinearTetrahedralVolumeParameterizer.html#abec90c4e904a94d54954e8a3323d9e92">mirtk::LinearTetrahedralVolumeParameterizer::Initialize</a></div><div class="ttdeci">virtual void Initialize()</div><div class="ttdoc">Initialize filter after input and parameters are set. </div></div>
-<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAllocate_8h_source.html#l00026">mirtkAllocate.h:26</a></div></div>
+<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkAlgorithm_8h_source.html#l00028">mirtkAlgorithm.h:28</a></div></div>
 <div class="ttc" id="classmirtk_1_1LinearTetrahedralVolumeParameterizer_html_a85ca4c9ace75e1b0c15bb006e95c28d1"><div class="ttname"><a href="classmirtk_1_1LinearTetrahedralVolumeParameterizer.html#a85ca4c9ace75e1b0c15bb006e95c28d1">mirtk::LinearTetrahedralVolumeParameterizer::Parameterize</a></div><div class="ttdeci">virtual void Parameterize()</div><div class="ttdoc">Parameterize interior points. </div></div>
 <div class="ttc" id="classmirtk_1_1LinearTetrahedralVolumeParameterizer_html_ac3076fdcb4389aef3c398620cb2e9ce6"><div class="ttname"><a href="classmirtk_1_1LinearTetrahedralVolumeParameterizer.html#ac3076fdcb4389aef3c398620cb2e9ce6">mirtk::LinearTetrahedralVolumeParameterizer::~LinearTetrahedralVolumeParameterizer</a></div><div class="ttdeci">virtual ~LinearTetrahedralVolumeParameterizer()</div><div class="ttdoc">Destructor. </div></div>
 <div class="ttc" id="classmirtk_1_1TetrahedralVolumeParameterizer_html"><div class="ttname"><a href="classmirtk_1_1TetrahedralVolumeParameterizer.html">mirtk::TetrahedralVolumeParameterizer</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkTetrahedralVolumeParameterizer_8h_source.html#l00040">mirtkTetrahedralVolumeParameterizer.h:40</a></div></div>
@@ -190,7 +190,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 
 <div class="footer">
-&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Tue Jan 5 2016 02:39:15. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
+&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Sun Jan 10 2016 02:51:57. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
 </div>
 </body>
 </html>

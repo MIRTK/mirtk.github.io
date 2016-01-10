@@ -1,5 +1,0 @@
-=================
-Deformable Module
-=================
-
-.. include:: deformable_abstract.rst

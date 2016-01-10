@@ -72,10 +72,10 @@ Collaboration diagram for mirtk::MetricDistortion:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aeb0c1c3014cb2c7b20eebf73834d687f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb0c1c3014cb2c7b20eebf73834d687f"></a>
-typedef std::vector&lt; NodeDistances &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1MetricDistortion.html#aeb0c1c3014cb2c7b20eebf73834d687f">DistancesArray</a></td></tr>
-<tr class="memdesc:aeb0c1c3014cb2c7b20eebf73834d687f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of computed distances to neighboring nodes. <br /></td></tr>
-<tr class="separator:aeb0c1c3014cb2c7b20eebf73834d687f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24f4d35fd66e7b7d9321fb8879fe25d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24f4d35fd66e7b7d9321fb8879fe25d0"></a>
+typedef Array&lt; NodeDistances &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1MetricDistortion.html#a24f4d35fd66e7b7d9321fb8879fe25d0">DistancesArray</a></td></tr>
+<tr class="memdesc:a24f4d35fd66e7b7d9321fb8879fe25d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of computed distances to neighboring nodes. <br /></td></tr>
+<tr class="separator:a24f4d35fd66e7b7d9321fb8879fe25d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classmirtk_1_1PointSetForce"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classmirtk_1_1PointSetForce')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classmirtk_1_1PointSetForce.html">mirtk::PointSetForce</a></td></tr>
 <tr class="memitem:a15295643915ce2d8c6aafb72afde4a6e inherit pub_types_classmirtk_1_1PointSetForce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15295643915ce2d8c6aafb72afde4a6e"></a>
 typedef <a class="el" href="structmirtk_1_1Vector3D.html">Vector3D</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PointSetForce.html#a15295643915ce2d8c6aafb72afde4a6e">GradientType</a></td></tr>
@@ -104,10 +104,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1MetricDistortion.html#a3f57ac4f35f52f9e1f085385b4e57bb2">mirtkAttributeMacro</a> (double, InitialArea)</td></tr>
 <tr class="memdesc:a3f57ac4f35f52f9e1f085385b4e57bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Area of initial surface mesh. <br /></td></tr>
 <tr class="separator:a3f57ac4f35f52f9e1f085385b4e57bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb1102ec8b0c33961e44663ce6401c22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb1102ec8b0c33961e44663ce6401c22"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1MetricDistortion.html#afb1102ec8b0c33961e44663ce6401c22">mirtkAttributeMacro</a> (std::vector&lt; <a class="el" href="classmirtk_1_1MetricDistortion.html#aeb0c1c3014cb2c7b20eebf73834d687f">DistancesArray</a> &gt;, Distances)</td></tr>
-<tr class="memdesc:afb1102ec8b0c33961e44663ce6401c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each node, the initial and current distances to their neighboring nodes. <br /></td></tr>
-<tr class="separator:afb1102ec8b0c33961e44663ce6401c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e7447b5ef4e67caa766d2872faccde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69e7447b5ef4e67caa766d2872faccde"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1MetricDistortion.html#a69e7447b5ef4e67caa766d2872faccde">mirtkAttributeMacro</a> (Array&lt; <a class="el" href="classmirtk_1_1MetricDistortion.html#a24f4d35fd66e7b7d9321fb8879fe25d0">DistancesArray</a> &gt;, Distances)</td></tr>
+<tr class="memdesc:a69e7447b5ef4e67caa766d2872faccde"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each node, the initial and current distances to their neighboring nodes. <br /></td></tr>
+<tr class="separator:a69e7447b5ef4e67caa766d2872faccde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad9d4588899d4304a08a874ddabbc11c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad9d4588899d4304a08a874ddabbc11c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1MetricDistortion.html#aad9d4588899d4304a08a874ddabbc11c">mirtkPublicAttributeMacro</a> (int, Radius)</td></tr>
 <tr class="memdesc:aad9d4588899d4304a08a874ddabbc11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Radius of node neighborhood (i.e., maximum edge-connectivity) <br /></td></tr>
@@ -117,7 +117,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a3b57eda74948ba76f1655399971820b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator. <br /></td></tr>
 <tr class="separator:a3b57eda74948ba76f1655399971820b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9894bea8c2096402660ac01246855234"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9894bea8c2096402660ac01246855234"></a>
-virtual <a class="el" href="namespacemirtk.html#a61dba4dcf2bdd7cfd8633b5533612f6f">ParameterList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1MetricDistortion.html#a9894bea8c2096402660ac01246855234">Parameter</a> () const </td></tr>
+virtual <a class="el" href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">ParameterList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1MetricDistortion.html#a9894bea8c2096402660ac01246855234">Parameter</a> () const </td></tr>
 <tr class="memdesc:a9894bea8c2096402660ac01246855234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parameter name/value pairs. <br /></td></tr>
 <tr class="separator:a9894bea8c2096402660ac01246855234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a717b713f4c56a46d7f617d1dfc426882"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a717b713f4c56a46d7f617d1dfc426882"></a>
@@ -252,7 +252,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="separator:a362a0bbd622ce66727c1de8ecd6288a3 inherit pub_methods_classmirtk_1_1Observable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmirtk_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmirtk_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmirtk_1_1Object.html">mirtk::Object</a></td></tr>
 <tr class="memitem:a0d9e2c339196faf470bdcfcf581cc5ee inherit pub_methods_classmirtk_1_1Object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d9e2c339196faf470bdcfcf581cc5ee"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1Object.html#a0d9e2c339196faf470bdcfcf581cc5ee">Parameter</a> (const <a class="el" href="namespacemirtk.html#a61dba4dcf2bdd7cfd8633b5533612f6f">ParameterList</a> &amp;param)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1Object.html#a0d9e2c339196faf470bdcfcf581cc5ee">Parameter</a> (const <a class="el" href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">ParameterList</a> &amp;param)</td></tr>
 <tr class="memdesc:a0d9e2c339196faf470bdcfcf581cc5ee inherit pub_methods_classmirtk_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set parameters from name/value pairs. <br /></td></tr>
 <tr class="separator:a0d9e2c339196faf470bdcfcf581cc5ee inherit pub_methods_classmirtk_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9348f3aed24c7c5d638afe18b8e34f9d inherit pub_methods_classmirtk_1_1Object"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9348f3aed24c7c5d638afe18b8e34f9d"></a>
@@ -421,11 +421,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a208ca251dcff21dbd3a1f0a254b1755d inherit pro_methods_classmirtk_1_1Configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65e2431820d5b6e864ccf2e09fffd409 inherit pro_methods_classmirtk_1_1Configurable"><td class="memTemplParams" colspan="2"><a class="anchor" id="a65e2431820d5b6e864ccf2e09fffd409"></a>
 template&lt;class T &gt; </td></tr>
-<tr class="memitem:a65e2431820d5b6e864ccf2e09fffd409 inherit pro_methods_classmirtk_1_1Configurable"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmirtk_1_1Configurable.html#a65e2431820d5b6e864ccf2e09fffd409">InsertWithPrefix</a> (<a class="el" href="namespacemirtk.html#a61dba4dcf2bdd7cfd8633b5533612f6f">ParameterList</a> &amp;, string, T) const </td></tr>
+<tr class="memitem:a65e2431820d5b6e864ccf2e09fffd409 inherit pro_methods_classmirtk_1_1Configurable"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmirtk_1_1Configurable.html#a65e2431820d5b6e864ccf2e09fffd409">InsertWithPrefix</a> (<a class="el" href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">ParameterList</a> &amp;, string, T) const </td></tr>
 <tr class="memdesc:a65e2431820d5b6e864ccf2e09fffd409 inherit pro_methods_classmirtk_1_1Configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert parameter into name/value list with object name prefix. <br /></td></tr>
 <tr class="separator:a65e2431820d5b6e864ccf2e09fffd409 inherit pro_methods_classmirtk_1_1Configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e1299b4ee68d4912f86b97e24f94ecc inherit pro_methods_classmirtk_1_1Configurable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e1299b4ee68d4912f86b97e24f94ecc"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1Configurable.html#a9e1299b4ee68d4912f86b97e24f94ecc">InsertWithPrefix</a> (<a class="el" href="namespacemirtk.html#a61dba4dcf2bdd7cfd8633b5533612f6f">ParameterList</a> &amp;, const <a class="el" href="namespacemirtk.html#a61dba4dcf2bdd7cfd8633b5533612f6f">ParameterList</a> &amp;) const </td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1Configurable.html#a9e1299b4ee68d4912f86b97e24f94ecc">InsertWithPrefix</a> (<a class="el" href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">ParameterList</a> &amp;, const <a class="el" href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">ParameterList</a> &amp;) const </td></tr>
 <tr class="memdesc:a9e1299b4ee68d4912f86b97e24f94ecc inherit pro_methods_classmirtk_1_1Configurable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert parameters into name/value list with object name prefix. <br /></td></tr>
 <tr class="separator:a9e1299b4ee68d4912f86b97e24f94ecc inherit pro_methods_classmirtk_1_1Configurable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c385aba1deea3cfd156e1f66f8b6a82 inherit pro_methods_classmirtk_1_1Configurable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c385aba1deea3cfd156e1f66f8b6a82"></a>
@@ -468,7 +468,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classmirtk_1_1InternalForce"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classmirtk_1_1InternalForce')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classmirtk_1_1InternalForce.html">mirtk::InternalForce</a></td></tr>
 <tr class="memitem:acd27dddbb4a709f4833d160af2e594d1 inherit pub_static_methods_classmirtk_1_1InternalForce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd27dddbb4a709f4833d160af2e594d1"></a>
-static <a class="el" href="classmirtk_1_1InternalForce.html">InternalForce</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1InternalForce.html#acd27dddbb4a709f4833d160af2e594d1">New</a> (<a class="el" href="namespacemirtk.html#a4a62ab25a1e9333526084dbf11aabbb7">InternalForceTerm</a>, const char *=&quot;&quot;, double=1.0)</td></tr>
+static <a class="el" href="classmirtk_1_1InternalForce.html">InternalForce</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1InternalForce.html#acd27dddbb4a709f4833d160af2e594d1">New</a> (InternalForceTerm, const char *=&quot;&quot;, double=1.0)</td></tr>
 <tr class="memdesc:acd27dddbb4a709f4833d160af2e594d1 inherit pub_static_methods_classmirtk_1_1InternalForce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate new constraint representing specified internal forces. <br /></td></tr>
 <tr class="separator:acd27dddbb4a709f4833d160af2e594d1 inherit pub_static_methods_classmirtk_1_1InternalForce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classmirtk_1_1EnergyTerm"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classmirtk_1_1EnergyTerm')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classmirtk_1_1EnergyTerm.html">mirtk::EnergyTerm</a></td></tr>
@@ -535,7 +535,7 @@ ObserverSet&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><!-- contents -->
 
 <div class="footer">
-&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Tue Jan 5 2016 02:39:19. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
+&copy; 2013-2015 Imperial College London, Andreas Schuh. Last updated on Sun Jan 10 2016 02:52:01. Created using <a href="http://www.doxygen.org/index.html">Doxygen</a> 1.8.9.1.
 </div>
 </body>
 </html>

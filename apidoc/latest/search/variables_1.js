@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['current_5fversion',['current_version',['../namespacemirtk.html#a83078bf85b15c0b3e667af66af1e1a13',1,'mirtk']]],
-  ['curvedness',['CURVEDNESS',['../classmirtk_1_1PolyDataCurvature.html#a4449186244e72351574d06dabc56115d',1,'mirtk::PolyDataCurvature']]]
+  ['aux_5ffile',['aux_file',['../structmirtk_1_1NiftiImageInfo.html#a5b7276acd6eafa4469cd3fc0d203b979',1,'mirtk::NiftiImageInfo']]]
 ];

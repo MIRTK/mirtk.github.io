@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kernelsize',['KernelSize',['../classmirtk_1_1Sinc.html#a95ee318065577532e197cf81462eba9d',1,'mirtk::Sinc']]]
+  ['fname',['fname',['../structmirtk_1_1NiftiImageInfo.html#a070a96c57e67f92d4467b82475606850',1,'mirtk::NiftiImageInfo']]]
 ];

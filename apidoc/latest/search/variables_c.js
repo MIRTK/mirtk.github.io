@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tensor',['TENSOR',['../classmirtk_1_1PolyDataCurvature.html#a68c1399a0ae024aae79ac10e7ec47c1f',1,'mirtk::PolyDataCurvature']]]
+  ['pathsep',['PATHSEP',['../namespacemirtk.html#acd96cd745e72a51ea11b4a6a2e9f3bd6',1,'mirtk']]]
 ];

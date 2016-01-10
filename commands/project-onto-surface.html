@@ -1,0 +1,245 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>project-onto-surface &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v1.0 (f096eae)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="next" title="reflect-image" href="reflect-image.html" />
+    <link rel="prev" title="open-image" href="open-image.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reflect-image.html" title="reflect-image"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="open-image.html" title="open-image"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="project-onto-surface">
+<h1>project-onto-surface<a class="headerlink" href="#project-onto-surface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>mirtk project-onto-surface &lt;input&gt; &lt;output&gt; -image &lt;file&gt; [options]
+mirtk project-onto-surface &lt;input&gt; &lt;output&gt; -labels &lt;file&gt; [options]
+mirtk project-onto-surface &lt;input&gt; &lt;output&gt; -boundary [-nolabel-points] [-nolabel-cells] [-name &lt;scalars&gt;]
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Assign scalars or labels to either the vertices or the cells of a surface mesh.
+When the input as a real-valued image, the values are linearly interpolated.
+When the input is a segmentation labels image, the value assigned to a vertex/cell
+is the label of the nearest voxel in the given segmentation image. For the projection
+of cortical labels onto the WM/cGM or cGM/CSF boundary, use the -white or -pial option.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-arg-input">
+<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-arg-input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input surface mesh.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-arg-output">
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-arg-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output surface mesh.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-image">
+<code class="descname">-image</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input real-valued scalar/vector image.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-labels">
+<code class="descname">-labels</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input segmentation image with positive integer labels.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-name">
+<code class="descname">-name</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of output scalar array. (default: Scalars or Labels)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-celldata">
+<code class="descname">-celldata</code><code class="descclassname"> | -nocelldata</code><a class="headerlink" href="#cmdoption-project-onto-surface-celldata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign values to cells of input surface. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-pointdata">
+<code class="descname">-pointdata</code><code class="descclassname"> | -nopointdata</code><a class="headerlink" href="#cmdoption-project-onto-surface-pointdata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign values to points of input surface. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-write-dilated-labels">
+<code class="descname">-write-dilated-labels</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-write-dilated-labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write image of dilated labels.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-pial">
+<code class="descname">-pial</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-pial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input surface is cortical cGM/CSF boundary.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-white">
+<code class="descname">-white</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-white" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input surface is cortical WM/cGM boundary.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-min-size">
+<code class="descname">-min-size</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-min-size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface patches with less than n points are removed. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-fill">
+<code class="descname">-fill</code><code class="descclassname"> | -nofill</code><a class="headerlink" href="#cmdoption-project-onto-surface-fill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill holes in projected surface parcellation.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-v">
+<code class="descname">-v</code><code class="descclassname"> -verbose [n]</code><a class="headerlink" href="#cmdoption-project-onto-surface-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-project-onto-surface-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-project-onto-surface-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-h">
+<code class="descname">-h</code><code class="descclassname"> -help</code><a class="headerlink" href="#cmdoption-project-onto-surface-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reflect-image.html" title="reflect-image"
+             >next</a></li>
+        <li class="right" >
+          <a href="open-image.html" title="open-image"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

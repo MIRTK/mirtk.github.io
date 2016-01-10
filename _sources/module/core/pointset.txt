@@ -1,5 +1,0 @@
-================
-Point Set Module
-================
-
-.. include:: pointset_abstract.rst

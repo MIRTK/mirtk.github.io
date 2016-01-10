@@ -1,0 +1,350 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>register &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v1.0 (f096eae)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="next" title="remesh" href="remesh.html" />
+    <link rel="prev" title="reflect-image" href="reflect-image.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="remesh.html" title="remesh"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="reflect-image.html" title="reflect-image"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="register">
+<h1>register<a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>mirtk register -images &lt;images.lst&gt; [options]
+mirtk register -image &lt;image1&gt; [-dof &lt;dof1&gt;] -image &lt;image2&gt; [-dof &lt;dof2&gt;]... [options]
+mirtk register -image &lt;image1&gt; &lt;image2&gt;... [options]
+mirtk register &lt;image1&gt; &lt;image2&gt;... [options]
+mirtk register &lt;image_sequence&gt; [options]
+mirtk register -pset &lt;pointset1&gt; [-dof &lt;dof1&gt;] -pset &lt;pointset2&gt; [-dof &lt;dof2&gt;]... [options]
+mirtk register &lt;dataset1&gt; &lt;dataset2&gt;... [options]
+mirtk register -pset &lt;pointset1&gt; &lt;pointset2&gt;... [options]
+mirtk register -image &lt;image1&gt; -points &lt;pointset1&gt; [-dof &lt;dof1&gt;]... [options]
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Registers a set of images, polygonal surface meshes, and/or point clouds (e.g. fiducial markers).
+The set of input images can be comprised of multiple channels (e.g., acquired with different imaging
+modalities) at different time points. For longitudinal data, the temporal origin in the NIfTI header
+identifies the time point that each input image belongs to. How all input images and polydata sets are
+registered with one another is determined by an energy function. This energy function is formulated in
+a simplified math expression using MATLAB-style indexing for the individual input files, i.e.,</p>
+<div class="highlight-python"><div class="highlight"><pre>Energy function =      SIM[Image dissimilarity](I(1), I(2:end) o T)
+                +      PDM[Point set distance](T o P(1), P(2:end))
+                + 1e-3 BE [Bending energy](T)
+                +    0 VP [Volume preservation](T)
+                +    0 JAC[Jacobian penalty](T)
+                +    0 Sparsity(T)
+</pre></div>
+</div>
+<p>where only energy terms with non-zero weights are active during the registration.
+The image dissimilarity term is only added if at least two input images are given.
+Similarly, only with at least two input polydata sets, the PDM term is added.
+These energy terms are referenced in the configuration file using their respective
+identifier in square brackets. For example, to change the weight of the bending energy
+smoothness term, add &#8220;Bending energy weight = 0.01&#8221; to the configuration file or
+use the -par option on the command-line. To enable volume preservation, set the
+parameter &#8220;Volume preservation weight&#8221; to a positive value.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-register-dofout">
+<code class="descname">-dofout</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write transformation to specified file.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-register-model">
+<code class="descname">-model</code><code class="descclassname"> &lt;m1&gt;[+&lt;m2&gt;...]</code><a class="headerlink" href="#cmdoption-register-model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transformation model(s). (default: Rigid+Affine+FFD)
+Alternatively, use &#8220;-par &#8216;Transformation model=&lt;name&gt;&#8217;&#8221;. (default: n/a)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-image">
+<code class="descname">-image</code><code class="descclassname"> &lt;file&gt;...</code><a class="headerlink" href="#cmdoption-register-image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input image to be registered. The order in which the images are
+given on the command-line corresponds to the image indices used
+in the registration energy formulation. The first input image has
+index 1 and is denoted by the symbol I(1) in the image similarity term.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-pset">
+<code class="descname">-pset</code><code class="descclassname"> &lt;file&gt;...</code><a class="headerlink" href="#cmdoption-register-pset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input points, curve(s), surface(s), or other simplicial complex(es).
+The order in which the point set files are given on the command-line
+corresponds to the point set indices used in the registration energy
+formulation. The first input point set has index 1 and is denoted by
+the symbol P(1), C(1), or S(1), respectively, in the point set distance
+measure (PDM) term.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-dof">
+<code class="descname">-dof</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dof" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies a pre-computed affine transformation to be applied to
+the preceeding image and/or polydata. Note the difference to -dofin,
+which specifies an initial estimate of the -dofout transformation.
+(default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-dof_i">
+<code class="descname">-dof_i</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dof_i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies a pre-computed affine transformation whose inverse is to be
+applied to the preceeding image and/or polydata (cf. -dof). (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-images">
+<code class="descname">-images</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text file with N lines containing the file names of each
+2D/3D input image, optionally followed by a space character and the
+associated (relative) acquisition time (in ms). If no acquisition
+time is given, the temporal offset of the image header is used.
+Images specified as positional arguments are read before the images
+named in this (then optional) text file and the index of the images
+given in the text file are offset by the number of images named
+as positional arguments or using the -image option, respectively.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-psets">
+<code class="descname">-psets</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-psets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Equivalent to -images, but for point sets (-pset).</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-dofs">
+<code class="descname">-dofs</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read names of affine transformations of input images from
+specified text file. The affine transformations are set as
+if the images had been transformed by these before. Hence,
+these transformations are not part of the output transformation.
+The text file must contain on each line the basename of the input image
+followed by the corresponding affine transformation file. Input images
+not included are assumed to not be further pre-transformed. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-mask">
+<code class="descname">-mask</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference mask which defines the domain within which to evaluate the
+energy function (i.e. image similarity). The registered images will
+thus be resampled within the corresponding domain of the world system.
+By default, the foreground of the target image defines this domain.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-dofins">
+<code class="descname">-dofins</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read pairwise transformations from the files specified
+in the given text file which lists for each pair-wise
+transformation the corresponding target image, followed
+by the source image and the name of the transformation file.
+Note that the target and source image names must be listed
+in the -images list file. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-dofin">
+<code class="descname">-dofin</code><code class="descclassname">  &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read initial transformation from file if -dofins not specified.
+Otherwise, writes the initial transformation obtained by approximating
+the pairwise transformations to the named file.
+If the given transformation cannot be used directly as starting
+point of the registration, it will be approximated by an instance
+of the chosen transformation model at the initial resolution level.
+The input transformation may thus be of different type than the
+output transformation of the registration. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-par">
+<code class="descname">-par</code><code class="descclassname"> '&lt;name&gt;=&lt;value&gt;'</code><a class="headerlink" href="#cmdoption-register-par" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify parameter value directly as command argument.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-parin">
+<code class="descname">-parin</code><code class="descclassname">  &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-parin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read parameters from configuration file. If &#8220;stdin&#8221; or &#8220;cin&#8221;,
+the parameters are read from standard input instead. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-parout">
+<code class="descname">-parout</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-parout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write parameters to the named configuration file. Note that after
+initializaton of the registration, an interim configuration file is
+written. This file is overwritten once the registration finished with
+final configuration used during the course of the registration.
+(default: none)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-register-v">
+<code class="descname">-v</code><code class="descclassname"> -verbose [n]</code><a class="headerlink" href="#cmdoption-register-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 1)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-register-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-register-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-register-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-h">
+<code class="descname">-h</code><code class="descclassname"> -help</code><a class="headerlink" href="#cmdoption-register-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="terminal-options">
+<h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-register-color">
+<code class="descname">-color</code><code class="descclassname"> | -nocolor</code><a class="headerlink" href="#cmdoption-register-color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable colored output. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="parallelization-options">
+<h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-register-threads">
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-register-threads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="remesh.html" title="remesh"
+             >next</a></li>
+        <li class="right" >
+          <a href="reflect-image.html" title="reflect-image"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

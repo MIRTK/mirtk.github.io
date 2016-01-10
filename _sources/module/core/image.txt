@@ -1,5 +1,0 @@
-============
-Image Module
-============
-
-.. include:: image_abstract.rst

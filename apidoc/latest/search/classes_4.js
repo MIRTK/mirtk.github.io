@@ -8,6 +8,8 @@ var searchData=
   ['elementwiseunaryop',['ElementWiseUnaryOp',['../classmirtk_1_1data_1_1op_1_1ElementWiseUnaryOp.html',1,'mirtk::data::op']]],
   ['energyterm',['EnergyTerm',['../classmirtk_1_1EnergyTerm.html',1,'mirtk']]],
   ['energythreshold',['EnergyThreshold',['../classmirtk_1_1EnergyThreshold.html',1,'mirtk']]],
+  ['erode',['Erode',['../classmirtk_1_1BinaryVoxelFunction_1_1Erode.html',1,'mirtk::BinaryVoxelFunction']]],
+  ['erosion',['Erosion',['../classmirtk_1_1Erosion.html',1,'mirtk']]],
   ['eulermethod',['EulerMethod',['../classmirtk_1_1EulerMethod.html',1,'mirtk']]],
   ['eulermethodwithdamping',['EulerMethodWithDamping',['../classmirtk_1_1EulerMethodWithDamping.html',1,'mirtk']]],
   ['eulermethodwithmomentum',['EulerMethodWithMomentum',['../classmirtk_1_1EulerMethodWithMomentum.html',1,'mirtk']]],
