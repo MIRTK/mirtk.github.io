@@ -23,6 +23,8 @@ Commands
    commands/concatenate-dofs
    commands/concatenate-images
    commands/convert-dof
+   commands/convert-dof2csv
+   commands/convert-dof2velo
    commands/convert-image
    commands/convert-pointset
    commands/copy-pointset-attributes
@@ -194,6 +196,26 @@ convert-dof
 .. include:: commands/_summaries/convert-dof.rst
 
 :doc:`[more] <commands/convert-dof>`
+
+
+.. _convert-dof2csv:
+
+convert-dof2csv
+---------------
+
+.. include:: commands/_summaries/convert-dof2csv.rst
+
+:doc:`[more] <commands/convert-dof2csv>`
+
+
+.. _convert-dof2velo:
+
+convert-dof2velo
+----------------
+
+.. include:: commands/_summaries/convert-dof2velo.rst
+
+:doc:`[more] <commands/convert-dof2velo>`
 
 
 .. _convert-image:

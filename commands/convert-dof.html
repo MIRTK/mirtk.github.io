@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0 (f096eae)',
+        VERSION:     'v1.0rc1 (f49e781)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -27,7 +27,7 @@
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="../sidebar.html" />
     <link rel="up" title="Commands" href="../commands.html" />
-    <link rel="next" title="convert-image" href="convert-image.html" />
+    <link rel="next" title="convert-dof2csv" href="convert-dof2csv.html" />
     <link rel="prev" title="concatenate-images" href="concatenate-images.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
@@ -39,7 +39,7 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="convert-image.html" title="convert-image"
+          <a href="convert-dof2csv.html" title="convert-dof2csv"
              accesskey="N">next</a></li>
         <li class="right" >
           <a href="concatenate-images.html" title="concatenate-images"
@@ -92,12 +92,15 @@
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><div class="highlight"><pre>mirtk convert-dof &lt;input&gt; &lt;output&gt; [options]
+mirtk convert-dof &lt;input&gt; &lt;output&gt; -input-format  image [options] (3D+3 input  image)
+mirtk convert-dof &lt;input&gt; &lt;output&gt; -output-format image [options] (3D+3 output image)
+mirtk convert-dof &lt;dx&gt; &lt;dy&gt; &lt;dz&gt; &lt;output&gt; -input-format  image [options] (3x3D input  image)
+mirtk convert-dof &lt;input&gt; &lt;dx&gt; &lt;dy&gt; &lt;dz&gt;  -output-format image [options] (3x3D output image)
 </pre></div>
 </div>
 </div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>Converts between different transformation file formats.</p>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
@@ -111,6 +114,95 @@
 <dt id="cmdoption-convert-dof-arg-output">
 <code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-convert-dof-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output transformation file.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-convert-dof-input-format">
+<code class="descname">-input-format</code><code class="descclassname">  &lt;format&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-input-format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format of input file. (default: unknown)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-convert-dof-output-format">
+<code class="descname">-output-format</code><code class="descclassname"> &lt;format&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-output-format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format of output file. (default: mirtk)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-convert-dof-format">
+<code class="descname">-format</code><code class="descclassname"> &lt;format&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Short for -output-format.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-convert-dof-dofin">
+<code class="descname">-dofin</code><code class="descclassname"> &lt;fname&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-dofin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Affine transformation component in MIRTK format which
+shall be removed from Nifty Reg&#8217;s FFD such that the
+resulting transformation is a MIRTK MFFD consisting
+of this affine component plus the remaining non-linear
+component of the input FFD. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-convert-dof-target">
+<code class="descname">-target</code><code class="descclassname"> &lt;fname&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target image. Required for from/to FSL format conversion.
+Also required when converting linear transformations to displacment
+fields or (M)FFD transformation types. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-convert-dof-source">
+<code class="descname">-source</code><code class="descclassname"> &lt;fname&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source image. Required for from/to FSL format conversion. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-convert-dof-Ts">
+<code class="descname">-Ts</code><code class="descclassname"> &lt;time&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-Ts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time point of source image. Used by 3D+t, TD, and SV FFDs.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-convert-dof-ds">
+<code class="descname">-ds</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-ds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output control point spacing. (default: input spacing)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-convert-dof-dx">
+<code class="descname">-dx</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-dx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output control point spacing in x dimension. (default: input spacing)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-convert-dof-dy">
+<code class="descname">-dy</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-dy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output control point spacing in y dimension. (default: input spacing)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-convert-dof-dz">
+<code class="descname">-dz</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-dz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output control point spacing in z dimension. (default: input spacing)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-convert-dof-scaling-steps">
+<code class="descname">-scaling-steps</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-scaling-steps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of scaling and squaring steps.
+In case of f3d_*_vel_*, use nifti1.intent_p2 by default.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-convert-dof-xyz_units">
+<code class="descname">-xyz_units</code><code class="descclassname"> (m|mm|mu)</code><a class="headerlink" href="#cmdoption-convert-dof-xyz_units" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spatial units of original target NIfTI header
+if ignored by Nifty Reg&#8217;s reg_f3d. (default: mm)</p>
 </dd></dl>
 
 </div>
@@ -159,7 +251,7 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="convert-image.html" title="convert-image"
+          <a href="convert-dof2csv.html" title="convert-dof2csv"
              >next</a></li>
         <li class="right" >
           <a href="concatenate-images.html" title="concatenate-images"
