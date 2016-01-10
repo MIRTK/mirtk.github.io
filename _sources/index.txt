@@ -1,5 +1,9 @@
 .. title:: Home
 
+.. meta::
+   :description: Overview over the Medical Image Registration ToolKit (MIRTK)
+   :keywords:    image processing, image registration, IRTK, MIRTK
+
 ==========================================
 Medical Image Registration ToolKit (MIRTK)
 ==========================================

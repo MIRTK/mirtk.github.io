@@ -24,8 +24,8 @@ The following papers introduce the classic B-spline free-form deformation (FFD) 
 .. [MICCAI01] `A generic framework for non-rigid registration based on non-uniform multi-level free-form deformations <http://link.springer.com/chapter/10.1007%2F3-540-45468-3_69>`__. |br|
               J. A. Schnabel, D. Rueckert, M. Quist, J. M. Blackall, A. D. Castellano Smith, T. Hartkens, G. P. Penney,
               W. A. Hall, H. Liu, C. L. Truwit, F.A. Gerritsen, D. L. G. Hill, and D.J. Hawkes.
-              In Fourth Int. Conf. on Medical Image Computing and Computer-Assisted Intervention (MICCAI '01),
-              pages 573-581, Utrecht, NL, October 2001.
+              In 4th Int. Conf. on Medical Image Computing and Computer-Assisted Intervention (MICCAI '01),
+              LNCS 2208:573-581, Utrecht, NL, October 2001.
 
 .. [TMI99] `Non-rigid registration using free-form deformations: Application to breast MR images <http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=796284>`__. |br|
            D. Rueckert, L. I. Sonoda, C. Hayes, D. L. G. Hill, M. O. Leach, and D. J. Hawkes.
@@ -43,7 +43,7 @@ was first published in the following conference article.
 
 .. [MICCAI12] `Registration Using Sparse Free-Form Deformations <http://link.springer.com/chapter/10.1007%2F978-3-642-33418-4_81>`__. |br|
               W. Shi, X. Zhuang, L. Pizarro, W. Bai, H. Wang, K.-P. Tung, P. Edwards, and D. Rueckert.
-              In 15th Int. Conf. on Medical Image Computing. and Computer-Assisted Intervention (MICCAI '12),
+              In 15th Int. Conf. on Medical Image Computing and Computer-Assisted Intervention (MICCAI '12),
               LNCS 7511:659-666, 2012.
 
 
@@ -51,6 +51,11 @@ was first published in the following conference article.
 
 The following publications learn a statistical free-form deformation model from a training dataset
 to restrict the deformation on new unseen images.
+
+.. [TMI03] `Automatic Construction of 3D Statistical Deformation Models Using Non-rigid Registration <http://link.springer.com/chapter/10.1007%2F3-540-45468-3_10>`__. |br|
+           D. Rueckert, A. F. Frangi, J. A. Schnabel.
+           In 4th Int. Conf. on Medical Image Computing and Computer-Assisted Intervention (MICCAI '01),
+           LNCS 2208:77-84, Utrecht, NL, October 2001.
 
 .. [SPIE12] `Nonrigid free-form registration using landmark-based statistical deformation models. <http://pubs.doc.ic.ac.uk/SDM-nonrigid-registration/SDM-nonrigid-registration.pdf>`__. |br|
             S. Pszczolkowski, L. Pizarro, R. Guerrero, D. Rueckert.

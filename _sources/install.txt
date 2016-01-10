@@ -1,5 +1,6 @@
 .. meta::
-    :description: Build and installation instructions for <project>.
+    :description: Build and installation instructions for the MIRTK.
+    :keywords:    MIRTK installation, MIRTK dependencies
 
 ============
 Installation

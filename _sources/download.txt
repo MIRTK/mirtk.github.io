@@ -1,5 +1,6 @@
 .. meta::
     :description: Download the MIRTK software.
+    :keywords:    MIRTK download, open source MIRTK, MIRTK license, MIRTK copyright
 
 
 ========
