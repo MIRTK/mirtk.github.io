@@ -6,15 +6,6 @@ calculate-surface-spectrum
 .. program:: calculate-surface-spectrum
 
 
-Synopsis
---------
-
-::
-
-    mirtk calculate-surface-spectrum <input> <output> [options]
-    mirtk calculate-surface-spectrum <input1> <input2> <output1> <output2> [options]
-
-
 Description
 -----------
 
@@ -29,8 +20,36 @@ Arguments
 
    File name of input  surface (vtkPolyData).
 
-.. option:: output  File name of output surface (vtkPolyData).
+.. option:: output
 
+   File name of output surface (vtkPolyData).
+
+
+Command options
+---------------
+
+.. option:: -target <file>
+
+   File name of dataset (vtkPolyData) whose spectral components
+   should be used to adjust the sign and order of the eigenmodes.
+
+.. option:: -corr <string>
+
+   Type of point correspondences to use for initial correspondences:
+   "closest point" ("CP"), "spectral match" ("SM"). (default: SM)
+
+.. option:: -corrpar <name>=<value>
+
+   Name/value pair of correspondence parameter.
+
+.. option:: -corrin <file>
+
+   Text file naming for each point in input1 the index of the corresponding
+   point in the second dataset input2, one index per line. (default: :option:`-corr`)
+
+.. option:: -points
+
+   Replace output vertex coordinates by first three spectral coordinates.
 
 
 Standard options

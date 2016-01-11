@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc1 (bae3730)',
+        VERSION:     'v1.0rc1 (18e612b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,9 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="../sidebar.html" />
-    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="remesh" href="remesh.html" />
     <link rel="prev" title="reflect-image" href="reflect-image.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -45,7 +46,7 @@
           <a href="reflect-image.html" title="reflect-image"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -67,7 +68,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -89,20 +90,6 @@
             
   <div class="section" id="register">
 <h1>register<a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk register -images &lt;images.lst&gt; [options]
-mirtk register -image &lt;image1&gt; [-dof &lt;dof1&gt;] -image &lt;image2&gt; [-dof &lt;dof2&gt;]... [options]
-mirtk register -image &lt;image1&gt; &lt;image2&gt;... [options]
-mirtk register &lt;image1&gt; &lt;image2&gt;... [options]
-mirtk register &lt;image_sequence&gt; [options]
-mirtk register -pset &lt;pointset1&gt; [-dof &lt;dof1&gt;] -pset &lt;pointset2&gt; [-dof &lt;dof2&gt;]... [options]
-mirtk register &lt;dataset1&gt; &lt;dataset2&gt;... [options]
-mirtk register -pset &lt;pointset1&gt; &lt;pointset2&gt;... [options]
-mirtk register -image &lt;image1&gt; -points &lt;pointset1&gt; [-dof &lt;dof1&gt;]... [options]
-</pre></div>
-</div>
-</div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Registers a set of images, polygonal surface meshes, and/or point clouds (e.g. fiducial markers).
@@ -143,7 +130,7 @@ parameter &#8220;Volume preservation weight&#8221; to a positive value.</p>
 <dt id="cmdoption-register-model">
 <code class="descname">-model</code><code class="descclassname"> &lt;m1&gt;[+&lt;m2&gt;...]</code><a class="headerlink" href="#cmdoption-register-model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transformation model(s). (default: Rigid+Affine+FFD)
-Alternatively, use &#8220;-par &#8216;Transformation model=&lt;name&gt;&#8217;&#8221;. (default: n/a)</p>
+Alternatively, use &#8220;-par &#8216;Transformation model=&lt;name&gt;&#8217;&#8221; (see <a class="reference internal" href="#cmdoption-register-par"><code class="xref std std-option docutils literal"><span class="pre">-par</span></code></a>).</p>
 </dd></dl>
 
 <dl class="option">
@@ -170,8 +157,8 @@ measure (PDM) term.</p>
 <dt id="cmdoption-register-dof">
 <code class="descname">-dof</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dof" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a pre-computed affine transformation to be applied to
-the preceeding image and/or polydata. Note the difference to -dofin,
-which specifies an initial estimate of the -dofout transformation.
+the preceeding image and/or polydata. Note the difference to <a class="reference internal" href="#cmdoption-register-dofin"><code class="xref std std-option docutils literal"><span class="pre">-dofin</span></code></a>,
+which specifies an initial estimate of the <a class="reference internal" href="#cmdoption-register-dofout"><code class="xref std std-option docutils literal"><span class="pre">-dofout</span></code></a> transformation.
 (default: none)</p>
 </dd></dl>
 
@@ -179,7 +166,7 @@ which specifies an initial estimate of the -dofout transformation.
 <dt id="cmdoption-register-dof_i">
 <code class="descname">-dof_i</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dof_i" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a pre-computed affine transformation whose inverse is to be
-applied to the preceeding image and/or polydata (cf. -dof). (default: none)</p>
+applied to the preceeding image and/or polydata (see <a class="reference internal" href="#cmdoption-register-dof"><code class="xref std std-option docutils literal"><span class="pre">-dof</span></code></a>). (default: none)</p>
 </dd></dl>
 
 <dl class="option">
@@ -192,13 +179,13 @@ time is given, the temporal offset of the image header is used.
 Images specified as positional arguments are read before the images
 named in this (then optional) text file and the index of the images
 given in the text file are offset by the number of images named
-as positional arguments or using the -image option, respectively.</p>
+as positional arguments or using <a class="reference internal" href="#cmdoption-register-image"><code class="xref std std-option docutils literal"><span class="pre">-image</span></code></a>, respectively.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-psets">
 <code class="descname">-psets</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-psets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Equivalent to -images, but for point sets (-pset).</p>
+<dd><p>Equivalent to <a class="reference internal" href="#cmdoption-register-images"><code class="xref std std-option docutils literal"><span class="pre">-images</span></code></a>, but for point sets (<a class="reference internal" href="#cmdoption-register-pset"><code class="xref std std-option docutils literal"><span class="pre">-pset</span></code></a>).</p>
 </dd></dl>
 
 <dl class="option">
@@ -230,13 +217,13 @@ in the given text file which lists for each pair-wise
 transformation the corresponding target image, followed
 by the source image and the name of the transformation file.
 Note that the target and source image names must be listed
-in the -images list file. (default: none)</p>
+in the <a class="reference internal" href="#cmdoption-register-images"><code class="xref std std-option docutils literal"><span class="pre">-images</span></code></a> list file. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-dofin">
 <code class="descname">-dofin</code><code class="descclassname">  &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read initial transformation from file if -dofins not specified.
+<dd><p>Read initial transformation from file if <a class="reference internal" href="#cmdoption-register-dofins"><code class="xref std std-option docutils literal"><span class="pre">-dofins</span></code></a> not specified.
 Otherwise, writes the initial transformation obtained by approximating
 the pairwise transformations to the named file.
 If the given transformation cannot be used directly as starting
@@ -339,7 +326,7 @@ final configuration used during the course of the registration.
           <a href="reflect-image.html" title="reflect-image"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

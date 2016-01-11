@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc1 (bae3730)',
+        VERSION:     'v1.0rc1 (18e612b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,9 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="../sidebar.html" />
-    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="open-image" href="open-image.html" />
     <link rel="prev" title="match-points" href="match-points.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -45,7 +46,7 @@
           <a href="match-points.html" title="match-points"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -67,7 +68,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -89,12 +90,6 @@
             
   <div class="section" id="offset-surface">
 <h1>offset-surface<a class="headerlink" href="#offset-surface" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk offset-surface &lt;input&gt; &lt;output&gt; &lt;distance&gt; [options]
-</pre></div>
-</div>
-</div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Displaces surface mesh points by a given amount along the surface normal
@@ -124,14 +119,14 @@ are closer than the allowed offset distance to the second surface.</p>
 <dt id="cmdoption-offset-surface-size">
 <code class="descname">-size</code><code class="descclassname"> &lt;nx&gt; [&lt;ny&gt; &lt;nz&gt;]</code><a class="headerlink" href="#cmdoption-offset-surface-size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of voxels to use for implicit surface model.
-(default: bounding box divided by -voxelsize)</p>
+(default: bounding box divided by <a class="reference internal" href="#cmdoption-offset-surface-voxelsize"><code class="xref std std-option docutils literal"><span class="pre">-voxelsize</span></code></a>)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-offset-surface-voxelsize">
 <code class="descname">-voxelsize</code><code class="descclassname"> &lt;dx&gt; [&lt;dy&gt; &lt;dz&gt;]</code><a class="headerlink" href="#cmdoption-offset-surface-voxelsize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Size of voxels to use for implicit surface model.
-This option is ignored when image -size is specified.
+This option is ignored when image <a class="reference internal" href="#cmdoption-offset-surface-size"><code class="xref std std-option docutils literal"><span class="pre">-size</span></code></a> is specified.
 (default: length of bounding box diagonal divided by 512)</p>
 </dd></dl>
 
@@ -201,7 +196,7 @@ is within the given range.</p>
           <a href="match-points.html" title="match-points"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

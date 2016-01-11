@@ -6,14 +6,6 @@ remesh
 .. program:: remesh
 
 
-Synopsis
---------
-
-::
-
-    mirtk remesh <input> <output> [options]
-
-
 Description
 -----------
 

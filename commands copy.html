@@ -1,0 +1,411 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Commands &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v1.0rc1 (18e612b)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="sidebar.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="commands">
+<span id="id1"></span><h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The MIRTK installs a single executable script file named <code class="docutils literal"><span class="pre">mirtk</span></code> in the
+<code class="docutils literal"><span class="pre">bin/</span></code> directory of the installation root directory. This executable is
+used to execute the various MIRTK commands. The name of the command must
+be specified as first argument of the <code class="docutils literal"><span class="pre">mirtk</span></code> executable. Help about
+a command can be printed using the special <code class="docutils literal"><span class="pre">help</span></code> or <code class="docutils literal"><span class="pre">help-rst</span></code> commands
+followed by the name of the command for which help is requested.</p>
+<p>Usage:</p>
+<div class="highlight-python"><div class="highlight"><pre>mirtk help &lt;command&gt;
+mirtk [-v] [-v] &lt;command&gt; [options]
+</pre></div>
+</div>
+<p>When the <code class="docutils literal"><span class="pre">-v</span></code> option is given before the command name, the path and arguments
+of the actual command executable is printed before command execution.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The MIRTK installation includes a <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a>
+completions script which when sourced e.g. in your <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> or
+<code class="docutils literal"><span class="pre">$HOME/.profile</span></code> shell configuration file, enables auto-completion of
+available MIRTK commands. To enable Bash completions for <code class="docutils literal"><span class="pre">mirtk</span></code>, add the
+following line to your shell configuration file:</p>
+<div class="last highlight-python"><div class="highlight"><pre>. &quot;$MIRTK_DIR/share/mirtk_bash_completions.sh&quot;
+</pre></div>
+</div>
+</div>
+<p>In the following, a summary of common command options is given. For a complete
+list of options for each command, see below or the command help (<code class="docutils literal"><span class="pre">mirtk</span> <span class="pre">help</span></code>).</p>
+<div class="section" id="standard-options">
+<h3>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h3>
+<dl class="option">
+<dt id="cmdoption-v">
+<code class="descname">-v</code><code class="descclassname"> -verbose [n]</code><a class="headerlink" href="#cmdoption-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-h">
+<code class="descname">-h</code><code class="descclassname"> -help</code><a class="headerlink" href="#cmdoption-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="terminal-options">
+<h3>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h3>
+<dl class="option">
+<dt id="cmdoption-color">
+<code class="descname">-color</code><code class="descclassname"> | -nocolor</code><a class="headerlink" href="#cmdoption-color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable colored output. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="parallelization-options">
+<h3>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h3>
+<dl class="option">
+<dt id="cmdoption-threads">
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-threads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="table-of-commands">
+<h2>Table of Commands<a class="headerlink" href="#table-of-commands" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="average-dofs">
+<span id="id2"></span><h3>average-dofs<a class="headerlink" href="#average-dofs" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/average-dofs.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="average-images">
+<span id="id3"></span><h3>average-images<a class="headerlink" href="#average-images" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/average-images.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate">
+<span id="id4"></span><h3>calculate<a class="headerlink" href="#calculate" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/calculate.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate-distance-map">
+<span id="id5"></span><h3>calculate-distance-map<a class="headerlink" href="#calculate-distance-map" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/calculate-distance-map.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate-exponential-map">
+<span id="id6"></span><h3>calculate-exponential-map<a class="headerlink" href="#calculate-exponential-map" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/calculate-exponential-map.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate-lie-bracket">
+<span id="id7"></span><h3>calculate-lie-bracket<a class="headerlink" href="#calculate-lie-bracket" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/calculate-lie-bracket.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate-logarithmic-map">
+<span id="id8"></span><h3>calculate-logarithmic-map<a class="headerlink" href="#calculate-logarithmic-map" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/calculate-logarithmic-map.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate-surface-attributes">
+<span id="id9"></span><h3>calculate-surface-attributes<a class="headerlink" href="#calculate-surface-attributes" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/calculate-surface-attributes.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="calculate-surface-spectrum">
+<span id="id10"></span><h3>calculate-surface-spectrum<a class="headerlink" href="#calculate-surface-spectrum" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/calculate-surface-spectrum.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="close-image">
+<span id="id11"></span><h3>close-image<a class="headerlink" href="#close-image" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/close-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="concatenate-dofs">
+<span id="id12"></span><h3>concatenate-dofs<a class="headerlink" href="#concatenate-dofs" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/concatenate-dofs.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="concatenate-images">
+<span id="id13"></span><h3>concatenate-images<a class="headerlink" href="#concatenate-images" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/concatenate-images.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="convert-dof">
+<span id="id14"></span><h3>convert-dof<a class="headerlink" href="#convert-dof" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/convert-dof.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="convert-dof2csv">
+<span id="id15"></span><h3>convert-dof2csv<a class="headerlink" href="#convert-dof2csv" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/convert-dof2csv.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="convert-dof2velo">
+<span id="id16"></span><h3>convert-dof2velo<a class="headerlink" href="#convert-dof2velo" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/convert-dof2velo.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="convert-image">
+<span id="id17"></span><h3>convert-image<a class="headerlink" href="#convert-image" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/convert-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="convert-pointset">
+<span id="id18"></span><h3>convert-pointset<a class="headerlink" href="#convert-pointset" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/convert-pointset.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="copy-pointset-attributes">
+<span id="id19"></span><h3>copy-pointset-attributes<a class="headerlink" href="#copy-pointset-attributes" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/copy-pointset-attributes.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="cut-brain">
+<span id="id20"></span><h3>cut-brain<a class="headerlink" href="#cut-brain" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/cut-brain.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="decimate-surface">
+<span id="id21"></span><h3>decimate-surface<a class="headerlink" href="#decimate-surface" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/decimate-surface.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="deform-mesh">
+<span id="id22"></span><h3>deform-mesh<a class="headerlink" href="#deform-mesh" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/deform-mesh.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="delete-pointset-attributes">
+<span id="id23"></span><h3>delete-pointset-attributes<a class="headerlink" href="#delete-pointset-attributes" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/delete-pointset-attributes.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="detect-edges">
+<span id="id24"></span><h3>detect-edges<a class="headerlink" href="#detect-edges" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/detect-edges.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="dilate-image">
+<span id="id25"></span><h3>dilate-image<a class="headerlink" href="#dilate-image" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/dilate-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="downsample-image">
+<span id="id26"></span><h3>downsample-image<a class="headerlink" href="#downsample-image" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/downsample-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="edit-dof">
+<span id="id27"></span><h3>edit-dof<a class="headerlink" href="#edit-dof" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/edit-dof.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="edit-image">
+<span id="id28"></span><h3>edit-image<a class="headerlink" href="#edit-image" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/edit-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="erode-image">
+<span id="id29"></span><h3>erode-image<a class="headerlink" href="#erode-image" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/erode-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="evaluate-distance">
+<span id="id30"></span><h3>evaluate-distance<a class="headerlink" href="#evaluate-distance" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/evaluate-distance.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="evaluate-distortion">
+<span id="id31"></span><h3>evaluate-distortion<a class="headerlink" href="#evaluate-distortion" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/evaluate-distortion.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="evaluate-dof">
+<span id="id32"></span><h3>evaluate-dof<a class="headerlink" href="#evaluate-dof" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/evaluate-dof.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="evaluate-jacobian">
+<span id="id33"></span><h3>evaluate-jacobian<a class="headerlink" href="#evaluate-jacobian" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/evaluate-jacobian.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="evaluate-overlap">
+<span id="id34"></span><h3>evaluate-overlap<a class="headerlink" href="#evaluate-overlap" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/evaluate-overlap.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="evaluate-surface-overlap">
+<span id="id35"></span><h3>evaluate-surface-overlap<a class="headerlink" href="#evaluate-surface-overlap" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/evaluate-surface-overlap.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="extract-connected-components">
+<span id="id36"></span><h3>extract-connected-components<a class="headerlink" href="#extract-connected-components" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/extract-connected-components.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="extract-connected-points">
+<span id="id37"></span><h3>extract-connected-points<a class="headerlink" href="#extract-connected-points" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/extract-connected-points.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="extract-image-region">
+<span id="id38"></span><h3>extract-image-region<a class="headerlink" href="#extract-image-region" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/extract-image-region.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="extract-pointset-surface">
+<span id="id39"></span><h3>extract-pointset-surface<a class="headerlink" href="#extract-pointset-surface" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/extract-pointset-surface.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="extract-surface">
+<span id="id40"></span><h3>extract-surface<a class="headerlink" href="#extract-surface" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/extract-surface.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="flip-image">
+<span id="id41"></span><h3>flip-image<a class="headerlink" href="#flip-image" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/flip-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="info">
+<span id="id42"></span><h3>info<a class="headerlink" href="#info" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/info.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="init-dof">
+<span id="id43"></span><h3>init-dof<a class="headerlink" href="#init-dof" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/init-dof.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="invert-dof">
+<span id="id44"></span><h3>invert-dof<a class="headerlink" href="#invert-dof" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/invert-dof.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="map">
+<span id="id45"></span><h3>map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/map.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="match-points">
+<span id="id46"></span><h3>match-points<a class="headerlink" href="#match-points" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/match-points.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="offset-surface">
+<span id="id47"></span><h3>offset-surface<a class="headerlink" href="#offset-surface" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/offset-surface.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="open-image">
+<span id="id48"></span><h3>open-image<a class="headerlink" href="#open-image" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/open-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="project-onto-surface">
+<span id="id49"></span><h3>project-onto-surface<a class="headerlink" href="#project-onto-surface" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/project-onto-surface.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="reflect-image">
+<span id="id50"></span><h3>reflect-image<a class="headerlink" href="#reflect-image" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/reflect-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="register">
+<span id="id51"></span><h3>register<a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/register.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="remesh">
+<span id="id52"></span><h3>remesh<a class="headerlink" href="#remesh" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/remesh.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="resample-image">
+<span id="id53"></span><h3>resample-image<a class="headerlink" href="#resample-image" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/resample-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="smooth-image">
+<span id="id54"></span><h3>smooth-image<a class="headerlink" href="#smooth-image" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/smooth-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="smooth-surface">
+<span id="id55"></span><h3>smooth-surface<a class="headerlink" href="#smooth-surface" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/smooth-surface.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="transform-image">
+<span id="id56"></span><h3>transform-image<a class="headerlink" href="#transform-image" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/transform-image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="transform-points">
+<span id="id57"></span><h3>transform-points<a class="headerlink" href="#transform-points" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="commands/transform-points.html"><em>[more]</em></a></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

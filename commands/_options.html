@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Classes &mdash; MIRTK</title>
+    <title>Standard options &mdash; MIRTK</title>
     
     <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -27,9 +27,6 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="../sidebar.html" />
-    <link rel="up" title="API Reference" href="../apidoc.html" />
-    <link rel="next" title="Release Notes" href="../changelog.html" />
-    <link rel="prev" title="Namespace" href="namespace.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
@@ -39,14 +36,7 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../changelog.html" title="Release Notes"
-             accesskey="N">next</a></li>
-        <li class="right" >
-          <a href="namespace.html" title="Namespace"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../apidoc.html" accesskey="U">API Reference</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -65,16 +55,11 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../apidoc.html">Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="headers.html">Header Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="namespace.html">Namespace</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Classes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
@@ -93,22 +78,57 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="classes">
-<span id="apiclasses"></span><h1>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h1>
-<script type="text/javascript" src="../_static/jquery.js"></script>
-<script type="text/javascript" src="../_static/jquery.iframe-auto-height.plugin.1.8.0.js"></script>
-<!-- with document ready, most likely in the html head -->
-<script>
-  $(document).ready(function () {
-    $('iframe').iframeAutoHeight({debug: true});
-  });
-</script>
+  <div class="section" id="standard-options">
+<h1>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h1>
+<dl class="option">
+<dt id="cmdoption-v">
+<code class="descname">-v</code><code class="descclassname"> -verbose [n]</code><a class="headerlink" href="#cmdoption-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
 
-<!-- inline, after the iframe -->
-<iframe src="latest/classes.html" class="auto-height" width="100%" height="12000px" scrolling="no" marginheight="0" frameborder="0" onload="window.parent.parent.scrollTo(0,0)"></iframe>
-<script>
-  $('iframe.auto-height').iframeAutoHeight({minHeight: 1000});
-</script></div>
+<dl class="option">
+<dt id="cmdoption-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-h">
+<code class="descname">-h</code><code class="descclassname"> -help</code><a class="headerlink" href="#cmdoption-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="terminal-options">
+<h1>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h1>
+<dl class="option">
+<dt id="cmdoption-color">
+<code class="descname">-color</code><code class="descclassname"> | -nocolor</code><a class="headerlink" href="#cmdoption-color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable colored output. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="parallelization-options">
+<h1>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h1>
+<dl class="option">
+<dt id="cmdoption-threads">
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-threads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
+</dd></dl>
+
+</div>
 
 
           </div>
@@ -119,14 +139,7 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../changelog.html" title="Release Notes"
-             >next</a></li>
-        <li class="right" >
-          <a href="namespace.html" title="Namespace"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../apidoc.html" >API Reference</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

@@ -57,6 +57,8 @@ Module               Requires module(s)                                         
           in the respective module directory (e.g., `Modules/Registration/BasisProject.cmake`).
 
 
+.. _ConfigurationSteps:
+
 Configuration
 =============
 
@@ -98,24 +100,25 @@ Step-by-step
    variable, re-configure the build system by clicking on "Configure" again
    until no further changes are made and the "Generate" button is enabled.
 
-   =====================  ======================================================
-   Option/Variable        Description
-   =====================  ======================================================
-   BUILD_APPLICATIONS     Build command-line tools of enabled modules.
-   BUILD_DOCUMENTATION    Configure build of online documentation ("doc" target).
-   BUILD_TESTING          Build the regression tests. (advanced, unused)
-   CMAKE_BUILD_TYPE       Build configuration (e.g. "Release" for optimized code).
-   CMAKE_INSTALL_PREFIX   Installation directory (default on Linux and OS X is `/opt/mirtk-<version>`).
-   WITH_ARPACK            Enable eigendecomposition of sparse matrices. Required for spectral surface matching.
-   WITH_MATLAB            Enable output of matrices to .mat files and use of MATLAB functions.
-   WITH_NiftiCLib         Use system installation of NiftiCLib_ for build of NIfTI module.
-   WITH_PNG               Enable writing of 2D images in PNG_ file format.
-   WITH_PROFILING         Enable profiling of code execution to find runtime bottlenecks.
-   WITH_TBB               Enable multi-threaded execution using Intel Threading Building Blocks. (recommended)
-   WITH_UMFPACK           Automatically enabled when WITH_ARPACK is ON.
-   WITH_VTK               Enable processing of VTK files. Automatically enabled when PointSet module is enabled.
-   WITH_ZLIB              Enable reading/writing of compressed files using zlib_. (recommended)
-   =====================  ======================================================
+   ============================  ======================================================
+   Option/Variable               Description
+   ============================  ======================================================
+   BUILD_APPLICATIONS            Build command-line tools of enabled modules.
+   BUILD_DOCUMENTATION_SOURCES   (Re-)generate .rst source files of auto-generated pages.
+   BUILD_DOCUMENTATION           Configure build of online documentation ("doc" target).
+   BUILD_TESTING                 Build the regression tests. (advanced, unused)
+   CMAKE_BUILD_TYPE              Build configuration (e.g. "Release" for optimized code).
+   CMAKE_INSTALL_PREFIX          Installation directory (default on Linux and OS X is `/opt/mirtk-<version>`).
+   WITH_ARPACK                   Enable eigendecomposition of sparse matrices. Required for spectral surface matching.
+   WITH_MATLAB                   Enable output of matrices to .mat files and use of MATLAB functions.
+   WITH_NiftiCLib                Use system installation of NiftiCLib_ for build of NIfTI module.
+   WITH_PNG                      Enable writing of 2D images in PNG_ file format.
+   WITH_PROFILING                Enable profiling of code execution to find runtime bottlenecks.
+   WITH_TBB                      Enable multi-threaded execution using Intel Threading Building Blocks. (recommended)
+   WITH_UMFPACK                  Automatically enabled when WITH_ARPACK is ON.
+   WITH_VTK                      Enable processing of VTK files. Automatically enabled when PointSet module is enabled.
+   WITH_ZLIB                     Enable reading/writing of compressed files using zlib_. (recommended)
+   ============================  ======================================================
 
 5. **Generate build tool configuration files.**
 
@@ -144,6 +147,8 @@ was set manually after the error was reported.
 .. image:: static/CMakeGUIVTKNotFound.png
     :alt: VTK not found error in CMake GUI
 
+
+.. _BuildSteps:
 
 Build
 =====
@@ -182,6 +187,8 @@ Using Ninja, run::
     ninja doc
 
 
+.. _InstallationSteps:
+
 Installation
 ============
 
@@ -196,9 +203,22 @@ Using Ninja, run::
 
     ninja install
 
-Finally, to enable the convenient use of the MIRTK command-line tools, it is recommended
-to permanently add the ``<CMAKE_INSTALL_PREFIX>/bin`` directory to the `PATH environment variable`_
-in the shell setup script (e.g., ``$HOME/.bashrc`` or ``$HOME/.profile``).
+.. note::
+
+   To enable the convenient use of the MIRTK :doc:`commands`, it is recommended
+   to permanently add the ``<CMAKE_INSTALL_PREFIX>/bin`` directory to the
+   `PATH environment variable`_ in the shell setup script (e.g., ``$HOME/.bashrc``
+   or ``$HOME/.profile``).
+
+.. note::
+
+   The MIRTK installation includes a `Bash <https://www.gnu.org/software/bash/>`__
+   completions script which when sourced e.g. in your ``$HOME/.bashrc`` or
+   ``$HOME/.profile`` shell configuration file, enables auto-completion of
+   available MIRTK commands. To enable Bash completions for ``mirtk``, add the
+   following line to your shell configuration file::
+
+       . "$MIRTK_DIR/share/mirtk_bash_completions.sh"
 
 
 .. _Boost:     http://www.boost.org

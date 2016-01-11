@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc1 (bae3730)',
+        VERSION:     'v1.0rc1 (18e612b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,9 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="../sidebar.html" />
-    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="transform-image" href="transform-image.html" />
     <link rel="prev" title="smooth-image" href="smooth-image.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -45,7 +46,7 @@
           <a href="smooth-image.html" title="smooth-image"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -67,7 +68,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -89,13 +90,6 @@
             
   <div class="section" id="smooth-surface">
 <h1>smooth-surface<a class="headerlink" href="#smooth-surface" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk smooth-surface &lt;input&gt; &lt;output&gt; [options]
-mirtk smooth-surface &lt;input&gt; &lt;output&gt; &lt;iterations&gt; [lambda] [mu] [options] (deprecated)
-</pre></div>
-</div>
-</div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Smooths the node positions and/or scalar data of a surface mesh.</p>
@@ -105,9 +99,9 @@ far each node moves towards the local centroid (0 &lt;= lambda &lt;= 1). The new
 of a node is a weighted combination of its previous position and the neighbours&#8217; centroid.
 If lambda = 1, a node is moved all the way to the centroid, while lambda = 0 keeps a node
 at its previous position.</p>
-<p>For a low-pass filtering of the surface mesh, set lambda to a positive value in
-the range (0, 1), and mu to a negative value greater in magnitude than
-lambda, i.e., 0 &lt; lambda &lt; -mu. For a detailed explanation of the parameters,
+<p>For a low-pass filtering of the surface mesh, set <a class="reference internal" href="#cmdoption-smooth-surface-lambda"><code class="xref std std-option docutils literal"><span class="pre">smooth-surface</span> <span class="pre">-lambda</span></code></a> to a positive value in
+the range (0, 1), and <a class="reference internal" href="#cmdoption-smooth-surface-mu"><code class="xref std std-option docutils literal"><span class="pre">smooth-surface</span> <span class="pre">-mu</span></code></a> to a negative value greater in magnitude than
+lambda, i.e., 0 &lt; lambda &lt; mu. For a detailed explanation of the parameters,
 cf. Taubin, Curve and Surface Smoothing without Shrinkage, ICCV 1995.</p>
 </div>
 <div class="section" id="arguments">
@@ -127,7 +121,7 @@ cf. Taubin, Curve and Surface Smoothing without Shrinkage, ICCV 1995.</p>
 <dl class="option">
 <dt id="cmdoption-smooth-surface-arg-iterations">
 <code class="descname">iterations</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-arg-iterations" title="Permalink to this definition">¶</a></dt>
-<dd><p>No. of smoothing iterations. (deprecated: see -iterations option)</p>
+<dd><p>No. of smoothing iterations. (deprecated: see <a class="reference internal" href="#cmdoption-smooth-surface-iterations"><code class="xref std std-option docutils literal"><span class="pre">-iterations</span></code></a> option)</p>
 </dd></dl>
 
 <dl class="option">
@@ -139,7 +133,7 @@ cf. Taubin, Curve and Surface Smoothing without Shrinkage, ICCV 1995.</p>
 <dl class="option">
 <dt id="cmdoption-smooth-surface-arg-mu">
 <code class="descname">mu</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-arg-mu" title="Permalink to this definition">¶</a></dt>
-<dd><p>Magnitude of scale factor for even iterations. (deprecated: see -mu option)</p>
+<dd><p>Magnitude of scale factor for even iterations. (deprecated: see <a class="reference internal" href="#cmdoption-smooth-surface-mu"><code class="xref std std-option docutils literal"><span class="pre">-mu</span></code></a> option)</p>
 </dd></dl>
 
 </div>
@@ -166,7 +160,7 @@ cf. Taubin, Curve and Surface Smoothing without Shrinkage, ICCV 1995.</p>
 <dl class="option">
 <dt id="cmdoption-smooth-surface-points">
 <code class="descname">-points</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-points" title="Permalink to this definition">¶</a></dt>
-<dd><p>Smooth node positions. (default if no -scalars specified)</p>
+<dd><p>Smooth node positions. (default if no <a class="reference internal" href="#cmdoption-smooth-surface-scalars"><code class="xref std std-option docutils literal"><span class="pre">-scalars</span></code></a> specified)</p>
 </dd></dl>
 
 <dl class="option">
@@ -241,7 +235,7 @@ The optional arguments specifies the name of output output point data array.
 <code class="descname">-threshold</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-smooth-surface-threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>A value indicating the smoothness as the L_2 norm of H^2 over the surface.
 See Tosun, MedIA, 2004. Iterations stop if the norm for the surface drops
-below the given value. Only used for -areaweighted smoothing.</p>
+below the given value. Only used for <a class="reference internal" href="#cmdoption-smooth-surface-areaweighted"><code class="xref std std-option docutils literal"><span class="pre">-areaweighted</span></code></a> smoothing.</p>
 </dd></dl>
 
 </div>
@@ -296,7 +290,7 @@ below the given value. Only used for -areaweighted smoothing.</p>
           <a href="smooth-image.html" title="smooth-image"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

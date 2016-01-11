@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc1 (bae3730)',
+        VERSION:     'v1.0rc1 (18e612b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,9 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="../sidebar.html" />
-    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="calculate" href="calculate.html" />
     <link rel="prev" title="average-dofs" href="average-dofs.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -45,7 +46,7 @@
           <a href="average-dofs.html" title="average-dofs"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -67,7 +68,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -89,20 +90,11 @@
             
   <div class="section" id="average-images">
 <h1>average-images<a class="headerlink" href="#average-images" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk average-images &lt;output&gt; -images &lt;images.lst&gt; [options]
-mirtk average-images &lt;output&gt; -image &lt;image1&gt; [-dof &lt;dof1&gt;] -image &lt;image2&gt; [-dof &lt;dof2&gt;]... [options]
-mirtk average-images &lt;output&gt; &lt;image1&gt; [&lt;dof1&gt;] &lt;image2&gt; [&lt;dof2&gt;]... [options]
-mirtk average-images &lt;output&gt; &lt;sequence&gt; [options]
-</pre></div>
-</div>
-</div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Computes voxelwise average image of the given (transformed) input images.</p>
-<p>The input images are optionally transformed by an image-to-average space transformation (-dof)
-or its inverse (-dof_i).</p>
+<p>The input images are optionally transformed by an image-to-average space transformation
+(<a class="reference internal" href="#cmdoption-average-images-dof"><code class="xref std std-option docutils literal"><span class="pre">average-images</span> <span class="pre">-dof</span></code></a>) or its inverse (<a class="reference internal" href="#cmdoption-average-images-dof_i"><code class="xref std std-option docutils literal"><span class="pre">average-images</span> <span class="pre">-dof_i</span></code></a>).</p>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
@@ -116,8 +108,8 @@ or its inverse (-dof_i).</p>
 <dt id="cmdoption-average-images-images">
 <code class="descname">-images</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-average-images-images" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text file with N lines containing the file name of each input image,
-optionally a transformation file name (see -dof), optionally followed
-by a weight for a weighted output average (default weight is 1).
+optionally a transformation file name (see <a class="reference internal" href="#cmdoption-average-images-dof"><code class="xref std std-option docutils literal"><span class="pre">-dof</span></code></a> and <a class="reference internal" href="#cmdoption-average-images-dof_i"><code class="xref std std-option docutils literal"><span class="pre">-dof_i</span></code></a>),
+optionally followed by a weight for a weighted output average (default weight is 1).
 The first line of the text file must specify the common base directory
 of all relative image and transformation file paths occurring on the
 subsequent N lines. A path starting with &#8216;./&#8217; must be relative to the
@@ -148,13 +140,15 @@ preceeding image. (default: none)</p>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-average-images-size">
-<code class="descname">-size</code><code class="descclassname"> &lt;dx&gt; [&lt;dy&gt; [&lt;dz&gt;]] Voxel size of intensity average image. (default: average of input images)</code><a class="headerlink" href="#cmdoption-average-images-size" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">-size</code><code class="descclassname"> &lt;dx&gt; [&lt;dy&gt; [&lt;dz&gt;]]</code><a class="headerlink" href="#cmdoption-average-images-size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Voxel size of intensity average image. (default: average of input images)</p>
+</dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-images-padding">
 <code class="descname">-padding</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-average-images-padding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Background padding value. (default: MIN_GREY)</p>
+<dd><p>Input padding and output background value. No input padding if not specified.
+Output background value zero by default or minimum average intensity minus 1. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
@@ -239,7 +233,7 @@ preceeding image. (default: none)</p>
           <a href="average-dofs.html" title="average-dofs"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

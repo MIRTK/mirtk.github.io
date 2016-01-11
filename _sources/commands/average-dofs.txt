@@ -6,15 +6,6 @@ average-dofs
 .. program:: average-dofs
 
 
-Synopsis
---------
-
-::
-
-    mirtk average-dofs <dofout> <dofin>...       [options]
-    mirtk average-dofs <dofout> -dofnames <file> [options]
-
-
 Description
 -----------
 
@@ -37,20 +28,20 @@ Input options
 
 .. option:: -dofdir <dir>
 
-   Directory used to make relative paths in -dofnames text file absolute. (default: cwd)
+   Directory used to make relative paths in :option:`-dofnames` text file absolute. (default: cwd)
 
 .. option:: -prefix <string>
 
-   Prefix for transformation name entries in -dofnames text file. (default: none)
+   Prefix for transformation name entries in :option:`-dofnames` text file. (default: none)
 
 .. option:: -suffix <string>
 
-   Suffix for transformation name entries in -dofnames text file. (default: none)
+   Suffix for transformation name entries in :option:`-dofnames` text file. (default: none)
 
 .. option:: -gaussian <mean> <sigma>
 
-   Use Gaussian kernel weights. Requires -dofnames to specify transformation values.
-   By default, if -dofnames is used or <sigma> is 0, the values specified in the
+   Use Gaussian kernel weights. Requires :option:`-dofnames` to specify transformation values.
+   By default, if :option:`-dofnames` is used or <sigma> is 0, the values specified in the
    text file are directly used as kernel weights for the averaging instead of
    using these values as arguments for the Gaussian kernel function.
 
@@ -70,7 +61,7 @@ Input options
 
    Assume identity transformation for named input transformation.
    Note that if this option is used, the named input transformation file
-   which is listed in the -dofnames list does not need to exist.
+   which is listed in the :option:`-dofnames` list does not need to exist.
    (default: read input transformation from file)
 
 
@@ -79,28 +70,28 @@ Average transformation options
 
 .. option:: -rotation | -norotation
 
-   Average rotation    or assume none to be present. (default: -norotation)
+   Average rotation    or assume none to be present. (default: off)
 
 .. option:: -translation | -notranslation
 
-   Average translation or assume none to be present. (default: -notranslation)
+   Average translation or assume none to be present. (default: off)
 
 .. option:: -scaling | -noscaling
 
-   Average scaling     or assume none to be present. (default: -scaling)
+   Average scaling     or assume none to be present. (default: on)
 
 .. option:: -shearing | -noshearing
 
-   Average shearing    or assume none to be present. (default: -shearing)
+   Average shearing    or assume none to be present. (default: on)
 
 .. option:: -deformation | -nodeformation
 
-   Average deformation or assume none to be present. (default: -deformation)
+   Average deformation or assume none to be present. (default: on)
 
 .. option:: -log | -nolog
 
    Whether to average local transformations in log-space.
-   (default: yes, unless the -dofs are averaged directly)
+   (default: yes, unless the :option:`-dofs` are averaged directly)
 
 .. option:: -log-euclidean
 
@@ -121,23 +112,28 @@ Average transformation options
 
 .. option:: -rigid
 
-   Average rigid transformation parameters only.
+   Enables averaging of :option:`-translation` and :option:`-rotation` components,
+   and disables averaging of :option:`-scaling`, :option:`-shearing`, and :option:`-deformation`.
 
 .. option:: -norigid
 
-   Alias for -norotation, -notranslation.
+   Disables averaging of :option:`-translation` and :option:`-rotation` components.
 
 .. option:: -affine
 
-   Average affine transformation parameters only.
+   Enables averaging of :option:`-translation`, :option:`-rotation`,
+   :option:`-scaling`, and :option:`-shearing`, components and disables output of
+   average :option:`-deformation`.
 
 .. option:: -noaffine
 
-   Alias for -norotation, -notranslation, -noscaling, -noshearing.
+   Disables averaging of :option:`-rotation`, :option:`-translation`,
+   :option:`-scaling`, and :option:`-shearing` components.
 
 .. option:: -all
 
-   Average all transformation parameters.
+   Enables averaging of :option:`-rotation`, :option:`-translation`,
+   :option:`-scaling`, :option:`-shearing`, and :option:`-deformation`.
 
 .. option:: -linear
 

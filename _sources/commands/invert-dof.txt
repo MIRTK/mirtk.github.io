@@ -6,14 +6,6 @@ invert-dof
 .. program:: invert-dof
 
 
-Synopsis
---------
-
-::
-
-    mirtk invert-dof <dofin> <dofout> [options]
-
-
 Description
 -----------
 

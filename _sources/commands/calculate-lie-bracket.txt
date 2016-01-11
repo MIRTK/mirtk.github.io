@@ -6,15 +6,6 @@ calculate-lie-bracket
 .. program:: calculate-lie-bracket
 
 
-Synopsis
---------
-
-::
-
-    mirtk calculate-lie-bracket <x> <y> <z>                                        [options]
-    mirtk calculate-lie-bracket <xx> <xy> [<xz>] <yx> <yy> [<yz>] <zx> <zy> [<zz>] [options]
-
-
 Description
 -----------
 
@@ -31,7 +22,7 @@ Command options
 
 .. option:: -dif
 
-   Use difference of compositions: z = x(y) - y(x).
+   Use difference of compositions: :math:`z = x(y) - y(x)`.
 
 
 Standard options

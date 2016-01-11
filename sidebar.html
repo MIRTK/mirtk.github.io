@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0rc1 (bae3730)',
+        VERSION:     'v1.0rc1 (18e612b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,6 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="#" />
     <link rel="next" title="Medical Image Registration ToolKit (MIRTK)" href="index.html" />
@@ -61,7 +62,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -111,63 +112,15 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#average-dofs">average-dofs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#average-images">average-images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#calculate">calculate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#calculate-distance-map">calculate-distance-map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#calculate-exponential-map">calculate-exponential-map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#calculate-lie-bracket">calculate-lie-bracket</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#calculate-logarithmic-map">calculate-logarithmic-map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#calculate-surface-attributes">calculate-surface-attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#calculate-surface-spectrum">calculate-surface-spectrum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#close-image">close-image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#concatenate-dofs">concatenate-dofs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#concatenate-images">concatenate-images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#convert-dof">convert-dof</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#convert-dof2csv">convert-dof2csv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#convert-dof2velo">convert-dof2velo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#convert-image">convert-image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#convert-pointset">convert-pointset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#copy-pointset-attributes">copy-pointset-attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#cut-brain">cut-brain</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#decimate-surface">decimate-surface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#deform-mesh">deform-mesh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#delete-pointset-attributes">delete-pointset-attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#detect-edges">detect-edges</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#dilate-image">dilate-image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#downsample-image">downsample-image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#edit-dof">edit-dof</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#edit-image">edit-image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#erode-image">erode-image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#evaluate-distance">evaluate-distance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#evaluate-distortion">evaluate-distortion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#evaluate-dof">evaluate-dof</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#evaluate-jacobian">evaluate-jacobian</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#evaluate-overlap">evaluate-overlap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#evaluate-surface-overlap">evaluate-surface-overlap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#extract-connected-components">extract-connected-components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#extract-connected-points">extract-connected-points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#extract-image-region">extract-image-region</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#extract-pointset-surface">extract-pointset-surface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#extract-surface">extract-surface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#flip-image">flip-image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#info">info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#init-dof">init-dof</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#invert-dof">invert-dof</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#map">map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#match-points">match-points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#offset-surface">offset-surface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#open-image">open-image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#project-onto-surface">project-onto-surface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#reflect-image">reflect-image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#register">register</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#remesh">remesh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#resample-image">resample-image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#smooth-image">smooth-image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#smooth-surface">smooth-surface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#transform-image">transform-image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html#transform-points">transform-points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#options">Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#standard-options">Standard options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#terminal-options">Terminal options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#parallelization-options">Parallelization options</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a><ul>
@@ -202,7 +155,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#build">Build</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#id1">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#installationsteps">Installation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Getting Help</a></li>

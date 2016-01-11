@@ -6,14 +6,6 @@ erode-image
 .. program:: erode-image
 
 
-Synopsis
---------
-
-::
-
-    mirtk erode-image <input> <output> [options]
-
-
 Description
 -----------
 

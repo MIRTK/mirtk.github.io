@@ -6,17 +6,6 @@ average-images
 .. program:: average-images
 
 
-Synopsis
---------
-
-::
-
-    mirtk average-images <output> -images <images.lst> [options]
-    mirtk average-images <output> -image <image1> [-dof <dof1>] -image <image2> [-dof <dof2>]... [options]
-    mirtk average-images <output> <image1> [<dof1>] <image2> [<dof2>]... [options]
-    mirtk average-images <output> <sequence> [options]
-
-
 Description
 -----------
 
@@ -34,8 +23,8 @@ Arguments
 .. option:: -images <file>
 
    Text file with N lines containing the file name of each input image,
-   optionally a transformation file name (see -dof), optionally followed
-   by a weight for a weighted output average (default weight is 1).
+   optionally a transformation file name (see :option:`-dof` and :option:`-dof_i`),
+   optionally followed by a weight for a weighted output average (default weight is 1).
    The first line of the text file must specify the common base directory
    of all relative image and transformation file paths occurring on the
    subsequent N lines. A path starting with './' must be relative to the
@@ -58,12 +47,14 @@ Arguments
 Command options
 ---------------
 
-.. option:: -size <dx> [<dy> [<dz>]] Voxel size of intensity average image. (default: average of input images)
+.. option:: -size <dx> [<dy> [<dz>]]
 
+   Voxel size of intensity average image. (default: average of input images)
 
 .. option:: -padding <value>
 
-   Background padding value. (default: MIN_GREY)
+   Input padding and output background value. No input padding if not specified.
+   Output background value zero by default or minimum average intensity minus 1. (default: 0)
 
 .. option:: -interp <mode>
 

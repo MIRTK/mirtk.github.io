@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc1 (bae3730)',
+        VERSION:     'v1.0rc1 (18e612b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,9 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="../sidebar.html" />
-    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="invert-dof" href="invert-dof.html" />
     <link rel="prev" title="info" href="info.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -45,7 +46,7 @@
           <a href="info.html" title="info"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -67,7 +68,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -89,24 +90,21 @@
             
   <div class="section" id="init-dof">
 <h1>init-dof<a class="headerlink" href="#init-dof" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk init-dof &lt;dofout&gt; [output option] [options]
-</pre></div>
-</div>
-</div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>This tool either creates a new affine transformation with the given parameters
 or approximates an affine transformation or non-rigid deformation given
-a set of corresponding landmarks or point displacements (cf. -disp option).</p>
+a set of corresponding landmarks or point displacements (see <a class="reference internal" href="#cmdoption-init-dof-displacements"><code class="xref std std-option docutils literal"><span class="pre">init-dof</span> <span class="pre">-displacements</span></code></a>).</p>
 <p>The output transformation is by default an affine transformation.
 One of the output options below can be used to request a different
 type of output transformation. This option should be given right
 after the output transformation name as it may be altered using
-one of the other output related options (e.g. -noshearing).</p>
+one of the other output related options (e.g. disable <a class="reference internal" href="#cmdoption-init-dof-shearing"><code class="xref std std-option docutils literal"><span class="pre">init-dof</span> <span class="pre">-shearing</span></code></a>).</p>
 <p>An affine transformation is the composition of a shearing followed by
-a scaling, a rotation, and a translation. The homogeneous transformation</p>
+a scaling, a rotation, and a translation. The homogeneous transformation
+matrix, A, is given by the matrix product:</p>
+<div class="math">
+\[A = Translate * Rotate * Scale * Shear, where Rotate = (Rz Ry Rx)^T\]</div>
 </div>
 <div class="section" id="output-options">
 <h2>Output options<a class="headerlink" href="#output-options" title="Permalink to this headline">¶</a></h2>
@@ -171,6 +169,181 @@ a scaling, a rotation, and a translation. The homogeneous transformation</p>
 </dd></dl>
 
 </div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-init-dof-dofin">
+<code class="descname">-dofin</code><code class="descclassname"> &lt;dof&gt;</code><a class="headerlink" href="#cmdoption-init-dof-dofin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read affine parameters from input transformation.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-orientation">
+<code class="descname">-orientation</code><code class="descclassname"> &lt;x1&gt; &lt;x2&gt; &lt;x3&gt;  &lt;y1&gt; &lt;y2&gt; &lt;y3&gt;  &lt;z1&gt; &lt;z2&gt; &lt;z3&gt;</code><a class="headerlink" href="#cmdoption-init-dof-orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set upper 3x3 (rotation) matrix entries
+(e.g., image orientation from image info output).</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-tx">
+<code class="descname">-tx</code><code class="descclassname"> &lt;tx&gt;</code><a class="headerlink" href="#cmdoption-init-dof-tx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translation along x axis in mm.             (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-ty">
+<code class="descname">-ty</code><code class="descclassname"> &lt;ty&gt;</code><a class="headerlink" href="#cmdoption-init-dof-ty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translation along y axis in mm.             (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-tz">
+<code class="descname">-tz</code><code class="descclassname"> &lt;tz&gt;</code><a class="headerlink" href="#cmdoption-init-dof-tz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translation along z axis in mm.             (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-rx">
+<code class="descname">-rx</code><code class="descclassname"> &lt;rx&gt;</code><a class="headerlink" href="#cmdoption-init-dof-rx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotation around x axis in degrees.          (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-ry">
+<code class="descname">-ry</code><code class="descclassname"> &lt;ry&gt;</code><a class="headerlink" href="#cmdoption-init-dof-ry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotation around x axis in degrees.          (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-rz">
+<code class="descname">-rz</code><code class="descclassname"> &lt;rz&gt;</code><a class="headerlink" href="#cmdoption-init-dof-rz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotation around x axis in degrees.          (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-sx">
+<code class="descname">-sx</code><code class="descclassname"> &lt;sx&gt;</code><a class="headerlink" href="#cmdoption-init-dof-sx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scaling of x axis in percentage.            (default: 100)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-sy">
+<code class="descname">-sy</code><code class="descclassname"> &lt;sy&gt;</code><a class="headerlink" href="#cmdoption-init-dof-sy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scaling of y axis in percentage.            (default: 100)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-sz">
+<code class="descname">-sz</code><code class="descclassname"> &lt;sz&gt;</code><a class="headerlink" href="#cmdoption-init-dof-sz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scaling of z axis in percentage.            (default: 100)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-s">
+<code class="descname">-s</code><code class="descclassname"> &lt;s&gt;</code><a class="headerlink" href="#cmdoption-init-dof-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Isotropic scaling in percentage.            (default: 100)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-sxy">
+<code class="descname">-sxy</code><code class="descclassname"> &lt;sxy&gt;</code><a class="headerlink" href="#cmdoption-init-dof-sxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skew angle between x and y axis in degrees. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-sxz">
+<code class="descname">-sxz</code><code class="descclassname"> &lt;sxz&gt;</code><a class="headerlink" href="#cmdoption-init-dof-sxz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skew angle between x and z axis in degrees. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-syz">
+<code class="descname">-syz</code><code class="descclassname"> &lt;syz&gt;</code><a class="headerlink" href="#cmdoption-init-dof-syz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Skew angle between y and z axis in degrees. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-target">
+<code class="descname">-target</code><code class="descclassname"> &lt;image&gt;</code><a class="headerlink" href="#cmdoption-init-dof-target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target image. Required when output is a FFD. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-source">
+<code class="descname">-source</code><code class="descclassname"> &lt;image&gt;</code><a class="headerlink" href="#cmdoption-init-dof-source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source image. Used to initialize translation. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-Tp">
+<code class="descname">-Tp</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-init-dof-Tp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target background value. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-Sp">
+<code class="descname">-Sp</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-init-dof-Sp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source background value. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-align-top">
+<code class="descname">-align-top</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-init-dof-align-top" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align top-most slices of <a class="reference internal" href="#cmdoption-init-dof-target"><code class="xref std std-option docutils literal"><span class="pre">-target</span></code></a> and <a class="reference internal" href="#cmdoption-init-dof-source"><code class="xref std std-option docutils literal"><span class="pre">-source</span></code></a> image. (default: center)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-displacements">
+<code class="descname">-displacements</code><code class="descclassname"> | -disp &lt;pset1&gt; &lt;pset2&gt; [&lt;cor12&gt;]</code><a class="headerlink" href="#cmdoption-init-dof-displacements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create transformation which minimizes the mean squared distance between pairs
+of fiducial point sets &lt;pset1&gt; and &lt;pset2&gt;. When a single &lt;pset&gt; is given,
+it creates a transformation which approximates the displacement vectors stored
+in the &#8220;vectors&#8221; point set attributes array. Option can be used multiple times.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-approximate">
+<code class="descname">-approximate</code><code class="descclassname"> &lt;dofin&gt;</code><a class="headerlink" href="#cmdoption-init-dof-approximate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create transformation which approximates
+another given transformation.
+Option can be used multiple times.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="free-form-deformation-options">
+<h2>Free-form deformation options<a class="headerlink" href="#free-form-deformation-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-init-dof-dx">
+<code class="descname">-dx</code><code class="descclassname"> &lt;dx&gt;</code><a class="headerlink" href="#cmdoption-init-dof-dx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control point spacing of FFD in x. (default: target voxel size)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-dy">
+<code class="descname">-dy</code><code class="descclassname"> &lt;dy&gt;</code><a class="headerlink" href="#cmdoption-init-dof-dy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control point spacing of FFD in y. (default: target voxel size)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-dz">
+<code class="descname">-dz</code><code class="descclassname"> &lt;dz&gt;</code><a class="headerlink" href="#cmdoption-init-dof-dz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control point spacing of FFD in z. (default: target voxel size)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-ds">
+<code class="descname">-ds</code><code class="descclassname"> &lt;ds&gt;</code><a class="headerlink" href="#cmdoption-init-dof-ds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control point spacing of FFD.      (default: target voxel size)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-init-dof-subdiv">
+<code class="descname">-subdiv</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-init-dof-subdiv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of subdivisions to use for approximating a non-rigid deformation
+from input <a class="reference internal" href="#cmdoption-init-dof-displacements"><code class="xref std std-option docutils literal"><span class="pre">-displacements</span></code></a>. (default: 4)</p>
+</dd></dl>
+
+</div>
 <div class="section" id="standard-options">
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
@@ -222,7 +395,7 @@ a scaling, a rotation, and a translation. The homogeneous transformation</p>
           <a href="info.html" title="info"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

@@ -6,14 +6,6 @@ convert-dof2velo
 .. program:: convert-dof2velo
 
 
-Synopsis
---------
-
-::
-
-    mirtk convert-dof2velo <dofin> <dofout> [options]
-
-
 Description
 -----------
 
@@ -66,7 +58,7 @@ Command options
 
 .. option:: -steps <int>
 
-   Number of integration steps. Sets both -minsteps and -maxsteps.
+   Number of integration steps. Sets both :option:`-minsteps` and :option:`-maxsteps`.
 
 .. option:: -tol <double>
 

@@ -6,14 +6,6 @@ dilate-image
 .. program:: dilate-image
 
 
-Synopsis
---------
-
-::
-
-    mirtk dilate-image <input> <output> [options]
-
-
 Description
 -----------
 

@@ -6,14 +6,6 @@ evaluate-surface-overlap
 .. program:: evaluate-surface-overlap
 
 
-Synopsis
---------
-
-::
-
-    mirtk evaluate-surface-overlap <target> <source> [options]
-
-
 Description
 -----------
 

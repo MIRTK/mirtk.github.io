@@ -6,14 +6,6 @@ detect-edges
 .. program:: detect-edges
 
 
-Synopsis
---------
-
-::
-
-    mirtk detect-edges <input> <output> [options]
-
-
 Description
 -----------
 
@@ -59,3 +51,27 @@ Command options
 .. option:: -differential
 
    Use differential edge detection.
+
+
+Standard options
+----------------
+
+.. option:: -v -verbose [n]
+
+   Increase/Set verbosity of output messages. (default: 0)
+
+.. option:: -debug [level]
+
+   Increase/Set debug level for output of intermediate results. (default: 0)
+
+.. option:: -version [major.minor]
+
+   Print version and exit or set version to emulate.
+
+.. option:: -revision
+
+   Print revision (or version) number only and exit.
+
+.. option:: -h -help
+
+   Print help and exit.

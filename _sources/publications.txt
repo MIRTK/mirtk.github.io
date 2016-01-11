@@ -72,3 +72,13 @@ in the following workshop paper.
             A. Schuh, M. Murgasova, A. Makropoulos, C. Ledig, S. J. Counsell, J. V. Hajnal, P. Aljabar D. Rueckert.
             In 3rd MICCAI Workshop on Spatiotemporal Image Analysis for Longitudinal and Time-Series Image Data (STIA),
             LNCS 8682, pp. 27-37, Boston, MA (2014)
+
+**Spectral surface matching**
+
+The spectral surface matching implementations are based on the MATLAB code provided by
+`Herve Lombaerd <http://step.polymtl.ca/~rv101/projects.php>`__.
+
+.. [Lombaert13] `Diffeomorphic Spectral Matching of Cortical Surfaces. <http://link.springer.com/chapter/10.1007%2F978-3-642-38868-2_32#page-1>`__
+                H. Lombaert, J. Sporring, and K. Siddiqi." << endl;
+                In 23rd Int. Conf. on Image Processing in Medical Imaging (IPMI '13)
+                LNCS 7917:376-389, Asilomar, CA, USA, June 28-July 3, 2013.

@@ -6,14 +6,6 @@ transform-image
 .. program:: transform-image
 
 
-Synopsis
---------
-
-::
-
-    mirtk transform-image <source> <output> [options]
-
-
 Description
 -----------
 

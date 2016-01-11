@@ -6,14 +6,6 @@ match-points
 .. program:: match-points
 
 
-Synopsis
---------
-
-::
-
-    mirtk match-points <target> <source> [options]
-
-
 Description
 -----------
 
@@ -85,7 +77,7 @@ Command options
 .. option:: -indices
 
    Store indices of corresponding points as point data.
-   Indices are cell indices in case of -closest_cell.
+   Indices are cell indices in case of :option:`-closest-cell`.
 
 .. option:: -copy-pointdata
 

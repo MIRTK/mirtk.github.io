@@ -6,16 +6,6 @@ project-onto-surface
 .. program:: project-onto-surface
 
 
-Synopsis
---------
-
-::
-
-    mirtk project-onto-surface <input> <output> -image <file> [options]
-    mirtk project-onto-surface <input> <output> -labels <file> [options]
-    mirtk project-onto-surface <input> <output> -boundary [-nolabel-points] [-nolabel-cells] [-name <scalars>]
-
-
 Description
 -----------
 

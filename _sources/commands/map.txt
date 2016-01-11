@@ -6,15 +6,6 @@ map
 .. program:: map
 
 
-Synopsis
---------
-
-::
-
-    mirtk map <target> <output> [options]
-    mirtk map [<target>] -eval <file> [options]
-
-
 Description
 -----------
 

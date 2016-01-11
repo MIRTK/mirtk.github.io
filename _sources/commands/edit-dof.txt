@@ -6,14 +6,6 @@ edit-dof
 .. program:: edit-dof
 
 
-Synopsis
---------
-
-::
-
-    mirtk edit-dof <dofin> <dofout> [options]
-
-
 Description
 -----------
 

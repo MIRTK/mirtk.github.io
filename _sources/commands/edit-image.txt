@@ -6,14 +6,6 @@ edit-image
 .. program:: edit-image
 
 
-Synopsis
---------
-
-::
-
-    mirtk edit-image <input> <output> [options]
-
-
 Description
 -----------
 
@@ -70,11 +62,11 @@ Command options
 
 .. option:: -copy-origin-orientation <image>
 
-   Alias for -copy-origin -copy-orientation.
+   Alias for :option:`-copy-origin` :option:`-copy-orientation`.
 
 .. option:: -copy-origin-orientation-size <image>
 
-   Alias for -copy-origin -copy-orientation -copy-size.
+   Alias for :option:`-copy-origin` :option:`-copy-orientation` :option:`-copy-size`.
 
 .. option:: -reset
 

@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0rc1 (bae3730)',
+        VERSION:     'v1.0rc1 (18e612b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,6 +26,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="sidebar.html" />
     <link rel="next" title="Getting Help" href="help.html" />
@@ -67,7 +68,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
 </ul>
 <ul class="current">
@@ -82,7 +83,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#build">Build</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installationsteps">Installation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Getting Help</a></li>
@@ -239,7 +240,7 @@ in the respective module directory (e.g., <cite>Modules/Registration/BasisProjec
 </div>
 </div>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<span id="configurationsteps"></span><h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="cmake-gui-example">
 <h3>CMake GUI Example<a class="headerlink" href="#cmake-gui-example" title="Permalink to this headline">¶</a></h3>
 <p>After obtaining a copy of the MIRTK source files, generate the build configuration
@@ -270,8 +271,8 @@ variable, re-configure the build system by clicking on &#8220;Configure&#8221; a
 until no further changes are made and the &#8220;Generate&#8221; button is enabled.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="20%" />
-<col width="80%" />
+<col width="25%" />
+<col width="75%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Option/Variable</th>
@@ -282,43 +283,46 @@ until no further changes are made and the &#8220;Generate&#8221; button is enabl
 <tr class="row-even"><td>BUILD_APPLICATIONS</td>
 <td>Build command-line tools of enabled modules.</td>
 </tr>
-<tr class="row-odd"><td>BUILD_DOCUMENTATION</td>
+<tr class="row-odd"><td>BUILD_DOCUMENTATION_SOURCES</td>
+<td>(Re-)generate .rst source files of auto-generated pages.</td>
+</tr>
+<tr class="row-even"><td>BUILD_DOCUMENTATION</td>
 <td>Configure build of online documentation (&#8220;doc&#8221; target).</td>
 </tr>
-<tr class="row-even"><td>BUILD_TESTING</td>
+<tr class="row-odd"><td>BUILD_TESTING</td>
 <td>Build the regression tests. (advanced, unused)</td>
 </tr>
-<tr class="row-odd"><td>CMAKE_BUILD_TYPE</td>
+<tr class="row-even"><td>CMAKE_BUILD_TYPE</td>
 <td>Build configuration (e.g. &#8220;Release&#8221; for optimized code).</td>
 </tr>
-<tr class="row-even"><td>CMAKE_INSTALL_PREFIX</td>
+<tr class="row-odd"><td>CMAKE_INSTALL_PREFIX</td>
 <td>Installation directory (default on Linux and OS X is <cite>/opt/mirtk-&lt;version&gt;</cite>).</td>
 </tr>
-<tr class="row-odd"><td>WITH_ARPACK</td>
+<tr class="row-even"><td>WITH_ARPACK</td>
 <td>Enable eigendecomposition of sparse matrices. Required for spectral surface matching.</td>
 </tr>
-<tr class="row-even"><td>WITH_MATLAB</td>
+<tr class="row-odd"><td>WITH_MATLAB</td>
 <td>Enable output of matrices to .mat files and use of MATLAB functions.</td>
 </tr>
-<tr class="row-odd"><td>WITH_NiftiCLib</td>
+<tr class="row-even"><td>WITH_NiftiCLib</td>
 <td>Use system installation of <a class="reference external" href="http://sourceforge.net/projects/niftilib/">NiftiCLib</a> for build of NIfTI module.</td>
 </tr>
-<tr class="row-even"><td>WITH_PNG</td>
+<tr class="row-odd"><td>WITH_PNG</td>
 <td>Enable writing of 2D images in <a class="reference external" href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG</a> file format.</td>
 </tr>
-<tr class="row-odd"><td>WITH_PROFILING</td>
+<tr class="row-even"><td>WITH_PROFILING</td>
 <td>Enable profiling of code execution to find runtime bottlenecks.</td>
 </tr>
-<tr class="row-even"><td>WITH_TBB</td>
+<tr class="row-odd"><td>WITH_TBB</td>
 <td>Enable multi-threaded execution using Intel Threading Building Blocks. (recommended)</td>
 </tr>
-<tr class="row-odd"><td>WITH_UMFPACK</td>
+<tr class="row-even"><td>WITH_UMFPACK</td>
 <td>Automatically enabled when WITH_ARPACK is ON.</td>
 </tr>
-<tr class="row-even"><td>WITH_VTK</td>
+<tr class="row-odd"><td>WITH_VTK</td>
 <td>Enable processing of VTK files. Automatically enabled when PointSet module is enabled.</td>
 </tr>
-<tr class="row-odd"><td>WITH_ZLIB</td>
+<tr class="row-even"><td>WITH_ZLIB</td>
 <td>Enable reading/writing of compressed files using <a class="reference external" href="http://www.zlib.net">zlib</a>. (recommended)</td>
 </tr>
 </tbody>
@@ -353,7 +357,7 @@ was set manually after the error was reported.</p>
 </div>
 </div>
 <div class="section" id="build">
-<h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h2>
+<span id="buildsteps"></span><h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h2>
 <p>After the configuration files for the chosen build tool were generated by CMake,
 open the corresponding project file in case of an IDE such as Xcode or a
 Terminal window in case of the GNU Make or Ninja build tools to build the MIRTK.</p>
@@ -383,8 +387,8 @@ documentation files can be build (before installation!) using the &#8220;doc&#82
 </pre></div>
 </div>
 </div>
-<div class="section" id="id1">
-<h2>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installationsteps">
+<span id="id1"></span><h2>Installation<a class="headerlink" href="#installationsteps" title="Permalink to this headline">¶</a></h2>
 <p>After the successful build of the MIRTK, the package can be installed by
 building the &#8220;install&#8221; target.</p>
 <p>Using GNU Make, run:</p>
@@ -395,9 +399,24 @@ building the &#8220;install&#8221; target.</p>
 <div class="highlight-python"><div class="highlight"><pre>ninja install
 </pre></div>
 </div>
-<p>Finally, to enable the convenient use of the MIRTK command-line tools, it is recommended
-to permanently add the <code class="docutils literal"><span class="pre">&lt;CMAKE_INSTALL_PREFIX&gt;/bin</span></code> directory to the <a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH environment variable</a>
-in the shell setup script (e.g., <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> or <code class="docutils literal"><span class="pre">$HOME/.profile</span></code>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To enable the convenient use of the MIRTK <a class="reference internal" href="commands.html"><em>Applications</em></a>, it is recommended
+to permanently add the <code class="docutils literal"><span class="pre">&lt;CMAKE_INSTALL_PREFIX&gt;/bin</span></code> directory to the
+<a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH environment variable</a> in the shell setup script (e.g., <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code>
+or <code class="docutils literal"><span class="pre">$HOME/.profile</span></code>).</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The MIRTK installation includes a <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a>
+completions script which when sourced e.g. in your <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> or
+<code class="docutils literal"><span class="pre">$HOME/.profile</span></code> shell configuration file, enables auto-completion of
+available MIRTK commands. To enable Bash completions for <code class="docutils literal"><span class="pre">mirtk</span></code>, add the
+following line to your shell configuration file:</p>
+<div class="last highlight-python"><div class="highlight"><pre>. &quot;$MIRTK_DIR/share/mirtk_bash_completions.sh&quot;
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 

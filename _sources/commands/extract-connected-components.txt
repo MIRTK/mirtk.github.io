@@ -6,14 +6,6 @@ extract-connected-components
 .. program:: extract-connected-components
 
 
-Synopsis
---------
-
-::
-
-    mirtk extract-connected-components <input> <output> [options]
-
-
 Description
 -----------
 
@@ -31,6 +23,38 @@ Arguments
 .. option:: output
 
    Extracted components or components label image.
+
+
+Command options
+---------------
+
+.. option:: -m <m>
+
+   Zero-based index of first connected component to extract. (default: 0)
+
+.. option:: -n <n>
+
+   Extract (at most) n components. (default: 1)
+
+.. option:: -connectivity <num>
+
+   Type of voxel connectivity (4, 6, 18, or 26). (default: 26)
+
+.. option:: -ordering (none|largest|smallest)
+
+   Ordering of connected component labels based on component size:
+   
+   - ``none``:     Label components in no specific order.
+   - ``largest``:  Label largest component first. (default)
+   - ``smallest``: Label smallest component first.
+
+.. option:: -output-component-labels
+
+   Write component labels instead of input labels.
+
+.. option:: -output-component-mask
+
+   Write binary mask with non-zero value at extracted components.
 
 
 Standard options

@@ -6,14 +6,6 @@ evaluate-overlap
 .. program:: evaluate-overlap
 
 
-Synopsis
---------
-
-::
-
-    overlap <target> <source>... [options]
-
-
 Description
 -----------
 
@@ -60,9 +52,9 @@ Command options
 
    Region of interest
 
-.. option:: -Tp  <value>
+.. option:: -Tp <value>
 
-   Padding value in target
+   Padding value in target.
 
 .. option:: -label <int>
 

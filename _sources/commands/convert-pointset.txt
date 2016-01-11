@@ -6,14 +6,6 @@ convert-pointset
 .. program:: convert-pointset
 
 
-Synopsis
---------
-
-::
-
-    mirtk convert-pointset <input>... <output> [options]
-
-
 Description
 -----------
 

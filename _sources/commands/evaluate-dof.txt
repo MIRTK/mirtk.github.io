@@ -6,14 +6,6 @@ evaluate-dof
 .. program:: evaluate-dof
 
 
-Synopsis
---------
-
-::
-
-    mirtk evaluate-dof [<dof>...] [options]
-
-
 Description
 -----------
 

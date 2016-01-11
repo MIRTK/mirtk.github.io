@@ -6,14 +6,6 @@ offset-surface
 .. program:: offset-surface
 
 
-Synopsis
---------
-
-::
-
-    mirtk offset-surface <input> <output> <distance> [options]
-
-
 Description
 -----------
 
@@ -35,12 +27,12 @@ Command options
 .. option:: -size <nx> [<ny> <nz>]
 
    Number of voxels to use for implicit surface model.
-   (default: bounding box divided by -voxelsize)
+   (default: bounding box divided by :option:`-voxelsize`)
 
 .. option:: -voxelsize <dx> [<dy> <dz>]
 
    Size of voxels to use for implicit surface model.
-   This option is ignored when image -size is specified.
+   This option is ignored when image :option:`-size` is specified.
    (default: length of bounding box diagonal divided by 512)
 
 .. option:: -surface <file>

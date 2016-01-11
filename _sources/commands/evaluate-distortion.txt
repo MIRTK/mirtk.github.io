@@ -6,14 +6,6 @@ evaluate-distortion
 .. program:: evaluate-distortion
 
 
-Synopsis
---------
-
-::
-
-    mirtk evaluate-distortion <original> <deformed> <output> [options]
-
-
 Description
 -----------
 
@@ -46,7 +38,7 @@ Command options
 
 .. option:: -abs-areal
 
-   Compute absolute value of -areal distortion.
+   Compute absolute value of :option:`-areal` distortion.
 
 
 Standard options

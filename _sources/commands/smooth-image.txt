@@ -6,14 +6,6 @@ smooth-image
 .. program:: smooth-image
 
 
-Synopsis
---------
-
-::
-
-    mirtk smooth-image <input> <output> [<sigma>] [options]
-
-
 Description
 -----------
 

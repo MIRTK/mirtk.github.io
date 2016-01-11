@@ -6,14 +6,6 @@ close-image
 .. program:: close-image
 
 
-Synopsis
---------
-
-::
-
-    mirtk close-image <input> <output> [options]
-
-
 Description
 -----------
 

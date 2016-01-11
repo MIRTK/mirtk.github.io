@@ -6,14 +6,6 @@ open-image
 .. program:: open-image
 
 
-Synopsis
---------
-
-::
-
-    mirtk open-image <input> <output> [options]
-
-
 Description
 -----------
 

@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc1 (bae3730)',
+        VERSION:     'v1.0rc1 (18e612b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,9 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="../sidebar.html" />
-    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="reflect-image" href="reflect-image.html" />
     <link rel="prev" title="open-image" href="open-image.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -45,7 +46,7 @@
           <a href="open-image.html" title="open-image"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -67,7 +68,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -89,21 +90,13 @@
             
   <div class="section" id="project-onto-surface">
 <h1>project-onto-surface<a class="headerlink" href="#project-onto-surface" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk project-onto-surface &lt;input&gt; &lt;output&gt; -image &lt;file&gt; [options]
-mirtk project-onto-surface &lt;input&gt; &lt;output&gt; -labels &lt;file&gt; [options]
-mirtk project-onto-surface &lt;input&gt; &lt;output&gt; -boundary [-nolabel-points] [-nolabel-cells] [-name &lt;scalars&gt;]
-</pre></div>
-</div>
-</div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Assign scalars or labels to either the vertices or the cells of a surface mesh.
 When the input as a real-valued image, the values are linearly interpolated.
 When the input is a segmentation labels image, the value assigned to a vertex/cell
 is the label of the nearest voxel in the given segmentation image. For the projection
-of cortical labels onto the WM/cGM or cGM/CSF boundary, use the -white or -pial option.</p>
+of cortical labels onto the WM/cGM or cGM/CSF boundary, use <a class="reference internal" href="#cmdoption-project-onto-surface-white"><code class="xref std std-option docutils literal"><span class="pre">project-onto-surface</span> <span class="pre">-white</span></code></a> or <a class="reference internal" href="#cmdoption-project-onto-surface-pial"><code class="xref std std-option docutils literal"><span class="pre">project-onto-surface</span> <span class="pre">-pial</span></code></a>.</p>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
@@ -234,7 +227,7 @@ of cortical labels onto the WM/cGM or cGM/CSF boundary, use the -white or -pial 
           <a href="open-image.html" title="open-image"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

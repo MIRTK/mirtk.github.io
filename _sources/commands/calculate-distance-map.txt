@@ -6,14 +6,6 @@ calculate-distance-map
 .. program:: calculate-distance-map
 
 
-Synopsis
---------
-
-::
-
-    mirtk calculate-distance-map <input> <output> [options]
-
-
 Description
 -----------
 
@@ -31,6 +23,17 @@ Arguments
 .. option:: output
 
    Distance transform.
+
+
+Command options
+---------------
+
+.. option:: -distance <name>
+
+   Name of the distance transform. (default: euclidean)
+   
+   - ``cityblock``: Manhatten city block (L1) distance.
+   - ``euclidean``: Euclidean distance.
 
 
 Euclidean distance transform options

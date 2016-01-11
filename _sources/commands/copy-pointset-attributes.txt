@@ -6,14 +6,6 @@ copy-pointset-attributes
 .. program:: copy-pointset-attributes
 
 
-Synopsis
---------
-
-::
-
-    mirtk copy-pointset-attributes <source> <target> [<output>] [options]
-
-
 Description
 -----------
 

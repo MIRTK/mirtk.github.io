@@ -6,16 +6,6 @@ concatenate-images
 .. program:: concatenate-images
 
 
-Synopsis
---------
-
-::
-
-    mirtk concatenate-images <input>... <output> [options]
-    mirtk concatenate-images <input>... -output <output> [options]
-    mirtk concatenate-images [options]
-
-
 Description
 -----------
 
@@ -45,7 +35,7 @@ Command options
 
 .. option:: -nosort
 
-   Disable sorting of input images, same as -sort off. (default)
+   Disable sorting of input images, same as :option:`-sort` off. (default)
 
 .. option:: -start
 

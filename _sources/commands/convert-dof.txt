@@ -6,18 +6,6 @@ convert-dof
 .. program:: convert-dof
 
 
-Synopsis
---------
-
-::
-
-    mirtk convert-dof <input> <output> [options]
-    mirtk convert-dof <input> <output> -input-format  image [options] (3D+3 input  image)
-    mirtk convert-dof <input> <output> -output-format image [options] (3D+3 output image)
-    mirtk convert-dof <dx> <dy> <dz> <output> -input-format  image [options] (3x3D input  image)
-    mirtk convert-dof <input> <dx> <dy> <dz>  -output-format image [options] (3x3D output image)
-
-
 Description
 -----------
 
@@ -50,7 +38,7 @@ Command options
 
 .. option:: -format <format>
 
-   Short for -output-format.
+   Short for :option:`-output-format`.
 
 .. option:: -dofin <fname>
 

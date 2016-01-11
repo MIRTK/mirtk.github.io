@@ -6,15 +6,6 @@ smooth-surface
 .. program:: smooth-surface
 
 
-Synopsis
---------
-
-::
-
-    mirtk smooth-surface <input> <output> [options]
-    mirtk smooth-surface <input> <output> <iterations> [lambda] [mu] [options] (deprecated)
-
-
 Description
 -----------
 
@@ -35,7 +26,7 @@ Arguments
 
 .. option:: iterations
 
-   No. of smoothing iterations. (deprecated: see -iterations option)
+   No. of smoothing iterations. (deprecated: see :option:`-iterations` option)
 
 .. option:: lambda
 
@@ -43,7 +34,7 @@ Arguments
 
 .. option:: mu
 
-   Magnitude of scale factor for even iterations. (deprecated: see -mu option)
+   Magnitude of scale factor for even iterations. (deprecated: see :option:`-mu` option)
 
 
 Command options
@@ -63,7 +54,7 @@ Command options
 
 .. option:: -points
 
-   Smooth node positions. (default if no -scalars specified)
+   Smooth node positions. (default if no :option:`-scalars` specified)
 
 .. option:: -scalars [<name>]
 
@@ -116,7 +107,7 @@ Command options
 
    A value indicating the smoothness as the L_2 norm of H^2 over the surface.
    See Tosun, MedIA, 2004. Iterations stop if the norm for the surface drops
-   below the given value. Only used for -areaweighted smoothing.
+   below the given value. Only used for :option:`-areaweighted` smoothing.
 
 
 Standard options

@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc1 (bae3730)',
+        VERSION:     'v1.0rc1 (18e612b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,9 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="../sidebar.html" />
-    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="close-image" href="close-image.html" />
     <link rel="prev" title="calculate-surface-attributes" href="calculate-surface-attributes.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -45,7 +46,7 @@
           <a href="calculate-surface-attributes.html" title="calculate-surface-attributes"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -67,7 +68,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -89,22 +90,24 @@
             
   <div class="section" id="calculate-surface-spectrum">
 <h1>calculate-surface-spectrum<a class="headerlink" href="#calculate-surface-spectrum" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk calculate-surface-spectrum &lt;input&gt; &lt;output&gt; [options]
-mirtk calculate-surface-spectrum &lt;input1&gt; &lt;input2&gt; &lt;output1&gt; &lt;output2&gt; [options]
-</pre></div>
-</div>
-</div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Performs a spectral analysis of the general graph Laplacian matrix
-computed from the given input surface mesh(es). If a -target surface
-is specified, the eigenvectors are reordered and their sign flipped
-to match the eigenvectors of the target surface mesh.</p>
+computed from the given input surface mesh(es).</p>
+<p>If <a class="reference internal" href="#cmdoption-calculate-surface-spectrum-target"><code class="xref std std-option docutils literal"><span class="pre">calculate-surface-spectrum</span> <span class="pre">-target</span></code></a> surface is specified, the eigenvectors are reordered
+and their sign flipped to match the eigenvectors of the target surface mesh.</p>
 <p>If two input and output surface meshes are specified, a spectral analysis
 of the joint graph Laplacian is performed after an initial surface match.
-The type of initial point correspondences is defined by the -corr option.</p>
+The type of initial point correspondences is defined by <a class="reference internal" href="#cmdoption-calculate-surface-spectrum-corr"><code class="xref std std-option docutils literal"><span class="pre">calculate-surface-spectrum</span> <span class="pre">-corr</span></code></a>.</p>
+<p>The implementation is based on the MATLAB code by Herve Lombaert of [1].</p>
+<table class="docutils footnote" frame="void" id="id1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td>H. Lombaert, J. Sporring, and K. Siddiqi.
+Diffeomorphic Spectral Matching of Cortical Surfaces.
+In the 23rd Image Processing in Medical Imaging (IPMI), 2013.</td></tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
@@ -116,8 +119,45 @@ The type of initial point correspondences is defined by the -corr option.</p>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-arg-output">
-<code class="descname">output</code><code class="descclassname">  File name of output surface (vtkPolyData).</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-arg-output" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-arg-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>File name of output surface (vtkPolyData).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-surface-spectrum-target">
+<code class="descname">-target</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-target" title="Permalink to this definition">¶</a></dt>
+<dd><p>File name of dataset (vtkPolyData) whose spectral components
+should be used to adjust the sign and order of the eigenmodes.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-spectrum-corr">
+<code class="descname">-corr</code><code class="descclassname"> &lt;string&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-corr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of point correspondences to use for initial correspondences:
+&#8220;closest point&#8221; (&#8220;CP&#8221;), &#8220;spectral match&#8221; (&#8220;SM&#8221;). (default: SM)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-spectrum-corrpar">
+<code class="descname">-corrpar</code><code class="descclassname"> &lt;name&gt;=&lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-corrpar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name/value pair of correspondence parameter.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-spectrum-corrin">
+<code class="descname">-corrin</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-corrin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text file naming for each point in input1 the index of the corresponding
+point in the second dataset input2, one index per line. (default: <a class="reference internal" href="#cmdoption-calculate-surface-spectrum-corr"><code class="xref std std-option docutils literal"><span class="pre">-corr</span></code></a>)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-spectrum-points">
+<code class="descname">-points</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace output vertex coordinates by first three spectral coordinates.</p>
+</dd></dl>
 
 </div>
 <div class="section" id="standard-options">
@@ -189,7 +229,7 @@ The type of initial point correspondences is defined by the -corr option.</p>
           <a href="calculate-surface-attributes.html" title="calculate-surface-attributes"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

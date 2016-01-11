@@ -6,15 +6,6 @@ transform-points
 .. program:: transform-points
 
 
-Synopsis
---------
-
-::
-
-    mirtk transform-points [options]
-    mirtk transform-points <input> <output> [options]
-
-
 Description
 -----------
 

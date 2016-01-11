@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>calculate-exponential-map &mdash; MIRTK</title>
+    <title>Common usage &mdash; MIRTK</title>
     
     <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -27,9 +27,6 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="../sidebar.html" />
-    <link rel="up" title="Applications" href="../commands.html" />
-    <link rel="next" title="calculate-lie-bracket" href="calculate-lie-bracket.html" />
-    <link rel="prev" title="calculate-distance-map" href="calculate-distance-map.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
@@ -39,14 +36,7 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="calculate-lie-bracket.html" title="calculate-lie-bracket"
-             accesskey="N">next</a></li>
-        <li class="right" >
-          <a href="calculate-distance-map.html" title="calculate-distance-map"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -68,7 +58,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -88,63 +78,63 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="calculate-exponential-map">
-<h1>calculate-exponential-map<a class="headerlink" href="#calculate-exponential-map" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>Reads a dense 3D (2D) stationary velocity field, computes the corresponding
-dense 3D (2D) displacement field, and writes the resulting vector field.</p>
+  <div class="section" id="common-usage">
+<h1>Common usage<a class="headerlink" href="#common-usage" title="Permalink to this headline">¶</a></h1>
+<p>The MIRTK installs a single executable script file named <code class="docutils literal"><span class="pre">mirtk</span></code> in the
+<code class="docutils literal"><span class="pre">bin/</span></code> directory of the installation root directory. This executable is
+used to execute the various MIRTK commands. The name of the command must
+be specified as first argument of the <code class="docutils literal"><span class="pre">mirtk</span></code> executable. Help about
+a command can be printed using the special <code class="docutils literal"><span class="pre">help</span></code> or <code class="docutils literal"><span class="pre">help-rst</span></code> commands
+followed by the name of the command for which help is requested.</p>
+<p>Usage:</p>
+<div class="highlight-python"><div class="highlight"><pre>mirtk help &lt;command&gt;
+mirtk [-v] [-v] &lt;command&gt; [options]
+</pre></div>
 </div>
-<div class="section" id="command-options">
-<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
-<dl class="option">
-<dt id="cmdoption-calculate-exponential-map-ss">
-<code class="descname">-ss</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-exponential-map-ss" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use scaling and squaring (SS) method. (default)</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-calculate-exponential-map-euler">
-<code class="descname">-euler</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-exponential-map-euler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use forward Euler method.</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-calculate-exponential-map-steps">
-<code class="descname">-steps</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-calculate-exponential-map-steps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Number of integration steps (2^n in case of SS). (default: 128)</p>
-</dd></dl>
-
+<p>When the <code class="docutils literal"><span class="pre">-v</span></code> option is given before the command name, the path and arguments
+of the actual command executable is printed before command execution.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The MIRTK installation includes a <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a>
+completions script which when sourced e.g. in your <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> or
+<code class="docutils literal"><span class="pre">$HOME/.profile</span></code> shell configuration file, enables auto-completion of
+available MIRTK commands. To enable Bash completions for <code class="docutils literal"><span class="pre">mirtk</span></code>, add the
+following line to your shell configuration file:</p>
+<div class="last highlight-python"><div class="highlight"><pre>. &quot;$MIRTK_DIR/share/mirtk_bash_completions.sh&quot;
+</pre></div>
 </div>
+</div>
+<p>In the following, a summary of common command options is given. For a complete
+list of options for each command, see below or the command help (<code class="docutils literal"><span class="pre">mirtk</span> <span class="pre">help</span></code>).</p>
 <div class="section" id="standard-options">
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
-<dt id="cmdoption-calculate-exponential-map-v">
-<code class="descname">-v</code><code class="descclassname"> -verbose [n]</code><a class="headerlink" href="#cmdoption-calculate-exponential-map-v" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-v">
+<code class="descname">-v</code><code class="descclassname"> -verbose [n]</code><a class="headerlink" href="#cmdoption-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-calculate-exponential-map-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-calculate-exponential-map-debug" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-calculate-exponential-map-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-calculate-exponential-map-version" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-calculate-exponential-map-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-exponential-map-revision" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-calculate-exponential-map-h">
-<code class="descname">-h</code><code class="descclassname"> -help</code><a class="headerlink" href="#cmdoption-calculate-exponential-map-h" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-h">
+<code class="descname">-h</code><code class="descclassname"> -help</code><a class="headerlink" href="#cmdoption-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -152,8 +142,8 @@ dense 3D (2D) displacement field, and writes the resulting vector field.</p>
 <div class="section" id="terminal-options">
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
-<dt id="cmdoption-calculate-exponential-map-color">
-<code class="descname">-color</code><code class="descclassname"> | -nocolor</code><a class="headerlink" href="#cmdoption-calculate-exponential-map-color" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-color">
+<code class="descname">-color</code><code class="descclassname"> | -nocolor</code><a class="headerlink" href="#cmdoption-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -161,8 +151,8 @@ dense 3D (2D) displacement field, and writes the resulting vector field.</p>
 <div class="section" id="parallelization-options">
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
-<dt id="cmdoption-calculate-exponential-map-threads">
-<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-calculate-exponential-map-threads" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-threads">
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -178,14 +168,7 @@ dense 3D (2D) displacement field, and writes the resulting vector field.</p>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="calculate-lie-bracket.html" title="calculate-lie-bracket"
-             >next</a></li>
-        <li class="right" >
-          <a href="calculate-distance-map.html" title="calculate-distance-map"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

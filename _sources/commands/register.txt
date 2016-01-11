@@ -6,22 +6,6 @@ register
 .. program:: register
 
 
-Synopsis
---------
-
-::
-
-    mirtk register -images <images.lst> [options]
-    mirtk register -image <image1> [-dof <dof1>] -image <image2> [-dof <dof2>]... [options]
-    mirtk register -image <image1> <image2>... [options]
-    mirtk register <image1> <image2>... [options]
-    mirtk register <image_sequence> [options]
-    mirtk register -pset <pointset1> [-dof <dof1>] -pset <pointset2> [-dof <dof2>]... [options]
-    mirtk register <dataset1> <dataset2>... [options]
-    mirtk register -pset <pointset1> <pointset2>... [options]
-    mirtk register -image <image1> -points <pointset1> [-dof <dof1>]... [options]
-
-
 Description
 -----------
 
@@ -43,7 +27,7 @@ Command options
 .. option:: -model <m1>[+<m2>...]
 
    Transformation model(s). (default: Rigid+Affine+FFD)
-   Alternatively, use "-par 'Transformation model=<name>'". (default: n/a)
+   Alternatively, use "-par 'Transformation model=<name>'" (see :option:`-par`).
 
 .. option:: -image <file>...
 
@@ -64,14 +48,14 @@ Command options
 .. option:: -dof <file>
 
    Specifies a pre-computed affine transformation to be applied to
-   the preceeding image and/or polydata. Note the difference to -dofin,
-   which specifies an initial estimate of the -dofout transformation.
+   the preceeding image and/or polydata. Note the difference to :option:`-dofin`,
+   which specifies an initial estimate of the :option:`-dofout` transformation.
    (default: none)
 
 .. option:: -dof_i <file>
 
    Specifies a pre-computed affine transformation whose inverse is to be
-   applied to the preceeding image and/or polydata (cf. -dof). (default: none)
+   applied to the preceeding image and/or polydata (see :option:`-dof`). (default: none)
 
 .. option:: -images <file>
 
@@ -82,11 +66,11 @@ Command options
    Images specified as positional arguments are read before the images
    named in this (then optional) text file and the index of the images
    given in the text file are offset by the number of images named
-   as positional arguments or using the -image option, respectively.
+   as positional arguments or using :option:`-image`, respectively.
 
 .. option:: -psets <file>
 
-   Equivalent to -images, but for point sets (-pset).
+   Equivalent to :option:`-images`, but for point sets (:option:`-pset`).
 
 .. option:: -dofs <file>
 
@@ -112,11 +96,11 @@ Command options
    transformation the corresponding target image, followed
    by the source image and the name of the transformation file.
    Note that the target and source image names must be listed
-   in the -images list file. (default: none)
+   in the :option:`-images` list file. (default: none)
 
 .. option:: -dofin  <file>
 
-   Read initial transformation from file if -dofins not specified.
+   Read initial transformation from file if :option:`-dofins` not specified.
    Otherwise, writes the initial transformation obtained by approximating
    the pairwise transformations to the named file.
    If the given transformation cannot be used directly as starting

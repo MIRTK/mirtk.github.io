@@ -6,14 +6,6 @@ resample-image
 .. program:: resample-image
 
 
-Synopsis
---------
-
-::
-
-    mirtk resample-image <input> <output> [options]
-
-
 Description
 -----------
 
@@ -31,6 +23,45 @@ Arguments
 .. option:: output
 
    Resampled output image.
+
+
+Command options
+---------------
+
+.. option:: -imsize <nx> <ny> <nz>
+
+   New image size in number of voxels (default: input image size)
+
+.. option:: -size <dx> <dy> <dz>
+
+   New voxel size in mm (default: 1 1 1)
+
+.. option:: -isotropic <m>
+
+   Resample to isotropic voxel size: m*min(dx, min(dy, dz))
+
+.. option:: -interp <mode>
+
+   Interpolation mode (case insensitive):
+   NN, Linear (default), Fast linear, BSpline, Cubic BSpline
+   Fast cubic BSpline, CSpline, SBased, Sinc, Gaussian
+   NN with padding, Linear with padding
+   Fast linear with padding, BSpline with padding
+   Cubic BSpline with padding
+   Fast cubic BSpline with padding, CSpline with padding
+   SBased with padding, Sinc with padding
+   Gaussian with padding  -extrap <mode>           Extrapolation mode (case insensitive):
+   Default, None, Const (default), NN, Repeat, Mirror
+   ConstWithPeriodicTime  -outside <value>         Constant outside value extrapolation. (default: 0)
+
+.. option:: -sigma <value>
+
+   Sigma value of Gaussian interpolator. (default: 1)
+
+.. option:: -padding <value>
+
+   Background padding. (default: none)
+   Only linear interpolation for padding!
 
 
 Standard options

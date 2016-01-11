@@ -6,14 +6,6 @@ info
 .. program:: info
 
 
-Synopsis
---------
-
-::
-
-    mirtk info <file> [options]
-
-
 Description
 -----------
 

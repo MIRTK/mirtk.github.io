@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc1 (bae3730)',
+        VERSION:     'v1.0rc1 (18e612b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,9 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="../sidebar.html" />
-    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="extract-surface" href="extract-surface.html" />
     <link rel="prev" title="extract-image-region" href="extract-image-region.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -45,7 +46,7 @@
           <a href="extract-image-region.html" title="extract-image-region"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -67,7 +68,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -89,13 +90,6 @@
             
   <div class="section" id="extract-pointset-surface">
 <h1>extract-pointset-surface<a class="headerlink" href="#extract-pointset-surface" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk extract-pointset-surface [options]
-mirtk extract-pointset-surface [&lt;input&gt;...] &lt;output&gt; [options]
-</pre></div>
-</div>
-</div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Extract surface of point set. If more than one input point set is given,
@@ -130,7 +124,7 @@ computed from the volumes defined by the individual input surfaces.</p>
 
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-o">
-<span id="cmdoption-extract-pointset-surface-surface"></span><code class="descname">-o</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-surface</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-o" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-o</code><code class="descclassname"> -surface &lt;file&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-o" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write output surface mesh to named file.</p>
 </dd></dl>
 
@@ -149,13 +143,13 @@ computed from the volumes defined by the individual input surfaces.</p>
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-reference">
 <code class="descname">-reference</code><code class="descclassname"> &lt;image&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-reference" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reference image for -mask or -implicit output. (default: bounding box)</p>
+<dd><p>Reference image for <a class="reference internal" href="#cmdoption-extract-pointset-surface-mask"><code class="xref std std-option docutils literal"><span class="pre">-mask</span></code></a> or <a class="reference internal" href="#cmdoption-extract-pointset-surface-implicit"><code class="xref std std-option docutils literal"><span class="pre">-implicit</span></code></a> output. (default: bounding box)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-resolution">
 <code class="descname">-resolution</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-resolution" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resolution of -insphere, -mask, or -implicit output.
+<dd><p>Resolution of <a class="reference internal" href="#cmdoption-extract-pointset-surface-insphere"><code class="xref std std-option docutils literal"><span class="pre">-insphere</span></code></a>, <a class="reference internal" href="#cmdoption-extract-pointset-surface-mask"><code class="xref std std-option docutils literal"><span class="pre">-mask</span></code></a>, or <a class="reference internal" href="#cmdoption-extract-pointset-surface-implicit"><code class="xref std std-option docutils literal"><span class="pre">-implicit</span></code></a> output.
 (default: fraction of length of bounding box diagonal)</p>
 </dd></dl>
 
@@ -211,7 +205,7 @@ computed from the volumes defined by the individual input surfaces.</p>
           <a href="extract-image-region.html" title="extract-image-region"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

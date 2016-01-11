@@ -6,14 +6,6 @@ cut-brain
 .. program:: cut-brain
 
 
-Synopsis
---------
-
-::
-
-    mirtk cut-brain <image> [options]
-
-
 Description
 -----------
 

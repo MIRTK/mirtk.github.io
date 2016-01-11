@@ -6,14 +6,6 @@ convert-dof2csv
 .. program:: convert-dof2csv
 
 
-Synopsis
---------
-
-::
-
-    mirtk convert-dof2csv <dof> <csv> [options]
-
-
 Description
 -----------
 

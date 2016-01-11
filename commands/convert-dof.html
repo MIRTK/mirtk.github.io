@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc1 (bae3730)',
+        VERSION:     'v1.0rc1 (18e612b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,9 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="../sidebar.html" />
-    <link rel="up" title="Commands" href="../commands.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="convert-dof2csv" href="convert-dof2csv.html" />
     <link rel="prev" title="concatenate-images" href="concatenate-images.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -45,7 +46,7 @@
           <a href="concatenate-images.html" title="concatenate-images"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -67,7 +68,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commands.html">Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
 </ul>
 <ul>
@@ -89,18 +90,83 @@
             
   <div class="section" id="convert-dof">
 <h1>convert-dof<a class="headerlink" href="#convert-dof" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="synopsis">
-<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk convert-dof &lt;input&gt; &lt;output&gt; [options]
-mirtk convert-dof &lt;input&gt; &lt;output&gt; -input-format  image [options] (3D+3 input  image)
-mirtk convert-dof &lt;input&gt; &lt;output&gt; -output-format image [options] (3D+3 output image)
-mirtk convert-dof &lt;dx&gt; &lt;dy&gt; &lt;dz&gt; &lt;output&gt; -input-format  image [options] (3x3D input  image)
-mirtk convert-dof &lt;input&gt; &lt;dx&gt; &lt;dy&gt; &lt;dz&gt;  -output-format image [options] (3x3D output image)
-</pre></div>
-</div>
-</div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Converts between different transformation file formats:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>unknown</td>
+<td>Unknown, try to guess it from file header/type.</td>
+</tr>
+<tr class="row-even"><td>disp_world|disp|image</td>
+<td>Dense displacement field image with world space displacement vectors [mm].</td>
+</tr>
+<tr class="row-odd"><td>disp_voxel</td>
+<td>Dense displacement field image with target space displacement vectors [voxel].</td>
+</tr>
+<tr class="row-even"><td>mirtk|irtk2</td>
+<td>MIRTK/IRTK 2 transformation file format.</td>
+</tr>
+<tr class="row-odd"><td>mirtk_rigid|rigid</td>
+<td>Rigid MIRTK/IRTK 2 transformation file format (6 DoFs).</td>
+</tr>
+<tr class="row-even"><td>mirtk_similarity</td>
+<td>Similarity MIRTK/IRTK 2 transformation file format (7 DoFs).</td>
+</tr>
+<tr class="row-odd"><td>mirtk_affine|affine</td>
+<td>Affine MIRTK/IRTK 2 transformation file format (12 DoFs).</td>
+</tr>
+<tr class="row-even"><td>mirtk_linear_ffd</td>
+<td>Linear free-form deformation.</td>
+</tr>
+<tr class="row-odd"><td>mirtk_bspline_ffd</td>
+<td>Cubic B-spline free-form deformation.</td>
+</tr>
+<tr class="row-even"><td>mni_xfm|xfm</td>
+<td>Linear FreeSurfer transformation (.xfm file).</td>
+</tr>
+<tr class="row-odd"><td>fsl</td>
+<td>Guess/choose FSL output file format.</td>
+</tr>
+<tr class="row-even"><td>flirt</td>
+<td>FSL FLIRT output file format.</td>
+</tr>
+<tr class="row-odd"><td>fnirt</td>
+<td>FSL FNIRT output file format.</td>
+</tr>
+<tr class="row-even"><td>nreg</td>
+<td>Guess/choose Nifty Reg transformation output file format.</td>
+</tr>
+<tr class="row-odd"><td>aladin</td>
+<td>Nifty Reg Aladin output file format.</td>
+</tr>
+<tr class="row-even"><td>f3d</td>
+<td>Nifty Reg reg_f3d output file format with nifti1.intent_p1 code.</td>
+</tr>
+<tr class="row-odd"><td>f3d_def_field</td>
+<td>Nifty Reg reg_f3d output image deformation  field.</td>
+</tr>
+<tr class="row-even"><td>f3d_disp_field</td>
+<td>Nifty Reg reg_f3d output image displacement field.</td>
+</tr>
+<tr class="row-odd"><td>f3d_spline_grid</td>
+<td>Nifty Reg reg_f3d output control point displacement field.</td>
+</tr>
+<tr class="row-even"><td>f3d_def_vel_field</td>
+<td>Nifty Reg reg_f3d output image deformation  field as stationary velocity field.</td>
+</tr>
+<tr class="row-odd"><td>f3d_disp_vel_field</td>
+<td>Nifty Reg reg_f3d output image displacement field as stationary velocity field.</td>
+</tr>
+<tr class="row-even"><td>f3d_spline_vel_grid</td>
+<td>Nifty Reg reg_f3d output control point velocity field.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
@@ -134,7 +200,7 @@ mirtk convert-dof &lt;input&gt; &lt;dx&gt; &lt;dy&gt; &lt;dz&gt;  -output-format
 <dl class="option">
 <dt id="cmdoption-convert-dof-format">
 <code class="descname">-format</code><code class="descclassname"> &lt;format&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-format" title="Permalink to this definition">¶</a></dt>
-<dd><p>Short for -output-format.</p>
+<dd><p>Short for <a class="reference internal" href="#cmdoption-convert-dof-output-format"><code class="xref std std-option docutils literal"><span class="pre">-output-format</span></code></a>.</p>
 </dd></dl>
 
 <dl class="option">
@@ -257,7 +323,7 @@ if ignored by Nifty Reg&#8217;s reg_f3d. (default: mm)</p>
           <a href="concatenate-images.html" title="concatenate-images"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Commands</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

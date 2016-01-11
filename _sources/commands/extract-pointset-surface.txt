@@ -6,15 +6,6 @@ extract-pointset-surface
 .. program:: extract-pointset-surface
 
 
-Synopsis
---------
-
-::
-
-    mirtk extract-pointset-surface [options]
-    mirtk extract-pointset-surface [<input>...] <output> [options]
-
-
 Description
 -----------
 
@@ -41,7 +32,7 @@ Output options
 
    Output minimum sphere which fully contains the surface mesh.
 
-.. option:: -o, -surface <file>
+.. option:: -o -surface <file>
 
    Write output surface mesh to named file.
 
@@ -55,11 +46,11 @@ Output options
 
 .. option:: -reference <image>
 
-   Reference image for -mask or -implicit output. (default: bounding box)
+   Reference image for :option:`-mask` or :option:`-implicit` output. (default: bounding box)
 
 .. option:: -resolution <float>
 
-   Resolution of -insphere, -mask, or -implicit output.
+   Resolution of :option:`-insphere`, :option:`-mask`, or :option:`-implicit` output.
    (default: fraction of length of bounding box diagonal)
 
 

@@ -6,14 +6,6 @@ flip-image
 .. program:: flip-image
 
 
-Synopsis
---------
-
-::
-
-    flip <input> <output> [options]
-
-
 Description
 -----------
 

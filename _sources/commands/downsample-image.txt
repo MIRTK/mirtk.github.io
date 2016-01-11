@@ -6,14 +6,6 @@ downsample-image
 .. program:: downsample-image
 
 
-Synopsis
---------
-
-::
-
-    mirtk downsample-image <input> <output> [options]
-
-
 Description
 -----------
 
