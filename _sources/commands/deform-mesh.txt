@@ -110,7 +110,7 @@ Optimization options
 .. option:: -step-magnification <mag>
 
    Multiplicative factor for magnification of maximum :option:`-step` length.
-   The step length at level n (highest level at n=1) is :math:`dt * mag^(level-1)`. (default: 1)
+   The step length at level n (highest level at n=1) is :math:`dt * mag^{level-1}`. (default: 1)
 
 .. option:: -maxdx <value>
 
@@ -133,7 +133,7 @@ Optimization options
 .. option:: -edgelength-magnification <mag>
 
    Multiplicative factor for magnification of :option:`-minedgelength` and :option:`-maxedgelength`.
-   The edge length at level n (highest level at n=1) is :math:`l * mag^(level-1)`. (default: 1)
+   The edge length at level n (highest level at n=1) is :math:`l * mag^{level-1}`. (default: 1)
 
 .. option:: -minangle <degrees>
 

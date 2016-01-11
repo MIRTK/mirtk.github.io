@@ -222,7 +222,7 @@ is similar to computing the forces on a coarser mesh. (default: 0 0)</p>
 <dt id="cmdoption-deform-mesh-step-magnification">
 <code class="descname">-step-magnification</code><code class="descclassname"> &lt;mag&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-step-magnification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Multiplicative factor for magnification of maximum <a class="reference internal" href="#cmdoption-deform-mesh-step"><code class="xref std std-option docutils literal"><span class="pre">-step</span></code></a> length.
-The step length at level n (highest level at n=1) is <span class="math">\(dt * mag^(level-1)\)</span>. (default: 1)</p>
+The step length at level n (highest level at n=1) is <span class="math">\(dt * mag^{level-1}\)</span>. (default: 1)</p>
 </dd></dl>
 
 <dl class="option">
@@ -255,7 +255,7 @@ displacements are clamped to the specified maximum length instead. (default: <a 
 <dt id="cmdoption-deform-mesh-edgelength-magnification">
 <code class="descname">-edgelength-magnification</code><code class="descclassname"> &lt;mag&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-edgelength-magnification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Multiplicative factor for magnification of <a class="reference internal" href="#cmdoption-deform-mesh-minedgelength"><code class="xref std std-option docutils literal"><span class="pre">-minedgelength</span></code></a> and <a class="reference internal" href="#cmdoption-deform-mesh-maxedgelength"><code class="xref std std-option docutils literal"><span class="pre">-maxedgelength</span></code></a>.
-The edge length at level n (highest level at n=1) is <span class="math">\(l * mag^(level-1)\)</span>. (default: 1)</p>
+The edge length at level n (highest level at n=1) is <span class="math">\(l * mag^{level-1}\)</span>. (default: 1)</p>
 </dd></dl>
 
 <dl class="option">
