@@ -102,18 +102,17 @@ under the <a class="reference external" href="https://github.com/MIRTK/">MIRTK O
 versions can be downloaded. See the <a class="reference internal" href="changelog.html"><em>Release Notes</em></a> for a summary of changes in each release.</p>
 <p>To download the MIRTK source files using <a class="reference external" href="https://git-scm.com">Git</a>, use the following
 <a class="reference external" href="https://git-scm.com/docs/git-clone">git clone</a> command:</p>
-<div class="highlight-bash"><div class="highlight"><pre>git clone --branch release --depth <span class="m">1</span> -- https://github.com/MIRTK/MIRTK.git
+<div class="highlight-bash"><div class="highlight"><pre>git clone --depth <span class="m">1</span> -- https://github.com/MIRTK/MIRTK.git
 <span class="nv">MIRTK_SOURCE_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PWD</span><span class="s2">/MIRTK&quot;</span>
 </pre></div>
 </div>
-<p>where the <code class="docutils literal"><span class="pre">--branch</span> <span class="pre">release</span> <span class="pre">--depth</span> <span class="pre">1</span></code> options request a shallow clone of the latest
+<p>where the <code class="docutils literal"><span class="pre">--depth</span> <span class="pre">1</span></code> options request a shallow clone of the latest
 release files excluding previous revisions in order to save bandwidth,
 download time, and disk space. The <code class="docutils literal"><span class="pre">--depth</span></code> option may be omitted if you want to
 see the development history and contribute to the MIRTK. To download the latest
-(more or less) stable development version, skip the <code class="docutils literal"><span class="pre">--branch</span></code> option or use
-<code class="docutils literal"><span class="pre">--branch</span> <span class="pre">master</span></code>. The most current development version is in the <code class="docutils literal"><span class="pre">develop</span></code>
-branch. Note that branches can be switched also after the initial clone command
-using the <a class="reference external" href="https://git-scm.com/docs/git-checkout">git checkout</a> command.</p>
+development version, use the <code class="docutils literal"><span class="pre">--branch</span> <span class="pre">develop</span></code> option. Note that branches can be
+switched also after the initial clone command using the
+<a class="reference external" href="https://git-scm.com/docs/git-checkout">git checkout</a> command.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>To download the entire MIRTK distribution including documentation source files,
