@@ -6,6 +6,14 @@ delete-pointset-attributes
 .. program:: delete-pointset-attributes
 
 
+Synopsis
+--------
+
+::
+
+    mirtk delete-pointset-attributes <input> [<output>] [options]
+
+
 Description
 -----------
 

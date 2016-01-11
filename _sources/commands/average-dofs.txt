@@ -6,6 +6,15 @@ average-dofs
 .. program:: average-dofs
 
 
+Synopsis
+--------
+
+::
+
+    mirtk average-dofs <dofout> <dofin>...       [options]
+    mirtk average-dofs <dofout> -dofnames <file> [options]
+
+
 Description
 -----------
 

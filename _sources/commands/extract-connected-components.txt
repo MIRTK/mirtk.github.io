@@ -6,6 +6,14 @@ extract-connected-components
 .. program:: extract-connected-components
 
 
+Synopsis
+--------
+
+::
+
+    mirtk extract-connected-components <input> <output> [options]
+
+
 Description
 -----------
 

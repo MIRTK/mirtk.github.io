@@ -6,6 +6,14 @@ calculate-surface-attributes
 .. program:: calculate-surface-attributes
 
 
+Synopsis
+--------
+
+::
+
+    mirtk calculate-surface-attributes <input> <output> [options]
+
+
 Description
 -----------
 

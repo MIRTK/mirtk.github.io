@@ -6,6 +6,14 @@ edit-image
 .. program:: edit-image
 
 
+Synopsis
+--------
+
+::
+
+    mirtk edit-image <input> <output> [options]
+
+
 Description
 -----------
 

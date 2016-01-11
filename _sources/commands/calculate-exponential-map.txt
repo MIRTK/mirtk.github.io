@@ -6,6 +6,15 @@ calculate-exponential-map
 .. program:: calculate-exponential-map
 
 
+Synopsis
+--------
+
+::
+
+    mirtk calculate-exponential-map <velo> <disp> [options]
+    mirtk calculate-exponential-map <vx> <vy> [<vz>] <dx> <dy> [<dz>] [options]
+
+
 Description
 -----------
 

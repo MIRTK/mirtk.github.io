@@ -6,6 +6,14 @@ extract-connected-points
 .. program:: extract-connected-points
 
 
+Synopsis
+--------
+
+::
+
+    mirtk extract-connected-points <input> <output> [options]
+
+
 Description
 -----------
 

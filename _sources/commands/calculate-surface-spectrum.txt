@@ -6,6 +6,15 @@ calculate-surface-spectrum
 .. program:: calculate-surface-spectrum
 
 
+Synopsis
+--------
+
+::
+
+    mirtk calculate-surface-spectrum <input> <output> [options]
+    mirtk calculate-surface-spectrum <input1> <input2> <output1> <output2> [options]
+
+
 Description
 -----------
 

@@ -6,6 +6,14 @@ edit-dof
 .. program:: edit-dof
 
 
+Synopsis
+--------
+
+::
+
+    mirtk edit-dof <dofin> <dofout> [options]
+
+
 Description
 -----------
 
@@ -13,25 +21,20 @@ Description
 
 
 
-Standard options
-----------------
+Examples
+--------
 
-.. option:: -v -verbose [n]
 
-   Increase/Set verbosity of output messages. (default: 0)
+Example 1
+~~~~~~~~~
 
-.. option:: -debug [level]
+**Command**::
 
-   Increase/Set debug level for output of intermediate results. (default: 0)
+    mirtk edit-dof svffd.dof.gz svffd.dof.gz -number-of-integration-steps 128
 
-.. option:: -version [major.minor]
+**Output/Description**::
 
-   Print version and exit or set version to emulate.
-
-.. option:: -revision
-
-   Print revision (or version) number only and exit.
-
-.. option:: -h -help
-
-   Print help and exit.
+    
+          The option "-number-of-integration-steps" used here corresponds to
+          the parameter "Number of integration steps" of the SV FFD transformation.
+          The new value for the parameter will be 128.

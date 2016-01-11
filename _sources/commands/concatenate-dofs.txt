@@ -6,6 +6,14 @@ concatenate-dofs
 .. program:: concatenate-dofs
 
 
+Synopsis
+--------
+
+::
+
+    mirtk concatenate-dofs <T1> <T2>... <T> [-target <image>]
+
+
 Description
 -----------
 

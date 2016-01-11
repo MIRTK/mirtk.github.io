@@ -54,7 +54,7 @@ Module               Requires module(s)                                         
 ===================  ===========================================================   ========================================
 
 .. note:: For a complete list of module dependencies, see the `BasisProject.cmake` file
-          in the respective module directory (e.g., `Modules/Registration/BasisProject.cmake`).
+          in the respective module directory.
 
 
 .. _ConfigurationSteps:
@@ -104,8 +104,8 @@ Step-by-step
    Option/Variable               Description
    ============================  ======================================================
    BUILD_APPLICATIONS            Build command-line tools of enabled modules.
-   BUILD_DOCUMENTATION_SOURCES   (Re-)generate .rst source files of auto-generated pages.
    BUILD_DOCUMENTATION           Configure build of online documentation ("doc" target).
+   BUILD_DOCUMENTATION_SOURCES   (Re-)generate .rst source files of auto-generated pages.
    BUILD_TESTING                 Build the regression tests. (advanced, unused)
    CMAKE_BUILD_TYPE              Build configuration (e.g. "Release" for optimized code).
    CMAKE_INSTALL_PREFIX          Installation directory (default on Linux and OS X is `/opt/mirtk-<version>`).
@@ -203,22 +203,19 @@ Using Ninja, run::
 
     ninja install
 
-.. note::
 
-   To enable the convenient use of the MIRTK :doc:`commands`, it is recommended
-   to permanently add the ``<CMAKE_INSTALL_PREFIX>/bin`` directory to the
-   `PATH environment variable`_ in the shell setup script (e.g., ``$HOME/.bashrc``
-   or ``$HOME/.profile``).
+To enable the convenient use of the :doc:`commands`, it is recommended
+to permanently add the ``$MIRTK_DIR/bin`` directory to the
+`PATH environment variable`_ in the shell configuration file
+(e.g., ``$HOME/.bashrc`` or ``$HOME/.profile``), where ``MIRTK_DIR`` is the directory
+chosen as ``CMAKE_INSTALL_PREFIX`` above.
 
-.. note::
+The MIRTK installation further includes a `Bash <https://www.gnu.org/software/bash/>`__
+completions script which when sourced in your Bash configuration file,
+enables auto-completion of available MIRTK commands. To enable Bash completions
+for ``mirtk``, add the following line to your ``$HOME/.bashrc``::
 
-   The MIRTK installation includes a `Bash <https://www.gnu.org/software/bash/>`__
-   completions script which when sourced e.g. in your ``$HOME/.bashrc`` or
-   ``$HOME/.profile`` shell configuration file, enables auto-completion of
-   available MIRTK commands. To enable Bash completions for ``mirtk``, add the
-   following line to your shell configuration file::
-
-       . "$MIRTK_DIR/share/mirtk_bash_completions.sh"
+    . "$MIRTK_DIR/share/mirtk_bash_completions.sh"
 
 
 .. _Boost:     http://www.boost.org

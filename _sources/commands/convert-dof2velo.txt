@@ -6,6 +6,14 @@ convert-dof2velo
 .. program:: convert-dof2velo
 
 
+Synopsis
+--------
+
+::
+
+    mirtk convert-dof2velo <dofin> <dofout> [options]
+
+
 Description
 -----------
 

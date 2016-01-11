@@ -6,6 +6,14 @@ extract-image-region
 .. program:: extract-image-region
 
 
+Synopsis
+--------
+
+::
+
+    mirtk extract-image-region <input> <output> [options]
+
+
 Description
 -----------
 

@@ -6,6 +6,15 @@ evaluate-jacobian
 .. program:: evaluate-jacobian
 
 
+Synopsis
+--------
+
+::
+
+    mirtk evaluate-jacobian <target> <output> <dof> [options]
+    mirtk evaluate-jacobian <target> <dof> [options]
+
+
 Description
 -----------
 

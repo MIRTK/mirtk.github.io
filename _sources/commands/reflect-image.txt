@@ -6,6 +6,14 @@ reflect-image
 .. program:: reflect-image
 
 
+Synopsis
+--------
+
+::
+
+    mirtk reflect-image <input> <output> [options]
+
+
 Description
 -----------
 

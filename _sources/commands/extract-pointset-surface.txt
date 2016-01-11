@@ -6,6 +6,15 @@ extract-pointset-surface
 .. program:: extract-pointset-surface
 
 
+Synopsis
+--------
+
+::
+
+    mirtk extract-pointset-surface [options]
+    mirtk extract-pointset-surface [<input>...] <output> [options]
+
+
 Description
 -----------
 

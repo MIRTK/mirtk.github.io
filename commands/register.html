@@ -90,6 +90,20 @@
             
   <div class="section" id="register">
 <h1>register<a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>mirtk register -images &lt;images.lst&gt; [options]
+mirtk register -image &lt;image1&gt; [-dof &lt;dof1&gt;] -image &lt;image2&gt; [-dof &lt;dof2&gt;]... [options]
+mirtk register -image &lt;image1&gt; &lt;image2&gt;... [options]
+mirtk register &lt;image1&gt; &lt;image2&gt;... [options]
+mirtk register &lt;image_sequence&gt; [options]
+mirtk register -pset &lt;pointset1&gt; [-dof &lt;dof1&gt;] -pset &lt;pointset2&gt; [-dof &lt;dof2&gt;]... [options]
+mirtk register &lt;dataset1&gt; &lt;dataset2&gt;... [options]
+mirtk register -pset &lt;pointset1&gt; &lt;pointset2&gt;... [options]
+mirtk register -image &lt;image1&gt; -points &lt;pointset1&gt; [-dof &lt;dof1&gt;]... [options]
+</pre></div>
+</div>
+</div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Registers a set of images, polygonal surface meshes, and/or point clouds (e.g. fiducial markers).

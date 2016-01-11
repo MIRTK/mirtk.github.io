@@ -6,6 +6,14 @@ convert-image
 .. program:: convert-image
 
 
+Synopsis
+--------
+
+::
+
+    convert <input> <output> [options]
+
+
 Description
 -----------
 

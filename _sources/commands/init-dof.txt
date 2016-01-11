@@ -6,6 +6,14 @@ init-dof
 .. program:: init-dof
 
 
+Synopsis
+--------
+
+::
+
+    mirtk init-dof <dofout> [output option] [options]
+
+
 Description
 -----------
 

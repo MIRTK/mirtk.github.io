@@ -6,6 +6,14 @@ match-points
 .. program:: match-points
 
 
+Synopsis
+--------
+
+::
+
+    mirtk match-points <target> <source> [options]
+
+
 Description
 -----------
 

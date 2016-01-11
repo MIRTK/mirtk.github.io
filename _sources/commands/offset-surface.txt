@@ -6,6 +6,14 @@ offset-surface
 .. program:: offset-surface
 
 
+Synopsis
+--------
+
+::
+
+    mirtk offset-surface <input> <output> <distance> [options]
+
+
 Description
 -----------
 

@@ -6,6 +6,14 @@ resample-image
 .. program:: resample-image
 
 
+Synopsis
+--------
+
+::
+
+    mirtk resample-image <input> <output> [options]
+
+
 Description
 -----------
 

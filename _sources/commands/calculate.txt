@@ -6,6 +6,14 @@ calculate
 .. program:: calculate
 
 
+Synopsis
+--------
+
+::
+
+    mirtk calculate <input> [options]
+
+
 Description
 -----------
 

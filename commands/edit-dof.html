@@ -90,6 +90,12 @@
             
   <div class="section" id="edit-dof">
 <h1>edit-dof<a class="headerlink" href="#edit-dof" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>mirtk edit-dof &lt;dofin&gt; &lt;dofout&gt; [options]
+</pre></div>
+</div>
+</div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>This tool provides a generic way of modifying the parameters of a
@@ -101,44 +107,23 @@ it performs a generic conversion from option names to parameter names.
 While option names are all lowercase and start with one or two hyphens
 and use hyphens also as word separators, parameter names start with a
 captial letter and use spaces as word separators but also hyphens for
-some compound words.</p>
-<p>For example, the option &#8220;-number-of-integration-steps&#8221; corresponds to
-the parameter &#8220;Number of integration steps&#8221; of the SV FFD transformation.
-The value for the parameter has to be given as option argument, e.g.,</p>
-<p>mirtk edit-dof &lt;dofin&gt; &lt;dofout&gt; -[-]number-of-integration-steps 128</p>
+some compound words. See examples below.</p>
 </div>
-<div class="section" id="standard-options">
-<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
-<dl class="option">
-<dt id="cmdoption-edit-dof-v">
-<code class="descname">-v</code><code class="descclassname"> -verbose [n]</code><a class="headerlink" href="#cmdoption-edit-dof-v" title="Permalink to this definition">¶</a></dt>
-<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-edit-dof-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-edit-dof-debug" title="Permalink to this definition">¶</a></dt>
-<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-edit-dof-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-edit-dof-version" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print version and exit or set version to emulate.</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-edit-dof-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-edit-dof-revision" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print revision (or version) number only and exit.</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-edit-dof-h">
-<code class="descname">-h</code><code class="descclassname"> -help</code><a class="headerlink" href="#cmdoption-edit-dof-h" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print help and exit.</p>
-</dd></dl>
-
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><strong>Command</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>mirtk edit-dof svffd.dof.gz svffd.dof.gz -number-of-integration-steps 128
+</pre></div>
+</div>
+<p><strong>Output/Description</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>The option &quot;-number-of-integration-steps&quot; used here corresponds to
+the parameter &quot;Number of integration steps&quot; of the SV FFD transformation.
+The new value for the parameter will be 128.
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 

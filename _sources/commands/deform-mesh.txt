@@ -6,6 +6,14 @@ deform-mesh
 .. program:: deform-mesh
 
 
+Synopsis
+--------
+
+::
+
+    mirtk deform-mesh <input> <output> [options]
+
+
 Description
 -----------
 

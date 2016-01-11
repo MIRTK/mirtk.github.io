@@ -6,6 +6,22 @@ register
 .. program:: register
 
 
+Synopsis
+--------
+
+::
+
+    mirtk register -images <images.lst> [options]
+    mirtk register -image <image1> [-dof <dof1>] -image <image2> [-dof <dof2>]... [options]
+    mirtk register -image <image1> <image2>... [options]
+    mirtk register <image1> <image2>... [options]
+    mirtk register <image_sequence> [options]
+    mirtk register -pset <pointset1> [-dof <dof1>] -pset <pointset2> [-dof <dof2>]... [options]
+    mirtk register <dataset1> <dataset2>... [options]
+    mirtk register -pset <pointset1> <pointset2>... [options]
+    mirtk register -image <image1> -points <pointset1> [-dof <dof1>]... [options]
+
+
 Description
 -----------
 

@@ -236,7 +236,7 @@ all modules required by this module are automatically enabled as well.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">For a complete list of module dependencies, see the <cite>BasisProject.cmake</cite> file
-in the respective module directory (e.g., <cite>Modules/Registration/BasisProject.cmake</cite>).</p>
+in the respective module directory.</p>
 </div>
 </div>
 <div class="section" id="configuration">
@@ -283,11 +283,11 @@ until no further changes are made and the &#8220;Generate&#8221; button is enabl
 <tr class="row-even"><td>BUILD_APPLICATIONS</td>
 <td>Build command-line tools of enabled modules.</td>
 </tr>
-<tr class="row-odd"><td>BUILD_DOCUMENTATION_SOURCES</td>
-<td>(Re-)generate .rst source files of auto-generated pages.</td>
-</tr>
-<tr class="row-even"><td>BUILD_DOCUMENTATION</td>
+<tr class="row-odd"><td>BUILD_DOCUMENTATION</td>
 <td>Configure build of online documentation (&#8220;doc&#8221; target).</td>
+</tr>
+<tr class="row-even"><td>BUILD_DOCUMENTATION_SOURCES</td>
+<td>(Re-)generate .rst source files of auto-generated pages.</td>
 </tr>
 <tr class="row-odd"><td>BUILD_TESTING</td>
 <td>Build the regression tests. (advanced, unused)</td>
@@ -399,23 +399,17 @@ building the &#8220;install&#8221; target.</p>
 <div class="highlight-python"><div class="highlight"><pre>ninja install
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">To enable the convenient use of the MIRTK <a class="reference internal" href="commands.html"><em>Applications</em></a>, it is recommended
-to permanently add the <code class="docutils literal"><span class="pre">&lt;CMAKE_INSTALL_PREFIX&gt;/bin</span></code> directory to the
-<a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH environment variable</a> in the shell setup script (e.g., <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code>
-or <code class="docutils literal"><span class="pre">$HOME/.profile</span></code>).</p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p>The MIRTK installation includes a <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a>
-completions script which when sourced e.g. in your <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> or
-<code class="docutils literal"><span class="pre">$HOME/.profile</span></code> shell configuration file, enables auto-completion of
-available MIRTK commands. To enable Bash completions for <code class="docutils literal"><span class="pre">mirtk</span></code>, add the
-following line to your shell configuration file:</p>
-<div class="last highlight-python"><div class="highlight"><pre>. &quot;$MIRTK_DIR/share/mirtk_bash_completions.sh&quot;
+<p>To enable the convenient use of the <a class="reference internal" href="commands.html"><em>Applications</em></a>, it is recommended
+to permanently add the <code class="docutils literal"><span class="pre">$MIRTK_DIR/bin</span></code> directory to the
+<a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH environment variable</a> in the shell configuration file
+(e.g., <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> or <code class="docutils literal"><span class="pre">$HOME/.profile</span></code>), where <code class="docutils literal"><span class="pre">MIRTK_DIR</span></code> is the directory
+chosen as <code class="docutils literal"><span class="pre">CMAKE_INSTALL_PREFIX</span></code> above.</p>
+<p>The MIRTK installation further includes a <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a>
+completions script which when sourced in your Bash configuration file,
+enables auto-completion of available MIRTK commands. To enable Bash completions
+for <code class="docutils literal"><span class="pre">mirtk</span></code>, add the following line to your <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>. &quot;$MIRTK_DIR/share/mirtk_bash_completions.sh&quot;
 </pre></div>
-</div>
 </div>
 </div>
 </div>

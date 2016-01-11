@@ -6,6 +6,15 @@ calculate-logarithmic-map
 .. program:: calculate-logarithmic-map
 
 
+Synopsis
+--------
+
+::
+
+    mirtk calculate-logarithmic-map <disp> <velo> [options]
+    mirtk calculate-logarithmic-map <dx> <dy> [<dz>] <vx> <vy> [<vz>] [options]
+
+
 Description
 -----------
 

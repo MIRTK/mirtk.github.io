@@ -6,6 +6,14 @@ decimate-surface
 .. program:: decimate-surface
 
 
+Synopsis
+--------
+
+::
+
+    mirtk decimate-surface <input> <output> [options]
+
+
 Description
 -----------
 

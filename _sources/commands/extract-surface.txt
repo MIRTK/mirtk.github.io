@@ -6,6 +6,14 @@ extract-surface
 .. program:: extract-surface
 
 
+Synopsis
+--------
+
+::
+
+    mirtk extract-surface <input> <output> [options]
+
+
 Description
 -----------
 

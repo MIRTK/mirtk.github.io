@@ -6,6 +6,14 @@ detect-edges
 .. program:: detect-edges
 
 
+Synopsis
+--------
+
+::
+
+    mirtk detect-edges <input> <output> [options]
+
+
 Description
 -----------
 

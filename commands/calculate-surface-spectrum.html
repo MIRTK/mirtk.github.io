@@ -90,6 +90,13 @@
             
   <div class="section" id="calculate-surface-spectrum">
 <h1>calculate-surface-spectrum<a class="headerlink" href="#calculate-surface-spectrum" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>mirtk calculate-surface-spectrum &lt;input&gt; &lt;output&gt; [options]
+mirtk calculate-surface-spectrum &lt;input1&gt; &lt;input2&gt; &lt;output1&gt; &lt;output2&gt; [options]
+</pre></div>
+</div>
+</div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Performs a spectral analysis of the general graph Laplacian matrix
@@ -99,11 +106,11 @@ and their sign flipped to match the eigenvectors of the target surface mesh.</p>
 <p>If two input and output surface meshes are specified, a spectral analysis
 of the joint graph Laplacian is performed after an initial surface match.
 The type of initial point correspondences is defined by <a class="reference internal" href="#cmdoption-calculate-surface-spectrum-corr"><code class="xref std std-option docutils literal"><span class="pre">calculate-surface-spectrum</span> <span class="pre">-corr</span></code></a>.</p>
-<p>The implementation is based on the MATLAB code by Herve Lombaert of [1].</p>
-<table class="docutils footnote" frame="void" id="id1" rules="none">
+<p>The implementation is based on the MATLAB code by Herve Lombaert of <a class="footnote-reference" href="#id2" id="id1">[1]</a>.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[1]</td><td>H. Lombaert, J. Sporring, and K. Siddiqi.
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>H. Lombaert, J. Sporring, and K. Siddiqi.
 Diffeomorphic Spectral Matching of Cortical Surfaces.
 In the 23rd Image Processing in Medical Imaging (IPMI), 2013.</td></tr>
 </tbody>

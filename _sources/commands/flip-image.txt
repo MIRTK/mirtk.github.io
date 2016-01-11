@@ -6,6 +6,14 @@ flip-image
 .. program:: flip-image
 
 
+Synopsis
+--------
+
+::
+
+    mirtk flip-image <input> <output> [options]
+
+
 Description
 -----------
 

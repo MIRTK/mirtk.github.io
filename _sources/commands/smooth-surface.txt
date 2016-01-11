@@ -6,6 +6,15 @@ smooth-surface
 .. program:: smooth-surface
 
 
+Synopsis
+--------
+
+::
+
+    mirtk smooth-surface <input> <output> [options]
+    mirtk smooth-surface <input> <output> <iterations> [lambda] [mu] [options] (deprecated)
+
+
 Description
 -----------
 

@@ -6,6 +6,14 @@ calculate-distance-map
 .. program:: calculate-distance-map
 
 
+Synopsis
+--------
+
+::
+
+    mirtk calculate-distance-map <input> <output> [options]
+
+
 Description
 -----------
 
