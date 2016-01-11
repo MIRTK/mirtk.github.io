@@ -60,6 +60,7 @@ var searchData=
   ['nop',['NOP',['../structmirtk_1_1NaryVoxelFunction_1_1NOP.html',1,'mirtk::NaryVoxelFunction']]],
   ['norm',['Norm',['../classmirtk_1_1Matrix.html#aa198fe0f796cb3446385266e609de7bb',1,'mirtk::Matrix::Norm()'],['../classmirtk_1_1Vector.html#ad3a9fd0a8a2a526408c8db9fa2d915cb',1,'mirtk::Vector::Norm()']]],
   ['normal',['Normal',['../classmirtk_1_1PolyDataCurvature.html#aef9441a27ec523be4153d9c7346a06d8ae19307db1074165870af2301b8041572',1,'mirtk::PolyDataCurvature']]],
+  ['normaldistances',['NormalDistances',['../classmirtk_1_1ImplicitSurfaceForce.html#a46c84a5ec796f9a2fde6397d49b0ae15',1,'mirtk::ImplicitSurfaceForce']]],
   ['normaldistribution',['NormalDistribution',['../classmirtk_1_1data_1_1statistic_1_1NormalDistribution.html',1,'mirtk::data::statistic']]],
   ['normalize',['Normalize',['../classmirtk_1_1Vector.html#a7acbf3584b2264021fe2b44d097e20f9',1,'mirtk::Vector::Normalize()'],['../structmirtk_1_1Vector3D.html#a1c409fcc631a62f029fb156ae63a3ebe',1,'mirtk::Vector3D::Normalize()'],['../structmirtk_1_1Vector4D.html#a9e519cd9eea754a1acc672a1a15880b7',1,'mirtk::Vector4D::Normalize()']]],
   ['normalizedgradient',['NormalizedGradient',['../classmirtk_1_1EnergyTerm.html#aac16404457ba1c111a7a25e8144184fa',1,'mirtk::EnergyTerm']]],

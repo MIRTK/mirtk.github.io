@@ -44,7 +44,7 @@ var searchData=
   ['maxwidth',['MaxWidth',['../structmirtk_1_1ImplicitSurfaceUtils_1_1MaxWidth.html',1,'mirtk::ImplicitSurfaceUtils']]],
   ['maxx',['MaxX',['../classmirtk_1_1Histogram2D.html#aec06957805e8c9eff2a28b6b380de248',1,'mirtk::Histogram2D']]],
   ['maxy',['MaxY',['../classmirtk_1_1Histogram2D.html#a8fdcf89388da7578f58f2e1b3bc4d85c',1,'mirtk::Histogram2D']]],
-  ['mean',['Mean',['../classmirtk_1_1PolyDataCurvature.html#aef9441a27ec523be4153d9c7346a06d8a4a42f1e9996b79292d855335b9393e18',1,'mirtk::PolyDataCurvature::Mean()'],['../classmirtk_1_1Histogram1D.html#a31acc08ce3a22dcbca19d21d5499dcf8',1,'mirtk::Histogram1D::Mean()'],['../classmirtk_1_1PolyDataCurvature.html#a954afc171782b03624c58435a0e713db',1,'mirtk::PolyDataCurvature::MEAN()']]],
+  ['mean',['MEAN',['../classmirtk_1_1PolyDataCurvature.html#a954afc171782b03624c58435a0e713db',1,'mirtk::PolyDataCurvature::MEAN()'],['../classmirtk_1_1PolyDataCurvature.html#aef9441a27ec523be4153d9c7346a06d8a4a42f1e9996b79292d855335b9393e18',1,'mirtk::PolyDataCurvature::Mean()'],['../classmirtk_1_1Histogram1D.html#a31acc08ce3a22dcbca19d21d5499dcf8',1,'mirtk::Histogram1D::Mean()']]],
   ['mean',['Mean',['../classmirtk_1_1data_1_1statistic_1_1Mean.html',1,'mirtk::data::statistic']]],
   ['meanwidth',['MeanWidth',['../structmirtk_1_1ImplicitSurfaceUtils_1_1MeanWidth.html',1,'mirtk::ImplicitSurfaceUtils']]],
   ['meanx',['MeanX',['../classmirtk_1_1Histogram2D.html#aa2831380a1f889d75fee0414bdb46754',1,'mirtk::Histogram2D']]],

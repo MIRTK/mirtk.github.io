@@ -1753,6 +1753,20 @@
     <filename>mirtkImplicitSurfaceForce_8h</filename>
     <class kind="class">mirtk::ImplicitSurfaceForce</class>
     <namespace>mirtk</namespace>
+    <member kind="function">
+      <type>bool</type>
+      <name>FromString</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a8fdce1dd5b7e2b3bc83f16c076b7d911</anchor>
+      <arglist>(const char *str, enum ImplicitSurfaceForce::DistanceMeasureType &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>ToString</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a2247f1a33b381e651ec3baae85135332</anchor>
+      <arglist>(const enum ImplicitSurfaceForce::DistanceMeasureType &amp;value, int w, char c, bool left)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>mirtkImplicitSurfaceSpringForce.h</name>
@@ -42327,6 +42341,25 @@
     <name>mirtk::ImplicitSurfaceForce</name>
     <filename>classmirtk_1_1ImplicitSurfaceForce.html</filename>
     <base>mirtk::SurfaceForce</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>DistanceMeasureType</name>
+      <anchorfile>classmirtk_1_1ImplicitSurfaceForce.html</anchorfile>
+      <anchor>a13f2e7e79ed8292b852e1a086646a9ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DM_Minimum</name>
+      <anchorfile>classmirtk_1_1ImplicitSurfaceForce.html</anchorfile>
+      <anchor>a13f2e7e79ed8292b852e1a086646a9acaf696d0075ee23f1b65497fac05fb150e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>DM_Normal</name>
+      <anchorfile>classmirtk_1_1ImplicitSurfaceForce.html</anchorfile>
+      <anchor>a13f2e7e79ed8292b852e1a086646a9aca21e796d6b2429fc773956919741a49a3</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type>double</type>
       <name>Distance</name>
@@ -42412,10 +42445,24 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
+      <type>void</type>
+      <name>InitializeNormalDistances</name>
+      <anchorfile>classmirtk_1_1ImplicitSurfaceForce.html</anchorfile>
+      <anchor>abde626a9df09ddca070807266364403e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type>vtkDataArray *</type>
       <name>MinimumDistances</name>
       <anchorfile>classmirtk_1_1ImplicitSurfaceForce.html</anchorfile>
       <anchor>a9a9186b5eaed868331a4cdbce38f8bd7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>vtkDataArray *</type>
+      <name>NormalDistances</name>
+      <anchorfile>classmirtk_1_1ImplicitSurfaceForce.html</anchorfile>
+      <anchor>a46c84a5ec796f9a2fde6397d49b0ae15</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -42451,6 +42498,13 @@
       <name>UpdateMinimumDistances</name>
       <anchorfile>classmirtk_1_1ImplicitSurfaceForce.html</anchorfile>
       <anchor>a1fb5b9f499a375e0db0c7a316aae03ee</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateNormalDistances</name>
+      <anchorfile>classmirtk_1_1ImplicitSurfaceForce.html</anchorfile>
+      <anchor>a33cc2946af2c6dc6accab868260ea78c</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -64342,6 +64396,13 @@
       <arglist>(const char *str, EnergyMeasure &amp;value)</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>FromString</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a8fdce1dd5b7e2b3bc83f16c076b7d911</anchor>
+      <arglist>(const char *str, enum ImplicitSurfaceForce::DistanceMeasureType &amp;value)</arglist>
+    </member>
+    <member kind="function">
       <type>string</type>
       <name>Get</name>
       <anchorfile>namespacemirtk.html</anchorfile>
@@ -65045,15 +65106,15 @@
       <type>string</type>
       <name>ToString</name>
       <anchorfile>namespacemirtk.html</anchorfile>
-      <anchor>a4dca134e706fd4ab94b486a50ff8028b</anchor>
-      <arglist>(const EnergyMeasure &amp;value, int w, char c, bool left)</arglist>
+      <anchor>aba768bbdd245a56077af92a44f4001df</anchor>
+      <arglist>(const ConnectivityType &amp;value, int w, char c, bool left)</arglist>
     </member>
     <member kind="function">
       <type>string</type>
       <name>ToString</name>
       <anchorfile>namespacemirtk.html</anchorfile>
-      <anchor>aba768bbdd245a56077af92a44f4001df</anchor>
-      <arglist>(const ConnectivityType &amp;value, int w, char c, bool left)</arglist>
+      <anchor>a4dca134e706fd4ab94b486a50ff8028b</anchor>
+      <arglist>(const EnergyMeasure &amp;value, int w, char c, bool left)</arglist>
     </member>
     <member kind="function">
       <type>string</type>
@@ -65068,6 +65129,13 @@
       <anchorfile>namespacemirtk.html</anchorfile>
       <anchor>ab1a7850f4d43cea50c7a32261490ca42</anchor>
       <arglist>(const T &amp;value, int w=0, char c= &apos; &apos;, bool left=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>ToString</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a2247f1a33b381e651ec3baae85135332</anchor>
+      <arglist>(const enum ImplicitSurfaceForce::DistanceMeasureType &amp;value, int w, char c, bool left)</arglist>
     </member>
     <member kind="function">
       <type>string</type>

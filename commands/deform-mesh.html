@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc1 (18e612b)',
+        VERSION:     'v1.0rc1 (c4bf0f3)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -98,16 +98,47 @@
 </div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>Iteratively minimizes a deformable surface model energy functional.
-The gradient of the energy terms are the internal and external forces
-of the deformable surface model.</p>
+<p>Iteratively minimizes a deformable surface model energy functional. The gradient of
+the energy terms are the internal and external forces of the deformable surface model.</p>
 </div>
-<div class="section" id="command-options">
-<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="input-options">
+<h2>Input options<a class="headerlink" href="#input-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-deform-mesh-initial">
+<code class="descname">-initial</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-initial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Point set used to initialize the deformed output mesh. Usually the output of a
+previous optimization with possibly saved node status (see <a class="reference internal" href="#cmdoption-deform-mesh-save-status"><code class="xref std std-option docutils literal"><span class="pre">-save-status</span></code></a>).
+(default: input)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-dof">
+<code class="descname">-dof</code><code class="descclassname"> &lt;type&gt; [&lt;dx&gt; [&lt;dy&gt; &lt;dz&gt;]]</code><a class="headerlink" href="#cmdoption-deform-mesh-dof" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optimize spatial transformation of named &lt;type&gt; to deform the mesh points.
+The optional &lt;dx&gt;, &lt;dy&gt;, and &lt;dz&gt; arguments specify the control point spacing
+of free-form deformation (FFD) transformations. Common transformation types are:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">FFD</span></code>:   Cubic B-spline FFD.</li>
+<li><code class="docutils literal"><span class="pre">SVFFD</span></code>: Stationary velocity (SV) cubic B-spline FFD.</li>
+</ul>
+</dd></dl>
+
 <dl class="option">
 <dt id="cmdoption-deform-mesh-image">
 <code class="descname">-image</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-image" title="Permalink to this definition">¶</a></dt>
-<dd><p>Image on which external forces are based on. (default: none)</p>
+<dd><p>Intensity image on which external forces are based. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-dmap">
+<code class="descname">-dmap</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-dmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Euclidean distance image on which implicit surface forces are based. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-dmap-offset">
+<code class="descname">-dmap-offset</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-dmap-offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implicit surface isovalue in <a class="reference internal" href="#cmdoption-deform-mesh-dmap"><code class="xref std std-option docutils literal"><span class="pre">-dmap</span></code></a> image. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
@@ -117,21 +148,410 @@ of the deformable surface model.</p>
 </dd></dl>
 
 <dl class="option">
+<dt id="cmdoption-deform-mesh-padding">
+<code class="descname">-padding</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-padding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Padding/Background value of input <a class="reference internal" href="#cmdoption-deform-mesh-image"><code class="xref std std-option docutils literal"><span class="pre">-image</span></code></a>. (default: none)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="optimization-options">
+<h2>Optimization options<a class="headerlink" href="#optimization-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-deform-mesh-optimizer">
+<code class="descname">-optimizer</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-optimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optimization method used to minimize the energy of the deformable surface model:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">EulerMethod</span></code>:              Forward Euler integration (default)</li>
+<li><code class="docutils literal"><span class="pre">EulerMethodWithDamping</span></code>:   Forward Euler integration with momentum.</li>
+<li><code class="docutils literal"><span class="pre">EulerMethodWithMomentum</span></code>:  Forward Euler integration with momentum.</li>
+<li><code class="docutils literal"><span class="pre">GradientDescent</span></code>:          Gradient descent optimizer.</li>
+<li><code class="docutils literal"><span class="pre">ConjugateGradientDescent</span></code>: Conjugate gradient descent.</li>
+</ul>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-linesearch">
+<code class="descname">-linesearch</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-linesearch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Line search method used by gradient descent optimizers:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Adaptive</span></code>: Line search with adaptive step length. (default)</li>
+<li><code class="docutils literal"><span class="pre">Brent</span></code>: Brent&#8217;s line search method.</li>
+</ul>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-damping">
+<code class="descname">-damping</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-damping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Damping ratio used by Euler method with momentum modelling the effect
+of dissipation of kinetic energy.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-momentum">
+<code class="descname">-momentum</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-momentum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Momentum of Euler method with momentum, i.e., <span class="math">\(1 - damping\)</span> (see <a class="reference internal" href="#cmdoption-deform-mesh-damping"><code class="xref std std-option docutils literal"><span class="pre">-damping</span></code></a>)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-mass">
+<code class="descname">-mass</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Node mass used by Euler methods with momentum. (default: 1)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-levels">
+<code class="descname">-levels</code><code class="descclassname"> &lt;min&gt; [&lt;max&gt;]</code><a class="headerlink" href="#cmdoption-deform-mesh-levels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform optimization on starting at level &lt;max&gt; until level &lt;min&gt; (&gt; 0).
+On each level, the node forces are averaged <span class="math">\(2^(level-1)\)</span> times which
+is similar to computing the forces on a coarser mesh. (default: 0 0)</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-deform-mesh-steps">
-<code class="descname">-steps</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-steps" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-steps</code><code class="descclassname"> | -iterations &lt;n&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-steps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum number of iterations. (default: 100)</p>
 </dd></dl>
 
 <dl class="option">
+<dt id="cmdoption-deform-mesh-step">
+<code class="descname">-step</code><code class="descclassname"> | -dt &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Length of integration/gradient steps. (default: 1)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-step-magnification">
+<code class="descname">-step-magnification</code><code class="descclassname"> &lt;mag&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-step-magnification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplicative factor for magnification of maximum <a class="reference internal" href="#cmdoption-deform-mesh-step"><code class="xref std std-option docutils literal"><span class="pre">-step</span></code></a> length.
+The step length at level n (highest level at n=1) is <span class="math">\(dt * mag^(level-1)\)</span>. (default: 1)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-maxdx">
+<code class="descname">-maxdx</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-maxdx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum displacement of a node at each iteration. By default, the node displacements
+are normalized by the maximum node displacement. When this option is used, the node
+displacements are clamped to the specified maximum length instead. (default: <a class="reference internal" href="#cmdoption-deform-mesh-step"><code class="xref std std-option docutils literal"><span class="pre">-step</span></code></a>)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-remesh">
+<code class="descname">-remesh</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-remesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remesh surface mesh every n-th iteration. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-minedgelength">
+<code class="descname">-minedgelength</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-minedgelength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum edge length used for local adaptive remeshing. (default: -1)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-maxedgelength">
+<code class="descname">-maxedgelength</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-maxedgelength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum edge length used for local adaptive remeshing. (default: -1)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-edgelength-magnification">
+<code class="descname">-edgelength-magnification</code><code class="descclassname"> &lt;mag&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-edgelength-magnification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplicative factor for magnification of <a class="reference internal" href="#cmdoption-deform-mesh-minedgelength"><code class="xref std std-option docutils literal"><span class="pre">-minedgelength</span></code></a> and <a class="reference internal" href="#cmdoption-deform-mesh-maxedgelength"><code class="xref std std-option docutils literal"><span class="pre">-maxedgelength</span></code></a>.
+The edge length at level n (highest level at n=1) is <span class="math">\(l * mag^(level-1)\)</span>. (default: 1)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-minangle">
+<code class="descname">-minangle</code><code class="descclassname"> &lt;degrees&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-minangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum angle between edge node normals for an edge be excluded from collapsing during
+iterative <a class="reference internal" href="#cmdoption-deform-mesh-remesh"><code class="xref std std-option docutils literal"><span class="pre">-remesh</span></code></a> operations. (default: 180)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-maxangle">
+<code class="descname">-maxangle</code><code class="descclassname"> &lt;degrees&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-maxangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum angle between edge node normals for an edge be excluded from splitting during
+iterative <a class="reference internal" href="#cmdoption-deform-mesh-remesh"><code class="xref std std-option docutils literal"><span class="pre">-remesh</span></code></a> operations. (default: 180)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-lowpass">
+<code class="descname">-lowpass</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-lowpass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Low-pass filter surface mesh every n-th iteration. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-lowpass-iterations">
+<code class="descname">-lowpass-iterations</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-lowpass-iterations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of <a class="reference internal" href="#cmdoption-deform-mesh-lowpass"><code class="xref std std-option docutils literal"><span class="pre">-lowpass</span></code></a> filter iterations. (default: 100)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-nointersection">
+<code class="descname">-nointersection</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-deform-mesh-nointersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hard non-self-intersection constraint for surface meshes. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-mind">
+<code class="descname">-mind</code><code class="descclassname"> | -mindistance &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-mind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum distance to other triangles in front of a given triangle.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-minw">
+<code class="descname">-minw</code><code class="descclassname"> | -minwidth &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-minw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum distance to other triangles in the back of a given triangle.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-reset-status">
+<code class="descname">-reset-status</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-deform-mesh-reset-status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set status of all mesh nodes to active again after each level (see <a class="reference internal" href="#cmdoption-deform-mesh-levels"><code class="xref std std-option docutils literal"><span class="pre">-levels</span></code></a>). (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="deformable-model-options">
+<h2>Deformable model options<a class="headerlink" href="#deformable-model-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-deform-mesh-neighborhood">
+<code class="descname">-neighborhood</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-neighborhood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of node neighborhoods used by internal force terms that consider more
+than only the adjacent nodes, but also up to n-connected nodes. (default: 2)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-distance">
+<code class="descname">-distance</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of implicit surface distance. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-distance-spring">
+<code class="descname">-distance-spring</code><code class="descclassname"> | -dspring &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-distance-spring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of implicit surface spring force. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-distance-measure">
+<code class="descname">-distance-measure</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-distance-measure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implicit surface distance measure used by <a class="reference internal" href="#cmdoption-deform-mesh-distance"><code class="xref std std-option docutils literal"><span class="pre">-distance</span></code></a> and <a class="reference internal" href="#cmdoption-deform-mesh-distance-spring"><code class="xref std std-option docutils literal"><span class="pre">-distance-spring</span></code></a>):</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">minimum</span></code>: Minimum surface distance (see <a class="reference internal" href="#cmdoption-deform-mesh-dmap"><code class="xref std std-option docutils literal"><span class="pre">-dmap</span></code></a>, default)</li>
+<li><code class="docutils literal"><span class="pre">normal</span></code>:  Estimate distance by casting rays along normal direction.</li>
+</ul>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-balloon-inflation">
+<code class="descname">-balloon-inflation</code><code class="descclassname"> | -balloon &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-balloon-inflation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of inflation force based on local intensity statistics. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-balloon-defflation">
+<code class="descname">-balloon-defflation</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-balloon-defflation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of deflation force based on local intensity statistics. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-edges">
+<code class="descname">-edges</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of image edge force. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-inflation">
+<code class="descname">-inflation</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-inflation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of surface inflation force used for cortical surface inflation. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-bending-energy">
+<code class="descname">-bending-energy</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-bending-energy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of bending energy of <a class="reference internal" href="#cmdoption-deform-mesh-dof"><code class="xref std std-option docutils literal"><span class="pre">-dof</span></code></a> transformation. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-spring">
+<code class="descname">-spring</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-spring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of internal spring force. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-normal-spring">
+<code class="descname">-normal-spring</code><code class="descclassname"> | -nspring &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-normal-spring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of internal spring force in normal direction. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-tangential-spring">
+<code class="descname">-tangential-spring</code><code class="descclassname"> | -tspring &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-tangential-spring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of internal spring force in tangent plane. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-normalized-spring">
+<code class="descname">-normalized-spring</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-normalized-spring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of internal spring force normalized w.r.t. force in normal direction. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-curvature">
+<code class="descname">-curvature</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-curvature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of surface curvature. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-quadratic-curvature">
+<code class="descname">-quadratic-curvature</code><code class="descclassname"> | -qcurvature &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-quadratic-curvature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of surface curvature estimated by quadratic fit of node neighbor
+to tangent plane distance. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-distortion">
+<code class="descname">-distortion</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-distortion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of metric distortion.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-stretching">
+<code class="descname">-stretching</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-stretching" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of spring force based on difference of neighbor distance compared to
+initial distance. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-repulsion">
+<code class="descname">-repulsion</code><code class="descclassname"> &lt;w&gt; [&lt;radius&gt;]</code><a class="headerlink" href="#cmdoption-deform-mesh-repulsion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of node repulsion force. (default: 0 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-collision">
+<code class="descname">-collision</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-collision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weight of triangle repulsion force.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="stopping-criterion-options">
+<h2>Stopping criterion options<a class="headerlink" href="#stopping-criterion-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-deform-mesh-extrinsic-energy">
+<code class="descname">-extrinsic-energy</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-deform-mesh-extrinsic-energy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Consider only sum of external energy terms as total energy value of deformable model functional.
+Internal forces still contribute to the gradient of the functional, but are excluded from the
+energy function value (see <a class="reference internal" href="#cmdoption-deform-mesh-epsilon"><code class="xref std std-option docutils literal"><span class="pre">-epsilon</span></code></a> and <a class="reference internal" href="#cmdoption-deform-mesh-minenergy"><code class="xref std std-option docutils literal"><span class="pre">-minenergy</span></code></a>). (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-epsilon">
+<code class="descname">-epsilon</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-epsilon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum change of deformable surface energy convergence criterion.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-delta">
+<code class="descname">-delta</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-delta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum maximum node displacement or <a class="reference internal" href="#cmdoption-deform-mesh-dof"><code class="xref std std-option docutils literal"><span class="pre">-dof</span></code></a> parameter value.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-minenergy">
+<code class="descname">-minenergy</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-minenergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target deformable surface energy value. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-minactive">
+<code class="descname">-minactive</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-minactive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum percentage of active nodes. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-inflation-error">
+<code class="descname">-inflation-error</code><code class="descclassname"> &lt;threshold&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-inflation-error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Threshold of surface inflation RMS measure. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="output-options">
+<h2>Output options<a class="headerlink" href="#output-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-deform-mesh-track">
+<code class="descname">-track</code><code class="descclassname"> [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-deform-mesh-track" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record sum of node displacements along normal direction. The integrated
+displacements are stored in the point data array named &#8220;NormalDisplacement&#8221;
+by default or with the specified &lt;name&gt;. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-center-output">
+<code class="descname">-center-output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-deform-mesh-center-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center output mesh such that center is at origin. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-match-area">
+<code class="descname">-match-area</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-deform-mesh-match-area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale output mesh by ratio of input and output surface area. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-match-sampling">
+<code class="descname">-match-sampling</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-deform-mesh-match-sampling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resample output mesh at corresponding positions of input mesh.
+This option is only useful in conjunction with <a class="reference internal" href="#cmdoption-deform-mesh-remesh"><code class="xref std std-option docutils literal"><span class="pre">-remesh</span></code></a>. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-save-status">
+<code class="descname">-save-status</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-deform-mesh-save-status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save node status (active/passive) to output file. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-deform-mesh-ascii">
-<code class="descname">-ascii</code><code class="descclassname">/-binary</code><a class="headerlink" href="#cmdoption-deform-mesh-ascii" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write legacy VTK in ASCII or binary format. (default: binary)</p>
+<code class="descname">-ascii</code><code class="descclassname"> | -nobinary</code><a class="headerlink" href="#cmdoption-deform-mesh-ascii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write legacy VTK in ASCII format. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-binary">
+<code class="descname">-binary</code><code class="descclassname"> | -noascii</code><a class="headerlink" href="#cmdoption-deform-mesh-binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write legacy VTK in binary format. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-deform-mesh-compress">
 <code class="descname">-compress</code><code class="descclassname"> | -nocompress</code><a class="headerlink" href="#cmdoption-deform-mesh-compress" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write XML VTK file with or without compression. (default: compress)</p>
+<dd><p>Write XML VTK file with or without compression. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-debugprefix">
+<code class="descname">-debugprefix</code><code class="descclassname"> &lt;prefix&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-debugprefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>File name prefix for <a class="reference internal" href="#cmdoption-deform-mesh-debug"><code class="xref std std-option docutils literal"><span class="pre">-debug</span></code></a> output. (default: deform_mesh_)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-debuginterval">
+<code class="descname">-debuginterval</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-debuginterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write <a class="reference internal" href="#cmdoption-deform-mesh-debug"><code class="xref std std-option docutils literal"><span class="pre">-debug</span></code></a> output every n-th iteration. (default: 10)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-deform-mesh-levelprefix">
+<code class="descname">-levelprefix</code><code class="descclassname"> | -nolevelprefix</code><a class="headerlink" href="#cmdoption-deform-mesh-levelprefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write <a class="reference internal" href="#cmdoption-deform-mesh-debug"><code class="xref std std-option docutils literal"><span class="pre">-debug</span></code></a> output without level prefix in file names. (default: on)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="advanced-options">
+<h2>Advanced options<a class="headerlink" href="#advanced-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-deform-mesh-par">
+<code class="descname">-par</code><code class="descclassname"> &lt;name&gt; &lt;value&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-par" title="Permalink to this definition">¶</a></dt>
+<dd><p>Advanced option to set surface model or optimizer parameter.</p>
 </dd></dl>
 
 </div>
