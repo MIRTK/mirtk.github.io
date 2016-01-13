@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0rc1 (c4bf0f3)',
+        VERSION:     'v1.0rc1 (6cd048e)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -103,7 +103,7 @@
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="dependencies">
 <span id="builddependencies"></span><h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
-<p>The MIRTK source code requires the following third-party libraries to be installed.</p>
+<p>The MIRTK source code makes use of the following third-party libraries:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="16%" />
@@ -161,13 +161,13 @@
 <td>any</td>
 <td>System or Source code</td>
 <td>No module</td>
-<td><a class="reference internal" href="modules/thirdparty/nifti.html"><em>NIfTI</em></a></td>
+<td><a class="reference internal" href="modules/core/imageio.html"><em>Image I/O</em></a></td>
 </tr>
 <tr class="row-odd"><td><a class="reference external" href="http://www.chokkan.org/software/liblbfgs/">libLBFGS</a></td>
 <td>any</td>
 <td>Source code</td>
 <td>No module</td>
-<td><a class="reference internal" href="modules/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
+<td><a class="reference internal" href="modules/core/imageio.html"><em>Image I/O</em></a></td>
 </tr>
 </tbody>
 </table>
@@ -175,14 +175,17 @@
 to be build must be installed separately before building the MIRTK libraries and command-line
 tools. <a class="reference external" href="http://www.boost.org">Boost</a> and <a class="reference external" href="http://eigen.tuxfamily.org">Eigen</a> are a minimum requirement to build MIRTK. The needed source files of
 these header-only libraries can optionally be copied into the MIRTK <cite>ThirdParty/</cite> directory
-as described in the <a class="reference internal" href="download.html#downloadsources"><span>download instructions</span></a>.</p>
+as described in the <a class="reference internal" href="download.html#downloadsources"><span>download instructions</span></a>. The source code of
+the <a class="reference external" href="http://sourceforge.net/projects/niftilib/">NiftiCLib</a> and <a class="reference external" href="http://www.chokkan.org/software/liblbfgs/">libLBFGS</a> libraries are included in the basic download package and need
+not be installed. The WITH_NiftiCLib build option can be used, however, to force the use
+of an existing NiftiCLib installation. See <a class="reference internal" href="#configurationsteps"><span>build configuration steps below</span></a>.</p>
 <p>The intra-module dependencies are as follows. When a module is enabled,
 all modules required by this module are automatically enabled as well.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="16%" />
-<col width="49%" />
-<col width="35%" />
+<col width="50%" />
+<col width="34%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Module</th>
@@ -203,40 +206,37 @@ all modules required by this module are automatically enabled as well.</p>
 <td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="modules/core/transformation.html"><em>Transformation</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/core/imageio.html"><em>Image I/O</em></a></td>
+<td><a class="reference internal" href="modules/core/image.html"><em>Image</em></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="modules/core/transformation.html"><em>Transformation</em></a></td>
 <td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a></td>
 <td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a>, <a class="reference internal" href="modules/core/transformation.html"><em>Transformation</em></a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="modules/core/registration.html"><em>Registration</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/core/registration.html"><em>Registration</em></a></td>
 <td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a>, <a class="reference internal" href="modules/core/transformation.html"><em>Transformation</em></a></td>
-<td><a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a>, <a class="reference internal" href="modules/packages/deformable.html"><em>Deformable</em></a>, <a class="reference internal" href="modules/thirdparty/nifti.html"><em>NIfTI</em></a>, <a class="reference internal" href="modules/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
+<td><a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a>, <a class="reference internal" href="modules/packages/deformable.html"><em>Deformable</em></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="modules/packages/deformable.html"><em>Deformable</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/packages/deformable.html"><em>Deformable</em></a></td>
 <td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a>, <a class="reference internal" href="modules/core/transformation.html"><em>Transformation</em></a>, <a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="modules/packages/volumetricmapping.html"><em>Volumetric Mapping</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/packages/volumetricmapping.html"><em>Volumetric Mapping</em></a></td>
 <td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a>, <a class="reference internal" href="modules/core/pointset.html"><em>Point Set</em></a></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="modules/thirdparty/nifti.html"><em>NIfTI</em></a></td>
-<td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a>, <a class="reference internal" href="modules/core/image.html"><em>Image</em></a></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="modules/thirdparty/lbfgs.html"><em>LBFGS</em></a></td>
-<td><a class="reference internal" href="modules/core/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/core/numerics.html"><em>Numerics</em></a></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">For a complete list of module dependencies, see the <cite>BasisProject.cmake</cite> file
-in the respective module directory.</p>
+<p>Notice that the <a class="reference internal" href="modules/core/imageio.html"><em>Image I/O</em></a> module is required only by the <a class="reference internal" href="commands.html"><em>Applications</em></a> which read/write images.</p>
+<p class="last">For a complete list of module dependencies, see the BasisProject.cmake file and in
+some cases also the config/Depends.cmake file if present in the respective module directory.</p>
 </div>
 </div>
 <div class="section" id="configuration">
@@ -305,7 +305,7 @@ until no further changes are made and the &#8220;Generate&#8221; button is enabl
 <td>Enable output of matrices to .mat files and use of MATLAB functions.</td>
 </tr>
 <tr class="row-even"><td>WITH_NiftiCLib</td>
-<td>Use system installation of <a class="reference external" href="http://sourceforge.net/projects/niftilib/">NiftiCLib</a> for build of NIfTI module.</td>
+<td>Force use of existing system installation of <a class="reference external" href="http://sourceforge.net/projects/niftilib/">NiftiCLib</a>.</td>
 </tr>
 <tr class="row-odd"><td>WITH_PNG</td>
 <td>Enable writing of 2D images in <a class="reference external" href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG</a> file format.</td>
@@ -402,14 +402,28 @@ building the &#8220;install&#8221; target.</p>
 <p>To enable the convenient use of the <a class="reference internal" href="commands.html"><em>Applications</em></a>, it is recommended
 to permanently add the <code class="docutils literal"><span class="pre">$MIRTK_DIR/bin</span></code> directory to the
 <a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH environment variable</a> in the shell configuration file
-(e.g., <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> or <code class="docutils literal"><span class="pre">$HOME/.profile</span></code>), where <code class="docutils literal"><span class="pre">MIRTK_DIR</span></code> is the directory
-chosen as <code class="docutils literal"><span class="pre">CMAKE_INSTALL_PREFIX</span></code> above.</p>
+(e.g., <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> or <code class="docutils literal"><span class="pre">$HOME/.profile</span></code>), where MIRTK_DIR is the directory
+chosen as CMAKE_INSTALL_PREFIX above.</p>
 <p>The MIRTK installation further includes a <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a>
 completions script which when sourced in your Bash configuration file,
 enables auto-completion of available MIRTK commands. To enable Bash completions
-for <code class="docutils literal"><span class="pre">mirtk</span></code>, add the following line to your <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre>. &quot;$MIRTK_DIR/share/mirtk_bash_completions.sh&quot;
+for <code class="docutils literal"><span class="pre">mirtk</span></code>, add the following lines to your <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>[ ! -f &quot;$MIRTK_DIR/share/mirtk_bash_completions.sh&quot; ] ||
+source &quot;$MIRTK_DIR/share/mirtk_bash_completions.sh&quot;
+
+[ ! -f &quot;$MIRTK_DIR/share/mirtk/mirtk_bash_completions.sh&quot; ] ||
+source &quot;$MIRTK_DIR/share/mirtk/mirtk_bash_completions.sh&quot;
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When the CMAKE_INSTALL_PREFIX contains a directory named &#8220;mirtk&#8221; (or &#8220;mirtk-&lt;version&gt;&#8221;)
+as in case of the default installation prefix &#8220;/opt/mirtk-&lt;version&gt;&#8221;, the library
+files are installed into <code class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/lib</span></code>. But when the installation
+path does not include the project name, as in case of &#8220;/usr/local&#8221;, for example,
+the library files are copied into the directory <code class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/lib/mirtk</span></code>.
+The same applies to other installation subdirectories such as &#8220;share&#8221; and &#8220;doc&#8221;.
+Only the executable files are always copied to <code class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/bin</span></code>.</p>
 </div>
 </div>
 </div>

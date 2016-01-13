@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0rc1 (c4bf0f3)',
+        VERSION:     'v1.0rc1 (6cd048e)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -70,6 +70,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#common">Common</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#numerics">Numerics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#image">Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image-i-o">Image I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#point-set">Point Set</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#transformation">Transformation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#registration">Registration</a></li>
@@ -78,11 +79,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#external-packages">External Packages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#deformable">Deformable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#volumetric-mapping">Volumetric Mapping</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#third-party-libraries">Third-party Libraries</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#nifti">NIfTI</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#lbfgs">LBFGS</a></li>
 </ul>
 </li>
 </ul>
@@ -136,6 +132,14 @@ interpolation functions which enable the evaluation of these finite discrete ima
 in an infinite continuous domain. This is in particular needed for the deformation of
 an image during and after registration.</p>
 <p><a class="reference internal" href="modules/core/image.html"><em>[more]</em></a></p>
+</div>
+<div class="section" id="image-i-o">
+<h3>Image I/O<a class="headerlink" href="#image-i-o" title="Permalink to this headline">¶</a></h3>
+<p>The Image I/O module of the Medical Image Registration ToolKit (MIRTK) enables the
+reading and writing of image files. Supported file formats are GIPL, PGM, and
+the <a class="reference external" href="http://nifti.nimh.nih.gov">NIfTI file format</a>. Image slices can further
+be written to PNG image files when the MIRTK was build WITH_PNG.</p>
+<p><a class="reference internal" href="modules/core/imageio.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="point-set">
 <h3>Point Set<a class="headerlink" href="#point-set" title="Permalink to this headline">¶</a></h3>
@@ -193,26 +197,6 @@ for example, to constrain the cortical surface to remain smooth after transforma
 for the volumetric mapping of brain volumes. The <a class="reference internal" href="commands/map.html"><em>map</em></a> command can be used to
 compute such volumetric map and to apply it to an input tetrahedral mesh.</p>
 <p><a class="reference internal" href="modules/packages/volumetricmapping.html"><em>[more]</em></a></p>
-</div>
-</div>
-<div class="section" id="third-party-libraries">
-<span id="thirdpartymodules"></span><h2>Third-party Libraries<a class="headerlink" href="#third-party-libraries" title="Permalink to this headline">¶</a></h2>
-<p>The following modules provide features of third-party libraries such as additional
-image file formats and numerical optimization methods.</p>
-<div class="section" id="nifti">
-<h3>NIfTI<a class="headerlink" href="#nifti" title="Permalink to this headline">¶</a></h3>
-<p>The NIfTI module of the Medical Image Registration ToolKit (MIRTK) enables the
-reading and writing of image files in the <a class="reference external" href="http://nifti.nimh.nih.gov">NIfTI file format</a>.</p>
-<p><a class="reference internal" href="modules/thirdparty/nifti.html"><em>[more]</em></a></p>
-</div>
-<div class="section" id="lbfgs">
-<h3>LBFGS<a class="headerlink" href="#lbfgs" title="Permalink to this headline">¶</a></h3>
-<p>The LBFGS module of the Medical Image Registration ToolKit (MIRTK) provides
-an iterative optimizer based on the
-<a class="reference external" href="https://en.wikipedia.org/wiki/Broyden–Fletcher–Goldfarb–Shanno_algorithm">limited memory Broyden–Fletcher–Goldfarb–Shanno (BFGS)</a>
-algorithm. The implementation uses the <a class="reference external" href="http://www.chokkan.org/software/liblbfgs/">libLBFGS</a> library
-written by Naoaki Okazaki whose source files are included in this module.</p>
-<p><a class="reference internal" href="modules/thirdparty/lbfgs.html"><em>[more]</em></a></p>
 </div>
 </div>
 </div>

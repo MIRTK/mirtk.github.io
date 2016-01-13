@@ -11,13 +11,12 @@ Modules
    modules/core/common
    modules/core/numerics
    modules/core/image
+   modules/core/imageio
    modules/core/pointset
    modules/core/transformation
    modules/core/registration
    modules/packages/deformable
    modules/packages/volumetricmapping
-   modules/thirdparty/nifti
-   modules/thirdparty/lbfgs
 
 .. Replacements for use by descriptions included below to refer to other modules
 
@@ -53,6 +52,14 @@ Image
 .. include:: modules/_descriptions/image.rst
 
 :doc:`[more] <modules/core/image>`
+
+
+Image I/O
+---------
+
+.. include:: modules/_descriptions/imageio.rst
+
+:doc:`[more] <modules/core/imageio>`
 
 
 Point Set
@@ -105,28 +112,3 @@ Volumetric Mapping
 .. include:: modules/_descriptions/volumetricmapping.rst
 
 :doc:`[more] <modules/packages/volumetricmapping>`
-
-
-
-.. _ThirdPartyModules:
-
-Third-party Libraries
-=====================
-
-The following modules provide features of third-party libraries such as additional
-image file formats and numerical optimization methods.
-
-NIfTI
------
-
-.. include:: modules/_descriptions/nifti.rst
-
-:doc:`[more] <modules/thirdparty/nifti>`
-
-
-LBFGS
------
-
-.. include:: modules/_descriptions/lbfgs.rst
-
-:doc:`[more] <modules/thirdparty/lbfgs>`

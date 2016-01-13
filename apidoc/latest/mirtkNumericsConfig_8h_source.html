@@ -86,13 +86,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/// Whether MIRTK Numerics module was built with UMFPACK</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span><span class="preprocessor">#define MIRTK_Numerics_WITH_UMFPACK 1</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/// Whether SparseMatrix::Eigenvalues and SparseMatrix::Eigenvectors</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">/// functions are functional because eigs implementation was built</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span><span class="preprocessor">#define MIRTK_Numerics_WITH_eigs \</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">  MIRTK_Numerics_WITH_ARPACK &amp;&amp; MIRTK_Numerics_WITH_UMFPACK</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif // MIRTK_NumericsConfig_H</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/// Whether MIRTK Numerics module was built with LBFGS optimizer</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span><span class="preprocessor">#define MIRTK_Numerics_WITH_LBFGS 0</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/// Whether SparseMatrix::Eigenvalues and SparseMatrix::Eigenvectors</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/// functions are functional because eigs implementation was built</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span><span class="preprocessor">#define MIRTK_Numerics_WITH_eigs \</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">  MIRTK_Numerics_WITH_ARPACK &amp;&amp; MIRTK_Numerics_WITH_UMFPACK</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemirtk.html">mirtk</a> {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">/// Initialize MIRTK Numerics library</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">///</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/// Registers all available types with their respective object factories.</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespacemirtk.html#ae1b75165ab2a96a24fda838a7ce79d28">InitializeNumericsLibrary</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;} <span class="comment">// namespace mirtk</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif // MIRTK_NumericsConfig_H</span></div>
+<div class="ttc" id="namespacemirtk_html_ae1b75165ab2a96a24fda838a7ce79d28"><div class="ttname"><a href="namespacemirtk.html#ae1b75165ab2a96a24fda838a7ce79d28">mirtk::InitializeNumericsLibrary</a></div><div class="ttdeci">void InitializeNumericsLibrary()</div></div>
+<div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkImageIOConfig_8h_source.html#l00031">mirtkImageIOConfig.h:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 
 <div class="footer">

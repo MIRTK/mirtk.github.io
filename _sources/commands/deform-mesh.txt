@@ -96,7 +96,7 @@ Optimization options
 .. option:: -levels <min> [<max>]
 
    Perform optimization on starting at level <max> until level <min> (> 0).
-   On each level, the node forces are averaged :math:`2^(level-1)` times which
+   On each level, the node forces are averaged :math:`2^{level-1}` times which
    is similar to computing the forces on a coarser mesh. (default: 0 0)
 
 .. option:: -steps | -iterations <n>
@@ -197,7 +197,7 @@ Deformable model options
 
    Weight of inflation force based on local intensity statistics. (default: 0)
 
-.. option:: -balloon-defflation <w>
+.. option:: -balloon-deflation <w>
 
    Weight of deflation force based on local intensity statistics. (default: 0)
 

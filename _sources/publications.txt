@@ -50,7 +50,7 @@ was first published in the following conference article.
 **Statistical free-from deformation**
 
 The following publications learn a statistical free-form deformation model from a training dataset
-to restrict the deformation on new unseen images.
+to restrict the deformation on new images to the learned plausible deformations.
 
 .. [TMI03] `Automatic Construction of 3D Statistical Deformation Models Using Non-rigid Registration <http://link.springer.com/chapter/10.1007%2F3-540-45468-3_10>`__. |br|
            D. Rueckert, A. F. Frangi, J. A. Schnabel.
@@ -76,7 +76,7 @@ in the following workshop paper.
 **Spectral surface matching**
 
 The spectral surface matching implementations are based on the MATLAB code provided by
-`Herve Lombaerd <http://step.polymtl.ca/~rv101/projects.php>`__.
+`Herve Lombaert <http://step.polymtl.ca/~rv101/projects.php>`__.
 
 .. [Lombaert13] `Diffeomorphic Spectral Matching of Cortical Surfaces. <http://link.springer.com/chapter/10.1007%2F978-3-642-38868-2_32#page-1>`__
                 H. Lombaert, J. Sporring, and K. Siddiqi." << endl;

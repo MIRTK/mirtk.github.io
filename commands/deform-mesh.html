@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc1 (c4bf0f3)',
+        VERSION:     'v1.0rc1 (6cd048e)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -202,7 +202,7 @@ of dissipation of kinetic energy.</p>
 <dt id="cmdoption-deform-mesh-levels">
 <code class="descname">-levels</code><code class="descclassname"> &lt;min&gt; [&lt;max&gt;]</code><a class="headerlink" href="#cmdoption-deform-mesh-levels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform optimization on starting at level &lt;max&gt; until level &lt;min&gt; (&gt; 0).
-On each level, the node forces are averaged <span class="math">\(2^(level-1)\)</span> times which
+On each level, the node forces are averaged <span class="math">\(2^{level-1}\)</span> times which
 is similar to computing the forces on a coarser mesh. (default: 0 0)</p>
 </dd></dl>
 
@@ -347,8 +347,8 @@ than only the adjacent nodes, but also up to n-connected nodes. (default: 2)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-deform-mesh-balloon-defflation">
-<code class="descname">-balloon-defflation</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-balloon-defflation" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-deform-mesh-balloon-deflation">
+<code class="descname">-balloon-deflation</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-deform-mesh-balloon-deflation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Weight of deflation force based on local intensity statistics. (default: 0)</p>
 </dd></dl>
 

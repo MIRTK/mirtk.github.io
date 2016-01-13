@@ -1392,6 +1392,18 @@ vtkSmartPointer&lt; vtkImageStencilData &gt;&#160;</td><td class="memItemRight" 
 <tr class="separator:a857e04d270e0899b3c417785a42e145c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a444dae7aa6545c28cc3d36d993e41f63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemirtk.html#a444dae7aa6545c28cc3d36d993e41f63">ImageStencilToMask</a> (vtkSmartPointer&lt; vtkImageStencilData &gt; stencil, vtkSmartPointer&lt; vtkImageData &gt; image)</td></tr>
 <tr class="separator:a444dae7aa6545c28cc3d36d993e41f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40b87479224005c06a98d432da6a5256"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemirtk.html#a40b87479224005c06a98d432da6a5256">InitializeDeformableLibrary</a> ()</td></tr>
+<tr class="separator:a40b87479224005c06a98d432da6a5256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab96e850ba6ecc5ff2d477041b96a94cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab96e850ba6ecc5ff2d477041b96a94cb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemirtk.html#ab96e850ba6ecc5ff2d477041b96a94cb">InitializeImageIOLibrary</a> ()</td></tr>
+<tr class="memdesc:ab96e850ba6ecc5ff2d477041b96a94cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize MIRTK ImageIO library. <br /></td></tr>
+<tr class="separator:ab96e850ba6ecc5ff2d477041b96a94cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b75165ab2a96a24fda838a7ce79d28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemirtk.html#ae1b75165ab2a96a24fda838a7ce79d28">InitializeNumericsLibrary</a> ()</td></tr>
+<tr class="separator:ae1b75165ab2a96a24fda838a7ce79d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861e6d0d0ee567716d130cd3b841c31d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemirtk.html#a861e6d0d0ee567716d130cd3b841c31d">InitializeRegistrationLibrary</a> ()</td></tr>
+<tr class="separator:a861e6d0d0ee567716d130cd3b841c31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abff7cfcf541c1610aa0ee9c17b268dec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemirtk.html#abff7cfcf541c1610aa0ee9c17b268dec">InitializeTransformationLibrary</a> ()</td></tr>
+<tr class="separator:abff7cfcf541c1610aa0ee9c17b268dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0497f61235ef3e8891d939f3f4077a59"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0497f61235ef3e8891d939f3f4077a59"></a>
 template&lt;class T &gt; </td></tr>
 <tr class="memitem:a0497f61235ef3e8891d939f3f4077a59"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">ParameterList</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemirtk.html#a0497f61235ef3e8891d939f3f4077a59">Insert</a> (<a class="el" href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">ParameterList</a> &amp;params, string name, T value)</td></tr>
@@ -3822,6 +3834,74 @@ template&lt;class Type &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a40b87479224005c06a98d432da6a5256"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mirtk::InitializeDeformableLibrary </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize MIRTK Deformable library</p>
+<p>Registers all available types with their respective object factories. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae1b75165ab2a96a24fda838a7ce79d28"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mirtk::InitializeNumericsLibrary </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize MIRTK Numerics library</p>
+<p>Registers all available types with their respective object factories. </p>
+
+</div>
+</div>
+<a class="anchor" id="a861e6d0d0ee567716d130cd3b841c31d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mirtk::InitializeRegistrationLibrary </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize MIRTK Registration library</p>
+<p>Registers all available types with their respective object factories. </p>
+
+</div>
+</div>
+<a class="anchor" id="abff7cfcf541c1610aa0ee9c17b268dec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mirtk::InitializeTransformationLibrary </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize MIRTK <a class="el" href="classmirtk_1_1Transformation.html">Transformation</a> library</p>
+<p>Registers all available types with their respective object factories. </p>
 
 </div>
 </div>

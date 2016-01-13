@@ -26,6 +26,6 @@ var searchData=
   ['log',['Log',['../classmirtk_1_1data_1_1op_1_1Log.html',1,'mirtk::data::op']]],
   ['logjacobianconstraint',['LogJacobianConstraint',['../classmirtk_1_1LogJacobianConstraint.html',1,'mirtk']]],
   ['lowerpercentilemean',['LowerPercentileMean',['../classmirtk_1_1data_1_1statistic_1_1LowerPercentileMean.html',1,'mirtk::data::statistic']]],
-  ['lowerthreshold',['LowerThreshold',['../structmirtk_1_1UnaryVoxelFunction_1_1LowerThreshold.html',1,'mirtk::UnaryVoxelFunction']]],
-  ['lowerthreshold',['LowerThreshold',['../classmirtk_1_1data_1_1op_1_1LowerThreshold.html',1,'mirtk::data::op']]]
+  ['lowerthreshold',['LowerThreshold',['../classmirtk_1_1data_1_1op_1_1LowerThreshold.html',1,'mirtk::data::op']]],
+  ['lowerthreshold',['LowerThreshold',['../structmirtk_1_1UnaryVoxelFunction_1_1LowerThreshold.html',1,'mirtk::UnaryVoxelFunction']]]
 ];
