@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc2 (45a8487)',
+        VERSION:     'v1.0rc2 (3c6763b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -144,7 +144,7 @@ parameter &#8220;Volume preservation weight&#8221; to a positive value.</p>
 <dt id="cmdoption-register-model">
 <code class="descname">-model</code><code class="descclassname"> &lt;m1&gt;[+&lt;m2&gt;...]</code><a class="headerlink" href="#cmdoption-register-model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transformation model(s). (default: Rigid+Affine+FFD)
-Alternatively, use &#8220;-par &#8216;Transformation model=&lt;name&gt;&#8217;&#8221; (see <a class="reference internal" href="#cmdoption-register-par"><code class="xref std std-option docutils literal"><span class="pre">-par</span></code></a>).</p>
+Alternatively, use &#8220;-par &#8216;Transformation model&#8217; &lt;name&gt;&#8221; (see <a class="reference internal" href="#cmdoption-register-par"><code class="xref std std-option docutils literal"><span class="pre">-par</span></code></a>).</p>
 </dd></dl>
 
 <dl class="option">
@@ -236,7 +236,7 @@ in the <a class="reference internal" href="#cmdoption-register-images"><code cla
 
 <dl class="option">
 <dt id="cmdoption-register-dofin">
-<code class="descname">-dofin</code><code class="descclassname">  &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofin" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dofin</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read initial transformation from file if <a class="reference internal" href="#cmdoption-register-dofins"><code class="xref std std-option docutils literal"><span class="pre">-dofins</span></code></a> not specified.
 Otherwise, writes the initial transformation obtained by approximating
 the pairwise transformations to the named file.
@@ -249,13 +249,13 @@ output transformation of the registration. (default: none)</p>
 
 <dl class="option">
 <dt id="cmdoption-register-par">
-<code class="descname">-par</code><code class="descclassname"> '&lt;name&gt;=&lt;value&gt;'</code><a class="headerlink" href="#cmdoption-register-par" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-par</code><code class="descclassname"> &lt;name&gt; &lt;value&gt;</code><a class="headerlink" href="#cmdoption-register-par" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify parameter value directly as command argument.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-parin">
-<code class="descname">-parin</code><code class="descclassname">  &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-parin" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-parin</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-parin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read parameters from configuration file. If &#8220;stdin&#8221; or &#8220;cin&#8221;,
 the parameters are read from standard input instead. (default: none)</p>
 </dd></dl>
@@ -275,7 +275,7 @@ final configuration used during the course of the registration.
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-v">
-<code class="descname">-v</code><code class="descclassname"> -verbose [n]</code><a class="headerlink" href="#cmdoption-register-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-register-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-register-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 1)</p>
 </dd></dl>
 
@@ -299,7 +299,7 @@ final configuration used during the course of the registration.
 
 <dl class="option">
 <dt id="cmdoption-register-h">
-<code class="descname">-h</code><code class="descclassname"> -help</code><a class="headerlink" href="#cmdoption-register-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-register-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-register-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -308,7 +308,7 @@ final configuration used during the course of the registration.
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-color">
-<code class="descname">-color</code><code class="descclassname"> | -nocolor</code><a class="headerlink" href="#cmdoption-register-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-register-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-register-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 

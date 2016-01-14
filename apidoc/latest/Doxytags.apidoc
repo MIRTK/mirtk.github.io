@@ -7,7 +7,7 @@
   </compound>
   <compound kind="file">
     <name>BasisScriptConfig.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/CMake/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/CMake/</path>
     <filename>BasisScriptConfig_8cmake</filename>
   </compound>
   <compound kind="file">
@@ -17,7 +17,7 @@
   </compound>
   <compound kind="file">
     <name>Directories.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/CMake/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/CMake/</path>
     <filename>Directories_8cmake</filename>
   </compound>
   <compound kind="file">
@@ -477,12 +477,12 @@
   </compound>
   <compound kind="file">
     <name>mirtkCommonConfig.h</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/include/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/include/</path>
     <filename>mirtkCommonConfig_8h</filename>
   </compound>
   <compound kind="file">
     <name>MIRTKConfig.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/CMake/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/CMake/</path>
     <filename>MIRTKConfig_8cmake</filename>
   </compound>
   <compound kind="file">
@@ -499,7 +499,7 @@
   </compound>
   <compound kind="file">
     <name>MIRTKConfigVersion.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/</path>
     <filename>MIRTKConfigVersion_8cmake</filename>
   </compound>
   <compound kind="file">
@@ -1625,7 +1625,7 @@
   </compound>
   <compound kind="file">
     <name>mirtkImageConfig.h</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/include/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/include/</path>
     <filename>mirtkImageConfig_8h</filename>
   </compound>
   <compound kind="file">
@@ -1658,7 +1658,7 @@
   </compound>
   <compound kind="file">
     <name>mirtkImageIOConfig.h</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/include/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/include/</path>
     <filename>mirtkImageIOConfig_8h</filename>
     <namespace>mirtk</namespace>
     <member kind="function">
@@ -2540,7 +2540,7 @@
   </compound>
   <compound kind="file">
     <name>mirtkNumericsConfig.h</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/include/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/include/</path>
     <filename>mirtkNumericsConfig_8h</filename>
     <namespace>mirtk</namespace>
     <member kind="function">
@@ -3462,7 +3462,7 @@
   </compound>
   <compound kind="file">
     <name>mirtkRegistrationConfig.h</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/include/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/include/</path>
     <filename>mirtkRegistrationConfig_8h</filename>
     <namespace>mirtk</namespace>
     <member kind="function">
@@ -4287,7 +4287,7 @@
   </compound>
   <compound kind="file">
     <name>MIRTKUse.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/</path>
     <filename>MIRTKUse_8cmake</filename>
   </compound>
   <compound kind="file">
@@ -4418,7 +4418,7 @@
   </compound>
   <compound kind="file">
     <name>mirtkVersionInfo.h</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/include/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/include/</path>
     <filename>mirtkVersionInfo_8h</filename>
   </compound>
   <compound kind="file">
@@ -4508,12 +4508,12 @@
   </compound>
   <compound kind="file">
     <name>ProjectSettings.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/CMake/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/CMake/</path>
     <filename>ProjectSettings_8cmake</filename>
   </compound>
   <compound kind="file">
     <name>ScriptConfig.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Xcode/CMake/</path>
+    <path>/Users/as12312/Software/MIRTK/BuildDevelop/CMake/</path>
     <filename>ScriptConfig_8cmake</filename>
   </compound>
   <compound kind="file">

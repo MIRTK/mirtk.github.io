@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0rc2 (45a8487)',
+        VERSION:     'v1.0rc2 (3c6763b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -139,16 +139,28 @@
 <dt id="cmdoption-resample-image-interp">
 <code class="descname">-interp</code><code class="descclassname"> &lt;mode&gt;</code><a class="headerlink" href="#cmdoption-resample-image-interp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolation mode (case insensitive):
-NN, Linear (default), Fast linear, BSpline, Cubic BSpline
-Fast cubic BSpline, CSpline, SBased, Sinc, Gaussian
-NN with padding, Linear with padding
-Fast linear with padding, BSpline with padding
-Cubic BSpline with padding
-Fast cubic BSpline with padding, CSpline with padding
-SBased with padding, Sinc with padding
-Gaussian with padding  -extrap &lt;mode&gt;           Extrapolation mode (case insensitive):
-Default, None, Const (default), NN, Repeat, Mirror
-ConstWithPeriodicTime  -outside &lt;value&gt;         Constant outside value extrapolation. (default: 0)</p>
+NN, Linear (default), Fast linear, BSpline, Cubic BSpline,
+Fast cubic BSpline, CSpline, SBased, Sinc, Gaussian,
+NN with padding, Linear with padding,
+Fast linear with padding, BSpline with padding,
+Cubic BSpline with padding,
+Fast cubic BSpline with padding,
+CSpline with padding, SBased with padding,
+Sinc with padding, Gaussian with padding</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-resample-image-extrap">
+<code class="descname">-extrap</code><code class="descclassname"> &lt;mode&gt;</code><a class="headerlink" href="#cmdoption-resample-image-extrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extrapolation mode (case insensitive):
+Default, None, Const (default), NN, Repeat, Mirror,
+ConstWithPeriodicTime</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-resample-image-outside">
+<code class="descname">-outside</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-resample-image-outside" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant outside value extrapolation. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
@@ -169,7 +181,7 @@ Only linear interpolation for padding!</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-resample-image-v">
-<code class="descname">-v</code><code class="descclassname"> -verbose [n]</code><a class="headerlink" href="#cmdoption-resample-image-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-resample-image-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-resample-image-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
@@ -193,7 +205,7 @@ Only linear interpolation for padding!</p>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-h">
-<code class="descname">-h</code><code class="descclassname"> -help</code><a class="headerlink" href="#cmdoption-resample-image-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-resample-image-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-resample-image-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 

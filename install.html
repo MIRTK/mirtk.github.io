@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0rc2 (45a8487)',
+        VERSION:     'v1.0rc2 (3c6763b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -244,7 +244,7 @@ some cases also the config/Depends.cmake file if present in the respective modul
 <div class="section" id="cmake-gui-example">
 <h3>CMake GUI Example<a class="headerlink" href="#cmake-gui-example" title="Permalink to this headline">¶</a></h3>
 <p>After obtaining a copy of the MIRTK source files, generate the build configuration
-files for your build tool of choice using <a class="reference external" href="http://cmake.org/">CMake</a>.
+files for your build tool of choice using <a class="reference external" href="http://cmake.org/">CMake</a> version 2.8.12 or newer.
 We recommend the use of the CMake GUI with the &#8220;Grouped&#8221; checkbox enabled.
 Advanced options should normally not be required to be modified.</p>
 <p>An example screenshot of a CMake configuration is shown below.</p>
@@ -348,7 +348,7 @@ will be linked with, enable the &#8220;Advanced&#8221; checkbox at the top of th
 <div class="section" id="dependency-not-found">
 <h3>Dependency not found<a class="headerlink" href="#dependency-not-found" title="Permalink to this headline">¶</a></h3>
 <p>When a <a class="reference internal" href="#builddependencies"><span>build dependency</span></a> such as VTK, for example, was not found,
-a <em>DEPENDS</em> variable becomes visible in the GUI (i.e. not marked as advanced) which must be set
+a DEPENDS variable becomes visible in the GUI (i.e. not marked as advanced) which must be set
 to either the installation prefix of the dependency or the directory containing a CMake package
 configuration file (e.g., <cite>VTKConfig.cmake</cite>). See the following screenshot for an example where
 VTK was not found automatically and the path to the <cite>VTKConfig.cmake</cite> file in the VTK build directory
@@ -389,7 +389,7 @@ documentation files can be build (before installation!) using the &#8220;doc&#82
 </div>
 <div class="section" id="installationsteps">
 <span id="id1"></span><h2>Installation<a class="headerlink" href="#installationsteps" title="Permalink to this headline">¶</a></h2>
-<p>After the successful build of the MIRTK, the package can be installed by
+<p>After the successful build of the MIRTK, the software can be installed by
 building the &#8220;install&#8221; target.</p>
 <p>Using GNU Make, run:</p>
 <div class="highlight-python"><div class="highlight"><pre>make install

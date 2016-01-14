@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0rc2 (45a8487)',
+        VERSION:     'v1.0rc2 (3c6763b)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -113,6 +113,11 @@ see the development history and contribute to the MIRTK. To download the latest
 development version, use the <code class="docutils literal"><span class="pre">--branch</span> <span class="pre">develop</span></code> option. Note that branches can be
 switched also after the initial clone command using the
 <a class="reference external" href="https://git-scm.com/docs/git-checkout">git checkout</a> command.</p>
+<p>Before running any of the following Git commands, you have to change to the root directory
+of the downloaded MIRTK repository:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> <span class="nv">$MIRTK_SOURCE_DIR</span>
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p>To download the entire MIRTK distribution including documentation source files,
@@ -121,7 +126,10 @@ third-party library modules, and external packages, run the command:</p>
 </pre></div>
 </div>
 <p class="last">after the initial clone command without any directory path argument. To download
-only selected additional files, run one or more of the following commands.</p>
+only selected additional files, run one or more of the following commands.
+Note that in particular the Documentation submodule contains thousands of HTML
+files from the generated online documentation and takes a few minutes to download.
+All other submodules are rather small in size.</p>
 </div>
 <p>The MIRTK repository includes copies of the Boost and Eigen library header files
 required to build some of the core modules of the MIRTK. Either install these

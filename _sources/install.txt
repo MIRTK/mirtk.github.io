@@ -73,7 +73,7 @@ CMake GUI Example
 -----------------
 
 After obtaining a copy of the MIRTK source files, generate the build configuration
-files for your build tool of choice using CMake_.
+files for your build tool of choice using CMake_ version 2.8.12 or newer.
 We recommend the use of the CMake GUI with the "Grouped" checkbox enabled.
 Advanced options should normally not be required to be modified.
 
@@ -144,7 +144,7 @@ Dependency not found
 --------------------
 
 When a :ref:`build dependency <BuildDependencies>` such as VTK, for example, was not found,
-a *DEPENDS* variable becomes visible in the GUI (i.e. not marked as advanced) which must be set
+a DEPENDS variable becomes visible in the GUI (i.e. not marked as advanced) which must be set
 to either the installation prefix of the dependency or the directory containing a CMake package
 configuration file (e.g., `VTKConfig.cmake`). See the following screenshot for an example where
 VTK was not found automatically and the path to the `VTKConfig.cmake` file in the VTK build directory
@@ -198,7 +198,7 @@ Using Ninja, run::
 Installation
 ============
 
-After the successful build of the MIRTK, the package can be installed by
+After the successful build of the MIRTK, the software can be installed by
 building the "install" target.
 
 Using GNU Make, run::

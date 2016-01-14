@@ -33,6 +33,13 @@ development version, use the ``--branch develop`` option. Note that branches can
 switched also after the initial clone command using the
 `git checkout <https://git-scm.com/docs/git-checkout>`__ command.
 
+Before running any of the following Git commands, you have to change to the root directory
+of the downloaded MIRTK repository:
+
+.. code-block:: bash
+
+    cd $MIRTK_SOURCE_DIR
+
 .. note::
 
    To download the entire MIRTK distribution including documentation source files,
@@ -42,6 +49,9 @@ switched also after the initial clone command using the
 
    after the initial clone command without any directory path argument. To download
    only selected additional files, run one or more of the following commands.
+   Note that in particular the Documentation submodule contains thousands of HTML
+   files from the generated online documentation and takes a few minutes to download.
+   All other submodules are rather small in size.
 
 The MIRTK repository includes copies of the Boost and Eigen library header files
 required to build some of the core modules of the MIRTK. Either install these
