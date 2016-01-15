@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0 (53ff0e8)',
+        VERSION:     'v1.0 (d895a0f)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -27,7 +27,7 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="sidebar.html" />
-    <link rel="next" title="Common Module" href="modules/core/common.html" />
+    <link rel="next" title="Common Module" href="modules/common.html" />
     <link rel="prev" title="Medical Image Registration ToolKit (MIRTK)" href="index.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
@@ -39,7 +39,7 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="modules/core/common.html" title="Common Module"
+          <a href="modules/common.html" title="Common Module"
              accesskey="N">next</a></li>
         <li class="right" >
           <a href="index.html" title="Medical Image Registration ToolKit (MIRTK)"
@@ -115,14 +115,14 @@
 <p>The Common module of the Medical Image Registration ToolKit (MIRTK) defines the base
 classes from which other MIRTK classes are derived. It further contains common
 auxiliary functions and a simple command-line parsing library.</p>
-<p><a class="reference internal" href="modules/core/common.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/common.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="numerics">
 <h3>Numerics<a class="headerlink" href="#numerics" title="Permalink to this headline">¶</a></h3>
 <p>The Numerics module of the Medical Image Registration ToolKit (MIRTK) provides basic
 support for linear algebra computations. It further defines an abstract interface
 for objective functions to be minimized by one of the available iterative optimizers.</p>
-<p><a class="reference internal" href="modules/core/numerics.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/numerics.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="image">
 <h3>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h3>
@@ -131,7 +131,7 @@ and basic filters for imaging data sampled on a uniform grid. It contains image
 interpolation functions which enable the evaluation of these finite discrete images
 in an infinite continuous domain. This is in particular needed for the deformation of
 an image during and after registration.</p>
-<p><a class="reference internal" href="modules/core/image.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/image.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="image-i-o">
 <h3>Image I/O<a class="headerlink" href="#image-i-o" title="Permalink to this headline">¶</a></h3>
@@ -139,7 +139,7 @@ an image during and after registration.</p>
 reading and writing of image files. Supported file formats are GIPL, PGM, and
 the <a class="reference external" href="http://nifti.nimh.nih.gov">NIfTI file format</a>. Image slices can further
 be written to PNG image files when the MIRTK was build WITH_PNG.</p>
-<p><a class="reference internal" href="modules/core/imageio.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/imageio.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="point-set">
 <h3>Point Set<a class="headerlink" href="#point-set" title="Permalink to this headline">¶</a></h3>
@@ -147,19 +147,19 @@ be written to PNG image files when the MIRTK was build WITH_PNG.</p>
 support for general point sets such as fidicual markers, surface meshes, and
 volumetric tetrahedral meshes. It defines different auxiliary types used to
 establish point correspondences between two given point sets/surface meshes.
-These correpondences can be utilized by the <a class="reference internal" href="modules/core/registration.html"><em>Registration</em></a> module to find a
+These correpondences can be utilized by the <a class="reference internal" href="modules/registration.html"><em>Registration</em></a> module to find a
 transformation that aligns two given point sets.</p>
-<p><a class="reference internal" href="modules/core/pointset.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/pointset.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="transformation">
 <h3>Transformation<a class="headerlink" href="#transformation" title="Permalink to this headline">¶</a></h3>
 <p>The Transformation module of the Medical Image Registration ToolKit (MIRTK)
-defines the different transformation models supported by the <a class="reference internal" href="#registrationabstract"><span>Registration</span></a>
+defines the different transformation models supported by the <a class="reference internal" href="modules/registration.html"><em>Registration</em></a>
 module. These include linear homogeneous transformation types and non-rigid
 free-form deformations. The Transformation module further includes a number
 of transformation constraint terms which can be used to regularize the
 registration problem.</p>
-<p><a class="reference internal" href="modules/core/transformation.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/transformation.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="registration">
 <span id="registrationabstract"></span><h3>Registration<a class="headerlink" href="#registration" title="Permalink to this headline">¶</a></h3>
@@ -170,7 +170,7 @@ minimization problem. The object function, referred to as registration energy
 in this context, is put together using the various energy terms. An energy
 term can be either an image (dis-)similarity measure, a transformation
 constraint, or a point set/surface constraint.</p>
-<p><a class="reference internal" href="modules/core/registration.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/registration.html"><em>[more]</em></a></p>
 </div>
 </div>
 <div class="section" id="external-packages">
@@ -187,16 +187,16 @@ of an input segmentation or a bounding sphere based on internal and external
 point set/surface forces. The integration is stopped when a suitable stopping criterion
 is fullfilled such as a fixed number of iterations, target objective function value,
 or surface smoothness (e.g., for cortical surface inflation). The internal forces
-can further be utilized by the <a class="reference internal" href="modules/core/registration.html"><em>Registration</em></a> module to constrain the transformation,
+can further be utilized by the <a class="reference internal" href="modules/registration.html"><em>Registration</em></a> module to constrain the transformation,
 for example, to constrain the cortical surface to remain smooth after transformation.</p>
-<p><a class="reference internal" href="modules/packages/deformable.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/deformable.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="volumetric-mapping">
 <h3>Volumetric Mapping<a class="headerlink" href="#volumetric-mapping" title="Permalink to this headline">¶</a></h3>
 <p>The Volumetric Mapping module of the Medical Image Registration ToolKit (MIRTK) is a library
 for the volumetric mapping of brain volumes. The <a class="reference internal" href="commands/map.html"><em>map</em></a> command can be used to
 compute such volumetric map and to apply it to an input tetrahedral mesh.</p>
-<p><a class="reference internal" href="modules/packages/volumetricmapping.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/volumetricmapping.html"><em>[more]</em></a></p>
 </div>
 </div>
 </div>
@@ -211,7 +211,7 @@ compute such volumetric map and to apply it to an input tetrahedral mesh.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="modules/core/common.html" title="Common Module"
+          <a href="modules/common.html" title="Common Module"
              >next</a></li>
         <li class="right" >
           <a href="index.html" title="Medical Image Registration ToolKit (MIRTK)"

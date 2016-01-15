@@ -8,15 +8,15 @@ Modules
    :hidden:
    :maxdepth: 2
 
-   modules/core/common
-   modules/core/numerics
-   modules/core/image
-   modules/core/imageio
-   modules/core/pointset
-   modules/core/transformation
-   modules/core/registration
-   modules/packages/deformable
-   modules/packages/volumetricmapping
+   modules/common
+   modules/numerics
+   modules/image
+   modules/imageio
+   modules/pointset
+   modules/transformation
+   modules/registration
+   modules/deformable
+   modules/volumetricmapping
 
 .. Replacements for use by descriptions included below to refer to other modules
 
@@ -35,7 +35,7 @@ Common
 
 .. include:: modules/_descriptions/common.rst
 
-:doc:`[more] <modules/core/common>`
+:doc:`[more] <modules/common>`
 
 
 Numerics
@@ -43,7 +43,7 @@ Numerics
 
 .. include:: modules/_descriptions/numerics.rst
 
-:doc:`[more] <modules/core/numerics>`
+:doc:`[more] <modules/numerics>`
 
 
 Image
@@ -51,7 +51,7 @@ Image
 
 .. include:: modules/_descriptions/image.rst
 
-:doc:`[more] <modules/core/image>`
+:doc:`[more] <modules/image>`
 
 
 Image I/O
@@ -59,7 +59,7 @@ Image I/O
 
 .. include:: modules/_descriptions/imageio.rst
 
-:doc:`[more] <modules/core/imageio>`
+:doc:`[more] <modules/imageio>`
 
 
 Point Set
@@ -67,7 +67,7 @@ Point Set
 
 .. include:: modules/_descriptions/pointset.rst
 
-:doc:`[more] <modules/core/pointset>`
+:doc:`[more] <modules/pointset>`
 
 
 Transformation
@@ -75,7 +75,7 @@ Transformation
 
 .. include:: modules/_descriptions/transformation.rst
 
-:doc:`[more] <modules/core/transformation>`
+:doc:`[more] <modules/transformation>`
 
 
 .. _RegistrationAbstract:
@@ -85,7 +85,7 @@ Registration
 
 .. include:: modules/_descriptions/registration.rst
 
-:doc:`[more] <modules/core/registration>`
+:doc:`[more] <modules/registration>`
 
 
 
@@ -103,7 +103,7 @@ Deformable
 
 .. include:: modules/_descriptions/deformable.rst
 
-:doc:`[more] <modules/packages/deformable>`
+:doc:`[more] <modules/deformable>`
 
 
 Volumetric Mapping
@@ -111,4 +111,4 @@ Volumetric Mapping
 
 .. include:: modules/_descriptions/volumetricmapping.rst
 
-:doc:`[more] <modules/packages/volumetricmapping>`
+:doc:`[more] <modules/volumetricmapping>`

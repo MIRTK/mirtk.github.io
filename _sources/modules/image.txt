@@ -1,7 +1,7 @@
 ============
-NIfTI Module
+Image Module
 ============
 
-.. include:: ../_descriptions/nifti.rst
+.. include:: _descriptions/image.rst
 
 .. todo:: Document main module classes and their usage.
