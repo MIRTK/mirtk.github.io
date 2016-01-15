@@ -172,6 +172,7 @@ var searchData=
   ['_7epolydataremeshing',['~PolyDataRemeshing',['../classmirtk_1_1PolyDataRemeshing.html#a4a1645a2d222e1fd2bfbe0165c061e80',1,'mirtk::PolyDataRemeshing']]],
   ['_7epolydatasmoothing',['~PolyDataSmoothing',['../classmirtk_1_1PolyDataSmoothing.html#aada9619a653fe010ec54b97fcad3eb8e',1,'mirtk::PolyDataSmoothing']]],
   ['_7epolyhedron',['~Polyhedron',['../classmirtk_1_1Polyhedron.html#a850d2abb8938d97371fb1dd732abefa4',1,'mirtk::Polyhedron']]],
+  ['_7epolynomial',['~Polynomial',['../classmirtk_1_1Polynomial.html#aa1cde6d1770cebe2d75413f147bb632d',1,'mirtk::Polynomial']]],
   ['_7eprobabilisticimagesimilarity',['~ProbabilisticImageSimilarity',['../classmirtk_1_1ProbabilisticImageSimilarity.html#aadc667e7351ae17c8baf982285e44b84',1,'mirtk::ProbabilisticImageSimilarity']]],
   ['_7equadraticcurvatureconstraint',['~QuadraticCurvatureConstraint',['../classmirtk_1_1QuadraticCurvatureConstraint.html#a4d823a7e623fd537e41596ca84df033e',1,'mirtk::QuadraticCurvatureConstraint']]],
   ['_7eradialerrorfunction',['~RadialErrorFunction',['../classmirtk_1_1RadialErrorFunction.html#aa68e7cc575e15a554fc1c32f94130487',1,'mirtk::RadialErrorFunction']]],

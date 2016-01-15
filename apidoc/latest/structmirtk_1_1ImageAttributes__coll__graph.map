@@ -1,4 +1,4 @@
 <map id="mirtk::ImageAttributes" name="mirtk::ImageAttributes">
-<area shape="rect" id="node2" href="$classmirtk_1_1Matrix.html" title="{mirtk::Matrix\n|# _cols\l# _matrix\l# _owner\l# _rows\l|+ Adjugate()\l+ Clear()\l+ ColIndex()\l+ ColMax()\l+ ColMin()\l+ ColRange()\l+ Cols()\l+ Det()\l+ Det3x3()\l+ Eigenvalues()\land 93 more...\l}" alt="" coords="57,205,172,473"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Matrix.html" title="{mirtk::Matrix\n|# _cols\l# _matrix\l# _owner\l# _rows\l|+ Adjugate()\l+ Clear()\l+ ColIndex()\l+ ColMax()\l+ ColMin()\l+ ColRange()\l+ Cols()\l+ ColStd()\l+ ColSum()\l+ ColVar()\land 100 more...\l}" alt="" coords="57,205,173,473"/>
 <area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="52,5,177,156"/>
 </map>

@@ -3359,6 +3359,13 @@
     <namespace>mirtk</namespace>
   </compound>
   <compound kind="file">
+    <name>mirtkPolynomial.h</name>
+    <path>/Users/as12312/Software/MIRTK/Repository/Modules/Numerics/include/</path>
+    <filename>mirtkPolynomial_8h</filename>
+    <class kind="class">mirtk::Polynomial</class>
+    <namespace>mirtk</namespace>
+  </compound>
+  <compound kind="file">
     <name>mirtkProbabilisticImageSimilarity.h</name>
     <path>/Users/as12312/Software/MIRTK/Repository/Modules/Registration/include/</path>
     <filename>mirtkProbabilisticImageSimilarity_8h</filename>
@@ -14821,8 +14828,8 @@
       <type></type>
       <name>ForEachVoxelIfBody</name>
       <anchorfile>structmirtk_1_1ForEachVoxelIfBody.html</anchorfile>
-      <anchor>ab08b7cc7ed0c45ac277f1b4d627f1e85</anchor>
-      <arglist>(const VoxelFunc &amp;vf, const OutsideFunc &amp;of)</arglist>
+      <anchor>aee1fd5c1cf7d143e0fb7352d0e57023f</anchor>
+      <arglist>(const VoxelFunc &amp;vf, const OutsideFunc &amp;of, const ImageAttributes &amp;attr)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -45515,19 +45522,6 @@
       <arglist>(int n, const double *data, const bool *mask=NULL)</arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>mirtk::UnaryVoxelFunction::LowerThreshold</name>
-    <filename>structmirtk_1_1UnaryVoxelFunction_1_1LowerThreshold.html</filename>
-    <templarg></templarg>
-    <base>mirtk::VoxelFunction</base>
-    <member kind="variable">
-      <type>T</type>
-      <name>_LowerThreshold</name>
-      <anchorfile>structmirtk_1_1UnaryVoxelFunction_1_1LowerThreshold.html</anchorfile>
-      <anchor>a14606319dfe8aa6cb5b9f62b73d111d2</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
   <compound kind="class">
     <name>mirtk::data::op::LowerThreshold</name>
     <filename>classmirtk_1_1data_1_1op_1_1LowerThreshold.html</filename>
@@ -45552,6 +45546,19 @@
       <anchorfile>classmirtk_1_1data_1_1op_1_1LowerThreshold.html</anchorfile>
       <anchor>a42231a8eb36fa13e7b5505dcd5953466</anchor>
       <arglist>(int n, double *data, bool *mask=NULL)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>mirtk::UnaryVoxelFunction::LowerThreshold</name>
+    <filename>structmirtk_1_1UnaryVoxelFunction_1_1LowerThreshold.html</filename>
+    <templarg></templarg>
+    <base>mirtk::VoxelFunction</base>
+    <member kind="variable">
+      <type>T</type>
+      <name>_LowerThreshold</name>
+      <anchorfile>structmirtk_1_1UnaryVoxelFunction_1_1LowerThreshold.html</anchorfile>
+      <anchor>a14606319dfe8aa6cb5b9f62b73d111d2</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45809,6 +45816,27 @@
     </member>
     <member kind="function">
       <type>double</type>
+      <name>ColStd</name>
+      <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
+      <anchor>ad03914a14f206313d3422a1c6c8f3eb7</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>ColSum</name>
+      <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
+      <anchor>afe35fe3031d4bb599983a44833c5ef57</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>ColVar</name>
+      <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
+      <anchor>a632d0e18c549a4484e1fc643327036d2</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
       <name>Det</name>
       <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
       <anchor>aeef85e521d050c69146ccdcd4df4ce04</anchor>
@@ -45981,6 +46009,13 @@
       <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
       <anchor>a8f1abe1dfbf26a63f0f5557da5c942d2</anchor>
       <arglist>(const Vector &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Matrix</name>
+      <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
+      <anchor>ab0e39b381e484f62c8b6839b2a99c3c3</anchor>
+      <arglist>(const PointSet &amp;, bool twoD=false)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -46352,6 +46387,27 @@
       <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
       <anchor>a0965aa7b3b6f3691371ca889003b749c</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>RowStd</name>
+      <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
+      <anchor>ad34e2388dd07803486c92857129b1439</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>RowSum</name>
+      <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
+      <anchor>a7682d49b10eff7ef5873da2877d9b7f2</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>RowVar</name>
+      <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
+      <anchor>a653db0c8b409b54fc1da01a7f2ce561f</anchor>
+      <arglist>(int) const </arglist>
     </member>
     <member kind="function">
       <type>Matrix &amp;</type>
@@ -54686,6 +54742,172 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>mirtk::Polynomial</name>
+    <filename>classmirtk_1_1Polynomial.html</filename>
+    <base>mirtk::Object</base>
+    <member kind="function">
+      <type>void</type>
+      <name>Coefficient</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>aa1885886c79a75ef9ac904d3bb22f675</anchor>
+      <arglist>(int i, double c)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Coefficient</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a25c09bf19651809a84dea143a99ec9b5</anchor>
+      <arglist>(int i) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Coefficients</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a81245b459835602c025807a6952f87bf</anchor>
+      <arglist>(const Vector &amp;coeff)</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector</type>
+      <name>Evaluate</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a2c972148dde6fff232dc7a280d0bc543</anchor>
+      <arglist>(const Matrix &amp;x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Vector</type>
+      <name>Evaluate</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a159269af3f34a529cdd8448b1fb0492d</anchor>
+      <arglist>(const PointSet &amp;x, bool twoD=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Vector</type>
+      <name>Evaluate</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>afbc4322d5790d7c4141c664b6268ce9c</anchor>
+      <arglist>(const Vector &amp;x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Evaluate</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>ad7d5225768eb9a4359d01f43c0196da6</anchor>
+      <arglist>(const Point &amp;x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Evaluate</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>adc8c436f024185aa531cdda05702ef49</anchor>
+      <arglist>(double x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>Exponent</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a899955b99d436295babe33c3d3b453d1</anchor>
+      <arglist>(int i, int j=0) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Fit</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a5bce0595cc1a1e452f8b05132324a548</anchor>
+      <arglist>(const Matrix &amp;x, const Vector &amp;y, int order=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Fit</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>ab786989ede61cd1cf0340d13caf6baf1</anchor>
+      <arglist>(const PointSet &amp;x, const Vector &amp;y, int order=0, bool twoD=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Fit</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a6e36900684828a634a7773793a428016</anchor>
+      <arglist>(const Vector &amp;x, const Vector &amp;y, int order=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsConstant</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>aaa7c76bd1118b027dba9a988cf7b70c8</anchor>
+      <arglist>(int i) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>NumberOfTerms</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a168865e7dc6ebb660d6ea056594bca1b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>Polynomial &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a021856d86f28bbf288ccf07fa5a3465c</anchor>
+      <arglist>(const Polynomial &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Polynomial</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>afca11134127d8592645c2f0f9234af60</anchor>
+      <arglist>(int order=2)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Polynomial</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a1a1241dd9f98cb7fe9260c19cf64d60c</anchor>
+      <arglist>(int p, int order, const Vector &amp;coeff=Vector())</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Polynomial</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>ae06c2b11337f72ec82610dd9713e432e</anchor>
+      <arglist>(const Polynomial &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>ostream &amp;</type>
+      <name>Print</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a9659bda355da35c155f43ceaca2c42fd</anchor>
+      <arglist>(ostream &amp;os, Indent=0) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Print</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>adb1e4e176483edf80baf10196fb01a80</anchor>
+      <arglist>(Indent=0) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetCoefficientsToZero</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>adb0fcea09a78d43913ffba1789c926de</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Polynomial</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>aa1cde6d1770cebe2d75413f147bb632d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>Initialize</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a7d821d51edece5704a6a3e647e8d5926</anchor>
+      <arglist>(int p, int order=0)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>mirtk::data::op::Pow</name>
     <filename>classmirtk_1_1data_1_1op_1_1Pow.html</filename>
     <base>mirtk::data::op::ElementWiseUnaryOp</base>
@@ -60450,6 +60672,19 @@
       <arglist>(int n, const double *data, const bool *mask=NULL)</arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>mirtk::UnaryVoxelFunction::UpperThreshold</name>
+    <filename>structmirtk_1_1UnaryVoxelFunction_1_1UpperThreshold.html</filename>
+    <templarg></templarg>
+    <base>mirtk::VoxelFunction</base>
+    <member kind="variable">
+      <type>T</type>
+      <name>_UpperThreshold</name>
+      <anchorfile>structmirtk_1_1UnaryVoxelFunction_1_1UpperThreshold.html</anchorfile>
+      <anchor>a10e821d65c69b528680eb60c4fce3f39</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
   <compound kind="class">
     <name>mirtk::data::op::UpperThreshold</name>
     <filename>classmirtk_1_1data_1_1op_1_1UpperThreshold.html</filename>
@@ -60474,19 +60709,6 @@
       <anchorfile>classmirtk_1_1data_1_1op_1_1UpperThreshold.html</anchorfile>
       <anchor>a0a9d4a97286a88e661037e87bc1f9816</anchor>
       <arglist>(double value)</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>mirtk::UnaryVoxelFunction::UpperThreshold</name>
-    <filename>structmirtk_1_1UnaryVoxelFunction_1_1UpperThreshold.html</filename>
-    <templarg></templarg>
-    <base>mirtk::VoxelFunction</base>
-    <member kind="variable">
-      <type>T</type>
-      <name>_UpperThreshold</name>
-      <anchorfile>structmirtk_1_1UnaryVoxelFunction_1_1UpperThreshold.html</anchorfile>
-      <anchor>a10e821d65c69b528680eb60c4fce3f39</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -63649,6 +63871,7 @@
     <class kind="class">mirtk::PolyDataRemeshing</class>
     <class kind="class">mirtk::PolyDataSmoothing</class>
     <class kind="class">mirtk::Polyhedron</class>
+    <class kind="class">mirtk::Polynomial</class>
     <class kind="class">mirtk::ProbabilisticImageSimilarity</class>
     <class kind="class">mirtk::QuadraticCurvatureConstraint</class>
     <class kind="class">mirtk::RadialErrorFunction</class>

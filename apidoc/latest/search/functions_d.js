@@ -85,7 +85,7 @@ var searchData=
   ['numberofsurfacecells',['NumberOfSurfaceCells',['../classmirtk_1_1RegisteredPointSet.html#a1d08cb9d4735ca021f22c239c643c212',1,'mirtk::RegisteredPointSet']]],
   ['numberofsurfaceedges',['NumberOfSurfaceEdges',['../classmirtk_1_1RegisteredPointSet.html#a192d2f66033a5a05c8b115cc424cb0c3',1,'mirtk::RegisteredPointSet']]],
   ['numberofsurfacepoints',['NumberOfSurfacePoints',['../classmirtk_1_1RegisteredPointSet.html#ad1666f1b68c53c920c7e203d000e898e',1,'mirtk::RegisteredPointSet']]],
-  ['numberofterms',['NumberOfTerms',['../classmirtk_1_1RegistrationEnergy.html#a817d8570f1831f6e9b4ec7b9977ae335',1,'mirtk::RegistrationEnergy']]],
+  ['numberofterms',['NumberOfTerms',['../classmirtk_1_1Polynomial.html#a168865e7dc6ebb660d6ea056594bca1b',1,'mirtk::Polynomial::NumberOfTerms()'],['../classmirtk_1_1RegistrationEnergy.html#a817d8570f1831f6e9b4ec7b9977ae335',1,'mirtk::RegistrationEnergy::NumberOfTerms()']]],
   ['numberofvalues',['NumberOfValues',['../classmirtk_1_1ImplicitSurfaceUtils_1_1DistanceMeasurement.html#a26be39cb6f6bf5f01ead5bf0e9dc4cb0',1,'mirtk::ImplicitSurfaceUtils::DistanceMeasurement']]],
   ['numberofvectorcomponents',['NumberOfVectorComponents',['../classmirtk_1_1ConstImageIterator.html#a61ca8d7b1be93002d21d9c80c53f313a',1,'mirtk::ConstImageIterator::NumberOfVectorComponents()'],['../classmirtk_1_1ImageRegion.html#a9333c7c8ce1b223e9f75aca7e6e50af1',1,'mirtk::ImageRegion::NumberOfVectorComponents()']]],
   ['numberofverts',['NumberOfVerts',['../classmirtk_1_1RegisteredSurface.html#a1921664229daf7c22e944f85fd5369f9',1,'mirtk::RegisteredSurface']]],

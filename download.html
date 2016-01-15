@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0rc2 (3c6763b)',
+        VERSION:     'v1.0 (53ff0e8)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -98,11 +98,21 @@
 <div class="section" id="source-code">
 <span id="downloadsources"></span><h2>Source Code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
 <p>The source code of the Medical Image Registration ToolKit (MIRTK) is hosted on GitHub
-under the <a class="reference external" href="https://github.com/MIRTK/">MIRTK Organization</a> from which all releases and latest development
-versions can be downloaded. See the <a class="reference internal" href="changelog.html"><em>Release Notes</em></a> for a summary of changes in each release.</p>
-<p>To download the MIRTK source files using <a class="reference external" href="https://git-scm.com">Git</a>, use the following
+by the <a class="reference external" href="https://github.com/BioMedIA/">BioMedIA</a> group.
+The <a class="reference external" href="https://github.com/BioMedIA/MIRTK">BioMedIA/MIRTK</a> repository contains the
+build configuration and source code files of the core libraries and basic MIRTK commands.
+Additional packages can be downloaded from the <a class="reference external" href="https://github.com/MIRTK">MIRTK</a> group.</p>
+<p>All releases and latest development versions can be downloaded by executing the
+commands outlined below in a Terminal window. See the <a class="reference internal" href="changelog.html"><em>Release Notes</em></a> for a summary
+of changes in each release. When you download the source release packages (e.g.,
+<code class="docutils literal"><span class="pre">.tar.gz</span></code> or <code class="docutils literal"><span class="pre">.zip</span></code> archives) from the respective GitHub project pages instead,
+you have to download and extract each individual MIRTK package separately and extract
+the files into the respective subdirectory of the top-level MIRTK source tree.
+We therefore recommend to use <a class="reference external" href="https://git-scm.com">Git</a> as follows to download the MIRTK source code
+distribution.</p>
+<p>To download the core MIRTK source files using <a class="reference external" href="https://git-scm.com">Git</a>, use the following
 <a class="reference external" href="https://git-scm.com/docs/git-clone">git clone</a> command:</p>
-<div class="highlight-bash"><div class="highlight"><pre>git clone --depth <span class="m">1</span> -- https://github.com/MIRTK/MIRTK.git
+<div class="highlight-bash"><div class="highlight"><pre>git clone --depth <span class="m">1</span> -- https://github.com/BioMedIA/MIRTK.git
 <span class="nv">MIRTK_SOURCE_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PWD</span><span class="s2">/MIRTK&quot;</span>
 </pre></div>
 </div>
@@ -128,25 +138,29 @@ third-party library modules, and external packages, run the command:</p>
 <p class="last">after the initial clone command without any directory path argument. To download
 only selected additional files, run one or more of the following commands.</p>
 </div>
-<p>The MIRTK repository includes copies of the Boost and Eigen library header files
-required to build some of the core modules of the MIRTK. Either install these
-libraries using the official installation packages for your operating system
-or initialize the desired Git submodules before configuring the MIRTK build:</p>
+<p>The MIRTK group hosts Git submodule repositories with copies of the <a class="reference external" href="http://www.boost.org">Boost</a> and <a class="reference external" href="http://eigen.tuxfamily.org">Eigen</a>
+library header files required to build some of the core modules of the MIRTK
+(see <a class="reference external" href="https://github.com/MIRTK/Boost">MIRTK/Boost</a> and
+<a class="reference external" href="https://github.com/MIRTK/Eigen">MIRTK/Eigen</a> projects on GitHub).
+Either install a compatible version of these libraries using the official installation
+packages available for your operating system or initialize the desired Git submodules
+before configuring the MIRTK build:</p>
 <div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- ThirdParty/Boost
 git submodule update --init -- ThirdParty/Eigen
 </pre></div>
 </div>
 <p>The source files of core MIRTK modules are included in the top-level MIRTK repository
-under the Modules/ subdirectory. Further optional modules which are developed and
+under the Modules/ subdirectory. Further optional packages which are developed and
 distributed in their own respective Git repository are included as Git submodules
-in the Packages/ directory. To also build these optional modules, initialize and
+in the Packages/ directory. To also build these optional packages, initialize and
 update the desired Git submodules before (re-)configuring the build files, e.g.:</p>
 <div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- Packages/Deformable
 git submodule update --init -- Packages/VolumetricMapping
 </pre></div>
 </div>
 <p>To build the online documentation from the reStructuredText (.rst) files in
-the Documentation subdirectory, clone also the MIRTK Documentation repository:</p>
+the Documentation subdirectory, clone also the
+<a class="reference external" href="https://github.com/MIRTK/Documentation">MIRTK/Documentation</a> repository:</p>
 <div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- Documentation
 </pre></div>
 </div>
@@ -167,8 +181,8 @@ with the MIRTK license. See the following links for details:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/MIRTK/Boost">ThirdParty/Boost</a>: <a class="reference external" href="http://www.boost.org/users/license.html">Boost Software License Version 1.0</a></li>
 <li><a class="reference external" href="https://github.com/MIRTK/Eigen">ThirdParty/Eigen</a>: <a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a></li>
-<li><a class="reference external" href="https://github.com/MIRTK/MIRTK/tree/master/ThirdParty/LBFGS">ThirdParty/LBFGS</a>: <a class="reference external" href="https://opensource.org/licenses/MIT">The MIT License</a></li>
-<li><a class="reference external" href="https://github.com/MIRTK/MIRTK/tree/master/ThirdParty/NIfTI">ThirdParty/NIfTI</a>: <a class="reference external" href="https://en.wikipedia.org/wiki/Public_domain">Public domain</a></li>
+<li><a class="reference external" href="https://github.com/BioMedIA/MIRTK/tree/master/ThirdParty/LBFGS">ThirdParty/LBFGS</a>: <a class="reference external" href="https://opensource.org/licenses/MIT">The MIT License</a></li>
+<li><a class="reference external" href="https://github.com/BioMedIA/MIRTK/tree/master/ThirdParty/NIfTI">ThirdParty/NIfTI</a>: <a class="reference external" href="https://en.wikipedia.org/wiki/Public_domain">Public domain</a></li>
 </ul>
 </div>
 </div>

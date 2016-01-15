@@ -24,6 +24,7 @@ var searchData=
   ['polydataremeshing',['PolyDataRemeshing',['../classmirtk_1_1PolyDataRemeshing.html',1,'mirtk']]],
   ['polydatasmoothing',['PolyDataSmoothing',['../classmirtk_1_1PolyDataSmoothing.html',1,'mirtk']]],
   ['polyhedron',['Polyhedron',['../classmirtk_1_1Polyhedron.html',1,'mirtk']]],
+  ['polynomial',['Polynomial',['../classmirtk_1_1Polynomial.html',1,'mirtk']]],
   ['pow',['Pow',['../classmirtk_1_1data_1_1op_1_1Pow.html',1,'mirtk::data::op']]],
   ['probabilisticimagesimilarity',['ProbabilisticImageSimilarity',['../classmirtk_1_1ProbabilisticImageSimilarity.html',1,'mirtk']]]
 ];

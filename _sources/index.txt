@@ -36,28 +36,15 @@ Background
 ==========
 
 Parts of the Common, Numerics, Image, Transformation, and Registration modules and
-command-line tools of the MIRTK originated from the `Legacy IRTK`_ written by
-`Daniel Rueckert`_ and `Julia Schnabel`_. All of the transformation and registration code
-of the IRTK was rewritten from scratch by `Andreas Schuh`_ during his PhD studies,
-with a new modular and extended registration framework. Additional modules and commands
-for the reconstruction and inflation of cortical surface meshes, the registration
-of surface meshes, and the harmonic mapping of brain volumes were subsequently added to the MIRTK.
-The source code of the MIRTK library became the foundation of the `IRTK 2`_,
-the development of which is currently in progress.
-
-.. note::
-
-    Latest bug fixes and additional features are currently only available in the MIRTK.
-    Other applications and command-line tools such as the image viewer, basic image manipulation
-    tools, and the Segmentation module of the Legacy IRTK are not included in the MIRTK.
-    An installation of the MIRTK will not be required once the IRTK 2 is released with
-    all MIRTK modules and recent updates. Until then, an installation of both the MIRTK
-    and IRTK 2 is recommended.
-
+command-line tools of the MIRTK originated from the `IRTK`_ written by `Daniel Rueckert`_
+and `Julia Schnabel`_. All of the transformation and registration code of the IRTK was
+rewritten from scratch by `Andreas Schuh`_ during his PhD studies, with a new modular and
+extended registration framework. Additional modules and commands for the reconstruction
+and inflation of cortical surface meshes, the registration of surface meshes, and the
+harmonic mapping of brain volumes were subsequently added to the MIRTK.
 
 .. _BioMedIA: https://biomedia.doc.ic.ac.uk/
 .. _Daniel Rueckert: http://www.imperial.ac.uk/people/d.rueckert
 .. _Julia Schnabel: http://www.imagingcdt.com/about/cdt-management/professor-julia-schnabel
 .. _Andreas Schuh: http://www.andreasschuh.com/
-.. _Legacy IRTK: https://github.com/BioMedIA/irtk-legacy
-.. _IRTK 2: https://github.com/BioMedIA/IRTK
+.. _IRTK: https://github.com/BioMedIA/IRTK

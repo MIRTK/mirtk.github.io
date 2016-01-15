@@ -14,15 +14,26 @@ Source Code
 ===========
 
 The source code of the Medical Image Registration ToolKit (MIRTK) is hosted on GitHub
-under the `MIRTK Organization <https://github.com/MIRTK/>`__ from which all releases and latest development
-versions can be downloaded. See the :doc:`changelog` for a summary of changes in each release.
+by the `BioMedIA <https://github.com/BioMedIA/>`__ group.
+The `BioMedIA/MIRTK <https://github.com/BioMedIA/MIRTK>`__ repository contains the
+build configuration and source code files of the core libraries and basic MIRTK commands.
+Additional packages can be downloaded from the `MIRTK <https://github.com/MIRTK>`__ group.
 
-To download the MIRTK source files using Git_, use the following
+All releases and latest development versions can be downloaded by executing the
+commands outlined below in a Terminal window. See the :doc:`changelog` for a summary
+of changes in each release. When you download the source release packages (e.g.,
+``.tar.gz`` or ``.zip`` archives) from the respective GitHub project pages instead,
+you have to download and extract each individual MIRTK package separately and extract
+the files into the respective subdirectory of the top-level MIRTK source tree.
+We therefore recommend to use Git_ as follows to download the MIRTK source code
+distribution.
+
+To download the core MIRTK source files using Git_, use the following
 `git clone <https://git-scm.com/docs/git-clone>`__ command:
 
 .. code-block:: bash
 
-    git clone --depth 1 -- https://github.com/MIRTK/MIRTK.git
+    git clone --depth 1 -- https://github.com/BioMedIA/MIRTK.git
     MIRTK_SOURCE_DIR="$PWD/MIRTK"
 
 where the ``--depth 1`` options request a shallow clone of the latest
@@ -50,10 +61,13 @@ of the downloaded MIRTK repository:
    after the initial clone command without any directory path argument. To download
    only selected additional files, run one or more of the following commands.
 
-The MIRTK repository includes copies of the Boost and Eigen library header files
-required to build some of the core modules of the MIRTK. Either install these
-libraries using the official installation packages for your operating system
-or initialize the desired Git submodules before configuring the MIRTK build:
+The MIRTK group hosts Git submodule repositories with copies of the Boost_ and Eigen_
+library header files required to build some of the core modules of the MIRTK
+(see `MIRTK/Boost <https://github.com/MIRTK/Boost>`__ and
+`MIRTK/Eigen <https://github.com/MIRTK/Eigen>`__ projects on GitHub).
+Either install a compatible version of these libraries using the official installation
+packages available for your operating system or initialize the desired Git submodules
+before configuring the MIRTK build:
 
 .. code-block:: bash
 
@@ -61,9 +75,9 @@ or initialize the desired Git submodules before configuring the MIRTK build:
     git submodule update --init -- ThirdParty/Eigen
 
 The source files of core MIRTK modules are included in the top-level MIRTK repository
-under the Modules/ subdirectory. Further optional modules which are developed and
+under the Modules/ subdirectory. Further optional packages which are developed and
 distributed in their own respective Git repository are included as Git submodules
-in the Packages/ directory. To also build these optional modules, initialize and
+in the Packages/ directory. To also build these optional packages, initialize and
 update the desired Git submodules before (re-)configuring the build files, e.g.:
 
 .. code-block:: bash
@@ -72,14 +86,17 @@ update the desired Git submodules before (re-)configuring the build files, e.g.:
     git submodule update --init -- Packages/VolumetricMapping
 
 To build the online documentation from the reStructuredText (.rst) files in
-the Documentation subdirectory, clone also the MIRTK Documentation repository:
+the Documentation subdirectory, clone also the
+`MIRTK/Documentation <https://github.com/MIRTK/Documentation>`__ repository:
 
 .. code-block:: bash
 
     git submodule update --init -- Documentation
 
 
-.. _Git: https://git-scm.com
+.. _Git:   https://git-scm.com
+.. _Boost: http://www.boost.org
+.. _Eigen: http://eigen.tuxfamily.org
 
 
 System Requirements
@@ -102,5 +119,5 @@ with the MIRTK license. See the following links for details:
 
 - `ThirdParty/Boost <https://github.com/MIRTK/Boost>`__: `Boost Software License Version 1.0 <http://www.boost.org/users/license.html>`__
 - `ThirdParty/Eigen <https://github.com/MIRTK/Eigen>`__: `Mozilla Public License Version 2.0 <https://www.mozilla.org/en-US/MPL/2.0/>`__
-- `ThirdParty/LBFGS <https://github.com/MIRTK/MIRTK/tree/master/ThirdParty/LBFGS>`__: `The MIT License <https://opensource.org/licenses/MIT>`__
-- `ThirdParty/NIfTI <https://github.com/MIRTK/MIRTK/tree/master/ThirdParty/NIfTI>`__: `Public domain <https://en.wikipedia.org/wiki/Public_domain>`__
+- `ThirdParty/LBFGS <https://github.com/BioMedIA/MIRTK/tree/master/ThirdParty/LBFGS>`__: `The MIT License <https://opensource.org/licenses/MIT>`__
+- `ThirdParty/NIfTI <https://github.com/BioMedIA/MIRTK/tree/master/ThirdParty/NIfTI>`__: `Public domain <https://en.wikipedia.org/wiki/Public_domain>`__
