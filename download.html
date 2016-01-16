@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0 (d895a0f)',
+        VERSION:     'v1.0 (e7cd66a)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -110,19 +110,21 @@ you have to download and extract each individual MIRTK package separately and ex
 the files into the respective subdirectory of the top-level MIRTK source tree.
 We therefore recommend to use <a class="reference external" href="https://git-scm.com">Git</a> as follows to download the MIRTK source code
 distribution.</p>
-<p>To download the core MIRTK source files using <a class="reference external" href="https://git-scm.com">Git</a>, use the following
+<p>To download the latest MIRTK source files using <a class="reference external" href="https://git-scm.com">Git</a>, use the following
 <a class="reference external" href="https://git-scm.com/docs/git-clone">git clone</a> command:</p>
-<div class="highlight-bash"><div class="highlight"><pre>git clone --depth <span class="m">1</span> -- https://github.com/BioMedIA/MIRTK.git
+<div class="highlight-bash"><div class="highlight"><pre>git clone --branch master --depth <span class="m">1</span> -- https://github.com/BioMedIA/MIRTK.git
 <span class="nv">MIRTK_SOURCE_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PWD</span><span class="s2">/MIRTK&quot;</span>
 </pre></div>
 </div>
-<p>where the <code class="docutils literal"><span class="pre">--depth</span> <span class="pre">1</span></code> options request a shallow clone of the latest
-release files excluding previous revisions in order to save bandwidth,
+<p>where the <code class="docutils literal"><span class="pre">--branch</span> <span class="pre">master</span> <span class="pre">--depth</span> <span class="pre">1</span></code> options request a shallow clone of the current
+stable version of the source files excluding previous revisions in order to save bandwidth,
 download time, and disk space. The <code class="docutils literal"><span class="pre">--depth</span></code> option may be omitted if you want to
 see the development history and contribute to the MIRTK. To download the latest
 development version, use the <code class="docutils literal"><span class="pre">--branch</span> <span class="pre">develop</span></code> option. Note that branches can be
 switched also after the initial clone command using the
-<a class="reference external" href="https://git-scm.com/docs/git-checkout">git checkout</a> command.</p>
+<a class="reference external" href="https://git-scm.com/docs/git-checkout">git checkout</a> command. To update an existing
+copy of the BioMedIA/MIRTK repository, use the <a class="reference external" href="https://git-scm.com/docs/git-pull">git pull</a>
+command. Note that submodules also have to be updated in this case using the commands below.</p>
 <p>Before running any of the following Git commands, you have to change to the root directory
 of the downloaded MIRTK repository:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span> <span class="nv">$MIRTK_SOURCE_DIR</span>
