@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0 (e7cd66a)',
+        VERSION:     'v1.0 (3b6da28)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -130,7 +130,7 @@ Values outside are then set to the specified padding value.</p>
 <dl class="option">
 <dt id="cmdoption-extract-image-region-Rx2">
 <code class="descname">-Rx2</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-Rx2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Rightmost input voxel index along x axis plus 1.</p>
+<dd><p>Rightmost input voxel index along x axis.</p>
 </dd></dl>
 
 <dl class="option">
@@ -142,7 +142,7 @@ Values outside are then set to the specified padding value.</p>
 <dl class="option">
 <dt id="cmdoption-extract-image-region-Ry2">
 <code class="descname">-Ry2</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-Ry2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Rightmost input voxel index along y axis plus 1.</p>
+<dd><p>Rightmost input voxel index along y axis.</p>
 </dd></dl>
 
 <dl class="option">
@@ -154,7 +154,7 @@ Values outside are then set to the specified padding value.</p>
 <dl class="option">
 <dt id="cmdoption-extract-image-region-Rz2">
 <code class="descname">-Rz2</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-Rz2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Rightmost input voxel index along z axis plus 1.</p>
+<dd><p>Rightmost input voxel index along z axis.</p>
 </dd></dl>
 
 <dl class="option">
@@ -166,7 +166,19 @@ Values outside are then set to the specified padding value.</p>
 <dl class="option">
 <dt id="cmdoption-extract-image-region-Rt2">
 <code class="descname">-Rt2</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-Rt2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Rightmost input voxel index along t axis plus 1.</p>
+<dd><p>Rightmost input voxel index along t axis.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-image-region-patch">
+<code class="descname">-patch</code><code class="descclassname"> &lt;i&gt; &lt;j&gt; &lt;k&gt; &lt;nx&gt; [&lt;ny&gt; [&lt;nz&gt;]]</code><a class="headerlink" href="#cmdoption-extract-image-region-patch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract image patch of given size centered at the specified voxel.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-image-region-closest-patch">
+<code class="descname">-closest-patch</code><code class="descclassname"> &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;nx&gt; [&lt;ny&gt; [&lt;nz&gt;]]</code><a class="headerlink" href="#cmdoption-extract-image-region-closest-patch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract image patch of given size centered at nearest voxel to specified point [mm].</p>
 </dd></dl>
 
 <dl class="option">

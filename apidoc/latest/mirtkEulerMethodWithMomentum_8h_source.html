@@ -97,52 +97,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">  /// Momentum factor</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span>  mirtkPublicAttributeMacro(<span class="keywordtype">double</span>, Momentum);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">  /// Copy attributes of this class from another instance</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span>  <span class="keywordtype">void</span> CopyAttributes(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html">EulerMethodWithMomentum</a> &amp;);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">// ---------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">// Construction/Destruction</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">  /// Constructor</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#a9b9e804239eb9d009187a4a9f17682fa">EulerMethodWithMomentum</a>(<a class="code" href="classmirtk_1_1ObjectiveFunction.html">ObjectiveFunction</a> * = NULL);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">  /// Copy constructor</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#a9b9e804239eb9d009187a4a9f17682fa">EulerMethodWithMomentum</a>(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html">EulerMethodWithMomentum</a> &amp;);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">  /// Assignment operator</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html">EulerMethodWithMomentum</a> &amp;<a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#a3a2e02fa47fcbc1bb4501beac802fa3d">operator =</a>(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html">EulerMethodWithMomentum</a> &amp;);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">  /// Destructor</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#a36cb91653353487d84598f1e17b60bea">~EulerMethodWithMomentum</a>();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="comment">// ---------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">// Parameters</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">using</span> <a class="code" href="classmirtk_1_1LocalOptimizer.html#a78900353998cea4e4805a7cd6f40bb4b">LocalOptimizer::Parameter</a>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">  /// Set parameter value from string</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#a1ba871425259bc9cd1ccd28f43f980ba">Set</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">  /// Get parameters as key/value as string map</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <a class="code" href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">ParameterList</a> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#aa654a521ebe9c80a1acbacf3119692a1">Parameter</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="comment">// ---------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">// Execution</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">  /// Initialize optimization</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">  ///</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">  /// This member funtion is implicitly called by Run.</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#a9e1e2f4bb55a6c50c60f8cee3f719a60">Initialize</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">  /// Whether to exclude the momentum component from the total displacements</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">  /// in normal direction. By default, the _Displacement in normal direction</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">  /// by which a node is actually moved is integrated.</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span>  mirtkPublicAttributeMacro(<span class="keywordtype">bool</span>, ExcludeMomentumFromNormalDisplacement);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">  /// Copy attributes of this class from another instance</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span>  <span class="keywordtype">void</span> CopyAttributes(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html">EulerMethodWithMomentum</a> &amp;);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">// Construction/Destruction</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">  /// Constructor</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#a9b9e804239eb9d009187a4a9f17682fa">EulerMethodWithMomentum</a>(<a class="code" href="classmirtk_1_1ObjectiveFunction.html">ObjectiveFunction</a> * = NULL);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">  /// Copy constructor</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#a9b9e804239eb9d009187a4a9f17682fa">EulerMethodWithMomentum</a>(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html">EulerMethodWithMomentum</a> &amp;);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">  /// Assignment operator</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html">EulerMethodWithMomentum</a> &amp;<a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#a3a2e02fa47fcbc1bb4501beac802fa3d">operator =</a>(<span class="keyword">const</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html">EulerMethodWithMomentum</a> &amp;);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">  /// Destructor</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#a36cb91653353487d84598f1e17b60bea">~EulerMethodWithMomentum</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="comment">// Parameters</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">using</span> <a class="code" href="classmirtk_1_1LocalOptimizer.html#a78900353998cea4e4805a7cd6f40bb4b">LocalOptimizer::Parameter</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">  /// Set parameter value from string</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#a1ba871425259bc9cd1ccd28f43f980ba">Set</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *, <span class="keyword">const</span> <span class="keywordtype">char</span> *);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">  /// Get parameters as key/value as string map</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <a class="code" href="namespacemirtk.html#a848997e3f86ef7bba3c6710a54443bc0">ParameterList</a> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#aa654a521ebe9c80a1acbacf3119692a1">Parameter</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="comment">// Execution</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">  /// Update node displacements</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#ac2b6a16fc8a5a82d52af5fed5751496e">UpdateDisplacement</a>();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">  /// Initialize optimization</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">  ///</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">  /// This member funtion is implicitly called by Run.</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#a9e1e2f4bb55a6c50c60f8cee3f719a60">Initialize</a>();</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">// namespace mirtk</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif // MIRTK_EulerMethodWithMomentum_H</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">  /// Update node displacements</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#ac2b6a16fc8a5a82d52af5fed5751496e">UpdateDisplacement</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">  /// Update recorded node displacement in normal direction</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classmirtk_1_1EulerMethodWithMomentum.html#ab67fd355db456bb5816a6580a2a2bdae">UpdateNormalDisplacement</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <span class="comment">// namespace mirtk</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif // MIRTK_EulerMethodWithMomentum_H</span></div>
 <div class="ttc" id="classmirtk_1_1LocalOptimizer_html_a78900353998cea4e4805a7cd6f40bb4b"><div class="ttname"><a href="classmirtk_1_1LocalOptimizer.html#a78900353998cea4e4805a7cd6f40bb4b">mirtk::LocalOptimizer::Parameter</a></div><div class="ttdeci">virtual ParameterList Parameter() const </div><div class="ttdoc">Get parameters as key/value as string map. </div></div>
 <div class="ttc" id="classmirtk_1_1EulerMethodWithMomentum_html_a36cb91653353487d84598f1e17b60bea"><div class="ttname"><a href="classmirtk_1_1EulerMethodWithMomentum.html#a36cb91653353487d84598f1e17b60bea">mirtk::EulerMethodWithMomentum::~EulerMethodWithMomentum</a></div><div class="ttdeci">virtual ~EulerMethodWithMomentum()</div><div class="ttdoc">Destructor. </div></div>
 <div class="ttc" id="classmirtk_1_1EulerMethodWithMomentum_html_a1ba871425259bc9cd1ccd28f43f980ba"><div class="ttname"><a href="classmirtk_1_1EulerMethodWithMomentum.html#a1ba871425259bc9cd1ccd28f43f980ba">mirtk::EulerMethodWithMomentum::Set</a></div><div class="ttdeci">virtual bool Set(const char *, const char *)</div><div class="ttdoc">Set parameter value from string. </div></div>
@@ -153,6 +163,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classmirtk_1_1EulerMethodWithMomentum_html_a3a2e02fa47fcbc1bb4501beac802fa3d"><div class="ttname"><a href="classmirtk_1_1EulerMethodWithMomentum.html#a3a2e02fa47fcbc1bb4501beac802fa3d">mirtk::EulerMethodWithMomentum::operator=</a></div><div class="ttdeci">EulerMethodWithMomentum &amp; operator=(const EulerMethodWithMomentum &amp;)</div><div class="ttdoc">Assignment operator. </div></div>
 <div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkImageIOConfig_8h_source.html#l00031">mirtkImageIOConfig.h:31</a></div></div>
 <div class="ttc" id="classmirtk_1_1EulerMethodWithMomentum_html"><div class="ttname"><a href="classmirtk_1_1EulerMethodWithMomentum.html">mirtk::EulerMethodWithMomentum</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkEulerMethodWithMomentum_8h_source.html#l00040">mirtkEulerMethodWithMomentum.h:40</a></div></div>
+<div class="ttc" id="classmirtk_1_1EulerMethodWithMomentum_html_ab67fd355db456bb5816a6580a2a2bdae"><div class="ttname"><a href="classmirtk_1_1EulerMethodWithMomentum.html#ab67fd355db456bb5816a6580a2a2bdae">mirtk::EulerMethodWithMomentum::UpdateNormalDisplacement</a></div><div class="ttdeci">virtual void UpdateNormalDisplacement()</div><div class="ttdoc">Update recorded node displacement in normal direction. </div></div>
 <div class="ttc" id="classmirtk_1_1EulerMethodWithMomentum_html_a9b9e804239eb9d009187a4a9f17682fa"><div class="ttname"><a href="classmirtk_1_1EulerMethodWithMomentum.html#a9b9e804239eb9d009187a4a9f17682fa">mirtk::EulerMethodWithMomentum::EulerMethodWithMomentum</a></div><div class="ttdeci">EulerMethodWithMomentum(ObjectiveFunction *=NULL)</div><div class="ttdoc">Constructor. </div></div>
 <div class="ttc" id="classmirtk_1_1ObjectiveFunction_html"><div class="ttname"><a href="classmirtk_1_1ObjectiveFunction.html">mirtk::ObjectiveFunction</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkObjectiveFunction_8h_source.html#l00035">mirtkObjectiveFunction.h:35</a></div></div>
 <div class="ttc" id="classmirtk_1_1EulerMethodWithMomentum_html_ac2b6a16fc8a5a82d52af5fed5751496e"><div class="ttname"><a href="classmirtk_1_1EulerMethodWithMomentum.html#ac2b6a16fc8a5a82d52af5fed5751496e">mirtk::EulerMethodWithMomentum::UpdateDisplacement</a></div><div class="ttdeci">virtual void UpdateDisplacement()</div><div class="ttdoc">Update node displacements. </div></div>

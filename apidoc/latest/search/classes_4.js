@@ -1,7 +1,6 @@
 var searchData=
 [
   ['edgeconnectivity',['EdgeConnectivity',['../classmirtk_1_1EdgeConnectivity.html',1,'mirtk']]],
-  ['edgeinfo',['EdgeInfo',['../structmirtk_1_1PolyDataRemeshing_1_1EdgeInfo.html',1,'mirtk::PolyDataRemeshing']]],
   ['edgeiterator',['EdgeIterator',['../classmirtk_1_1EdgeIterator.html',1,'mirtk']]],
   ['edgetable',['EdgeTable',['../classmirtk_1_1EdgeTable.html',1,'mirtk']]],
   ['elementwisebinaryop',['ElementWiseBinaryOp',['../classmirtk_1_1data_1_1op_1_1ElementWiseBinaryOp.html',1,'mirtk::data::op']]],

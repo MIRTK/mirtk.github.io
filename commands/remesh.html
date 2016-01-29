@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0 (e7cd66a)',
+        VERSION:     'v1.0 (3b6da28)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -99,77 +99,120 @@
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Remeshes a surface mesh such that the resulting mesh has an average
-edge length within the specified limits.</p>
+edge length within the specified limits. The input surface mesh is
+triangulated when necessary before the local remeshing passes.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-remesh-arg-input">
+<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-arg-input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input surface mesh.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-arg-output">
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-arg-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output surface mesh.</p>
+</dd></dl>
+
 </div>
 <div class="section" id="command-options">
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
-<dt id="cmdoption-remesh-write-all">
-<code class="descname">-write-all</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-write-all" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write also intermediate meshes when more than one
-desired average edge length was specified. Output file
-names contain the level number as suffix. (default: off)</p>
-</dd></dl>
-
-<dl class="option">
 <dt id="cmdoption-remesh-target">
 <code class="descname">-target</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-remesh-target" title="Permalink to this definition">¶</a></dt>
-<dd><p>Find closest cell points on target surface
-and use these as new point locations.</p>
+<dd><p>Find closest cell points on target surface and use these as new point locations.
+(default: use points of input mesh)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-edgelength">
-<code class="descname">-edgelength</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-edgelength" title="Permalink to this definition">¶</a></dt>
-<dd><p>&lt;float&gt;...          Average edge length.</p>
+<code class="descname">-edgelength</code><code class="descclassname"> &lt;float&gt;...</code><a class="headerlink" href="#cmdoption-remesh-edgelength" title="Permalink to this definition">¶</a></dt>
+<dd><p>Average edge length. (default: [0, inf)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-remesh-minedgelength">
-<code class="descname">-minedgelength</code><code class="descclassname"> &lt;float&gt;...</code><a class="headerlink" href="#cmdoption-remesh-minedgelength" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-remesh-min-edgelength">
+<code class="descname">-min-edgelength</code><code class="descclassname"> &lt;float&gt;...</code><a class="headerlink" href="#cmdoption-remesh-min-edgelength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimum edge length. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-remesh-maxedgelength">
-<code class="descname">-maxedgelength</code><code class="descclassname"> &lt;float&gt;...</code><a class="headerlink" href="#cmdoption-remesh-maxedgelength" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-remesh-max-edgelength">
+<code class="descname">-max-edgelength</code><code class="descclassname"> &lt;float&gt;...</code><a class="headerlink" href="#cmdoption-remesh-max-edgelength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum edge length. (default: inf)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-remesh-adaptiveedgelength">
-<code class="descname">-adaptiveedgelength</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-remesh-adaptiveedgelength" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-remesh-adaptive-edgelength">
+<code class="descname">-adaptive-edgelength</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-remesh-adaptive-edgelength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of point data array to use for adapting the edge length range. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-remesh-meltorder">
-<code class="descname">-meltorder</code><code class="descclassname"> &lt;index|area|shortest&gt;</code><a class="headerlink" href="#cmdoption-remesh-meltorder" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-remesh-melting-order">
+<code class="descname">-melting-order</code><code class="descclassname"> &lt;none|area|shortest&gt;</code><a class="headerlink" href="#cmdoption-remesh-melting-order" title="Permalink to this definition">¶</a></dt>
 <dd><p>Order in which to process cells in melting pass. (default: area)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-remesh-meltnodes">
-<span id="cmdoption-remesh-nomeltnodes"></span><code class="descname">-meltnodes</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nomeltnodes</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-meltnodes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to allow removal of nodes with connectivity 3. (default: off)</p>
+<dt id="cmdoption-remesh-melt-nodes">
+<span id="cmdoption-remesh-nomelt-nodes"></span><code class="descname">-melt-nodes</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nomelt-nodes</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-melt-nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to allow removal of adjacent nodes with connectivity three
+during melting pass. (default: yes)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-remesh-melttriangles">
-<span id="cmdoption-remesh-nomelttriangles"></span><code class="descname">-melttriangles</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nomelttriangles</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-melttriangles" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to melt triangles when all three edges are too short. (default: off)</p>
+<dt id="cmdoption-remesh-melt-triangles">
+<span id="cmdoption-remesh-nomelt-triangles"></span><code class="descname">-melt-triangles</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nomelt-triangles</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-melt-triangles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to melt triangles when all three edges are too short. (default: no)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-invert-long-edges">
+<span id="cmdoption-remesh-noinvert-long-edges"></span><code class="descname">-invert-long-edges</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noinvert-long-edges</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-invert-long-edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable inversion of triangles sharing one too long edge. (default: no)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-invert-min-height">
+<span id="cmdoption-remesh-noinvert-min-height"></span><code class="descname">-invert-min-height</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noinvert-min-height</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-invert-min-height" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable inversion of triangles when it increases the minimum height. (default: yes)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-noinversion">
+<code class="descname">-noinversion</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-noinversion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable <a class="reference internal" href="#cmdoption-remesh-invert-long-edges"><code class="xref std std-option docutils literal"><span class="pre">-invert-long-edges</span></code></a> and <a class="reference internal" href="#cmdoption-remesh-invert-min-height"><code class="xref std std-option docutils literal"><span class="pre">-invert-min-height</span></code></a>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="output-options">
+<h2>Output options<a class="headerlink" href="#output-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-remesh-write-all">
+<code class="descname">-write-all</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-write-all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write also intermediate meshes when more than one edge length range
+was specified. Output file names contain the level number as suffix. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-ascii">
-<code class="descname">-ascii</code><code class="descclassname">/-binary</code><a class="headerlink" href="#cmdoption-remesh-ascii" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write legacy VTK in ASCII or binary format. (default: binary)</p>
+<span id="cmdoption-remesh-noascii"></span><code class="descname">-ascii</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noascii</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-ascii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write legacy VTK in ASCII or binary format. (default: input type)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-remesh-binary">
+<span id="cmdoption-remesh-nobinary"></span><code class="descname">-binary</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nobinary</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write legacy VTK in ASCII or binary format. (default: input type)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-compress">
 <span id="cmdoption-remesh-nocompress"></span><code class="descname">-compress</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocompress</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-compress" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write XML VTK file with or without compression. (default: compress)</p>
+<dd><p>Write XML VTK file with or without compression. (default: on)</p>
 </dd></dl>
 
 </div>

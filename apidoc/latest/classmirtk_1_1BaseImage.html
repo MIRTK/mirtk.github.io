@@ -69,7 +69,7 @@ Collaboration diagram for mirtk::BaseImage:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmirtk_1_1BaseImage__coll__graph.png" border="0" usemap="#mirtk_1_1BaseImage_coll__map" alt="Collaboration graph"/></div>
 <map name="mirtk_1_1BaseImage_coll__map" id="mirtk_1_1BaseImage_coll__map">
-<area shape="rect" id="node3" href="classmirtk_1_1GenericImage.html" title="{mirtk::GenericImage\l\&lt; TVoxel \&gt;\n|# _data\l# _dataOwner\l# _matrix\l|+ Clear()\l+ Copy()\l+ CopyFrom()\l+ CopyFrom()\l+ CopyFrom()\l+ CropPad()\l+ Data()\l+ Data()\l+ Data()\l+ Data()\land 114 more...\l# AllocateImage()\l}" alt="" coords="26,1505,169,1788"/><area shape="rect" id="node2" href="classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="5,5,131,156"/><area shape="rect" id="node4" href="classmirtk_1_1Matrix.html" title="{mirtk::Matrix\n|# _cols\l# _matrix\l# _owner\l# _rows\l|+ Adjugate()\l+ Clear()\l+ ColIndex()\l+ ColMax()\l+ ColMin()\l+ ColRange()\l+ Cols()\l+ ColStd()\l+ ColSum()\l+ ColVar()\land 100 more...\l}" alt="" coords="74,205,190,473"/><area shape="rect" id="node5" href="structmirtk_1_1ImageAttributes.html" title="{mirtk::ImageAttributes\n|+ _dt\l+ _dx\l+ _dy\l+ _dz\l+ _t\l+ _torigin\l+ _x\l+ _xaxis\l+ _xorigin\l+ _y\l+ _yaxis\l+ _yorigin\l+ _z\l+ _zaxis\l+ _zorigin\l|+ ContainsInSpace()\l+ EqualInSpace()\l+ EqualInTime()\l+ GetImageToWorldMatrix()\l+ GetImageToWorldOrientation()\l+ GetLatticeToWorldMatrix()\l+ GetLatticeToWorldOrientation()\l+ GetWorldToImageMatrix()\l+ GetWorldToImageOrientation()\l+ GetWorldToLatticeMatrix()\land 42 more...\l}" alt="" coords="187,565,405,995"/></map>
+<area shape="rect" id="node3" href="classmirtk_1_1GenericImage.html" title="{mirtk::GenericImage\l\&lt; TVoxel \&gt;\n|# _data\l# _dataOwner\l# _matrix\l|+ Clear()\l+ Copy()\l+ CopyFrom()\l+ CopyFrom()\l+ CopyFrom()\l+ CropPad()\l+ Data()\l+ Data()\l+ Data()\l+ Data()\land 114 more...\l# AllocateImage()\l}" alt="" coords="26,1505,169,1788"/><area shape="rect" id="node2" href="classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="5,5,131,156"/><area shape="rect" id="node4" href="classmirtk_1_1Matrix.html" title="{mirtk::Matrix\n|# _cols\l# _matrix\l# _owner\l# _rows\l|+ AddToCol()\l+ AddToRow()\l+ Adjugate()\l+ Clear()\l+ ColIndex()\l+ ColMax()\l+ ColMean()\l+ ColMin()\l+ ColRange()\l+ Cols()\land 104 more...\l}" alt="" coords="74,205,190,473"/><area shape="rect" id="node5" href="structmirtk_1_1ImageAttributes.html" title="{mirtk::ImageAttributes\n|+ _dt\l+ _dx\l+ _dy\l+ _dz\l+ _t\l+ _torigin\l+ _x\l+ _xaxis\l+ _xorigin\l+ _y\l+ _yaxis\l+ _yorigin\l+ _z\l+ _zaxis\l+ _zorigin\l|+ ContainsInSpace()\l+ EqualInSpace()\l+ EqualInTime()\l+ GetImageToWorldMatrix()\l+ GetImageToWorldOrientation()\l+ GetLatticeToWorldMatrix()\l+ GetLatticeToWorldOrientation()\l+ GetWorldToImageMatrix()\l+ GetWorldToImageOrientation()\l+ GetWorldToLatticeMatrix()\land 44 more...\l}" alt="" coords="187,565,405,995"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -95,6 +95,18 @@ Public Member Functions</h2></td></tr>
 const <a class="el" href="structmirtk_1_1ImageAttributes.html">ImageAttributes</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1BaseImage.html#a61dc54863eb9f6473e56ff2f93dd56c7">Attributes</a> () const </td></tr>
 <tr class="memdesc:a61dc54863eb9f6473e56ff2f93dd56c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the image attributes. <br /></td></tr>
 <tr class="separator:a61dc54863eb9f6473e56ff2f93dd56c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bebf3babc00a4f386f543a0fbdda437"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bebf3babc00a4f386f543a0fbdda437"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1BaseImage.html#a2bebf3babc00a4f386f543a0fbdda437">BoundingBox</a> (int &amp;, int &amp;, int &amp;, int &amp;) const </td></tr>
+<tr class="memdesc:a2bebf3babc00a4f386f543a0fbdda437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get 2D bounding box of image foreground. <br /></td></tr>
+<tr class="separator:a2bebf3babc00a4f386f543a0fbdda437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05023534a5d02c64e09b4f0bcd7668f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05023534a5d02c64e09b4f0bcd7668f0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1BaseImage.html#a05023534a5d02c64e09b4f0bcd7668f0">BoundingBox</a> (int &amp;, int &amp;, int &amp;, int &amp;, int &amp;, int &amp;) const </td></tr>
+<tr class="memdesc:a05023534a5d02c64e09b4f0bcd7668f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get 3D bounding box of image foreground. <br /></td></tr>
+<tr class="separator:a05023534a5d02c64e09b4f0bcd7668f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2b3a959f3f4864f50a12630e1630f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec2b3a959f3f4864f50a12630e1630f9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1BaseImage.html#aec2b3a959f3f4864f50a12630e1630f9">BoundingBox</a> (int &amp;, int &amp;, int &amp;, int &amp;, int &amp;, int &amp;, int &amp;, int &amp;) const </td></tr>
+<tr class="memdesc:aec2b3a959f3f4864f50a12630e1630f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get 3D+t bounding box of image foreground. <br /></td></tr>
+<tr class="separator:aec2b3a959f3f4864f50a12630e1630f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6db90e2007acf5bec3940e3ecadb30c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1BaseImage.html#ac6db90e2007acf5bec3940e3ecadb30c">CenterOfForeground</a> (<a class="el" href="classmirtk_1_1Point.html">Point</a> &amp;center) const </td></tr>
 <tr class="separator:ac6db90e2007acf5bec3940e3ecadb30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26895118ac9470ca8ca4c6a853333406"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1BaseImage.html#a26895118ac9470ca8ca4c6a853333406">CenterOfForeground</a> (<a class="el" href="classmirtk_1_1Point.html">Point</a> &amp;center, double padding) const </td></tr>
@@ -377,6 +389,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a8829382580c0b32f1081061085c77353"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62650f02e2413696c0d4d3f99cdf300b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1BaseImage.html#a62650f02e2413696c0d4d3f99cdf300b">ImageToWorld</a> (double *i2w, bool _3D=true) const </td></tr>
 <tr class="separator:a62650f02e2413696c0d4d3f99cdf300b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839ccfe0c48b0b6274456b8d9eae3688"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a839ccfe0c48b0b6274456b8d9eae3688"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1BaseImage.html#a839ccfe0c48b0b6274456b8d9eae3688">ImageToWorld</a> (<a class="el" href="classmirtk_1_1PointSet.html">PointSet</a> &amp;) const </td></tr>
+<tr class="memdesc:a839ccfe0c48b0b6274456b8d9eae3688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds world coordinates of each voxel to given point set. <br /></td></tr>
+<tr class="separator:a839ccfe0c48b0b6274456b8d9eae3688"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0df4a59149661463c0f67d67a6014b5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0df4a59149661463c0f67d67a6014b5a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1BaseImage.html#a0df4a59149661463c0f67d67a6014b5a">IndexToVoxel</a> (int, int &amp;, int &amp;) const </td></tr>
 <tr class="memdesc:a0df4a59149661463c0f67d67a6014b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to convert index to pixel coordinates. <br /></td></tr>
@@ -785,7 +801,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <div class="textblock"><p>Abstract generic class for 2D or 3D images</p>
 <p>This abstract base class provides generic support for 2D and 3D image classes. It provides functions for accessing image dimension and origin as well as voxel dimensions. It also provides functions for conversion between image and world coordinates. </p>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l00070">70</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l00071">71</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a8f8932e7c68d9565f01e417805c339f1"></a>
 <div class="memitem">
@@ -798,7 +814,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><div class="memdoc">
 <p>Default voxel type used by generic interpolate/extrapolate image functions when instantiated with <a class="el" href="classmirtk_1_1BaseImage.html">BaseImage</a> as template argument as done by the general interpolate image functions which thus can interpolate any scalar image. </p>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l00720">720</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l00733">733</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -835,7 +851,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l00080">80</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l00081">81</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1075,7 +1091,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><div class="memdoc">
 <p>Get affine world coordinate transformation which is applied after the image to world coordinate transformation derived from the imaging geometry when mapping voxel indices to world coordinates </p>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01043">1043</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01056">1056</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1099,9 +1115,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gets the image attributes </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>Use Attributes instead. </dd></dl>
+<p>Gets the image attributes </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Use Attributes instead. </dd></dl>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01599">1599</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01612">1612</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1125,9 +1141,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the total number of voxels </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Use NumberOfVoxels instead. </dd></dl>
+<p>Returns the total number of voxels </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>Use NumberOfVoxels instead. </dd></dl>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01605">1605</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01618">1618</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1175,9 +1191,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Raw pointer to contiguous image data. </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>Use GetDataPointer instead. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated:</a></b></dt><dd>Use GetDataPointer instead. </dd></dl>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01634">1634</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01647">1647</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1225,9 +1241,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Raw pointer to contiguous image data. </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated:</a></b></dt><dd>Use GetDataPointer instead. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd>Use GetDataPointer instead. </dd></dl>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01640">1640</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01653">1653</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1252,9 +1268,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Enumeration value corresponding to pixel scalar type. </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd>Use GetVoxelType instead. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>Use GetVoxelType instead. </dd></dl>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01646">1646</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01659">1659</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1279,9 +1295,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Maximum value a pixel can hold without overflowing. </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>Use GetVoxelTypeMax instead. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated:</a></b></dt><dd>Use GetVoxelTypeMax instead. </dd></dl>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01664">1664</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01677">1677</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1306,9 +1322,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Minimum value a pixel can hold without overflowing. </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated:</a></b></dt><dd>Use GetVoxelTypeMin instead. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>Use GetVoxelTypeMin instead. </dd></dl>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01658">1658</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01671">1671</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1333,9 +1349,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Size of pixel scalar type in bytes. </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>Use GetVoxelTypeSize instead. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated:</a></b></dt><dd>Use GetVoxelTypeSize instead. </dd></dl>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01652">1652</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01665">1665</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1361,7 +1377,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><div class="memdoc">
 <p>Whether this image has a foreground mask which has been either set via PutMask or created upon InitializeMask </p>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01288">1288</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01301">1301</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1457,7 +1473,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><div class="memdoc">
 <p>Whether this image has a foreground mask either set via PutMask with ownership transver or created upon InitializeMask </p>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01294">1294</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01307">1307</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1494,7 +1510,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><div class="memdoc">
 <p>Put affine world coordinate transformation which is applied after the image to world coordinate transformation derived from the imaging geometry when mapping voxel indices to world coordinates. This transformation can be the inverse of the affine transformation obtained by an affine registration with this image as source. </p>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01036">1036</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01049">1049</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1520,7 +1536,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><div class="memdoc">
 <p>Reset affine world coordinate transformation which is applied after the image to world coordinate transformation derived from the imaging geometry when mapping voxel indices to world coordinates. </p>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01049">1049</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l01062">1062</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>
@@ -1545,7 +1561,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <p>Whether this image owns the mask image</p>
 <p>Set to a value above 1 when mask was generated by InitializeMask, in which case the mask will be deleted by the n-th ClearMask call, where n is the number of preceeding (nested) InitializeMask calls. A value of 1 denotes a mask image set by the owner which this image should delete upon destruction. </p>
 
-<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l00118">118</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkBaseImage_8h_source.html#l00119">119</a> of file <a class="el" href="mirtkBaseImage_8h_source.html">mirtkBaseImage.h</a>.</p>
 
 </div>
 </div>

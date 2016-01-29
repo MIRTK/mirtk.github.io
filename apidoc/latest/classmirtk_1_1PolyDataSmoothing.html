@@ -259,6 +259,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PolyDataSmoothing.html#a6409a3eadebd283aa25cc74bf2317afc">mirtkPublicAttributeMacro</a> (bool, SmoothPoints)</td></tr>
 <tr class="memdesc:a6409a3eadebd283aa25cc74bf2317afc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether to smooth the node positions, i.e., input geometry. <br /></td></tr>
 <tr class="separator:a6409a3eadebd283aa25cc74bf2317afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a704f4fc34c1f81080e99b708ceec3d2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a704f4fc34c1f81080e99b708ceec3d2d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PolyDataSmoothing.html#a704f4fc34c1f81080e99b708ceec3d2d">mirtkPublicAttributeMacro</a> (bool, SmoothMagnitude)</td></tr>
+<tr class="memdesc:a704f4fc34c1f81080e99b708ceec3d2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smooth magnitude of (vector-valued) data arrays. <br /></td></tr>
+<tr class="separator:a704f4fc34c1f81080e99b708ceec3d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919eaf724e8bb5d67b248100aaaf34ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PolyDataSmoothing.html#a919eaf724e8bb5d67b248100aaaf34ce">mirtkPublicAttributeMacro</a> (bool, SignedSmoothing)</td></tr>
+<tr class="separator:a919eaf724e8bb5d67b248100aaaf34ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ccf65b3a5f308a1c6b23b5edbfd65a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ccf65b3a5f308a1c6b23b5edbfd65a9"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PolyDataSmoothing.html#a1ccf65b3a5f308a1c6b23b5edbfd65a9">mirtkPublicAttributeMacro</a> (<a class="el" href="classmirtk_1_1PolyDataSmoothing.html#aad89c6e354b6eb7645a7645596762f4c">ArrayNames</a>, SmoothArrays)</td></tr>
 <tr class="memdesc:a1ccf65b3a5f308a1c6b23b5edbfd65a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Names of input point data arrays to be smoothed. <br /></td></tr>
@@ -586,6 +592,41 @@ static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </div><div class="memdoc">
 <p>Whether to average values of adjacent nodes only or to also include the node's values themselves in the average</p>
 <dl class="section note"><dt>Note</dt><dd>In case of an InverseDistance node weighting, the values of the node itself are only included in the average if _Sigma &gt; .0. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a919eaf724e8bb5d67b248100aaaf34ce"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">mirtk::PolyDataSmoothing::mirtkPublicAttributeMacro </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SignedSmoothing&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Smooth (vector-valued) data arrays by only considering those adjacent vectors which have a positive dot product with the data vector at the current node position </p>
 
 </div>
 </div>

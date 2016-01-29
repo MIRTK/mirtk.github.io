@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0 (e7cd66a)',
+        VERSION:     'v1.0 (3b6da28)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -250,7 +250,9 @@ are the name of the parameter and the value to be set as string.</td>
 of the values of its neighboring voxels.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="commands/evaluate-distance.html"><em>evaluate-distance</em></a></td>
-<td>Evaluate distance between two given point sets.</td>
+<td>Evaluate distance between two given point sets. With increased verbosity (see <a class="reference internal" href="commands/evaluate-distance.html#cmdoption-evaluate-distance-v"><code class="xref std std-option docutils literal"><span class="pre">evaluate-distance</span> <span class="pre">-v</span></code></a>),
+the mean and standard deviation of the measured distances  (verbosity level &gt;=1) and the
+individual distance for each target point is reported (verbosity level &gt;=2).</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="commands/evaluate-distortion.html"><em>evaluate-distortion</em></a></td>
 <td>Computes the distortion of a surface mesh under deformation and stores
@@ -372,7 +374,8 @@ a simplified math expression using MATLAB-style indexing for the individual inpu
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="commands/remesh.html"><em>remesh</em></a></td>
 <td>Remeshes a surface mesh such that the resulting mesh has an average
-edge length within the specified limits.</td>
+edge length within the specified limits. The input surface mesh is
+triangulated when necessary before the local remeshing passes.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="commands/resample-image.html"><em>resample-image</em></a></td>
 <td>Resamples an image on a lattice with specified voxel size.</td>

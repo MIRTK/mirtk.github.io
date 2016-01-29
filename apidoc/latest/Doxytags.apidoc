@@ -2853,6 +2853,13 @@
     <namespace>mirtk</namespace>
   </compound>
   <compound kind="file">
+    <name>mirtkPlane.h</name>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/Modules/Numerics/include/</path>
+    <filename>mirtkPlane_8h</filename>
+    <class kind="class">mirtk::Plane</class>
+    <namespace>mirtk</namespace>
+  </compound>
+  <compound kind="file">
     <name>mirtkPNGImageWriter.h</name>
     <path>/Users/as12312/Software/MIRTK/Maintenance/Modules/ImageIO/include/</path>
     <filename>mirtkPNGImageWriter_8h</filename>
@@ -2977,6 +2984,13 @@
     <filename>mirtkPointSetUtils_8h</filename>
     <class kind="struct">mirtk::Vector3D</class>
     <namespace>mirtk</namespace>
+    <member kind="function">
+      <type>void</type>
+      <name>AddPoints</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a057583995035808ded19ec1a0081d822</anchor>
+      <arglist>(PointSet &amp;oset, vtkPointSet *iset)</arglist>
+    </member>
     <member kind="function">
       <type>double</type>
       <name>Area</name>
@@ -3339,8 +3353,6 @@
     <name>mirtkPolyDataRemeshing.h</name>
     <path>/Users/as12312/Software/MIRTK/Maintenance/Modules/PointSet/include/</path>
     <filename>mirtkPolyDataRemeshing_8h</filename>
-    <class kind="struct">mirtk::PolyDataRemeshing::CellInfo</class>
-    <class kind="struct">mirtk::PolyDataRemeshing::EdgeInfo</class>
     <class kind="class">mirtk::PolyDataRemeshing</class>
     <namespace>mirtk</namespace>
   </compound>
@@ -3363,6 +3375,12 @@
     <path>/Users/as12312/Software/MIRTK/Maintenance/Modules/Numerics/include/</path>
     <filename>mirtkPolynomial_8h</filename>
     <class kind="class">mirtk::Polynomial</class>
+    <namespace>mirtk</namespace>
+  </compound>
+  <compound kind="file">
+    <name>mirtkPriorityQueue.h</name>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/Modules/Common/include/</path>
+    <filename>mirtkPriorityQueue_8h</filename>
     <namespace>mirtk</namespace>
   </compound>
   <compound kind="file">
@@ -3438,6 +3456,12 @@
     <path>/Users/as12312/Software/MIRTK/Maintenance/Modules/Numerics/include/</path>
     <filename>mirtkRadialErrorFunction_8h</filename>
     <class kind="class">mirtk::RadialErrorFunction</class>
+    <namespace>mirtk</namespace>
+  </compound>
+  <compound kind="file">
+    <name>mirtkRandom.h</name>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/Modules/Common/include/</path>
+    <filename>mirtkRandom_8h</filename>
     <namespace>mirtk</namespace>
   </compound>
   <compound kind="file">
@@ -5327,6 +5351,27 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>BoundingBox</name>
+      <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
+      <anchor>a2bebf3babc00a4f386f543a0fbdda437</anchor>
+      <arglist>(int &amp;, int &amp;, int &amp;, int &amp;) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>BoundingBox</name>
+      <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
+      <anchor>a05023534a5d02c64e09b4f0bcd7668f0</anchor>
+      <arglist>(int &amp;, int &amp;, int &amp;, int &amp;, int &amp;, int &amp;) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>BoundingBox</name>
+      <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
+      <anchor>aec2b3a959f3f4864f50a12630e1630f9</anchor>
+      <arglist>(int &amp;, int &amp;, int &amp;, int &amp;, int &amp;, int &amp;, int &amp;, int &amp;) const </arglist>
+    </member>
+    <member kind="function">
       <type>int</type>
       <name>CenterOfForeground</name>
       <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
@@ -5878,6 +5923,13 @@
       <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
       <anchor>a62650f02e2413696c0d4d3f99cdf300b</anchor>
       <arglist>(double *i2w, bool _3D=true) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ImageToWorld</name>
+      <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
+      <anchor>a839ccfe0c48b0b6274456b8d9eae3688</anchor>
+      <arglist>(PointSet &amp;) const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -8752,10 +8804,6 @@
     <name>mirtk::UnaryVoxelFunction::CastToGreyValue</name>
     <filename>structmirtk_1_1UnaryVoxelFunction_1_1CastToGreyValue.html</filename>
     <base>mirtk::VoxelFunction</base>
-  </compound>
-  <compound kind="struct">
-    <name>mirtk::PolyDataRemeshing::CellInfo</name>
-    <filename>structmirtk_1_1PolyDataRemeshing_1_1CellInfo.html</filename>
   </compound>
   <compound kind="class">
     <name>mirtk::CharbonnierErrorFunction</name>
@@ -12960,10 +13008,6 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>mirtk::PolyDataRemeshing::EdgeInfo</name>
-    <filename>structmirtk_1_1PolyDataRemeshing_1_1EdgeInfo.html</filename>
-  </compound>
   <compound kind="class">
     <name>mirtk::EdgeIterator</name>
     <filename>classmirtk_1_1EdgeIterator.html</filename>
@@ -13004,8 +13048,8 @@
       <type>int</type>
       <name>EdgeId</name>
       <anchorfile>classmirtk_1_1EdgeTable.html</anchorfile>
-      <anchor>a5410cea732b3225073dbbb9c7382e163</anchor>
-      <arglist>(int, int) const </arglist>
+      <anchor>acbda1865e125265ce64cd4eaee05aea7</anchor>
+      <arglist>(IdType1, IdType2) const </arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -13039,8 +13083,8 @@
       <type>bool</type>
       <name>GetEdge</name>
       <anchorfile>classmirtk_1_1EdgeTable.html</anchorfile>
-      <anchor>a40a7bd56ba06ff4999ab3aedcb3dc82b</anchor>
-      <arglist>(int, int &amp;ptId1, int &amp;ptId2) const </arglist>
+      <anchor>a01fa7692cc0aa19e402a2eaa1e6ff449</anchor>
+      <arglist>(EdgeIdType, IdType1 &amp;ptId1, IdType2 &amp;ptId2) const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -13053,15 +13097,15 @@
       <type>bool</type>
       <name>IsEdge</name>
       <anchorfile>classmirtk_1_1EdgeTable.html</anchorfile>
-      <anchor>a7fc15245a9bf63508c03ad28a8f3f8a5</anchor>
-      <arglist>(int, int) const </arglist>
+      <anchor>ae66b47a31466e84a8a1a30f72302be9a</anchor>
+      <arglist>(IdType1, IdType2) const </arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>NumberOfAdjacentPoints</name>
       <anchorfile>classmirtk_1_1EdgeTable.html</anchorfile>
-      <anchor>af8ee3e550ac165d1c776bb2ffd470d99</anchor>
-      <arglist>(int) const </arglist>
+      <anchor>a50f870f85a2c1f29f78da084a5d3d4d3</anchor>
+      <arglist>(IdType) const </arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -13642,17 +13686,24 @@
       <arglist>(const char *, const char *)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~EulerMethodWithMomentum</name>
+      <anchorfile>classmirtk_1_1EulerMethodWithMomentum.html</anchorfile>
+      <anchor>a36cb91653353487d84598f1e17b60bea</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateDisplacement</name>
       <anchorfile>classmirtk_1_1EulerMethodWithMomentum.html</anchorfile>
       <anchor>ac2b6a16fc8a5a82d52af5fed5751496e</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~EulerMethodWithMomentum</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateNormalDisplacement</name>
       <anchorfile>classmirtk_1_1EulerMethodWithMomentum.html</anchorfile>
-      <anchor>a36cb91653353487d84598f1e17b60bea</anchor>
+      <anchor>ab67fd355db456bb5816a6580a2a2bdae</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -39718,6 +39769,13 @@
       <type>void</type>
       <name>LatticeToWorld</name>
       <anchorfile>structmirtk_1_1ImageAttributes.html</anchorfile>
+      <anchor>a34e852fe323e2943af90d99209691933</anchor>
+      <arglist>(Point &amp;) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>LatticeToWorld</name>
+      <anchorfile>structmirtk_1_1ImageAttributes.html</anchorfile>
       <anchor>a96fa00a5059549aba58e36812924da2f</anchor>
       <arglist>(double &amp;, double &amp;, double &amp;) const </arglist>
     </member>
@@ -39811,6 +39869,13 @@
       <anchorfile>structmirtk_1_1ImageAttributes.html</anchorfile>
       <anchor>a5600f43bb9d0730f0d815d2a4e7d4594</anchor>
       <arglist>(double &amp;, double &amp;, double &amp;) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>WorldToLattice</name>
+      <anchorfile>structmirtk_1_1ImageAttributes.html</anchorfile>
+      <anchor>aa72b49fb265248928f7ce5fe35810356</anchor>
+      <arglist>(Point &amp;) const </arglist>
     </member>
     <member kind="variable">
       <type>double</type>
@@ -45767,6 +45832,20 @@
     <base>mirtk::Object</base>
     <member kind="function">
       <type>Matrix &amp;</type>
+      <name>AddToCol</name>
+      <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
+      <anchor>a9a2a3f5c8213dce30224a54df6d36466</anchor>
+      <arglist>(int, double)</arglist>
+    </member>
+    <member kind="function">
+      <type>Matrix &amp;</type>
+      <name>AddToRow</name>
+      <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
+      <anchor>a5369401b57282d060f8634a9889ca4cc</anchor>
+      <arglist>(int, double)</arglist>
+    </member>
+    <member kind="function">
+      <type>Matrix &amp;</type>
       <name>Adjugate</name>
       <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
       <anchor>ab3c79e966433b6fbda8ac1aca844261e</anchor>
@@ -45791,6 +45870,13 @@
       <name>ColMax</name>
       <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
       <anchor>abccf0e252a317ee8caf7e14bf9680fff</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>ColMean</name>
+      <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
+      <anchor>aeae56fd3e852b5ab3c08a3feb0e39899</anchor>
       <arglist>(int) const </arglist>
     </member>
     <member kind="function">
@@ -46365,6 +46451,13 @@
       <name>RowMax</name>
       <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
       <anchor>ad6364a7c8aee7c766dcc6f9d8dd7d206</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>RowMean</name>
+      <anchorfile>classmirtk_1_1Matrix.html</anchorfile>
+      <anchor>a0d72da0098b530696152275fd038b961</anchor>
       <arglist>(int) const </arglist>
     </member>
     <member kind="function">
@@ -47050,6 +47143,11 @@
       <arglist>()</arglist>
     </member>
   </compound>
+  <compound kind="struct">
+    <name>mirtk::TernaryVoxelFunction::Mul</name>
+    <filename>structmirtk_1_1TernaryVoxelFunction_1_1Mul.html</filename>
+    <base>mirtk::VoxelFunction</base>
+  </compound>
   <compound kind="class">
     <name>mirtk::data::op::Mul</name>
     <filename>classmirtk_1_1data_1_1op_1_1Mul.html</filename>
@@ -47086,11 +47184,6 @@
   <compound kind="struct">
     <name>mirtk::BinaryVoxelFunction::Mul</name>
     <filename>structmirtk_1_1BinaryVoxelFunction_1_1Mul.html</filename>
-    <base>mirtk::VoxelFunction</base>
-  </compound>
-  <compound kind="struct">
-    <name>mirtk::TernaryVoxelFunction::Mul</name>
-    <filename>structmirtk_1_1TernaryVoxelFunction_1_1Mul.html</filename>
     <base>mirtk::VoxelFunction</base>
   </compound>
   <compound kind="class">
@@ -50896,6 +50989,179 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>mirtk::Plane</name>
+    <filename>classmirtk_1_1Plane.html</filename>
+    <base>mirtk::Object</base>
+    <member kind="function">
+      <type>double</type>
+      <name>Distance</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a0ab6e65af50b487aabfe2807ad54ccee</anchor>
+      <arglist>(const Point &amp;p) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Distance</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a488039f206ae7940e89e612935b74efb</anchor>
+      <arglist>(const double p[3]) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Distance</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>ad684fe2878dfd0baa44aae5052d0d480</anchor>
+      <arglist>(double x, double y, double z) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Evaluate</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a7863718211d376bd19bf624d7c5cb176</anchor>
+      <arglist>(const Point &amp;p) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Evaluate</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>ae4ad7a7e03c2c9d3a3ab7a0babbbb356</anchor>
+      <arglist>(const double p[3]) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Evaluate</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>abe279afc55a05bee4dcf1c16216d81ab</anchor>
+      <arglist>(double x, double y, double z) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Fit</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a6beffc3d1b0bd8f86b7088cf1e660323</anchor>
+      <arglist>(const PointSet &amp;points)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Normal</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a492a709d19137d124f1cfae44c5f1375</anchor>
+      <arglist>(const Vector3 &amp;n)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Normal</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a196ceff7ff5457b8108c95f21c10f33d</anchor>
+      <arglist>(double n[3])</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Normal</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a7b54d079eca45fe15aaafdd15a24620f</anchor>
+      <arglist>(double nx, double ny, double nz)</arglist>
+    </member>
+    <member kind="function">
+      <type>Plane &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a39362ff65cbc8004bba5e9eb8ab67edd</anchor>
+      <arglist>(const Plane &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Plane</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>ac25f07a2566d2608a65327a74a9c7652</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Plane</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a556d9668165b19cd234213871bb3b273</anchor>
+      <arglist>(const Vector3 &amp;n, double b)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Plane</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>acd3e1079f38bca6949c37607aa5241ba</anchor>
+      <arglist>(double n[3], double b)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Plane</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>ab808c72bf5ef02a8487c87ea5548c41e</anchor>
+      <arglist>(double nx, double ny, double nz, double b)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Plane</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a883e29ad91e32c2d831fc75293423b19</anchor>
+      <arglist>(const Plane &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>ostream &amp;</type>
+      <name>Print</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>ae19cd96cbb5e2e96eca07983fcc22031</anchor>
+      <arglist>(ostream &amp;os, Indent=0) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Print</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a621870929c925c99f9ba7e9aca38a8c7</anchor>
+      <arglist>(Indent=0) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Project</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a22f73c49ddc262634d834b033de7c84c</anchor>
+      <arglist>(const Point &amp;p, double &amp;u, double &amp;v) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Project</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a4655a26624aad96c8c0f1a0e998f17b2</anchor>
+      <arglist>(const double p[3], double &amp;u, double &amp;v) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Project</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a41a02c1ed756139f53f8eb6b56f5bf8a</anchor>
+      <arglist>(double x, double y, double z, double &amp;u, double &amp;v) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Plane</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a74e26ee34f35dda20903afd5e3aff2ed</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateOrigin</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>a0ce0704f0472c8b76e16797882b485fb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateTangents</name>
+      <anchorfile>classmirtk_1_1Plane.html</anchorfile>
+      <anchor>ad0cd10d3fa0cc313a958bc0fdcfffa65</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>mirtk::PNGImageWriter</name>
     <filename>classmirtk_1_1PNGImageWriter.html</filename>
     <base>mirtk::ImageWriter</base>
@@ -50945,6 +51211,20 @@
       <anchorfile>classmirtk_1_1Point.html</anchorfile>
       <anchor>abc17f7cc0ed7faa5efb6054c4054ba0c</anchor>
       <arglist>(const Point &amp;) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double &amp;</type>
+      <name>operator()</name>
+      <anchorfile>classmirtk_1_1Point.html</anchorfile>
+      <anchor>ab6d50f5402cfaac8f425edd051d263d3</anchor>
+      <arglist>(int i)</arglist>
+    </member>
+    <member kind="function">
+      <type>const double &amp;</type>
+      <name>operator()</name>
+      <anchorfile>classmirtk_1_1Point.html</anchorfile>
+      <anchor>aa603bc0e16bcfe420a8b8a33ae56b3a8</anchor>
+      <arglist>(int i) const </arglist>
     </member>
     <member kind="function">
       <type>Point</type>
@@ -51106,6 +51386,20 @@
       <anchorfile>classmirtk_1_1Point.html</anchorfile>
       <anchor>a6b77549860178839e226811758b50a2f</anchor>
       <arglist>(const Point &amp;) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double &amp;</type>
+      <name>operator[]</name>
+      <anchorfile>classmirtk_1_1Point.html</anchorfile>
+      <anchor>a03f157abf6e49a3d7446fa70d982807f</anchor>
+      <arglist>(int i)</arglist>
+    </member>
+    <member kind="function">
+      <type>const double &amp;</type>
+      <name>operator[]</name>
+      <anchorfile>classmirtk_1_1Point.html</anchorfile>
+      <anchor>a3b40c3c6867fb97733d61f6c369ed194</anchor>
+      <arglist>(int i) const </arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -52571,8 +52865,8 @@
       <type>void</type>
       <name>Clear</name>
       <anchorfile>classmirtk_1_1PointSet.html</anchorfile>
-      <anchor>a998c22ed85b05f745483b8fb36b4c573</anchor>
-      <arglist>()</arglist>
+      <anchor>a4c5ce5c6f875f213faf9c76e319b46ba</anchor>
+      <arglist>(bool deallocate=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Point</type>
@@ -52601,6 +52895,13 @@
       <anchorfile>classmirtk_1_1PointSet.html</anchorfile>
       <anchor>ac07a0d176d38a297e8f9c709e4645dad</anchor>
       <arglist>(double *)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Del</name>
+      <anchorfile>classmirtk_1_1PointSet.html</anchorfile>
+      <anchor>ac1a89dcc17bc9072855ed34fa6572372</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>Point &amp;</type>
@@ -52692,6 +52993,20 @@
       <anchorfile>classmirtk_1_1PointSet.html</anchorfile>
       <anchor>a152862b297dbf807225fb7b462b8be0d</anchor>
       <arglist>(const PointSet &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>PointSet</name>
+      <anchorfile>classmirtk_1_1PointSet.html</anchorfile>
+      <anchor>a251f3103e7d5a16c6457879dbd66b97a</anchor>
+      <arglist>(const PointSet &amp;, const Array&lt; int &gt; &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>PointSet</name>
+      <anchorfile>classmirtk_1_1PointSet.html</anchorfile>
+      <anchor>aca5ce22371b81742363b13995b79b275</anchor>
+      <arglist>(const PointSet &amp;, const OrderedSet&lt; int &gt; &amp;)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -53784,8 +54099,6 @@
     <name>mirtk::PolyDataRemeshing</name>
     <filename>classmirtk_1_1PolyDataRemeshing.html</filename>
     <base>mirtk::PolyDataFilter</base>
-    <class kind="struct">mirtk::PolyDataRemeshing::CellInfo</class>
-    <class kind="struct">mirtk::PolyDataRemeshing::EdgeInfo</class>
     <member kind="enumvalue">
       <name>AREA</name>
       <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
@@ -53826,6 +54139,41 @@
       <arglist>(MeltTriangles)</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>mirtkOnOffMacro</name>
+      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
+      <anchor>aa8d4eaea0b0360f236edf29538dc95a5</anchor>
+      <arglist>(InvertTrianglesSharingOneLongEdge)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>mirtkOnOffMacro</name>
+      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
+      <anchor>af183e1e25769ffb8e97d46babbc5413e</anchor>
+      <arglist>(InvertTrianglesToIncreaseMinHeight)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>NumberOfChanges</name>
+      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
+      <anchor>a47b0ccc6761146e4d1b1b13956b048d7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>NumberOfMeltings</name>
+      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
+      <anchor>ac486119a76dbf54cd46867734833a585</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>NumberOfSubdivisions</name>
+      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
+      <anchor>a049ca672d0519eea2a5ca67dbbf98548</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>PolyDataRemeshing &amp;</type>
       <name>operator=</name>
       <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
@@ -53853,20 +54201,6 @@
       <anchor>a4a1645a2d222e1fd2bfbe0165c061e80</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="typedef" protection="protected">
-      <type>Array&lt; CellInfo &gt;</type>
-      <name>CellQueue</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a64159fe54c94a9135f7bc34027dd8049</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>Array&lt; EdgeInfo &gt;</type>
-      <name>EdgeQueue</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>af348c9d6055783c4275e76832b1f9c08</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>Bisect</name>
@@ -53875,32 +54209,11 @@
       <arglist>(vtkIdType, vtkIdType, vtkIdType, vtkIdType, vtkPoints *, vtkCellArray *)</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>double</type>
-      <name>ComputeArea</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a4b8263fcb9d48f650404b4c958bb859c</anchor>
-      <arglist>(vtkIdType) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
       <type>void</type>
       <name>CopyAttributes</name>
       <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
       <anchor>a6542e898613515f52a81a26aacfb0bcd</anchor>
       <arglist>(const PolyDataRemeshing &amp;)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DeleteCell</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a506785fbddb18b788bfc5cd2a161ba97</anchor>
-      <arglist>(vtkIdType)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>DeleteCells</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a887136bf53153df2aa32117e0ce93ef3</anchor>
-      <arglist>(vtkIdList *)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -53915,41 +54228,6 @@
       <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
       <anchor>ae175db3d498b14413894380033011563</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>vtkIdType</type>
-      <name>GetCellEdgeNeighbor</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a6192bebd62b3baca7436a667282ef522</anchor>
-      <arglist>(vtkIdType, vtkIdType, vtkIdType) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>vtkIdType</type>
-      <name>GetCellEdgeNeighborPoint</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a414c9c410e08b9dd22b815d3d6b0e98e</anchor>
-      <arglist>(vtkIdType, vtkIdType, vtkIdType, bool=false)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>GetCellPointNeighbors</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a7c887a6c1106f3433d0a98834be6b729</anchor>
-      <arglist>(vtkIdType, vtkIdType, vtkIdList *) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>GetNormal</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>aea1ca7a7864733ff18c6632c25dfaff3</anchor>
-      <arglist>(vtkIdType, double[3]) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>GetPoint</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>ab99970e0a191f629a1e1ed5320979fb5</anchor>
-      <arglist>(vtkIdType, double[3]) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -53967,20 +54245,6 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>InterpolatePointData</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>af7784697d20d3415210fcaaf14a394a5</anchor>
-      <arglist>(vtkIdType, vtkIdType, vtkIdType)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>InterpolatePointData</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>abd984cc8a78bc86fedbfb59acde2ff30</anchor>
-      <arglist>(vtkIdType, vtkIdList *, double *)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
       <name>Inversion</name>
       <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
       <anchor>aa36a72af94de43f97bfb88295fc201f0</anchor>
@@ -53988,24 +54252,24 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
+      <name>InversionOfTrianglesSharingOneLongEdge</name>
+      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
+      <anchor>ada38e445162a79cf3fa1bf32cb0689df</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>InversionOfTrianglesToIncreaseMinHeight</name>
+      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
+      <anchor>aeb6eeae517314f72d473ac6895345507</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
       <name>MeltEdge</name>
       <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a90562b8aed7fd92592e40be12969c476</anchor>
+      <anchor>a8a1a9e8717c6d9029db6c5ecc076d3b7</anchor>
       <arglist>(vtkIdType, vtkIdType, vtkIdType, vtkIdList *)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>Melting</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>ac6bad6a53a51775296f06aa08452ad08</anchor>
-      <arglist>(vtkIdType, vtkIdList *)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>Melting</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>ac109c4ab32ff159ded049f109a1fb68b</anchor>
-      <arglist>(vtkIdType, vtkIdList *, vtkIdType, vtkIdList *)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -54016,31 +54280,24 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>MeltTriangle</name>
+      <name>MeltingOfCells</name>
       <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a9981c0c5f0c1e1fdf5f442e7f2b6e9bc</anchor>
-      <arglist>(vtkIdType, vtkIdList *)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>MeltTriplets</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a566a6eca92b5be33e7cb6f775024c4cb</anchor>
+      <anchor>aac1af127c06b5d4a36307bb187827af5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>MiddlePoint</name>
+      <name>MeltingOfNodes</name>
       <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a0e6184741341164847751b0b30a7185c</anchor>
-      <arglist>(vtkIdType, vtkIdType, double[3]) const </arglist>
+      <anchor>a6163f8275c9493c5607956523d274292</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>Point</type>
-      <name>MiddlePoint</name>
+      <type>bool</type>
+      <name>MeltTriangle</name>
       <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a83286b209905b8a33cac8d19ffde7535</anchor>
-      <arglist>(vtkIdType, vtkIdType) const </arglist>
+      <anchor>a0c8b6b0f04b2d9aa3067b2039d32431f</anchor>
+      <arglist>(vtkIdType, vtkIdList *)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
@@ -54069,6 +54326,13 @@
       <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
       <anchor>a614f967a6c53e3321f9b7b9054904061</anchor>
       <arglist>(vtkSmartPointer&lt; vtkDataArray &gt;, MaxEdgeLengthArray)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>mirtkAttributeMacro</name>
+      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
+      <anchor>ab0162d0845889ab6e685b57ede0adc30</anchor>
+      <arglist>(vtkSmartPointer&lt; vtkPriorityQueue &gt;, MeltingQueue)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
@@ -54149,6 +54413,20 @@
     </member>
     <member kind="function" protection="protected">
       <type></type>
+      <name>mirtkPublicAttributeMacro</name>
+      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
+      <anchor>adfd224d90e0f79e2f3410001b8a3881e</anchor>
+      <arglist>(bool, InvertTrianglesSharingOneLongEdge)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>mirtkPublicAttributeMacro</name>
+      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
+      <anchor>affa512a0090a92681e7a1d48562333c3</anchor>
+      <arglist>(bool, InvertTrianglesToIncreaseMinHeight)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
       <name>mirtkReadOnlyAttributeMacro</name>
       <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
       <anchor>a3d46615d602a050f1151fc5af4068a5d</anchor>
@@ -54197,60 +54475,11 @@
       <arglist>(int, NumberOfQuadsections)</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>int</type>
-      <name>NodeConnectivity</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>af2959a67ebcfb0ca76c7bdc1faa09386</anchor>
-      <arglist>(vtkIdType) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
       <type>void</type>
       <name>Quadsect</name>
       <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
       <anchor>a69daf1487627c5d3a70e7a2ab67a5c0b</anchor>
       <arglist>(vtkIdType, vtkIdType, vtkIdType, vtkIdType, vtkPoints *, vtkCellArray *)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>CellQueue</type>
-      <name>QueueCellsByArea</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>af499f5f388fb65b229ff98a08952704a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>CellQueue</type>
-      <name>QueueCellsByShortestEdge</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a83d94e5815bad68f1c68b3ac1e4ffd95</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>EdgeQueue</type>
-      <name>QueueEdgesByLength</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a352ed2a31cefaba2605b2914c906cbee</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>ReplaceCellPoint</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>ae9e036be3ff0d4c60e73ac3c72f4d141</anchor>
-      <arglist>(vtkIdType, vtkIdType, vtkIdType)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>double</type>
-      <name>SquaredMaxEdgeLength</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>a2ae22814ef00d5d202b51598802d3e22</anchor>
-      <arglist>(vtkIdType, vtkIdType) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>double</type>
-      <name>SquaredMinEdgeLength</name>
-      <anchorfile>classmirtk_1_1PolyDataRemeshing.html</anchorfile>
-      <anchor>aa4d29df100a779dc134775fe29375570</anchor>
-      <arglist>(vtkIdType, vtkIdType) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -54571,6 +54800,20 @@
       <type></type>
       <name>mirtkPublicAttributeMacro</name>
       <anchorfile>classmirtk_1_1PolyDataSmoothing.html</anchorfile>
+      <anchor>a704f4fc34c1f81080e99b708ceec3d2d</anchor>
+      <arglist>(bool, SmoothMagnitude)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>mirtkPublicAttributeMacro</name>
+      <anchorfile>classmirtk_1_1PolyDataSmoothing.html</anchorfile>
+      <anchor>a919eaf724e8bb5d67b248100aaaf34ce</anchor>
+      <arglist>(bool, SignedSmoothing)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>mirtkPublicAttributeMacro</name>
+      <anchorfile>classmirtk_1_1PolyDataSmoothing.html</anchorfile>
       <anchor>a1ccf65b3a5f308a1c6b23b5edbfd65a9</anchor>
       <arglist>(ArrayNames, SmoothArrays)</arglist>
     </member>
@@ -54791,8 +55034,22 @@
       <type>double</type>
       <name>Evaluate</name>
       <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
-      <anchor>ad7d5225768eb9a4359d01f43c0196da6</anchor>
-      <arglist>(const Point &amp;x) const </arglist>
+      <anchor>aa0b2d1a62d67375594e6c953bdf3effe</anchor>
+      <arglist>(const Point &amp;x, bool twoD=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Evaluate</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a4a85c3650b2928150f44bad94c99d721</anchor>
+      <arglist>(double x, double y, double z) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Evaluate</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>affcf20ff28919dba5f24bc9f94e72b1f</anchor>
+      <arglist>(double x, double y) const </arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -54800,6 +55057,111 @@
       <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
       <anchor>adc8c436f024185aa531cdda05702ef49</anchor>
       <arglist>(double x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Vector</type>
+      <name>Evaluate1stOrderDerivative</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a14c00d77770b4e495095deed0182d686</anchor>
+      <arglist>(int j, const Matrix &amp;x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Vector</type>
+      <name>Evaluate1stOrderDerivative</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a21a43f1b7f9df0a3cfe4fa7e94dc5b3c</anchor>
+      <arglist>(int j, const PointSet &amp;x, bool twoD=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Vector</type>
+      <name>Evaluate1stOrderDerivative</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a997d0c5ebff3ac0ff475f4cd6be45de0</anchor>
+      <arglist>(int j, const Vector &amp;x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Evaluate1stOrderDerivative</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a6ff0e13d09c75b1278355a9b37ecdefe</anchor>
+      <arglist>(int j, const Point &amp;x, bool twoD=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Evaluate1stOrderDerivative</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>ab1f59eaed82a98df0e61af60b3852ceb</anchor>
+      <arglist>(int j, double x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Vector</type>
+      <name>Evaluate2ndOrderDerivative</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a5a08196858e3aa66237f1924b0add1c5</anchor>
+      <arglist>(int j1, int j2, const Matrix &amp;x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Vector</type>
+      <name>Evaluate2ndOrderDerivative</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a89a2f700a144c256607923a1aedfe7cd</anchor>
+      <arglist>(int j1, int j2, const PointSet &amp;x, bool twoD=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Vector</type>
+      <name>Evaluate2ndOrderDerivative</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a1f317eed1d6c4d892128752c6ccfdaec</anchor>
+      <arglist>(int j1, int j2, const Vector &amp;x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Evaluate2ndOrderDerivative</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a23169f1f8e026b2f02628915d5f1f043</anchor>
+      <arglist>(int j1, int j2, const Point &amp;x, bool twoD=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Evaluate2ndOrderDerivative</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>aa365e671a8c4065ba6d93569e41e4ec5</anchor>
+      <arglist>(int j1, int j2, double x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>EvaluateGaussianCurvature</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a1e3522c066ba5c3045ad8b2be5262c18</anchor>
+      <arglist>(const Point &amp;x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Vector3</type>
+      <name>EvaluateGradient</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>aa60733b7a5b55bba30e1ce7ba1f5a355</anchor>
+      <arglist>(const Point &amp;x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>Matrix3x3</type>
+      <name>EvaluateHessian</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a18b3da9664549cb9c94deb50829cb828</anchor>
+      <arglist>(const Point &amp;x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>EvaluateMeanCurvature</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a379603ae12b7408bd9f97ed7a3fe9ad0</anchor>
+      <arglist>(const Point &amp;x) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>EvaluateTaubinDistance</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a4764ec77b3420c24317d923c7645c6f2</anchor>
+      <arglist>(const Point &amp;x) const </arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -54812,22 +55174,85 @@
       <type>double</type>
       <name>Fit</name>
       <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
-      <anchor>a5bce0595cc1a1e452f8b05132324a548</anchor>
-      <arglist>(const Matrix &amp;x, const Vector &amp;y, int order=0)</arglist>
+      <anchor>a3cac136a15a3875060392cfa124616ac</anchor>
+      <arglist>(const Matrix &amp;x, const Vector &amp;y)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>Fit</name>
       <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
-      <anchor>ab786989ede61cd1cf0340d13caf6baf1</anchor>
-      <arglist>(const PointSet &amp;x, const Vector &amp;y, int order=0, bool twoD=false)</arglist>
+      <anchor>a0c426296734a1fe73842b67db6883733</anchor>
+      <arglist>(const Matrix &amp;x, const Vector &amp;y, const Array&lt; int &gt; &amp;subset)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>Fit</name>
       <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
-      <anchor>a6e36900684828a634a7773793a428016</anchor>
-      <arglist>(const Vector &amp;x, const Vector &amp;y, int order=0)</arglist>
+      <anchor>ad9c6908b9d8147f73eeea4b076ff44a3</anchor>
+      <arglist>(const Matrix &amp;x, const Vector &amp;y, const OrderedSet&lt; int &gt; &amp;subset)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Fit</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a70edbd5f595f7c8ebf6ddbf3f6d18b22</anchor>
+      <arglist>(const PointSet &amp;x, const Vector &amp;y, bool twoD=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>Fit</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a13e9d0b6154decc76a0b700b3ccf211b</anchor>
+      <arglist>(const Vector &amp;x, const Vector &amp;y)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>FitSurface</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a6e968ba8d415557e8ca6777f86d15b0c</anchor>
+      <arglist>(const PointSet &amp;x)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>FitSurface</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>adeb685594a0a976edebabcd05b97d570</anchor>
+      <arglist>(const PointSet &amp;x, const Array&lt; int &gt; &amp;subset)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>FitSurface</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a243d5c4c867be9946414568c51486a42</anchor>
+      <arglist>(const PointSet &amp;x, const OrderedSet&lt; int &gt; &amp;subset)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>FitSurface</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>af0d77963551066b98c5720adba973fc8</anchor>
+      <arglist>(const PointSet &amp;x, const PointSet &amp;n, double c=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>FitSurface</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a6cd0f8e51b6e5847271c3e6ac97c9615</anchor>
+      <arglist>(const PointSet &amp;x, const PointSet &amp;n, const Array&lt; int &gt; &amp;subset, double c=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>FitSurface</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a718b493b34e8d6921f32279ca1d2cf9d</anchor>
+      <arglist>(const PointSet &amp;x, const PointSet &amp;n, const OrderedSet&lt; int &gt; &amp;subset, double c=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>Initialize</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a7d821d51edece5704a6a3e647e8d5926</anchor>
+      <arglist>(int p, int order=0)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -54835,6 +55260,20 @@
       <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
       <anchor>aaa7c76bd1118b027dba9a988cf7b70c8</anchor>
       <arglist>(int i) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>NumberOfActiveTerms</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>a05574675e3d827bd7852ae6741f0aa14</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>NumberOfPassiveTerms</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>ad510e69d9ef9eae9904ff6bfe78bf86c</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>int</type>
@@ -54892,19 +55331,33 @@
       <anchor>adb0fcea09a78d43913ffba1789c926de</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetConstantCoefficient</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>ae43aaef7568384bf53392d2a30a1ae1b</anchor>
+      <arglist>(double value, enum Status status=Passive)</arglist>
+    </member>
+    <member kind="function">
+      <type>enum Status</type>
+      <name>Status</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>aabf4114d7575ed2b75b4397c1548db9d</anchor>
+      <arglist>(int i) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Status</name>
+      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
+      <anchor>abf930146254a1492496edd5641accdea</anchor>
+      <arglist>(int i, enum Status s)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
       <name>~Polynomial</name>
       <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
       <anchor>aa1cde6d1770cebe2d75413f147bb632d</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>Initialize</name>
-      <anchorfile>classmirtk_1_1Polynomial.html</anchorfile>
-      <anchor>a7d821d51edece5704a6a3e647e8d5926</anchor>
-      <arglist>(int p, int order=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -58613,11 +59066,6 @@
       <arglist>(const char *, const char *)</arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>mirtk::BinaryVoxelFunction::Sub</name>
-    <filename>structmirtk_1_1BinaryVoxelFunction_1_1Sub.html</filename>
-    <base>mirtk::VoxelFunction</base>
-  </compound>
   <compound kind="class">
     <name>mirtk::data::op::Sub</name>
     <filename>classmirtk_1_1data_1_1op_1_1Sub.html</filename>
@@ -58650,6 +59098,11 @@
       <anchor>ac214eb003b9d96b8b3f0cf40ab812526</anchor>
       <arglist>(const char *fname)</arglist>
     </member>
+  </compound>
+  <compound kind="struct">
+    <name>mirtk::BinaryVoxelFunction::Sub</name>
+    <filename>structmirtk_1_1BinaryVoxelFunction_1_1Sub.html</filename>
+    <base>mirtk::VoxelFunction</base>
   </compound>
   <compound kind="class">
     <name>mirtk::TransformationUtils::SubDisplacements</name>
@@ -61172,6 +61625,13 @@
   <compound kind="class">
     <name>mirtk::Vector3</name>
     <filename>classmirtk_1_1Vector3.html</filename>
+    <member kind="function">
+      <type>double</type>
+      <name>Unitize</name>
+      <anchorfile>classmirtk_1_1Vector3.html</anchorfile>
+      <anchor>af981ab6fa19ecec93fe25bd43f57c9d8</anchor>
+      <arglist>(double fTolerance=1e-06)</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>mirtk::Vector3D</name>
@@ -63857,6 +64317,7 @@
     <class kind="class">mirtk::PeronaMalikErrorFunction</class>
     <class kind="class">mirtk::PGMImageReader</class>
     <class kind="class">mirtk::PGMImageWriter</class>
+    <class kind="class">mirtk::Plane</class>
     <class kind="class">mirtk::PNGImageWriter</class>
     <class kind="class">mirtk::Point</class>
     <class kind="class">mirtk::PointCorrespondence</class>
@@ -64135,6 +64596,13 @@
       <anchorfile>namespacemirtk.html</anchorfile>
       <anchor>ad3d9459232796db3239cf948a14fc5be</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>AddPoints</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a057583995035808ded19ec1a0081d822</anchor>
+      <arglist>(PointSet &amp;oset, vtkPointSet *iset)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -65463,15 +65931,15 @@
       <type>string</type>
       <name>ToString</name>
       <anchorfile>namespacemirtk.html</anchorfile>
-      <anchor>aba768bbdd245a56077af92a44f4001df</anchor>
-      <arglist>(const ConnectivityType &amp;value, int w, char c, bool left)</arglist>
+      <anchor>a4dca134e706fd4ab94b486a50ff8028b</anchor>
+      <arglist>(const EnergyMeasure &amp;value, int w, char c, bool left)</arglist>
     </member>
     <member kind="function">
       <type>string</type>
       <name>ToString</name>
       <anchorfile>namespacemirtk.html</anchorfile>
-      <anchor>a4dca134e706fd4ab94b486a50ff8028b</anchor>
-      <arglist>(const EnergyMeasure &amp;value, int w, char c, bool left)</arglist>
+      <anchor>aba768bbdd245a56077af92a44f4001df</anchor>
+      <arglist>(const ConnectivityType &amp;value, int w, char c, bool left)</arglist>
     </member>
     <member kind="function">
       <type>string</type>

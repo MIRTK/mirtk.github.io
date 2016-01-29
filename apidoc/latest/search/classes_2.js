@@ -1,7 +1,6 @@
 var searchData=
 [
   ['casttogreyvalue',['CastToGreyValue',['../structmirtk_1_1UnaryVoxelFunction_1_1CastToGreyValue.html',1,'mirtk::UnaryVoxelFunction']]],
-  ['cellinfo',['CellInfo',['../structmirtk_1_1PolyDataRemeshing_1_1CellInfo.html',1,'mirtk::PolyDataRemeshing']]],
   ['charbonniererrorfunction',['CharbonnierErrorFunction',['../classmirtk_1_1CharbonnierErrorFunction.html',1,'mirtk']]],
   ['cifstream',['Cifstream',['../classmirtk_1_1Cifstream.html',1,'mirtk']]],
   ['cityblockdistancetransform',['CityBlockDistanceTransform',['../classmirtk_1_1CityBlockDistanceTransform.html',1,'mirtk']]],

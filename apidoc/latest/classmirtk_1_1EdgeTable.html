@@ -70,8 +70,9 @@ Collaboration diagram for mirtk::EdgeTable:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5410cea732b3225073dbbb9c7382e163"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1EdgeTable.html#a5410cea732b3225073dbbb9c7382e163">EdgeId</a> (int, int) const </td></tr>
-<tr class="separator:a5410cea732b3225073dbbb9c7382e163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbda1865e125265ce64cd4eaee05aea7"><td class="memTemplParams" colspan="2">template&lt;class IdType1 , class IdType2 &gt; </td></tr>
+<tr class="memitem:acbda1865e125265ce64cd4eaee05aea7"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmirtk_1_1EdgeTable.html#acbda1865e125265ce64cd4eaee05aea7">EdgeId</a> (IdType1, IdType2) const </td></tr>
+<tr class="separator:acbda1865e125265ce64cd4eaee05aea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb6e2a1b50c3e84c9729a54728b451f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb6e2a1b50c3e84c9729a54728b451f0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1EdgeTable.html#acb6e2a1b50c3e84c9729a54728b451f0">EdgeTable</a> (vtkDataSet *=NULL)</td></tr>
 <tr class="memdesc:acb6e2a1b50c3e84c9729a54728b451f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct edge table for given dataset. <br /></td></tr>
@@ -88,22 +89,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1EdgeTable.html#a00332fa68c7f3aec9615d490d15bcc93">GetAdjacentPoints</a> (int, const int *&amp;, const int *&amp;) const </td></tr>
 <tr class="memdesc:a00332fa68c7f3aec9615d490d15bcc93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get start and end pointer into list of adjacent nodes (thread-safe) <br /></td></tr>
 <tr class="separator:a00332fa68c7f3aec9615d490d15bcc93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40a7bd56ba06ff4999ab3aedcb3dc82b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40a7bd56ba06ff4999ab3aedcb3dc82b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1EdgeTable.html#a40a7bd56ba06ff4999ab3aedcb3dc82b">GetEdge</a> (int, int &amp;ptId1, int &amp;ptId2) const </td></tr>
-<tr class="memdesc:a40a7bd56ba06ff4999ab3aedcb3dc82b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get IDs of edge nodes (ptId1 &lt; ptId2) <br /></td></tr>
-<tr class="separator:a40a7bd56ba06ff4999ab3aedcb3dc82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01fa7692cc0aa19e402a2eaa1e6ff449"><td class="memTemplParams" colspan="2"><a class="anchor" id="a01fa7692cc0aa19e402a2eaa1e6ff449"></a>
+template&lt;class EdgeIdType , class IdType1 , class IdType2 &gt; </td></tr>
+<tr class="memitem:a01fa7692cc0aa19e402a2eaa1e6ff449"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmirtk_1_1EdgeTable.html#a01fa7692cc0aa19e402a2eaa1e6ff449">GetEdge</a> (EdgeIdType, IdType1 &amp;ptId1, IdType2 &amp;ptId2) const </td></tr>
+<tr class="memdesc:a01fa7692cc0aa19e402a2eaa1e6ff449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get IDs of edge nodes (ptId1 &lt; ptId2) <br /></td></tr>
+<tr class="separator:a01fa7692cc0aa19e402a2eaa1e6ff449"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5eb60b6074f3f1af9bc20a09cbbebd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5eb60b6074f3f1af9bc20a09cbbebd3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1EdgeTable.html#ac5eb60b6074f3f1af9bc20a09cbbebd3">Initialize</a> (vtkDataSet *)</td></tr>
 <tr class="memdesc:ac5eb60b6074f3f1af9bc20a09cbbebd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize edge table from given dataset. <br /></td></tr>
 <tr class="separator:ac5eb60b6074f3f1af9bc20a09cbbebd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fc15245a9bf63508c03ad28a8f3f8a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fc15245a9bf63508c03ad28a8f3f8a5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1EdgeTable.html#a7fc15245a9bf63508c03ad28a8f3f8a5">IsEdge</a> (int, int) const </td></tr>
-<tr class="memdesc:a7fc15245a9bf63508c03ad28a8f3f8a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether two nodes are connected by an edge. <br /></td></tr>
-<tr class="separator:a7fc15245a9bf63508c03ad28a8f3f8a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8ee3e550ac165d1c776bb2ffd470d99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8ee3e550ac165d1c776bb2ffd470d99"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1EdgeTable.html#af8ee3e550ac165d1c776bb2ffd470d99">NumberOfAdjacentPoints</a> (int) const </td></tr>
-<tr class="memdesc:af8ee3e550ac165d1c776bb2ffd470d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of adjacent points. <br /></td></tr>
-<tr class="separator:af8ee3e550ac165d1c776bb2ffd470d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66b47a31466e84a8a1a30f72302be9a"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae66b47a31466e84a8a1a30f72302be9a"></a>
+template&lt;class IdType1 , class IdType2 &gt; </td></tr>
+<tr class="memitem:ae66b47a31466e84a8a1a30f72302be9a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmirtk_1_1EdgeTable.html#ae66b47a31466e84a8a1a30f72302be9a">IsEdge</a> (IdType1, IdType2) const </td></tr>
+<tr class="memdesc:ae66b47a31466e84a8a1a30f72302be9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether two nodes are connected by an edge. <br /></td></tr>
+<tr class="separator:ae66b47a31466e84a8a1a30f72302be9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50f870f85a2c1f29f78da084a5d3d4d3"><td class="memTemplParams" colspan="2"><a class="anchor" id="a50f870f85a2c1f29f78da084a5d3d4d3"></a>
+template&lt;class IdType &gt; </td></tr>
+<tr class="memitem:a50f870f85a2c1f29f78da084a5d3d4d3"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmirtk_1_1EdgeTable.html#a50f870f85a2c1f29f78da084a5d3d4d3">NumberOfAdjacentPoints</a> (IdType) const </td></tr>
+<tr class="memdesc:a50f870f85a2c1f29f78da084a5d3d4d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of adjacent points. <br /></td></tr>
+<tr class="separator:a50f870f85a2c1f29f78da084a5d3d4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a692a304d36e12e80840ddfbff9d31dcd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a692a304d36e12e80840ddfbff9d31dcd"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1EdgeTable.html#a692a304d36e12e80840ddfbff9d31dcd">NumberOfPoints</a> () const </td></tr>
 <tr class="memdesc:a692a304d36e12e80840ddfbff9d31dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of nodes. <br /></td></tr>
@@ -394,9 +398,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p>Definition at line <a class="el" href="mirtkEdgeTable_8h_source.html#l00043">43</a> of file <a class="el" href="mirtkEdgeTable_8h_source.html">mirtkEdgeTable.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a5410cea732b3225073dbbb9c7382e163"></a>
+<a class="anchor" id="acbda1865e125265ce64cd4eaee05aea7"></a>
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;class IdType1 , class IdType2 &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -404,13 +410,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         <tr>
           <td class="memname">int mirtk::EdgeTable::EdgeId </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">IdType1&#160;</td>
           <td class="paramname"><em>ptId1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">IdType2&#160;</td>
           <td class="paramname"><em>ptId2</em>&#160;</td>
         </tr>
         <tr>
@@ -428,7 +434,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Get ID of undirected edge connecting two nodes</p>
 <dl class="section return"><dt>Returns</dt><dd>Zero-based edge ID or -1 if edge does not exist. </dd></dl>
 
-<p>Definition at line <a class="el" href="mirtkEdgeTable_8h_source.html#l00108">108</a> of file <a class="el" href="mirtkEdgeTable_8h_source.html">mirtkEdgeTable.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkEdgeTable_8h_source.html#l00114">114</a> of file <a class="el" href="mirtkEdgeTable_8h_source.html">mirtkEdgeTable.h</a>.</p>
 
 </div>
 </div>

@@ -66,7 +66,7 @@ Collaboration diagram for mirtk::PointSet:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmirtk_1_1PointSet__coll__graph.png" border="0" usemap="#mirtk_1_1PointSet_coll__map" alt="Collaboration graph"/></div>
 <map name="mirtk_1_1PointSet_coll__map" id="mirtk_1_1PointSet_coll__map">
-<area shape="rect" id="node2" href="classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="21,5,147,156"/><area shape="rect" id="node3" href="classmirtk_1_1Point.html" title="{mirtk::Point\n|+ _x\l+ _y\l+ _z\l|+ Distance()\l+ Distance()\l+ operator!=()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*=()\l+ operator*=()\l+ operator*=()\land 32 more...\l}" alt="" coords="91,205,199,459"/></map>
+<area shape="rect" id="node2" href="classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="21,5,147,156"/><area shape="rect" id="node3" href="classmirtk_1_1Point.html" title="{mirtk::Point\n|+ _x\l+ _y\l+ _z\l|+ Distance()\l+ Distance()\l+ operator!=()\l+ operator()()\l+ operator()()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*=()\land 36 more...\l}" alt="" coords="91,205,199,459"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -97,10 +97,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 virtual <a class="el" href="classmirtk_1_1Point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PointSet.html#ab8a4d22a8b206dbb4c9d06eea32f8341">CenterOfGravity</a> () const </td></tr>
 <tr class="memdesc:ab8a4d22a8b206dbb4c9d06eea32f8341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Centre of gravity. <br /></td></tr>
 <tr class="separator:ab8a4d22a8b206dbb4c9d06eea32f8341"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a998c22ed85b05f745483b8fb36b4c573"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a998c22ed85b05f745483b8fb36b4c573"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PointSet.html#a998c22ed85b05f745483b8fb36b4c573">Clear</a> ()</td></tr>
-<tr class="memdesc:a998c22ed85b05f745483b8fb36b4c573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clearing of <a class="el" href="classmirtk_1_1PointSet.html">PointSet</a>. <br /></td></tr>
-<tr class="separator:a998c22ed85b05f745483b8fb36b4c573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5ce5c6f875f213faf9c76e319b46ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PointSet.html#a4c5ce5c6f875f213faf9c76e319b46ba">Clear</a> (bool deallocate=true)</td></tr>
+<tr class="separator:a4c5ce5c6f875f213faf9c76e319b46ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1534d118d6a688e21d25a40dda7a66bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1534d118d6a688e21d25a40dda7a66bc"></a>
 virtual <a class="el" href="classmirtk_1_1Point.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PointSet.html#a1534d118d6a688e21d25a40dda7a66bc">ClosestPoint</a> (<a class="el" href="classmirtk_1_1Point.html">Point</a> &amp;)</td></tr>
 <tr class="memdesc:a1534d118d6a688e21d25a40dda7a66bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closest point to given point. <br /></td></tr>
@@ -117,6 +115,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PointSet.html#ac07a0d176d38a297e8f9c709e4645dad">Del</a> (double *)</td></tr>
 <tr class="memdesc:ac07a0d176d38a297e8f9c709e4645dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleting of a <a class="el" href="classmirtk_1_1Point.html">Point</a> from Pointset. <br /></td></tr>
 <tr class="separator:ac07a0d176d38a297e8f9c709e4645dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a89dcc17bc9072855ed34fa6572372"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1a89dcc17bc9072855ed34fa6572372"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PointSet.html#ac1a89dcc17bc9072855ed34fa6572372">Del</a> ()</td></tr>
+<tr class="memdesc:ac1a89dcc17bc9072855ed34fa6572372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete all points without freeing already allocated memory. <br /></td></tr>
+<tr class="separator:ac1a89dcc17bc9072855ed34fa6572372"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a242f50212ffd8d1476fb1bb2c8de01dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a242f50212ffd8d1476fb1bb2c8de01dc"></a>
 <a class="el" href="classmirtk_1_1Point.html">Point</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PointSet.html#a242f50212ffd8d1476fb1bb2c8de01dc">GetPoint</a> (int)</td></tr>
 <tr class="memdesc:a242f50212ffd8d1476fb1bb2c8de01dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get n-th point. <br /></td></tr>
@@ -169,6 +171,14 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PointSet.html#a152862b297dbf807225fb7b462b8be0d">PointSet</a> (const <a class="el" href="classmirtk_1_1PointSet.html">PointSet</a> &amp;)</td></tr>
 <tr class="memdesc:a152862b297dbf807225fb7b462b8be0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. <br /></td></tr>
 <tr class="separator:a152862b297dbf807225fb7b462b8be0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a251f3103e7d5a16c6457879dbd66b97a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a251f3103e7d5a16c6457879dbd66b97a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PointSet.html#a251f3103e7d5a16c6457879dbd66b97a">PointSet</a> (const <a class="el" href="classmirtk_1_1PointSet.html">PointSet</a> &amp;, const Array&lt; int &gt; &amp;)</td></tr>
+<tr class="memdesc:a251f3103e7d5a16c6457879dbd66b97a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy subset constructor. <br /></td></tr>
+<tr class="separator:a251f3103e7d5a16c6457879dbd66b97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5ce22371b81742363b13995b79b275"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca5ce22371b81742363b13995b79b275"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PointSet.html#aca5ce22371b81742363b13995b79b275">PointSet</a> (const <a class="el" href="classmirtk_1_1PointSet.html">PointSet</a> &amp;, const OrderedSet&lt; int &gt; &amp;)</td></tr>
+<tr class="memdesc:aca5ce22371b81742363b13995b79b275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy subset constructor. <br /></td></tr>
+<tr class="separator:aca5ce22371b81742363b13995b79b275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a781842ad73126a88e7a10c559d76edde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a781842ad73126a88e7a10c559d76edde"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmirtk_1_1PointSet.html#a781842ad73126a88e7a10c559d76edde">Read</a> (const char *)</td></tr>
 <tr class="memdesc:a781842ad73126a88e7a10c559d76edde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read pointset from file. <br /></td></tr>
@@ -263,7 +273,7 @@ static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classmirtk_1_1Point.html">Point</a> set </p>
 
-<p>Definition at line <a class="el" href="mirtkPointSet_8h_source.html#l00041">41</a> of file <a class="el" href="mirtkPointSet_8h_source.html">mirtkPointSet.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkPointSet_8h_source.html#l00043">43</a> of file <a class="el" href="mirtkPointSet_8h_source.html">mirtkPointSet.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ac2f1a6b45359a38bba10e571679524ea"></a>
 <div class="memitem">
@@ -280,6 +290,29 @@ static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </div><div class="memdoc">
 <p>Add point set from file in VTK format</p>
 <dl class="section note"><dt>Note</dt><dd>Use this function only when MIRTK_Numerics_WITH_VTK is 1. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c5ce5c6f875f213faf9c76e319b46ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mirtk::PointSet::Clear </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>deallocate</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clearing of <a class="el" href="classmirtk_1_1PointSet.html">PointSet</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">deallocate</td><td>Whether to deallocate memory. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -327,7 +360,7 @@ static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <div class="line"><a class="code" href="classmirtk_1_1PointSet.html#a678cdcf02d7c8e4363b47f071606c7f7">ShrinkToFit</a>();</div>
 </div><!-- fragment --><p> but with only one reallocation operation. It sets both the size and the capacity of the point set container. </p>
 
-<p>Definition at line <a class="el" href="mirtkPointSet_8h_source.html#l00391">391</a> of file <a class="el" href="mirtkPointSet_8h_source.html">mirtkPointSet.h</a>.</p>
+<p>Definition at line <a class="el" href="mirtkPointSet_8h_source.html#l00430">430</a> of file <a class="el" href="mirtkPointSet_8h_source.html">mirtkPointSet.h</a>.</p>
 
 </div>
 </div>

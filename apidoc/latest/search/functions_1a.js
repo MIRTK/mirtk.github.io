@@ -159,6 +159,7 @@ var searchData=
   ['_7epartialbsplinefreeformtransformationsv',['~PartialBSplineFreeFormTransformationSV',['../classmirtk_1_1PartialBSplineFreeFormTransformationSV.html#a53b685f79aecdef29971b126dac191a9',1,'mirtk::PartialBSplineFreeFormTransformationSV']]],
   ['_7epartialmultilevelstationaryvelocitytransformation',['~PartialMultiLevelStationaryVelocityTransformation',['../classmirtk_1_1PartialMultiLevelStationaryVelocityTransformation.html#a562f87dca37384e3e4995fe5624dd7cd',1,'mirtk::PartialMultiLevelStationaryVelocityTransformation']]],
   ['_7eperonamalikerrorfunction',['~PeronaMalikErrorFunction',['../classmirtk_1_1PeronaMalikErrorFunction.html#a18eac5827c0c16ddc6566f620b051e9e',1,'mirtk::PeronaMalikErrorFunction']]],
+  ['_7eplane',['~Plane',['../classmirtk_1_1Plane.html#a74e26ee34f35dda20903afd5e3aff2ed',1,'mirtk::Plane']]],
   ['_7epoint',['~Point',['../classmirtk_1_1Point.html#a1db495d5ac273b1ff2907432e1d42321',1,'mirtk::Point']]],
   ['_7epointcorrespondence',['~PointCorrespondence',['../classmirtk_1_1PointCorrespondence.html#aebaeab48f3848d19ba720abb27a65961',1,'mirtk::PointCorrespondence']]],
   ['_7epointcorrespondencedistance',['~PointCorrespondenceDistance',['../classmirtk_1_1PointCorrespondenceDistance.html#a082513bcd9f83b581f420a75b5ca1d38',1,'mirtk::PointCorrespondenceDistance']]],

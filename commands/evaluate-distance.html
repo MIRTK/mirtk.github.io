@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0 (e7cd66a)',
+        VERSION:     'v1.0 (3b6da28)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -98,14 +98,73 @@
 </div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>Evaluate distance between two given point sets.</p>
+<p>Evaluate distance between two given point sets. With increased verbosity (see <a class="reference internal" href="#cmdoption-evaluate-distance-v"><code class="xref std std-option docutils literal"><span class="pre">evaluate-distance</span> <span class="pre">-v</span></code></a>),
+the mean and standard deviation of the measured distances  (verbosity level &gt;=1) and the
+individual distance for each target point is reported (verbosity level &gt;=2).</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-distance-arg-target">
+<code class="descname">target</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distance-arg-target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target point set/surface.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-distance-arg-source">
+<code class="descname">source</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distance-arg-source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source point set/surface.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-distance-arg-output">
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distance-arg-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output point set/surface with point data array of measured distances. (default: none)</p>
+</dd></dl>
+
 </div>
 <div class="section" id="command-options">
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-distance-name">
-<code class="descname">-name</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distance-name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of output point distance array. (default: Distance)</p>
+<code class="descname">-name</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-evaluate-distance-name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of output point data array or column header. (default: Distance)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-distance-separator">
+<code class="descname">-separator</code><code class="descclassname"> &lt;sep&gt;</code><a class="headerlink" href="#cmdoption-evaluate-distance-separator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Column separator used for table of measured point distances. (default: t)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-distance-point">
+<code class="descname">-point</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distance-point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate minimum distance to closest point. (default for point clouds)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-distance-cell">
+<code class="descname">-cell</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distance-cell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate minimum distance to closest surface point. (default for surface meshes)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-distance-normal">
+<code class="descname">-normal</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distance-normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate minimum distance along surface normal.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-distance-index">
+<code class="descname">-index</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distance-index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate distance between points with identical index, e.g., pairs of fiducial markers.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-distance-hausdorff">
+<code class="descname">-hausdorff</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distance-hausdorff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Report Hausdorff distance. (default: off)</p>
 </dd></dl>
 
 </div>

@@ -82,63 +82,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">// construction</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> ();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> (<span class="keywordtype">double</span> fX, <span class="keywordtype">double</span> fY, <span class="keywordtype">double</span> fZ);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> (<span class="keywordtype">double</span> afCoordinate[3]);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">// member access (allows V.x or V[0], V.y or V[1], V.z or V[2])</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">double</span> x, y, z;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">double</span>&amp; operator[] (<span class="keywordtype">int</span> i) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">operator</span> <span class="keywordtype">double</span>* ();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="comment">// assignment and comparison</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; operator= (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">bool</span> operator== (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">bool</span> operator!= (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">// arithmetic operations</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> operator+ (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> operator- (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> operator* (<span class="keywordtype">double</span> fScalar) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> operator/ (<span class="keywordtype">double</span> fScalar) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> operator- () <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">friend</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> operator* (<span class="keywordtype">double</span> fScalar, <span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">// arithmetic updates</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; operator+= (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; operator-= (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; operator*= (<span class="keywordtype">double</span> fScalar);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; operator/= (<span class="keywordtype">double</span> fScalar);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">// vector operations</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">double</span> Length () <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">double</span> SquaredLength () <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">double</span> Dot (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">double</span> Unitize (<span class="keywordtype">double</span> fTolerance = 1e-06);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> Cross (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> UnitCross (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="comment">// Gram-Schmidt orthonormalization.</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> Orthonormalize (<a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> akVector[3]);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> (<span class="keywordtype">double</span> fScalar);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> (<span class="keywordtype">double</span> fX, <span class="keywordtype">double</span> fY, <span class="keywordtype">double</span> fZ);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> (<span class="keywordtype">double</span> afCoordinate[3]);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="comment">// member access (allows V.x or V[0], V.y or V[1], V.z or V[2])</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">double</span> x, y, z;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">double</span>&amp; operator[] (<span class="keywordtype">int</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">operator</span> <span class="keywordtype">double</span>* ();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// assignment and comparison</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; operator= (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; operator= (<span class="keywordtype">double</span> fScalar);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">bool</span> operator== (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">bool</span> operator!= (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">// arithmetic operations</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> operator+ (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> operator- (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> operator* (<span class="keywordtype">double</span> fScalar) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> operator/ (<span class="keywordtype">double</span> fScalar) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> operator- () <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">friend</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> operator* (<span class="keywordtype">double</span> fScalar, <span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">// arithmetic updates</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; operator+= (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; operator-= (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; operator*= (<span class="keywordtype">double</span> fScalar);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; operator/= (<span class="keywordtype">double</span> fScalar);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">// vector operations</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">double</span> Length () <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">double</span> SquaredLength () <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">double</span> Dot (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">double</span> Normalize (<span class="keywordtype">double</span> fTolerance = 1e-06);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classmirtk_1_1Vector3.html#af981ab6fa19ecec93fe25bd43f57c9d8">Unitize</a> (<span class="keywordtype">double</span> fTolerance = 1e-06); <span class="comment">///&lt; \deprecated Use Normalize instead</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"></span>  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> Cross (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> UnitCross (<span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkVector) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="comment">// Input W must be initialize to a nonzero vector, output is {U,V,W}</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="comment">// an orthonormal basis.  A hint is provided about whether or not W</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="comment">// is already unit length.</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> GenerateOrthonormalBasis (<a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkU, <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkV,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                        <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkW, <span class="keywordtype">bool</span> bUnitLengthW = <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">// special points</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> ZERO;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> UNIT_X;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> UNIT_Y;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> UNIT_Z;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;} <span class="comment">// namespace mirtk</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="comment">// Gram-Schmidt orthonormalization.</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> Orthonormalize (<a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> akVector[3]);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">// Input W must be initialize to a nonzero vector, output is {U,V,W}</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="comment">// an orthonormal basis.  A hint is provided about whether or not W</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="comment">// is already unit length.</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> GenerateOrthonormalBasis (<a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkU, <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkV,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                        <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a>&amp; rkW, <span class="keywordtype">bool</span> bUnitLengthW = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// special points</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> ZERO;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> UNIT_X;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> UNIT_Y;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="classmirtk_1_1Vector3.html">Vector3</a> UNIT_Z;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif // MIRTK_Vector3_H</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} <span class="comment">// namespace mirtk</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif // MIRTK_Vector3_H</span></div>
 <div class="ttc" id="namespacemirtk_html"><div class="ttname"><a href="namespacemirtk.html">mirtk</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkImageIOConfig_8h_source.html#l00031">mirtkImageIOConfig.h:31</a></div></div>
+<div class="ttc" id="classmirtk_1_1Vector3_html_af981ab6fa19ecec93fe25bd43f57c9d8"><div class="ttname"><a href="classmirtk_1_1Vector3.html#af981ab6fa19ecec93fe25bd43f57c9d8">mirtk::Vector3::Unitize</a></div><div class="ttdeci">double Unitize(double fTolerance=1e-06)</div></div>
 <div class="ttc" id="classmirtk_1_1Vector3_html"><div class="ttname"><a href="classmirtk_1_1Vector3.html">mirtk::Vector3</a></div><div class="ttdef"><b>Definition:</b> <a href="mirtkVector3_8h_source.html#l00030">mirtkVector3.h:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 

@@ -88,9 +88,10 @@ Data manipulation options
 
    Set new value for all currently masked data values.
 
-.. option:: -out <file>
+.. option:: -out <file> [<type>]
 
    Write current data sequence to file in the format of the input file.
+   Output data type can be: uchar, short, ushort, int, uint, float, double.
 
 .. option:: -add <float|file>
 

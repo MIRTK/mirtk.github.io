@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['edgequeue',['EdgeQueue',['../classmirtk_1_1PolyDataRemeshing.html#af348c9d6055783c4275e76832b1f9c08',1,'mirtk::PolyDataRemeshing']]],
   ['edgetable',['EdgeTable',['../classmirtk_1_1RegisteredPointSet.html#a6146fe3b457808b7ce82bd9f075ee9a8',1,'mirtk::RegisteredPointSet']]],
   ['entries',['Entries',['../classmirtk_1_1GenericSparseMatrix.html#ad8f3d86aea04fbc2a39795fe46637a4f',1,'mirtk::GenericSparseMatrix']]],
   ['entry',['Entry',['../classmirtk_1_1GenericSparseMatrix.html#a2b061953a85a2b047c02c97e6fcd2922',1,'mirtk::GenericSparseMatrix']]],

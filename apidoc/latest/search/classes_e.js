@@ -7,6 +7,7 @@ var searchData=
   ['peronamalikerrorfunction',['PeronaMalikErrorFunction',['../classmirtk_1_1PeronaMalikErrorFunction.html',1,'mirtk']]],
   ['pgmimagereader',['PGMImageReader',['../classmirtk_1_1PGMImageReader.html',1,'mirtk']]],
   ['pgmimagewriter',['PGMImageWriter',['../classmirtk_1_1PGMImageWriter.html',1,'mirtk']]],
+  ['plane',['Plane',['../classmirtk_1_1Plane.html',1,'mirtk']]],
   ['pngimagewriter',['PNGImageWriter',['../classmirtk_1_1PNGImageWriter.html',1,'mirtk']]],
   ['point',['Point',['../classmirtk_1_1Point.html',1,'mirtk']]],
   ['pointcorrespondence',['PointCorrespondence',['../classmirtk_1_1PointCorrespondence.html',1,'mirtk']]],
