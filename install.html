@@ -406,28 +406,30 @@ building the &#8220;install&#8221; target.</p>
 </pre></div>
 </div>
 <p>To enable the convenient use of the <a class="reference internal" href="commands.html"><em>Applications</em></a>, it is recommended
-to permanently add the <code class="docutils literal"><span class="pre">$MIRTK_DIR/bin</span></code> directory to the
+to permanently add the <code class="docutils literal"><span class="pre">$MIRTK_ROOT/bin</span></code> directory to the
 <a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH environment variable</a> in the shell configuration file
-(e.g., <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> or <code class="docutils literal"><span class="pre">$HOME/.profile</span></code>), where MIRTK_DIR is the directory
+(e.g., <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> or <code class="docutils literal"><span class="pre">$HOME/.profile</span></code>), where MIRTK_ROOT is the directory
 chosen as CMAKE_INSTALL_PREFIX above.</p>
 <p>The MIRTK installation further includes a <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a>
 completions script which when sourced in your Bash configuration file,
-enables auto-completion of available MIRTK commands. To enable Bash completions
-for <code class="docutils literal"><span class="pre">mirtk</span></code>, add the following lines to your <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre>[ ! -f &quot;$MIRTK_DIR/share/mirtk_bash_completions.sh&quot; ] ||
-source &quot;$MIRTK_DIR/share/mirtk_bash_completions.sh&quot;
+enables auto-completion of available MIRTK commands for the <code class="docutils literal"><span class="pre">mirtk</span></code> command
+and <code class="docutils literal"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">[options]</span> <span class="pre">&lt;user&gt;/mirtk</span></code>. To enable the MIRTK Bash completions,
+add the following lines to <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> (Linux) or <code class="docutils literal"><span class="pre">$HOME/.bash_profile</span></code> (OS X):</p>
+<div class="highlight-python"><div class="highlight"><pre>[ ! -f &quot;$MIRTK_ROOT/share/completion/bash/mirtk&quot; ] ||
+source &quot;$MIRTK_ROOT/share/completion/bash/mirtk&quot;
 
-[ ! -f &quot;$MIRTK_DIR/share/mirtk/mirtk_bash_completions.sh&quot; ] ||
-source &quot;$MIRTK_DIR/share/mirtk/mirtk_bash_completions.sh&quot;
+[ ! -f &quot;$MIRTK_ROOT/share/mirtk/completion/bash/mirtk&quot; ] ||
+source &quot;$MIRTK_ROOT/share/mirtk/completion/bash/mirtk&quot;
 </pre></div>
 </div>
+<p>The Bash completions are then available when a new Terminal window is opened.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">When the CMAKE_INSTALL_PREFIX contains a directory named &#8220;mirtk&#8221; (or &#8220;mirtk-&lt;version&gt;&#8221;)
 as in case of the default installation prefix &#8220;/opt/mirtk-&lt;version&gt;&#8221;, the library
-files are installed into <code class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/lib</span></code>. But when the installation
-path does not include the project name, as in case of &#8220;/usr/local&#8221;, for example,
-the library files are copied into the directory <code class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/lib/mirtk</span></code>.
+files and MIRTK commands are installed into <code class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/lib</span></code>. But when the
+installation path does not include the project name, as in case of &#8220;/usr/local&#8221;, for example,
+these files are copied into the directory <code class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/lib/mirtk</span></code>.
 The same applies to other installation subdirectories such as &#8220;share&#8221; and &#8220;doc&#8221;.
 Only the executable files are always copied to <code class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/bin</span></code>.</p>
 </div>

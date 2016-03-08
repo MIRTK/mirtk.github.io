@@ -69,6 +69,7 @@
 <li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#install-the-software">Install the software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bash-completion">Bash completion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#run-the-commands">Run the commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#write-your-own-application">Write your own application</a></li>
 </ul>
@@ -104,10 +105,39 @@ system including their prerequisites. For a manual installation of the MIRTK,
 please follow the <a class="reference internal" href="download.html"><em>Download</em></a> and <a class="reference internal" href="install.html"><em>Installation</em></a> instructions which
 list the third-party libraries required by each module and describe how to
 build the MIRTK from its publicly available source code.</p>
-<p>Instead of manually building and installing the MIRTK, you can use the
-pre-made <a class="reference external" href="MIRTKDockerimage">biomedia/mirtk</a> Docker image to run the
-<a class="reference internal" href="commands.html"><em>Applications</em></a> inside a <a class="reference external" href="https://www.docker.com/what-docker">Docker container</a>. For a guide to install and use
-<a class="reference external" href="http://www.docker.com">Docker</a>, see the <a class="reference external" href="https://docs.docker.com">official docs</a>.</p>
+<p>Instead of manually installing the MIRTK locally on your system, you can use
+the pre-made <a class="reference external" href="MIRTKDockerimage">biomedia/mirtk</a> Docker image to run the
+<a class="reference internal" href="commands.html"><em>Applications</em></a> inside a <a class="reference external" href="https://www.docker.com/what-docker">Docker container</a>. For a guide to install and
+use <a class="reference external" href="http://www.docker.com">Docker</a>, see the <a class="reference external" href="https://docs.docker.com">official docs</a>.</p>
+</div>
+<div class="section" id="bash-completion">
+<span id="bashcompletion"></span><h2>Bash completion<a class="headerlink" href="#bash-completion" title="Permalink to this headline">¶</a></h2>
+<p>For information on how to enable <a class="reference external" href="Bashcompletion">auto-completion</a> when running
+<code class="docutils literal"><span class="pre">mirtk</span></code> commands of a manual MIRTK installation in the <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a> shell, see the
+<a class="reference internal" href="install.html"><em>Installation</em></a> instructions.</p>
+<p>To enable Bash completion for running the MIRTK commands with Docker,
+copy the <a class="reference external" href="https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker">docker</a>
+and <a class="reference external" href="https://raw.githubusercontent.com/BioMedIA/MIRTK/develop/Docker/Completion/Bash/docker-mirtk">docker-mirtk</a>
+completion scripts to <code class="docutils literal"><span class="pre">/etc/bash_completion.d/</span></code> on Linux or,
+with the &#8220;bash-completion&#8221; <a class="reference external" href="http://brew.sh">Homebrew</a> package installed on OS X,
+to <code class="docutils literal"><span class="pre">/usr/local/etc/bash_completion.d/</span></code>, respectively.</p>
+<p>This can be done on Linux with the following Terminal commands:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo curl -L https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker        &gt; /etc/bash_completion.d/docker
+sudo curl -L https://raw.githubusercontent.com/BioMedIA/MIRTK/develop/Docker/Completion/Bash/docker-mirtk &gt; /etc/bash_completion.d/docker-mirtk
+</pre></div>
+</div>
+<p>On OS X with Homebrew, use these commands instead:</p>
+<div class="highlight-python"><div class="highlight"><pre>brew install bash-completion
+curl -L https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker        &gt; $(brew --prefix)/etc/bash_completion.d/docker
+curl -L https://raw.githubusercontent.com/BioMedIA/MIRTK/develop/Docker/Completion/Bash/docker-mirtk &gt; $(brew --prefix)/etc/bash_completion.d/docker-mirtk
+</pre></div>
+</div>
+<p>Alternatively, save the files to your home directory at, for example, <code class="docutils literal"><span class="pre">$HOME/bash_completion/</span></code>
+and add the following lines to your <code class="docutils literal"><span class="pre">.bashrc</span></code> (Linux) or <code class="docutils literal"><span class="pre">.bash_profile</span></code> (OS X) file:</p>
+<div class="highlight-python"><div class="highlight"><pre>[ ! -f &quot;$HOME/bash_completion/docker&quot;       ] || . &quot;$HOME/bash_completion/docker&quot;
+[ ! -f &quot;$HOME/bash_completion/docker-mirtk&quot; ] || . &quot;$HOME/bash_completion/docker-mirtk&quot;
+</pre></div>
+</div>
 </div>
 <div class="section" id="run-the-commands">
 <h2>Run the commands<a class="headerlink" href="#run-the-commands" title="Permalink to this headline">¶</a></h2>
@@ -115,31 +145,24 @@ pre-made <a class="reference external" href="MIRTKDockerimage">biomedia/mirtk</a
 of the installation root directory. This executable is used to execute the various
 MIRTK commands. The name of the command must be specified as first argument of the
 <code class="docutils literal"><span class="pre">mirtk</span></code> executable. Help about a command can be printed using the special <code class="docutils literal"><span class="pre">help</span></code>
-or <code class="docutils literal"><span class="pre">help-rst</span></code> commands followed by the name of the command for which help is requested.</p>
-<p>Usage:</p>
+or <code class="docutils literal"><span class="pre">help-rst</span></code> commands followed by the name of the command for which help is requested:</p>
 <div class="highlight-python"><div class="highlight"><pre>mirtk help &lt;command&gt;
 mirtk [-v] [-v] &lt;command&gt; [options]
 </pre></div>
 </div>
 <p>When the <code class="docutils literal"><span class="pre">-v</span></code> option is given to <code class="docutils literal"><span class="pre">mirtk</span></code> before the command name, the path and
 arguments of the command executable is printed before execution.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The MIRTK installation includes a <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a>
-completions script which enables auto-completion of the available MIRTK commands.
-See <a class="reference internal" href="install.html#installationsteps"><span>Installation</span></a> on how to activate auto-completion. When enabled, press the
-&lt;tab&gt; key twice after typing &#8220;mirtk &#8221; (incl. a space) to see a list of all commands.
-To only see a list of partial matches type, for example, &#8220;mirtk eval&#8221; and press &lt;tab&gt; twice.</p>
-</div>
-<p>With <a class="reference external" href="http://www.docker.com">Docker</a>, use the following command instead of <code class="docutils literal"><span class="pre">mirtk</span></code>:</p>
+<p>To run the commands inside a <a class="reference external" href="http://www.docker.com">Docker</a> container instead which does not require a local
+installation of MIRTK, use the following command:</p>
 <div class="highlight-python"><div class="highlight"><pre>docker run --rm --volume=&lt;path&gt;:/data biomedia/mirtk [-v] [-v] &lt;command&gt; [&lt;options&gt;]
 </pre></div>
 </div>
-<p>This will automatically download the <a class="reference external" href="https://hub.docker.com/r/biomedia/mirtk/">MIRTK Docker image</a> upon first execution and re-use
-this image for consecutive commands. The <code class="docutils literal"><span class="pre">--volume</span></code> option of <code class="docutils literal"><span class="pre">docker</span> <span class="pre">run</span></code> mounts the
-specified directory path on the host system to the <code class="docutils literal"><span class="pre">/data</span></code> directory inside the MIRTK
-Docker container. This local data directory is the working directory of the MIRTK command.
-The <code class="docutils literal"><span class="pre">--rm</span></code> option automatically deletes the MIRTK Docker container again after the
+<p>This will download the <a class="reference external" href="https://hub.docker.com/r/biomedia/mirtk/">MIRTK Docker image</a> upon first execution. This image is
+stored locally and will be reused for consecutive executions.
+The <code class="docutils literal"><span class="pre">--volume</span></code> option of <code class="docutils literal"><span class="pre">docker</span> <span class="pre">run</span></code> mounts the specified directory path on the
+host system to the <code class="docutils literal"><span class="pre">/data</span></code> directory inside the MIRTK Docker container.
+The <code class="docutils literal"><span class="pre">/data</span></code> directory is the working directory of the MIRTK command.
+The <code class="docutils literal"><span class="pre">--rm</span></code> option automatically deletes the MIRTK Docker container after the
 command finished. Note that each <code class="docutils literal"><span class="pre">docker</span> <span class="pre">run</span></code> will create a new Docker container.
 As these containers are meant to be used only once for each command execution, they
 should be removed again after the command has finished.</p>
@@ -149,6 +172,13 @@ using the <a class="reference internal" href="commands/info.html"><em>info</em><
 </pre></div>
 </div>
 <p>See the <a class="reference internal" href="commands.html"><em>Applications</em></a> page for a description of each command and the available options.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a> completion of MIRTK commands is enabled (see <a class="reference internal" href="#bashcompletion"><span>Bash completion</span></a>),
+press the &lt;tab&gt; key twice after typing &#8220;mirtk &#8221; or &#8220;docker run biomedia/mirtk &#8221;
+(incl. a space) to see a list of all commands. To only see a list of partial matches,
+type &#8220;mirtk eval&#8221; or  &#8220;docker run biomedia/mirtk eval&#8221;, for example, and press &lt;tab&gt; twice.</p>
+</div>
 </div>
 <div class="section" id="write-your-own-application">
 <h2>Write your own application<a class="headerlink" href="#write-your-own-application" title="Permalink to this headline">¶</a></h2>
