@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.1 (ab5de3a)',
+        VERSION:     'v1.1 (8ccfba9)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -29,7 +29,7 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="top" title="MIRTK" href="sidebar.html" />
-    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="next" title="Applications" href="commands.html" />
     <link rel="prev" title="Medical Image Registration ToolKit (MIRTK)" href="index.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
@@ -41,7 +41,7 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="modules.html" title="Modules"
+          <a href="commands.html" title="Applications"
              accesskey="N">next</a></li>
         <li class="right" >
           <a href="index.html" title="Medical Image Registration ToolKit (MIRTK)"
@@ -74,15 +74,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#write-your-own-application">Write your own application</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Get Help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
 </ul>
@@ -106,24 +106,23 @@ please follow the <a class="reference internal" href="download.html"><em>Downloa
 list the third-party libraries required by each module and describe how to
 build the MIRTK from its publicly available source code.</p>
 <p>Instead of manually installing the MIRTK locally on your system, you can use
-the pre-made <a class="reference external" href="MIRTKDockerimage">biomedia/mirtk</a> Docker image to run the
-<a class="reference internal" href="commands.html"><em>Applications</em></a> inside a <a class="reference external" href="https://www.docker.com/what-docker">Docker container</a>. For a guide to install and
-use <a class="reference external" href="http://www.docker.com">Docker</a>, see the <a class="reference external" href="https://docs.docker.com">official docs</a>.</p>
+the pre-made <a class="reference external" href="https://hub.docker.com/r/biomedia/mirtk/">biomedia/mirtk</a>
+Docker image to run the <a class="reference internal" href="commands.html"><em>Applications</em></a> inside a <a class="reference external" href="https://www.docker.com/what-docker">Docker container</a>.</p>
+<p>For a guide to install and use <a class="reference external" href="http://www.docker.com">Docker</a>, see the <a class="reference external" href="https://docs.docker.com">official docs</a>.</p>
 </div>
 <div class="section" id="bash-completion">
 <span id="bashcompletion"></span><h2>Bash completion<a class="headerlink" href="#bash-completion" title="Permalink to this headline">¶</a></h2>
-<p>For information on how to enable <a class="reference external" href="Bashcompletion">auto-completion</a> when running
-<code class="docutils literal"><span class="pre">mirtk</span></code> commands of a manual MIRTK installation in the <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a> shell, see the
-<a class="reference internal" href="install.html"><em>Installation</em></a> instructions.</p>
+<p>For information on how to enable <a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion.html">auto-completion</a> when running <code class="docutils literal"><span class="pre">mirtk</span></code> commands of
+a manual MIRTK installation in the <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a> shell, see the <a class="reference internal" href="install.html"><em>Installation</em></a> instructions.</p>
 <p>To enable Bash completion for running the MIRTK commands with Docker,
 copy the <a class="reference external" href="https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker">docker</a>
-and <a class="reference external" href="https://raw.githubusercontent.com/BioMedIA/MIRTK/develop/Docker/Completion/Bash/docker-mirtk">docker-mirtk</a>
+and <a class="reference external" href="https://raw.githubusercontent.com/BioMedIA/MIRTK/master/Docker/Completion/Bash/docker-mirtk">docker-mirtk</a>
 completion scripts to <code class="docutils literal"><span class="pre">/etc/bash_completion.d/</span></code> on Linux or,
 with the &#8220;bash-completion&#8221; <a class="reference external" href="http://brew.sh">Homebrew</a> package installed on OS X,
 to <code class="docutils literal"><span class="pre">/usr/local/etc/bash_completion.d/</span></code>, respectively.</p>
 <p>This can be done on Linux with the following Terminal commands:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo curl -L https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker        &gt; /etc/bash_completion.d/docker
-sudo curl -L https://raw.githubusercontent.com/BioMedIA/MIRTK/develop/Docker/Completion/Bash/docker-mirtk &gt; /etc/bash_completion.d/docker-mirtk
+<div class="highlight-python"><div class="highlight"><pre>sudo curl -L https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker       &gt; /etc/bash_completion.d/docker
+sudo curl -L https://raw.githubusercontent.com/BioMedIA/MIRTK/master/Docker/Completion/Bash/docker-mirtk &gt; /etc/bash_completion.d/docker-mirtk
 </pre></div>
 </div>
 <p>On OS X with Homebrew, use these commands instead:</p>
@@ -174,7 +173,7 @@ using the <a class="reference internal" href="commands/info.html"><em>info</em><
 <p>See the <a class="reference internal" href="commands.html"><em>Applications</em></a> page for a description of each command and the available options.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">When <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a> completion of MIRTK commands is enabled (see <a class="reference internal" href="#bashcompletion"><span>Bash completion</span></a>),
+<p class="last">When Bash completion of MIRTK commands is enabled (see <a class="reference internal" href="#bashcompletion"><span>Bash completion</span></a>),
 press the &lt;tab&gt; key twice after typing &#8220;mirtk &#8221; or &#8220;docker run biomedia/mirtk &#8221;
 (incl. a space) to see a list of all commands. To only see a list of partial matches,
 type &#8220;mirtk eval&#8221; or  &#8220;docker run biomedia/mirtk eval&#8221;, for example, and press &lt;tab&gt; twice.</p>
@@ -203,7 +202,7 @@ or develop your own MIRTK Package.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="modules.html" title="Modules"
+          <a href="commands.html" title="Applications"
              >next</a></li>
         <li class="right" >
           <a href="index.html" title="Medical Image Registration ToolKit (MIRTK)"
