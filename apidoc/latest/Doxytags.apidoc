@@ -7,17 +7,22 @@
   </compound>
   <compound kind="file">
     <name>BasisScriptConfig.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Maintenance/Xcode/CMake/</path>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/Xcode/CMake/Config/</path>
     <filename>BasisScriptConfig_8cmake</filename>
   </compound>
   <compound kind="file">
+    <name>ConfigSettings.cmake</name>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/CMake/Config/</path>
+    <filename>ConfigSettings_8cmake</filename>
+  </compound>
+  <compound kind="file">
     <name>Depends.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Maintenance/CMake/</path>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/CMake/Config/</path>
     <filename>Depends_8cmake</filename>
   </compound>
   <compound kind="file">
     <name>Directories.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Maintenance/Xcode/CMake/</path>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/Xcode/CMake/Config/</path>
     <filename>Directories_8cmake</filename>
   </compound>
   <compound kind="file">
@@ -482,7 +487,7 @@
   </compound>
   <compound kind="file">
     <name>MIRTKConfig.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Maintenance/Xcode/CMake/</path>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/Xcode/CMake/Config/</path>
     <filename>MIRTKConfig_8cmake</filename>
   </compound>
   <compound kind="file">
@@ -588,6 +593,10 @@
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveExtendedForegroundInX</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveExtendedForegroundInY</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveExtendedForegroundInZ</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveForegroundInT</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveForegroundInX</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveForegroundInY</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveForegroundInZ</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveInT</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveInX</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveInY</class>
@@ -600,6 +609,10 @@
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveTruncatedForegroundInX</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveTruncatedForegroundInY</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveTruncatedForegroundInZ</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveWeightedImageInT</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveWeightedImageInX</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveWeightedImageInY</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveWeightedImageInZ</class>
     <class kind="struct">mirtk::ConvolutionFunction::DownsampleConvolvedExtendedForegroundInX</class>
     <class kind="struct">mirtk::ConvolutionFunction::DownsampleConvolvedExtendedForegroundInY</class>
     <class kind="struct">mirtk::ConvolutionFunction::DownsampleConvolvedExtendedForegroundInZ</class>
@@ -763,6 +776,7 @@
     <class kind="class">mirtk::data::op::Add</class>
     <class kind="class">mirtk::data::op::Clamp</class>
     <class kind="class">mirtk::data::op::Div</class>
+    <class kind="class">mirtk::data::op::DivWithZero</class>
     <class kind="class">mirtk::data::op::ElementWiseBinaryOp</class>
     <class kind="class">mirtk::data::op::ElementWiseUnaryOp</class>
     <class kind="class">mirtk::data::op::Exp</class>
@@ -1560,6 +1574,19 @@
     <path>/Users/as12312/Software/MIRTK/Maintenance/Packages/VolumetricMapping/include/</path>
     <filename>mirtkHarmonicTetrahedralVolumeParameterizer_8h</filename>
     <class kind="class">mirtk::HarmonicTetrahedralVolumeParameterizer</class>
+    <namespace>mirtk</namespace>
+  </compound>
+  <compound kind="file">
+    <name>mirtkHashImage.h</name>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/Modules/Image/include/</path>
+    <filename>mirtkHashImage_8h</filename>
+    <class kind="class">mirtk::HashImage</class>
+    <namespace>mirtk</namespace>
+  </compound>
+  <compound kind="file">
+    <name>mirtkHashImage.hxx</name>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/Modules/Image/include/</path>
+    <filename>mirtkHashImage_8hxx</filename>
     <namespace>mirtk</namespace>
   </compound>
   <compound kind="file">
@@ -3866,6 +3893,13 @@
       <arglist>(const string &amp;a, const string &amp;b)</arglist>
     </member>
     <member kind="function">
+      <type>string</type>
+      <name>ParameterUnits</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a30bc600402e900361291177d7ce8d468</anchor>
+      <arglist>(const string &amp;str, string *name=nullptr, const char *dflt=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>PrintParameter</name>
       <anchorfile>namespacemirtk.html</anchorfile>
@@ -3904,8 +3938,15 @@
       <type>Array&lt; string &gt;</type>
       <name>Split</name>
       <anchorfile>namespacemirtk.html</anchorfile>
-      <anchor>a22c02a1a80f740b1ddbe7646388548e6</anchor>
-      <arglist>(string s, const char *d, int n=0)</arglist>
+      <anchor>a83d949a3354f53e63bff0c9d6a34f788</anchor>
+      <arglist>(string s, const char *d, int n=0, bool e=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>StandardUnits</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a1c1bbe8a71f363d9e0ebcbf7730f02a0</anchor>
+      <arglist>(const string &amp;str)</arglist>
     </member>
     <member kind="function">
       <type>string</type>
@@ -3934,6 +3975,20 @@
       <anchorfile>namespacemirtk.html</anchorfile>
       <anchor>a54c4f2f7893b13d502402ac882de24bf</anchor>
       <arglist>(const string &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>Trim</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a88318c28477468e8cab905fd5a1bac28</anchor>
+      <arglist>(const string &amp;str, const string &amp;what=&quot; \t\r\n&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>ValueUnits</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a23b9cd90368114825ae1185816fd4f3a</anchor>
+      <arglist>(const string &amp;str, string *value=nullptr, const char *dflt=&quot;&quot;)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -4538,18 +4593,23 @@
     <namespace>mirtk::NaryVoxelFunction</namespace>
   </compound>
   <compound kind="file">
+    <name>mirtkVtkMath.h</name>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/Modules/Common/include/</path>
+    <filename>mirtkVtkMath_8h</filename>
+  </compound>
+  <compound kind="file">
     <name>ProjectSettings.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Maintenance/Xcode/CMake/</path>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/Xcode/CMake/Config/</path>
     <filename>ProjectSettings_8cmake</filename>
   </compound>
   <compound kind="file">
     <name>ScriptConfig.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Maintenance/Xcode/CMake/</path>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/Xcode/CMake/Config/</path>
     <filename>ScriptConfig_8cmake</filename>
   </compound>
   <compound kind="file">
     <name>Settings.cmake</name>
-    <path>/Users/as12312/Software/MIRTK/Maintenance/CMake/</path>
+    <path>/Users/as12312/Software/MIRTK/Maintenance/CMake/Config/</path>
     <filename>Settings_8cmake</filename>
   </compound>
   <compound kind="struct">
@@ -6415,6 +6475,13 @@
       <arglist>(double) const </arglist>
     </member>
     <member kind="function">
+      <type>double</type>
+      <name>TSize</name>
+      <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
+      <anchor>a61cd7e389f50e05fdaee15f609ca0084</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>int</type>
       <name>VoxelToIndex</name>
       <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
@@ -6457,6 +6524,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>double</type>
+      <name>XSize</name>
+      <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
+      <anchor>a99bf9f64a0e36fe6ec5a865550242ca5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>int</type>
       <name>Y</name>
       <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
@@ -6464,10 +6538,24 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
+      <type>double</type>
+      <name>YSize</name>
+      <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
+      <anchor>aaa660511b91e4c817ebd982957885a6c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>int</type>
       <name>Z</name>
       <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
       <anchor>a3e7d77540ca479291f112ff33e7db112</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>ZSize</name>
+      <anchorfile>classmirtk_1_1BaseImage.html</anchorfile>
+      <anchor>a6013548b6f0c7071fb9c2b3a159155d0</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -10958,6 +11046,212 @@
     </member>
   </compound>
   <compound kind="struct">
+    <name>mirtk::ConvolutionFunction::ConvolveForegroundInT</name>
+    <filename>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInT.html</filename>
+    <templarg></templarg>
+    <base>mirtk::VoxelFunction</base>
+    <member kind="variable">
+      <type>const BaseImage *</type>
+      <name>_Image</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInT.html</anchorfile>
+      <anchor>a3949998367a0b818f0650c6ddaf498e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const TKernel *</type>
+      <name>_Kernel</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInT.html</anchorfile>
+      <anchor>a0ba564ee92d274bf5f459e4883f37561</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>_Normalize</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInT.html</anchorfile>
+      <anchor>af6a7e70b921c5dde60bbb2f32a7c9a1c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Radius</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInT.html</anchorfile>
+      <anchor>ac1c02445733217e500f0f8016c2798b0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_T</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInT.html</anchorfile>
+      <anchor>a319d65765571df19d0bb7cbf6f6ea5e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_XYZ</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInT.html</anchorfile>
+      <anchor>ac4eb6a581b7c43203b69549669cfec74</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>mirtk::ConvolutionFunction::ConvolveForegroundInX</name>
+    <filename>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInX.html</filename>
+    <templarg></templarg>
+    <base>mirtk::VoxelFunction</base>
+    <member kind="variable">
+      <type>const BaseImage *</type>
+      <name>_Image</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInX.html</anchorfile>
+      <anchor>a51cf85a5119989d372e0142a12b9aaa8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const TKernel *</type>
+      <name>_Kernel</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInX.html</anchorfile>
+      <anchor>a74d146ee558ead411b0a360c11464a51</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>_Normalize</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInX.html</anchorfile>
+      <anchor>a359f7d6fbfd10b33a4a89da4bd4d8adb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Offset</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInX.html</anchorfile>
+      <anchor>a9b18c7d033527dcaae693f0ab029252a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Radius</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInX.html</anchorfile>
+      <anchor>aee347c6c0d5b59acce7eab99967ee968</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_X</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInX.html</anchorfile>
+      <anchor>a4d8c7b7d8ea3f9280735e9445c8c4688</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>mirtk::ConvolutionFunction::ConvolveForegroundInY</name>
+    <filename>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInY.html</filename>
+    <templarg></templarg>
+    <base>mirtk::VoxelFunction</base>
+    <member kind="variable">
+      <type>const BaseImage *</type>
+      <name>_Image</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInY.html</anchorfile>
+      <anchor>a1e40f7ae4e4d84fbcd29456c511d7d5f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const TKernel *</type>
+      <name>_Kernel</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInY.html</anchorfile>
+      <anchor>a7a6e9f499b626eae9004b38ef11fda89</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>_Normalize</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInY.html</anchorfile>
+      <anchor>a725fe2fda84550c7a3124952a3bad017</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Offset</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInY.html</anchorfile>
+      <anchor>a0b0ed46d25cbc07de1816c2522a79e59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Radius</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInY.html</anchorfile>
+      <anchor>a1183f7c700b8df3022a299b800efeafb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_X</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInY.html</anchorfile>
+      <anchor>aff09cf9fbf6b164237c8ac6406ff0599</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Y</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInY.html</anchorfile>
+      <anchor>aa48790df99aa0ea5e9c639cf0064f82d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>mirtk::ConvolutionFunction::ConvolveForegroundInZ</name>
+    <filename>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInZ.html</filename>
+    <templarg></templarg>
+    <base>mirtk::VoxelFunction</base>
+    <member kind="variable">
+      <type>const BaseImage *</type>
+      <name>_Image</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInZ.html</anchorfile>
+      <anchor>a3cd24be1ad54d7bdf3497693541c81f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const TKernel *</type>
+      <name>_Kernel</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInZ.html</anchorfile>
+      <anchor>ac55a5b9a29de7719e29fd40337c28cee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>_Normalize</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInZ.html</anchorfile>
+      <anchor>a50f958eb5b38629890ee7312cee9385d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Offset</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInZ.html</anchorfile>
+      <anchor>a0a635c283d9215f40b7e295336f2b524</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Radius</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInZ.html</anchorfile>
+      <anchor>a3db7f78eeee39f5e269f1d5bb7da8997</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_XY</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInZ.html</anchorfile>
+      <anchor>a8d792c6f0e6ce3934cb8b2b69b522117</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Z</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInZ.html</anchorfile>
+      <anchor>af90a484a66187e9a08ae9673c6e69897</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
     <name>mirtk::ConvolutionFunction::ConvolveInT</name>
     <filename>structmirtk_1_1ConvolutionFunction_1_1ConvolveInT.html</filename>
     <templarg></templarg>
@@ -11299,6 +11593,177 @@
       <name>_Z</name>
       <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInZ.html</anchorfile>
       <anchor>a774c74c70084bc406ec63e2605b4b49d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>mirtk::ConvolutionFunction::ConvolveWeightedImageInT</name>
+    <filename>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInT.html</filename>
+    <templarg></templarg>
+    <base>mirtk::VoxelFunction</base>
+    <member kind="variable">
+      <type>const TKernel *</type>
+      <name>_Kernel</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInT.html</anchorfile>
+      <anchor>a9adce2fb1a945dce20795e01850216f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Radius</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInT.html</anchorfile>
+      <anchor>ad1f1e87de4f483e4448a45d3f5b9606f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_T</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInT.html</anchorfile>
+      <anchor>a78ce96d70f44a74daf333e1973bbc4fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_XYZ</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInT.html</anchorfile>
+      <anchor>a6db60e6a8a9cafc47acbac4e917576d5</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>mirtk::ConvolutionFunction::ConvolveWeightedImageInX</name>
+    <filename>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInX.html</filename>
+    <templarg></templarg>
+    <base>mirtk::VoxelFunction</base>
+    <member kind="variable">
+      <type>const TKernel *</type>
+      <name>_Kernel</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInX.html</anchorfile>
+      <anchor>a59eea1745611d299cf02ff7082aae8e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Offset1</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInX.html</anchorfile>
+      <anchor>aaca98dce15c9b3a45cdc8996483f8a9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Offset2</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInX.html</anchorfile>
+      <anchor>a59a7ef82c4c3f942b932e560e7a38d37</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Radius</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInX.html</anchorfile>
+      <anchor>a7fe7a4e17d565c15e5a4789f92829262</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_X</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInX.html</anchorfile>
+      <anchor>a28a387fd1adf2b232ca60d35e8c224e1</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>mirtk::ConvolutionFunction::ConvolveWeightedImageInY</name>
+    <filename>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInY.html</filename>
+    <templarg></templarg>
+    <base>mirtk::VoxelFunction</base>
+    <member kind="variable">
+      <type>const TKernel *</type>
+      <name>_Kernel</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInY.html</anchorfile>
+      <anchor>ac86ad359977ade806ff3c651511e489a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Offset1</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInY.html</anchorfile>
+      <anchor>ada52f48b3eb7e634ddef005f0d5e8b7e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Offset2</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInY.html</anchorfile>
+      <anchor>aeea127803ab7273742bee42cc61e9ee8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Radius</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInY.html</anchorfile>
+      <anchor>a1ac59ac54606051e54b595ee16919018</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_X</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInY.html</anchorfile>
+      <anchor>addec932f619876dedeadbc42420795bf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Y</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInY.html</anchorfile>
+      <anchor>a9fd3039a4910c352cae4ab3298390c4c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>mirtk::ConvolutionFunction::ConvolveWeightedImageInZ</name>
+    <filename>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInZ.html</filename>
+    <templarg></templarg>
+    <base>mirtk::VoxelFunction</base>
+    <member kind="variable">
+      <type>const TKernel *</type>
+      <name>_Kernel</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInZ.html</anchorfile>
+      <anchor>a2a758254010d80f85859ca505828b435</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Offset1</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInZ.html</anchorfile>
+      <anchor>a4fdfcae2852ee1f0b5869ab9e0ab9973</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Offset2</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInZ.html</anchorfile>
+      <anchor>af19a398272670f14ef93cc15260d0c9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Radius</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInZ.html</anchorfile>
+      <anchor>a1bdf3961ac6b6d12986447c3e516191a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_XY</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInZ.html</anchorfile>
+      <anchor>a81724074387096d09b2d5163d8d47b8e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>_Z</name>
+      <anchorfile>structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInZ.html</anchorfile>
+      <anchor>a2e33e6af71a417cd24f0b94446ef5ef6</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -12687,14 +13152,40 @@
     </member>
   </compound>
   <compound kind="struct">
+    <name>mirtk::BinaryVoxelFunction::Div</name>
+    <filename>structmirtk_1_1BinaryVoxelFunction_1_1Div.html</filename>
+    <base>mirtk::VoxelFunction</base>
+  </compound>
+  <compound kind="struct">
     <name>mirtk::TernaryVoxelFunction::Div</name>
     <filename>structmirtk_1_1TernaryVoxelFunction_1_1Div.html</filename>
     <base>mirtk::VoxelFunction</base>
   </compound>
-  <compound kind="struct">
-    <name>mirtk::BinaryVoxelFunction::Div</name>
-    <filename>structmirtk_1_1BinaryVoxelFunction_1_1Div.html</filename>
-    <base>mirtk::VoxelFunction</base>
+  <compound kind="class">
+    <name>mirtk::data::op::DivWithZero</name>
+    <filename>classmirtk_1_1data_1_1op_1_1DivWithZero.html</filename>
+    <base>mirtk::data::op::ElementWiseBinaryOp</base>
+    <member kind="function">
+      <type></type>
+      <name>DivWithZero</name>
+      <anchorfile>classmirtk_1_1data_1_1op_1_1DivWithZero.html</anchorfile>
+      <anchor>a252f58f55aedba156e5c77a859384ab0</anchor>
+      <arglist>(const char *fname)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>Op</name>
+      <anchorfile>classmirtk_1_1data_1_1op_1_1DivWithZero.html</anchorfile>
+      <anchor>af4f2ba2ecd213dfe81ed367a45d7215f</anchor>
+      <arglist>(double value, double constant, bool &amp;) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Process</name>
+      <anchorfile>classmirtk_1_1data_1_1op_1_1DivWithZero.html</anchorfile>
+      <anchor>a821b3d1f69ab08529fdd184c70a34746</anchor>
+      <arglist>(int n, double *data, bool *mask=NULL)</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>mirtk::ConvolutionFunction::DownsampleConvolvedExtendedForegroundInX</name>
@@ -38146,6 +38637,838 @@
     <filename>structstd_1_1hash_3_01mirtk_1_1OptimizationMethod_01_4.html</filename>
   </compound>
   <compound kind="class">
+    <name>mirtk::HashImage</name>
+    <filename>classmirtk_1_1HashImage.html</filename>
+    <templarg>TVoxel</templarg>
+    <base>mirtk::BaseImage</base>
+    <member kind="typedef">
+      <type>DataMap::const_iterator</type>
+      <name>DataIterator</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a7dee02ee17ca97fe7627ca51852209f8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>UnorderedMap&lt; int, VoxelType &gt;</type>
+      <name>DataMap</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ae9d5ab819014b1090a16d894058cea53</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>voxel_info&lt; VoxelType &gt;::RealType</type>
+      <name>RealType</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a9534860d1f770cf7624552802e15ece1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>voxel_info&lt; VoxelType &gt;::ScalarType</type>
+      <name>ScalarType</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>aebf045f61db485711ba330748053b4c9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TVoxel</type>
+      <name>VoxelType</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a7935e46fcc401b39627708628f2cf0b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Clear</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>af8bc9ec74431777b63e2d344752543af</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual BaseImage *</type>
+      <name>Copy</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a9bd301965c1d92a811efc58cfa14a82d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CopyFrom</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a326c7d8402ce6395b3327406765c6fac</anchor>
+      <arglist>(const BaseImage &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CopyFrom</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a9aef943c01064dfec127ee951c4c974c</anchor>
+      <arglist>(const GenericImage&lt; TVoxel2 &gt; &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CopyFrom</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ab0b757bf2a6ff2dd4ebd9fb00bf062f7</anchor>
+      <arglist>(const HashImage&lt; TVoxel2 &gt; &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CopyTo</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a7c7b6038429948906382d4da7f92813e</anchor>
+      <arglist>(GenericImage&lt; TVoxel2 &gt; &amp;) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>FlipXT</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>aaeb7658109c39c52d83ab813e58cd18a</anchor>
+      <arglist>(bool)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>FlipXY</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a9a11331faca17273b8f345e4a7b2d6c2</anchor>
+      <arglist>(bool)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>FlipXZ</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a80372b7d447e81d38e4a8e918818d161</anchor>
+      <arglist>(bool)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>FlipYT</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a37e3e802a7a6fc2a6c686746f76d7a05</anchor>
+      <arglist>(bool)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>FlipYZ</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a4ded8a4727d842406f395351d81936eb</anchor>
+      <arglist>(bool)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>FlipZT</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a40ad1a51d0df37dc56aede503914f8dd</anchor>
+      <arglist>(bool)</arglist>
+    </member>
+    <member kind="function">
+      <type>VoxelType</type>
+      <name>Get</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a5501ffd5d544725c080d0cc0beacddc0</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>VoxelType</type>
+      <name>Get</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ad4e52e56647d2726db7ee92a54b804c3</anchor>
+      <arglist>(int, int, int=0, int=0) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetAsDouble</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>aae7f85439d53f57b6bc370a2d9e5830f</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetAsDouble</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>aa9eda3faf159b07ea01f1c135d0a91aa</anchor>
+      <arglist>(int, int, int=0, int=0) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>GetAsVector</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a464a26a331419d91836ad3d23cec4453</anchor>
+      <arglist>(Vector &amp;, int) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>GetAsVector</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a1d49d80cd6f335a04bebe0d83fa230e4</anchor>
+      <arglist>(Vector &amp;, int, int, int=0, int=0) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector</type>
+      <name>GetAsVector</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a197274ba2b8ec5721192e36414470924</anchor>
+      <arglist>(int) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector</type>
+      <name>GetAsVector</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a2d74108a0a1130a74353c1db93d62072</anchor>
+      <arglist>(int, int, int=0, int=0) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void *</type>
+      <name>GetDataPointer</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a98bb720d673715beb7949ac3fdc01aaa</anchor>
+      <arglist>(int=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const void *</type>
+      <name>GetDataPointer</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a180e705e85d1f412650ef8f2796a039d</anchor>
+      <arglist>(int=0) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void *</type>
+      <name>GetDataPointer</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a55fef8de03490ae130fdbd4fa6f26e5f</anchor>
+      <arglist>(int, int, int=0, int=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const void *</type>
+      <name>GetDataPointer</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a106771e2247c326b46ec242b9ca6e379</anchor>
+      <arglist>(int, int, int=0, int=0) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetDataType</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ab332606ce5dfdda74efae422fa90e4fa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetDataTypeMax</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a76f802fb8012b99734029af25e002b22</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetDataTypeMin</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>add5f186f6f0709d3e18a46b7879c8fd6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetDataTypeSize</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>abf4baa47123af7f5d5cd339315a06683</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage</type>
+      <name>GetFrame</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a900a1c4d6f5b54ed7b3685e301f65a77</anchor>
+      <arglist>(int, int=-1) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetFrame</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a56c21956db97e65ebab1b8678ec0c93c</anchor>
+      <arglist>(HashImage &amp;, int, int=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>GetFrame</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a83d83083196c23745ac83fd64f0bef2a</anchor>
+      <arglist>(BaseImage *&amp;, int, int=-1) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetMinMax</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a667d98652a866ff33978212131f932be</anchor>
+      <arglist>(VoxelType &amp;, VoxelType &amp;) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetMinMax</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a24dd7519fb414bfba84c1a36c9efc2b4</anchor>
+      <arglist>(VoxelType &amp;, VoxelType &amp;, VoxelType) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetMinMax</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a0255a9ced6423d984a017092109e5fdc</anchor>
+      <arglist>(VoxelType *, VoxelType *) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetMinMax</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a0d39022cc78db44edd705dc579b2326d</anchor>
+      <arglist>(VoxelType *, VoxelType *, VoxelType) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetMinMaxPad</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a48a0033970a877e7dd5908f2792e2493</anchor>
+      <arglist>(VoxelType *, VoxelType *, VoxelType) const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage</type>
+      <name>GetRegion</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>abe2d8dd5124f5f1dee0880376e5c5eeb</anchor>
+      <arglist>(int, int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetRegion</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ab4dbf9612a63d91911bc4a4272f7fb20</anchor>
+      <arglist>(HashImage &amp;, int, int) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>GetRegion</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a68009f76d5bf3518a76bc0e72481c0e7</anchor>
+      <arglist>(BaseImage *&amp;, int, int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage</type>
+      <name>GetRegion</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a0428712a0791f790ee3ea5b1a718b103</anchor>
+      <arglist>(int, int, int, int, int, int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetRegion</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a10afc5e9de3c5f0000b51e68c2a77499</anchor>
+      <arglist>(HashImage &amp;, int, int, int, int, int, int) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>GetRegion</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ae216b0498daa872c17749fdd5bb6fdea</anchor>
+      <arglist>(BaseImage *&amp;, int, int, int, int, int, int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage</type>
+      <name>GetRegion</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>aed2a822b76d17d1da83e3ed1ff3c4f43</anchor>
+      <arglist>(int, int, int, int, int, int, int, int) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetRegion</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a4e40c0b9324f332b921d24d89ec95b40</anchor>
+      <arglist>(HashImage &amp;, int, int, int, int, int, int, int, int) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>GetRegion</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>adfa8e1287c33aee837de780bd35eacb2</anchor>
+      <arglist>(BaseImage *&amp;, int, int, int, int, int, int, int, int) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HashImage</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ae7a5a977bce686799a9fb2f2868e2c98</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HashImage</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a3ffe4afef3f883fc8ed1881bec2f6ccc</anchor>
+      <arglist>(const char *)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HashImage</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a359a816128ee3510d015d6ee53230298</anchor>
+      <arglist>(int, int, int=1, int=1)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HashImage</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a89377d95c2206e34f29b90774d65c2a8</anchor>
+      <arglist>(int, int, int, int, int)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HashImage</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>af38d5554de899a94f2779eb7b08cf3ec</anchor>
+      <arglist>(const ImageAttributes &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HashImage</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a2ae0f79b39b3f24bca373c8e139f5595</anchor>
+      <arglist>(const ImageAttributes &amp;, int)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HashImage</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a1ffffb5c390c11764f6153db8cf07d8c</anchor>
+      <arglist>(const BaseImage &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HashImage</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a5ec86660cf113f2c76692bc3ab5341f5</anchor>
+      <arglist>(const HashImage&lt; VoxelType &gt; &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HashImage</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a313add660df3c5d59d18652dd2ef935b</anchor>
+      <arglist>(const GenericImage&lt; TVoxel2 &gt; &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>HashImage</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a3fde92bed3b411d063283a621f2adec5</anchor>
+      <arglist>(const HashImage&lt; TVoxel2 &gt; &amp;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Initialize</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ad579a94ee102dcd1669a8432f0faf034</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Initialize</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a24a14cadc91d20ee0abc1c19c8b392a2</anchor>
+      <arglist>(const ImageAttributes &amp;, int=-1)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Initialize</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a43462f874eeb335c2a6244c0f6033410</anchor>
+      <arglist>(int, int, int, int, int)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Initialize</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a195077f714e37062bf18b634c5db5485</anchor>
+      <arglist>(int, int, int=1, int=1)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>N</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a764a3ca9be41d0b65cb5e94cf58f9dff</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage</type>
+      <name>operator*</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a6c9cb7265a48dc42d2da37c634394f5b</anchor>
+      <arglist>(const HashImage &amp;) const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage</type>
+      <name>operator*</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>aa1db4a65048bfad0afd0aa744029b59e</anchor>
+      <arglist>(ScalarType) const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a5cadcdc7098a6a2ac407496f049b0437</anchor>
+      <arglist>(ScalarType)</arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a6f82f49f1f37be42b63781dee000669b</anchor>
+      <arglist>(const HashImage &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage</type>
+      <name>operator+</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a2b28938ea9460f2cbf8c8e5d0bc37c90</anchor>
+      <arglist>(const HashImage &amp;) const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage</type>
+      <name>operator+</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a1540a2012cff252f543b0a80239b8f04</anchor>
+      <arglist>(ScalarType) const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a4519ccf61be6feff5d47e07a7c5bbce6</anchor>
+      <arglist>(ScalarType)</arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a103c2b56fb2bce6e7af101fc3fb4d4b3</anchor>
+      <arglist>(const HashImage &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage</type>
+      <name>operator-</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a79950d9502fc08f25e1f536eb45c8c30</anchor>
+      <arglist>(const HashImage &amp;) const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage</type>
+      <name>operator-</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>accae1b61f6c51ccb74d9a0926d8c04ce</anchor>
+      <arglist>(ScalarType) const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>af3c2a480d755d934a2ba7eee3217b2d7</anchor>
+      <arglist>(ScalarType)</arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a8447450f4d29ef1d33c8865dfe042086</anchor>
+      <arglist>(const HashImage &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage</type>
+      <name>operator/</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a526518cec7f0ba560bbffd3a5d1882da</anchor>
+      <arglist>(const HashImage &amp;) const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage</type>
+      <name>operator/</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a6cdb2e8bf9ceb8665e2824a88d362e5c</anchor>
+      <arglist>(ScalarType) const </arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage &amp;</type>
+      <name>operator/=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ac157366ca4fd063baacaf7b0fec1753f</anchor>
+      <arglist>(ScalarType)</arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage &amp;</type>
+      <name>operator/=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ad241ccb764e69d563c752bb02ee32501</anchor>
+      <arglist>(const HashImage &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>acac26113c01e1b50374382b814f98412</anchor>
+      <arglist>(VoxelType)</arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage&lt; VoxelType &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a70df3975e453e0741195c6517612e773</anchor>
+      <arglist>(const BaseImage &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage&lt; VoxelType &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a2c959576d12fcbebd9e76056332081e2</anchor>
+      <arglist>(const GenericImage&lt; TVoxel2 &gt; &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage&lt; VoxelType &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a721404fb5d2a1e207da7120723bfea1d</anchor>
+      <arglist>(const HashImage &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>HashImage&lt; VoxelType &gt; &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ae4eca1b97303b16c4b5304fecd55caa8</anchor>
+      <arglist>(const HashImage&lt; TVoxel2 &gt; &amp;)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a05c71b4b4931dfd650d89f902495d6f9</anchor>
+      <arglist>(const HashImage&lt; TVoxel2 &gt; &amp;) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Put</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a60f08a991cacedeac74edc5b9edae2c2</anchor>
+      <arglist>(int, VoxelType)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Put</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a82f80c4678768a5a68b6b1f2d02fe810</anchor>
+      <arglist>(int, int, VoxelType)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Put</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ac3f5a0679ce9929a5246db7da0d9d8dd</anchor>
+      <arglist>(int, int, int, VoxelType)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Put</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a7f4c8be794f37b304586d8ae90347046</anchor>
+      <arglist>(int, int, int, int, VoxelType)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>PutAsDouble</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a1733d90fc160176142aee0d423d55ac8</anchor>
+      <arglist>(int, double)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>PutAsDouble</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>af2aaf313351987d91a3a98307e57b33a</anchor>
+      <arglist>(int, int, double)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>PutAsDouble</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ad784198913f49d98a9ee5961036041da</anchor>
+      <arglist>(int, int, int, double)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>PutAsDouble</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a0b1befe7b906274b184bb1443ec3a13a</anchor>
+      <arglist>(int, int, int, int, double)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>PutAsVector</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a52b97ee360b8d0878b74b6e8dabcf427</anchor>
+      <arglist>(int, const Vector &amp;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>PutAsVector</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a28c9d48fb9d86137e5485cb209c832be</anchor>
+      <arglist>(int, int, const Vector &amp;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>PutAsVector</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a2e4ab5d33037100eb26338882363f13c</anchor>
+      <arglist>(int, int, int, const Vector &amp;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>PutAsVector</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a3a5151bf051654bebbd69827523728b1</anchor>
+      <arglist>(int, int, int, int, const Vector &amp;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>PutBackgroundValueAsDouble</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a60608ab14961f97319e19fe63745834c</anchor>
+      <arglist>(double, bool)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>PutBackgroundValueAsDouble</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>aa5bf1f8eb46440151396a85491163b72</anchor>
+      <arglist>(double value, bool threshold)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>PutBackgroundValueAsDouble</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>aead21343ed21759a69e2f0843c54c7c6</anchor>
+      <arglist>(double value, bool threshold)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>PutMinMax</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ad0fd47f9311de8f9f85c3bdfd4c0fd9a</anchor>
+      <arglist>(VoxelType, VoxelType)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Read</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a69fb7956f95d1082615e1c9be7c08c87</anchor>
+      <arglist>(const char *)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Read</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a94773f12d7fb761be1d441b511853b3c</anchor>
+      <arglist>(const char *)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Read</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ae2024e843f89f62344ec6b623de9d765</anchor>
+      <arglist>(const char *)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ReflectX</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ac52ea38afec026c8520ce29c7c8b56eb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ReflectY</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ae51f91c91d607d9649a29d0e02252674</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ReflectZ</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a14a0e319bce68a71d5a43d8c448d1630</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>VoxelToIndex</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a9e9888b0916370b2e64aafd737bbe9e6</anchor>
+      <arglist>(int, int, int=0, int=0) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Write</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>af8a4990506f10459cb775570daccf9e1</anchor>
+      <arglist>(const char *) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Write</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a86cc1b0a7c39df3cf27ee988309b7678</anchor>
+      <arglist>(const char *) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Write</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ab5638801c914fede306afba1916394c0</anchor>
+      <arglist>(const char *) const</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~HashImage</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a91da625b0297966ff589dc31a3ad26ab</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>VoxelType</type>
+      <name>Access</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ae8c0df61e728fbff1f2c2024eb8f8b86</anchor>
+      <arglist>(int)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>AllocateImage</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a890f705c5c30101151c7a576f9d933ba</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>mirtkAttributeMacro</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>ae0a9a46a0d4325025ddf8e4894159e6d</anchor>
+      <arglist>(DataMap, Data)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>mirtkPublicAttributeMacro</name>
+      <anchorfile>classmirtk_1_1HashImage.html</anchorfile>
+      <anchor>a17e6338635ae4a2c8ae59cfedcd36c3b</anchor>
+      <arglist>(VoxelType, DefaultValue)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>mirtk::HessianImageFilter</name>
     <filename>classmirtk_1_1HessianImageFilter.html</filename>
     <templarg></templarg>
@@ -47143,11 +48466,6 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="struct">
-    <name>mirtk::TernaryVoxelFunction::Mul</name>
-    <filename>structmirtk_1_1TernaryVoxelFunction_1_1Mul.html</filename>
-    <base>mirtk::VoxelFunction</base>
-  </compound>
   <compound kind="class">
     <name>mirtk::data::op::Mul</name>
     <filename>classmirtk_1_1data_1_1op_1_1Mul.html</filename>
@@ -47180,6 +48498,11 @@
       <anchor>a55453d90a5e7b448d4c9bc007484d9ff</anchor>
       <arglist>(int n, double *data, bool *mask=NULL)</arglist>
     </member>
+  </compound>
+  <compound kind="struct">
+    <name>mirtk::TernaryVoxelFunction::Mul</name>
+    <filename>structmirtk_1_1TernaryVoxelFunction_1_1Mul.html</filename>
+    <base>mirtk::VoxelFunction</base>
   </compound>
   <compound kind="struct">
     <name>mirtk::BinaryVoxelFunction::Mul</name>
@@ -64227,6 +65550,7 @@
     <class kind="class">mirtk::HarmonicFundamentalVolumeParameterizer</class>
     <class kind="class">mirtk::HarmonicMap</class>
     <class kind="class">mirtk::HarmonicTetrahedralVolumeParameterizer</class>
+    <class kind="class">mirtk::HashImage</class>
     <class kind="class">mirtk::HessianImageFilter</class>
     <class kind="class">mirtk::Histogram1D</class>
     <class kind="class">mirtk::Histogram2D</class>
@@ -65669,6 +66993,13 @@
       <arglist>(int n)</arglist>
     </member>
     <member kind="function">
+      <type>string</type>
+      <name>ParameterUnits</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a30bc600402e900361291177d7ce8d468</anchor>
+      <arglist>(const string &amp;str, string *name=nullptr, const char *dflt=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>ParseProfilingOption</name>
       <anchorfile>namespacemirtk.html</anchorfile>
@@ -65889,8 +67220,15 @@
       <type>Array&lt; string &gt;</type>
       <name>Split</name>
       <anchorfile>namespacemirtk.html</anchorfile>
-      <anchor>a22c02a1a80f740b1ddbe7646388548e6</anchor>
-      <arglist>(string s, const char *d, int n=0)</arglist>
+      <anchor>a83d949a3354f53e63bff0c9d6a34f788</anchor>
+      <arglist>(string s, const char *d, int n=0, bool e=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>StandardUnits</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a1c1bbe8a71f363d9e0ebcbf7730f02a0</anchor>
+      <arglist>(const string &amp;str)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -66019,6 +67357,20 @@
       <arglist>(vtkSmartPointer&lt; vtkPolyData &gt;)</arglist>
     </member>
     <member kind="function">
+      <type>string</type>
+      <name>Trim</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a88318c28477468e8cab905fd5a1bac28</anchor>
+      <arglist>(const string &amp;str, const string &amp;what=&quot; \t\r\n&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>string</type>
+      <name>ValueUnits</name>
+      <anchorfile>namespacemirtk.html</anchorfile>
+      <anchor>a23b9cd90368114825ae1185816fd4f3a</anchor>
+      <arglist>(const string &amp;str, string *value=nullptr, const char *dflt=&quot;&quot;)</arglist>
+    </member>
+    <member kind="function">
       <type>vtkSmartPointer&lt; vtkPointSet &gt;</type>
       <name>WorldToImage</name>
       <anchorfile>namespacemirtk.html</anchorfile>
@@ -66138,6 +67490,10 @@
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveExtendedForegroundInX</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveExtendedForegroundInY</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveExtendedForegroundInZ</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveForegroundInT</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveForegroundInX</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveForegroundInY</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveForegroundInZ</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveInT</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveInX</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveInY</class>
@@ -66150,6 +67506,10 @@
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveTruncatedForegroundInX</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveTruncatedForegroundInY</class>
     <class kind="struct">mirtk::ConvolutionFunction::ConvolveTruncatedForegroundInZ</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveWeightedImageInT</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveWeightedImageInX</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveWeightedImageInY</class>
+    <class kind="struct">mirtk::ConvolutionFunction::ConvolveWeightedImageInZ</class>
     <class kind="struct">mirtk::ConvolutionFunction::DownsampleConvolvedExtendedForegroundInX</class>
     <class kind="struct">mirtk::ConvolutionFunction::DownsampleConvolvedExtendedForegroundInY</class>
     <class kind="struct">mirtk::ConvolutionFunction::DownsampleConvolvedExtendedForegroundInZ</class>
@@ -66174,6 +67534,7 @@
     <class kind="class">mirtk::data::op::Add</class>
     <class kind="class">mirtk::data::op::Clamp</class>
     <class kind="class">mirtk::data::op::Div</class>
+    <class kind="class">mirtk::data::op::DivWithZero</class>
     <class kind="class">mirtk::data::op::ElementWiseBinaryOp</class>
     <class kind="class">mirtk::data::op::ElementWiseUnaryOp</class>
     <class kind="class">mirtk::data::op::Exp</class>

@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.0 (3b6da28)',
+        VERSION:     'v1.1 (ab5de3a)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -67,6 +67,7 @@
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
@@ -199,7 +200,7 @@ ignored from now on. Use -outside/-pad following this operation to set an outsid
 
 <dl class="option">
 <dt id="cmdoption-calculate-outside">
-<code class="descname">-outside</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-calculate-outside" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-pad"></span><code class="descname">-outside</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-pad</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-calculate-outside" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set new value for all currently masked data values.</p>
 </dd></dl>
 
@@ -231,7 +232,17 @@ Output data type can be: uchar, short, ushort, int, uint, float, double.</p>
 <dl class="option">
 <dt id="cmdoption-calculate-div">
 <code class="descname">-div</code><code class="descclassname"> &lt;float|file&gt;</code><a class="headerlink" href="#cmdoption-calculate-div" title="Permalink to this definition">¶</a></dt>
-<dd><p>Divide by constant value or data sequence read from specified file.</p>
+<dd><p>Divide by constant value or data sequence read from specified file.
+When dividing by zero values in the input file, the result is NaN.
+Use <a class="reference internal" href="#cmdoption-calculate-mask"><code class="xref std std-option docutils literal"><span class="pre">-mask</span></code></a> with argument NaN and <a class="reference internal" href="#cmdoption-calculate-outside"><code class="xref std std-option docutils literal"><span class="pre">-outside</span></code></a> to replace
+these undefined values by a constant such as zero.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-div-with-zero">
+<code class="descname">-div-with-zero</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-calculate-div-with-zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <a class="reference internal" href="#cmdoption-calculate-div"><code class="xref std std-option docutils literal"><span class="pre">-div</span></code></a> but set result to zero instead of NaN in case of
+a division by zero due to a zero value in the specified file.</p>
 </dd></dl>
 
 <dl class="option">

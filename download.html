@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0 (3b6da28)',
+        VERSION:     'v1.1 (ab5de3a)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -67,6 +67,7 @@
 <h3><a href="sidebar.html">Table Of Contents</a></h3>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
@@ -132,7 +133,7 @@ of the downloaded MIRTK repository:</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>To download the entire MIRTK distribution including documentation source files,
+<p>To download the entire MIRTK distribution including
 third-party library modules, and external packages, run the command:</p>
 <div class="highlight-python"><div class="highlight"><pre>git submodule update --init
 </pre></div>
@@ -158,12 +159,6 @@ in the Packages/ directory. To also build these optional packages, initialize an
 update the desired Git submodules before (re-)configuring the build files, e.g.:</p>
 <div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- Packages/Deformable
 git submodule update --init -- Packages/VolumetricMapping
-</pre></div>
-</div>
-<p>To build the online documentation from the reStructuredText (.rst) files in
-the Documentation subdirectory, clone also the
-<a class="reference external" href="https://github.com/MIRTK/Documentation">MIRTK/Documentation</a> repository:</p>
-<div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- Documentation
 </pre></div>
 </div>
 </div>

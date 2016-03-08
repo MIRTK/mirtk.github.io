@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0 (3b6da28)',
+        VERSION:     'v1.1 (ab5de3a)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -67,6 +67,7 @@
 <h3><a href="sidebar.html">Table Of Contents</a></h3>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
@@ -179,6 +180,8 @@ as described in the <a class="reference internal" href="download.html#downloadso
 the <a class="reference external" href="http://sourceforge.net/projects/niftilib/">NiftiCLib</a> and <a class="reference external" href="http://www.chokkan.org/software/liblbfgs/">libLBFGS</a> libraries are included in the basic download package and need
 not be installed. The WITH_NiftiCLib build option can be used, however, to force the use
 of an existing NiftiCLib installation. See <a class="reference internal" href="#configurationsteps"><span>build configuration steps below</span></a>.</p>
+<p>To execute the <a class="reference internal" href="commands.html"><em>Applications</em></a>, a <a class="reference external" href="https://www.python.org">Python</a> installation is further required. Note that
+Python has to be installed before building the MIRTK from its source code.</p>
 <p>The intra-module dependencies are as follows. When a module is enabled,
 all modules required by this module are automatically enabled as well.</p>
 <table border="1" class="docutils">
@@ -298,31 +301,34 @@ until no further changes are made and the &#8220;Generate&#8221; button is enabl
 <tr class="row-odd"><td>CMAKE_INSTALL_PREFIX</td>
 <td>Installation directory (default on Linux and OS X is <cite>/opt/mirtk-&lt;version&gt;</cite>).</td>
 </tr>
-<tr class="row-even"><td>WITH_ARPACK</td>
+<tr class="row-even"><td>PYTHON_EXECUTABLE</td>
+<td><a class="reference external" href="https://www.python.org">Python</a> executable used for execution of Python scripts.</td>
+</tr>
+<tr class="row-odd"><td>WITH_ARPACK</td>
 <td>Enable eigendecomposition of sparse matrices. Required for spectral surface matching.</td>
 </tr>
-<tr class="row-odd"><td>WITH_MATLAB</td>
+<tr class="row-even"><td>WITH_MATLAB</td>
 <td>Enable output of matrices to .mat files and use of MATLAB functions.</td>
 </tr>
-<tr class="row-even"><td>WITH_NiftiCLib</td>
+<tr class="row-odd"><td>WITH_NiftiCLib</td>
 <td>Force use of existing system installation of <a class="reference external" href="http://sourceforge.net/projects/niftilib/">NiftiCLib</a>.</td>
 </tr>
-<tr class="row-odd"><td>WITH_PNG</td>
+<tr class="row-even"><td>WITH_PNG</td>
 <td>Enable writing of 2D images in <a class="reference external" href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG</a> file format.</td>
 </tr>
-<tr class="row-even"><td>WITH_PROFILING</td>
+<tr class="row-odd"><td>WITH_PROFILING</td>
 <td>Enable profiling of code execution to find runtime bottlenecks.</td>
 </tr>
-<tr class="row-odd"><td>WITH_TBB</td>
+<tr class="row-even"><td>WITH_TBB</td>
 <td>Enable multi-threaded execution using Intel Threading Building Blocks. (recommended)</td>
 </tr>
-<tr class="row-even"><td>WITH_UMFPACK</td>
+<tr class="row-odd"><td>WITH_UMFPACK</td>
 <td>Automatically enabled when WITH_ARPACK is ON.</td>
 </tr>
-<tr class="row-odd"><td>WITH_VTK</td>
+<tr class="row-even"><td>WITH_VTK</td>
 <td>Enable processing of VTK files. Automatically enabled when PointSet module is enabled.</td>
 </tr>
-<tr class="row-even"><td>WITH_ZLIB</td>
+<tr class="row-odd"><td>WITH_ZLIB</td>
 <td>Enable reading/writing of compressed files using <a class="reference external" href="http://www.zlib.net">zlib</a>. (recommended)</td>
 </tr>
 </tbody>

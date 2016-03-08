@@ -40,6 +40,7 @@ var searchData=
   ['distancemeasurement',['DistanceMeasurement',['../classmirtk_1_1ImplicitSurfaceUtils_1_1DistanceMeasurement.html#abedb212ef23b5ba065d792b35a445fd2',1,'mirtk::ImplicitSurfaceUtils::DistanceMeasurement']]],
   ['distances',['Distances',['../classmirtk_1_1ImplicitSurfaceForce.html#a1f2ffb307ea97af503bcb3b14db72d4c',1,'mirtk::ImplicitSurfaceForce']]],
   ['div',['Div',['../classmirtk_1_1data_1_1op_1_1Div.html#aadf5cc740ab3d4b0ad0cd52c642a7480',1,'mirtk::data::op::Div::Div(double value)'],['../classmirtk_1_1data_1_1op_1_1Div.html#a80062714d1c49d189f6fca414b8fc7c2',1,'mirtk::data::op::Div::Div(const char *fname)']]],
+  ['divwithzero',['DivWithZero',['../classmirtk_1_1data_1_1op_1_1DivWithZero.html#a252f58f55aedba156e5c77a859384ab0',1,'mirtk::data::op::DivWithZero']]],
   ['dkdp',['dkdp',['../classmirtk_1_1FreeFormTransformationRungeKutta.html#abd3b8ef41555a1c12891123fc59e5b5c',1,'mirtk::FreeFormTransformationRungeKutta']]],
   ['dkdx',['dkdx',['../classmirtk_1_1FreeFormTransformationRungeKutta.html#ad4af0b7b598f2de19f7af873a8d6466a',1,'mirtk::FreeFormTransformationRungeKutta']]],
   ['doevaluatesourceerror',['DoEvaluateSourceError',['../classmirtk_1_1PointCorrespondenceDistance.html#ad97d92ad39b0de73449efd1846ec4478',1,'mirtk::PointCorrespondenceDistance']]],

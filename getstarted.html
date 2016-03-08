@@ -1,0 +1,189 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="Get started with the Medical Image Registration ToolKit (MIRTK)" name="description" />
+<meta content="image processing, image registration, IRTK, MIRTK, intro, quick start" name="keywords" />
+
+    <title>Get Started &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v1.1 (ab5de3a)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="sidebar.html" />
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="Medical Image Registration ToolKit (MIRTK)" href="index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="modules.html" title="Modules"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="index.html" title="Medical Image Registration ToolKit (MIRTK)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="sidebar.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Get Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-software">Install the software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-the-commands">Run the commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#write-your-own-application">Write your own application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Getting Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="get-started">
+<h1>Get Started<a class="headerlink" href="#get-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install-the-software">
+<h2>Install the software<a class="headerlink" href="#install-the-software" title="Permalink to this headline">¶</a></h2>
+<p>Before you can start using the MIRTK or develop your own MIRTK applications,
+you have to install the desired modules and available applications on your
+system including their prerequisites. For a manual installation of the MIRTK,
+please follow the <a class="reference internal" href="download.html"><em>Download</em></a> and <a class="reference internal" href="install.html"><em>Installation</em></a> instructions which
+list the third-party libraries required by each module and describe how to
+build the MIRTK from its publicly available source code.</p>
+<p>Instead of manually building and installing the MIRTK, you can use the
+pre-made <a class="reference external" href="MIRTKDockerimage">biomedia/mirtk</a> Docker image to run the
+<a class="reference internal" href="commands.html"><em>Applications</em></a> inside a <a class="reference external" href="https://www.docker.com/what-docker">Docker container</a>. For a guide to install and use
+<a class="reference external" href="http://www.docker.com">Docker</a>, see the <a class="reference external" href="https://docs.docker.com">official docs</a>.</p>
+</div>
+<div class="section" id="run-the-commands">
+<h2>Run the commands<a class="headerlink" href="#run-the-commands" title="Permalink to this headline">¶</a></h2>
+<p>The MIRTK installs a single executable named <code class="docutils literal"><span class="pre">mirtk</span></code> in the <code class="docutils literal"><span class="pre">bin/</span></code> directory
+of the installation root directory. This executable is used to execute the various
+MIRTK commands. The name of the command must be specified as first argument of the
+<code class="docutils literal"><span class="pre">mirtk</span></code> executable. Help about a command can be printed using the special <code class="docutils literal"><span class="pre">help</span></code>
+or <code class="docutils literal"><span class="pre">help-rst</span></code> commands followed by the name of the command for which help is requested.</p>
+<p>Usage:</p>
+<div class="highlight-python"><div class="highlight"><pre>mirtk help &lt;command&gt;
+mirtk [-v] [-v] &lt;command&gt; [options]
+</pre></div>
+</div>
+<p>When the <code class="docutils literal"><span class="pre">-v</span></code> option is given to <code class="docutils literal"><span class="pre">mirtk</span></code> before the command name, the path and
+arguments of the command executable is printed before execution.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The MIRTK installation includes a <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a>
+completions script which enables auto-completion of the available MIRTK commands.
+See <a class="reference internal" href="install.html#installationsteps"><span>Installation</span></a> on how to activate auto-completion. When enabled, press the
+&lt;tab&gt; key twice after typing &#8220;mirtk &#8221; (incl. a space) to see a list of all commands.
+To only see a list of partial matches type, for example, &#8220;mirtk eval&#8221; and press &lt;tab&gt; twice.</p>
+</div>
+<p>With <a class="reference external" href="http://www.docker.com">Docker</a>, use the following command instead of <code class="docutils literal"><span class="pre">mirtk</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>docker run --rm --volume=&lt;path&gt;:/data biomedia/mirtk [-v] [-v] &lt;command&gt; [&lt;options&gt;]
+</pre></div>
+</div>
+<p>This will automatically download the <a class="reference external" href="https://hub.docker.com/r/biomedia/mirtk/">MIRTK Docker image</a> upon first execution and re-use
+this image for consecutive commands. The <code class="docutils literal"><span class="pre">--volume</span></code> option of <code class="docutils literal"><span class="pre">docker</span> <span class="pre">run</span></code> mounts the
+specified directory path on the host system to the <code class="docutils literal"><span class="pre">/data</span></code> directory inside the MIRTK
+Docker container. This local data directory is the working directory of the MIRTK command.
+The <code class="docutils literal"><span class="pre">--rm</span></code> option automatically deletes the MIRTK Docker container again after the
+command finished. Note that each <code class="docutils literal"><span class="pre">docker</span> <span class="pre">run</span></code> will create a new Docker container.
+As these containers are meant to be used only once for each command execution, they
+should be removed again after the command has finished.</p>
+<p>For example, to print information about the NIfTI image file <code class="docutils literal"><span class="pre">/path/to/my/images/image1.nii.gz</span></code>
+using the <a class="reference internal" href="commands/info.html"><em>info</em></a> command, execute the Docker command:</p>
+<div class="highlight-python"><div class="highlight"><pre>docker run --rm --volume=/path/to/my/images:/data biomedia/mirtk info image1.nii.gz
+</pre></div>
+</div>
+<p>See the <a class="reference internal" href="commands.html"><em>Applications</em></a> page for a description of each command and the available options.</p>
+</div>
+<div class="section" id="write-your-own-application">
+<h2>Write your own application<a class="headerlink" href="#write-your-own-application" title="Permalink to this headline">¶</a></h2>
+<p>For writing your own MIRTK command or an application which uses the MIRTK libraries,
+we recommend a look at the source code of the applications included in the MIRTK.
+The <a class="reference internal" href="apidoc.html"><em>API Reference</em></a> generated by <a class="reference external" href="http://www.doxygen.org/">Doxygen</a> provides a more detailed
+overview of the available MIRTK classes and their interfaces.</p>
+<p>If you intend to contribute your applications in the future to the MIRTK distribution,
+see the <a class="reference external" href="https://github.com/BioMedIA/MIRTK/blob/master/CONTRIBUTING.md">code contribution</a>
+guidelines for more information on how to contribute your code to the MIRTK source tree
+or develop your own MIRTK Package.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="modules.html" title="Modules"
+             >next</a></li>
+        <li class="right" >
+          <a href="index.html" title="Medical Image Registration ToolKit (MIRTK)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

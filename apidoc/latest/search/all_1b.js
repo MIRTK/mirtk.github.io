@@ -90,6 +90,7 @@ var searchData=
   ['_7eharmonicfundamentalvolumeparameterizer',['~HarmonicFundamentalVolumeParameterizer',['../classmirtk_1_1HarmonicFundamentalVolumeParameterizer.html#a535de9e43ae69eed7cb9fa9b74b68760',1,'mirtk::HarmonicFundamentalVolumeParameterizer']]],
   ['_7eharmonicmap',['~HarmonicMap',['../classmirtk_1_1HarmonicMap.html#a59b4ba52123f2194f4e9e8c6c0c1bcf9',1,'mirtk::HarmonicMap']]],
   ['_7eharmonictetrahedralvolumeparameterizer',['~HarmonicTetrahedralVolumeParameterizer',['../classmirtk_1_1HarmonicTetrahedralVolumeParameterizer.html#a3917b76fd5078da2be74330e4de47936',1,'mirtk::HarmonicTetrahedralVolumeParameterizer']]],
+  ['_7ehashimage',['~HashImage',['../classmirtk_1_1HashImage.html#a91da625b0297966ff589dc31a3ad26ab',1,'mirtk::HashImage']]],
   ['_7ehistogram1d',['~Histogram1D',['../classmirtk_1_1Histogram1D.html#adc7de4a38bd98db09fe9df346e4e525d',1,'mirtk::Histogram1D']]],
   ['_7ehistogram2d',['~Histogram2D',['../classmirtk_1_1Histogram2D.html#aefd3c8430e32fc59380919d3004c12ee',1,'mirtk::Histogram2D']]],
   ['_7ehomogeneoustransformation',['~HomogeneousTransformation',['../classmirtk_1_1HomogeneousTransformation.html#a79f05e42463b63cb7d90b1e49b8571d6',1,'mirtk::HomogeneousTransformation']]],

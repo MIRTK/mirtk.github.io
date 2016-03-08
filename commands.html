@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.0 (3b6da28)',
+        VERSION:     'v1.1 (ab5de3a)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -65,9 +65,9 @@
 <h3><a href="sidebar.html">Table Of Contents</a></h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getstarted.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Applications</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#options">Options</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#standard-options">Standard options</a></li>
@@ -98,30 +98,6 @@
             
   <div class="section" id="applications">
 <span id="id1"></span><h1>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>The MIRTK installs a single executable script file named <code class="docutils literal"><span class="pre">mirtk</span></code> in the
-<code class="docutils literal"><span class="pre">bin/</span></code> directory of the installation root directory. This executable is
-used to execute the various MIRTK commands. The name of the command must
-be specified as first argument of the <code class="docutils literal"><span class="pre">mirtk</span></code> executable. Help about
-a command can be printed using the special <code class="docutils literal"><span class="pre">help</span></code> or <code class="docutils literal"><span class="pre">help-rst</span></code> commands
-followed by the name of the command for which help is requested.</p>
-<p>Usage:</p>
-<div class="highlight-python"><div class="highlight"><pre>mirtk help &lt;command&gt;
-mirtk [-v] [-v] &lt;command&gt; [options]
-</pre></div>
-</div>
-<p>When the <code class="docutils literal"><span class="pre">-v</span></code> option is given before the command name, the path and arguments
-of the command executable is printed before execution.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The MIRTK installation includes a <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a>
-completions script which enables auto-completion of the available MIRTK commands.
-See <a class="reference internal" href="install.html#installationsteps"><span>Installation</span></a> on how to activate auto-completion. When enabled, press the
-&lt;tab&gt; key twice after typing &#8220;mirtk &#8221; (incl. a space) to see a list of all commands.
-To only see a list of partial matches type, for example, &#8220;mirtk eval&#8221; and press &lt;tab&gt; twice.</p>
-</div>
-</div>
 <div class="section" id="commands">
 <span id="commandssummary"></span><h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['access',['Access',['../classmirtk_1_1HashImage.html#ae8c0df61e728fbff1f2c2024eb8f8b86',1,'mirtk::HashImage']]],
   ['activesvffd',['ActiveSVFFD',['../classmirtk_1_1MultiLevelStationaryVelocityTransformation.html#a11704f35c22c9f1147f19ee815baa476',1,'mirtk::MultiLevelStationaryVelocityTransformation::ActiveSVFFD()'],['../classmirtk_1_1MultiLevelStationaryVelocityTransformation.html#a90c4e9f56c8c6692ccae1f14fb4fe087',1,'mirtk::MultiLevelStationaryVelocityTransformation::ActiveSVFFD() const ']]],
   ['actualnumberofdofs',['ActualNumberOfDOFs',['../classmirtk_1_1FreeFormTransformation.html#a11154f3d110d360fdb3ac4a1855dc7c4',1,'mirtk::FreeFormTransformation']]],
   ['adaptivelinesearch',['AdaptiveLineSearch',['../classmirtk_1_1AdaptiveLineSearch.html#a05f28f6f96b6110977b3e814e531a9c2',1,'mirtk::AdaptiveLineSearch::AdaptiveLineSearch(ObjectiveFunction *=NULL)'],['../classmirtk_1_1AdaptiveLineSearch.html#ae18f327b55712c2c05287825070a6f51',1,'mirtk::AdaptiveLineSearch::AdaptiveLineSearch(const AdaptiveLineSearch &amp;)']]],
@@ -30,7 +31,7 @@ var searchData=
   ['allocategradient',['AllocateGradient',['../classmirtk_1_1PointSetForce.html#a65a226af2475c56dd0c6f09cded9a147',1,'mirtk::PointSetForce']]],
   ['allocategradientwrtsource',['AllocateGradientWrtSource',['../classmirtk_1_1PointSetDistance.html#a7f487fed9d70a461fc01be7893bcf14e',1,'mirtk::PointSetDistance']]],
   ['allocategradientwrttarget',['AllocateGradientWrtTarget',['../classmirtk_1_1PointSetDistance.html#ab252d1176202371c8d82437dba6f6c40',1,'mirtk::PointSetDistance']]],
-  ['allocateimage',['AllocateImage',['../classmirtk_1_1GenericImage.html#abe7dcb1a46f3a03139ddff0868904b6c',1,'mirtk::GenericImage']]],
+  ['allocateimage',['AllocateImage',['../classmirtk_1_1GenericImage.html#abe7dcb1a46f3a03139ddff0868904b6c',1,'mirtk::GenericImage::AllocateImage()'],['../classmirtk_1_1HashImage.html#a890f705c5c30101151c7a576f9d933ba',1,'mirtk::HashImage::AllocateImage()']]],
   ['allowrotations',['AllowRotations',['../classmirtk_1_1AffineTransformation.html#aca3ab7f8c26521b82435e87b3cbcde64',1,'mirtk::AffineTransformation::AllowRotations(bool)'],['../classmirtk_1_1AffineTransformation.html#ac0a366357042751b9f73c1f532cf75f5',1,'mirtk::AffineTransformation::AllowRotations() const ']]],
   ['allowscaling',['AllowScaling',['../classmirtk_1_1AffineTransformation.html#a2affac6f28bd729f0c29a61d57b7cf67',1,'mirtk::AffineTransformation::AllowScaling(bool)'],['../classmirtk_1_1AffineTransformation.html#ae42f1b3b8f8eecf740ac97ab54729937',1,'mirtk::AffineTransformation::AllowScaling() const ']]],
   ['allowshearing',['AllowShearing',['../classmirtk_1_1AffineTransformation.html#a38b6a96e6a656ccc85d79a57825458c9',1,'mirtk::AffineTransformation::AllowShearing(bool)'],['../classmirtk_1_1AffineTransformation.html#a03b112163fbb80578250839fa333ca49',1,'mirtk::AffineTransformation::AllowShearing() const ']]],
