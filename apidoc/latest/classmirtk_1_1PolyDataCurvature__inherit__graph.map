@@ -1,4 +1,4 @@
 <map id="mirtk::PolyDataCurvature" name="mirtk::PolyDataCurvature">
-<area shape="rect" id="node2" href="$classmirtk_1_1PolyDataFilter.html" title="{mirtk::PolyDataFilter\n||+ GetOutput()\l+ mirtkOnOffMacro()\l+ Run()\l+ SetInput()\l+ SetInputData()\l+ Update()\l# Execute()\l# Finalize()\l# Initialize()\l# InitializeEdgeTable()\l# operator=()\l# PolyDataFilter()\l# PolyDataFilter()\l# ~PolyDataFilter()\l}" alt="" coords="37,204,191,472"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="51,5,177,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1PolyDataFilter.html" title="{mirtk::PolyDataFilter\n||+ GetOutput()\l+ mirtkOnOffMacro()\l+ Run()\l+ SetInput()\l+ SetInputData()\l+ Update()\l# Execute()\l# Finalize()\l# Initialize()\l# InitializeEdgeTable()\l# operator=()\l# PolyDataFilter()\l# PolyDataFilter()\l# ~PolyDataFilter()\l}" alt="" coords="37,206,187,474"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="49,6,175,157"/>
 </map>

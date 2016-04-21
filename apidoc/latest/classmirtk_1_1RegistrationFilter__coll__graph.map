@@ -1,4 +1,4 @@
 <map id="mirtk::RegistrationFilter" name="mirtk::RegistrationFilter">
-<area shape="rect" id="node2" href="$classmirtk_1_1Observable.html" title="{mirtk::Observable\n|# _Changed\l# _Observers\l|+ AddObserver()\l+ Broadcast()\l+ Changed()\l+ Changed()\l+ Changed()\l+ ClearObservers()\l+ DeleteObserver()\l+ NameOfClass()\l+ NotifyObservers()\l+ NumberOfObservers()\l+ ~Observable()\l+ NameOfType()\l# Observable()\l# Observable()\l# Observers()\l# Observers()\l# Observers()\l# operator=()\l}" alt="" coords="5,204,171,545"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="25,5,151,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Observable.html" title="{mirtk::Observable\n||+ AddObserver()\l+ Broadcast()\l+ ClearObservers()\l+ DeleteObserver()\l+ NotifyObservers()\l+ NumberOfObservers()\l+ ~Observable()\l# Observable()\l# Observable()\l# operator=()\l}" alt="" coords="5,206,168,415"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="24,6,149,157"/>
 </map>

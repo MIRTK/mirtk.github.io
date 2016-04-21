@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="resample-image" href="resample-image.html" />
     <link rel="prev" title="register" href="register.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="register.html" title="register"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,13 +87,13 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="remesh">
 <h1>remesh<a class="headerlink" href="#remesh" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk remesh &lt;input&gt; &lt;output&gt; [options]
+<div class="highlight-python"><div class="highlight"><pre>remesh &lt;input&gt; &lt;output&gt; [options]
 </pre></div>
 </div>
 </div>
@@ -107,13 +107,13 @@ triangulated when necessary before the local remeshing passes.</p>
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-remesh-arg-input">
-<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-arg-input" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">input</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-arg-input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input surface mesh.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-arg-output">
-<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-arg-output" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output surface mesh.</p>
 </dd></dl>
 
@@ -122,70 +122,70 @@ triangulated when necessary before the local remeshing passes.</p>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-remesh-target">
-<code class="descname">-target</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-remesh-target" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-target</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-remesh-target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find closest cell points on target surface and use these as new point locations.
 (default: use points of input mesh)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-edgelength">
-<code class="descname">-edgelength</code><code class="descclassname"> &lt;float&gt;...</code><a class="headerlink" href="#cmdoption-remesh-edgelength" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-edgelength</tt><tt class="descclassname"> &lt;float&gt;...</tt><a class="headerlink" href="#cmdoption-remesh-edgelength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Average edge length. (default: [0, inf)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-min-edgelength">
-<code class="descname">-min-edgelength</code><code class="descclassname"> &lt;float&gt;...</code><a class="headerlink" href="#cmdoption-remesh-min-edgelength" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-min-edgelength</tt><tt class="descclassname"> &lt;float&gt;...</tt><a class="headerlink" href="#cmdoption-remesh-min-edgelength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimum edge length. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-max-edgelength">
-<code class="descname">-max-edgelength</code><code class="descclassname"> &lt;float&gt;...</code><a class="headerlink" href="#cmdoption-remesh-max-edgelength" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-max-edgelength</tt><tt class="descclassname"> &lt;float&gt;...</tt><a class="headerlink" href="#cmdoption-remesh-max-edgelength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum edge length. (default: inf)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-adaptive-edgelength">
-<code class="descname">-adaptive-edgelength</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-remesh-adaptive-edgelength" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-adaptive-edgelength</tt><tt class="descclassname"> &lt;name&gt;</tt><a class="headerlink" href="#cmdoption-remesh-adaptive-edgelength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of point data array to use for adapting the edge length range. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-melting-order">
-<code class="descname">-melting-order</code><code class="descclassname"> &lt;none|area|shortest&gt;</code><a class="headerlink" href="#cmdoption-remesh-melting-order" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-melting-order</tt><tt class="descclassname"> &lt;none|area|shortest&gt;</tt><a class="headerlink" href="#cmdoption-remesh-melting-order" title="Permalink to this definition">¶</a></dt>
 <dd><p>Order in which to process cells in melting pass. (default: area)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-melt-nodes">
-<span id="cmdoption-remesh-nomelt-nodes"></span><code class="descname">-melt-nodes</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nomelt-nodes</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-melt-nodes" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-remesh-nomelt-nodes"></span><tt class="descname">-melt-nodes</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nomelt-nodes</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-melt-nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to allow removal of adjacent nodes with connectivity three
 during melting pass. (default: yes)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-melt-triangles">
-<span id="cmdoption-remesh-nomelt-triangles"></span><code class="descname">-melt-triangles</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nomelt-triangles</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-melt-triangles" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-remesh-nomelt-triangles"></span><tt class="descname">-melt-triangles</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nomelt-triangles</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-melt-triangles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to melt triangles when all three edges are too short. (default: no)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-invert-long-edges">
-<span id="cmdoption-remesh-noinvert-long-edges"></span><code class="descname">-invert-long-edges</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noinvert-long-edges</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-invert-long-edges" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-remesh-noinvert-long-edges"></span><tt class="descname">-invert-long-edges</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-noinvert-long-edges</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-invert-long-edges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable inversion of triangles sharing one too long edge. (default: no)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-invert-min-height">
-<span id="cmdoption-remesh-noinvert-min-height"></span><code class="descname">-invert-min-height</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noinvert-min-height</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-invert-min-height" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-remesh-noinvert-min-height"></span><tt class="descname">-invert-min-height</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-noinvert-min-height</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-invert-min-height" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable inversion of triangles when it increases the minimum height. (default: yes)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-noinversion">
-<code class="descname">-noinversion</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-noinversion" title="Permalink to this definition">¶</a></dt>
-<dd><p>Disable <a class="reference internal" href="#cmdoption-remesh-invert-long-edges"><code class="xref std std-option docutils literal"><span class="pre">-invert-long-edges</span></code></a> and <a class="reference internal" href="#cmdoption-remesh-invert-min-height"><code class="xref std std-option docutils literal"><span class="pre">-invert-min-height</span></code></a>.</p>
+<tt class="descname">-noinversion</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-noinversion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable <a class="reference internal" href="#cmdoption-remesh-invert-long-edges"><em class="xref std std-option">-invert-long-edges</em></a> and <a class="reference internal" href="#cmdoption-remesh-invert-min-height"><em class="xref std std-option">-invert-min-height</em></a>.</p>
 </dd></dl>
 
 </div>
@@ -193,26 +193,26 @@ during melting pass. (default: yes)</p>
 <h2>Output options<a class="headerlink" href="#output-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-remesh-write-all">
-<code class="descname">-write-all</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-write-all" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-write-all</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-write-all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write also intermediate meshes when more than one edge length range
 was specified. Output file names contain the level number as suffix. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-ascii">
-<span id="cmdoption-remesh-noascii"></span><code class="descname">-ascii</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noascii</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-ascii" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-remesh-noascii"></span><tt class="descname">-ascii</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-noascii</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-ascii" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write legacy VTK in ASCII or binary format. (default: input type)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-binary">
-<span id="cmdoption-remesh-nobinary"></span><code class="descname">-binary</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nobinary</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-binary" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-remesh-nobinary"></span><tt class="descname">-binary</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nobinary</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-binary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write legacy VTK in ASCII or binary format. (default: input type)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-compress">
-<span id="cmdoption-remesh-nocompress"></span><code class="descname">-compress</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocompress</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-compress" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-remesh-nocompress"></span><tt class="descname">-compress</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocompress</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-compress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write XML VTK file with or without compression. (default: on)</p>
 </dd></dl>
 
@@ -221,31 +221,31 @@ was specified. Output file names contain the level number as suffix. (default: o
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-remesh-v">
-<span id="cmdoption-remesh-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-remesh-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-remesh-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-remesh-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-remesh-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-remesh-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-remesh-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-remesh-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-remesh-h">
-<span id="cmdoption-remesh-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-remesh-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-remesh-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-remesh-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -258,7 +258,7 @@ was specified. Output file names contain the level number as suffix. (default: o
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -267,13 +267,13 @@ was specified. Output file names contain the level number as suffix. (default: o
         <li class="right" >
           <a href="register.html" title="register"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

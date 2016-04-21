@@ -1,4 +1,4 @@
 <map id="mirtk::HomogeneousTransformationIterator" name="mirtk::HomogeneousTransformationIterator">
-<area shape="rect" id="node2" href="$classmirtk_1_1Point.html" title="{mirtk::Point\n|+ _x\l+ _y\l+ _z\l|+ Distance()\l+ Distance()\l+ operator!=()\l+ operator()()\l+ operator()()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*=()\land 36 more...\l}" alt="" coords="69,204,177,457"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="60,5,185,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Point.html" title="{mirtk::Point\n|+ _x\l+ _y\l+ _z\l|+ Distance()\l+ Distance()\l+ operator!=()\l+ operator()()\l+ operator()()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*=()\land 36 more...\l}" alt="" coords="67,205,173,459"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="57,6,183,157"/>
 </map>

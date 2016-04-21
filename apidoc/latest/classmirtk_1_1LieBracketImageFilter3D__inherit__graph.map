@@ -1,5 +1,5 @@
-<map id="mirtk::LieBracketImageFilter3D&lt; VoxelType &gt;" name="mirtk::LieBracketImageFilter3D&lt; VoxelType &gt;">
-<area shape="rect" id="node2" href="$classmirtk_1_1LieBracketImageFilter.html" title="{mirtk::LieBracketImageFilter\l\&lt; VoxelType \&gt;\n|# _Input2\l|+ GetInput()\l+ Input()\l+ Input()\l+ ~LieBracketImageFilter()\l+ New()\l+ New()\l# Initialize()\l# LieBracketImageFilter()\l# RequiresBuffering()\l}" alt="" coords="10,447,198,656"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1ImageToImage.html" title="{mirtk::ImageToImage\l\&lt; VoxelType \&gt;\n||+ ImageToImage()\l+ RequiresBuffering()\l+ Run()\l+ Run()\l+ ~ImageToImage()\l# Finalize()\l# Initialize()\l# Initialize()\l}" alt="" coords="29,204,179,399"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="41,5,167,156"/>
+<map id="mirtk::LieBracketImageFilter3D&lt; TVoxel &gt;" name="mirtk::LieBracketImageFilter3D&lt; TVoxel &gt;">
+<area shape="rect" id="node2" href="$classmirtk_1_1LieBracketImageFilter.html" title="{mirtk::LieBracketImageFilter\l\&lt; TVoxel \&gt;\n|# _Input2\l|+ GetInput()\l+ Input()\l+ Input()\l+ ~LieBracketImageFilter()\l+ New()\l+ New()\l# Initialize()\l# LieBracketImageFilter()\l}" alt="" coords="12,493,199,688"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1ImageToImage.html" title="{mirtk::ImageToImage\l\&lt; TVoxel \&gt;\n||+ ImageToImage()\l+ RequiresBuffering()\l+ Run()\l+ Run()\l+ ~ImageToImage()\l# Finalize()\l# Initialize()\l# Initialize()\l# mirtkAggregateMacro()\l# mirtkPublicAggregateMacro()\l# mirtkPublicAggregateMacro()\l}" alt="" coords="5,206,205,445"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="43,6,168,157"/>
 </map>

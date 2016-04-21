@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,34 +24,34 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="calculate-distance-map" href="calculate-distance-map.html" />
-    <link rel="prev" title="average-images" href="average-images.html" />
+    <link rel="prev" title="bisect-dof" href="bisect-dof.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="calculate-distance-map.html" title="calculate-distance-map"
              accesskey="N">next</a></li>
         <li class="right" >
-          <a href="average-images.html" title="average-images"
+          <a href="bisect-dof.html" title="bisect-dof"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,13 +87,13 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="calculate">
 <h1>calculate<a class="headerlink" href="#calculate" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk calculate &lt;input&gt; [options]
+<div class="highlight-python"><div class="highlight"><pre><span class="n">calculate</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -102,214 +102,362 @@
 <p>This tool can be used for basic calculations from a sequence of data values read
 either from an image or a VTK pointset. It can be used, for example, to add two
 data sequences and to divide the result by a constant. The current sequence can
-be written to an output file again using the -out option. Additionally, statistics
+be written to an output file again using <a class="reference internal" href="#cmdoption-calculate-out"><em class="xref std std-option">calculate -out</em></a>. Additionally, statistics
 of the current data sequence can be computed such as the mean or variance.
 The order of the data transformations and calculation of statistics is determined
 by the order of the command-line arguments.</p>
+<p>The data mask is used to include/exclude values from subsequent operations.
+Initially, all NaN values in the input data sequence are excluded.
+Further values can be excluded using one or more of the masking operations.
+Using the mask, operations can be performed on only a subset of the data,
+and the mask then reset using <a class="reference internal" href="#cmdoption-calculate-reset-mask"><em class="xref std std-option">calculate -reset-mask</em></a>.</p>
 <p>By default, data statistics are printed to STDOUT in a human readable format.
-This output can be appended to a text file using the -append option instead.
+This output can be appended to a text file using <a class="reference internal" href="#cmdoption-calculate-append"><em class="xref std std-option">calculate -append</em></a> instead.
 For a more machine readable output, e.g., as comma separated values (CSV),
-specify a delimiting string using the -d option. In this case, a header line
-is also printed when the -header option is given with optional user specified
-column names for the individual output values.</p>
+specify a delimiting string using <a class="reference internal" href="#cmdoption-calculate-delimiter"><em class="xref std std-option">calculate -delimiter</em></a>. In this case, a header
+line is also printed when <a class="reference internal" href="#cmdoption-calculate-header"><em class="xref std std-option">calculate -header</em></a> is given with optional user
+specified column names for the individual output values.</p>
 </div>
 <div class="section" id="input-options">
 <h2>Input options<a class="headerlink" href="#input-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-scalars">
-<code class="descname">-scalars</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-calculate-scalars" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-scalars</tt><tt class="descclassname"> &lt;name&gt;</tt><a class="headerlink" href="#cmdoption-calculate-scalars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of input point data array. (default: active SCALARS array)</p>
 </dd></dl>
 
 </div>
-<div class="section" id="data-manipulation-options">
-<h2>Data manipulation options<a class="headerlink" href="#data-manipulation-options" title="Permalink to this headline">¶</a></h2>
-<dl class="option">
-<dt id="cmdoption-calculate-mask">
-<code class="descname">-mask</code><code class="descclassname"> &lt;float|file&gt;</code><a class="headerlink" href="#cmdoption-calculate-mask" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exclude values equal a given threshold or with zero input mask value.
-Note that this does not modify the data values, but only marks them to be
-ignored from now on. Use -outside/-pad following this operation to set an outside value.</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-calculate-mask-inside">
-<code class="descname">-mask-inside</code><code class="descclassname">  &lt;lower&gt; &lt;upper&gt;</code><a class="headerlink" href="#cmdoption-calculate-mask-inside" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exclude values which are inside a given closed interval.</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-calculate-mask-outside">
-<code class="descname">-mask-outside</code><code class="descclassname"> &lt;lower&gt; &lt;upper&gt;</code><a class="headerlink" href="#cmdoption-calculate-mask-outside" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exclude values which are outside a given open interval.</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-calculate-mask-below">
-<code class="descname">-mask-below</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-mask-below" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exclude values less or equal a given threshold.</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-calculate-mask-above">
-<code class="descname">-mask-above</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-mask-above" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exclude values greator or equal a given threshold.</p>
-</dd></dl>
-
+<div class="section" id="data-masking-options">
+<h2>Data masking options<a class="headerlink" href="#data-masking-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-even">
-<code class="descname">-even</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-even" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-even</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-even" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exclude values which are not an even number when cast to an integer.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-odd">
-<code class="descname">-odd</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-odd" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-odd</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-odd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exclude values which are not an odd number when cast to an integer.</p>
 </dd></dl>
 
 <dl class="option">
+<dt id="cmdoption-calculate-label">
+<tt class="descname">-label</tt><tt class="descclassname"> &lt;value|lower..upper&gt;...</tt><a class="headerlink" href="#cmdoption-calculate-label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Include data points with a value equal to either one of the given values.
+Closed intervals of values can be specified as &#8220;lower..upper&#8221;.
+For example, &#8220;-label 1 3 5..6 10 20..50&#8221;. This option is a shorthand for
+<a class="reference internal" href="#cmdoption-calculate-mask-all"><em class="xref std std-option">-mask-all</em></a> <a class="reference internal" href="#cmdoption-calculate-threshold-inside"><em class="xref std std-option">-threshold-inside</em></a> &lt;lower&gt; &lt;upper&gt; <a class="reference internal" href="#cmdoption-calculate-invert-mask"><em class="xref std std-option">-invert-mask</em></a>
+where one <a class="reference internal" href="#cmdoption-calculate-threshold-inside"><em class="xref std std-option">-threshold-inside</em></a> operation is performed for each argument.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-mask">
+<tt class="descname">-mask</tt><tt class="descclassname"> &lt;float|file&gt;</tt><a class="headerlink" href="#cmdoption-calculate-mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values equal a given threshold or with zero input mask value.
+Note that this does not modify the data values, but only marks them to be
+ignored from now on. Use <a class="reference internal" href="#cmdoption-calculate-pad"><em class="xref std std-option">-pad</em></a> following this operation to
+replace these values by a background value.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-mask-all">
+<tt class="descname">-mask-all</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-mask-all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude all values.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-reset-mask">
+<tt class="descname">-reset-mask</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-reset-mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset mask to include all values again.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-invert-mask">
+<tt class="descname">-invert-mask</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-invert-mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invert mask to include all values that where excluded before and
+exclude all values that were included before.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-set">
+<span id="cmdoption-calculate-inside"></span><tt class="descname">-set</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-inside</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set new value for all currently included data values.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-pad">
+<span id="cmdoption-calculate-outside"></span><tt class="descname">-pad</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-outside</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-pad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set new value for all currently excluded data values.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="data-thresholding-options">
+<h2>Data thresholding options<a class="headerlink" href="#data-thresholding-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
 <dt id="cmdoption-calculate-threshold">
-<code class="descname">-threshold</code><code class="descclassname"> &lt;lower&gt; [&lt;upper&gt;]</code><a class="headerlink" href="#cmdoption-calculate-threshold" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clamp values which are less or equal and optionally greater or equal a threshold.</p>
+<tt class="descname">-threshold</tt><tt class="descclassname"> &lt;lower&gt; [&lt;upper&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>This masking operation is equivalent to <a class="reference internal" href="#cmdoption-calculate-threshold-outside"><em class="xref std std-option">-threshold-outside</em></a>.
+When no upper threshold is specified, it defaults to +inf. Therefore,
+&#8220;-threshold 0&#8221; will exclude all negative values.</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-calculate-threshold-below">
-<code class="descname">-threshold-below</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-threshold-below" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clamp values less or equal a given threshold.</p>
+<dt id="cmdoption-calculate-percentile-threshold">
+<span id="cmdoption-calculate-pct-threshold"></span><tt class="descname">-percentile-threshold</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-pct-threshold</tt><tt class="descclassname"> &lt;lower&gt;</tt><a class="headerlink" href="#cmdoption-calculate-percentile-threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>This masking operation is equivalent to <a class="reference internal" href="#cmdoption-calculate-threshold-outside-percentiles"><em class="xref std std-option">-threshold-outside-percentiles</em></a>.
+with an upper threshold of +inf. Therefore, &#8220;-threshold 0&#8221; excludes all negative values.</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-calculate-threshold-above">
-<code class="descname">-threshold-above</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-threshold-above" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clamp values greator or equal a given threshold.</p>
+<dt id="cmdoption-calculate-threshold-percentiles">
+<span id="cmdoption-calculate-threshold-pcts"></span><tt class="descname">-threshold-percentiles</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-threshold-pcts</tt><tt class="descclassname"> &lt;lower&gt; &lt;upper&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-percentiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>This masking operation is equivalent to <a class="reference internal" href="#cmdoption-calculate-threshold-outside-percentiles"><em class="xref std std-option">-threshold-outside-percentiles</em></a>.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-threshold-inside">
+<span id="cmdoption-calculate-mask-inside"></span><tt class="descname">-threshold-inside</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-inside</tt><tt class="descclassname"> &lt;lower&gt; &lt;upper&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-inside" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values which are inside a given closed interval.
+When the lower threshold is greater than the upper threshold,
+values less than or equal to the upper threshold and values greater
+than or equal to the lower threshold are excluded.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-threshold-inside-percentiles">
+<span id="cmdoption-calculate-threshold-inside-pcts"></span><span id="cmdoption-calculate-mask-inside-percentiles"></span><span id="cmdoption-calculate-mask-inside-pct"></span><tt class="descname">-threshold-inside-percentiles</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-threshold-inside-pcts</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-inside-percentiles</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-inside-pct</tt><tt class="descclassname"> &lt;lower&gt; &lt;upper&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-inside-percentiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values which are inside a given closed interval of percentiles.
+When the lower percentile is greater than the upper percentile,
+values less than or equal to the upper percentile and values greater
+than or equal to the lower percentile are excluded.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-threshold-outside">
+<span id="cmdoption-calculate-mask-outside"></span><tt class="descname">-threshold-outside</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-outside</tt><tt class="descclassname"> &lt;lower&gt; &lt;upper&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-outside" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values which are outside a given open interval.
+When the lower threshold is greater than the upper threshold,
+values inside the closed interval &lt;upper&gt;..&lt;lower&gt; are excluded.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-threshold-outside-percentiles">
+<span id="cmdoption-calculate-threshold-outside-pcts"></span><span id="cmdoption-calculate-mask-outside-percentiles"></span><span id="cmdoption-calculate-mask-outside-pcts"></span><tt class="descname">-threshold-outside-percentiles</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-threshold-outside-pcts</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-outside-percentiles</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-outside-pcts</tt><tt class="descclassname"> &lt;lower&gt; &lt;upper&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-outside-percentiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values which are outside a given open interval of percentiles.
+When the lower percentile is greater than the upper percentile,
+values inside the closed interval &lt;upper&gt;..&lt;lower&gt; are excluded.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-threshold-lt">
+<span id="cmdoption-calculate-lower-threshold"></span><span id="cmdoption-calculate-mask-lt"></span><tt class="descname">-threshold-lt</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-lower-threshold</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-lt</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-lt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values less than a given threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-threshold-lt-percentile">
+<span id="cmdoption-calculate-threshold-lt-pct"></span><span id="cmdoption-calculate-lower-percentile-threshold"></span><span id="cmdoption-calculate-lower-pct-threshold"></span><span id="cmdoption-calculate-mask-lt-percentile"></span><span id="cmdoption-calculate-mask-lt-pct"></span><tt class="descname">-threshold-lt-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-threshold-lt-pct</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-lower-percentile-threshold</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-lower-pct-threshold</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-lt-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-lt-pct</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-lt-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values less than a given precentile.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-threshold-le">
+<span id="cmdoption-calculate-mask-le"></span><span id="cmdoption-calculate-mask-below"></span><tt class="descname">-threshold-le</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-le</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-below</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-le" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values less than or equal to a given threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-threshold-le-percentile">
+<span id="cmdoption-calculate-threshold-le-pct"></span><span id="cmdoption-calculate-mask-le-percentile"></span><span id="cmdoption-calculate-mask-le-pct"></span><span id="cmdoption-calculate-mask-below-percentile"></span><span id="cmdoption-calculate-mask-below-pct"></span><tt class="descname">-threshold-le-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-threshold-le-pct</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-le-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-le-pct</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-below-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-below-pct</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-le-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values less than or equal to a given percentile.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-threshold-ge">
+<span id="cmdoption-calculate-mask-ge"></span><span id="cmdoption-calculate-mask-above"></span><tt class="descname">-threshold-ge</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-ge</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-above</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-ge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values greater than or equal to a given threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-threshold-ge-percentile">
+<span id="cmdoption-calculate-threshold-ge-pct"></span><span id="cmdoption-calculate-mask-ge-percentile"></span><span id="cmdoption-calculate-mask-ge-pct"></span><span id="cmdoption-calculate-mask-above-percentile"></span><span id="cmdoption-calculate-mask-above-pct"></span><tt class="descname">-threshold-ge-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-threshold-ge-pct</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-ge-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-ge-pct</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-above-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-above-pct</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-ge-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values greater than or equal to a given percentile.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-threshold-gt">
+<span id="cmdoption-calculate-upper-threshold"></span><span id="cmdoption-calculate-mask-gt"></span><tt class="descname">-threshold-gt</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-upper-threshold</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-gt</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-gt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values greater than a given threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-threshold-gt-percentile">
+<span id="cmdoption-calculate-threshold-gt-pct"></span><span id="cmdoption-calculate-upper-percentile-threshold"></span><span id="cmdoption-calculate-upper-pct-threshold"></span><span id="cmdoption-calculate-mask-gt-percentile"></span><span id="cmdoption-calculate-mask-gt-pct"></span><tt class="descname">-threshold-gt-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-threshold-gt-pct</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-upper-percentile-threshold</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-upper-pct-threshold</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-gt-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-mask-gt-pct</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-threshold-gt-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values greater than a given percentile.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="data-rescaling-options">
+<h2>Data rescaling options<a class="headerlink" href="#data-rescaling-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-binarize">
+<tt class="descname">-binarize</tt><tt class="descclassname"> &lt;lower&gt; [&lt;upper&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-binarize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set values inside the closed interval &lt;lower&gt;..&lt;upper&gt; to one,
+and all other values to zero. The default upper threshold is +inf.
+When the lower threshold is greater than the upper threshold,
+values inside the closed interval &lt;upper&gt;..&lt;lower&gt; are set to zero
+and all other values to one instead. This operation is short for:
+<a class="reference internal" href="#cmdoption-calculate-threshold-inside"><em class="xref std std-option">-threshold-inside</em></a> &lt;lower&gt; &lt;upper&gt; <a class="reference internal" href="#cmdoption-calculate-set"><em class="xref std std-option">-set</em></a> 1 <a class="reference internal" href="#cmdoption-calculate-pad"><em class="xref std std-option">-pad</em></a> 0</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-clamp">
+<tt class="descname">-clamp</tt><tt class="descclassname"> &lt;lower&gt; &lt;upper&gt;</tt><a class="headerlink" href="#cmdoption-calculate-clamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp values which are less than a lower or greater than an upper threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-clamp-percentiles">
+<span id="cmdoption-calculate-clamp-pcts"></span><tt class="descname">-clamp-percentiles</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-clamp-pcts</tt><tt class="descclassname"> &lt;lower&gt; &lt;upper&gt;</tt><a class="headerlink" href="#cmdoption-calculate-clamp-percentiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp values which are less than a lower percentile or greater than an upper percentile.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-clamp-below">
+<span id="cmdoption-calculate-clamp-lt"></span><tt class="descname">-clamp-below</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-clamp-lt</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-clamp-below" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp values less than a given threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-clamp-below-percentile">
+<span id="cmdoption-calculate-clamp-below-pct"></span><span id="cmdoption-calculate-clamp-lt-percentile"></span><span id="cmdoption-calculate-clamp-lt-pct"></span><tt class="descname">-clamp-below-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-clamp-below-pct</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-clamp-lt-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-clamp-lt-pct</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-clamp-below-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp values less than a given percentile.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-clamp-above">
+<span id="cmdoption-calculate-clamp-gt"></span><tt class="descname">-clamp-above</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-clamp-gt</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-clamp-above" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp values greater than a given threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-clamp-above-percentile">
+<span id="cmdoption-calculate-clamp-above-pct"></span><span id="cmdoption-calculate-clamp-gt-percentile"></span><span id="cmdoption-calculate-clamp-gt-pct"></span><tt class="descname">-clamp-above-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-clamp-above-pct</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-clamp-gt-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-clamp-gt-pct</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-clamp-above-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp values greater than a given percentile.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-rescale">
-<code class="descname">-rescale</code><code class="descclassname"> &lt;min&gt; &lt;max&gt;</code><a class="headerlink" href="#cmdoption-calculate-rescale" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-rescale</tt><tt class="descclassname"> &lt;min&gt; &lt;max&gt;</tt><a class="headerlink" href="#cmdoption-calculate-rescale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Linearly rescale values to the interval [min, max].</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-calculate-inside">
-<code class="descname">-inside</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-calculate-inside" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set new value for all currently unmasked data values.</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-calculate-outside">
-<span id="cmdoption-calculate-pad"></span><code class="descname">-outside</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-pad</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-calculate-outside" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set new value for all currently masked data values.</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-calculate-out">
-<code class="descname">-out</code><code class="descclassname"> &lt;file&gt; [&lt;type&gt;]</code><a class="headerlink" href="#cmdoption-calculate-out" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write current data sequence to file in the format of the input file.
-Output data type can be: uchar, short, ushort, int, uint, float, double.</p>
-</dd></dl>
-
+</div>
+<div class="section" id="arithmetic-operation-options">
+<h2>Arithmetic operation options<a class="headerlink" href="#arithmetic-operation-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-add">
-<code class="descname">-add</code><code class="descclassname"> &lt;float|file&gt;</code><a class="headerlink" href="#cmdoption-calculate-add" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add constant value or data sequence read from specified file.</p>
+<span id="cmdoption-calculate-plus"></span><tt class="descname">-add</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-plus</tt><tt class="descclassname"> &lt;value|file&gt;</tt><a class="headerlink" href="#cmdoption-calculate-add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add constant value or data sequence read from specified file.
+Another name for this option is the &#8216;+&#8217; sign, see Examples.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-sub">
-<code class="descname">-sub</code><code class="descclassname"> &lt;float|file&gt;</code><a class="headerlink" href="#cmdoption-calculate-sub" title="Permalink to this definition">¶</a></dt>
-<dd><p>Subtract constant value or data sequence read from specified file.</p>
+<span id="cmdoption-calculate-subtract"></span><span id="cmdoption-calculate-minus"></span><tt class="descname">-sub</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-subtract</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-minus</tt><tt class="descclassname"> &lt;value|file&gt;</tt><a class="headerlink" href="#cmdoption-calculate-sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subtract constant value or data sequence read from specified file.
+Another name for this option is the &#8216;-&#8216; sign, see Examples.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-mul">
-<code class="descname">-mul</code><code class="descclassname"> &lt;float|file&gt;</code><a class="headerlink" href="#cmdoption-calculate-mul" title="Permalink to this definition">¶</a></dt>
-<dd><p>Multiply by constant value or data sequence read from specified file.</p>
+<span id="cmdoption-calculate-multiply-with"></span><span id="cmdoption-calculate-times"></span><tt class="descname">-mul</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-multiply-with</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-times</tt><tt class="descclassname"> &lt;value|file&gt;</tt><a class="headerlink" href="#cmdoption-calculate-mul" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiply by constant value or data sequence read from specified file.
+Another name for this option is the &#8216;*&#8217; sign, see Examples.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-div">
-<code class="descname">-div</code><code class="descclassname"> &lt;float|file&gt;</code><a class="headerlink" href="#cmdoption-calculate-div" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-divide-by"></span><span id="cmdoption-calculate-over"></span><tt class="descname">-div</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-divide-by</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-over</tt><tt class="descclassname"> &lt;value|file&gt;</tt><a class="headerlink" href="#cmdoption-calculate-div" title="Permalink to this definition">¶</a></dt>
 <dd><p>Divide by constant value or data sequence read from specified file.
 When dividing by zero values in the input file, the result is NaN.
-Use <a class="reference internal" href="#cmdoption-calculate-mask"><code class="xref std std-option docutils literal"><span class="pre">-mask</span></code></a> with argument NaN and <a class="reference internal" href="#cmdoption-calculate-outside"><code class="xref std std-option docutils literal"><span class="pre">-outside</span></code></a> to replace
-these undefined values by a constant such as zero.</p>
+Use <a class="reference internal" href="#cmdoption-calculate-mask"><em class="xref std std-option">-mask</em></a> with argument NaN and <a class="reference internal" href="#cmdoption-calculate-pad"><em class="xref std std-option">-pad</em></a> to replace
+these undefined values by a constant such as zero.
+Another name for this option is the &#8216;/&#8217; sign, see Examples.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-div-with-zero">
-<code class="descname">-div-with-zero</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-calculate-div-with-zero" title="Permalink to this definition">¶</a></dt>
-<dd><p>Same as <a class="reference internal" href="#cmdoption-calculate-div"><code class="xref std std-option docutils literal"><span class="pre">-div</span></code></a> but set result to zero instead of NaN in case of
+<tt class="descname">-div-with-zero</tt><tt class="descclassname"> &lt;value|file&gt;</tt><a class="headerlink" href="#cmdoption-calculate-div-with-zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <a class="reference internal" href="#cmdoption-calculate-div"><em class="xref std std-option">-div</em></a> but set result to zero instead of NaN in case of
 a division by zero due to a zero value in the specified file.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-abs">
-<code class="descname">-abs</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-abs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Take absolute values.</p>
+<tt class="descname">-abs</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-abs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace values by their respective absolute value.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-pow">
-<code class="descname">-pow</code><code class="descclassname"> &lt;exponent&gt;</code><a class="headerlink" href="#cmdoption-calculate-pow" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-power"></span><tt class="descname">-pow</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-power</tt><tt class="descclassname"> &lt;exponent&gt;</tt><a class="headerlink" href="#cmdoption-calculate-pow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Raise values to the power of the given exponent.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-sq">
-<code class="descname">-sq</code><code class="descclassname"> -square</code><a class="headerlink" href="#cmdoption-calculate-sq" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-square"></span><tt class="descname">-sq</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-square</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-sq" title="Permalink to this definition">¶</a></dt>
 <dd><p>Raise values to the power of 2 (i.e, -pow 2).</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-sqrt">
-<code class="descname">-sqrt</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-sqrt" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-sqrt</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-sqrt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate square root of each value (i.e, -pow .5).</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-exp">
-<code class="descname">-exp</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-exp" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-exp</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-exp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate exponential of data sequence.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-log">
-<code class="descname">-log</code><code class="descclassname"> [&lt;threshold&gt;] [&lt;base&gt;]</code><a class="headerlink" href="#cmdoption-calculate-log" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-log</tt><tt class="descclassname"> [&lt;threshold&gt;] [&lt;base&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-log" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute logarithm after applying an optional threshold.
 (default threshold: min double, default base: e)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-lb">
-<code class="descname">-lb</code><code class="descclassname"> [&lt;threshold&gt;]</code><a class="headerlink" href="#cmdoption-calculate-lb" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute binary logarithm, alias for -log &lt;threshold&gt; 2.</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-calculate-log2">
-<code class="descname">-log2</code><code class="descclassname"> [&lt;threshold&gt;]</code><a class="headerlink" href="#cmdoption-calculate-log2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute binary logarithm, alias for -log &lt;threshold&gt; 2.</p>
+<span id="cmdoption-calculate-log2"></span><tt class="descname">-lb</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-log2</tt><tt class="descclassname"> [&lt;threshold&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-lb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute binary logarithm, alias for <a class="reference internal" href="#cmdoption-calculate-log"><em class="xref std std-option">-log</em></a> with base 2.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-ln">
-<code class="descname">-ln</code><code class="descclassname"> [&lt;threshold&gt;]</code><a class="headerlink" href="#cmdoption-calculate-ln" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute natural logarithm, alias for -log [&lt;threshold&gt;].</p>
+<span id="cmdoption-calculate-loge"></span><tt class="descname">-ln</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-loge</tt><tt class="descclassname"> [&lt;threshold&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-ln" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute natural logarithm, alias for <a class="reference internal" href="#cmdoption-calculate-log"><em class="xref std std-option">-log</em></a> with base e.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-lg">
-<code class="descname">-lg</code><code class="descclassname"> [&lt;threshold&gt;]</code><a class="headerlink" href="#cmdoption-calculate-lg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute logarithm to base 10, alias for -log &lt;threshold&gt; 10.</p>
+<span id="cmdoption-calculate-log10"></span><tt class="descname">-lg</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-log10</tt><tt class="descclassname"> [&lt;threshold&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-lg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute logarithm to base 10, alias for <a class="reference internal" href="#cmdoption-calculate-log"><em class="xref std std-option">-log</em></a> with base 10.</p>
 </dd></dl>
 
+</div>
+<div class="section" id="data-output-options">
+<h2>Data output options<a class="headerlink" href="#data-output-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
-<dt id="cmdoption-calculate-log10">
-<code class="descname">-log10</code><code class="descclassname"> [&lt;threshold&gt;]</code><a class="headerlink" href="#cmdoption-calculate-log10" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute logarithm to base 10, alias for -log &lt;threshold&gt; 10.</p>
+<dt id="cmdoption-calculate-out">
+<span id="cmdoption-calculate-o"></span><span id="cmdoption-calculate-output"></span><tt class="descname">-out</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-o</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-output</tt><tt class="descclassname"> &lt;file&gt; [&lt;type&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-out" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write current data sequence to file in the format of the input file.
+Output data type can be: uchar, short, ushort, int, uint, float, double.
+Another name for this option is the &#8216;=&#8217; sign, see Examples.</p>
 </dd></dl>
 
 </div>
@@ -317,88 +465,105 @@ a division by zero due to a zero value in the specified file.</p>
 <h2>Data statistics options<a class="headerlink" href="#data-statistics-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-append">
-<code class="descname">-append</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-calculate-append" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-append</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-calculate-append" title="Permalink to this definition">¶</a></dt>
 <dd><p>Append output to a file. (default: STDOUT)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-delimiter">
-<code class="descname">-delimiter</code><code class="descclassname"> | -delim | -d | -sep</code><a class="headerlink" href="#cmdoption-calculate-delimiter" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-delim"></span><span id="cmdoption-calculate-d"></span><span id="cmdoption-calculate-sep"></span><tt class="descname">-delimiter</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-delim</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-d</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-sep</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-delimiter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delimiting character(s). (default: &#8216;&#8217;)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-header">
-<code class="descname">-header</code><code class="descclassname"> [&lt;name&gt;...]</code><a class="headerlink" href="#cmdoption-calculate-header" title="Permalink to this definition">¶</a></dt>
-<dd><p>Request output of header line if delimiter was
-specified as well. If the output is appended to
-a text file, the header is only printed if it does not exist.
-If no or fewer custom column names are given, the default
-names for each statistic are printed. (default: none)</p>
+<tt class="descname">-header</tt><tt class="descclassname"> [&lt;name&gt;...]</tt><a class="headerlink" href="#cmdoption-calculate-header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request output of header line if delimiter was specified as well.
+If the output is appended to a text file, the header is only printed
+if it does not exist. If no or fewer custom column names are given,
+the default names for each statistic are printed. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-prefix">
-<code class="descname">-prefix</code><code class="descclassname"> &lt;str&gt;...</code><a class="headerlink" href="#cmdoption-calculate-prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>One or more prefix strings to print. If no delimiter
-is specified, the concatenated strings are printed before
-each line of the output. Otherwise, each prefix string
-is printed as entry for the first columns in the delimited
-output row, separated by the specified delimiter. (default: none)</p>
+<tt class="descname">-prefix</tt><tt class="descclassname"> &lt;str&gt;...</tt><a class="headerlink" href="#cmdoption-calculate-prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more prefix strings to print. If no delimiter is specified,
+the concatenated strings are printed before each line of the output.
+Otherwise, each prefix string is printed as entry for the first columns
+in the delimited output row, separated by the specified delimiter. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-precision">
-<code class="descname">-precision</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-calculate-precision" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-digits"></span><tt class="descname">-precision</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-digits</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-calculate-precision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of significant digits. (default: 5)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-mean">
-<code class="descname">-mean</code><code class="descclassname"> | -avg</code><a class="headerlink" href="#cmdoption-calculate-mean" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-avg"></span><span id="cmdoption-calculate-average"></span><tt class="descname">-mean</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-avg</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-average</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-mean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print mean intensity. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-variance">
-<code class="descname">-variance</code><code class="descclassname"> | -var</code><a class="headerlink" href="#cmdoption-calculate-variance" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-var"></span><tt class="descname">-variance</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-var</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-variance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print variance of intensity values. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-sigma">
-<code class="descname">-sigma</code><code class="descclassname"> | -std</code><a class="headerlink" href="#cmdoption-calculate-sigma" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-std"></span><span id="cmdoption-calculate-stddev"></span><span id="cmdoption-calculate-stdev"></span><span id="cmdoption-calculate-sd"></span><tt class="descname">-sigma</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-std</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-stddev</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-stdev</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-sd</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-sigma" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print standard deviation of intensity values. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
+<dt id="cmdoption-calculate-normal-distribution">
+<tt class="descname">-normal-distribution</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-normal-distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print mean intensity and standard deviation of intensity values.
+Other option names: -mean+sigma, -mean+sd, -avg+std,... (default: off)</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-calculate-minimum">
-<code class="descname">-minimum</code><code class="descclassname"> | -min</code><a class="headerlink" href="#cmdoption-calculate-minimum" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-min"></span><tt class="descname">-minimum</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-min</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-minimum" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print minimum intensity value. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-maximum">
-<code class="descname">-maximum</code><code class="descclassname"> | -max</code><a class="headerlink" href="#cmdoption-calculate-maximum" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-max"></span><tt class="descname">-maximum</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-max</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-maximum" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print maximum intensity value. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-extrema">
-<code class="descname">-extrema</code><code class="descclassname"> | -minmax</code><a class="headerlink" href="#cmdoption-calculate-extrema" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-minmax"></span><tt class="descname">-extrema</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-minmax</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-extrema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print minimum and maximum intensity value. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-range">
-<code class="descname">-range</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-range" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-range</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-range" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print range of intensity values (i.e., max - min). (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-percentile">
-<code class="descname">-percentile</code><code class="descclassname"> &lt;n&gt; | -pct &lt;n&gt;</code><a class="headerlink" href="#cmdoption-calculate-percentile" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-pct"></span><span id="cmdoption-calculate-p"></span><tt class="descname">-percentile</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-pct</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-p</tt><tt class="descclassname"> &lt;n&gt;...</tt><a class="headerlink" href="#cmdoption-calculate-percentile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print n-th percentile. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-lower-percentile-mean">
+<span id="cmdoption-calculate-lpctavg"></span><tt class="descname">-lower-percentile-mean</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-lpctavg</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-calculate-lower-percentile-mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print mean intensity of values less than or equal to the n-th percentile. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-upper-percentile-mean">
+<span id="cmdoption-calculate-upctavg"></span><tt class="descname">-upper-percentile-mean</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-upctavg</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-calculate-upper-percentile-mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print mean intensity of values greater than or equal to the n-th percentile. (default: off)</p>
 </dd></dl>
 
 </div>
@@ -406,31 +571,31 @@ output row, separated by the specified delimiter. (default: none)</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-v">
-<span id="cmdoption-calculate-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-calculate-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-calculate-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-calculate-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-calculate-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-calculate-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-calculate-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-h">
-<span id="cmdoption-calculate-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -439,7 +604,7 @@ output row, separated by the specified delimiter. (default: none)</p>
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-color">
-<span id="cmdoption-calculate-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -449,96 +614,43 @@ output row, separated by the specified delimiter. (default: none)</p>
 <div class="section" id="example-1">
 <h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><strong>Command</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>mirtk calculate mni305.nii.gz
+<div class="highlight-python"><div class="highlight"><pre>calculate mni305.nii.gz
 </pre></div>
 </div>
 <p><strong>Output/Description</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>Mean = 26.9753
-Standard deviation = 50.3525
-Extrema = [0, 254]
-Range = 254
-</pre></div>
-</div>
-</div>
-<div class="section" id="example-2">
-<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
-<p><strong>Command</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>mirtk calculate mni305.nii.gz -pct 77
-</pre></div>
-</div>
-<p><strong>Output/Description</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>77th percentile = 25
-</pre></div>
-</div>
-</div>
-<div class="section" id="example-3">
-<h3>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
-<p><strong>Command</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>mirtk calculate mni305.nii.gz -padding 25 -range -percentile 25 50 75 -prefix MNI305 &#39;[&gt;25]&#39;
-</pre></div>
-</div>
-<p><strong>Output/Description</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>MNI305 [&gt;25] range = 254
-MNI305 [&gt;25] 25th percentile = 69
-MNI305 [&gt;25] 50th percentile = 113
-MNI305 [&gt;25] 75th percentile = 150
-</pre></div>
-</div>
-</div>
-<div class="section" id="example-4">
-<h3>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
-<p><strong>Command</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>mirtk calculate mni305.nii.gz -d , -prefix MNI305
-</pre></div>
-</div>
-<p><strong>Output/Description</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>MNI305,26.9753,50.3525,0,254,254 [no newline at end of line]
-</pre></div>
-</div>
-</div>
-<div class="section" id="example-5">
-<h3>Example 5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
-<p><strong>Command</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>mirtk calculate mni305.nii.gz -d , -prefix MNI305 -header
-</pre></div>
-</div>
-<p><strong>Output/Description</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>,Mean,Sigma,Min,Max,Range
-MNI305,26.9753,50.3525,0,254,254
-</pre></div>
-</div>
-</div>
-<div class="section" id="example-6">
-<h3>Example 6<a class="headerlink" href="#example-6" title="Permalink to this headline">¶</a></h3>
-<p><strong>Command</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>mirtk calculate mni305.nii.gz -d , -prefix MNI305 -header ID Mean SD
-</pre></div>
-</div>
-<p><strong>Output/Description</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">ID</span><span class="p">,</span><span class="n">Mean</span><span class="p">,</span><span class="n">SD</span><span class="p">,</span><span class="n">Min</span><span class="p">,</span><span class="n">Max</span><span class="p">,</span><span class="n">Range</span>
-<span class="n">MNI305</span><span class="p">,</span><span class="mf">26.9753</span><span class="p">,</span><span class="mf">50.3525</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">254</span><span class="p">,</span><span class="mi">254</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="example-7">
-<h3>Example 7<a class="headerlink" href="#example-7" title="Permalink to this headline">¶</a></h3>
-<p><strong>Command</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>mirtk calculate a.nii.gz + b.nii.gz = c.nii.gz
-</pre></div>
-</div>
-</div>
-<div class="section" id="example-8">
-<h3>Example 8<a class="headerlink" href="#example-8" title="Permalink to this headline">¶</a></h3>
-<p><strong>Command</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>mirtk calculate a.vtk + b.nii.gz - 10 / c.nii = d.vtk
-</pre></div>
-</div>
-<p><strong>Output/Description</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>Adds data values at identical sequential memory indices in a and b,
-subtracts the constant 10, and then divides by the values in image c.
+<div class="highlight-python"><div class="highlight"><pre>    Mean = 26.9753
+    Standard deviation = 50.3525
+    Extrema = [0, 254]
+    Range = 254
 
-Note: Operations are always executed from left to right,
-      i.e., no mathematical operator precedence is considered!
+calculate mni305.nii.gz -pct 77
+    77th percentile = 25
+
+calculate mni305.nii.gz -padding 25 -range -percentile 25 50 75 -prefix MNI305 &#39;[&gt;25]&#39;
+    MNI305 [&gt;25] range = 254
+    MNI305 [&gt;25] 25th percentile = 69
+    MNI305 [&gt;25] 50th percentile = 113
+    MNI305 [&gt;25] 75th percentile = 150
+
+calculate mni305.nii.gz -d , -prefix MNI305
+    MNI305,26.9753,50.3525,0,254,254 [no newline at end of line]
+
+calculate mni305.nii.gz -d , -prefix MNI305 -header
+    ,Mean,Sigma,Min,Max,Range
+    MNI305,26.9753,50.3525,0,254,254
+
+calculate mni305.nii.gz -d , -prefix MNI305 -header ID Mean SD
+    ID,Mean,SD,Min,Max,Range
+    MNI305,26.9753,50.3525,0,254,254
+
+calculate a.nii.gz + b.nii.gz = c.nii.gz
+
+calculate a.vtk + b.nii.gz - 10 / c.nii = d.vtk
+    Adds data values at identical sequential memory indices in a and b,
+    subtracts the constant 10, and then divides by the values in image c.
+
+    Note: Operations are always executed from left to right,
+          i.e., no mathematical operator precedence is considered!
 </pre></div>
 </div>
 </div>
@@ -551,22 +663,22 @@ Note: Operations are always executed from left to right,
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="calculate-distance-map.html" title="calculate-distance-map"
              >next</a></li>
         <li class="right" >
-          <a href="average-images.html" title="average-images"
+          <a href="bisect-dof.html" title="bisect-dof"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

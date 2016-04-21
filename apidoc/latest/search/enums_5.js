@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['imagedatatype',['ImageDataType',['../namespacemirtk.html#a1ab37eede52625f9221fbb79718e4f9d',1,'mirtk']]],
-  ['interpolationmode',['InterpolationMode',['../namespacemirtk.html#a63e1e9bae6e2b2f880144c9f79298688',1,'mirtk']]]
+  ['gradienttype',['GradientType',['../classmirtk_1_1GradientImageFilter.html#a1224d78a14fc6f98091a0e5b2f969ff9',1,'mirtk::GradientImageFilter']]]
 ];

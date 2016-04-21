@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="average-images" href="average-images.html" />
     <link rel="prev" title="Applications" href="../commands.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="../commands.html" title="Applications"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,14 +87,14 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="average-dofs">
 <h1>average-dofs<a class="headerlink" href="#average-dofs" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk average-dofs &lt;dofout&gt; &lt;dofin&gt;...       [options]
-mirtk average-dofs &lt;dofout&gt; -dofnames &lt;file&gt; [options]
+<div class="highlight-python"><div class="highlight"><pre>average-dofs &lt;dofout&gt; &lt;dofin&gt;...       [options]
+average-dofs &lt;dofout&gt; -dofnames &lt;file&gt; [options]
 </pre></div>
 </div>
 </div>
@@ -140,7 +140,7 @@ transformation for a given target domain from an arbitrary mix of input transfor
 <p>Accordingly, the resulting average transformation is set to be equal the sum of the
 Log-Euclidean means of the global transformation matrices, A, of the input transformations
 and the corresponding local transformations. The bi-invariant global mean is computed
-instead using the barycentric fixed point iteration when <a class="reference internal" href="#cmdoption-average-dofs-bi-invariant"><code class="xref std std-option docutils literal"><span class="pre">average-dofs</span> <span class="pre">-bi-invariant</span></code></a> is given.
+instead using the barycentric fixed point iteration when <a class="reference internal" href="#cmdoption-average-dofs-bi-invariant"><em class="xref std std-option">average-dofs -bi-invariant</em></a> is given.
 Before the computation of the local mean transformation, any dependency of the local
 displacement on the global component is removed by pre-multiplying the displacement
 vectors by the inverse matrix of the global transformation <a class="footnote-reference" href="#id2" id="id1">[1]</a>. Moreover, the (optional)
@@ -179,7 +179,7 @@ models of the brain using nonrigid registration, IEEE TMI, 22(8), 1014–25 (200
 <h2>Input options<a class="headerlink" href="#input-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-average-dofs-target">
-<code class="descname">-target</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-average-dofs-target" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-target</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-average-dofs-target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Common reference image space of input transformations.
 If not specified and local transformations are to be averaged,
 the attributes of the first local transformation are used.</p>
@@ -187,61 +187,61 @@ the attributes of the first local transformation are used.</p>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-dofnames">
-<code class="descname">-dofnames</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-average-dofs-dofnames" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-dofnames</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-average-dofs-dofnames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text file listing input transformations and associated values.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-dofdir">
-<code class="descname">-dofdir</code><code class="descclassname"> &lt;dir&gt;</code><a class="headerlink" href="#cmdoption-average-dofs-dofdir" title="Permalink to this definition">¶</a></dt>
-<dd><p>Directory used to make relative paths in <a class="reference internal" href="#cmdoption-average-dofs-dofnames"><code class="xref std std-option docutils literal"><span class="pre">-dofnames</span></code></a> text file absolute. (default: cwd)</p>
+<tt class="descname">-dofdir</tt><tt class="descclassname"> &lt;dir&gt;</tt><a class="headerlink" href="#cmdoption-average-dofs-dofdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directory used to make relative paths in <a class="reference internal" href="#cmdoption-average-dofs-dofnames"><em class="xref std std-option">-dofnames</em></a> text file absolute. (default: cwd)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-prefix">
-<code class="descname">-prefix</code><code class="descclassname"> &lt;string&gt;</code><a class="headerlink" href="#cmdoption-average-dofs-prefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Prefix for transformation name entries in <a class="reference internal" href="#cmdoption-average-dofs-dofnames"><code class="xref std std-option docutils literal"><span class="pre">-dofnames</span></code></a> text file. (default: none)</p>
+<tt class="descname">-prefix</tt><tt class="descclassname"> &lt;string&gt;</tt><a class="headerlink" href="#cmdoption-average-dofs-prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prefix for transformation name entries in <a class="reference internal" href="#cmdoption-average-dofs-dofnames"><em class="xref std std-option">-dofnames</em></a> text file. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-suffix">
-<code class="descname">-suffix</code><code class="descclassname"> &lt;string&gt;</code><a class="headerlink" href="#cmdoption-average-dofs-suffix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Suffix for transformation name entries in <a class="reference internal" href="#cmdoption-average-dofs-dofnames"><code class="xref std std-option docutils literal"><span class="pre">-dofnames</span></code></a> text file. (default: none)</p>
+<tt class="descname">-suffix</tt><tt class="descclassname"> &lt;string&gt;</tt><a class="headerlink" href="#cmdoption-average-dofs-suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suffix for transformation name entries in <a class="reference internal" href="#cmdoption-average-dofs-dofnames"><em class="xref std std-option">-dofnames</em></a> text file. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-gaussian">
-<code class="descname">-gaussian</code><code class="descclassname"> &lt;mean&gt; &lt;sigma&gt;</code><a class="headerlink" href="#cmdoption-average-dofs-gaussian" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use Gaussian kernel weights. Requires <a class="reference internal" href="#cmdoption-average-dofs-dofnames"><code class="xref std std-option docutils literal"><span class="pre">-dofnames</span></code></a> to specify transformation values.
-By default, if <a class="reference internal" href="#cmdoption-average-dofs-dofnames"><code class="xref std std-option docutils literal"><span class="pre">-dofnames</span></code></a> is used or &lt;sigma&gt; is 0, the values specified in the
+<tt class="descname">-gaussian</tt><tt class="descclassname"> &lt;mean&gt; &lt;sigma&gt;</tt><a class="headerlink" href="#cmdoption-average-dofs-gaussian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use Gaussian kernel weights. Requires <a class="reference internal" href="#cmdoption-average-dofs-dofnames"><em class="xref std std-option">-dofnames</em></a> to specify transformation values.
+By default, if <a class="reference internal" href="#cmdoption-average-dofs-dofnames"><em class="xref std std-option">-dofnames</em></a> is used or &lt;sigma&gt; is 0, the values specified in the
 text file are directly used as kernel weights for the averaging instead of
 using these values as arguments for the Gaussian kernel function.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-epsilon">
-<code class="descname">-epsilon</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-average-dofs-epsilon" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-epsilon</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-average-dofs-epsilon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Weight threshold. (default: 0.001)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-add-identity">
-<code class="descname">-add-identity</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-add-identity" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-add-identity</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-add-identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assume additional identity transformation as part of input transformations. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-add-identity-with-weight">
-<code class="descname">-add-identity-with-weight</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-average-dofs-add-identity-with-weight" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-add-identity-with-weight</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-average-dofs-add-identity-with-weight" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assume additional identity transformation with given value/weight. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-add-identity-for-dofname">
-<code class="descname">-add-identity-for-dofname</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-average-dofs-add-identity-for-dofname" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-add-identity-for-dofname</tt><tt class="descclassname"> &lt;name&gt;</tt><a class="headerlink" href="#cmdoption-average-dofs-add-identity-for-dofname" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assume identity transformation for named input transformation.
 Note that if this option is used, the named input transformation file
-which is listed in the <a class="reference internal" href="#cmdoption-average-dofs-dofnames"><code class="xref std std-option docutils literal"><span class="pre">-dofnames</span></code></a> list does not need to exist.
+which is listed in the <a class="reference internal" href="#cmdoption-average-dofs-dofnames"><em class="xref std std-option">-dofnames</em></a> list does not need to exist.
 (default: read input transformation from file)</p>
 </dd></dl>
 
@@ -250,110 +250,110 @@ which is listed in the <a class="reference internal" href="#cmdoption-average-do
 <h2>Average transformation options<a class="headerlink" href="#average-transformation-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-average-dofs-rotation">
-<span id="cmdoption-average-dofs-norotation"></span><code class="descname">-rotation</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-norotation</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-rotation" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-average-dofs-norotation"></span><tt class="descname">-rotation</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-norotation</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-rotation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Average rotation    or assume none to be present. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-translation">
-<span id="cmdoption-average-dofs-notranslation"></span><code class="descname">-translation</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-notranslation</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-translation" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-average-dofs-notranslation"></span><tt class="descname">-translation</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-notranslation</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-translation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Average translation or assume none to be present. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-scaling">
-<span id="cmdoption-average-dofs-noscaling"></span><code class="descname">-scaling</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noscaling</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-scaling" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-average-dofs-noscaling"></span><tt class="descname">-scaling</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-noscaling</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-scaling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Average scaling     or assume none to be present. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-shearing">
-<span id="cmdoption-average-dofs-noshearing"></span><code class="descname">-shearing</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noshearing</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-shearing" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-average-dofs-noshearing"></span><tt class="descname">-shearing</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-noshearing</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-shearing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Average shearing    or assume none to be present. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-deformation">
-<span id="cmdoption-average-dofs-nodeformation"></span><code class="descname">-deformation</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nodeformation</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-deformation" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-average-dofs-nodeformation"></span><tt class="descname">-deformation</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nodeformation</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-deformation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Average deformation or assume none to be present. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-log">
-<span id="cmdoption-average-dofs-nolog"></span><code class="descname">-log</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nolog</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-log" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-average-dofs-nolog"></span><tt class="descname">-log</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nolog</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-log" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to average local transformations in log-space.
-(default: yes, unless the <a class="reference internal" href="#cmdoption-average-dofs-dofs"><code class="xref std std-option docutils literal"><span class="pre">-dofs</span></code></a> are averaged directly)</p>
+(default: yes, unless the <a class="reference internal" href="#cmdoption-average-dofs-dofs"><em class="xref std std-option">-dofs</em></a> are averaged directly)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-log-euclidean">
-<code class="descname">-log-euclidean</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-log-euclidean" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-log-euclidean</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-log-euclidean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute Log-Euclidean means. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-bi-invariant">
-<code class="descname">-bi-invariant</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-bi-invariant" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-bi-invariant</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-bi-invariant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute global bi-invariant mean, i.e., exponential barycenter. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-dofs">
-<code class="descname">-dofs</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-dofs" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-dofs</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-dofs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Average the local transformation parameters directly.
 (default: corresponding (dense) displacement fields are averaged)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-inverse-dofs">
-<code class="descname">-inverse-dofs</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-inverse-dofs" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-inverse-dofs</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-inverse-dofs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Average inverse input transformations and invert the average again. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-rigid">
-<code class="descname">-rigid</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-rigid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enables averaging of <a class="reference internal" href="#cmdoption-average-dofs-translation"><code class="xref std std-option docutils literal"><span class="pre">-translation</span></code></a> and <a class="reference internal" href="#cmdoption-average-dofs-rotation"><code class="xref std std-option docutils literal"><span class="pre">-rotation</span></code></a> components,
-and disables averaging of <a class="reference internal" href="#cmdoption-average-dofs-scaling"><code class="xref std std-option docutils literal"><span class="pre">-scaling</span></code></a>, <a class="reference internal" href="#cmdoption-average-dofs-shearing"><code class="xref std std-option docutils literal"><span class="pre">-shearing</span></code></a>, and <a class="reference internal" href="#cmdoption-average-dofs-deformation"><code class="xref std std-option docutils literal"><span class="pre">-deformation</span></code></a>.</p>
+<tt class="descname">-rigid</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-rigid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables averaging of <a class="reference internal" href="#cmdoption-average-dofs-translation"><em class="xref std std-option">-translation</em></a> and <a class="reference internal" href="#cmdoption-average-dofs-rotation"><em class="xref std std-option">-rotation</em></a> components,
+and disables averaging of <a class="reference internal" href="#cmdoption-average-dofs-scaling"><em class="xref std std-option">-scaling</em></a>, <a class="reference internal" href="#cmdoption-average-dofs-shearing"><em class="xref std std-option">-shearing</em></a>, and <a class="reference internal" href="#cmdoption-average-dofs-deformation"><em class="xref std std-option">-deformation</em></a>.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-norigid">
-<code class="descname">-norigid</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-norigid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Disables averaging of <a class="reference internal" href="#cmdoption-average-dofs-translation"><code class="xref std std-option docutils literal"><span class="pre">-translation</span></code></a> and <a class="reference internal" href="#cmdoption-average-dofs-rotation"><code class="xref std std-option docutils literal"><span class="pre">-rotation</span></code></a> components.</p>
+<tt class="descname">-norigid</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-norigid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disables averaging of <a class="reference internal" href="#cmdoption-average-dofs-translation"><em class="xref std std-option">-translation</em></a> and <a class="reference internal" href="#cmdoption-average-dofs-rotation"><em class="xref std std-option">-rotation</em></a> components.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-affine">
-<code class="descname">-affine</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-affine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enables averaging of <a class="reference internal" href="#cmdoption-average-dofs-translation"><code class="xref std std-option docutils literal"><span class="pre">-translation</span></code></a>, <a class="reference internal" href="#cmdoption-average-dofs-rotation"><code class="xref std std-option docutils literal"><span class="pre">-rotation</span></code></a>,
-<a class="reference internal" href="#cmdoption-average-dofs-scaling"><code class="xref std std-option docutils literal"><span class="pre">-scaling</span></code></a>, and <a class="reference internal" href="#cmdoption-average-dofs-shearing"><code class="xref std std-option docutils literal"><span class="pre">-shearing</span></code></a>, components and disables output of
-average <a class="reference internal" href="#cmdoption-average-dofs-deformation"><code class="xref std std-option docutils literal"><span class="pre">-deformation</span></code></a>.</p>
+<tt class="descname">-affine</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-affine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables averaging of <a class="reference internal" href="#cmdoption-average-dofs-translation"><em class="xref std std-option">-translation</em></a>, <a class="reference internal" href="#cmdoption-average-dofs-rotation"><em class="xref std std-option">-rotation</em></a>,
+<a class="reference internal" href="#cmdoption-average-dofs-scaling"><em class="xref std std-option">-scaling</em></a>, and <a class="reference internal" href="#cmdoption-average-dofs-shearing"><em class="xref std std-option">-shearing</em></a>, components and disables output of
+average <a class="reference internal" href="#cmdoption-average-dofs-deformation"><em class="xref std std-option">-deformation</em></a>.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-noaffine">
-<code class="descname">-noaffine</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-noaffine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Disables averaging of <a class="reference internal" href="#cmdoption-average-dofs-rotation"><code class="xref std std-option docutils literal"><span class="pre">-rotation</span></code></a>, <a class="reference internal" href="#cmdoption-average-dofs-translation"><code class="xref std std-option docutils literal"><span class="pre">-translation</span></code></a>,
-<a class="reference internal" href="#cmdoption-average-dofs-scaling"><code class="xref std std-option docutils literal"><span class="pre">-scaling</span></code></a>, and <a class="reference internal" href="#cmdoption-average-dofs-shearing"><code class="xref std std-option docutils literal"><span class="pre">-shearing</span></code></a> components.</p>
+<tt class="descname">-noaffine</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-noaffine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disables averaging of <a class="reference internal" href="#cmdoption-average-dofs-rotation"><em class="xref std std-option">-rotation</em></a>, <a class="reference internal" href="#cmdoption-average-dofs-translation"><em class="xref std std-option">-translation</em></a>,
+<a class="reference internal" href="#cmdoption-average-dofs-scaling"><em class="xref std std-option">-scaling</em></a>, and <a class="reference internal" href="#cmdoption-average-dofs-shearing"><em class="xref std std-option">-shearing</em></a> components.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-all">
-<code class="descname">-all</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-all" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enables averaging of <a class="reference internal" href="#cmdoption-average-dofs-rotation"><code class="xref std std-option docutils literal"><span class="pre">-rotation</span></code></a>, <a class="reference internal" href="#cmdoption-average-dofs-translation"><code class="xref std std-option docutils literal"><span class="pre">-translation</span></code></a>,
-<a class="reference internal" href="#cmdoption-average-dofs-scaling"><code class="xref std std-option docutils literal"><span class="pre">-scaling</span></code></a>, <a class="reference internal" href="#cmdoption-average-dofs-shearing"><code class="xref std std-option docutils literal"><span class="pre">-shearing</span></code></a>, and <a class="reference internal" href="#cmdoption-average-dofs-deformation"><code class="xref std std-option docutils literal"><span class="pre">-deformation</span></code></a>.</p>
+<tt class="descname">-all</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables averaging of <a class="reference internal" href="#cmdoption-average-dofs-rotation"><em class="xref std std-option">-rotation</em></a>, <a class="reference internal" href="#cmdoption-average-dofs-translation"><em class="xref std std-option">-translation</em></a>,
+<a class="reference internal" href="#cmdoption-average-dofs-scaling"><em class="xref std std-option">-scaling</em></a>, <a class="reference internal" href="#cmdoption-average-dofs-shearing"><em class="xref std std-option">-shearing</em></a>, and <a class="reference internal" href="#cmdoption-average-dofs-deformation"><em class="xref std std-option">-deformation</em></a>.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-linear">
-<code class="descname">-linear</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-linear" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-linear</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-linear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Force average output transformation to use linear interpolation.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-cubic">
-<code class="descname">-cubic</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-cubic" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-cubic</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-cubic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Force average output transformation to use cubic B-spline interpolation.</p>
 </dd></dl>
 
@@ -362,31 +362,31 @@ average <a class="reference internal" href="#cmdoption-average-dofs-deformation"
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-average-dofs-v">
-<span id="cmdoption-average-dofs-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-average-dofs-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-average-dofs-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-average-dofs-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-average-dofs-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-average-dofs-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-average-dofs-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-average-dofs-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-dofs-h">
-<span id="cmdoption-average-dofs-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-dofs-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-average-dofs-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-dofs-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -399,7 +399,7 @@ average <a class="reference internal" href="#cmdoption-average-dofs-deformation"
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -408,13 +408,13 @@ average <a class="reference internal" href="#cmdoption-average-dofs-deformation"
         <li class="right" >
           <a href="../commands.html" title="Applications"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

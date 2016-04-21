@@ -1,7 +1,7 @@
 <map id="mirtk::ConvolutionFunction::TruncatedForegroundConvolution1D&lt; TKernel &gt;" name="mirtk::ConvolutionFunction::TruncatedForegroundConvolution1D&lt; TKernel &gt;">
-<area shape="rect" id="node3" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInT.html" title="Compute convolution for given voxel along t dimension. " alt="" coords="5,454,252,619"/>
-<area shape="rect" id="node4" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInX.html" title="Compute convolution of voxel with kernel in x dimension. " alt="" coords="276,454,523,619"/>
-<area shape="rect" id="node5" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInY.html" title="Compute convolution for given voxel along y dimension. " alt="" coords="547,447,793,627"/>
-<area shape="rect" id="node6" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInZ.html" title="Compute convolution for given voxel along z dimension. " alt="" coords="817,447,1064,627"/>
-<area shape="rect" id="node2" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="463,5,605,127"/>
+<area shape="rect" id="node3" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInT.html" title="Compute convolution for given voxel along t dimension. " alt="" coords="5,456,243,621"/>
+<area shape="rect" id="node4" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInX.html" title="Compute convolution of voxel with kernel in x dimension. " alt="" coords="268,456,508,621"/>
+<area shape="rect" id="node5" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInY.html" title="Compute convolution for given voxel along y dimension. " alt="" coords="532,449,772,629"/>
+<area shape="rect" id="node6" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInZ.html" title="Compute convolution for given voxel along z dimension. " alt="" coords="797,449,1035,629"/>
+<area shape="rect" id="node2" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="449,6,591,127"/>
 </map>

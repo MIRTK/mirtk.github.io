@@ -1,46 +1,49 @@
 <map id="mirtk::data::Op" name="mirtk::data::Op">
-<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1op_1_1ElementWiseBinaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="521,175,697,325"/>
-<area shape="rect" id="node9" href="$classmirtk_1_1data_1_1op_1_1ElementWiseUnaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="2390,189,2553,311"/>
-<area shape="rect" id="node26" href="$classmirtk_1_1data_1_1op_1_1Rescale.html" title="Rescale values to new range. " alt="" coords="3267,197,3430,303"/>
-<area shape="rect" id="node27" href="$classmirtk_1_1data_1_1op_1_1SetInsideValue.html" title="Set value of unmasked data points. " alt="" coords="3455,189,3624,311"/>
-<area shape="rect" id="node28" href="$classmirtk_1_1data_1_1op_1_1SetOutsideValue.html" title="Set value of masked data points. " alt="" coords="3648,189,3828,311"/>
-<area shape="rect" id="node29" href="$classmirtk_1_1data_1_1statistic_1_1Statistic.html" title="Base class of all data statistics. " alt="" coords="4623,145,4759,355"/>
-<area shape="rect" id="node45" href="$classmirtk_1_1data_1_1Write.html" title="Write data sequence. " alt="" coords="4783,204,4906,296"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1op_1_1Add.html" title="Element&#45;wise addition. " alt="" coords="5,417,143,539"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1op_1_1Div.html" title="Element&#45;wise division. " alt="" coords="167,417,301,539"/>
-<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1op_1_1DivWithZero.html" title="Element&#45;wise division. " alt="" coords="325,425,511,531"/>
-<area shape="rect" id="node6" href="$classmirtk_1_1data_1_1op_1_1Mask.html" title="Mask values. " alt="" coords="536,417,681,539"/>
-<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1op_1_1Mul.html" title="Element&#45;wise multiplication. " alt="" coords="706,417,842,539"/>
-<area shape="rect" id="node8" href="$classmirtk_1_1data_1_1op_1_1Sub.html" title="Element&#45;wise subtraction. " alt="" coords="867,417,1004,539"/>
-<area shape="rect" id="node10" href="$classmirtk_1_1data_1_1op_1_1Abs.html" title="Compute element&#45;wise absolute value. " alt="" coords="1028,432,1165,524"/>
-<area shape="rect" id="node11" href="$classmirtk_1_1data_1_1op_1_1Clamp.html" title="Clamp values below or equal a given threshold value. " alt="" coords="1190,425,1342,531"/>
-<area shape="rect" id="node12" href="$classmirtk_1_1data_1_1op_1_1Exp.html" title="Compute element&#45;wise exponential map. " alt="" coords="1367,432,1504,524"/>
-<area shape="rect" id="node13" href="$classmirtk_1_1data_1_1op_1_1Lb.html" title="Compute element&#45;wise binary logarithm. " alt="" coords="1528,425,1657,531"/>
-<area shape="rect" id="node14" href="$classmirtk_1_1data_1_1op_1_1Lg.html" title="Compute element&#45;wise logarithm to base 10. " alt="" coords="1681,425,1811,531"/>
-<area shape="rect" id="node15" href="$classmirtk_1_1data_1_1op_1_1Ln.html" title="Compute element&#45;wise natural logarithm. " alt="" coords="1835,425,1964,531"/>
-<area shape="rect" id="node16" href="$classmirtk_1_1data_1_1op_1_1Log.html" title="Compute element&#45;wise logarithmic map. " alt="" coords="1989,425,2125,531"/>
-<area shape="rect" id="node17" href="$classmirtk_1_1data_1_1op_1_1LowerThreshold.html" title="Clamp values below or equal a given threshold value. " alt="" coords="2149,425,2359,531"/>
-<area shape="rect" id="node18" href="$classmirtk_1_1data_1_1op_1_1MaskEvenValues.html" title="Mask even values (e.g., segmentation labels of right hemisphere; cf MAL 2012) " alt="" coords="2383,425,2559,531"/>
-<area shape="rect" id="node19" href="$classmirtk_1_1data_1_1op_1_1MaskInsideInterval.html" title="Mask values inside closed interval. " alt="" coords="2583,417,2765,539"/>
-<area shape="rect" id="node20" href="$classmirtk_1_1data_1_1op_1_1MaskInsideOpenInterval.html" title="Mask values inside open interval. " alt="" coords="2789,417,2975,539"/>
-<area shape="rect" id="node21" href="$classmirtk_1_1data_1_1op_1_1MaskOddValues.html" title="Mask odd values (e.g., segmentation labels of left hemisphere; cf MAL 2012) " alt="" coords="2999,425,3170,531"/>
-<area shape="rect" id="node22" href="$classmirtk_1_1data_1_1op_1_1MaskOutsideInterval.html" title="Mask values below or above a specified lower/upper threshold. " alt="" coords="3194,417,3386,539"/>
-<area shape="rect" id="node23" href="$classmirtk_1_1data_1_1op_1_1MaskOutsideOpenInterval.html" title="Mask values below, equal, or above a specified lower/upper threshold. " alt="" coords="3411,417,3607,539"/>
-<area shape="rect" id="node24" href="$classmirtk_1_1data_1_1op_1_1Pow.html" title="Compute element&#45;wise power. " alt="" coords="3631,425,3771,531"/>
-<area shape="rect" id="node25" href="$classmirtk_1_1data_1_1op_1_1UpperThreshold.html" title="Clamp values below or equal a given threshold value. " alt="" coords="3795,425,4004,531"/>
-<area shape="rect" id="node30" href="$classmirtk_1_1data_1_1statistic_1_1AbsPercentile.html" title="Absolute value percentile calculation. " alt="" coords="4029,410,4165,546"/>
-<area shape="rect" id="node31" href="$classmirtk_1_1data_1_1statistic_1_1Extrema.html" title="Get minimum and maximum values. " alt="" coords="4189,403,4325,553"/>
-<area shape="rect" id="node32" href="$classmirtk_1_1data_1_1statistic_1_1Max.html" title="Get maximum value. " alt="" coords="4349,425,4519,531"/>
-<area shape="rect" id="node33" href="$classmirtk_1_1data_1_1statistic_1_1MaxAbs.html" title="Get maximum absolute value. " alt="" coords="4543,417,4679,539"/>
-<area shape="rect" id="node34" href="$classmirtk_1_1data_1_1statistic_1_1Mean.html" title="Robust mean/average evaluation. " alt="" coords="4703,417,4839,539"/>
-<area shape="rect" id="node35" href="$classmirtk_1_1data_1_1statistic_1_1Min.html" title="Get minimum value. " alt="" coords="4863,425,5029,531"/>
-<area shape="rect" id="node36" href="$classmirtk_1_1data_1_1statistic_1_1MinAbs.html" title="Get minimum absolute value. " alt="" coords="5053,417,5189,539"/>
-<area shape="rect" id="node37" href="$classmirtk_1_1data_1_1statistic_1_1Percentile.html" title="Percentile calculation. " alt="" coords="5213,410,5349,546"/>
-<area shape="rect" id="node41" href="$classmirtk_1_1data_1_1statistic_1_1Range.html" title="Get value range. " alt="" coords="5373,417,5509,539"/>
-<area shape="rect" id="node42" href="$classmirtk_1_1data_1_1statistic_1_1Var.html" title="Robust variance evaluation. " alt="" coords="5543,417,5707,539"/>
-<area shape="rect" id="node38" href="$classmirtk_1_1data_1_1statistic_1_1LowerPercentileMean.html" title="Lower percentile mean calculation. " alt="" coords="5013,609,5183,730"/>
-<area shape="rect" id="node39" href="$classmirtk_1_1data_1_1statistic_1_1RobustMean.html" title="Robust mean calculation, ignoring values below and above a certain percentile. " alt="" coords="5207,609,5343,730"/>
-<area shape="rect" id="node40" href="$classmirtk_1_1data_1_1statistic_1_1UpperPercentileMean.html" title="Upper percentile mean calculation. " alt="" coords="5367,609,5538,730"/>
-<area shape="rect" id="node43" href="$classmirtk_1_1data_1_1statistic_1_1StDev.html" title="Robust evaluation of standard deviation. " alt="" coords="5562,601,5698,737"/>
-<area shape="rect" id="node44" href="$classmirtk_1_1data_1_1statistic_1_1NormalDistribution.html" title="Robust evaluation of Gaussian mean and standard deviation. " alt="" coords="5554,785,5706,921"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1op_1_1ElementWiseBinaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="523,183,696,334"/>
+<area shape="rect" id="node9" href="$classmirtk_1_1data_1_1op_1_1ElementWiseUnaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="2459,198,2621,319"/>
+<area shape="rect" id="node27" href="$classmirtk_1_1data_1_1op_1_1InvertMask.html" title="Invert mask values. " alt="" coords="3313,220,3492,297"/>
+<area shape="rect" id="node28" href="$classmirtk_1_1data_1_1op_1_1Rescale.html" title="Rescale values to new range. " alt="" coords="3516,205,3679,312"/>
+<area shape="rect" id="node29" href="$classmirtk_1_1data_1_1op_1_1ResetMask.html" title="Reset data mask. " alt="" coords="3703,213,3884,305"/>
+<area shape="rect" id="node30" href="$classmirtk_1_1data_1_1op_1_1SetInsideValue.html" title="Set value of unmasked data points. " alt="" coords="3909,198,4077,319"/>
+<area shape="rect" id="node31" href="$classmirtk_1_1data_1_1op_1_1SetOutsideValue.html" title="Set value of masked data points. " alt="" coords="4103,198,4281,319"/>
+<area shape="rect" id="node32" href="$classmirtk_1_1data_1_1statistic_1_1Statistic.html" title="Base class of all data statistics. " alt="" coords="4983,147,5125,371"/>
+<area shape="rect" id="node48" href="$classmirtk_1_1data_1_1Write.html" title="Write data sequence. " alt="" coords="5151,213,5273,305"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1op_1_1Add.html" title="Element&#45;wise addition. " alt="" coords="5,441,141,562"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1op_1_1Div.html" title="Element&#45;wise division. " alt="" coords="166,441,300,562"/>
+<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1op_1_1DivWithZero.html" title="Element&#45;wise division. " alt="" coords="325,448,512,555"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1data_1_1op_1_1Mask.html" title="Mask values. " alt="" coords="536,441,683,562"/>
+<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1op_1_1Mul.html" title="Element&#45;wise multiplication. " alt="" coords="707,441,841,562"/>
+<area shape="rect" id="node8" href="$classmirtk_1_1data_1_1op_1_1Sub.html" title="Element&#45;wise subtraction. " alt="" coords="866,441,1003,562"/>
+<area shape="rect" id="node10" href="$classmirtk_1_1data_1_1op_1_1Abs.html" title="Compute element&#45;wise absolute value. " alt="" coords="1027,455,1164,547"/>
+<area shape="rect" id="node11" href="$classmirtk_1_1data_1_1op_1_1Binarize.html" title="Set values to either one or zero. " alt="" coords="1189,448,1349,555"/>
+<area shape="rect" id="node12" href="$classmirtk_1_1data_1_1op_1_1Clamp.html" title="Clamp values below or equal a given threshold value. " alt="" coords="1375,426,1527,577"/>
+<area shape="rect" id="node13" href="$classmirtk_1_1data_1_1op_1_1Exp.html" title="Compute element&#45;wise exponential map. " alt="" coords="1551,455,1688,547"/>
+<area shape="rect" id="node14" href="$classmirtk_1_1data_1_1op_1_1Lb.html" title="Compute element&#45;wise binary logarithm. " alt="" coords="1713,448,1841,555"/>
+<area shape="rect" id="node15" href="$classmirtk_1_1data_1_1op_1_1Lg.html" title="Compute element&#45;wise logarithm to base 10. " alt="" coords="1865,448,1993,555"/>
+<area shape="rect" id="node16" href="$classmirtk_1_1data_1_1op_1_1Ln.html" title="Compute element&#45;wise natural logarithm. " alt="" coords="2017,448,2145,555"/>
+<area shape="rect" id="node17" href="$classmirtk_1_1data_1_1op_1_1Log.html" title="Compute element&#45;wise logarithmic map. " alt="" coords="2170,448,2304,555"/>
+<area shape="rect" id="node18" href="$classmirtk_1_1data_1_1op_1_1LowerThreshold.html" title="Clamp values below or equal a given threshold value. " alt="" coords="2329,441,2535,562"/>
+<area shape="rect" id="node19" href="$classmirtk_1_1data_1_1op_1_1MaskEvenValues.html" title="Mask even values (e.g., segmentation labels of right hemisphere; cf MAL 2012) " alt="" coords="2560,448,2736,555"/>
+<area shape="rect" id="node20" href="$classmirtk_1_1data_1_1op_1_1MaskInsideInterval.html" title="Mask values inside closed interval. " alt="" coords="2760,419,2941,584"/>
+<area shape="rect" id="node21" href="$classmirtk_1_1data_1_1op_1_1MaskInsideOpenInterval.html" title="Mask values inside open interval. " alt="" coords="2966,419,3148,584"/>
+<area shape="rect" id="node22" href="$classmirtk_1_1data_1_1op_1_1MaskOddValues.html" title="Mask odd values (e.g., segmentation labels of left hemisphere; cf MAL 2012) " alt="" coords="3173,448,3344,555"/>
+<area shape="rect" id="node23" href="$classmirtk_1_1data_1_1op_1_1MaskOutsideInterval.html" title="Mask values below or above a specified lower/upper threshold. " alt="" coords="3369,419,3559,584"/>
+<area shape="rect" id="node24" href="$classmirtk_1_1data_1_1op_1_1MaskOutsideOpenInterval.html" title="Mask values below, equal, or above a specified lower/upper threshold. " alt="" coords="3583,419,3776,584"/>
+<area shape="rect" id="node25" href="$classmirtk_1_1data_1_1op_1_1Pow.html" title="Compute element&#45;wise power. " alt="" coords="3801,448,3940,555"/>
+<area shape="rect" id="node26" href="$classmirtk_1_1data_1_1op_1_1UpperThreshold.html" title="Clamp values below or equal a given threshold value. " alt="" coords="3965,441,4171,562"/>
+<area shape="rect" id="node33" href="$classmirtk_1_1data_1_1statistic_1_1AbsPercentile.html" title="Absolute value percentile calculation. " alt="" coords="4196,433,4335,569"/>
+<area shape="rect" id="node34" href="$classmirtk_1_1data_1_1statistic_1_1Extrema.html" title="Get minimum and maximum values. " alt="" coords="4359,419,4571,584"/>
+<area shape="rect" id="node35" href="$classmirtk_1_1data_1_1statistic_1_1Max.html" title="Get maximum value. " alt="" coords="4595,441,4807,562"/>
+<area shape="rect" id="node36" href="$classmirtk_1_1data_1_1statistic_1_1MaxAbs.html" title="Get maximum absolute value. " alt="" coords="4831,433,5043,569"/>
+<area shape="rect" id="node37" href="$classmirtk_1_1data_1_1statistic_1_1Mean.html" title="Robust mean/average evaluation. " alt="" coords="5067,433,5279,569"/>
+<area shape="rect" id="node38" href="$classmirtk_1_1data_1_1statistic_1_1Min.html" title="Get minimum value. " alt="" coords="5303,441,5515,562"/>
+<area shape="rect" id="node39" href="$classmirtk_1_1data_1_1statistic_1_1MinAbs.html" title="Get minimum absolute value. " alt="" coords="5539,433,5751,569"/>
+<area shape="rect" id="node40" href="$classmirtk_1_1data_1_1statistic_1_1Percentile.html" title="Percentile calculation. " alt="" coords="5776,433,5915,569"/>
+<area shape="rect" id="node44" href="$classmirtk_1_1data_1_1statistic_1_1Range.html" title="Get value range. " alt="" coords="5939,433,6151,569"/>
+<area shape="rect" id="node45" href="$classmirtk_1_1data_1_1statistic_1_1Var.html" title="Robust variance evaluation. " alt="" coords="6175,426,6387,577"/>
+<area shape="rect" id="node41" href="$classmirtk_1_1data_1_1statistic_1_1LowerPercentileMean.html" title="Lower percentile mean calculation. " alt="" coords="5585,654,5751,775"/>
+<area shape="rect" id="node42" href="$classmirtk_1_1data_1_1statistic_1_1RobustMean.html" title="Robust mean calculation, ignoring values below and above a certain percentile. " alt="" coords="5776,654,5915,775"/>
+<area shape="rect" id="node43" href="$classmirtk_1_1data_1_1statistic_1_1UpperPercentileMean.html" title="Upper percentile mean calculation. " alt="" coords="5939,654,6105,775"/>
+<area shape="rect" id="node46" href="$classmirtk_1_1data_1_1statistic_1_1StDev.html" title="Robust evaluation of standard deviation. " alt="" coords="6175,632,6387,797"/>
+<area shape="rect" id="node47" href="$classmirtk_1_1data_1_1statistic_1_1NormalDistribution.html" title="Robust evaluation of Gaussian mean and standard deviation. " alt="" coords="6206,845,6356,981"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="mirtk::ConvolutionFunction::ConvolveTruncatedForegroundInX&lt; TKernel &gt;" name="mirtk::ConvolutionFunction::ConvolveTruncatedForegroundInX&lt; TKernel &gt;">
-<area shape="rect" id="node2" href="$classmirtk_1_1ConvolutionFunction_1_1TruncatedForegroundConvolution1D.html" title="Base class of 1D convolution functions which truncate the kernel at the foreground boundary..." alt="" coords="5,175,264,399"/>
-<area shape="rect" id="node3" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="63,5,206,127"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1ConvolutionFunction_1_1TruncatedForegroundConvolution1D.html" title="Base class of 1D convolution functions which truncate the kernel at the foreground boundary..." alt="" coords="5,176,256,400"/>
+<area shape="rect" id="node3" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="59,6,201,127"/>
 </map>

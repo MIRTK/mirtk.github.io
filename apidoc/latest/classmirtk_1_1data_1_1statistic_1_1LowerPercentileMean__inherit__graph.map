@@ -1,5 +1,5 @@
 <map id="mirtk::data::statistic::LowerPercentileMean" name="mirtk::data::statistic::LowerPercentileMean">
-<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1statistic_1_1Percentile.html" title="Percentile calculation. " alt="" coords="23,403,159,539"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1statistic_1_1Statistic.html" title="Base class of all data statistics. " alt="" coords="23,145,159,355"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="36,5,145,97"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1statistic_1_1Percentile.html" title="Percentile calculation. " alt="" coords="19,419,157,555"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1statistic_1_1Statistic.html" title="Base class of all data statistics. " alt="" coords="17,147,159,371"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="33,6,143,98"/>
 </map>

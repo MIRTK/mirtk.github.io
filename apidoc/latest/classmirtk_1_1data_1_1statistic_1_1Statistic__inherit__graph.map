@@ -1,18 +1,18 @@
 <map id="mirtk::data::statistic::Statistic" name="mirtk::data::statistic::Statistic">
-<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1statistic_1_1AbsPercentile.html" title="Absolute value percentile calculation. " alt="" coords="5,410,141,546"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1statistic_1_1Extrema.html" title="Get minimum and maximum values. " alt="" coords="165,403,301,553"/>
-<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1statistic_1_1Max.html" title="Get maximum value. " alt="" coords="326,425,495,531"/>
-<area shape="rect" id="node6" href="$classmirtk_1_1data_1_1statistic_1_1MaxAbs.html" title="Get maximum absolute value. " alt="" coords="520,417,656,539"/>
-<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1statistic_1_1Mean.html" title="Robust mean/average evaluation. " alt="" coords="680,417,816,539"/>
-<area shape="rect" id="node8" href="$classmirtk_1_1data_1_1statistic_1_1Min.html" title="Get minimum value. " alt="" coords="840,425,1005,531"/>
-<area shape="rect" id="node9" href="$classmirtk_1_1data_1_1statistic_1_1MinAbs.html" title="Get minimum absolute value. " alt="" coords="1029,417,1165,539"/>
-<area shape="rect" id="node10" href="$classmirtk_1_1data_1_1statistic_1_1Percentile.html" title="Percentile calculation. " alt="" coords="1189,410,1325,546"/>
-<area shape="rect" id="node14" href="$classmirtk_1_1data_1_1statistic_1_1Range.html" title="Get value range. " alt="" coords="1349,417,1485,539"/>
-<area shape="rect" id="node15" href="$classmirtk_1_1data_1_1statistic_1_1Var.html" title="Robust variance evaluation. " alt="" coords="1519,417,1683,539"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="780,5,889,97"/>
-<area shape="rect" id="node11" href="$classmirtk_1_1data_1_1statistic_1_1LowerPercentileMean.html" title="Lower percentile mean calculation. " alt="" coords="989,609,1160,730"/>
-<area shape="rect" id="node12" href="$classmirtk_1_1data_1_1statistic_1_1RobustMean.html" title="Robust mean calculation, ignoring values below and above a certain percentile. " alt="" coords="1184,609,1320,730"/>
-<area shape="rect" id="node13" href="$classmirtk_1_1data_1_1statistic_1_1UpperPercentileMean.html" title="Upper percentile mean calculation. " alt="" coords="1344,609,1515,730"/>
-<area shape="rect" id="node16" href="$classmirtk_1_1data_1_1statistic_1_1StDev.html" title="Robust evaluation of standard deviation. " alt="" coords="1539,601,1675,737"/>
-<area shape="rect" id="node17" href="$classmirtk_1_1data_1_1statistic_1_1NormalDistribution.html" title="Robust evaluation of Gaussian mean and standard deviation. " alt="" coords="1531,785,1683,921"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1statistic_1_1AbsPercentile.html" title="Absolute value percentile calculation. " alt="" coords="5,433,144,569"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1statistic_1_1Extrema.html" title="Get minimum and maximum values. " alt="" coords="169,419,380,584"/>
+<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1statistic_1_1Max.html" title="Get maximum value. " alt="" coords="405,441,616,562"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1data_1_1statistic_1_1MaxAbs.html" title="Get maximum absolute value. " alt="" coords="641,433,852,569"/>
+<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1statistic_1_1Mean.html" title="Robust mean/average evaluation. " alt="" coords="877,433,1088,569"/>
+<area shape="rect" id="node8" href="$classmirtk_1_1data_1_1statistic_1_1Min.html" title="Get minimum value. " alt="" coords="1113,441,1324,562"/>
+<area shape="rect" id="node9" href="$classmirtk_1_1data_1_1statistic_1_1MinAbs.html" title="Get minimum absolute value. " alt="" coords="1349,433,1560,569"/>
+<area shape="rect" id="node10" href="$classmirtk_1_1data_1_1statistic_1_1Percentile.html" title="Percentile calculation. " alt="" coords="1585,433,1724,569"/>
+<area shape="rect" id="node14" href="$classmirtk_1_1data_1_1statistic_1_1Range.html" title="Get value range. " alt="" coords="1749,433,1960,569"/>
+<area shape="rect" id="node15" href="$classmirtk_1_1data_1_1statistic_1_1Var.html" title="Robust variance evaluation. " alt="" coords="1985,426,2196,577"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="1045,6,1155,98"/>
+<area shape="rect" id="node11" href="$classmirtk_1_1data_1_1statistic_1_1LowerPercentileMean.html" title="Lower percentile mean calculation. " alt="" coords="1394,654,1560,775"/>
+<area shape="rect" id="node12" href="$classmirtk_1_1data_1_1statistic_1_1RobustMean.html" title="Robust mean calculation, ignoring values below and above a certain percentile. " alt="" coords="1585,654,1724,775"/>
+<area shape="rect" id="node13" href="$classmirtk_1_1data_1_1statistic_1_1UpperPercentileMean.html" title="Upper percentile mean calculation. " alt="" coords="1749,654,1915,775"/>
+<area shape="rect" id="node16" href="$classmirtk_1_1data_1_1statistic_1_1StDev.html" title="Robust evaluation of standard deviation. " alt="" coords="1985,632,2196,797"/>
+<area shape="rect" id="node17" href="$classmirtk_1_1data_1_1statistic_1_1NormalDistribution.html" title="Robust evaluation of Gaussian mean and standard deviation. " alt="" coords="2015,845,2165,981"/>
 </map>

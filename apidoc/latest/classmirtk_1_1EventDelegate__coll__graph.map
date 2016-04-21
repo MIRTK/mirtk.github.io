@@ -1,4 +1,4 @@
 <map id="mirtk::EventDelegate" name="mirtk::EventDelegate">
-<area shape="rect" id="node2" href="$classmirtk_1_1Observer.html" title="{mirtk::Observer\n|# _Observables\l|+ ClearObservables()\l+ HandleEvent()\l+ NameOfClass()\l+ NameOfType()\l# Observables()\l# Observables()\l# Observables()\l# Observer()\l# Observer()\l# operator=()\l# ~Observer()\l}" alt="" coords="5,204,155,428"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="17,5,143,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Observer.html" title="{mirtk::Observer\n||+ ClearObservables()\l+ HandleEvent()\l# Observer()\l# Observer()\l# operator=()\l# ~Observer()\l}" alt="" coords="5,206,152,357"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="16,6,141,157"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="mirtk::PGMImageWriter" name="mirtk::PGMImageWriter">
-<area shape="rect" id="node2" href="$classmirtk_1_1ImageWriter.html" title="{mirtk::ImageWriter\n|# _ReflectX\l# _ReflectY\l# _ReflectZ\l# _Start\l|+ Run()\l+ ~ImageWriter()\l+ New()\l# Finalize()\l# ImageWriter()\l# Initialize()\l}" alt="" coords="21,476,151,671"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Cofstream.html" title="{mirtk::Cofstream\n||+ Close()\l+ Cofstream()\l+ IsCompressed()\l+ IsCompressed()\l+ IsSwapped()\l+ IsSwapped()\l+ Open()\l+ Write()\l+ WriteAsChar()\l+ WriteAsChar()\land 16 more...\l}" alt="" coords="22,204,150,428"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="23,5,149,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1ImageWriter.html" title="{mirtk::ImageWriter\n|# _ReflectX\l# _ReflectY\l# _ReflectZ\l# _Start\l|+ Run()\l+ ~ImageWriter()\l+ New()\l# Finalize()\l# ImageWriter()\l# Initialize()\l}" alt="" coords="19,477,148,672"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Cofstream.html" title="{mirtk::Cofstream\n||+ Close()\l+ Cofstream()\l+ IsCompressed()\l+ IsCompressed()\l+ IsSwapped()\l+ IsSwapped()\l+ Open()\l+ Write()\l+ WriteAsChar()\l+ WriteAsChar()\land 16 more...\l}" alt="" coords="21,205,147,429"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="21,6,147,157"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="mirtk::ImageWriter" name="mirtk::ImageWriter">
-<area shape="rect" id="node2" href="$classmirtk_1_1Cofstream.html" title="{mirtk::Cofstream\n||+ Close()\l+ Cofstream()\l+ IsCompressed()\l+ IsCompressed()\l+ IsSwapped()\l+ IsSwapped()\l+ Open()\l+ Write()\l+ WriteAsChar()\l+ WriteAsChar()\land 16 more...\l}" alt="" coords="7,204,135,428"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="8,5,133,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Cofstream.html" title="{mirtk::Cofstream\n||+ Close()\l+ Cofstream()\l+ IsCompressed()\l+ IsCompressed()\l+ IsSwapped()\l+ IsSwapped()\l+ Open()\l+ Write()\l+ WriteAsChar()\l+ WriteAsChar()\land 16 more...\l}" alt="" coords="6,205,132,429"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="7,6,132,157"/>
 </map>

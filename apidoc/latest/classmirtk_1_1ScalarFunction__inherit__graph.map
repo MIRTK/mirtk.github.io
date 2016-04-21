@@ -1,4 +1,4 @@
 <map id="mirtk::ScalarFunction" name="mirtk::ScalarFunction">
-<area shape="rect" id="node3" href="$classmirtk_1_1ScalarGaussian.html" title="{mirtk::ScalarGaussian\n|# _Center\l# _Norm\l# _Variance\l|+ Evaluate()\l+ Evaluate()\l+ Evaluate()\l+ Evaluate()\l+ ScalarGaussian()\l+ ScalarGaussian()\l+ ScalarGaussian()\l+ ScalarGaussian()\l+ ScalarGaussian()\l+ ~ScalarGaussian()\l# ComputeNorm()\l}" alt="" coords="5,344,157,597"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="19,5,144,156"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1ScalarGaussian.html" title="{mirtk::ScalarGaussian\n|# _Center\l# _Norm\l# _Variance\l|+ Evaluate()\l+ Evaluate()\l+ Evaluate()\l+ Evaluate()\l+ ScalarGaussian()\l+ ScalarGaussian()\l+ ScalarGaussian()\l+ ScalarGaussian()\l+ ScalarGaussian()\l+ ~ScalarGaussian()\l# ComputeNorm()\l}" alt="" coords="5,347,155,600"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="17,6,143,157"/>
 </map>

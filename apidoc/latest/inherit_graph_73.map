@@ -1,0 +1,81 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$structmirtk_1_1MultipleVoxelTransformation_1_1TransformData.html" title="Input/output data members of voxel transformation functions. " alt="" coords="200,158,424,199"/>
+<area shape="rect" id="node2" href="$structmirtk_1_1MultipleVoxelTransformation_1_1BaseTransform.html" title="mirtk::MultipleVoxelTransformation\l::BaseTransform\&lt; InterpolateImageFunction,\l InputDomain \&gt;" alt="" coords="475,865,757,921"/>
+<area shape="rect" id="node3" href="$structmirtk_1_1VoxelFunction.html" title="mirtk::VoxelFunction" alt="" coords="6,1843,149,1869"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1AddBSplineSVFFD.html" title="Evaluate and add B&#45;spline SV FFD at image voxels. " alt="" coords="227,224,397,251"/>
+<area shape="rect" id="node5" href="$classmirtk_1_1AddBSplineSVFFD3D.html" title="Evaluate and add 3D B&#45;spline SV FFD at image voxels. " alt="" coords="218,275,406,301"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1AddDOFsOfBSplineSVFFD.html" title="Add parameters of B&#45;spline SV FFD. " alt="" coords="202,325,422,352"/>
+<area shape="rect" id="node7" href="$structmirtk_1_1BinaryVoxelFunction_1_1Add.html" title="mirtk::BinaryVoxelFunction::Add" alt="" coords="207,376,417,403"/>
+<area shape="rect" id="node8" href="$structmirtk_1_1BinaryVoxelFunction_1_1ComposeDisplacementFields2D.html" title="Compose two 2D displacement fields: D = D1 ° D2. " alt="" coords="203,427,421,483"/>
+<area shape="rect" id="node9" href="$structmirtk_1_1BinaryVoxelFunction_1_1ComposeDisplacementFields3D.html" title="Compose two 3D displacement fields: D = D1 ° D2. " alt="" coords="203,507,421,563"/>
+<area shape="rect" id="node10" href="$structmirtk_1_1BinaryVoxelFunction_1_1Copy.html" title="mirtk::BinaryVoxelFunction\l::Copy" alt="" coords="223,586,401,627"/>
+<area shape="rect" id="node11" href="$classmirtk_1_1BinaryVoxelFunction_1_1Dilate.html" title="mirtk::BinaryVoxelFunction\l::Dilate" alt="" coords="223,651,401,693"/>
+<area shape="rect" id="node12" href="$structmirtk_1_1BinaryVoxelFunction_1_1Div.html" title="mirtk::BinaryVoxelFunction::Div" alt="" coords="209,717,415,744"/>
+<area shape="rect" id="node13" href="$classmirtk_1_1BinaryVoxelFunction_1_1Erode.html" title="mirtk::BinaryVoxelFunction\l::Erode" alt="" coords="223,769,401,810"/>
+<area shape="rect" id="node14" href="$structmirtk_1_1BinaryVoxelFunction_1_1Mul.html" title="mirtk::BinaryVoxelFunction::Mul" alt="" coords="208,835,416,861"/>
+<area shape="rect" id="node15" href="$structmirtk_1_1BinaryVoxelFunction_1_1Sub.html" title="mirtk::BinaryVoxelFunction::Sub" alt="" coords="207,885,417,912"/>
+<area shape="rect" id="node16" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInT.html" title="Perform convolution of image foreground along t with truncation of kernel at boundary. " alt="" coords="223,936,401,992"/>
+<area shape="rect" id="node17" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInX.html" title="Perform convolution of image foreground along x with truncation of kernel at boundary. " alt="" coords="223,1016,401,1072"/>
+<area shape="rect" id="node18" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInY.html" title="Perform convolution of image foreground along y with truncation of kernel at boundary. " alt="" coords="223,1096,401,1152"/>
+<area shape="rect" id="node19" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveForegroundInZ.html" title="Perform convolution of image foreground along z with truncation of kernel at boundary. " alt="" coords="223,1176,401,1232"/>
+<area shape="rect" id="node20" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveInT.html" title="Perform convolution along t with truncation of kernel at boundary. " alt="" coords="223,1255,401,1297"/>
+<area shape="rect" id="node21" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveInX.html" title="Perform convolution along x with truncation of kernel at boundary. " alt="" coords="223,1321,401,1362"/>
+<area shape="rect" id="node22" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveInY.html" title="Perform convolution along y with truncation of kernel at boundary. " alt="" coords="223,1386,401,1427"/>
+<area shape="rect" id="node23" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveInZ.html" title="Perform convolution along z with truncation of kernel at boundary. " alt="" coords="223,1451,401,1493"/>
+<area shape="rect" id="node24" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInT.html" title="Perform convolution of weighted image along t with truncation of kernel at boundary. " alt="" coords="215,1516,409,1572"/>
+<area shape="rect" id="node25" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInX.html" title="Perform convolution of weighted image along x with truncation of kernel at boundary. " alt="" coords="214,1596,410,1652"/>
+<area shape="rect" id="node26" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInY.html" title="Perform convolution of weighted image along y with truncation of kernel at boundary. " alt="" coords="214,1676,410,1732"/>
+<area shape="rect" id="node27" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveWeightedImageInZ.html" title="Perform convolution of weighted image along z with truncation of kernel at boundary. " alt="" coords="215,1756,409,1812"/>
+<area shape="rect" id="node28" href="$classmirtk_1_1ConvolutionFunction_1_1ExtendedForegroundConvolution1D.html" title="Base class of 1D convolution functions which extends the foreground into background. " alt="" coords="199,1900,425,1956"/>
+<area shape="rect" id="node36" href="$classmirtk_1_1ConvolutionFunction_1_1MirroredForegroundConvolution1D.html" title="Base class of 1D convolution functions which mirror the foreground into background. " alt="" coords="203,1980,421,2036"/>
+<area shape="rect" id="node44" href="$classmirtk_1_1ConvolutionFunction_1_1TruncatedForegroundConvolution1D.html" title="Base class of 1D convolution functions which truncate the kernel at the foreground boundary..." alt="" coords="197,2263,427,2319"/>
+<area shape="rect" id="node49" href="$classmirtk_1_1EvaluateBSplineSVFFD.html" title="Evaluate B&#45;spline SV FFD at image voxels. " alt="" coords="213,2060,411,2087"/>
+<area shape="rect" id="node50" href="$classmirtk_1_1EvaluateBSplineSVFFD3D.html" title="Evaluate B&#45;spline SV FFD at image voxels. " alt="" coords="204,2111,420,2137"/>
+<area shape="rect" id="node51" href="$classmirtk_1_1EvaluateGlobalSVFFD.html" title="Evaluate global SV FFD at image voxels of vector field. " alt="" coords="217,2161,407,2188"/>
+<area shape="rect" id="node52" href="$classmirtk_1_1EvaluateGlobalSVFFD3D.html" title="Evaluate global SV FFD at image voxels of 3D vector field. " alt="" coords="208,2212,416,2239"/>
+<area shape="rect" id="node53" href="$classmirtk_1_1MultipleVoxelTransformation_1_1Base.html" title="Base class for voxel transformation functions. " alt="" coords="200,1835,424,1877"/>
+<area shape="rect" id="node57" href="$structmirtk_1_1NaryVoxelFunction_1_1EvaluateBCHFormula.html" title="Evaluate Baker&#45;Campbell&#45;Hausdorff (BCH) formula. " alt="" coords="227,2342,397,2383"/>
+<area shape="rect" id="node58" href="$structmirtk_1_1NaryVoxelFunction_1_1EvaluateBCHUpdate.html" title="Evaluate velocity update using Baker&#45;Campbell&#45;Hausdorff (BCH) formula. " alt="" coords="227,2407,397,2449"/>
+<area shape="rect" id="node59" href="$structmirtk_1_1NaryVoxelFunction_1_1ExpVelocityFieldEuler2D.html" title="Voxel function for exponentiation of 2D velocity field. " alt="" coords="225,2472,399,2528"/>
+<area shape="rect" id="node60" href="$structmirtk_1_1NaryVoxelFunction_1_1ExpVelocityFieldEuler3D.html" title="Voxel function for exponentiation of 3D velocity field. " alt="" coords="225,2552,399,2608"/>
+<area shape="rect" id="node61" href="$structmirtk_1_1NaryVoxelFunction_1_1NOP.html" title="mirtk::NaryVoxelFunction::NOP" alt="" coords="209,2632,415,2659"/>
+<area shape="rect" id="node62" href="$structmirtk_1_1NaryVoxelFunction_1_1VoxelWiseWeightedSum.html" title="Compute voxel&#45;wise weighted sum. " alt="" coords="225,2683,399,2725"/>
+<area shape="rect" id="node63" href="$structmirtk_1_1TernaryVoxelFunction_1_1Diff.html" title="mirtk::TernaryVoxelFunction\l::Diff" alt="" coords="219,2749,405,2790"/>
+<area shape="rect" id="node64" href="$structmirtk_1_1TernaryVoxelFunction_1_1Div.html" title="mirtk::TernaryVoxelFunction::Div" alt="" coords="205,2815,419,2841"/>
+<area shape="rect" id="node65" href="$structmirtk_1_1TernaryVoxelFunction_1_1Mul.html" title="mirtk::TernaryVoxelFunction::Mul" alt="" coords="205,2865,419,2892"/>
+<area shape="rect" id="node66" href="$structmirtk_1_1TernaryVoxelFunction_1_1Sum.html" title="mirtk::TernaryVoxelFunction::Sum" alt="" coords="201,2916,423,2943"/>
+<area shape="rect" id="node67" href="$structmirtk_1_1UnaryVoxelFunction_1_1CastToGreyValue.html" title="Casts intensities to grey values. " alt="" coords="223,2967,401,3009"/>
+<area shape="rect" id="node68" href="$structmirtk_1_1UnaryVoxelFunction_1_1Clamp.html" title="mirtk::UnaryVoxelFunction\l::Clamp\&lt; T \&gt;" alt="" coords="223,3033,401,3074"/>
+<area shape="rect" id="node69" href="$structmirtk_1_1UnaryVoxelFunction_1_1InterpolateImage.html" title="Interpolate scalar or vector image. " alt="" coords="200,3098,424,3139"/>
+<area shape="rect" id="node70" href="$structmirtk_1_1UnaryVoxelFunction_1_1InterpolateMultiChannelImage.html" title="Interpolate multi&#45;channel image (3D+c) " alt="" coords="211,3163,413,3219"/>
+<area shape="rect" id="node71" href="$structmirtk_1_1UnaryVoxelFunction_1_1InterpolateScalarImage.html" title="Interpolate scalar image. " alt="" coords="223,3243,401,3299"/>
+<area shape="rect" id="node72" href="$structmirtk_1_1UnaryVoxelFunction_1_1LowerThreshold.html" title="mirtk::UnaryVoxelFunction\l::LowerThreshold\&lt; T \&gt;" alt="" coords="223,3322,401,3363"/>
+<area shape="rect" id="node73" href="$structmirtk_1_1UnaryVoxelFunction_1_1Sqrt.html" title="mirtk::UnaryVoxelFunction\l::Sqrt" alt="" coords="223,3387,401,3429"/>
+<area shape="rect" id="node74" href="$structmirtk_1_1UnaryVoxelFunction_1_1UpperThreshold.html" title="mirtk::UnaryVoxelFunction\l::UpperThreshold\&lt; T \&gt;" alt="" coords="223,3453,401,3494"/>
+<area shape="rect" id="node75" href="$structmirtk_1_1VoxelReduction.html" title="mirtk::VoxelReduction" alt="" coords="237,107,387,133"/>
+<area shape="rect" id="node29" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveExtendedForegroundInT.html" title="Compute convolution for given voxel along t dimension. " alt="" coords="504,1783,728,1839"/>
+<area shape="rect" id="node30" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveExtendedForegroundInX.html" title="Compute convolution of voxel with kernel in x dimension. " alt="" coords="503,1863,729,1919"/>
+<area shape="rect" id="node32" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveExtendedForegroundInY.html" title="Compute convolution for given voxel along y dimension. " alt="" coords="503,1623,729,1679"/>
+<area shape="rect" id="node34" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveExtendedForegroundInZ.html" title="Compute convolution for given voxel along z dimension. " alt="" coords="504,1703,728,1759"/>
+<area shape="rect" id="node31" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedExtendedForegroundInX.html" title="Downsample image using convolution of original voxels with kernel in x dimension. ..." alt="" coords="805,1863,1093,1919"/>
+<area shape="rect" id="node33" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedExtendedForegroundInY.html" title="Downsample image using convolution of original voxels with kernel in y dimension. ..." alt="" coords="805,1623,1093,1679"/>
+<area shape="rect" id="node35" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedExtendedForegroundInZ.html" title="Downsample image using convolution of original voxels with kernel in z dimension. ..." alt="" coords="805,1703,1093,1759"/>
+<area shape="rect" id="node37" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveMirroredForegroundInT.html" title="Compute convolution for given voxel along t dimension. " alt="" coords="508,2103,724,2159"/>
+<area shape="rect" id="node38" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveMirroredForegroundInX.html" title="Compute convolution of voxel with kernel in x dimension. " alt="" coords="507,2183,725,2239"/>
+<area shape="rect" id="node40" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveMirroredForegroundInY.html" title="Compute convolution for given voxel along y dimension. " alt="" coords="507,1943,725,1999"/>
+<area shape="rect" id="node42" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveMirroredForegroundInZ.html" title="Compute convolution for given voxel along z dimension. " alt="" coords="508,2023,724,2079"/>
+<area shape="rect" id="node39" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedMirroredForegroundInX.html" title="Downsample image using convolution of original voxels with kernel in x dimension. ..." alt="" coords="809,2183,1089,2239"/>
+<area shape="rect" id="node41" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedMirroredForegroundInY.html" title="Downsample image using convolution of original voxels with kernel in y dimension. ..." alt="" coords="809,1943,1089,1999"/>
+<area shape="rect" id="node43" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedMirroredForegroundInZ.html" title="Downsample image using convolution of original voxels with kernel in z dimension. ..." alt="" coords="809,2023,1089,2079"/>
+<area shape="rect" id="node45" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInT.html" title="Compute convolution for given voxel along t dimension. " alt="" coords="507,2423,725,2479"/>
+<area shape="rect" id="node46" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInX.html" title="Compute convolution of voxel with kernel in x dimension. " alt="" coords="507,2503,725,2559"/>
+<area shape="rect" id="node47" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInY.html" title="Compute convolution for given voxel along y dimension. " alt="" coords="507,2263,725,2319"/>
+<area shape="rect" id="node48" href="$structmirtk_1_1ConvolutionFunction_1_1ConvolveTruncatedForegroundInZ.html" title="Compute convolution for given voxel along z dimension. " alt="" coords="507,2343,725,2399"/>
+<area shape="rect" id="node54" href="$structmirtk_1_1MultipleVoxelTransformation_1_1Interpolate.html" title="mirtk::MultipleVoxelTransformation\l::Interpolate\&lt; InterpolateImageFunction \&gt;" alt="" coords="485,1554,747,1595"/>
+<area shape="rect" id="node55" href="$structmirtk_1_1MultipleVoxelTransformation_1_1InterpolateRescale.html" title="mirtk::MultipleVoxelTransformation\l::InterpolateRescale\&lt; InterpolateImage\lFunction \&gt;" alt="" coords="825,1543,1073,1599"/>
+<area shape="rect" id="node56" href="$structmirtk_1_1MultipleVoxelTransformation_1_1InterpolateRescaleAsDouble.html" title="mirtk::MultipleVoxelTransformation\l::InterpolateRescaleAsDouble\l\&lt; InterpolateImageFunction \&gt;" alt="" coords="1141,1543,1365,1599"/>
+<area shape="rect" id="node76" href="$structmirtk_1_1BinaryVoxelFunction_1_1SSD.html" title="mirtk::BinaryVoxelFunction::SSD" alt="" coords="509,136,723,163"/>
+<area shape="rect" id="node77" href="$structmirtk_1_1UnaryVoxelFunction_1_1GetMax.html" title="mirtk::UnaryVoxelFunction\l::GetMax" alt="" coords="527,187,705,229"/>
+<area shape="rect" id="node78" href="$structmirtk_1_1UnaryVoxelFunction_1_1GetMin.html" title="mirtk::UnaryVoxelFunction\l::GetMin" alt="" coords="527,5,705,46"/>
+<area shape="rect" id="node79" href="$structmirtk_1_1UnaryVoxelFunction_1_1GetMinMax.html" title="mirtk::UnaryVoxelFunction\l::GetMinMax" alt="" coords="527,70,705,111"/>
+</map>

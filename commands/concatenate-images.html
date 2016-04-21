@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="convert-dof" href="convert-dof.html" />
     <link rel="prev" title="concatenate-dofs" href="concatenate-dofs.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="concatenate-dofs.html" title="concatenate-dofs"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,15 +87,15 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="concatenate-images">
 <h1>concatenate-images<a class="headerlink" href="#concatenate-images" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk concatenate-images &lt;input&gt;... &lt;output&gt; [options]
-mirtk concatenate-images &lt;input&gt;... -output &lt;output&gt; [options]
-mirtk concatenate-images [options]
+<div class="highlight-python"><div class="highlight"><pre><span class="n">concatenate</span><span class="o">-</span><span class="n">images</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;...</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">concatenate</span><span class="o">-</span><span class="n">images</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;...</span> <span class="o">-</span><span class="n">output</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">concatenate</span><span class="o">-</span><span class="n">images</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -110,44 +110,44 @@ or the third and fourth (3D) image dimension.</p>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-concatenate-images-output">
-<code class="descname">-output</code><code class="descclassname"> &lt;output&gt;</code><a class="headerlink" href="#cmdoption-concatenate-images-output" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-output</tt><tt class="descclassname"> &lt;output&gt;</tt><a class="headerlink" href="#cmdoption-concatenate-images-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output image file. Last positional argument if option missing.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-concatenate-images-image">
-<code class="descname">-image</code><code class="descclassname"> &lt;input&gt;</code><a class="headerlink" href="#cmdoption-concatenate-images-image" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-image</tt><tt class="descclassname"> &lt;input&gt;</tt><a class="headerlink" href="#cmdoption-concatenate-images-image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add one input image. Option can be given multiple times.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-concatenate-images-images">
-<code class="descname">-images</code><code class="descclassname"> &lt;input&gt;...</code><a class="headerlink" href="#cmdoption-concatenate-images-images" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-images</tt><tt class="descclassname"> &lt;input&gt;...</tt><a class="headerlink" href="#cmdoption-concatenate-images-images" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add one or more input images. Option can be given multiple times.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-concatenate-images-sort">
-<code class="descname">-sort</code><code class="descclassname"> [on|off]</code><a class="headerlink" href="#cmdoption-concatenate-images-sort" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-sort</tt><tt class="descclassname"> [on|off]</tt><a class="headerlink" href="#cmdoption-concatenate-images-sort" title="Permalink to this definition">¶</a></dt>
 <dd><p>Automatically determine correct order of input images
 based on the distance along the third or fourth image axis.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-concatenate-images-nosort">
-<code class="descname">-nosort</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-concatenate-images-nosort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Disable sorting of input images, same as <a class="reference internal" href="#cmdoption-concatenate-images-sort"><code class="xref std std-option docutils literal"><span class="pre">-sort</span></code></a> off. (default)</p>
+<tt class="descname">-nosort</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-concatenate-images-nosort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable sorting of input images, same as <a class="reference internal" href="#cmdoption-concatenate-images-sort"><em class="xref std std-option">-sort</em></a> off. (default)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-concatenate-images-start">
-<code class="descname">-start</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-concatenate-images-start" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-start</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-concatenate-images-start" title="Permalink to this definition">¶</a></dt>
 <dd><p>&lt;float&gt;     Position of first slice/frame of output volume/sequence.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-concatenate-images-spacing">
-<code class="descname">-spacing</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-concatenate-images-spacing" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-spacing</tt><tt class="descclassname"> &lt;float&gt;</tt><a class="headerlink" href="#cmdoption-concatenate-images-spacing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Slice/Temporal spacing of output volume/sequence.</p>
 </dd></dl>
 
@@ -156,31 +156,31 @@ based on the distance along the third or fourth image axis.</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-concatenate-images-v">
-<span id="cmdoption-concatenate-images-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-concatenate-images-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-concatenate-images-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-concatenate-images-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-concatenate-images-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-concatenate-images-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-concatenate-images-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-concatenate-images-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-concatenate-images-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-concatenate-images-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-concatenate-images-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-concatenate-images-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-concatenate-images-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-concatenate-images-h">
-<span id="cmdoption-concatenate-images-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-concatenate-images-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-concatenate-images-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-concatenate-images-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -193,7 +193,7 @@ based on the distance along the third or fourth image axis.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -202,13 +202,13 @@ based on the distance along the third or fourth image axis.</p>
         <li class="right" >
           <a href="concatenate-dofs.html" title="concatenate-dofs"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

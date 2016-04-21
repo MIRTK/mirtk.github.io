@@ -1,19 +1,20 @@
 <map id="mirtk::data::op::ElementWiseUnaryOp" name="mirtk::data::op::ElementWiseUnaryOp">
-<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1op_1_1Abs.html" title="Compute element&#45;wise absolute value. " alt="" coords="5,329,143,421"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1op_1_1Clamp.html" title="Clamp values below or equal a given threshold value. " alt="" coords="167,322,319,429"/>
-<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1op_1_1Exp.html" title="Compute element&#45;wise exponential map. " alt="" coords="344,329,481,421"/>
-<area shape="rect" id="node6" href="$classmirtk_1_1data_1_1op_1_1Lb.html" title="Compute element&#45;wise binary logarithm. " alt="" coords="505,322,635,429"/>
-<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1op_1_1Lg.html" title="Compute element&#45;wise logarithm to base 10. " alt="" coords="659,322,788,429"/>
-<area shape="rect" id="node8" href="$classmirtk_1_1data_1_1op_1_1Ln.html" title="Compute element&#45;wise natural logarithm. " alt="" coords="812,322,941,429"/>
-<area shape="rect" id="node9" href="$classmirtk_1_1data_1_1op_1_1Log.html" title="Compute element&#45;wise logarithmic map. " alt="" coords="966,322,1102,429"/>
-<area shape="rect" id="node10" href="$classmirtk_1_1data_1_1op_1_1LowerThreshold.html" title="Clamp values below or equal a given threshold value. " alt="" coords="1127,322,1336,429"/>
-<area shape="rect" id="node11" href="$classmirtk_1_1data_1_1op_1_1MaskEvenValues.html" title="Mask even values (e.g., segmentation labels of right hemisphere; cf MAL 2012) " alt="" coords="1361,322,1537,429"/>
-<area shape="rect" id="node12" href="$classmirtk_1_1data_1_1op_1_1MaskInsideInterval.html" title="Mask values inside closed interval. " alt="" coords="1561,315,1742,436"/>
-<area shape="rect" id="node13" href="$classmirtk_1_1data_1_1op_1_1MaskInsideOpenInterval.html" title="Mask values inside open interval. " alt="" coords="1766,315,1953,436"/>
-<area shape="rect" id="node14" href="$classmirtk_1_1data_1_1op_1_1MaskOddValues.html" title="Mask odd values (e.g., segmentation labels of left hemisphere; cf MAL 2012) " alt="" coords="1977,322,2147,429"/>
-<area shape="rect" id="node15" href="$classmirtk_1_1data_1_1op_1_1MaskOutsideInterval.html" title="Mask values below or above a specified lower/upper threshold. " alt="" coords="2171,315,2363,436"/>
-<area shape="rect" id="node16" href="$classmirtk_1_1data_1_1op_1_1MaskOutsideOpenInterval.html" title="Mask values below, equal, or above a specified lower/upper threshold. " alt="" coords="2388,315,2584,436"/>
-<area shape="rect" id="node17" href="$classmirtk_1_1data_1_1op_1_1Pow.html" title="Compute element&#45;wise power. " alt="" coords="2608,322,2748,429"/>
-<area shape="rect" id="node18" href="$classmirtk_1_1data_1_1op_1_1UpperThreshold.html" title="Clamp values below or equal a given threshold value. " alt="" coords="2772,322,2981,429"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="1285,5,1394,97"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1op_1_1Abs.html" title="Compute element&#45;wise absolute value. " alt="" coords="5,354,141,446"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1op_1_1Binarize.html" title="Set values to either one or zero. " alt="" coords="166,347,327,453"/>
+<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1op_1_1Clamp.html" title="Clamp values below or equal a given threshold value. " alt="" coords="352,325,504,475"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1data_1_1op_1_1Exp.html" title="Compute element&#45;wise exponential map. " alt="" coords="529,354,665,446"/>
+<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1op_1_1Lb.html" title="Compute element&#45;wise binary logarithm. " alt="" coords="691,347,819,453"/>
+<area shape="rect" id="node8" href="$classmirtk_1_1data_1_1op_1_1Lg.html" title="Compute element&#45;wise logarithm to base 10. " alt="" coords="843,347,971,453"/>
+<area shape="rect" id="node9" href="$classmirtk_1_1data_1_1op_1_1Ln.html" title="Compute element&#45;wise natural logarithm. " alt="" coords="995,347,1123,453"/>
+<area shape="rect" id="node10" href="$classmirtk_1_1data_1_1op_1_1Log.html" title="Compute element&#45;wise logarithmic map. " alt="" coords="1147,347,1281,453"/>
+<area shape="rect" id="node11" href="$classmirtk_1_1data_1_1op_1_1LowerThreshold.html" title="Clamp values below or equal a given threshold value. " alt="" coords="1306,339,1512,461"/>
+<area shape="rect" id="node12" href="$classmirtk_1_1data_1_1op_1_1MaskEvenValues.html" title="Mask even values (e.g., segmentation labels of right hemisphere; cf MAL 2012) " alt="" coords="1537,347,1713,453"/>
+<area shape="rect" id="node13" href="$classmirtk_1_1data_1_1op_1_1MaskInsideInterval.html" title="Mask values inside closed interval. " alt="" coords="1737,317,1919,483"/>
+<area shape="rect" id="node14" href="$classmirtk_1_1data_1_1op_1_1MaskInsideOpenInterval.html" title="Mask values inside open interval. " alt="" coords="1943,317,2125,483"/>
+<area shape="rect" id="node15" href="$classmirtk_1_1data_1_1op_1_1MaskOddValues.html" title="Mask odd values (e.g., segmentation labels of left hemisphere; cf MAL 2012) " alt="" coords="2151,347,2321,453"/>
+<area shape="rect" id="node16" href="$classmirtk_1_1data_1_1op_1_1MaskOutsideInterval.html" title="Mask values below or above a specified lower/upper threshold. " alt="" coords="2346,317,2536,483"/>
+<area shape="rect" id="node17" href="$classmirtk_1_1data_1_1op_1_1MaskOutsideOpenInterval.html" title="Mask values below, equal, or above a specified lower/upper threshold. " alt="" coords="2561,317,2753,483"/>
+<area shape="rect" id="node18" href="$classmirtk_1_1data_1_1op_1_1Pow.html" title="Compute element&#45;wise power. " alt="" coords="2778,347,2917,453"/>
+<area shape="rect" id="node19" href="$classmirtk_1_1data_1_1op_1_1UpperThreshold.html" title="Clamp values below or equal a given threshold value. " alt="" coords="2942,339,3148,461"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="1355,6,1464,98"/>
 </map>

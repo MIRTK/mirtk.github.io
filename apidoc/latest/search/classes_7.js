@@ -10,6 +10,7 @@ var searchData=
   ['hessianimagefilter',['HessianImageFilter',['../classmirtk_1_1HessianImageFilter.html',1,'mirtk']]],
   ['histogram1d',['Histogram1D',['../classmirtk_1_1Histogram1D.html',1,'mirtk']]],
   ['histogram2d',['Histogram2D',['../classmirtk_1_1Histogram2D.html',1,'mirtk']]],
+  ['histogramimagesimilarity',['HistogramImageSimilarity',['../classmirtk_1_1HistogramImageSimilarity.html',1,'mirtk']]],
   ['homogeneoustransformation',['HomogeneousTransformation',['../classmirtk_1_1HomogeneousTransformation.html',1,'mirtk']]],
   ['homogeneoustransformationiterator',['HomogeneousTransformationIterator',['../classmirtk_1_1HomogeneousTransformationIterator.html',1,'mirtk']]]
 ];

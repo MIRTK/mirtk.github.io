@@ -1,4 +1,4 @@
 <map id="mirtk::EnergyThreshold" name="mirtk::EnergyThreshold">
-<area shape="rect" id="node2" href="$classmirtk_1_1StoppingCriterion.html" title="{mirtk::StoppingCriterion\n||+ Fulfilled()\l+ Initialize()\l+ New()\l+ Print()\l+ ~StoppingCriterion()\l# operator=()\l# StoppingCriterion()\l# StoppingCriterion()\l# StoppingCriterion()\l}" alt="" coords="5,204,167,399"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="23,5,149,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1StoppingCriterion.html" title="{mirtk::StoppingCriterion\n||+ Fulfilled()\l+ Initialize()\l+ New()\l+ Print()\l+ ~StoppingCriterion()\l# operator=()\l# StoppingCriterion()\l# StoppingCriterion()\l# StoppingCriterion()\l}" alt="" coords="5,205,163,400"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="21,6,147,157"/>
 </map>

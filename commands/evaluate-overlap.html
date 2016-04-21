@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,34 +24,34 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
-    <link rel="next" title="evaluate-surface-overlap" href="evaluate-surface-overlap.html" />
+    <link rel="next" title="evaluate-similarity" href="evaluate-similarity.html" />
     <link rel="prev" title="evaluate-jacobian" href="evaluate-jacobian.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="evaluate-surface-overlap.html" title="evaluate-surface-overlap"
+          <a href="evaluate-similarity.html" title="evaluate-similarity"
              accesskey="N">next</a></li>
         <li class="right" >
           <a href="evaluate-jacobian.html" title="evaluate-jacobian"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,33 +87,33 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="evaluate-overlap">
 <h1>evaluate-overlap<a class="headerlink" href="#evaluate-overlap" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk evaluate-overlap &lt;target&gt; &lt;source&gt;... [options]
+<div class="highlight-python"><div class="highlight"><pre>evaluate-overlap &lt;target&gt; &lt;source&gt;... [options]
 </pre></div>
 </div>
 </div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Computes the overlap of either two intensity images (average SI)
-or two segmentations (see <a class="reference internal" href="#cmdoption-evaluate-overlap-label"><code class="xref std std-option docutils literal"><span class="pre">evaluate-overlap</span> <span class="pre">-label</span></code></a>). If more than one source image
+or two segmentations (see <a class="reference internal" href="#cmdoption-evaluate-overlap-label"><em class="xref std std-option">evaluate-overlap -label</em></a>). If more than one source image
 is given, the overlap between each of these and the target is evaluated.</p>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-arg-target">
-<code class="descname">target</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-overlap-arg-target" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">target</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-overlap-arg-target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Target image/segmentation.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-arg-source">
-<code class="descname">source</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-overlap-arg-source" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">source</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-overlap-arg-source" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transformed source image/segmentation.</p>
 </dd></dl>
 
@@ -122,67 +122,67 @@ is given, the overlap between each of these and the target is evaluated.</p>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-Rx1">
-<code class="descname">-Rx1</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-evaluate-overlap-Rx1" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Rx1</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-Rx1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Region of interest</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-Ry1">
-<code class="descname">-Ry1</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-evaluate-overlap-Ry1" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Ry1</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-Ry1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Region of interest</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-Rz1">
-<code class="descname">-Rz1</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-evaluate-overlap-Rz1" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Rz1</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-Rz1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Region of interest</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-Rx2">
-<code class="descname">-Rx2</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-evaluate-overlap-Rx2" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Rx2</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-Rx2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Region of interest</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-Ry2">
-<code class="descname">-Ry2</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-evaluate-overlap-Ry2" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Ry2</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-Ry2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Region of interest</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-Rz2">
-<code class="descname">-Rz2</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-evaluate-overlap-Rz2" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Rz2</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-Rz2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Region of interest</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-Tp">
-<code class="descname">-Tp</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-evaluate-overlap-Tp" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Tp</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-Tp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Padding value in target.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-label">
-<code class="descname">-label</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-evaluate-overlap-label" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-label</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-label" title="Permalink to this definition">¶</a></dt>
 <dd><p>Segmentation label. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-precision">
-<code class="descname">-precision</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-evaluate-overlap-precision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-precision</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-precision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of significant digits. (default: 2)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-metric">
-<code class="descname">-metric</code><code class="descclassname"> &lt;Sensitivity|Specificity|Dice|Jaccard&gt;</code><a class="headerlink" href="#cmdoption-evaluate-overlap-metric" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-metric</tt><tt class="descclassname"> &lt;Sensitivity|Specificity|Dice|Jaccard&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-metric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overlap metric. (default: Dice)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-delim">
-<code class="descname">-delim</code><code class="descclassname"> &lt;char&gt;</code><a class="headerlink" href="#cmdoption-evaluate-overlap-delim" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-delim</tt><tt class="descclassname"> &lt;char&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-delim" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delimiter for output of multiple overlap values. (default: ,)</p>
 </dd></dl>
 
@@ -191,31 +191,31 @@ is given, the overlap between each of these and the target is evaluated.</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-v">
-<span id="cmdoption-evaluate-overlap-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-evaluate-overlap-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-evaluate-overlap-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-evaluate-overlap-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-evaluate-overlap-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-overlap-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-overlap-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-h">
-<span id="cmdoption-evaluate-overlap-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-overlap-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-evaluate-overlap-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-overlap-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -224,7 +224,7 @@ is given, the overlap between each of these and the target is evaluated.</p>
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-color">
-<span id="cmdoption-evaluate-overlap-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-overlap-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-evaluate-overlap-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-overlap-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -233,7 +233,7 @@ is given, the overlap between each of these and the target is evaluated.</p>
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-overlap-threads">
-<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-evaluate-overlap-threads" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-overlap-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -246,22 +246,22 @@ is given, the overlap between each of these and the target is evaluated.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="evaluate-surface-overlap.html" title="evaluate-surface-overlap"
+          <a href="evaluate-similarity.html" title="evaluate-similarity"
              >next</a></li>
         <li class="right" >
           <a href="evaluate-jacobian.html" title="evaluate-jacobian"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

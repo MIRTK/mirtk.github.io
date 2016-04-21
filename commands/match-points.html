@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="offset-surface" href="offset-surface.html" />
     <link rel="prev" title="map" href="map.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="map.html" title="map"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,13 +87,13 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="match-points">
 <h1>match-points<a class="headerlink" href="#match-points" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk match-points &lt;target&gt; &lt;source&gt; [options]
+<div class="highlight-python"><div class="highlight"><pre>match-points &lt;target&gt; &lt;source&gt; [options]
 </pre></div>
 </div>
 </div>
@@ -109,13 +109,13 @@ index of the corresponding source point.</p>
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-match-points-arg-target">
-<code class="descname">target</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-arg-target" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">target</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-arg-target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Target point set.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-arg-source">
-<code class="descname">source</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-arg-source" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">source</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-arg-source" title="Permalink to this definition">¶</a></dt>
 <dd><p>Source point set.</p>
 </dd></dl>
 
@@ -124,106 +124,106 @@ index of the corresponding source point.</p>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-match-points-dofin">
-<code class="descname">-dofin</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-match-points-dofin" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-dofin</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-match-points-dofin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Target point set transformation. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-closest-point">
-<code class="descname">-closest-point</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-closest-point" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-closest-point</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-closest-point" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find the closest point in the source data set. (default)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-closest-cell">
-<code class="descname">-closest-cell</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-closest-cell" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-closest-cell</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-closest-cell" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find the closest cell point in the source data set.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-cor">
-<code class="descname">-cor</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-match-points-cor" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-cor</tt><tt class="descclassname"> &lt;name&gt;</tt><a class="headerlink" href="#cmdoption-match-points-cor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of correspondence type, e.g., &#8216;closest point&#8217;, &#8216;closest cell&#8217;.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-corpar">
-<code class="descname">-corpar</code><code class="descclassname"> &lt;name&gt; &lt;value&gt;</code><a class="headerlink" href="#cmdoption-match-points-corpar" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-corpar</tt><tt class="descclassname"> &lt;name&gt; &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-match-points-corpar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set parameter of chosen correspondence type.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-feature">
-<code class="descname">-feature</code><code class="descclassname"> &lt;name&gt; [&lt;weight&gt;]</code><a class="headerlink" href="#cmdoption-match-points-feature" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-feature</tt><tt class="descclassname"> &lt;name&gt; [&lt;weight&gt;]</tt><a class="headerlink" href="#cmdoption-match-points-feature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use named point data as feature. (default: spatial coordinates)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-corin">
-<code class="descname">-corin</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-match-points-corin" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-corin</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-match-points-corin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read correspondences from text file which lists on each line
 the indices of corresponding target and source points.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-corout">
-<code class="descname">-corout</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-match-points-corout" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-corout</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-match-points-corout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write indices of corresponding points to text file.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-output">
-<code class="descname">-output</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-match-points-output" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-output</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-match-points-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write point set of corresponding points.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-vertices">
-<code class="descname">-vertices</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-vertices" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-vertices</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-vertices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a vertex cell for each point.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-vectors">
-<code class="descname">-vectors</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-vectors" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-vectors</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-vectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add displacement vectors from corresponding output points to
 input target points. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-indices">
-<code class="descname">-indices</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-indices" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-indices</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-indices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Store indices of corresponding points as point data.
-Indices are cell indices in case of <a class="reference internal" href="#cmdoption-match-points-closest-cell"><code class="xref std std-option docutils literal"><span class="pre">-closest-cell</span></code></a>.</p>
+Indices are cell indices in case of <a class="reference internal" href="#cmdoption-match-points-closest-cell"><em class="xref std std-option">-closest-cell</em></a>.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-copy-pointdata">
-<code class="descname">-copy-pointdata</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-copy-pointdata" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-copy-pointdata</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-copy-pointdata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy input point data to output point set. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-copy-celldata">
-<code class="descname">-copy-celldata</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-copy-celldata" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-copy-celldata</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-copy-celldata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy input cell data to output point set. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-compress">
-<span id="cmdoption-match-points-nocompress"></span><code class="descname">-compress</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocompress</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-compress" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-match-points-nocompress"></span><tt class="descname">-compress</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocompress</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-compress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to compress XML VTK file data. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-binary">
-<code class="descname">-binary</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-binary" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-binary</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-binary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write legacy VTK file in binary format. (default)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-ascii">
-<code class="descname">-ascii</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-ascii" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-ascii</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-ascii" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write legacy VTK file in ASCII  format.</p>
 </dd></dl>
 
@@ -232,31 +232,31 @@ Indices are cell indices in case of <a class="reference internal" href="#cmdopti
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-match-points-v">
-<span id="cmdoption-match-points-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-match-points-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-match-points-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-match-points-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-match-points-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-match-points-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-match-points-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-match-points-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-match-points-h">
-<span id="cmdoption-match-points-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-match-points-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -265,7 +265,7 @@ Indices are cell indices in case of <a class="reference internal" href="#cmdopti
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-match-points-color">
-<span id="cmdoption-match-points-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-points-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-match-points-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-match-points-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -274,7 +274,7 @@ Indices are cell indices in case of <a class="reference internal" href="#cmdopti
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-match-points-threads">
-<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-match-points-threads" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-match-points-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -287,7 +287,7 @@ Indices are cell indices in case of <a class="reference internal" href="#cmdopti
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -296,13 +296,13 @@ Indices are cell indices in case of <a class="reference internal" href="#cmdopti
         <li class="right" >
           <a href="map.html" title="map"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

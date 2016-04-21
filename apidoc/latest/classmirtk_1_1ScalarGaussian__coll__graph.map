@@ -1,5 +1,5 @@
 <map id="mirtk::ScalarGaussian" name="mirtk::ScalarGaussian">
-<area shape="rect" id="node2" href="$classmirtk_1_1ScalarFunction.html" title="{mirtk::ScalarFunction\n||+ Evaluate()\l+ ~ScalarFunction()\l}" alt="" coords="5,301,152,393"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="16,5,141,156"/>
-<area shape="rect" id="node4" href="$structmirtk_1_1Vector4D.html" title="{mirtk::Vector4D\&lt; double \&gt;\n|+ _t\l+ _x\l+ _y\l+ _z\l|+ Length()\l+ Normalize()\l+ operator!=()\l+ operator*()\l+ operator*=()\l+ operator*=()\l+ operator+()\l+ operator+()\l+ operator+=()\l+ operator+=()\land 20 more...\l+ DotProduct()\l}" alt="" coords="177,205,354,488"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1ScalarFunction.html" title="{mirtk::ScalarFunction\n||+ Evaluate()\l+ ~ScalarFunction()\l}" alt="" coords="5,303,152,395"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="16,6,141,157"/>
+<area shape="rect" id="node4" href="$structmirtk_1_1Vector4D.html" title="{mirtk::Vector4D\&lt; double \&gt;\n|+ _t\l+ _x\l+ _y\l+ _z\l|+ Length()\l+ Normalize()\l+ operator!=()\l+ operator*()\l+ operator*=()\l+ operator*=()\l+ operator+()\l+ operator+()\l+ operator+=()\l+ operator+=()\land 20 more...\l+ DotProduct()\l}" alt="" coords="176,208,352,491"/>
 </map>

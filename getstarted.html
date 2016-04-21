@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,18 +26,18 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="sidebar.html" />
+    <link rel="top" title="MIRTK" href="index.html" />
     <link rel="next" title="Applications" href="commands.html" />
     <link rel="prev" title="Medical Image Registration ToolKit (MIRTK)" href="index.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -46,12 +46,12 @@
         <li class="right" >
           <a href="index.html" title="Medical Image Registration ToolKit (MIRTK)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -82,7 +82,7 @@
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
 </ul>
@@ -93,7 +93,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="get-started">
 <h1>Get Started<a class="headerlink" href="#get-started" title="Permalink to this headline">¶</a></h1>
@@ -112,14 +112,14 @@ Docker image to run the <a class="reference internal" href="commands.html"><em>A
 </div>
 <div class="section" id="bash-completion">
 <span id="bashcompletion"></span><h2>Bash completion<a class="headerlink" href="#bash-completion" title="Permalink to this headline">¶</a></h2>
-<p>For information on how to enable <a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion.html">auto-completion</a> when running <code class="docutils literal"><span class="pre">mirtk</span></code> commands of
+<p>For information on how to enable <a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion.html">auto-completion</a> when running <tt class="docutils literal"><span class="pre">mirtk</span></tt> commands of
 a manual MIRTK installation in the <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a> shell, see the <a class="reference internal" href="install.html"><em>Installation</em></a> instructions.</p>
 <p>To enable Bash completion for running the MIRTK commands with Docker,
 copy the <a class="reference external" href="https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker">docker</a>
 and <a class="reference external" href="https://raw.githubusercontent.com/BioMedIA/MIRTK/master/Docker/Completion/Bash/docker-mirtk">docker-mirtk</a>
-completion scripts to <code class="docutils literal"><span class="pre">/etc/bash_completion.d/</span></code> on Linux or,
+completion scripts to <tt class="docutils literal"><span class="pre">/etc/bash_completion.d/</span></tt> on Linux or,
 with the &#8220;bash-completion&#8221; <a class="reference external" href="http://brew.sh">Homebrew</a> package installed on OS X,
-to <code class="docutils literal"><span class="pre">/usr/local/etc/bash_completion.d/</span></code>, respectively.</p>
+to <tt class="docutils literal"><span class="pre">/usr/local/etc/bash_completion.d/</span></tt>, respectively.</p>
 <p>This can be done on Linux with the following Terminal commands:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo curl -L https://raw.githubusercontent.com/docker/docker/master/contrib/completion/bash/docker       &gt; /etc/bash_completion.d/docker
 sudo curl -L https://raw.githubusercontent.com/BioMedIA/MIRTK/master/Docker/Completion/Bash/docker-mirtk &gt; /etc/bash_completion.d/docker-mirtk
@@ -131,8 +131,8 @@ curl -L https://raw.githubusercontent.com/docker/docker/master/contrib/completio
 curl -L https://raw.githubusercontent.com/BioMedIA/MIRTK/develop/Docker/Completion/Bash/docker-mirtk &gt; $(brew --prefix)/etc/bash_completion.d/docker-mirtk
 </pre></div>
 </div>
-<p>Alternatively, save the files to your home directory at, for example, <code class="docutils literal"><span class="pre">$HOME/bash_completion/</span></code>
-and add the following lines to your <code class="docutils literal"><span class="pre">.bashrc</span></code> (Linux) or <code class="docutils literal"><span class="pre">.bash_profile</span></code> (OS X) file:</p>
+<p>Alternatively, save the files to your home directory at, for example, <tt class="docutils literal"><span class="pre">$HOME/bash_completion/</span></tt>
+and add the following lines to your <tt class="docutils literal"><span class="pre">.bashrc</span></tt> (Linux) or <tt class="docutils literal"><span class="pre">.bash_profile</span></tt> (OS X) file:</p>
 <div class="highlight-python"><div class="highlight"><pre>[ ! -f &quot;$HOME/bash_completion/docker&quot;       ] || . &quot;$HOME/bash_completion/docker&quot;
 [ ! -f &quot;$HOME/bash_completion/docker-mirtk&quot; ] || . &quot;$HOME/bash_completion/docker-mirtk&quot;
 </pre></div>
@@ -140,16 +140,16 @@ and add the following lines to your <code class="docutils literal"><span class="
 </div>
 <div class="section" id="run-the-commands">
 <h2>Run the commands<a class="headerlink" href="#run-the-commands" title="Permalink to this headline">¶</a></h2>
-<p>The MIRTK installs a single executable named <code class="docutils literal"><span class="pre">mirtk</span></code> in the <code class="docutils literal"><span class="pre">bin/</span></code> directory
+<p>The MIRTK installs a single executable named <tt class="docutils literal"><span class="pre">mirtk</span></tt> in the <tt class="docutils literal"><span class="pre">bin/</span></tt> directory
 of the installation root directory. This executable is used to execute the various
 MIRTK commands. The name of the command must be specified as first argument of the
-<code class="docutils literal"><span class="pre">mirtk</span></code> executable. Help about a command can be printed using the special <code class="docutils literal"><span class="pre">help</span></code>
-or <code class="docutils literal"><span class="pre">help-rst</span></code> commands followed by the name of the command for which help is requested:</p>
+<tt class="docutils literal"><span class="pre">mirtk</span></tt> executable. Help about a command can be printed using the special <tt class="docutils literal"><span class="pre">help</span></tt>
+or <tt class="docutils literal"><span class="pre">help-rst</span></tt> commands followed by the name of the command for which help is requested:</p>
 <div class="highlight-python"><div class="highlight"><pre>mirtk help &lt;command&gt;
 mirtk [-v] [-v] &lt;command&gt; [options]
 </pre></div>
 </div>
-<p>When the <code class="docutils literal"><span class="pre">-v</span></code> option is given to <code class="docutils literal"><span class="pre">mirtk</span></code> before the command name, the path and
+<p>When the <tt class="docutils literal"><span class="pre">-v</span></tt> option is given to <tt class="docutils literal"><span class="pre">mirtk</span></tt> before the command name, the path and
 arguments of the command executable is printed before execution.</p>
 <p>To run the commands inside a <a class="reference external" href="http://www.docker.com">Docker</a> container instead which does not require a local
 installation of MIRTK, use the following command:</p>
@@ -158,14 +158,14 @@ installation of MIRTK, use the following command:</p>
 </div>
 <p>This will download the <a class="reference external" href="https://hub.docker.com/r/biomedia/mirtk/">MIRTK Docker image</a> upon first execution. This image is
 stored locally and will be reused for consecutive executions.
-The <code class="docutils literal"><span class="pre">--volume</span></code> option of <code class="docutils literal"><span class="pre">docker</span> <span class="pre">run</span></code> mounts the specified directory path on the
-host system to the <code class="docutils literal"><span class="pre">/data</span></code> directory inside the MIRTK Docker container.
-The <code class="docutils literal"><span class="pre">/data</span></code> directory is the working directory of the MIRTK command.
-The <code class="docutils literal"><span class="pre">--rm</span></code> option automatically deletes the MIRTK Docker container after the
-command finished. Note that each <code class="docutils literal"><span class="pre">docker</span> <span class="pre">run</span></code> will create a new Docker container.
+The <tt class="docutils literal"><span class="pre">--volume</span></tt> option of <tt class="docutils literal"><span class="pre">docker</span> <span class="pre">run</span></tt> mounts the specified directory path on the
+host system to the <tt class="docutils literal"><span class="pre">/data</span></tt> directory inside the MIRTK Docker container.
+The <tt class="docutils literal"><span class="pre">/data</span></tt> directory is the working directory of the MIRTK command.
+The <tt class="docutils literal"><span class="pre">--rm</span></tt> option automatically deletes the MIRTK Docker container after the
+command finished. Note that each <tt class="docutils literal"><span class="pre">docker</span> <span class="pre">run</span></tt> will create a new Docker container.
 As these containers are meant to be used only once for each command execution, they
 should be removed again after the command has finished.</p>
-<p>For example, to print information about the NIfTI image file <code class="docutils literal"><span class="pre">/path/to/my/images/image1.nii.gz</span></code>
+<p>For example, to print information about the NIfTI image file <tt class="docutils literal"><span class="pre">/path/to/my/images/image1.nii.gz</span></tt>
 using the <a class="reference internal" href="commands/info.html"><em>info</em></a> command, execute the Docker command:</p>
 <div class="highlight-python"><div class="highlight"><pre>docker run --rm --volume=/path/to/my/images:/data biomedia/mirtk info image1.nii.gz
 </pre></div>
@@ -173,7 +173,7 @@ using the <a class="reference internal" href="commands/info.html"><em>info</em><
 <p>See the <a class="reference internal" href="commands.html"><em>Applications</em></a> page for a description of each command and the available options.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">When Bash completion of MIRTK commands is enabled (see <a class="reference internal" href="#bashcompletion"><span>Bash completion</span></a>),
+<p class="last">When Bash completion of MIRTK commands is enabled (see <a class="reference internal" href="#bashcompletion"><em>Bash completion</em></a>),
 press the &lt;tab&gt; key twice after typing &#8220;mirtk &#8221; or &#8220;docker run biomedia/mirtk &#8221;
 (incl. a space) to see a list of all commands. To only see a list of partial matches,
 type &#8220;mirtk eval&#8221; or  &#8220;docker run biomedia/mirtk eval&#8221;, for example, and press &lt;tab&gt; twice.</p>
@@ -198,7 +198,7 @@ or develop your own MIRTK Package.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -207,12 +207,12 @@ or develop your own MIRTK Package.</p>
         <li class="right" >
           <a href="index.html" title="Medical Image Registration ToolKit (MIRTK)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

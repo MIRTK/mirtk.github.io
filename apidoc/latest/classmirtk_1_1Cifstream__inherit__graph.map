@@ -1,7 +1,7 @@
 <map id="mirtk::Cifstream" name="mirtk::Cifstream">
-<area shape="rect" id="node3" href="$classmirtk_1_1ImageReader.html" title="{mirtk::ImageReader\n|# _ReflectX\l# _ReflectY\l# _ReflectZ\l# _Start\l|+ CanRead()\l+ ImageReader()\l+ Initialize()\l+ Print()\l+ Run()\l+ ~ImageReader()\l+ New()\l+ TryNew()\l# ReadHeader()\l}" alt="" coords="211,476,350,715"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="218,5,343,156"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1GIPLImageReader.html" title="{mirtk::GIPLImageReader\n||+ CanRead()\l+ CheckHeader()\l# ReadHeader()\l}" alt="" coords="5,792,175,899"/>
-<area shape="rect" id="node5" href="$classmirtk_1_1NiftiImageReader.html" title="{mirtk::NiftiImageReader\n||+ CanRead()\l+ Initialize()\l+ NiftiImageReader()\l+ Print()\l+ ~NiftiImageReader()\l+ CheckHeader()\l# ReadHeader()\l}" alt="" coords="199,763,362,928"/>
-<area shape="rect" id="node6" href="$classmirtk_1_1PGMImageReader.html" title="{mirtk::PGMImageReader\n||+ CanRead()\l+ CheckHeader()\l# ReadHeader()\l}" alt="" coords="387,792,556,899"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1ImageReader.html" title="{mirtk::ImageReader\n|# _ReflectX\l# _ReflectY\l# _ReflectZ\l# _Start\l|+ CanRead()\l+ ImageReader()\l+ Initialize()\l+ Print()\l+ Run()\l+ ~ImageReader()\l+ New()\l+ TryNew()\l# ReadHeader()\l}" alt="" coords="207,478,344,717"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="213,6,339,157"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1GIPLImageReader.html" title="{mirtk::GIPLImageReader\n||+ CanRead()\l+ CheckHeader()\l# ReadHeader()\l}" alt="" coords="5,795,171,901"/>
+<area shape="rect" id="node5" href="$classmirtk_1_1NiftiImageReader.html" title="{mirtk::NiftiImageReader\n||+ CanRead()\l+ Initialize()\l+ NiftiImageReader()\l+ Print()\l+ ~NiftiImageReader()\l+ CheckHeader()\l# ReadHeader()\l}" alt="" coords="195,765,356,931"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1PGMImageReader.html" title="{mirtk::PGMImageReader\n||+ CanRead()\l+ CheckHeader()\l# ReadHeader()\l}" alt="" coords="381,795,547,901"/>
 </map>

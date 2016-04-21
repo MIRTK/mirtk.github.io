@@ -1,7 +1,7 @@
 <map id="mirtk::ImageReader" name="mirtk::ImageReader">
-<area shape="rect" id="node4" href="$classmirtk_1_1GIPLImageReader.html" title="{mirtk::GIPLImageReader\n||+ CanRead()\l+ CheckHeader()\l# ReadHeader()\l}" alt="" coords="5,792,175,899"/>
-<area shape="rect" id="node5" href="$classmirtk_1_1NiftiImageReader.html" title="{mirtk::NiftiImageReader\n||+ CanRead()\l+ Initialize()\l+ NiftiImageReader()\l+ Print()\l+ ~NiftiImageReader()\l+ CheckHeader()\l# ReadHeader()\l}" alt="" coords="199,763,362,928"/>
-<area shape="rect" id="node6" href="$classmirtk_1_1PGMImageReader.html" title="{mirtk::PGMImageReader\n||+ CanRead()\l+ CheckHeader()\l# ReadHeader()\l}" alt="" coords="387,792,556,899"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1Cifstream.html" title="{mirtk::Cifstream\n||+ Cifstream()\l+ Close()\l+ IsSwapped()\l+ IsSwapped()\l+ Open()\l+ Read()\l+ ReadAsChar()\l+ ReadAsDouble()\l+ ReadAsFloat()\l+ ReadAsInt()\land 8 more...\l}" alt="" coords="215,204,347,428"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="218,5,343,156"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1GIPLImageReader.html" title="{mirtk::GIPLImageReader\n||+ CanRead()\l+ CheckHeader()\l# ReadHeader()\l}" alt="" coords="5,795,171,901"/>
+<area shape="rect" id="node5" href="$classmirtk_1_1NiftiImageReader.html" title="{mirtk::NiftiImageReader\n||+ CanRead()\l+ Initialize()\l+ NiftiImageReader()\l+ Print()\l+ ~NiftiImageReader()\l+ CheckHeader()\l# ReadHeader()\l}" alt="" coords="195,765,356,931"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1PGMImageReader.html" title="{mirtk::PGMImageReader\n||+ CanRead()\l+ CheckHeader()\l# ReadHeader()\l}" alt="" coords="381,795,547,901"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Cifstream.html" title="{mirtk::Cifstream\n||+ Cifstream()\l+ Close()\l+ IsSwapped()\l+ IsSwapped()\l+ Open()\l+ Read()\l+ ReadAsChar()\l+ ReadAsDouble()\l+ ReadAsFloat()\l+ ReadAsInt()\land 8 more...\l}" alt="" coords="211,205,340,429"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="213,6,339,157"/>
 </map>

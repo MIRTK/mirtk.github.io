@@ -1,25 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classmirtk_1_1ImageGradientFunction.html" title="mirtk::ImageGradientFunction" alt="" coords="5,393,203,420"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1GenericImageGradientFunction.html" title="mirtk::GenericImageGradient\lFunction\&lt; BaseImage \&gt;" alt="" coords="251,297,444,338"/>
-<area shape="rect" id="node15" href="$classmirtk_1_1GenericImageGradientFunction.html" title="mirtk::GenericImageGradient\lFunction\&lt; ImageType \&gt;" alt="" coords="251,386,444,427"/>
-<area shape="rect" id="node17" href="$classmirtk_1_1GenericImageGradientFunction.html" title="mirtk::GenericImageGradient\lFunction\&lt; TImage \&gt;" alt="" coords="251,498,444,539"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1GenericFastLinearImageGradientFunction.html" title="mirtk::GenericFastLinear\lImageGradientFunction\l\&lt; BaseImage \&gt;" alt="" coords="515,123,683,179"/>
-<area shape="rect" id="node9" href="$classmirtk_1_1GenericLinearImageGradientFunction.html" title="mirtk::GenericLinearImage\lGradientFunction\&lt; BaseImage \&gt;" alt="" coords="492,297,707,338"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1GenericFastLinearImageGradientFunction2D.html" title="mirtk::GenericFastLinear\lImageGradientFunction2D\l\&lt; BaseImage \&gt;" alt="" coords="781,5,960,61"/>
-<area shape="rect" id="node6" href="$classmirtk_1_1GenericFastLinearImageGradientFunction3D.html" title="mirtk::GenericFastLinear\lImageGradientFunction3D\l\&lt; BaseImage \&gt;" alt="" coords="781,85,960,141"/>
-<area shape="rect" id="node8" href="$classmirtk_1_1FastLinearImageGradientFunction.html" title="mirtk::FastLinearImageGradient\lFunction" alt="" coords="766,166,975,207"/>
-<area shape="rect" id="node5" href="$classmirtk_1_1FastLinearImageGradientFunction2D.html" title="mirtk::FastLinearImageGradient\lFunction2D" alt="" coords="1035,13,1244,54"/>
-<area shape="rect" id="node7" href="$classmirtk_1_1FastLinearImageGradientFunction3D.html" title="mirtk::FastLinearImageGradient\lFunction3D" alt="" coords="1035,93,1244,134"/>
-<area shape="rect" id="node10" href="$classmirtk_1_1GenericLinearImageGradientFunction2D.html" title="mirtk::GenericLinearImage\lGradientFunction2D\&lt; BaseImage \&gt;" alt="" coords="755,231,987,273"/>
-<area shape="rect" id="node12" href="$classmirtk_1_1GenericLinearImageGradientFunction3D.html" title="mirtk::GenericLinearImage\lGradientFunction3D\&lt; BaseImage \&gt;" alt="" coords="755,297,987,338"/>
-<area shape="rect" id="node14" href="$classmirtk_1_1LinearImageGradientFunction.html" title="mirtk::LinearImageGradient\lFunction" alt="" coords="779,362,963,403"/>
-<area shape="rect" id="node11" href="$classmirtk_1_1LinearImageGradientFunction2D.html" title="mirtk::LinearImageGradient\lFunction2D" alt="" coords="1047,231,1231,273"/>
-<area shape="rect" id="node13" href="$classmirtk_1_1LinearImageGradientFunction3D.html" title="mirtk::LinearImageGradient\lFunction3D" alt="" coords="1047,297,1231,338"/>
-<area shape="rect" id="node16" href="$classmirtk_1_1GenericFastLinearImageGradientFunction.html" title="mirtk::GenericFastLinear\lImageGradientFunction\l\&lt; ImageType \&gt;" alt="" coords="515,379,683,435"/>
-<area shape="rect" id="node18" href="$classmirtk_1_1GenericFastLinearImageGradientFunction.html" title="mirtk::GenericFastLinear\lImageGradientFunction\l\&lt; TImage \&gt;" alt="" coords="515,491,683,547"/>
-<area shape="rect" id="node21" href="$classmirtk_1_1GenericLinearImageGradientFunction.html" title="mirtk::GenericLinearImage\lGradientFunction\&lt; TImage \&gt;" alt="" coords="503,589,695,630"/>
-<area shape="rect" id="node19" href="$classmirtk_1_1GenericFastLinearImageGradientFunction2D.html" title="mirtk::GenericFastLinear\lImageGradientFunction2D\l\&lt; TImage \&gt;" alt="" coords="781,428,960,484"/>
-<area shape="rect" id="node20" href="$classmirtk_1_1GenericFastLinearImageGradientFunction3D.html" title="mirtk::GenericFastLinear\lImageGradientFunction3D\l\&lt; TImage \&gt;" alt="" coords="781,508,960,564"/>
-<area shape="rect" id="node22" href="$classmirtk_1_1GenericLinearImageGradientFunction2D.html" title="mirtk::GenericLinearImage\lGradientFunction2D\&lt; TImage \&gt;" alt="" coords="766,589,975,630"/>
-<area shape="rect" id="node23" href="$classmirtk_1_1GenericLinearImageGradientFunction3D.html" title="mirtk::GenericLinearImage\lGradientFunction3D\&lt; TImage \&gt;" alt="" coords="766,654,975,695"/>
+<area shape="rect" id="node1" href="$structmirtk_1_1ForEachVoxelDomain_1_1InSpatialMask.html" title="mirtk::ForEachVoxelDomain\l::InSpatialMask" alt="" coords="5,5,192,46"/>
 </map>

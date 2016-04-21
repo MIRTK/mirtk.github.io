@@ -1,4 +1,4 @@
 <map id="mirtk::DiscreteMap" name="mirtk::DiscreteMap">
-<area shape="rect" id="node2" href="$classmirtk_1_1VolumetricMap.html" title="{mirtk::VolumetricMap\n||+ Attributes()\l+ Attributes()\l+ BoundingBox()\l+ BoundingBox()\l+ BoundingBox()\l+ Evaluate()\l+ Evaluate()\l+ Evaluate()\l+ Evaluate()\l+ Evaluate()\land 9 more...\l+ New()\l# operator=()\l# ReadMap()\l# VolumetricMap()\l# VolumetricMap()\l# WriteMap()\l}" alt="" coords="22,204,169,516"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="33,5,158,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1VolumetricMap.html" title="{mirtk::VolumetricMap\n||+ Attributes()\l+ Attributes()\l+ BoundingBox()\l+ BoundingBox()\l+ BoundingBox()\l+ Evaluate()\l+ Evaluate()\l+ Evaluate()\l+ Evaluate()\l+ Evaluate()\land 9 more...\l+ New()\l# operator=()\l# ReadMap()\l# VolumetricMap()\l# VolumetricMap()\l# WriteMap()\l}" alt="" coords="20,205,167,517"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="31,6,156,157"/>
 </map>

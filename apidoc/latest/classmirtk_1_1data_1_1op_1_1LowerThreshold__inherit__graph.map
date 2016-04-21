@@ -1,4 +1,4 @@
 <map id="mirtk::data::op::LowerThreshold" name="mirtk::data::op::LowerThreshold">
-<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1op_1_1ElementWiseUnaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="29,145,191,267"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="55,5,165,97"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1op_1_1ElementWiseUnaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="27,147,189,269"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="53,6,163,98"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="mirtk::InterpolateImageFunction" name="mirtk::InterpolateImageFunction">
-<area shape="rect" id="node2" href="$classmirtk_1_1ImageFunction.html" title="{mirtk::ImageFunction\n||+ Evaluate()\l+ Initialize()\l+ ~ImageFunction()\l# ImageFunction()\l# ImageFunction()\l}" alt="" coords="6,205,153,341"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1ExtrapolateImageFunction.html" title="{mirtk::ExtrapolateImageFunction\n||+ Evaluate()\l+ Evaluate()\l+ ExtrapolationMode()\l+ GetAsDouble()\l+ GetAsDouble()\l+ GetAsVector()\l+ GetAsVector()\l+ GetAsVector()\l+ GetAsVector()\l+ IsForeground()\land 6 more...\l+ New()\l# ExtrapolateImageFunction()\l}" alt="" coords="101,391,314,644"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="17,5,142,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1ImageFunction.html" title="{mirtk::ImageFunction\n||+ Evaluate()\l+ Initialize()\l+ ~ImageFunction()\l# ImageFunction()\l# ImageFunction()\l}" alt="" coords="5,208,149,344"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1ExtrapolateImageFunction.html" title="{mirtk::ExtrapolateImageFunction\n||+ Evaluate()\l+ Evaluate()\l+ ExtrapolationMode()\l+ GetAsDouble()\l+ GetAsDouble()\l+ GetAsVector()\l+ GetAsVector()\l+ GetAsVector()\l+ GetAsVector()\l+ IsForeground()\land 6 more...\l+ New()\l# ExtrapolateImageFunction()\l}" alt="" coords="99,395,308,648"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="15,6,140,157"/>
 </map>

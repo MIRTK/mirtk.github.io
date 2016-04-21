@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="calculate-exponential-map" href="calculate-exponential-map.html" />
     <link rel="prev" title="calculate" href="calculate.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="calculate.html" title="calculate"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,13 +87,13 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="calculate-distance-map">
 <h1>calculate-distance-map<a class="headerlink" href="#calculate-distance-map" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk calculate-distance-map &lt;input&gt; &lt;output&gt; [options]
+<div class="highlight-python"><div class="highlight"><pre>calculate-distance-map &lt;input&gt; &lt;output&gt; [options]
 </pre></div>
 </div>
 </div>
@@ -105,13 +105,13 @@
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-arg-input">
-<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-distance-map-arg-input" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">input</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-distance-map-arg-input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Binary object mask.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-arg-output">
-<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-distance-map-arg-output" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-distance-map-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Distance transform.</p>
 </dd></dl>
 
@@ -120,11 +120,11 @@
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-distance">
-<code class="descname">-distance</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-calculate-distance-map-distance" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-distance</tt><tt class="descclassname"> &lt;name&gt;</tt><a class="headerlink" href="#cmdoption-calculate-distance-map-distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the distance transform. (default: euclidean)</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">cityblock</span></code>: Manhatten city block (L1) distance.</li>
-<li><code class="docutils literal"><span class="pre">euclidean</span></code>: Euclidean distance.</li>
+<li><tt class="docutils literal"><span class="pre">cityblock</span></tt>: Manhatten city block (L1) distance.</li>
+<li><tt class="docutils literal"><span class="pre">euclidean</span></tt>: Euclidean distance.</li>
 </ul>
 </dd></dl>
 
@@ -133,31 +133,31 @@
 <h2>Euclidean distance transform options<a class="headerlink" href="#euclidean-distance-transform-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-2D">
-<code class="descname">-2D</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-distance-map-2D" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-2D</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-distance-map-2D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute distance transform in 2D.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-3D">
-<code class="descname">-3D</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-distance-map-3D" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-3D</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-distance-map-3D" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute distance transform in 3D. (default)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-radial">
-<code class="descname">-radial</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-distance-map-radial" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-radial</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-distance-map-radial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute radial distance transform. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-tradial">
-<code class="descname">-tradial</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-distance-map-tradial" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-tradial</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-distance-map-tradial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute radial distance transform in t dimension only.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-isotropic">
-<code class="descname">-isotropic</code><code class="descclassname"> [&lt;s&gt;]</code><a class="headerlink" href="#cmdoption-calculate-distance-map-isotropic" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-isotropic</tt><tt class="descclassname"> [&lt;s&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-distance-map-isotropic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resample distance transform to isotropic voxel size,
 where the voxel size is s times the minimum voxel size.
 When no argument given, s defaults to 1. (default: 0/off)</p>
@@ -168,31 +168,31 @@ When no argument given, s defaults to 1. (default: 0/off)</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-v">
-<span id="cmdoption-calculate-distance-map-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-calculate-distance-map-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-distance-map-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-calculate-distance-map-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-calculate-distance-map-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-calculate-distance-map-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-calculate-distance-map-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-calculate-distance-map-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-distance-map-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-distance-map-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-distance-map-h">
-<span id="cmdoption-calculate-distance-map-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-distance-map-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-distance-map-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-distance-map-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -205,7 +205,7 @@ When no argument given, s defaults to 1. (default: 0/off)</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -214,13 +214,13 @@ When no argument given, s defaults to 1. (default: 0/off)</p>
         <li class="right" >
           <a href="calculate.html" title="calculate"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

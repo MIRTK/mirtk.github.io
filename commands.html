@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,18 +24,18 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="sidebar.html" />
+    <link rel="top" title="MIRTK" href="index.html" />
     <link rel="next" title="average-dofs" href="commands/average-dofs.html" />
     <link rel="prev" title="Get Started" href="getstarted.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +44,12 @@
         <li class="right" >
           <a href="getstarted.html" title="Get Started"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -83,7 +83,7 @@
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
 </ul>
@@ -94,7 +94,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="applications">
 <span id="id1"></span><h1>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h1>
@@ -104,8 +104,8 @@
 </div>
 <table border="1" class="docutils">
 <colgroup>
-<col width="38%" />
-<col width="62%" />
+<col width="40%" />
+<col width="60%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Command</th>
@@ -122,120 +122,122 @@ brain atlases available at <a class="reference external" href="http://brain-deve
 <tr class="row-odd"><td><a class="reference internal" href="commands/average-images.html"><em>average-images</em></a></td>
 <td>Computes voxelwise average image of the given (transformed) input images.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/calculate.html"><em>calculate</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/bisect-dof.html"><em>bisect-dof</em></a></td>
+<td>This command bisects a rigid or affine transformation by calculating the
+matrix square root of the transformation matrix.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/calculate.html"><em>calculate</em></a></td>
 <td>This tool can be used for basic calculations from a sequence of data values read
 either from an image or a VTK pointset. It can be used, for example, to add two
 data sequences and to divide the result by a constant. The current sequence can
-be written to an output file again using the -out option. Additionally, statistics
+be written to an output file again using <a class="reference internal" href="commands/calculate.html#cmdoption-calculate-out"><em class="xref std std-option">calculate -out</em></a>. Additionally, statistics
 of the current data sequence can be computed such as the mean or variance.
 The order of the data transformations and calculation of statistics is determined
 by the order of the command-line arguments.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/calculate-distance-map.html"><em>calculate-distance-map</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/calculate-distance-map.html"><em>calculate-distance-map</em></a></td>
 <td>Computes distance transformation of binary object mask.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/calculate-exponential-map.html"><em>calculate-exponential-map</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/calculate-exponential-map.html"><em>calculate-exponential-map</em></a></td>
 <td>Reads a dense 3D (2D) stationary velocity field, computes the corresponding
 dense 3D (2D) displacement field, and writes the resulting vector field.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/calculate-lie-bracket.html"><em>calculate-lie-bracket</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/calculate-lie-bracket.html"><em>calculate-lie-bracket</em></a></td>
 <td>Computes the Lie bracket of two vector fiels <span class="math">\(z = [x, y]\)</span>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/calculate-logarithmic-map.html"><em>calculate-logarithmic-map</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/calculate-logarithmic-map.html"><em>calculate-logarithmic-map</em></a></td>
 <td>Reads a dense 3D (2D) displacement field, computes the corresponding
 stationary 3D (2D) velocity field, and writes the resulting vector field.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/calculate-surface-attributes.html"><em>calculate-surface-attributes</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/calculate-surface-attributes.html"><em>calculate-surface-attributes</em></a></td>
 <td>Calculate attributes of input surface such as normals and curvature.
 If required, as in case of the curvature calculations, the input mesh
 is triangulated beforehand if it contains non-triangular faces.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/calculate-surface-spectrum.html"><em>calculate-surface-spectrum</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/calculate-surface-spectrum.html"><em>calculate-surface-spectrum</em></a></td>
 <td>Performs a spectral analysis of the general graph Laplacian matrix
 computed from the given input surface mesh(es).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/close-image.html"><em>close-image</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/close-image.html"><em>close-image</em></a></td>
 <td>Closes holes by first dilating and then eroding an input image.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/concatenate-dofs.html"><em>concatenate-dofs</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/concatenate-dofs.html"><em>concatenate-dofs</em></a></td>
 <td>Computes the composition T of the given input transformations such that</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/concatenate-images.html"><em>concatenate-images</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/concatenate-images.html"><em>concatenate-images</em></a></td>
 <td>Concatenate two or more either 2D images to form a 3D volume,
 or 3D volumes to form a 3D+t temporal sequence. All input images
 must have the same image attributes, except in either the third (2D)
 or the third and fourth (3D) image dimension.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/convert-dof.html"><em>convert-dof</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/convert-dof.html"><em>convert-dof</em></a></td>
 <td>Converts between different transformation file formats:</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/convert-dof2csv.html"><em>convert-dof2csv</em></a></td>
-<td>Converts a transformation to a CSV file which can be loaded into STAR-CCM+ GUI.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/convert-dof2velo.html"><em>convert-dof2velo</em></a></td>
-<td>Reads a 3D transformation and writes a 3D(+t) free-form transformation
-which is parameterized by a (non-)stationary velocity field and approximates
-the displacements of the input transformation.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/convert-image.html"><em>convert-image</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/convert-image.html"><em>convert-image</em></a></td>
 <td>Converts an image from one voxel type to another.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/convert-pointset.html"><em>convert-pointset</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/convert-pointset.html"><em>convert-pointset</em></a></td>
 <td>Convert point set from one (file) format to another.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/convert-pointset-to-mat.html"><em>convert-pointset-to-mat</em></a></td>
+<td>Saves the points and faces of a vtkPolyData to a MAT file.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="commands/copy-pointset-attributes.html"><em>copy-pointset-attributes</em></a></td>
 <td>Copies point and/or cell data from a source point set to a target point set
 and writes the resulting amended point set to the specified output file.
 When no separate output file is specified, the target point set is overwritten.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/cut-brain.html"><em>cut-brain</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/copy-pointset-attributes-from-mat.html"><em>copy-pointset-attributes-from-mat</em></a></td>
+<td>Sets/Adds variables stored in a MAT file as point data of a VTK dataset.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/cut-brain.html"><em>cut-brain</em></a></td>
 <td>Cut input brain volume/mask into left and/or right hemisphere(s).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/decimate-surface.html"><em>decimate-surface</em></a></td>
-<td>Decimates a (triangular) mesh using VTK&#8217;s <code class="docutils literal"><span class="pre">vtkQuadricDecimation</span></code> filter.
-In case of <a class="reference internal" href="commands/decimate-surface.html#cmdoption-decimate-surface-pro"><code class="xref std std-option docutils literal"><span class="pre">decimate-surface</span> <span class="pre">-pro</span></code></a>, the <code class="docutils literal"><span class="pre">vtkDecimatePro</span></code> filter is used instead.</td>
+<tr class="row-even"><td><a class="reference internal" href="commands/decimate-surface.html"><em>decimate-surface</em></a></td>
+<td>Decimates a (triangular) mesh using VTK&#8217;s <tt class="docutils literal"><span class="pre">vtkQuadricDecimation</span></tt> filter.
+In case of <a class="reference internal" href="commands/decimate-surface.html#cmdoption-decimate-surface-pro"><em class="xref std std-option">decimate-surface -pro</em></a>, the <tt class="docutils literal"><span class="pre">vtkDecimatePro</span></tt> filter is used instead.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/deform-mesh.html"><em>deform-mesh</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/deform-mesh.html"><em>deform-mesh</em></a></td>
 <td>Iteratively minimizes a deformable surface model energy functional. The gradient of
 the energy terms are the internal and external forces of the deformable surface model.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/delete-pointset-attributes.html"><em>delete-pointset-attributes</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/delete-pointset-attributes.html"><em>delete-pointset-attributes</em></a></td>
 <td>Delete point data and/or cell data from input point set.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/detect-edges.html"><em>detect-edges</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/detect-edges.html"><em>detect-edges</em></a></td>
 <td>Convolves the input image with an edge detection operator.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/dilate-image.html"><em>dilate-image</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/dilate-image.html"><em>dilate-image</em></a></td>
 <td>Dilates an input image by replacing a voxel&#8217;s value by the maximum
 of the values of its neighboring voxels.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/downsample-image.html"><em>downsample-image</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/downsample-image.html"><em>downsample-image</em></a></td>
 <td>Downsamples an image using an iterative Gaussian pyramid filter.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/edit-dof.html"><em>edit-dof</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/edit-dof.html"><em>edit-dof</em></a></td>
 <td>This tool provides a generic way of modifying the parameters of a
 transformation (linear as well as non-linear). It uses the generic
 interface member function Transformation::Set whose arguments
 are the name of the parameter and the value to be set as string.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/edit-image.html"><em>edit-image</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/edit-image.html"><em>edit-image</em></a></td>
 <td>Modifies the attributes of an image stored in the header.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/erode-image.html"><em>erode-image</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/erode-image.html"><em>erode-image</em></a></td>
 <td>Erodes an input image by replacing a voxel&#8217;s value by the minimum
 of the values of its neighboring voxels.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/evaluate-distance.html"><em>evaluate-distance</em></a></td>
-<td>Evaluate distance between two given point sets. With increased verbosity (see <a class="reference internal" href="commands/evaluate-distance.html#cmdoption-evaluate-distance-v"><code class="xref std std-option docutils literal"><span class="pre">evaluate-distance</span> <span class="pre">-v</span></code></a>),
+<tr class="row-odd"><td><a class="reference internal" href="commands/evaluate-distance.html"><em>evaluate-distance</em></a></td>
+<td>Evaluate distance between two given point sets. With increased verbosity (see <a class="reference internal" href="commands/evaluate-distance.html#cmdoption-evaluate-distance-v"><em class="xref std std-option">evaluate-distance -v</em></a>),
 the mean and standard deviation of the measured distances  (verbosity level &gt;=1) and the
 individual distance for each target point is reported (verbosity level &gt;=2).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/evaluate-distortion.html"><em>evaluate-distortion</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/evaluate-distortion.html"><em>evaluate-distortion</em></a></td>
 <td>Computes the distortion of a surface mesh under deformation and stores
 the results in the output dataset. If no output dataset is given, the
 mean and standard deviation are reported only.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/evaluate-dof.html"><em>evaluate-dof</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/evaluate-dof.html"><em>evaluate-dof</em></a></td>
 <td>Calculates registration transformation quality measures such as the voxel-wise
 cumulative or mean inverse-consistency error (CICE/MICE) for pairs of forward
 transformation from target to source and backward transformation from source
@@ -243,16 +245,19 @@ to target image. Another voxel-wise measure that can be computed using this
 program are the cumulative or mean transitivity error (CTE/MTE) given three
 transformations, from target (A) to B, from B to C, and from C to A again.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/evaluate-jacobian.html"><em>evaluate-jacobian</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/evaluate-jacobian.html"><em>evaluate-jacobian</em></a></td>
 <td>Computes the Jacobian determinant of the given transformation at
 each target image voxel. If no &lt;output&gt; image name is given,
 the statistics of the Jacobian determinant distribution are printed
 to STDOUT instead, such as min, max, and mean.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/evaluate-overlap.html"><em>evaluate-overlap</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/evaluate-overlap.html"><em>evaluate-overlap</em></a></td>
 <td>Computes the overlap of either two intensity images (average SI)
-or two segmentations (see <a class="reference internal" href="commands/evaluate-overlap.html#cmdoption-evaluate-overlap-label"><code class="xref std std-option docutils literal"><span class="pre">evaluate-overlap</span> <span class="pre">-label</span></code></a>). If more than one source image
+or two segmentations (see <a class="reference internal" href="commands/evaluate-overlap.html#cmdoption-evaluate-overlap-label"><em class="xref std std-option">evaluate-overlap -label</em></a>). If more than one source image
 is given, the overlap between each of these and the target is evaluated.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/evaluate-similarity.html"><em>evaluate-similarity</em></a></td>
+<td>Evaluates the (dis-)similarity of two intensity images.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="commands/evaluate-surface-overlap.html"><em>evaluate-surface-overlap</em></a></td>
 <td>Reports label statistics given two surface meshes and a text file
@@ -262,7 +267,7 @@ stored as named point data array in both datasets.</td>
 <tr class="row-even"><td><a class="reference internal" href="commands/extract-connected-components.html"><em>extract-connected-components</em></a></td>
 <td>Extracts connected components from input segmentation label image.
 By default, the largest connected component is extracted.
-In case of <a class="reference internal" href="commands/extract-connected-components.html#cmdoption-extract-connected-components-output-component-labels"><code class="xref std std-option docutils literal"><span class="pre">extract-connected-components</span> <span class="pre">-output-component-labels</span></code></a>, the labels
+In case of <a class="reference internal" href="commands/extract-connected-components.html#cmdoption-extract-connected-components-output-component-labels"><em class="xref std std-option">extract-connected-components -output-component-labels</em></a>, the labels
 of the components are written instead.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="commands/extract-connected-points.html"><em>extract-connected-points</em></a></td>
@@ -273,7 +278,7 @@ connected component has index 0.</td>
 <tr class="row-even"><td><a class="reference internal" href="commands/extract-image-region.html"><em>extract-image-region</em></a></td>
 <td>Crop/pad image by extracting a region of interest. The output image region
 is chosen such that it contains the union of all specified axis-aligned
-rectangular input image regions. In case of <a class="reference internal" href="commands/extract-image-region.html#cmdoption-extract-image-region-pad"><code class="xref std std-option docutils literal"><span class="pre">extract-image-region</span> <span class="pre">-pad</span></code></a>, the output
+rectangular input image regions. In case of <a class="reference internal" href="commands/extract-image-region.html#cmdoption-extract-image-region-pad"><em class="xref std std-option">extract-image-region -pad</em></a>, the output
 region does not have to be fully contained within the input image.
 Values outside are then set to the specified padding value.</td>
 </tr>
@@ -290,57 +295,60 @@ computed from the volumes defined by the individual input surfaces.</td>
 options. Both, the image data and the coordinates of the image origin
 are swapped each time an input option is processed.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/info.html"><em>info</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/help-rst.html"><em>help-rst</em></a></td>
+<td>No description available.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/info.html"><em>info</em></a></td>
 <td>Prints some useful information about the given input file, which
 can be an image, transformation (requires MIRTK Transformation module),
 or point set (requires MIRTK Point Set module).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/init-dof.html"><em>init-dof</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/init-dof.html"><em>init-dof</em></a></td>
 <td>This tool either creates a new affine transformation with the given parameters
 or approximates an affine transformation or non-rigid deformation given
-a set of corresponding landmarks or point displacements (see <a class="reference internal" href="commands/init-dof.html#cmdoption-init-dof-displacements"><code class="xref std std-option docutils literal"><span class="pre">init-dof</span> <span class="pre">-displacements</span></code></a>).</td>
+a set of corresponding landmarks or point displacements (see <a class="reference internal" href="commands/init-dof.html#cmdoption-init-dof-displacements"><em class="xref std std-option">init-dof -displacements</em></a>).</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/invert-dof.html"><em>invert-dof</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/invert-dof.html"><em>invert-dof</em></a></td>
 <td>Inverts any transformation. In case of a non-rigid transformation
 the output transformation only approximates the true inverse.
 When the inverse mapping is not defined at a given point, the
 output transformation at this point depends on the interpolation
 numerical approximate solution found.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/map.html"><em>map</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/map.html"><em>map</em></a></td>
 <td>This tool parameterizes a shape embedded in 3D space. The generated output
 map assigns each point in the input domain a point in the output domain.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/match-points.html"><em>match-points</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/match-points.html"><em>match-points</em></a></td>
 <td>Writes for each point in a target point set its corresponding point in
 the source point set. The found correspondences can be either written
 to an output point set with indices and difference vectors stored as
 point data, or a text file listing for each target point index the
 index of the corresponding source point.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/offset-surface.html"><em>offset-surface</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/offset-surface.html"><em>offset-surface</em></a></td>
 <td>Displaces surface mesh points by a given amount along the surface normal
 to create an offset surface mesh. To prevent self-intersections, a dense
 offset surface can optionally first be sampled from an implicit offset
 surface model onto which each point of the input surface is projected.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/open-image.html"><em>open-image</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/open-image.html"><em>open-image</em></a></td>
 <td>Removes small connections between objects by first eroding and then
 dilating an input image.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/project-onto-surface.html"><em>project-onto-surface</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/project-onto-surface.html"><em>project-onto-surface</em></a></td>
 <td>Assign scalars or labels to either the vertices or the cells of a surface mesh.
 When the input as a real-valued image, the values are linearly interpolated.
 When the input is a segmentation labels image, the value assigned to a vertex/cell
 is the label of the nearest voxel in the given segmentation image. For the projection
-of cortical labels onto the WM/cGM or cGM/CSF boundary, use <a class="reference internal" href="commands/project-onto-surface.html#cmdoption-project-onto-surface-white"><code class="xref std std-option docutils literal"><span class="pre">project-onto-surface</span> <span class="pre">-white</span></code></a> or <a class="reference internal" href="commands/project-onto-surface.html#cmdoption-project-onto-surface-pial"><code class="xref std std-option docutils literal"><span class="pre">project-onto-surface</span> <span class="pre">-pial</span></code></a>.</td>
+of cortical labels onto the WM/cGM or cGM/CSF boundary, use <a class="reference internal" href="commands/project-onto-surface.html#cmdoption-project-onto-surface-white"><em class="xref std std-option">project-onto-surface -white</em></a> or <a class="reference internal" href="commands/project-onto-surface.html#cmdoption-project-onto-surface-pial"><em class="xref std std-option">project-onto-surface -pial</em></a>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/reflect-image.html"><em>reflect-image</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/reflect-image.html"><em>reflect-image</em></a></td>
 <td>Applies a sequence of one or more spatial reflections to an image.
 The reflection options are processed in the order given and changing
 the order can change the result.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/register.html"><em>register</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/register.html"><em>register</em></a></td>
 <td>Registers a set of images, polygonal surface meshes, and/or point clouds (e.g. fiducial markers).
 The set of input images can be comprised of multiple channels (e.g., acquired with different imaging
 modalities) at different time points. For longitudinal data, the temporal origin in the NIfTI header
@@ -348,15 +356,15 @@ identifies the time point that each input image belongs to. How all input images
 registered with one another is determined by an energy function. This energy function is formulated in
 a simplified math expression using MATLAB-style indexing for the individual input files, i.e.,</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/remesh.html"><em>remesh</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/remesh.html"><em>remesh</em></a></td>
 <td>Remeshes a surface mesh such that the resulting mesh has an average
 edge length within the specified limits. The input surface mesh is
 triangulated when necessary before the local remeshing passes.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/resample-image.html"><em>resample-image</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/resample-image.html"><em>resample-image</em></a></td>
 <td>Resamples an image on a lattice with specified voxel size.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/smooth-image.html"><em>smooth-image</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/smooth-image.html"><em>smooth-image</em></a></td>
 <td>This program blurs an input image using a Gaussian filter with a standard
 deviation equal to the specified sigma value. The dimensions in which the
 filter recursively applied can be specified by the respective options below.
@@ -364,16 +372,16 @@ Note that more than one of these options can be specified and that each can
 also be given more than once. The blurring of the respective dimensions
 is then performed in the order of the given blurring options.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/smooth-surface.html"><em>smooth-surface</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/smooth-surface.html"><em>smooth-surface</em></a></td>
 <td>Smooths the node positions and/or scalar data of a surface mesh.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/transform-image.html"><em>transform-image</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/transform-image.html"><em>transform-image</em></a></td>
 <td>Applies a transformation to an input image. Each voxel center of
 the target image is mapped by the given transformation to the space of
 the source image. The output intensity for the target voxel is the
 source image intensity interpolated at the mapped point.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/transform-points.html"><em>transform-points</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/transform-points.html"><em>transform-points</em></a></td>
 <td>Applies one or more transformations to a set of points. Input point
 x, y, and z coordinates are either read from STDIN (space separated) or from a
 point set file. The corresponding transformed coordinates are then written
@@ -386,38 +394,38 @@ on the command line.</td>
 </div>
 <div class="section" id="options">
 <h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<p>The following options are common to all <code class="docutils literal"><span class="pre">mirtk</span></code> commands.
+<p>The following options are common to all <tt class="docutils literal"><span class="pre">mirtk</span></tt> commands.
 For a complete list of options for each command, see the help page of the respective
-command <a class="reference internal" href="#commandssummary"><span>linked above</span></a> or the command help (<code class="docutils literal"><span class="pre">mirtk</span> <span class="pre">help</span> <span class="pre">&lt;command&gt;</span></code>).</p>
+command <a class="reference internal" href="#commandssummary"><em>linked above</em></a> or the command help (<tt class="docutils literal"><span class="pre">mirtk</span> <span class="pre">help</span> <span class="pre">&lt;command&gt;</span></tt>).</p>
 <div class="section" id="standard-options">
 <h3>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h3>
 <dl class="option">
 <dt id="cmdoption-v">
-<span id="cmdoption-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-h">
-<span id="cmdoption-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -426,7 +434,7 @@ command <a class="reference internal" href="#commandssummary"><span>linked above
 <h3>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h3>
 <dl class="option">
 <dt id="cmdoption-color">
-<span id="cmdoption-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -435,7 +443,7 @@ command <a class="reference internal" href="#commandssummary"><span>linked above
 <h3>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h3>
 <dl class="option">
 <dt id="cmdoption-threads">
-<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-threads" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -449,7 +457,7 @@ command <a class="reference internal" href="#commandssummary"><span>linked above
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -458,12 +466,12 @@ command <a class="reference internal" href="#commandssummary"><span>linked above
         <li class="right" >
           <a href="getstarted.html" title="Get Started"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="close-image" href="close-image.html" />
     <link rel="prev" title="calculate-surface-attributes" href="calculate-surface-attributes.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="calculate-surface-attributes.html" title="calculate-surface-attributes"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,14 +87,14 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="calculate-surface-spectrum">
 <h1>calculate-surface-spectrum<a class="headerlink" href="#calculate-surface-spectrum" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk calculate-surface-spectrum &lt;input&gt; &lt;output&gt; [options]
-mirtk calculate-surface-spectrum &lt;input1&gt; &lt;input2&gt; &lt;output1&gt; &lt;output2&gt; [options]
+<div class="highlight-python"><div class="highlight"><pre>calculate-surface-spectrum &lt;input&gt; &lt;output&gt; [options]
+calculate-surface-spectrum &lt;input1&gt; &lt;input2&gt; &lt;output1&gt; &lt;output2&gt; [options]
 </pre></div>
 </div>
 </div>
@@ -102,11 +102,11 @@ mirtk calculate-surface-spectrum &lt;input1&gt; &lt;input2&gt; &lt;output1&gt; &
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Performs a spectral analysis of the general graph Laplacian matrix
 computed from the given input surface mesh(es).</p>
-<p>If <a class="reference internal" href="#cmdoption-calculate-surface-spectrum-target"><code class="xref std std-option docutils literal"><span class="pre">calculate-surface-spectrum</span> <span class="pre">-target</span></code></a> surface is specified, the eigenvectors are reordered
+<p>If <a class="reference internal" href="#cmdoption-calculate-surface-spectrum-target"><em class="xref std std-option">calculate-surface-spectrum -target</em></a> surface is specified, the eigenvectors are reordered
 and their sign flipped to match the eigenvectors of the target surface mesh.</p>
 <p>If two input and output surface meshes are specified, a spectral analysis
 of the joint graph Laplacian is performed after an initial surface match.
-The type of initial point correspondences is defined by <a class="reference internal" href="#cmdoption-calculate-surface-spectrum-corr"><code class="xref std std-option docutils literal"><span class="pre">calculate-surface-spectrum</span> <span class="pre">-corr</span></code></a>.</p>
+The type of initial point correspondences is defined by <a class="reference internal" href="#cmdoption-calculate-surface-spectrum-corr"><em class="xref std std-option">calculate-surface-spectrum -corr</em></a>.</p>
 <p>The implementation is based on the MATLAB code by Herve Lombaert of <a class="footnote-reference" href="#id2" id="id1">[1]</a>.</p>
 <table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
@@ -121,13 +121,13 @@ In the 23rd Image Processing in Medical Imaging (IPMI), 2013.</td></tr>
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-arg-input">
-<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-arg-input" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">input</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-arg-input" title="Permalink to this definition">¶</a></dt>
 <dd><p>File name of input  surface (vtkPolyData).</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-arg-output">
-<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-arg-output" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>File name of output surface (vtkPolyData).</p>
 </dd></dl>
 
@@ -136,34 +136,34 @@ In the 23rd Image Processing in Medical Imaging (IPMI), 2013.</td></tr>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-target">
-<code class="descname">-target</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-target" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-target</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-target" title="Permalink to this definition">¶</a></dt>
 <dd><p>File name of dataset (vtkPolyData) whose spectral components
 should be used to adjust the sign and order of the eigenmodes.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-corr">
-<code class="descname">-corr</code><code class="descclassname"> &lt;string&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-corr" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-corr</tt><tt class="descclassname"> &lt;string&gt;</tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-corr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of point correspondences to use for initial correspondences:
 &#8220;closest point&#8221; (&#8220;CP&#8221;), &#8220;spectral match&#8221; (&#8220;SM&#8221;). (default: SM)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-corrpar">
-<code class="descname">-corrpar</code><code class="descclassname"> &lt;name&gt;=&lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-corrpar" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-corrpar</tt><tt class="descclassname"> &lt;name&gt;=&lt;value&gt;</tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-corrpar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name/value pair of correspondence parameter.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-corrin">
-<code class="descname">-corrin</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-corrin" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-corrin</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-corrin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text file naming for each point in input1 the index of the corresponding
-point in the second dataset input2, one index per line. (default: <a class="reference internal" href="#cmdoption-calculate-surface-spectrum-corr"><code class="xref std std-option docutils literal"><span class="pre">-corr</span></code></a>)</p>
+point in the second dataset input2, one index per line. (default: <a class="reference internal" href="#cmdoption-calculate-surface-spectrum-corr"><em class="xref std std-option">-corr</em></a>)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-points">
-<code class="descname">-points</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-points" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-points</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replace output vertex coordinates by first three spectral coordinates.</p>
 </dd></dl>
 
@@ -172,31 +172,31 @@ point in the second dataset input2, one index per line. (default: <a class="refe
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-v">
-<span id="cmdoption-calculate-surface-spectrum-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-surface-spectrum-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-h">
-<span id="cmdoption-calculate-surface-spectrum-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-surface-spectrum-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -205,7 +205,7 @@ point in the second dataset input2, one index per line. (default: <a class="refe
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-color">
-<span id="cmdoption-calculate-surface-spectrum-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-surface-spectrum-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -214,7 +214,7 @@ point in the second dataset input2, one index per line. (default: <a class="refe
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-surface-spectrum-threads">
-<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-threads" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-calculate-surface-spectrum-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -227,7 +227,7 @@ point in the second dataset input2, one index per line. (default: <a class="refe
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -236,13 +236,13 @@ point in the second dataset input2, one index per line. (default: <a class="refe
         <li class="right" >
           <a href="calculate-surface-attributes.html" title="calculate-surface-attributes"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

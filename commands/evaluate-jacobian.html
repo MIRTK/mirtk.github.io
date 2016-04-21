@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="evaluate-overlap" href="evaluate-overlap.html" />
     <link rel="prev" title="evaluate-dof" href="evaluate-dof.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="evaluate-dof.html" title="evaluate-dof"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,14 +87,14 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="evaluate-jacobian">
 <h1>evaluate-jacobian<a class="headerlink" href="#evaluate-jacobian" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk evaluate-jacobian &lt;target&gt; &lt;output&gt; &lt;dof&gt; [options]
-mirtk evaluate-jacobian &lt;target&gt; &lt;dof&gt; [options]
+<div class="highlight-python"><div class="highlight"><pre>evaluate-jacobian &lt;target&gt; &lt;output&gt; &lt;dof&gt; [options]
+evaluate-jacobian &lt;target&gt; &lt;dof&gt; [options]
 </pre></div>
 </div>
 </div>
@@ -106,26 +106,26 @@ the statistics of the Jacobian determinant distribution are printed
 to STDOUT instead, such as min, max, and mean.</p>
 <p>By default, the output Jacobian determinant map has integral voxel type
 with Jacobian determinant values scaled by 100 prior to casting.
-Use either option <a class="reference internal" href="#cmdoption-evaluate-jacobian-float"><code class="xref std std-option docutils literal"><span class="pre">evaluate-jacobian</span> <span class="pre">-float</span></code></a> or <a class="reference internal" href="#cmdoption-evaluate-jacobian-double"><code class="xref std std-option docutils literal"><span class="pre">evaluate-jacobian</span> <span class="pre">-double</span></code></a> to output the
+Use either option <a class="reference internal" href="#cmdoption-evaluate-jacobian-float"><em class="xref std std-option">evaluate-jacobian -float</em></a> or <a class="reference internal" href="#cmdoption-evaluate-jacobian-double"><em class="xref std std-option">evaluate-jacobian -double</em></a> to output the
 unscaled determinants.</p>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-arg-target">
-<code class="descname">target</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-arg-target" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">target</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-arg-target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Target image.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-arg-output">
-<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-arg-output" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output Jacobian map.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-arg-dof">
-<code class="descname">dof</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-arg-dof" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">dof</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-arg-dof" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input transformation.</p>
 </dd></dl>
 
@@ -134,79 +134,79 @@ unscaled determinants.</p>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-total">
-<code class="descname">-total</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-total" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-total</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-total" title="Permalink to this definition">¶</a></dt>
 <dd><p>Total jacobian. (default)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-local">
-<code class="descname">-local</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-local" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-local</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-local" title="Permalink to this definition">¶</a></dt>
 <dd><p>Local jacobian only.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-global">
-<code class="descname">-global</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-global" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-global</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-global" title="Permalink to this definition">¶</a></dt>
 <dd><p>Global jacobian only.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-relative">
-<code class="descname">-relative</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-relative" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-relative</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-relative" title="Permalink to this definition">¶</a></dt>
 <dd><p>Local jacobian divided by global Jacobian.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-log">
-<code class="descname">-log</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-log" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-log</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-log" title="Permalink to this definition">¶</a></dt>
 <dd><p>Log of total jacobian.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-padding">
-<code class="descname">-padding</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-evaluate-jacobian-padding" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-padding</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-padding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Target padding value. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-outside">
-<code class="descname">-outside</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-evaluate-jacobian-outside" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-outside</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-outside" title="Permalink to this definition">¶</a></dt>
 <dd><p>Outside determinant value. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-Tt">
-<code class="descname">-Tt</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-evaluate-jacobian-Tt" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Tt</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-Tt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Temporal origin of target image. (default: _torigin)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-St">
-<code class="descname">-St</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-evaluate-jacobian-St" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-St</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-St" title="Permalink to this definition">¶</a></dt>
 <dd><p>Temporal origin of source image. (default: _torigin + _dt)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-noss">
-<code class="descname">-noss</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-noss" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-noss</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-noss" title="Permalink to this definition">¶</a></dt>
 <dd><p>Do not use scaling-and-squaring for SV FFD.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-float">
-<code class="descname">-float</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-float" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-float</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-float" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output determinant values as single-precision floating point.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-double">
-<code class="descname">-double</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-double" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-double</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-double" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output determinant values as double-precision floating point.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-threshold">
-<code class="descname">-threshold</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-evaluate-jacobian-threshold" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-threshold</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lower Jacobian determinant threshold used when computing -log. (default: 1e-4)</p>
 </dd></dl>
 
@@ -215,31 +215,31 @@ unscaled determinants.</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-v">
-<span id="cmdoption-evaluate-jacobian-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-evaluate-jacobian-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-evaluate-jacobian-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-evaluate-jacobian-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-evaluate-jacobian-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-h">
-<span id="cmdoption-evaluate-jacobian-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-evaluate-jacobian-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -248,7 +248,7 @@ unscaled determinants.</p>
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-color">
-<span id="cmdoption-evaluate-jacobian-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-jacobian-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-evaluate-jacobian-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -257,7 +257,7 @@ unscaled determinants.</p>
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-jacobian-threads">
-<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-evaluate-jacobian-threads" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-jacobian-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -270,7 +270,7 @@ unscaled determinants.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -279,13 +279,13 @@ unscaled determinants.</p>
         <li class="right" >
           <a href="evaluate-dof.html" title="evaluate-dof"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

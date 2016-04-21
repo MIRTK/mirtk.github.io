@@ -1,9 +1,9 @@
 <map id="mirtk::data::op::ElementWiseBinaryOp" name="mirtk::data::op::ElementWiseBinaryOp">
-<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1op_1_1Add.html" title="Element&#45;wise addition. " alt="" coords="5,344,143,465"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1op_1_1Div.html" title="Element&#45;wise division. " alt="" coords="167,344,301,465"/>
-<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1op_1_1DivWithZero.html" title="Element&#45;wise division. " alt="" coords="325,351,511,458"/>
-<area shape="rect" id="node6" href="$classmirtk_1_1data_1_1op_1_1Mask.html" title="Mask values. " alt="" coords="536,344,681,465"/>
-<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1op_1_1Mul.html" title="Element&#45;wise multiplication. " alt="" coords="706,344,842,465"/>
-<area shape="rect" id="node8" href="$classmirtk_1_1data_1_1op_1_1Sub.html" title="Element&#45;wise subtraction. " alt="" coords="867,344,1004,465"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="458,5,567,97"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1op_1_1Add.html" title="Element&#45;wise addition. " alt="" coords="5,347,141,469"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1op_1_1Div.html" title="Element&#45;wise division. " alt="" coords="166,347,300,469"/>
+<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1op_1_1DivWithZero.html" title="Element&#45;wise division. " alt="" coords="325,355,512,461"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1data_1_1op_1_1Mask.html" title="Mask values. " alt="" coords="536,347,683,469"/>
+<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1op_1_1Mul.html" title="Element&#45;wise multiplication. " alt="" coords="707,347,841,469"/>
+<area shape="rect" id="node8" href="$classmirtk_1_1data_1_1op_1_1Sub.html" title="Element&#45;wise subtraction. " alt="" coords="866,347,1003,469"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="459,6,568,98"/>
 </map>

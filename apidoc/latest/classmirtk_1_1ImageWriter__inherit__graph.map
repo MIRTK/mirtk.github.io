@@ -1,8 +1,8 @@
 <map id="mirtk::ImageWriter" name="mirtk::ImageWriter">
-<area shape="rect" id="node4" href="$classmirtk_1_1GIPLImageWriter.html" title="{mirtk::GIPLImageWriter\n||+ Extensions()\l# Initialize()\l}" alt="" coords="5,748,167,840"/>
-<area shape="rect" id="node5" href="$classmirtk_1_1NiftiImageWriter.html" title="{mirtk::NiftiImageWriter\n||+ NiftiImageWriter()\l+ Run()\l+ ~NiftiImageWriter()\l+ Extensions()\l# Finalize()\l# Initialize()\l}" alt="" coords="191,719,344,869"/>
-<area shape="rect" id="node6" href="$classmirtk_1_1PGMImageWriter.html" title="{mirtk::PGMImageWriter\n||+ Run()\l+ Extensions()\l# Initialize()\l}" alt="" coords="368,741,529,847"/>
-<area shape="rect" id="node7" href="$classmirtk_1_1PNGImageWriter.html" title="{mirtk::PNGImageWriter\n||+ Run()\l+ Extensions()\l# Initialize()\l}" alt="" coords="554,741,714,847"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1Cofstream.html" title="{mirtk::Cofstream\n||+ Close()\l+ Cofstream()\l+ IsCompressed()\l+ IsCompressed()\l+ IsSwapped()\l+ IsSwapped()\l+ Open()\l+ Write()\l+ WriteAsChar()\l+ WriteAsChar()\land 16 more...\l}" alt="" coords="294,204,422,428"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="295,5,421,156"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1GIPLImageWriter.html" title="{mirtk::GIPLImageWriter\n||+ Extensions()\l# Initialize()\l}" alt="" coords="5,750,164,842"/>
+<area shape="rect" id="node5" href="$classmirtk_1_1NiftiImageWriter.html" title="{mirtk::NiftiImageWriter\n||+ NiftiImageWriter()\l+ Run()\l+ ~NiftiImageWriter()\l+ Extensions()\l# Finalize()\l# Initialize()\l}" alt="" coords="189,721,343,871"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1PGMImageWriter.html" title="{mirtk::PGMImageWriter\n||+ Run()\l+ Extensions()\l# Initialize()\l}" alt="" coords="368,743,527,849"/>
+<area shape="rect" id="node7" href="$classmirtk_1_1PNGImageWriter.html" title="{mirtk::PNGImageWriter\n||+ Run()\l+ Extensions()\l# Initialize()\l}" alt="" coords="553,743,711,849"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Cofstream.html" title="{mirtk::Cofstream\n||+ Close()\l+ Cofstream()\l+ IsCompressed()\l+ IsCompressed()\l+ IsSwapped()\l+ IsSwapped()\l+ Open()\l+ Write()\l+ WriteAsChar()\l+ WriteAsChar()\land 16 more...\l}" alt="" coords="294,205,420,429"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="295,6,420,157"/>
 </map>

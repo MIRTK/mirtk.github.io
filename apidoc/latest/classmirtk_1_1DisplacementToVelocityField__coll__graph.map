@@ -1,4 +1,4 @@
-<map id="mirtk::DisplacementToVelocityField&lt; VoxelType &gt;" name="mirtk::DisplacementToVelocityField&lt; VoxelType &gt;">
-<area shape="rect" id="node2" href="$classmirtk_1_1ImageToImage.html" title="{mirtk::ImageToImage\l\&lt; VoxelType \&gt;\n||+ ImageToImage()\l+ RequiresBuffering()\l+ Run()\l+ Run()\l+ ~ImageToImage()\l# Finalize()\l# Initialize()\l# Initialize()\l}" alt="" coords="42,204,191,399"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="54,5,179,156"/>
+<map id="mirtk::DisplacementToVelocityField&lt; TVoxel &gt;" name="mirtk::DisplacementToVelocityField&lt; TVoxel &gt;">
+<area shape="rect" id="node2" href="$classmirtk_1_1ImageToImage.html" title="{mirtk::ImageToImage\l\&lt; TVoxel \&gt;\n||+ ImageToImage()\l+ RequiresBuffering()\l+ Run()\l+ Run()\l+ ~ImageToImage()\l# Finalize()\l# Initialize()\l# Initialize()\l# mirtkAggregateMacro()\l# mirtkPublicAggregateMacro()\l# mirtkPublicAggregateMacro()\l}" alt="" coords="14,206,215,445"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="52,6,177,157"/>
 </map>

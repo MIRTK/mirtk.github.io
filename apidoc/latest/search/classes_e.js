@@ -3,6 +3,7 @@ var searchData=
   ['partialaffinetransformation',['PartialAffineTransformation',['../classmirtk_1_1PartialAffineTransformation.html',1,'mirtk']]],
   ['partialbsplinefreeformtransformationsv',['PartialBSplineFreeFormTransformationSV',['../classmirtk_1_1PartialBSplineFreeFormTransformationSV.html',1,'mirtk']]],
   ['partialmultilevelstationaryvelocitytransformation',['PartialMultiLevelStationaryVelocityTransformation',['../classmirtk_1_1PartialMultiLevelStationaryVelocityTransformation.html',1,'mirtk']]],
+  ['peaksignaltonoiseratio',['PeakSignalToNoiseRatio',['../classmirtk_1_1PeakSignalToNoiseRatio.html',1,'mirtk']]],
   ['percentile',['Percentile',['../classmirtk_1_1data_1_1statistic_1_1Percentile.html',1,'mirtk::data::statistic']]],
   ['peronamalikerrorfunction',['PeronaMalikErrorFunction',['../classmirtk_1_1PeronaMalikErrorFunction.html',1,'mirtk']]],
   ['pgmimagereader',['PGMImageReader',['../classmirtk_1_1PGMImageReader.html',1,'mirtk']]],
@@ -26,6 +27,5 @@ var searchData=
   ['polydatasmoothing',['PolyDataSmoothing',['../classmirtk_1_1PolyDataSmoothing.html',1,'mirtk']]],
   ['polyhedron',['Polyhedron',['../classmirtk_1_1Polyhedron.html',1,'mirtk']]],
   ['polynomial',['Polynomial',['../classmirtk_1_1Polynomial.html',1,'mirtk']]],
-  ['pow',['Pow',['../classmirtk_1_1data_1_1op_1_1Pow.html',1,'mirtk::data::op']]],
-  ['probabilisticimagesimilarity',['ProbabilisticImageSimilarity',['../classmirtk_1_1ProbabilisticImageSimilarity.html',1,'mirtk']]]
+  ['pow',['Pow',['../classmirtk_1_1data_1_1op_1_1Pow.html',1,'mirtk::data::op']]]
 ];

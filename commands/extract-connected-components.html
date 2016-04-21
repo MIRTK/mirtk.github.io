@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="extract-connected-points" href="extract-connected-points.html" />
     <link rel="prev" title="evaluate-surface-overlap" href="evaluate-surface-overlap.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="evaluate-surface-overlap.html" title="evaluate-surface-overlap"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,13 +87,13 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="extract-connected-components">
 <h1>extract-connected-components<a class="headerlink" href="#extract-connected-components" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk extract-connected-components &lt;input&gt; &lt;output&gt; [options]
+<div class="highlight-python"><div class="highlight"><pre>extract-connected-components &lt;input&gt; &lt;output&gt; [options]
 </pre></div>
 </div>
 </div>
@@ -101,20 +101,20 @@
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Extracts connected components from input segmentation label image.
 By default, the largest connected component is extracted.
-In case of <a class="reference internal" href="#cmdoption-extract-connected-components-output-component-labels"><code class="xref std std-option docutils literal"><span class="pre">extract-connected-components</span> <span class="pre">-output-component-labels</span></code></a>, the labels
+In case of <a class="reference internal" href="#cmdoption-extract-connected-components-output-component-labels"><em class="xref std std-option">extract-connected-components -output-component-labels</em></a>, the labels
 of the components are written instead.</p>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-arg-input">
-<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-components-arg-input" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">input</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-components-arg-input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input segmentation image.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-arg-output">
-<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-components-arg-output" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-components-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extracted components or components label image.</p>
 </dd></dl>
 
@@ -123,48 +123,48 @@ of the components are written instead.</p>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-m">
-<code class="descname">-m</code><code class="descclassname"> &lt;m&gt;</code><a class="headerlink" href="#cmdoption-extract-connected-components-m" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-m</tt><tt class="descclassname"> &lt;m&gt;</tt><a class="headerlink" href="#cmdoption-extract-connected-components-m" title="Permalink to this definition">¶</a></dt>
 <dd><p>Zero-based index of first connected component to extract. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-n">
-<code class="descname">-n</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-extract-connected-components-n" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-n</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-extract-connected-components-n" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract (at most) n components. (default: 1)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-all">
-<code class="descname">-all</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-components-all" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-all</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-components-all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract all components.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-connectivity">
-<code class="descname">-connectivity</code><code class="descclassname"> &lt;num&gt;</code><a class="headerlink" href="#cmdoption-extract-connected-components-connectivity" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-connectivity</tt><tt class="descclassname"> &lt;num&gt;</tt><a class="headerlink" href="#cmdoption-extract-connected-components-connectivity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of voxel connectivity (4, 6, 18, or 26). (default: 26)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-ordering">
-<code class="descname">-ordering</code><code class="descclassname"> (none|largest|smallest)</code><a class="headerlink" href="#cmdoption-extract-connected-components-ordering" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-ordering</tt><tt class="descclassname"> (none|largest|smallest)</tt><a class="headerlink" href="#cmdoption-extract-connected-components-ordering" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ordering of connected component labels based on component size:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">none</span></code>:     Label components in no specific order.</li>
-<li><code class="docutils literal"><span class="pre">largest</span></code>:  Label largest component first. (default)</li>
-<li><code class="docutils literal"><span class="pre">smallest</span></code>: Label smallest component first.</li>
+<li><tt class="docutils literal"><span class="pre">none</span></tt>:     Label components in no specific order.</li>
+<li><tt class="docutils literal"><span class="pre">largest</span></tt>:  Label largest component first. (default)</li>
+<li><tt class="docutils literal"><span class="pre">smallest</span></tt>: Label smallest component first.</li>
 </ul>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-output-component-labels">
-<code class="descname">-output-component-labels</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-components-output-component-labels" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-output-component-labels</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-components-output-component-labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write component labels instead of input labels.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-output-component-mask">
-<code class="descname">-output-component-mask</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-components-output-component-mask" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-output-component-mask</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-components-output-component-mask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write binary mask with non-zero value at extracted components.</p>
 </dd></dl>
 
@@ -173,31 +173,31 @@ of the components are written instead.</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-v">
-<span id="cmdoption-extract-connected-components-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-extract-connected-components-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-extract-connected-components-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-extract-connected-components-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-extract-connected-components-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-extract-connected-components-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-extract-connected-components-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-extract-connected-components-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-components-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-components-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-components-h">
-<span id="cmdoption-extract-connected-components-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-components-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-extract-connected-components-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-components-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -210,7 +210,7 @@ of the components are written instead.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -219,13 +219,13 @@ of the components are written instead.</p>
         <li class="right" >
           <a href="evaluate-surface-overlap.html" title="evaluate-surface-overlap"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

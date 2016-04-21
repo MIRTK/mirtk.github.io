@@ -1,4 +1,4 @@
 <map id="mirtk::RegisteredPointSet" name="mirtk::RegisteredPointSet">
-<area shape="rect" id="node3" href="$classmirtk_1_1RegisteredSurface.html" title="{mirtk::RegisteredSurface\n||+ GetCellPoints()\l+ Initialize()\l+ InputSurface()\l+ Lines()\l+ NumberOfLines()\l+ NumberOfPolys()\l+ NumberOfStrips()\l+ NumberOfVerts()\l+ operator=()\l+ PolyData()\land 6 more...\l}" alt="" coords="23,784,193,1008"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="45,5,171,156"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1RegisteredSurface.html" title="{mirtk::RegisteredSurface\n||+ GetCellPoints()\l+ Initialize()\l+ InputSurface()\l+ Lines()\l+ NumberOfLines()\l+ NumberOfPolys()\l+ NumberOfStrips()\l+ NumberOfVerts()\l+ operator=()\l+ PolyData()\land 6 more...\l}" alt="" coords="22,787,188,1011"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="43,6,168,157"/>
 </map>

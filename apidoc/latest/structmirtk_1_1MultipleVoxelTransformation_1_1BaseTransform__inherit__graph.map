@@ -1,5 +1,5 @@
 <map id="mirtk::MultipleVoxelTransformation::BaseTransform&lt; InterpolateImageFunction, InputDomain &gt;" name="mirtk::MultipleVoxelTransformation::BaseTransform&lt; InterpolateImageFunction, InputDomain &gt;">
-<area shape="rect" id="node2" href="$structmirtk_1_1MultipleVoxelTransformation_1_1TransformData.html" title="Input/output data members of voxel transformation functions. " alt="" coords="5,175,232,413"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1MultipleVoxelTransformation_1_1Base.html" title="Base class for voxel transformation functions. " alt="" coords="256,189,483,399"/>
-<area shape="rect" id="node4" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="298,5,441,127"/>
+<area shape="rect" id="node2" href="$structmirtk_1_1MultipleVoxelTransformation_1_1TransformData.html" title="Input/output data members of voxel transformation functions. " alt="" coords="4,177,227,415"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1MultipleVoxelTransformation_1_1Base.html" title="Base class for voxel transformation functions. " alt="" coords="252,191,475,401"/>
+<area shape="rect" id="node4" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="293,6,435,127"/>
 </map>

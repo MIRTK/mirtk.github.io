@@ -1,4 +1,4 @@
 <map id="mirtk::TetrahedralVolumeParameterizer" name="mirtk::TetrahedralVolumeParameterizer">
-<area shape="rect" id="node2" href="$classmirtk_1_1VolumeParameterizer.html" title="{mirtk::VolumeParameterizer\n||+ GetOutputMap()\l+ OutputDimension()\l+ Run()\l+ ~VolumeParameterizer()\l# Finalize()\l# Initialize()\l# InitializeBoundary()\l# operator=()\l# Parameterize()\l# VolumeParameterizer()\l# VolumeParameterizer()\l}" alt="" coords="35,204,222,428"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="66,5,191,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1VolumeParameterizer.html" title="{mirtk::VolumeParameterizer\n||+ GetOutputMap()\l+ OutputDimension()\l+ Run()\l+ ~VolumeParameterizer()\l# Finalize()\l# Initialize()\l# InitializeBoundary()\l# operator=()\l# Parameterize()\l# VolumeParameterizer()\l# VolumeParameterizer()\l}" alt="" coords="33,205,217,429"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="63,6,188,157"/>
 </map>

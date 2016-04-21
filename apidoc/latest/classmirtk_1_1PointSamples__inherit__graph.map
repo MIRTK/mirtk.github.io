@@ -1,4 +1,4 @@
 <map id="mirtk::PointSamples" name="mirtk::PointSamples">
-<area shape="rect" id="node2" href="$classmirtk_1_1PointSet.html" title="{mirtk::PointSet\n|# _data\l# _m\l# _n\l# POINTSET_SIZE\l|+ Add()\l+ Add()\l+ Add()\l+ AddVTK()\l+ BoundingBox()\l+ Capacity()\l+ CenterOfGravity()\l+ Clear()\l+ ClosestPoint()\l+ Del()\land 36 more...\l}" alt="" coords="8,204,147,472"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="15,5,140,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1PointSet.html" title="{mirtk::PointSet\n|# _data\l# _m\l# _n\l# POINTSET_SIZE\l|+ Add()\l+ Add()\l+ Add()\l+ AddVTK()\l+ BoundingBox()\l+ Capacity()\l+ CenterOfGravity()\l+ Clear()\l+ ClosestPoint()\l+ Del()\land 36 more...\l}" alt="" coords="6,206,143,474"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="12,6,137,157"/>
 </map>

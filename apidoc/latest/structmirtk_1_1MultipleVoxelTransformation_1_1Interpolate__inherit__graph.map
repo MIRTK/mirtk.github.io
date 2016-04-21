@@ -1,6 +1,6 @@
 <map id="mirtk::MultipleVoxelTransformation::Interpolate&lt; InterpolateImageFunction &gt;" name="mirtk::MultipleVoxelTransformation::Interpolate&lt; InterpolateImageFunction &gt;">
-<area shape="rect" id="node4" href="$structmirtk_1_1MultipleVoxelTransformation_1_1InterpolateRescale.html" title="{mirtk::MultipleVoxelTransformation\l::InterpolateRescale\&lt; InterpolateImage\lFunction \&gt;\n|+ _Offset\l+ _ScaleFactor\l|+ operator()()\l}" alt="" coords="13,689,265,811"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1MultipleVoxelTransformation_1_1Base.html" title="Base class for voxel transformation functions. " alt="" coords="25,175,252,384"/>
-<area shape="rect" id="node3" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="67,5,210,127"/>
-<area shape="rect" id="node5" href="$structmirtk_1_1MultipleVoxelTransformation_1_1InterpolateRescaleAsDouble.html" title="{mirtk::MultipleVoxelTransformation\l::InterpolateRescaleAsDouble\l\&lt; InterpolateImageFunction \&gt;\n|+ _Output\l|+ operator()()\l}" alt="" coords="25,859,252,965"/>
+<area shape="rect" id="node4" href="$structmirtk_1_1MultipleVoxelTransformation_1_1InterpolateRescale.html" title="{mirtk::MultipleVoxelTransformation\l::InterpolateRescale\&lt; InterpolateImage\lFunction \&gt;\n|+ _Offset\l+ _ScaleFactor\l|+ operator()()\l}" alt="" coords="12,694,259,815"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1MultipleVoxelTransformation_1_1Base.html" title="Base class for voxel transformation functions. " alt="" coords="24,177,247,386"/>
+<area shape="rect" id="node3" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="65,6,207,127"/>
+<area shape="rect" id="node5" href="$structmirtk_1_1MultipleVoxelTransformation_1_1InterpolateRescaleAsDouble.html" title="{mirtk::MultipleVoxelTransformation\l::InterpolateRescaleAsDouble\l\&lt; InterpolateImageFunction \&gt;\n|+ _Output\l|+ operator()()\l}" alt="" coords="24,864,247,971"/>
 </map>

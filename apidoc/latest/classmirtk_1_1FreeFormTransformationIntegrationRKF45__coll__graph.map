@@ -1,4 +1,4 @@
 <map id="mirtk::FreeFormTransformationIntegrationRKF45&lt; TFreeFormTransformation &gt;" name="mirtk::FreeFormTransformationIntegrationRKF45&lt; TFreeFormTransformation &gt;">
-<area shape="rect" id="node2" href="$classmirtk_1_1FreeFormTransformationEmbeddedRungeKutta.html" title="{mirtk::FreeFormTransformation\lEmbeddedRungeKutta\&lt; TFreeFormTransformation,\l FreeFormTransformationButcherTableauRKF45 \&gt;\n||+ Jacobian()\l+ JacobianDOFs()\l+ JacobianDOFs()\l+ Transform()\l}" alt="" coords="5,160,333,311"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1FreeFormTransformationRungeKutta.html" title="{mirtk::FreeFormTransformation\lRungeKutta\n||# dkdp()\l# dkdx()\l}" alt="" coords="66,5,273,112"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1FreeFormTransformationEmbeddedRungeKutta.html" title="{mirtk::FreeFormTransformation\lEmbeddedRungeKutta\&lt; TFreeFormTransformation,\l FreeFormTransformationButcherTableauRKF45 \&gt;\n||+ Jacobian()\l+ JacobianDOFs()\l+ JacobianDOFs()\l+ Transform()\l}" alt="" coords="4,161,323,311"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1FreeFormTransformationRungeKutta.html" title="{mirtk::FreeFormTransformation\lRungeKutta\n||# dkdp()\l# dkdx()\l}" alt="" coords="63,5,265,112"/>
 </map>

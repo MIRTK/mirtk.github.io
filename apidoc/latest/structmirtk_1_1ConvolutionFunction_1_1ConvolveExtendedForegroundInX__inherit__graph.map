@@ -1,5 +1,5 @@
 <map id="mirtk::ConvolutionFunction::ConvolveExtendedForegroundInX&lt; TKernel &gt;" name="mirtk::ConvolutionFunction::ConvolveExtendedForegroundInX&lt; TKernel &gt;">
-<area shape="rect" id="node4" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedExtendedForegroundInX.html" title="Downsample image using convolution of original voxels with kernel in x dimension. ..." alt="" coords="5,572,300,767"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1ConvolutionFunction_1_1ExtendedForegroundConvolution1D.html" title="Base class of 1D convolution functions which extends the foreground into background. " alt="" coords="25,175,280,340"/>
-<area shape="rect" id="node3" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="81,5,224,127"/>
+<area shape="rect" id="node4" href="$structmirtk_1_1ConvolutionFunction_1_1DownsampleConvolvedExtendedForegroundInX.html" title="Downsample image using convolution of original voxels with kernel in x dimension. ..." alt="" coords="5,573,293,768"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1ConvolutionFunction_1_1ExtendedForegroundConvolution1D.html" title="Base class of 1D convolution functions which extends the foreground into background. " alt="" coords="26,176,272,341"/>
+<area shape="rect" id="node3" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="78,6,220,127"/>
 </map>

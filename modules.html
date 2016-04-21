@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,18 +24,18 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="sidebar.html" />
+    <link rel="top" title="MIRTK" href="index.html" />
     <link rel="next" title="Common Module" href="modules/common.html" />
     <link rel="prev" title="transform-points" href="commands/transform-points.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +44,12 @@
         <li class="right" >
           <a href="commands/transform-points.html" title="transform-points"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -72,7 +72,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#common">Common</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#numerics">Numerics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#image">Image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#image-i-o">Image I/O</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#point-set">Point Set</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#transformation">Transformation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#registration">Registration</a></li>
@@ -91,7 +91,7 @@
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
 </ul>
@@ -102,7 +102,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="modules">
 <span id="id1"></span><h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
@@ -134,13 +134,13 @@ in an infinite continuous domain. This is in particular needed for the deformati
 an image during and after registration.</p>
 <p><a class="reference internal" href="modules/image.html"><em>[more]</em></a></p>
 </div>
-<div class="section" id="image-i-o">
-<h3>Image I/O<a class="headerlink" href="#image-i-o" title="Permalink to this headline">¶</a></h3>
-<p>The Image I/O module of the Medical Image Registration ToolKit (MIRTK) enables the
-reading and writing of image files. Supported file formats are GIPL, PGM, and
-the <a class="reference external" href="http://nifti.nimh.nih.gov">NIfTI file format</a>. Image slices can further
-be written to PNG image files when the MIRTK was build WITH_PNG.</p>
-<p><a class="reference internal" href="modules/imageio.html"><em>[more]</em></a></p>
+<div class="section" id="i-o">
+<h3>I/O<a class="headerlink" href="#i-o" title="Permalink to this headline">¶</a></h3>
+<p>The I/O module of the Medical Image Registration ToolKit (MIRTK) enables the
+reading and writing of image and point set files. Supported file formats are
+GIPL, PGM, and the <a class="reference external" href="http://nifti.nimh.nih.gov">NIfTI file format</a>.
+Image slices can further be written to PNG image files when the MIRTK was built WITH_PNG.</p>
+<p><a class="reference internal" href="modules/io.html"><em>[more]</em></a></p>
 </div>
 <div class="section" id="point-set">
 <h3>Point Set<a class="headerlink" href="#point-set" title="Permalink to this headline">¶</a></h3>
@@ -208,7 +208,7 @@ compute such volumetric map and to apply it to an input tetrahedral mesh.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -217,12 +217,12 @@ compute such volumetric map and to apply it to an input tetrahedral mesh.</p>
         <li class="right" >
           <a href="commands/transform-points.html" title="transform-points"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

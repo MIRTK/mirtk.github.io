@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="extract-pointset-surface" href="extract-pointset-surface.html" />
     <link rel="prev" title="extract-connected-points" href="extract-connected-points.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="extract-connected-points.html" title="extract-connected-points"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,13 +87,13 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="extract-image-region">
 <h1>extract-image-region<a class="headerlink" href="#extract-image-region" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk extract-image-region &lt;input&gt; &lt;output&gt; [options]
+<div class="highlight-python"><div class="highlight"><pre>extract-image-region &lt;input&gt; &lt;output&gt; [options]
 </pre></div>
 </div>
 </div>
@@ -101,7 +101,7 @@
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Crop/pad image by extracting a region of interest. The output image region
 is chosen such that it contains the union of all specified axis-aligned
-rectangular input image regions. In case of <a class="reference internal" href="#cmdoption-extract-image-region-pad"><code class="xref std std-option docutils literal"><span class="pre">extract-image-region</span> <span class="pre">-pad</span></code></a>, the output
+rectangular input image regions. In case of <a class="reference internal" href="#cmdoption-extract-image-region-pad"><em class="xref std std-option">extract-image-region -pad</em></a>, the output
 region does not have to be fully contained within the input image.
 Values outside are then set to the specified padding value.</p>
 </div>
@@ -109,13 +109,13 @@ Values outside are then set to the specified padding value.</p>
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-extract-image-region-arg-input">
-<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-image-region-arg-input" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">input</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-image-region-arg-input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input image.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-arg-output">
-<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-image-region-arg-output" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-image-region-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output image.</p>
 </dd></dl>
 
@@ -124,91 +124,91 @@ Values outside are then set to the specified padding value.</p>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-extract-image-region-Rx1">
-<code class="descname">-Rx1</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-Rx1" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Rx1</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-extract-image-region-Rx1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Leftmost  input voxel index along x axis.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-Rx2">
-<code class="descname">-Rx2</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-Rx2" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Rx2</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-extract-image-region-Rx2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rightmost input voxel index along x axis.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-Ry1">
-<code class="descname">-Ry1</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-Ry1" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Ry1</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-extract-image-region-Ry1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Leftmost  input voxel index along y axis.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-Ry2">
-<code class="descname">-Ry2</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-Ry2" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Ry2</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-extract-image-region-Ry2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rightmost input voxel index along y axis.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-Rz1">
-<code class="descname">-Rz1</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-Rz1" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Rz1</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-extract-image-region-Rz1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Leftmost  input voxel index along z axis.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-Rz2">
-<code class="descname">-Rz2</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-Rz2" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Rz2</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-extract-image-region-Rz2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rightmost input voxel index along z axis.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-Rt1">
-<code class="descname">-Rt1</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-Rt1" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Rt1</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-extract-image-region-Rt1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Leftmost  input voxel index along t axis.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-Rt2">
-<code class="descname">-Rt2</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-Rt2" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-Rt2</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-extract-image-region-Rt2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rightmost input voxel index along t axis.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-patch">
-<code class="descname">-patch</code><code class="descclassname"> &lt;i&gt; &lt;j&gt; &lt;k&gt; &lt;nx&gt; [&lt;ny&gt; [&lt;nz&gt;]]</code><a class="headerlink" href="#cmdoption-extract-image-region-patch" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-patch</tt><tt class="descclassname"> &lt;i&gt; &lt;j&gt; &lt;k&gt; &lt;nx&gt; [&lt;ny&gt; [&lt;nz&gt;]]</tt><a class="headerlink" href="#cmdoption-extract-image-region-patch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract image patch of given size centered at the specified voxel.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-closest-patch">
-<code class="descname">-closest-patch</code><code class="descclassname"> &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;nx&gt; [&lt;ny&gt; [&lt;nz&gt;]]</code><a class="headerlink" href="#cmdoption-extract-image-region-closest-patch" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-closest-patch</tt><tt class="descclassname"> &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;nx&gt; [&lt;ny&gt; [&lt;nz&gt;]]</tt><a class="headerlink" href="#cmdoption-extract-image-region-closest-patch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract image patch of given size centered at nearest voxel to specified point [mm].</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-landmarks">
-<code class="descname">-landmarks</code><code class="descclassname"> &lt;file&gt;...</code><a class="headerlink" href="#cmdoption-extract-image-region-landmarks" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-landmarks</tt><tt class="descclassname"> &lt;file&gt;...</tt><a class="headerlink" href="#cmdoption-extract-image-region-landmarks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract minimum bounding box containing the landmark points.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-ref">
-<code class="descname">-ref</code><code class="descclassname"> &lt;image&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-ref" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-ref</tt><tt class="descclassname"> &lt;image&gt;</tt><a class="headerlink" href="#cmdoption-extract-image-region-ref" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract region specified by discrete reference image domain.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-margin">
-<code class="descname">-margin</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-margin" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-margin</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-extract-image-region-margin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add fixed-width margin to union of image regions. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-scale">
-<code class="descname">-scale</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-extract-image-region-scale" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-scale</tt><tt class="descclassname"> &lt;float&gt;</tt><a class="headerlink" href="#cmdoption-extract-image-region-scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Scale resulting region by specified factor. (default: 1)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-pad">
-<code class="descname">-pad</code><code class="descclassname"> [&lt;value&gt;]</code><a class="headerlink" href="#cmdoption-extract-image-region-pad" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-pad</tt><tt class="descclassname"> [&lt;value&gt;]</tt><a class="headerlink" href="#cmdoption-extract-image-region-pad" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pad output image by the specified value. (default: 0)</p>
 </dd></dl>
 
@@ -217,31 +217,31 @@ Values outside are then set to the specified padding value.</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-extract-image-region-v">
-<span id="cmdoption-extract-image-region-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-extract-image-region-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-extract-image-region-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-extract-image-region-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-extract-image-region-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-extract-image-region-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-extract-image-region-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-extract-image-region-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-image-region-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-image-region-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-image-region-h">
-<span id="cmdoption-extract-image-region-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-image-region-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-extract-image-region-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-image-region-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -254,7 +254,7 @@ Values outside are then set to the specified padding value.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -263,13 +263,13 @@ Values outside are then set to the specified padding value.</p>
         <li class="right" >
           <a href="extract-connected-points.html" title="extract-connected-points"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

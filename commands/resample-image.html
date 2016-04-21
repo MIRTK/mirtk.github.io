@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="smooth-image" href="smooth-image.html" />
     <link rel="prev" title="remesh" href="remesh.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="remesh.html" title="remesh"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,13 +87,13 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="resample-image">
 <h1>resample-image<a class="headerlink" href="#resample-image" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk resample-image &lt;input&gt; &lt;output&gt; [options]
+<div class="highlight-python"><div class="highlight"><pre>resample-image &lt;input&gt; &lt;output&gt; [options]
 </pre></div>
 </div>
 </div>
@@ -105,13 +105,13 @@
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-resample-image-arg-input">
-<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-resample-image-arg-input" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">input</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-resample-image-arg-input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input image.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-arg-output">
-<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-resample-image-arg-output" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-resample-image-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resampled output image.</p>
 </dd></dl>
 
@@ -120,25 +120,25 @@
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-resample-image-imsize">
-<code class="descname">-imsize</code><code class="descclassname"> &lt;nx&gt; &lt;ny&gt; &lt;nz&gt;</code><a class="headerlink" href="#cmdoption-resample-image-imsize" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-imsize</tt><tt class="descclassname"> &lt;nx&gt; &lt;ny&gt; &lt;nz&gt;</tt><a class="headerlink" href="#cmdoption-resample-image-imsize" title="Permalink to this definition">¶</a></dt>
 <dd><p>New image size in number of voxels (default: input image size)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-size">
-<code class="descname">-size</code><code class="descclassname"> &lt;dx&gt; &lt;dy&gt; &lt;dz&gt;</code><a class="headerlink" href="#cmdoption-resample-image-size" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-size</tt><tt class="descclassname"> &lt;dx&gt; &lt;dy&gt; &lt;dz&gt;</tt><a class="headerlink" href="#cmdoption-resample-image-size" title="Permalink to this definition">¶</a></dt>
 <dd><p>New voxel size in mm (default: 1 1 1)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-isotropic">
-<code class="descname">-isotropic</code><code class="descclassname"> &lt;m&gt;</code><a class="headerlink" href="#cmdoption-resample-image-isotropic" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-isotropic</tt><tt class="descclassname"> &lt;m&gt;</tt><a class="headerlink" href="#cmdoption-resample-image-isotropic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resample to isotropic voxel size: m*min(dx, min(dy, dz))</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-interp">
-<code class="descname">-interp</code><code class="descclassname"> &lt;mode&gt;</code><a class="headerlink" href="#cmdoption-resample-image-interp" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-interp</tt><tt class="descclassname"> &lt;mode&gt;</tt><a class="headerlink" href="#cmdoption-resample-image-interp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolation mode (case insensitive):
 NN, Linear (default), Fast linear, BSpline, Cubic BSpline,
 Fast cubic BSpline, CSpline, SBased, Sinc, Gaussian,
@@ -152,7 +152,7 @@ Sinc with padding, Gaussian with padding</p>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-extrap">
-<code class="descname">-extrap</code><code class="descclassname"> &lt;mode&gt;</code><a class="headerlink" href="#cmdoption-resample-image-extrap" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-extrap</tt><tt class="descclassname"> &lt;mode&gt;</tt><a class="headerlink" href="#cmdoption-resample-image-extrap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extrapolation mode (case insensitive):
 Default, None, Const (default), NN, Repeat, Mirror,
 ConstWithPeriodicTime</p>
@@ -160,19 +160,19 @@ ConstWithPeriodicTime</p>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-outside">
-<code class="descname">-outside</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-resample-image-outside" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-outside</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-resample-image-outside" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constant outside value extrapolation. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-sigma">
-<code class="descname">-sigma</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-resample-image-sigma" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-sigma</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-resample-image-sigma" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sigma value of Gaussian interpolator. (default: 1)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-padding">
-<code class="descname">-padding</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-resample-image-padding" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-padding</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-resample-image-padding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Background padding. (default: none)
 Only linear interpolation for padding!</p>
 </dd></dl>
@@ -182,31 +182,31 @@ Only linear interpolation for padding!</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-resample-image-v">
-<span id="cmdoption-resample-image-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-resample-image-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-resample-image-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-resample-image-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-resample-image-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-resample-image-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-resample-image-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-resample-image-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-resample-image-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-resample-image-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-resample-image-h">
-<span id="cmdoption-resample-image-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-resample-image-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-resample-image-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-resample-image-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -219,7 +219,7 @@ Only linear interpolation for padding!</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -228,13 +228,13 @@ Only linear interpolation for padding!</p>
         <li class="right" >
           <a href="remesh.html" title="remesh"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

@@ -1,4 +1,4 @@
 <map id="mirtk::MinActiveStoppingCriterion" name="mirtk::MinActiveStoppingCriterion">
-<area shape="rect" id="node2" href="$classmirtk_1_1StoppingCriterion.html" title="{mirtk::StoppingCriterion\n||+ Fulfilled()\l+ Initialize()\l+ New()\l+ Print()\l+ ~StoppingCriterion()\l# operator=()\l# StoppingCriterion()\l# StoppingCriterion()\l# StoppingCriterion()\l}" alt="" coords="30,204,191,399"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="48,5,173,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1StoppingCriterion.html" title="{mirtk::StoppingCriterion\n||+ Fulfilled()\l+ Initialize()\l+ New()\l+ Print()\l+ ~StoppingCriterion()\l# operator=()\l# StoppingCriterion()\l# StoppingCriterion()\l# StoppingCriterion()\l}" alt="" coords="30,205,188,400"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="47,6,172,157"/>
 </map>

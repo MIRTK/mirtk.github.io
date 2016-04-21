@@ -1,4 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structmirtk_1_1ForEachVoxelBody.html" title="mirtk::ForEachVoxelBody\l\&lt; VoxelFunc \&gt;" alt="" coords="5,5,177,47"/>
-<area shape="rect" id="node2" href="$structmirtk_1_1ForEachVoxelIfBody.html" title="mirtk::ForEachVoxelIfBody\l\&lt; VoxelFunc, OutsideFunc \&gt;" alt="" coords="225,5,416,47"/>
+<area shape="rect" id="node1" href="$structmirtk_1_1CurvatureConstraint_1_1NeighborInfo.html" title="Structure for node neighborhood set entry. " alt="" coords="5,5,181,46"/>
 </map>

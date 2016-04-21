@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,34 +24,34 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
-    <link rel="next" title="cut-brain" href="cut-brain.html" />
-    <link rel="prev" title="convert-pointset" href="convert-pointset.html" />
+    <link rel="next" title="copy-pointset-attributes-from-mat" href="copy-pointset-attributes-from-mat.html" />
+    <link rel="prev" title="convert-pointset-to-mat" href="convert-pointset-to-mat.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="cut-brain.html" title="cut-brain"
+          <a href="copy-pointset-attributes-from-mat.html" title="copy-pointset-attributes-from-mat"
              accesskey="N">next</a></li>
         <li class="right" >
-          <a href="convert-pointset.html" title="convert-pointset"
+          <a href="convert-pointset-to-mat.html" title="convert-pointset-to-mat"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,13 +87,13 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="copy-pointset-attributes">
 <h1>copy-pointset-attributes<a class="headerlink" href="#copy-pointset-attributes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk copy-pointset-attributes &lt;source&gt; &lt;target&gt; [&lt;output&gt;] [options]
+<div class="highlight-python"><div class="highlight"><pre>copy-pointset-attributes &lt;source&gt; &lt;target&gt; [&lt;output&gt;] [options]
 </pre></div>
 </div>
 </div>
@@ -109,25 +109,25 @@ target points are kept unchanged.</p>
 <p>If the &lt;attr&gt; argument is given to any of the option below, the copied data
 array is set as the new &#8220;scalars&#8221;, &#8220;vectors&#8221;, &#8220;tcoords&#8221;, or &#8220;normals&#8221;
 attribute, respectively, of the output point set.</p>
-<p>When no options are given, the <a class="reference internal" href="#cmdoption-copy-pointset-attributes-scalars"><code class="xref std std-option docutils literal"><span class="pre">copy-pointset-attributes</span> <span class="pre">-scalars</span></code></a> are copied over.</p>
+<p>When no options are given, the <a class="reference internal" href="#cmdoption-copy-pointset-attributes-scalars"><em class="xref std std-option">copy-pointset-attributes -scalars</em></a> are copied over.</p>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-arg-source">
-<code class="descname">source</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-arg-source" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">source</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-arg-source" title="Permalink to this definition">¶</a></dt>
 <dd><p>Point set from which to copy the point/cell data.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-arg-target">
-<code class="descname">target</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-arg-target" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">target</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-arg-target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Point set to which to add the point/cell data.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-arg-output">
-<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-arg-output" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output point set with copied point/cell data.
 If not specified, the target file is overwritten.</p>
 </dd></dl>
@@ -137,43 +137,43 @@ If not specified, the target file is overwritten.</p>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-scalars">
-<code class="descname">-scalars</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-scalars" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-scalars</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-scalars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy &#8220;scalars&#8221; data set attribute. (default)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-vectors">
-<code class="descname">-vectors</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-vectors" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-vectors</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-vectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy &#8220;vectors&#8221; data set attribute.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-vectors-as-points">
-<code class="descname">-vectors-as-points</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-vectors-as-points" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-vectors-as-points</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-vectors-as-points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set points of target to &#8220;vectors&#8221; data set attribute of source.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-normals">
-<code class="descname">-normals</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-normals" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-normals</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy &#8220;normals&#8221; data set attribute.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-tcoords">
-<code class="descname">-tcoords</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-tcoords" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-tcoords</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-tcoords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy &#8220;tcoords&#8221; data set attribute.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-tcoords-as-points">
-<code class="descname">-tcoords-as-points</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-tcoords-as-points" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-tcoords-as-points</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-tcoords-as-points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set points of target to &#8220;tcoords&#8221; data set attribute of source.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-points">
-<code class="descname">-points</code><code class="descclassname"> [&lt;target_name&gt; [&lt;attr&gt;]]</code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-points" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-points</tt><tt class="descclassname"> [&lt;target_name&gt; [&lt;attr&gt;]]</tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add points of source as point data of target.
 When no &lt;target_name&gt; (and &lt;attr&gt;) specified, the points of the
 target point set are replaced by those of the source point set.
@@ -183,38 +183,38 @@ the remaining points of the target point set are unchanged.</p>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-pointdata">
-<code class="descname">-pointdata</code><code class="descclassname"> &lt;name|index&gt; [&lt;target_name&gt; [&lt;attr&gt;]]</code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-pointdata" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-pointdata</tt><tt class="descclassname"> &lt;name|index&gt; [&lt;target_name&gt; [&lt;attr&gt;]]</tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-pointdata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name or index of source point data to copy.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-pointdata-as-points">
-<code class="descname">-pointdata-as-points</code><code class="descclassname"> &lt;name|index&gt;</code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-pointdata-as-points" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-pointdata-as-points</tt><tt class="descclassname"> &lt;name|index&gt;</tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-pointdata-as-points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replaces the points of the target point set by the first three
 components of the specified source point data array.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-pointmask">
-<code class="descname">-pointmask</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-pointmask" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-pointmask</tt><tt class="descclassname"> &lt;name&gt;</tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-pointmask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add point data array which indicates copied point data.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-celldata">
-<code class="descname">-celldata</code><code class="descclassname">  &lt;name|index&gt; [&lt;target_name&gt; [&lt;attr&gt;]]</code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-celldata" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-celldata</tt><tt class="descclassname">  &lt;name|index&gt; [&lt;target_name&gt; [&lt;attr&gt;]]</tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-celldata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name or index of source cell data to copy.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-cellmask">
-<code class="descname">-cellmask</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-cellmask" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-cellmask</tt><tt class="descclassname"> &lt;name&gt;</tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-cellmask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add cell data array which indicates copied cell data.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-case-">
-<code class="descname">-case-</code><code class="descclassname">[in]sensitive</code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-case-" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-case-</tt><tt class="descclassname">[in]sensitive</tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-case-" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lookup source arrays by case [in]sensitive name. (default: insensitive)</p>
 </dd></dl>
 
@@ -223,31 +223,31 @@ components of the specified source point data array.</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-v">
-<span id="cmdoption-copy-pointset-attributes-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-copy-pointset-attributes-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-h">
-<span id="cmdoption-copy-pointset-attributes-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-copy-pointset-attributes-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -256,7 +256,7 @@ components of the specified source point data array.</p>
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-color">
-<span id="cmdoption-copy-pointset-attributes-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-copy-pointset-attributes-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -265,7 +265,7 @@ components of the specified source point data array.</p>
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-copy-pointset-attributes-threads">
-<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-copy-pointset-attributes-threads" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-copy-pointset-attributes-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -278,22 +278,22 @@ components of the specified source point data array.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="cut-brain.html" title="cut-brain"
+          <a href="copy-pointset-attributes-from-mat.html" title="copy-pointset-attributes-from-mat"
              >next</a></li>
         <li class="right" >
-          <a href="convert-pointset.html" title="convert-pointset"
+          <a href="convert-pointset-to-mat.html" title="convert-pointset-to-mat"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

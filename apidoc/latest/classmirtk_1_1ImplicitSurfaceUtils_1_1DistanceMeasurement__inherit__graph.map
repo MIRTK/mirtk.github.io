@@ -1,7 +1,7 @@
 <map id="mirtk::ImplicitSurfaceUtils::DistanceMeasurement" name="mirtk::ImplicitSurfaceUtils::DistanceMeasurement">
-<area shape="rect" id="node2" href="$structmirtk_1_1ImplicitSurfaceUtils_1_1MaxWidth.html" title="Determine maximum of the widths measured in multiple directions. " alt="" coords="5,270,177,362"/>
-<area shape="rect" id="node3" href="$structmirtk_1_1ImplicitSurfaceUtils_1_1MeanWidth.html" title="Determine average of the widths measured in multiple directions. " alt="" coords="201,270,373,362"/>
-<area shape="rect" id="node4" href="$structmirtk_1_1ImplicitSurfaceUtils_1_1MedianWidth.html" title="Determine average of the widths measured in multiple directions. " alt="" coords="397,270,569,362"/>
-<area shape="rect" id="node5" href="$structmirtk_1_1ImplicitSurfaceUtils_1_1MinWidth.html" title="Determine minimum of the widths measured in multiple directions. " alt="" coords="593,270,765,362"/>
-<area shape="rect" id="node6" href="$structmirtk_1_1ImplicitSurfaceUtils_1_1WidthExtrema.html" title="Determine maximum of the widths measured in multiple directions. " alt="" coords="789,248,961,384"/>
+<area shape="rect" id="node2" href="$structmirtk_1_1ImplicitSurfaceUtils_1_1MaxWidth.html" title="Determine maximum of the widths measured in multiple directions. " alt="" coords="5,270,179,362"/>
+<area shape="rect" id="node3" href="$structmirtk_1_1ImplicitSurfaceUtils_1_1MeanWidth.html" title="Determine average of the widths measured in multiple directions. " alt="" coords="203,270,376,362"/>
+<area shape="rect" id="node4" href="$structmirtk_1_1ImplicitSurfaceUtils_1_1MedianWidth.html" title="Determine average of the widths measured in multiple directions. " alt="" coords="400,270,573,362"/>
+<area shape="rect" id="node5" href="$structmirtk_1_1ImplicitSurfaceUtils_1_1MinWidth.html" title="Determine minimum of the widths measured in multiple directions. " alt="" coords="597,270,771,362"/>
+<area shape="rect" id="node6" href="$structmirtk_1_1ImplicitSurfaceUtils_1_1WidthExtrema.html" title="Determine maximum of the widths measured in multiple directions. " alt="" coords="795,248,968,384"/>
 </map>

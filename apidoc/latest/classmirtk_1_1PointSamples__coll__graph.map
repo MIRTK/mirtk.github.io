@@ -1,5 +1,5 @@
 <map id="mirtk::PointSamples" name="mirtk::PointSamples">
-<area shape="rect" id="node2" href="$classmirtk_1_1PointSet.html" title="{mirtk::PointSet\n|# _m\l# _n\l# POINTSET_SIZE\l|+ Add()\l+ Add()\l+ Add()\l+ AddVTK()\l+ BoundingBox()\l+ Capacity()\l+ CenterOfGravity()\l+ Clear()\l+ ClosestPoint()\l+ Del()\land 36 more...\l}" alt="" coords="8,521,147,775"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="24,5,149,156"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1Point.html" title="{mirtk::Point\n|+ _x\l+ _y\l+ _z\l|+ Distance()\l+ Distance()\l+ operator!=()\l+ operator()()\l+ operator()()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*=()\land 36 more...\l}" alt="" coords="94,205,202,459"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1PointSet.html" title="{mirtk::PointSet\n|# _m\l# _n\l# POINTSET_SIZE\l|+ Add()\l+ Add()\l+ Add()\l+ AddVTK()\l+ BoundingBox()\l+ Capacity()\l+ CenterOfGravity()\l+ Clear()\l+ ClosestPoint()\l+ Del()\land 36 more...\l}" alt="" coords="6,525,143,779"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="21,6,147,157"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Point.html" title="{mirtk::Point\n|+ _x\l+ _y\l+ _z\l|+ Distance()\l+ Distance()\l+ operator!=()\l+ operator()()\l+ operator()()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*=()\land 36 more...\l}" alt="" coords="91,208,197,461"/>
 </map>

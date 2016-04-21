@@ -1,4 +1,4 @@
 <map id="mirtk::GenericRegistrationDebugger" name="mirtk::GenericRegistrationDebugger">
-<area shape="rect" id="node2" href="$classmirtk_1_1Observer.html" title="{mirtk::Observer\n|# _Observables\l|+ ClearObservables()\l+ HandleEvent()\l+ NameOfClass()\l+ NameOfType()\l# Observables()\l# Observables()\l# Observables()\l# Observer()\l# Observer()\l# operator=()\l# ~Observer()\l}" alt="" coords="44,204,193,428"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="56,5,181,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Observer.html" title="{mirtk::Observer\n||+ ClearObservables()\l+ HandleEvent()\l# Observer()\l# Observer()\l# operator=()\l# ~Observer()\l}" alt="" coords="43,206,189,357"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="53,6,179,157"/>
 </map>

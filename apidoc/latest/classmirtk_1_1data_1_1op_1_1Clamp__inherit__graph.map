@@ -1,4 +1,4 @@
 <map id="mirtk::data::op::Clamp" name="mirtk::data::op::Clamp">
-<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1op_1_1ElementWiseUnaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="5,145,168,267"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="32,5,141,97"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1op_1_1ElementWiseUnaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="5,147,168,269"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="32,6,141,98"/>
 </map>

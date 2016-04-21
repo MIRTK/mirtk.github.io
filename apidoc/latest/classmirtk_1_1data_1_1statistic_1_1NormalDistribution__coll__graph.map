@@ -1,6 +1,6 @@
 <map id="mirtk::data::statistic::NormalDistribution" name="mirtk::data::statistic::NormalDistribution">
-<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1statistic_1_1StDev.html" title="Robust evaluation of standard deviation. " alt="" coords="19,572,155,708"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1statistic_1_1Var.html" title="Robust variance evaluation. " alt="" coords="5,403,169,524"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1statistic_1_1Statistic.html" title="Base class of all data statistics. " alt="" coords="19,145,155,355"/>
-<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="33,5,142,97"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1statistic_1_1StDev.html" title="Robust evaluation of standard deviation. " alt="" coords="5,619,216,784"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1statistic_1_1Var.html" title="Robust variance evaluation. " alt="" coords="5,419,216,570"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1statistic_1_1Statistic.html" title="Base class of all data statistics. " alt="" coords="39,147,181,371"/>
+<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="56,6,165,98"/>
 </map>

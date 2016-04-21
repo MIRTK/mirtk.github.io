@@ -1,4 +1,4 @@
 <map id="mirtk::EdgeConnectivity" name="mirtk::EdgeConnectivity">
-<area shape="rect" id="node2" href="$classmirtk_1_1GenericSparseMatrix.html" title="{mirtk::GenericSparseMatrix\l\&lt; int \&gt;\n|# _Col\l# _Data\l# _Index\l# _Row\l|+ Clear()\l+ ClearIndex()\l+ Col()\l+ Col()\l+ ColNNZ()\l+ ColSum()\l+ Column()\l+ Column()\l+ ColumnSum()\l+ Diag()\land 55 more...\l# CheckEntries()\l# CopyAttributes()\l}" alt="" coords="16,204,200,516"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="45,5,171,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1GenericSparseMatrix.html" title="{mirtk::GenericSparseMatrix\l\&lt; int \&gt;\n|# _Col\l# _Data\l# _Index\l# _Row\l|+ Clear()\l+ ClearIndex()\l+ Col()\l+ Col()\l+ ColNNZ()\l+ ColSum()\l+ Column()\l+ Column()\l+ ColumnSum()\l+ Diag()\land 55 more...\l# CheckEntries()\l# CopyAttributes()\l}" alt="" coords="16,205,197,517"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="44,6,169,157"/>
 </map>

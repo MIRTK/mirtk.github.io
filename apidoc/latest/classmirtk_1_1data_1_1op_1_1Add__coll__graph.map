@@ -1,4 +1,4 @@
 <map id="mirtk::data::op::Add" name="mirtk::data::op::Add">
-<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1op_1_1ElementWiseBinaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="5,145,181,296"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="39,5,148,97"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1op_1_1ElementWiseBinaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="5,147,179,298"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="37,6,147,98"/>
 </map>

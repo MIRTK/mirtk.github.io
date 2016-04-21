@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,32 +26,32 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="sidebar.html" />
-    <link rel="next" title="Get Help" href="help.html" />
+    <link rel="top" title="MIRTK" href="index.html" />
+    <link rel="next" title="Support" href="help.html" />
     <link rel="prev" title="Download" href="download.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="help.html" title="Get Help"
+          <a href="help.html" title="Support"
              accesskey="N">next</a></li>
         <li class="right" >
           <a href="download.html" title="Download"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -76,6 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#cmake-gui-example">CMake GUI Example</a></li>
@@ -87,7 +88,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#installationsteps">Installation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
 </ul>
@@ -98,10 +99,21 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<span id="buildrequirements"></span><h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>For the generation of build environment specific build configuration files,
+the Cross-platform Make tool named <a class="reference external" href="http://cmake.org/">CMake</a> is needed. The minimum required version
+for Linux and OS X is 2.8.12, while version 3.4 or newer is needed on Windows.</p>
+<p>For the compilation of the MIRTK source code, a C++ compiler with support for the
+<a class="reference external" href="https://isocpp.org/wiki/faq/cpp11">C++11</a> standard is required. On Windows, the minimum required Visual Studio compiler
+version is 18.0. A compatible compiler is shipped with Visual Studio 2013 or newer.</p>
+<p>To execute the <a class="reference internal" href="commands.html"><em>MIRTK commands</em></a>, a <a class="reference external" href="https://www.python.org">Python</a> installation is required.
+Note that Python has to be installed before configuring the MIRTK build using CMake.</p>
+</div>
 <div class="section" id="dependencies">
 <span id="builddependencies"></span><h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
 <p>The MIRTK source code makes use of the following third-party libraries:</p>
@@ -162,13 +174,13 @@
 <td>any</td>
 <td>System or Source code</td>
 <td>No module</td>
-<td><a class="reference internal" href="modules/imageio.html"><em>Image I/O</em></a></td>
+<td><a class="reference internal" href="modules/io.html"><em>I/O</em></a></td>
 </tr>
 <tr class="row-odd"><td><a class="reference external" href="http://www.chokkan.org/software/liblbfgs/">libLBFGS</a></td>
 <td>any</td>
 <td>Source code</td>
 <td>No module</td>
-<td><a class="reference internal" href="modules/imageio.html"><em>Image I/O</em></a></td>
+<td><a class="reference internal" href="modules/io.html"><em>I/O</em></a></td>
 </tr>
 </tbody>
 </table>
@@ -176,12 +188,10 @@
 to be build must be installed separately before building the MIRTK libraries and command-line
 tools. <a class="reference external" href="http://www.boost.org">Boost</a> and <a class="reference external" href="http://eigen.tuxfamily.org">Eigen</a> are a minimum requirement to build MIRTK. The needed source files of
 these header-only libraries can optionally be copied into the MIRTK <cite>ThirdParty/</cite> directory
-as described in the <a class="reference internal" href="download.html#downloadsources"><span>download instructions</span></a>. The source code of
+as described in the <a class="reference internal" href="download.html#downloadsources"><em>download instructions</em></a>. The source code of
 the <a class="reference external" href="http://sourceforge.net/projects/niftilib/">NiftiCLib</a> and <a class="reference external" href="http://www.chokkan.org/software/liblbfgs/">libLBFGS</a> libraries are included in the basic download package and need
 not be installed. The WITH_NiftiCLib build option can be used, however, to force the use
-of an existing NiftiCLib installation. See <a class="reference internal" href="#configurationsteps"><span>build configuration steps below</span></a>.</p>
-<p>To execute the <a class="reference internal" href="commands.html"><em>Applications</em></a>, a <a class="reference external" href="https://www.python.org">Python</a> installation is further required. Note that
-Python has to be installed before building the MIRTK from its source code.</p>
+of an existing NiftiCLib installation. See <a class="reference internal" href="#configurationsteps"><em>build configuration steps below</em></a>.</p>
 <p>The intra-module dependencies are as follows. When a module is enabled,
 all modules required by this module are automatically enabled as well.</p>
 <table border="1" class="docutils">
@@ -209,7 +219,7 @@ all modules required by this module are automatically enabled as well.</p>
 <td><a class="reference internal" href="modules/common.html"><em>Common</em></a>, <a class="reference internal" href="modules/numerics.html"><em>Numerics</em></a></td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="modules/imageio.html"><em>Image I/O</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/io.html"><em>I/O</em></a></td>
 <td><a class="reference internal" href="modules/image.html"><em>Image</em></a></td>
 <td>&nbsp;</td>
 </tr>
@@ -237,7 +247,7 @@ all modules required by this module are automatically enabled as well.</p>
 </table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>Notice that the <a class="reference internal" href="modules/imageio.html"><em>Image I/O</em></a> module is required only by the <a class="reference internal" href="commands.html"><em>Applications</em></a> which read/write images.</p>
+<p>Notice that the <a class="reference internal" href="modules/io.html"><em>I/O</em></a> module is required only by the <a class="reference internal" href="commands.html"><em>Applications</em></a> which read/write images or point sets.</p>
 <p class="last">For a complete list of module dependencies, see the BasisProject.cmake file and in
 some cases also the config/Depends.cmake file if present in the respective module directory.</p>
 </div>
@@ -247,7 +257,7 @@ some cases also the config/Depends.cmake file if present in the respective modul
 <div class="section" id="cmake-gui-example">
 <h3>CMake GUI Example<a class="headerlink" href="#cmake-gui-example" title="Permalink to this headline">¶</a></h3>
 <p>After obtaining a copy of the MIRTK source files, generate the build configuration
-files for your build tool of choice using <a class="reference external" href="http://cmake.org/">CMake</a> version 2.8.12 or newer.
+files for your build tool of choice using <a class="reference external" href="http://cmake.org/">CMake</a>.
 We recommend the use of the CMake GUI with the &#8220;Grouped&#8221; checkbox enabled.
 Advanced options should normally not be required to be modified.</p>
 <p>An example screenshot of a CMake configuration is shown below.</p>
@@ -307,28 +317,31 @@ until no further changes are made and the &#8220;Generate&#8221; button is enabl
 <tr class="row-odd"><td>WITH_ARPACK</td>
 <td>Enable eigendecomposition of sparse matrices. Required for spectral surface matching.</td>
 </tr>
-<tr class="row-even"><td>WITH_MATLAB</td>
+<tr class="row-even"><td>WITH_FLANN</td>
+<td>Use the Fast Library for Approximate Nearest Neighbors to locate points.</td>
+</tr>
+<tr class="row-odd"><td>WITH_MATLAB</td>
 <td>Enable output of matrices to .mat files and use of MATLAB functions.</td>
 </tr>
-<tr class="row-odd"><td>WITH_NiftiCLib</td>
+<tr class="row-even"><td>WITH_NiftiCLib</td>
 <td>Force use of existing system installation of <a class="reference external" href="http://sourceforge.net/projects/niftilib/">NiftiCLib</a>.</td>
 </tr>
-<tr class="row-even"><td>WITH_PNG</td>
+<tr class="row-odd"><td>WITH_PNG</td>
 <td>Enable writing of 2D images in <a class="reference external" href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG</a> file format.</td>
 </tr>
-<tr class="row-odd"><td>WITH_PROFILING</td>
+<tr class="row-even"><td>WITH_PROFILING</td>
 <td>Enable profiling of code execution to find runtime bottlenecks.</td>
 </tr>
-<tr class="row-even"><td>WITH_TBB</td>
+<tr class="row-odd"><td>WITH_TBB</td>
 <td>Enable multi-threaded execution using Intel Threading Building Blocks. (recommended)</td>
 </tr>
-<tr class="row-odd"><td>WITH_UMFPACK</td>
+<tr class="row-even"><td>WITH_UMFPACK</td>
 <td>Automatically enabled when WITH_ARPACK is ON.</td>
 </tr>
-<tr class="row-even"><td>WITH_VTK</td>
+<tr class="row-odd"><td>WITH_VTK</td>
 <td>Enable processing of VTK files. Automatically enabled when PointSet module is enabled.</td>
 </tr>
-<tr class="row-odd"><td>WITH_ZLIB</td>
+<tr class="row-even"><td>WITH_ZLIB</td>
 <td>Enable reading/writing of compressed files using <a class="reference external" href="http://www.zlib.net">zlib</a>. (recommended)</td>
 </tr>
 </tbody>
@@ -353,7 +366,7 @@ will be linked with, enable the &#8220;Advanced&#8221; checkbox at the top of th
 </div>
 <div class="section" id="dependency-not-found">
 <h3>Dependency not found<a class="headerlink" href="#dependency-not-found" title="Permalink to this headline">¶</a></h3>
-<p>When a <a class="reference internal" href="#builddependencies"><span>build dependency</span></a> such as VTK, for example, was not found,
+<p>When a <a class="reference internal" href="#builddependencies"><em>build dependency</em></a> such as VTK, for example, was not found,
 a DEPENDS variable becomes visible in the GUI (i.e. not marked as advanced) which must be set
 to either the installation prefix of the dependency or the directory containing a CMake package
 configuration file (e.g., <cite>VTKConfig.cmake</cite>). See the following screenshot for an example where
@@ -372,7 +385,7 @@ Terminal window in case of the GNU Make or Ninja build tools to build the MIRTK.
 <span class="nb">cd</span> <span class="nv">$MIRTK_BINARY_DIR</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal"><span class="pre">MIRTK_SOURCE_DIR</span></code> is the top-level directory containing the MIRTK source
+<p>where <tt class="docutils literal"><span class="pre">MIRTK_SOURCE_DIR</span></tt> is the top-level directory containing the MIRTK source
 files (see <a class="reference internal" href="download.html"><em>Download</em></a> command).</p>
 <p>Using GNU Make, run:</p>
 <div class="highlight-python"><div class="highlight"><pre>make -j 8
@@ -382,7 +395,7 @@ files (see <a class="reference internal" href="download.html"><em>Download</em><
 <div class="highlight-python"><div class="highlight"><pre><span class="n">ninja</span>
 </pre></div>
 </div>
-<p>When <code class="docutils literal"><span class="pre">BUILD_DOCUMENTATION</span></code> was set to <code class="docutils literal"><span class="pre">ON</span></code> during the build configuration, the
+<p>When <tt class="docutils literal"><span class="pre">BUILD_DOCUMENTATION</span></tt> was set to <tt class="docutils literal"><span class="pre">ON</span></tt> during the build configuration, the
 documentation files can be build (before installation!) using the &#8220;doc&#8221; target.</p>
 <p>Using GNU Make, run:</p>
 <div class="highlight-python"><div class="highlight"><pre>make doc
@@ -406,15 +419,15 @@ building the &#8220;install&#8221; target.</p>
 </pre></div>
 </div>
 <p>To enable the convenient use of the <a class="reference internal" href="commands.html"><em>Applications</em></a>, it is recommended
-to permanently add the <code class="docutils literal"><span class="pre">$MIRTK_ROOT/bin</span></code> directory to the
+to permanently add the <tt class="docutils literal"><span class="pre">$MIRTK_ROOT/bin</span></tt> directory to the
 <a class="reference external" href="https://en.wikipedia.org/wiki/PATH_(variable)">PATH environment variable</a> in the shell configuration file
-(e.g., <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> or <code class="docutils literal"><span class="pre">$HOME/.profile</span></code>), where MIRTK_ROOT is the directory
+(e.g., <tt class="docutils literal"><span class="pre">$HOME/.bashrc</span></tt> or <tt class="docutils literal"><span class="pre">$HOME/.bash_profile</span></tt>), where MIRTK_ROOT is the directory
 chosen as CMAKE_INSTALL_PREFIX above.</p>
 <p>The MIRTK installation further includes a <a class="reference external" href="https://www.gnu.org/software/bash/">Bash</a>
 completions script which when sourced in your Bash configuration file,
-enables auto-completion of available MIRTK commands for the <code class="docutils literal"><span class="pre">mirtk</span></code> command
-and <code class="docutils literal"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">[options]</span> <span class="pre">&lt;user&gt;/mirtk</span></code>. To enable the MIRTK Bash completions,
-add the following lines to <code class="docutils literal"><span class="pre">$HOME/.bashrc</span></code> (Linux) or <code class="docutils literal"><span class="pre">$HOME/.bash_profile</span></code> (OS X):</p>
+enables <a class="reference external" href="https://www.gnu.org/software/bash/manual/html_node/Programmable-Completion.html">auto-completion</a> of available MIRTK commands for the <tt class="docutils literal"><span class="pre">mirtk</span></tt> command.
+To enable the MIRTK Bash completions, add the following lines to <tt class="docutils literal"><span class="pre">$HOME/.bashrc</span></tt> (Linux)
+or <tt class="docutils literal"><span class="pre">$HOME/.bash_profile</span></tt> (OS X):</p>
 <div class="highlight-python"><div class="highlight"><pre>[ ! -f &quot;$MIRTK_ROOT/share/completion/bash/mirtk&quot; ] ||
 source &quot;$MIRTK_ROOT/share/completion/bash/mirtk&quot;
 
@@ -427,11 +440,11 @@ source &quot;$MIRTK_ROOT/share/mirtk/completion/bash/mirtk&quot;
 <p class="first admonition-title">Note</p>
 <p class="last">When the CMAKE_INSTALL_PREFIX contains a directory named &#8220;mirtk&#8221; (or &#8220;mirtk-&lt;version&gt;&#8221;)
 as in case of the default installation prefix &#8220;/opt/mirtk-&lt;version&gt;&#8221;, the library
-files and MIRTK commands are installed into <code class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/lib</span></code>. But when the
+files and MIRTK commands are installed into <tt class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/lib</span></tt>. But when the
 installation path does not include the project name, as in case of &#8220;/usr/local&#8221;, for example,
-these files are copied into the directory <code class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/lib/mirtk</span></code>.
+these files are copied into the directory <tt class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/lib/mirtk</span></tt>.
 The same applies to other installation subdirectories such as &#8220;share&#8221; and &#8220;doc&#8221;.
-Only the executable files are always copied to <code class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/bin</span></code>.</p>
+Only the executable files are always copied to <tt class="docutils literal"><span class="pre">$CMAKE_INSTALL_PREFIX/bin</span></tt>.</p>
 </div>
 </div>
 </div>
@@ -442,21 +455,21 @@ Only the executable files are always copied to <code class="docutils literal"><s
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="help.html" title="Get Help"
+          <a href="help.html" title="Support"
              >next</a></li>
         <li class="right" >
           <a href="download.html" title="Download"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

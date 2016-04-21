@@ -1,4 +1,4 @@
 <map id="mirtk::PointSet" name="mirtk::PointSet">
-<area shape="rect" id="node2" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="21,5,147,156"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Point.html" title="{mirtk::Point\n|+ _x\l+ _y\l+ _z\l|+ Distance()\l+ Distance()\l+ operator!=()\l+ operator()()\l+ operator()()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*=()\land 36 more...\l}" alt="" coords="91,205,199,459"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="20,6,145,157"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Point.html" title="{mirtk::Point\n|+ _x\l+ _y\l+ _z\l|+ Distance()\l+ Distance()\l+ operator!=()\l+ operator()()\l+ operator()()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*=()\land 36 more...\l}" alt="" coords="89,208,196,461"/>
 </map>

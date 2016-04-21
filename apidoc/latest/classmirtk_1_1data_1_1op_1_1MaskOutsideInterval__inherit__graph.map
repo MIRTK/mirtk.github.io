@@ -1,4 +1,4 @@
 <map id="mirtk::data::op::MaskOutsideInterval" name="mirtk::data::op::MaskOutsideInterval">
-<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1op_1_1ElementWiseUnaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="20,145,183,267"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="47,5,156,97"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1op_1_1ElementWiseUnaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="19,147,181,269"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="45,6,155,98"/>
 </map>

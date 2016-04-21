@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="transform-image" href="transform-image.html" />
     <link rel="prev" title="smooth-image" href="smooth-image.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="smooth-image.html" title="smooth-image"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,14 +87,14 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="smooth-surface">
 <h1>smooth-surface<a class="headerlink" href="#smooth-surface" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk smooth-surface &lt;input&gt; &lt;output&gt; [options]
-mirtk smooth-surface &lt;input&gt; &lt;output&gt; &lt;iterations&gt; [lambda] [mu] [options] (deprecated)
+<div class="highlight-python"><div class="highlight"><pre>smooth-surface &lt;input&gt; &lt;output&gt; [options]
+smooth-surface &lt;input&gt; &lt;output&gt; &lt;iterations&gt; [lambda] [mu] [options] (deprecated)
 </pre></div>
 </div>
 </div>
@@ -107,8 +107,8 @@ far each node moves towards the local centroid (0 &lt;= lambda &lt;= 1). The new
 of a node is a weighted combination of its previous position and the neighbours&#8217; centroid.
 If lambda = 1, a node is moved all the way to the centroid, while lambda = 0 keeps a node
 at its previous position.</p>
-<p>For a low-pass filtering of the surface mesh, set <a class="reference internal" href="#cmdoption-smooth-surface-lambda"><code class="xref std std-option docutils literal"><span class="pre">smooth-surface</span> <span class="pre">-lambda</span></code></a> to a positive value in
-the range (0, 1), and <a class="reference internal" href="#cmdoption-smooth-surface-mu"><code class="xref std std-option docutils literal"><span class="pre">smooth-surface</span> <span class="pre">-mu</span></code></a> to a negative value greater in magnitude than
+<p>For a low-pass filtering of the surface mesh, set <a class="reference internal" href="#cmdoption-smooth-surface-lambda"><em class="xref std std-option">smooth-surface -lambda</em></a> to a positive value in
+the range (0, 1), and <a class="reference internal" href="#cmdoption-smooth-surface-mu"><em class="xref std std-option">smooth-surface -mu</em></a> to a negative value greater in magnitude than
 lambda, i.e., 0 &lt; lambda &lt; mu. For a detailed explanation of the parameters,
 cf. Taubin, Curve and Surface Smoothing without Shrinkage, ICCV 1995.</p>
 </div>
@@ -116,32 +116,32 @@ cf. Taubin, Curve and Surface Smoothing without Shrinkage, ICCV 1995.</p>
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-smooth-surface-arg-input">
-<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-arg-input" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">input</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-smooth-surface-arg-input" title="Permalink to this definition">¶</a></dt>
 <dd><p>File name of input surface mesh.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-arg-output">
-<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-arg-output" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-smooth-surface-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>File name of output surface mesh.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-arg-iterations">
-<code class="descname">iterations</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-arg-iterations" title="Permalink to this definition">¶</a></dt>
-<dd><p>No. of smoothing iterations. (deprecated: see <a class="reference internal" href="#cmdoption-smooth-surface-iterations"><code class="xref std std-option docutils literal"><span class="pre">-iterations</span></code></a> option)</p>
+<tt class="descname">iterations</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-smooth-surface-arg-iterations" title="Permalink to this definition">¶</a></dt>
+<dd><p>No. of smoothing iterations. (deprecated: see <a class="reference internal" href="#cmdoption-smooth-surface-iterations"><em class="xref std std-option">-iterations</em></a> option)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-arg-lambda">
-<code class="descname">lambda</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-arg-lambda" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">lambda</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-smooth-surface-arg-lambda" title="Permalink to this definition">¶</a></dt>
 <dd><p>Relaxation/scale factor for odd  iterations. (deprecated: see -lambda option)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-arg-mu">
-<code class="descname">mu</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-arg-mu" title="Permalink to this definition">¶</a></dt>
-<dd><p>Magnitude of scale factor for even iterations. (deprecated: see <a class="reference internal" href="#cmdoption-smooth-surface-mu"><code class="xref std std-option docutils literal"><span class="pre">-mu</span></code></a> option)</p>
+<tt class="descname">mu</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-smooth-surface-arg-mu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Magnitude of scale factor for even iterations. (deprecated: see <a class="reference internal" href="#cmdoption-smooth-surface-mu"><em class="xref std std-option">-mu</em></a> option)</p>
 </dd></dl>
 
 </div>
@@ -149,80 +149,80 @@ cf. Taubin, Curve and Surface Smoothing without Shrinkage, ICCV 1995.</p>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-smooth-surface-iterations">
-<code class="descname">-iterations</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-smooth-surface-iterations" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-iterations</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-smooth-surface-iterations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of smoothing iterations. (default: 1)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-lambda">
-<code class="descname">-lambda</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-smooth-surface-lambda" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-lambda</tt><tt class="descclassname"> &lt;float&gt;</tt><a class="headerlink" href="#cmdoption-smooth-surface-lambda" title="Permalink to this definition">¶</a></dt>
 <dd><p>Relaxation/scale factor for odd  iterations. (default: 1)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-mu">
-<code class="descname">-mu</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-smooth-surface-mu" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-mu</tt><tt class="descclassname"> &lt;float&gt;</tt><a class="headerlink" href="#cmdoption-smooth-surface-mu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Relaxation/scale factor for even iterations. (default: lambda)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-points">
-<code class="descname">-points</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-points" title="Permalink to this definition">¶</a></dt>
-<dd><p>Smooth node positions. (default if no <a class="reference internal" href="#cmdoption-smooth-surface-scalars"><code class="xref std std-option docutils literal"><span class="pre">-scalars</span></code></a> specified)</p>
+<tt class="descname">-points</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-smooth-surface-points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Smooth node positions. (default if no <a class="reference internal" href="#cmdoption-smooth-surface-scalars"><em class="xref std std-option">-scalars</em></a> specified)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-scalars">
-<code class="descname">-scalars</code><code class="descclassname"> [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-smooth-surface-scalars" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-scalars</tt><tt class="descclassname"> [&lt;name&gt;]</tt><a class="headerlink" href="#cmdoption-smooth-surface-scalars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of scalar point data array to smooth. If no &lt;name&gt; given,
 all non-attribute scalar arrays and the SCALARS if any are smoothed.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-exclnode">
-<code class="descname">-exclnode</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-exclnode" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-exclnode</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-smooth-surface-exclnode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exclude node itself from smoothing, only average adjacent values.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-inclnode">
-<code class="descname">-inclnode</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-inclnode" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-inclnode</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-smooth-surface-inclnode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Include node itself in the smoothing.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-areaweighted">
-<code class="descname">-areaweighted</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-areaweighted" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-areaweighted</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-smooth-surface-areaweighted" title="Permalink to this definition">¶</a></dt>
 <dd><p>Area weighted Laplacian relaxation of surface node positions. (default)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-windowedsinc">
-<code class="descname">-windowedsinc</code><code class="descclassname"> [&lt;band&gt;]</code><a class="headerlink" href="#cmdoption-smooth-surface-windowedsinc" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-windowedsinc</tt><tt class="descclassname"> [&lt;band&gt;]</tt><a class="headerlink" href="#cmdoption-smooth-surface-windowedsinc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adjust point positions using a windowed sinc interpolation function.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-combinatorial">
-<code class="descname">-combinatorial</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-combinatorial" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-combinatorial</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-smooth-surface-combinatorial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Combinatorial weighting of adjacent nodes.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-distance">
-<code class="descname">-distance</code><code class="descclassname"> [&lt;sigma&gt;]</code><a class="headerlink" href="#cmdoption-smooth-surface-distance" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-distance</tt><tt class="descclassname"> [&lt;sigma&gt;]</tt><a class="headerlink" href="#cmdoption-smooth-surface-distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inverse distance weighted smoothing kernel.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-gaussian">
-<code class="descname">-gaussian</code><code class="descclassname"> [&lt;sigma&gt;]</code><a class="headerlink" href="#cmdoption-smooth-surface-gaussian" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-gaussian</tt><tt class="descclassname"> [&lt;sigma&gt;]</tt><a class="headerlink" href="#cmdoption-smooth-surface-gaussian" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gaussian smoothing kernel.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-anisotropic">
-<code class="descname">-anisotropic</code><code class="descclassname"> ([&lt;sigma&gt;] [&lt;tensor_array&gt;] | &lt;sigma1&gt; &lt;sigma2&gt; [(&lt;e2_array&gt; | &lt;e1_array&gt; &lt;e2_array&gt;)])</code><a class="headerlink" href="#cmdoption-smooth-surface-anisotropic" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-anisotropic</tt><tt class="descclassname"> ([&lt;sigma&gt;] [&lt;tensor_array&gt;] | &lt;sigma1&gt; &lt;sigma2&gt; [(&lt;e2_array&gt; | &lt;e1_array&gt; &lt;e2_array&gt;)])</tt><a class="headerlink" href="#cmdoption-smooth-surface-anisotropic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Anisotropic Gaussian smoothing kernel given input tensor field point data array
 named &lt;tensor_array&gt;. The default tensor field used no arguments or only &lt;sigma&gt; specified
 is the curvature tensor output of polydatacurvature. Alternatively, specify &lt;sigma1&gt; and &lt;sigma2&gt;
@@ -232,7 +232,7 @@ and maximum curvature direction in point data arrays named &lt;e1_array&gt; and 
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-track">
-<code class="descname">-track</code><code class="descclassname"> [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-smooth-surface-track" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-track</tt><tt class="descclassname"> [&lt;name&gt;]</tt><a class="headerlink" href="#cmdoption-smooth-surface-track" title="Permalink to this definition">¶</a></dt>
 <dd><p>Track the signed distances traversed by points (positive is outwards).
 The optional arguments specifies the name of output output point data array.
 (default: &#8220;smoothingDists&#8221; if option is given without &lt;name&gt;).</p>
@@ -240,10 +240,10 @@ The optional arguments specifies the name of output output point data array.
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-threshold">
-<code class="descname">-threshold</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-smooth-surface-threshold" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-threshold</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-smooth-surface-threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>A value indicating the smoothness as the L_2 norm of H^2 over the surface.
 See Tosun, MedIA, 2004. Iterations stop if the norm for the surface drops
-below the given value. Only used for <a class="reference internal" href="#cmdoption-smooth-surface-areaweighted"><code class="xref std std-option docutils literal"><span class="pre">-areaweighted</span></code></a> smoothing.</p>
+below the given value. Only used for <a class="reference internal" href="#cmdoption-smooth-surface-areaweighted"><em class="xref std std-option">-areaweighted</em></a> smoothing.</p>
 </dd></dl>
 
 </div>
@@ -251,31 +251,31 @@ below the given value. Only used for <a class="reference internal" href="#cmdopt
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-smooth-surface-v">
-<span id="cmdoption-smooth-surface-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-smooth-surface-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-smooth-surface-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-smooth-surface-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-smooth-surface-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-smooth-surface-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-smooth-surface-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-smooth-surface-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-smooth-surface-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-smooth-surface-h">
-<span id="cmdoption-smooth-surface-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-smooth-surface-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-smooth-surface-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-smooth-surface-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -288,7 +288,7 @@ below the given value. Only used for <a class="reference internal" href="#cmdopt
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -297,13 +297,13 @@ below the given value. Only used for <a class="reference internal" href="#cmdopt
         <li class="right" >
           <a href="smooth-image.html" title="smooth-image"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

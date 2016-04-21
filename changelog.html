@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,18 +25,18 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="sidebar.html" />
+    <link rel="top" title="MIRTK" href="index.html" />
     <link rel="next" title="Download" href="download.html" />
     <link rel="prev" title="Classes" href="apidoc/classes.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,12 +45,12 @@
         <li class="right" >
           <a href="apidoc/classes.html" title="Classes"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -74,6 +74,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">News</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">2016</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#release-1-1-0-apr-21">Release 1.1.0 (Apr 21)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#release-1-0-0-jan-15">Release 1.0.0 (Jan 15)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#release-1-0rc2-jan-13">Release 1.0rc2 (Jan 13)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#release-1-0rc1-jan-10">Release 1.0rc1 (Jan 10)</a></li>
@@ -83,7 +84,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
 </ul>
@@ -94,12 +95,30 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="release-notes">
 <h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
 <h2>2016<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="release-1-1-0-apr-21">
+<span id="v1-1-0"></span><h3>Release 1.1.0 (Apr 21)<a class="headerlink" href="#release-1-1-0-apr-21" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Use <a class="reference external" href="http://cmake-basis.github.io/changelog.html#release-3-3-0-apr-19-2016">CMake BASIS Modules 3.3.0</a>.</li>
+<li>Fixed build with VTK 7.</li>
+<li>Fixed Python scripts to run with both Python 2 and 3.</li>
+<li>Fixed Visual Studio build warnings and errors.</li>
+<li>Enabled build as shared libraries on Windows.</li>
+<li>Renamed <tt class="docutils literal"><span class="pre">Image</span> <span class="pre">I/O</span></tt> module to <a class="reference internal" href="modules/io.html"><em>I/O</em></a>.</li>
+<li>Read/Write both NIfTI-1 and NIfTI-2 image files.</li>
+<li>Read/Write point sets and surfaces from GIFTI files.</li>
+<li>Always save binary files in big-endian order.</li>
+<li>Added Python package for execution of MIRTK commands.</li>
+<li>Provide Docker image with MIRTK installation.</li>
+<li>Refactored Applications module.</li>
+<li>Various minor fixes of commands.</li>
+</ul>
+</div>
 <div class="section" id="release-1-0-0-jan-15">
 <span id="v1-0-0"></span><h3>Release 1.0.0 (Jan 15)<a class="headerlink" href="#release-1-0-0-jan-15" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -111,8 +130,8 @@
 <span id="v1-0rc2"></span><h3>Release 1.0rc2 (Jan 13)<a class="headerlink" href="#release-1-0rc2-jan-13" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Refactored initialization of object factories, GNU g++ on Ubuntu excludes unused shared libraries.</li>
-<li>Use <code class="docutils literal"><span class="pre">::</span></code> as CMake target namespace separator.</li>
-<li>Moved image I/O classes to new <a class="reference internal" href="modules/imageio.html"><em>Image I/O</em></a> module.</li>
+<li>Use <tt class="docutils literal"><span class="pre">::</span></tt> as CMake target namespace separator.</li>
+<li>Moved image I/O classes to new <a class="reference internal" href="modules/io.html"><em>Image I/O</em></a> module.</li>
 <li>Build libLBFGS source files as part of <a class="reference internal" href="modules/numerics.html"><em>Numerics</em></a> module.</li>
 <li>Build NIfTI C Library as part of Image I/O module.</li>
 </ul>
@@ -122,7 +141,7 @@
 <ul class="simple">
 <li>Initial release candidate.</li>
 <li>Most functionality available, but with some recent untested advanced features.</li>
-<li>Please report any issues on GitHub (see <a class="reference internal" href="help.html"><em>Get Help</em></a>).</li>
+<li>Please report any issues on GitHub (see <a class="reference internal" href="help.html"><em>Support</em></a>).</li>
 </ul>
 </div>
 </div>
@@ -134,7 +153,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -143,12 +162,12 @@
         <li class="right" >
           <a href="apidoc/classes.html" title="Classes"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

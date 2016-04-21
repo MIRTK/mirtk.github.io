@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="remesh" href="remesh.html" />
     <link rel="prev" title="reflect-image" href="reflect-image.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="reflect-image.html" title="reflect-image"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,21 +87,21 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="register">
 <h1>register<a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk register -images &lt;images.lst&gt; [options]
-mirtk register -image &lt;image1&gt; [-dof &lt;dof1&gt;] -image &lt;image2&gt; [-dof &lt;dof2&gt;]... [options]
-mirtk register -image &lt;image1&gt; &lt;image2&gt;... [options]
-mirtk register &lt;image1&gt; &lt;image2&gt;... [options]
-mirtk register &lt;image_sequence&gt; [options]
-mirtk register -pset &lt;pointset1&gt; [-dof &lt;dof1&gt;] -pset &lt;pointset2&gt; [-dof &lt;dof2&gt;]... [options]
-mirtk register &lt;dataset1&gt; &lt;dataset2&gt;... [options]
-mirtk register -pset &lt;pointset1&gt; &lt;pointset2&gt;... [options]
-mirtk register -image &lt;image1&gt; -points &lt;pointset1&gt; [-dof &lt;dof1&gt;]... [options]
+<div class="highlight-python"><div class="highlight"><pre>register -images &lt;images.lst&gt; [options]
+register -image &lt;image1&gt; [-dof &lt;dof1&gt;] -image &lt;image2&gt; [-dof &lt;dof2&gt;]... [options]
+register -image &lt;image1&gt; &lt;image2&gt;... [options]
+register &lt;image1&gt; &lt;image2&gt;... [options]
+register &lt;image_sequence&gt; [options]
+register -pset &lt;pointset1&gt; [-dof &lt;dof1&gt;] -pset &lt;pointset2&gt; [-dof &lt;dof2&gt;]... [options]
+register &lt;dataset1&gt; &lt;dataset2&gt;... [options]
+register -pset &lt;pointset1&gt; &lt;pointset2&gt;... [options]
+register -image &lt;image1&gt; -points &lt;pointset1&gt; [-dof &lt;dof1&gt;]... [options]
 </pre></div>
 </div>
 </div>
@@ -134,7 +134,7 @@ parameter &#8220;Volume preservation weight&#8221; to a positive value.</p>
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-dofout">
-<code class="descname">-dofout</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofout" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-dofout</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-dofout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write transformation to specified file.</p>
 </dd></dl>
 
@@ -143,14 +143,14 @@ parameter &#8220;Volume preservation weight&#8221; to a positive value.</p>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-model">
-<code class="descname">-model</code><code class="descclassname"> &lt;m1&gt;[+&lt;m2&gt;...]</code><a class="headerlink" href="#cmdoption-register-model" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-model</tt><tt class="descclassname"> &lt;m1&gt;[+&lt;m2&gt;...]</tt><a class="headerlink" href="#cmdoption-register-model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transformation model(s). (default: Rigid+Affine+FFD)
-Alternatively, use &#8220;-par &#8216;Transformation model&#8217; &lt;name&gt;&#8221; (see <a class="reference internal" href="#cmdoption-register-par"><code class="xref std std-option docutils literal"><span class="pre">-par</span></code></a>).</p>
+Alternatively, use &#8220;-par &#8216;Transformation model&#8217; &lt;name&gt;&#8221; (see <a class="reference internal" href="#cmdoption-register-par"><em class="xref std std-option">-par</em></a>).</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-image">
-<code class="descname">-image</code><code class="descclassname"> &lt;file&gt;...</code><a class="headerlink" href="#cmdoption-register-image" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-image</tt><tt class="descclassname"> &lt;file&gt;...</tt><a class="headerlink" href="#cmdoption-register-image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input image to be registered. The order in which the images are
 given on the command-line corresponds to the image indices used
 in the registration energy formulation. The first input image has
@@ -159,7 +159,7 @@ index 1 and is denoted by the symbol I(1) in the image similarity term.</p>
 
 <dl class="option">
 <dt id="cmdoption-register-pset">
-<code class="descname">-pset</code><code class="descclassname"> &lt;file&gt;...</code><a class="headerlink" href="#cmdoption-register-pset" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-pset</tt><tt class="descclassname"> &lt;file&gt;...</tt><a class="headerlink" href="#cmdoption-register-pset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input points, curve(s), surface(s), or other simplicial complex(es).
 The order in which the point set files are given on the command-line
 corresponds to the point set indices used in the registration energy
@@ -170,23 +170,23 @@ measure (PDM) term.</p>
 
 <dl class="option">
 <dt id="cmdoption-register-dof">
-<code class="descname">-dof</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dof" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-dof</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-dof" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a pre-computed affine transformation to be applied to
-the preceeding image and/or polydata. Note the difference to <a class="reference internal" href="#cmdoption-register-dofin"><code class="xref std std-option docutils literal"><span class="pre">-dofin</span></code></a>,
-which specifies an initial estimate of the <a class="reference internal" href="#cmdoption-register-dofout"><code class="xref std std-option docutils literal"><span class="pre">-dofout</span></code></a> transformation.
+the preceeding image and/or polydata. Note the difference to <a class="reference internal" href="#cmdoption-register-dofin"><em class="xref std std-option">-dofin</em></a>,
+which specifies an initial estimate of the <a class="reference internal" href="#cmdoption-register-dofout"><em class="xref std std-option">-dofout</em></a> transformation.
 (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-dof_i">
-<code class="descname">-dof_i</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dof_i" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-dof_i</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-dof_i" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a pre-computed affine transformation whose inverse is to be
-applied to the preceeding image and/or polydata (see <a class="reference internal" href="#cmdoption-register-dof"><code class="xref std std-option docutils literal"><span class="pre">-dof</span></code></a>). (default: none)</p>
+applied to the preceeding image and/or polydata (see <a class="reference internal" href="#cmdoption-register-dof"><em class="xref std std-option">-dof</em></a>). (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-images">
-<code class="descname">-images</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-images" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-images</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-images" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text file with N lines containing the file names of each
 2D/3D input image, optionally followed by a space character and the
 associated (relative) acquisition time (in ms). If no acquisition
@@ -194,18 +194,18 @@ time is given, the temporal offset of the image header is used.
 Images specified as positional arguments are read before the images
 named in this (then optional) text file and the index of the images
 given in the text file are offset by the number of images named
-as positional arguments or using <a class="reference internal" href="#cmdoption-register-image"><code class="xref std std-option docutils literal"><span class="pre">-image</span></code></a>, respectively.</p>
+as positional arguments or using <a class="reference internal" href="#cmdoption-register-image"><em class="xref std std-option">-image</em></a>, respectively.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-psets">
-<code class="descname">-psets</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-psets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Equivalent to <a class="reference internal" href="#cmdoption-register-images"><code class="xref std std-option docutils literal"><span class="pre">-images</span></code></a>, but for point sets (<a class="reference internal" href="#cmdoption-register-pset"><code class="xref std std-option docutils literal"><span class="pre">-pset</span></code></a>).</p>
+<tt class="descname">-psets</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-psets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Equivalent to <a class="reference internal" href="#cmdoption-register-images"><em class="xref std std-option">-images</em></a>, but for point sets (<a class="reference internal" href="#cmdoption-register-pset"><em class="xref std std-option">-pset</em></a>).</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-dofs">
-<code class="descname">-dofs</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofs" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-dofs</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-dofs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read names of affine transformations of input images from
 specified text file. The affine transformations are set as
 if the images had been transformed by these before. Hence,
@@ -217,7 +217,7 @@ not included are assumed to not be further pre-transformed. (default: none)</p>
 
 <dl class="option">
 <dt id="cmdoption-register-mask">
-<code class="descname">-mask</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-mask" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-mask</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-mask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reference mask which defines the domain within which to evaluate the
 energy function (i.e. image similarity). The registered images will
 thus be resampled within the corresponding domain of the world system.
@@ -226,19 +226,19 @@ By default, the foreground of the target image defines this domain.</p>
 
 <dl class="option">
 <dt id="cmdoption-register-dofins">
-<code class="descname">-dofins</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofins" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-dofins</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-dofins" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read pairwise transformations from the files specified
 in the given text file which lists for each pair-wise
 transformation the corresponding target image, followed
 by the source image and the name of the transformation file.
 Note that the target and source image names must be listed
-in the <a class="reference internal" href="#cmdoption-register-images"><code class="xref std std-option docutils literal"><span class="pre">-images</span></code></a> list file. (default: none)</p>
+in the <a class="reference internal" href="#cmdoption-register-images"><em class="xref std std-option">-images</em></a> list file. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-dofin">
-<code class="descname">-dofin</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read initial transformation from file if <a class="reference internal" href="#cmdoption-register-dofins"><code class="xref std std-option docutils literal"><span class="pre">-dofins</span></code></a> not specified.
+<tt class="descname">-dofin</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-dofin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read initial transformation from file if <a class="reference internal" href="#cmdoption-register-dofins"><em class="xref std std-option">-dofins</em></a> not specified.
 Otherwise, writes the initial transformation obtained by approximating
 the pairwise transformations to the named file.
 If the given transformation cannot be used directly as starting
@@ -250,20 +250,20 @@ output transformation of the registration. (default: none)</p>
 
 <dl class="option">
 <dt id="cmdoption-register-par">
-<code class="descname">-par</code><code class="descclassname"> &lt;name&gt; &lt;value&gt;</code><a class="headerlink" href="#cmdoption-register-par" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-par</tt><tt class="descclassname"> &lt;name&gt; &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-register-par" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify parameter value directly as command argument.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-parin">
-<code class="descname">-parin</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-parin" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-parin</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-parin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read parameters from configuration file. If &#8220;stdin&#8221; or &#8220;cin&#8221;,
 the parameters are read from standard input instead. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-parout">
-<code class="descname">-parout</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-parout" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-parout</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-parout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write parameters to the named configuration file. Note that after
 initializaton of the registration, an interim configuration file is
 written. This file is overwritten once the registration finished with
@@ -276,31 +276,31 @@ final configuration used during the course of the registration.
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-v">
-<span id="cmdoption-register-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-register-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-register-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-register-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 1)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-register-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-register-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-register-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-register-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-register-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-register-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-h">
-<span id="cmdoption-register-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-register-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-register-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-register-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -309,7 +309,7 @@ final configuration used during the course of the registration.
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-color">
-<span id="cmdoption-register-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-register-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-register-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-register-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -318,7 +318,7 @@ final configuration used during the course of the registration.
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-threads">
-<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-register-threads" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-register-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -331,7 +331,7 @@ final configuration used during the course of the registration.
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -340,13 +340,13 @@ final configuration used during the course of the registration.
         <li class="right" >
           <a href="reflect-image.html" title="reflect-image"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

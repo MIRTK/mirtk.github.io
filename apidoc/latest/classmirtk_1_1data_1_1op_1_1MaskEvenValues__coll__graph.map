@@ -1,4 +1,4 @@
 <map id="mirtk::data::op::MaskEvenValues" name="mirtk::data::op::MaskEvenValues">
-<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1op_1_1ElementWiseUnaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="12,145,175,267"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="39,5,148,97"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1op_1_1ElementWiseUnaryOp.html" title="Base class of element&#45;wise data transformations. " alt="" coords="12,147,175,269"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="39,6,148,98"/>
 </map>

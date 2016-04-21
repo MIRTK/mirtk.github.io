@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="extract-image-region" href="extract-image-region.html" />
     <link rel="prev" title="extract-connected-components" href="extract-connected-components.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="extract-connected-components.html" title="extract-connected-components"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,13 +87,13 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="extract-connected-points">
 <h1>extract-connected-points<a class="headerlink" href="#extract-connected-points" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk extract-connected-points &lt;input&gt; &lt;output&gt; [options]
+<div class="highlight-python"><div class="highlight"><pre>extract-connected-points &lt;input&gt; &lt;output&gt; [options]
 </pre></div>
 </div>
 </div>
@@ -107,13 +107,13 @@ connected component has index 0.</p>
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-extract-connected-points-arg-input">
-<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-points-arg-input" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">input</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-points-arg-input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input point set.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-points-arg-output">
-<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-points-arg-output" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-points-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output point set.</p>
 </dd></dl>
 
@@ -122,31 +122,31 @@ connected component has index 0.</p>
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-extract-connected-points-m">
-<code class="descname">-m</code><code class="descclassname"> &lt;m&gt;</code><a class="headerlink" href="#cmdoption-extract-connected-points-m" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-m</tt><tt class="descclassname"> &lt;m&gt;</tt><a class="headerlink" href="#cmdoption-extract-connected-points-m" title="Permalink to this definition">¶</a></dt>
 <dd><p>Index of first connected component to extract. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-points-n">
-<code class="descname">-n</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-extract-connected-points-n" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-n</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-extract-connected-points-n" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract (at most) n components. (default: 1)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-points-compress">
-<span id="cmdoption-extract-connected-points-nocompress"></span><code class="descname">-compress</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocompress</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-points-compress" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-extract-connected-points-nocompress"></span><tt class="descname">-compress</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocompress</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-points-compress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write XML VTK with compression enabled/disabled. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-points-ascii">
-<code class="descname">-ascii</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-points-ascii" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-ascii</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-points-ascii" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write legacy VTK in ASCII  format. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-points-binary">
-<code class="descname">-binary</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-points-binary" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-binary</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-points-binary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write legacy VTK in binary format. (default: on)</p>
 </dd></dl>
 
@@ -155,31 +155,31 @@ connected component has index 0.</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-extract-connected-points-v">
-<span id="cmdoption-extract-connected-points-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-extract-connected-points-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-extract-connected-points-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-extract-connected-points-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-points-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-extract-connected-points-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-extract-connected-points-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-points-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-extract-connected-points-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-extract-connected-points-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-points-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-points-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-points-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-connected-points-h">
-<span id="cmdoption-extract-connected-points-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-connected-points-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-extract-connected-points-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-connected-points-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -192,7 +192,7 @@ connected component has index 0.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -201,13 +201,13 @@ connected component has index 0.</p>
         <li class="right" >
           <a href="extract-connected-components.html" title="extract-connected-components"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

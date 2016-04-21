@@ -1,4 +1,4 @@
 <map id="mirtk::PolyDataRemeshing" name="mirtk::PolyDataRemeshing">
-<area shape="rect" id="node2" href="$classmirtk_1_1PolyDataFilter.html" title="{mirtk::PolyDataFilter\n||+ GetOutput()\l+ mirtkOnOffMacro()\l+ Run()\l+ SetInput()\l+ SetInputData()\l+ Update()\l# Execute()\l# Finalize()\l# Initialize()\l# InitializeEdgeTable()\l# operator=()\l# PolyDataFilter()\l# PolyDataFilter()\l# ~PolyDataFilter()\l}" alt="" coords="39,204,194,472"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="54,5,179,156"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1PolyDataFilter.html" title="{mirtk::PolyDataFilter\n||+ GetOutput()\l+ mirtkOnOffMacro()\l+ Run()\l+ SetInput()\l+ SetInputData()\l+ Update()\l# Execute()\l# Finalize()\l# Initialize()\l# InitializeEdgeTable()\l# operator=()\l# PolyDataFilter()\l# PolyDataFilter()\l# ~PolyDataFilter()\l}" alt="" coords="39,206,189,474"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="52,6,177,157"/>
 </map>

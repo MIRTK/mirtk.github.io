@@ -1,4 +1,4 @@
 <map id="mirtk::BinaryVoxelFunction::SSD" name="mirtk::BinaryVoxelFunction::SSD">
-<area shape="rect" id="node2" href="$structmirtk_1_1VoxelReduction.html" title="{mirtk::VoxelReduction\n||+ join()\l+ split()\l+ IsReduction()\l}" alt="" coords="37,175,189,281"/>
-<area shape="rect" id="node3" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="42,5,185,127"/>
+<area shape="rect" id="node2" href="$structmirtk_1_1VoxelReduction.html" title="{mirtk::VoxelReduction\n||+ join()\l+ split()\l+ IsReduction()\l}" alt="" coords="37,176,187,283"/>
+<area shape="rect" id="node3" href="$structmirtk_1_1VoxelFunction.html" title="{mirtk::VoxelFunction\n|+ _Domain\l|+ join()\l+ split()\l+ VoxelFunction()\l+ IsReduction()\l}" alt="" coords="41,6,183,127"/>
 </map>

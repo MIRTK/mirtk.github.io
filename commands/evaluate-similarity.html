@@ -1,0 +1,355 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>evaluate-similarity &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v1.1 (1abd31d)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../index.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="evaluate-surface-overlap" href="evaluate-surface-overlap.html" />
+    <link rel="prev" title="evaluate-overlap" href="evaluate-overlap.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="evaluate-surface-overlap.html" title="evaluate-surface-overlap"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="evaluate-overlap.html" title="evaluate-overlap"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="evaluate-similarity">
+<h1>evaluate-similarity<a class="headerlink" href="#evaluate-similarity" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>evaluate-similarity &lt;target&gt; &lt;source&gt;... [options]
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Evaluates the (dis-)similarity of two intensity images.</p>
+<p>If more than one source image is given, the (dis-)similarity between
+each of these and the target is evaluated. By default, common image
+(dis-)similarity metrics are reported. One or more metrics for the
+evaluation can be chosen using <a class="reference internal" href="#cmdoption-evaluate-similarity-metric"><em class="xref std std-option">evaluate-similarity -metric</em></a>.</p>
+<p>The input source image can either be pre-aligned with the target image
+or the output of a previous registration can be specified using
+<a class="reference internal" href="#cmdoption-evaluate-similarity-dofin"><em class="xref std std-option">evaluate-similarity -dofin</em></a>.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-arg-target">
+<tt class="descname">target</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-similarity-arg-target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target image.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-arg-source">
+<tt class="descname">source</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-similarity-arg-source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source image.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-mask">
+<tt class="descname">-mask</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target image region of interest mask. (default: <a class="reference internal" href="#cmdoption-evaluate-similarity-Tp"><em class="xref std std-option">-Tp</em></a>)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-dofin">
+<tt class="descname">-dofin</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-dofin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source image transformation. (default: Id)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-interp">
+<tt class="descname">-interp</tt><tt class="descclassname"> &lt;mode&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-interp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpolation mode. (default: linear with padding)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-metric">
+<tt class="descname">-metric</tt><tt class="descclassname"> &lt;sim&gt;...</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image (dis-)similarity measure(s):
+JE, CC, MI, NMI, SSD, CR_XY, CR_YX, LC, K, ML, NGF_COS, LNCC, CoVar, PSNR</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-p">
+<span id="cmdoption-evaluate-similarity-padding"></span><tt class="descname">-p</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-padding</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>Common image background value/threshold. (default: NaN)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-Tp">
+<tt class="descname">-Tp</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-Tp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target image background value/threshold. (default: NaN)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-Sp">
+<tt class="descname">-Sp</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-Sp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source image background value/threshold. (default: NaN)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-bins">
+<tt class="descname">-bins</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-bins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of histogram bins.        (default: min(dynamic range, 255))</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-Tbins">
+<tt class="descname">-Tbins</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-Tbins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of target histogram bins. (default: min(dynamic range, 255))</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-Sbins">
+<tt class="descname">-Sbins</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-Sbins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of source histogram bins. (default: min(dynamic range, 255))</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-parzen">
+<tt class="descname">-parzen</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-similarity-parzen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Smooth histogram samples using cubic B-spline Parzen window. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-Rx1">
+<tt class="descname">-Rx1</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-Rx1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Leftmost  target voxel index along x axis.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-Rx2">
+<tt class="descname">-Rx2</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-Rx2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rightmost target voxel index along x axis.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-Ry1">
+<tt class="descname">-Ry1</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-Ry1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Leftmost  target voxel index along y axis.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-Ry2">
+<tt class="descname">-Ry2</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-Ry2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rightmost target voxel index along y axis.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-Rz1">
+<tt class="descname">-Rz1</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-Rz1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Leftmost  target voxel index along z axis.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-Rz2">
+<tt class="descname">-Rz2</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-Rz2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rightmost target voxel index along z axis.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="output-options">
+<h2>Output options<a class="headerlink" href="#output-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-precision">
+<tt class="descname">-precision</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-precision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of significant digits. (default: 5)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-delim">
+<tt class="descname">-delim</tt><tt class="descclassname"> &lt;char&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-delim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delimiter for output of multiple metric values. (default: ,)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-table">
+<tt class="descname">-table</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-similarity-table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output in tabular format.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-csv">
+<tt class="descname">-csv</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-similarity-csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output as comma separated values table.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-tsv">
+<tt class="descname">-tsv</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-similarity-tsv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output as tab   separated values table.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-noid">
+<tt class="descname">-noid</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-similarity-noid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude image IDs from output. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-fullid">
+<tt class="descname">-fullid</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-similarity-fullid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use complete input image file path as ID.
+(default: file name without image extension)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-v">
+<span id="cmdoption-evaluate-similarity-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-debug">
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-version">
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-revision">
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-similarity-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-h">
+<span id="cmdoption-evaluate-similarity-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-similarity-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="terminal-options">
+<h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-color">
+<span id="cmdoption-evaluate-similarity-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-similarity-color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable colored output. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="parallelization-options">
+<h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-similarity-threads">
+<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-evaluate-similarity-threads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="evaluate-surface-overlap.html" title="evaluate-surface-overlap"
+             >next</a></li>
+        <li class="right" >
+          <a href="evaluate-overlap.html" title="evaluate-overlap"
+             >previous</a> |</li>
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

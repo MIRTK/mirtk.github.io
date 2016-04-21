@@ -1,7 +1,7 @@
 <map id="mirtk::data::statistic::Percentile" name="mirtk::data::statistic::Percentile">
-<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1statistic_1_1LowerPercentileMean.html" title="Lower percentile mean calculation. " alt="" coords="5,587,176,708"/>
-<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1statistic_1_1RobustMean.html" title="Robust mean calculation, ignoring values below and above a certain percentile. " alt="" coords="200,587,336,708"/>
-<area shape="rect" id="node6" href="$classmirtk_1_1data_1_1statistic_1_1UpperPercentileMean.html" title="Upper percentile mean calculation. " alt="" coords="360,587,531,708"/>
-<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1statistic_1_1Statistic.html" title="Base class of all data statistics. " alt="" coords="200,145,336,355"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="213,5,323,97"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1statistic_1_1LowerPercentileMean.html" title="Lower percentile mean calculation. " alt="" coords="5,603,171,725"/>
+<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1statistic_1_1RobustMean.html" title="Robust mean calculation, ignoring values below and above a certain percentile. " alt="" coords="196,603,335,725"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1data_1_1statistic_1_1UpperPercentileMean.html" title="Upper percentile mean calculation. " alt="" coords="359,603,525,725"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1statistic_1_1Statistic.html" title="Base class of all data statistics. " alt="" coords="194,147,336,371"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="211,6,320,98"/>
 </map>

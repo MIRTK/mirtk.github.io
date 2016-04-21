@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,18 +26,18 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="sidebar.html" />
+    <link rel="top" title="MIRTK" href="index.html" />
     <link rel="next" title="Installation" href="install.html" />
     <link rel="prev" title="Release Notes" href="changelog.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -46,12 +46,12 @@
         <li class="right" >
           <a href="changelog.html" title="Release Notes"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -81,7 +81,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
 </ul>
@@ -92,7 +92,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="download">
 <h1>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h1>
@@ -106,24 +106,21 @@ Additional packages can be downloaded from the <a class="reference external" hre
 <p>All releases and latest development versions can be downloaded by executing the
 commands outlined below in a Terminal window. See the <a class="reference internal" href="changelog.html"><em>Release Notes</em></a> for a summary
 of changes in each release. When you download the source release packages (e.g.,
-<code class="docutils literal"><span class="pre">.tar.gz</span></code> or <code class="docutils literal"><span class="pre">.zip</span></code> archives) from the respective GitHub project pages instead,
+<tt class="docutils literal"><span class="pre">.tar.gz</span></tt> or <tt class="docutils literal"><span class="pre">.zip</span></tt> archives) from the respective GitHub project pages instead,
 you have to download and extract each individual MIRTK package separately and extract
 the files into the respective subdirectory of the top-level MIRTK source tree.
 We therefore recommend to use <a class="reference external" href="https://git-scm.com">Git</a> as follows to download the MIRTK source code
 distribution.</p>
 <p>To download the latest MIRTK source files using <a class="reference external" href="https://git-scm.com">Git</a>, use the following
 <a class="reference external" href="https://git-scm.com/docs/git-clone">git clone</a> command:</p>
-<div class="highlight-bash"><div class="highlight"><pre>git clone --branch master --depth <span class="m">1</span> -- https://github.com/BioMedIA/MIRTK.git
-<span class="nv">MIRTK_SOURCE_DIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PWD</span><span class="s2">/MIRTK&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>git clone --depth 1 -- https://github.com/BioMedIA/MIRTK.git
+<span class="nv">MIRTK_SOURCE_DIR</span><span class="o">=</span><span class="s2">&quot;$PWD/MIRTK&quot;</span>
 </pre></div>
 </div>
-<p>where the <code class="docutils literal"><span class="pre">--branch</span> <span class="pre">master</span> <span class="pre">--depth</span> <span class="pre">1</span></code> options request a shallow clone of the current
-stable version of the source files excluding previous revisions in order to save bandwidth,
-download time, and disk space. The <code class="docutils literal"><span class="pre">--depth</span></code> option may be omitted if you want to
-see the development history and contribute to the MIRTK. To download the latest
-development version, use the <code class="docutils literal"><span class="pre">--branch</span> <span class="pre">develop</span></code> option. Note that branches can be
-switched also after the initial clone command using the
-<a class="reference external" href="https://git-scm.com/docs/git-checkout">git checkout</a> command. To update an existing
+<p>where the <tt class="docutils literal"><span class="pre">--depth</span> <span class="pre">1</span></tt> options request a shallow clone of the current development
+version of the source files excluding previous revisions in order to save bandwidth,
+download time, and disk space. The <tt class="docutils literal"><span class="pre">--depth</span></tt> option may be omitted if you want to
+see the development history and contribute to the MIRTK. To update an existing
 copy of the BioMedIA/MIRTK repository, use the <a class="reference external" href="https://git-scm.com/docs/git-pull">git pull</a>
 command. Note that submodules also have to be updated in this case using the commands below.</p>
 <p>Before running any of the following Git commands, you have to change to the root directory
@@ -150,6 +147,7 @@ packages available for your operating system or initialize the desired Git submo
 before configuring the MIRTK build:</p>
 <div class="highlight-bash"><div class="highlight"><pre>git submodule update --init -- ThirdParty/Boost
 git submodule update --init -- ThirdParty/Eigen
+git submodule update --init -- ThirdParty/LBFGS
 </pre></div>
 </div>
 <p>The source files of core MIRTK modules are included in the top-level MIRTK repository
@@ -179,7 +177,8 @@ with the MIRTK license. See the following links for details:</p>
 <li><a class="reference external" href="https://github.com/MIRTK/Boost">ThirdParty/Boost</a>: <a class="reference external" href="http://www.boost.org/users/license.html">Boost Software License Version 1.0</a></li>
 <li><a class="reference external" href="https://github.com/MIRTK/Eigen">ThirdParty/Eigen</a>: <a class="reference external" href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License Version 2.0</a></li>
 <li><a class="reference external" href="https://github.com/BioMedIA/MIRTK/tree/master/ThirdParty/LBFGS">ThirdParty/LBFGS</a>: <a class="reference external" href="https://opensource.org/licenses/MIT">The MIT License</a></li>
-<li><a class="reference external" href="https://github.com/BioMedIA/MIRTK/tree/master/ThirdParty/NIfTI">ThirdParty/NIfTI</a>: <a class="reference external" href="https://en.wikipedia.org/wiki/Public_domain">Public domain</a></li>
+<li><a class="reference external" href="https://www.nitrc.org/projects/nifti">NIfTI C library</a>: <a class="reference external" href="https://en.wikipedia.org/wiki/Public_domain">Public domain</a></li>
+<li><a class="reference external" href="https://www.nitrc.org/projects/gifti/">GIFTI C library</a>: <a class="reference external" href="https://en.wikipedia.org/wiki/Public_domain">Public domain</a></li>
 </ul>
 </div>
 </div>
@@ -190,7 +189,7 @@ with the MIRTK license. See the following links for details:</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -199,12 +198,12 @@ with the MIRTK license. See the following links for details:</p>
         <li class="right" >
           <a href="changelog.html" title="Release Notes"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

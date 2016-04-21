@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (8ccfba9)',
+        VERSION:     'v1.1 (1abd31d)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="top" title="MIRTK" href="../index.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="deform-mesh" href="deform-mesh.html" />
     <link rel="prev" title="cut-brain" href="cut-brain.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
+  <body>
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="cut-brain.html" title="cut-brain"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
+<div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +76,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../help.html">Get Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
 </ul>
@@ -87,50 +87,50 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body" role="main">
+          <div class="body">
             
   <div class="section" id="decimate-surface">
 <h1>decimate-surface<a class="headerlink" href="#decimate-surface" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>mirtk decimate-surface &lt;input&gt; &lt;output&gt; [options]
+<div class="highlight-python"><div class="highlight"><pre>decimate-surface &lt;input&gt; &lt;output&gt; [options]
 </pre></div>
 </div>
 </div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>Decimates a (triangular) mesh using VTK&#8217;s <code class="docutils literal"><span class="pre">vtkQuadricDecimation</span></code> filter.
-In case of <a class="reference internal" href="#cmdoption-decimate-surface-pro"><code class="xref std std-option docutils literal"><span class="pre">decimate-surface</span> <span class="pre">-pro</span></code></a>, the <code class="docutils literal"><span class="pre">vtkDecimatePro</span></code> filter is used instead.</p>
+<p>Decimates a (triangular) mesh using VTK&#8217;s <tt class="docutils literal"><span class="pre">vtkQuadricDecimation</span></tt> filter.
+In case of <a class="reference internal" href="#cmdoption-decimate-surface-pro"><em class="xref std std-option">decimate-surface -pro</em></a>, the <tt class="docutils literal"><span class="pre">vtkDecimatePro</span></tt> filter is used instead.</p>
 </div>
 <div class="section" id="command-options">
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-decimate-surface-reduceby">
-<code class="descname">-reduceby</code><code class="descclassname"> &lt;percentage&gt;</code><a class="headerlink" href="#cmdoption-decimate-surface-reduceby" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-reduceby</tt><tt class="descclassname"> &lt;percentage&gt;</tt><a class="headerlink" href="#cmdoption-decimate-surface-reduceby" title="Permalink to this definition">¶</a></dt>
 <dd><p>Target reduction value in percentage. (default: 90)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-pro">
-<code class="descname">-pro</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-decimate-surface-pro" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-pro</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-decimate-surface-pro" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use vtkDecimatePro filter. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-compress">
-<span id="cmdoption-decimate-surface-nocompress"></span><code class="descname">-compress</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocompress</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-decimate-surface-compress" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-decimate-surface-nocompress"></span><tt class="descname">-compress</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocompress</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-decimate-surface-compress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to compress output .vtp file. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-binary">
-<code class="descname">-binary</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-decimate-surface-binary" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-binary</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-decimate-surface-binary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write binary data when output file name extension is .vtk. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-ascii">
-<code class="descname">-ascii</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-decimate-surface-ascii" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-ascii</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-decimate-surface-ascii" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write ASCII  data when output file name extension is .vtk. (default: off)</p>
 </dd></dl>
 
@@ -139,43 +139,43 @@ In case of <a class="reference internal" href="#cmdoption-decimate-surface-pro">
 <h2>Command options<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-decimate-surface-preservetopology">
-<code class="descname">-preservetopology</code><code class="descclassname"> [on|off]</code><a class="headerlink" href="#cmdoption-decimate-surface-preservetopology" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-preservetopology</tt><tt class="descclassname"> [on|off]</tt><a class="headerlink" href="#cmdoption-decimate-surface-preservetopology" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to preserve topology. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-splitangle">
-<code class="descname">-splitangle</code><code class="descclassname"> &lt;angle&gt;</code><a class="headerlink" href="#cmdoption-decimate-surface-splitangle" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-splitangle</tt><tt class="descclassname"> &lt;angle&gt;</tt><a class="headerlink" href="#cmdoption-decimate-surface-splitangle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify the mesh splitting angle. A negative value turns splitting off. (default: 75)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-featureangle">
-<code class="descname">-featureangle</code><code class="descclassname"> &lt;angle&gt;</code><a class="headerlink" href="#cmdoption-decimate-surface-featureangle" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-featureangle</tt><tt class="descclassname"> &lt;angle&gt;</tt><a class="headerlink" href="#cmdoption-decimate-surface-featureangle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify the mesh feature angle. (default: 15)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-maxerror">
-<code class="descname">-maxerror</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-decimate-surface-maxerror" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-maxerror</tt><tt class="descclassname"> &lt;float&gt;</tt><a class="headerlink" href="#cmdoption-decimate-surface-maxerror" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify the largest decimation error that is allowed. (default: 1e+299)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-abserror">
-<code class="descname">-abserror</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-decimate-surface-abserror" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specify absolute decimation error. (default: <a class="reference internal" href="#cmdoption-decimate-surface-maxerror"><code class="xref std std-option docutils literal"><span class="pre">-maxerror</span></code></a>)</p>
+<tt class="descname">-abserror</tt><tt class="descclassname"> &lt;float&gt;</tt><a class="headerlink" href="#cmdoption-decimate-surface-abserror" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify absolute decimation error. (default: <a class="reference internal" href="#cmdoption-decimate-surface-maxerror"><em class="xref std std-option">-maxerror</em></a>)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-accerror">
-<code class="descname">-accerror</code><code class="descclassname"> [on|off]</code><a class="headerlink" href="#cmdoption-decimate-surface-accerror" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-accerror</tt><tt class="descclassname"> [on|off]</tt><a class="headerlink" href="#cmdoption-decimate-surface-accerror" title="Permalink to this definition">¶</a></dt>
 <dd><p>Accumulate decimation error. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-boundarydeletion">
-<code class="descname">-boundarydeletion</code><code class="descclassname"> [on|off]</code><a class="headerlink" href="#cmdoption-decimate-surface-boundarydeletion" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-boundarydeletion</tt><tt class="descclassname"> [on|off]</tt><a class="headerlink" href="#cmdoption-decimate-surface-boundarydeletion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to allow deletion of vertices on the boundary of the mesh. (default: on)</p>
 </dd></dl>
 
@@ -184,31 +184,31 @@ In case of <a class="reference internal" href="#cmdoption-decimate-surface-pro">
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-decimate-surface-v">
-<span id="cmdoption-decimate-surface-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-decimate-surface-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-decimate-surface-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-decimate-surface-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-debug">
-<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-decimate-surface-debug" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-decimate-surface-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-version">
-<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-decimate-surface-version" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-decimate-surface-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-revision">
-<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-decimate-surface-revision" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-decimate-surface-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-decimate-surface-h">
-<span id="cmdoption-decimate-surface-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-decimate-surface-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-decimate-surface-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-decimate-surface-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -217,7 +217,7 @@ In case of <a class="reference internal" href="#cmdoption-decimate-surface-pro">
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-decimate-surface-color">
-<span id="cmdoption-decimate-surface-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-decimate-surface-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-decimate-surface-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-decimate-surface-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -226,7 +226,7 @@ In case of <a class="reference internal" href="#cmdoption-decimate-surface-pro">
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-decimate-surface-threads">
-<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-decimate-surface-threads" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-decimate-surface-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -239,7 +239,7 @@ In case of <a class="reference internal" href="#cmdoption-decimate-surface-pro">
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -248,13 +248,13 @@ In case of <a class="reference internal" href="#cmdoption-decimate-surface-pro">
         <li class="right" >
           <a href="cut-brain.html" title="cut-brain"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    <div class="footer">
+        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>
