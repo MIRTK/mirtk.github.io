@@ -1,4 +1,4 @@
 <map id="mirtk::PointSet" name="mirtk::PointSet">
-<area shape="rect" id="node2" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="20,6,145,157"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Point.html" title="{mirtk::Point\n|+ _x\l+ _y\l+ _z\l|+ Distance()\l+ Distance()\l+ operator!=()\l+ operator()()\l+ operator()()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*()\l+ operator*=()\land 36 more...\l}" alt="" coords="89,208,196,461"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="4,46,128,239"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Point.html" title="{mirtk::Point\n|+ _x\l+ _y\l+ _z\l|+ Distance()\l+ Distance()\l+ operator const double *()\l+ operator double *()\l+ operator!=()\l+ operator()()\l+ operator()()\l+ operator*()\l+ operator*()\l+ operator*()\land 49 more...\l}" alt="" coords="153,6,332,279"/>
 </map>

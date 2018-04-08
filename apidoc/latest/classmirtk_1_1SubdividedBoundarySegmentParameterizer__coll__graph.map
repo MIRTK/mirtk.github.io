@@ -1,0 +1,4 @@
+<map id="mirtk::SubdividedBoundarySegmentParameterizer" name="mirtk::SubdividedBoundarySegmentParameterizer">
+<area shape="rect" id="node2" href="$classmirtk_1_1BoundarySegmentParameterizer.html" title="{mirtk::BoundarySegmentParameterizer\n||+ NewCopy()\l+ Run()\l+ Value()\l+ ~BoundarySegmentParameterizer()\l# BoundarySegmentParameterizer()\l# BoundarySegmentParameterizer()\l# Finalize()\l# Initialize()\l# operator=()\l# Parameterize()\l}" alt="" coords="5,249,256,474"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="68,6,192,199"/>
+</map>

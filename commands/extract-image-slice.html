@@ -1,0 +1,163 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>extract-image-slice &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="extract-image-volume" href="extract-image-volume.html" />
+    <link rel="prev" title="extract-image-region" href="extract-image-region.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="extract-image-volume.html" title="extract-image-volume"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="extract-image-region.html" title="extract-image-region"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="extract-image-slice">
+<h1>extract-image-slice<a class="headerlink" href="#extract-image-slice" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">extract</span><span class="o">-</span><span class="n">image</span><span class="o">-</span><span class="nb">slice</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">z</span> <span class="n">Z</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span> <span class="n">N</span><span class="p">]</span> <span class="nb">input</span> <span class="n">output</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>No description available.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-extract-image-slice-arg-input">
+<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-image-slice-arg-input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input volume</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-image-slice-arg-output">
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-image-slice-arg-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output file path</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-extract-image-slice-h">
+<span id="cmdoption-extract-image-slice--help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname">  show this help message and exit</code><a class="headerlink" href="#cmdoption-extract-image-slice-h" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-image-slice-z">
+<code class="descname">-z</code><code class="descclassname"> Z</code><a class="headerlink" href="#cmdoption-extract-image-slice-z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Index of slice to extract</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-image-slice-n">
+<code class="descname">-n</code><code class="descclassname"> N</code><a class="headerlink" href="#cmdoption-extract-image-slice-n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of slices to extract. Extract all from -z to maximum
+index when non-positive</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="extract-image-volume.html" title="extract-image-volume"
+             >next</a></li>
+        <li class="right" >
+          <a href="extract-image-region.html" title="extract-image-region"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

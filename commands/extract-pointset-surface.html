@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,34 +24,34 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../index.html" />
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="extract-surface" href="extract-surface.html" />
-    <link rel="prev" title="extract-image-region" href="extract-image-region.html" />
+    <link rel="prev" title="extract-pointset-cells" href="extract-pointset-cells.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="extract-surface.html" title="extract-surface"
              accesskey="N">next</a></li>
         <li class="right" >
-          <a href="extract-image-region.html" title="extract-image-region"
+          <a href="extract-pointset-cells.html" title="extract-pointset-cells"
              accesskey="P">previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -59,9 +59,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
@@ -87,14 +84,14 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="extract-pointset-surface">
 <h1>extract-pointset-surface<a class="headerlink" href="#extract-pointset-surface" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>extract-pointset-surface [options]
-extract-pointset-surface [&lt;input&gt;...] &lt;output&gt; [options]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">extract</span><span class="o">-</span><span class="n">pointset</span><span class="o">-</span><span class="n">surface</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">extract</span><span class="o">-</span><span class="n">pointset</span><span class="o">-</span><span class="n">surface</span> <span class="p">[</span><span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;...</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -107,57 +104,88 @@ computed from the volumes defined by the individual input surfaces.</p>
 <div class="section" id="output-options">
 <h2>Output options<a class="headerlink" href="#output-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
-<dt id="cmdoption-extract-pointset-surface-fillholes">
-<tt class="descname">-fillholes</tt><tt class="descclassname"> [&lt;size&gt;]</tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-fillholes" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-extract-pointset-surface-source-array">
+<code class="descname">-source-array</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-source-array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add point/cell data array with the specified name with one-based
+labels corresponding to the input point set from which an output
+point/cell originates from. When the first input point set has
+a scalar array with the specified name, the labels of this first
+surface are preserved, while successive labels are offset by the
+maximum integer value of the input data array. This is useful when
+successively merging surface meshes instead of with a single execution
+of this command. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-surface-merge">
+<code class="descname">-merge</code><code class="descclassname"> [&lt;float&gt;]</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge points closer than the specified distance, default is 1e-6. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-surface-tolerance">
+<code class="descname">-tolerance</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-tolerance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Distance tolerance value to use for boolean operations. (default: 1e-6)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-surface-fill-holes">
+<code class="descname">-fill-holes</code><code class="descclassname"> [&lt;size&gt;]</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-fill-holes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fill holes of given maximum size (i.e., circumsphere radius).</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-largest">
-<tt class="descname">-largest</tt><tt class="descclassname"> [&lt;n&gt;]</tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-largest" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-largest</code><code class="descclassname"> [&lt;n&gt;]</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-largest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output largest n (default 1 if not specified) components.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-insphere">
-<tt class="descname">-insphere</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-insphere" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-insphere</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-surface-insphere" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output sphere which is inscribed the surface mesh.</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-extract-pointset-surface-boundingsphere">
-<tt class="descname">-boundingsphere</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-boundingsphere" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-extract-pointset-surface-bounding-sphere">
+<code class="descname">-bounding-sphere</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-surface-bounding-sphere" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output minimum sphere which fully contains the surface mesh.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-o">
-<tt class="descname">-o</tt><tt class="descclassname"> -surface &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-o" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-o</code><code class="descclassname"> -surface &lt;file&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-o" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write output surface mesh to named file.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-mask">
-<tt class="descname">-mask</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-mask" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-mask</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-mask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write binary inside/outside mask to named image file.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-implicit">
-<tt class="descname">-implicit</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-implicit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-implicit</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-implicit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write signed implicit surface distance to named image file.</p>
 </dd></dl>
 
 <dl class="option">
+<dt id="cmdoption-extract-pointset-surface-outside">
+<span id="cmdoption-extract-pointset-surface-nooutside"></span><code class="descname">-outside</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nooutside</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-surface-outside" title="Permalink to this definition">¶</a></dt>
+<dd><p>Swap inside/outside of output <a class="reference internal" href="#cmdoption-extract-pointset-surface-mask"><code class="xref std std-option docutils literal"><span class="pre">-mask</span></code></a> and <a class="reference internal" href="#cmdoption-extract-pointset-surface-implicit"><code class="xref std std-option docutils literal"><span class="pre">-implicit</span></code></a> surface. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-extract-pointset-surface-reference">
-<tt class="descname">-reference</tt><tt class="descclassname"> &lt;image&gt;</tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-reference" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reference image for <a class="reference internal" href="#cmdoption-extract-pointset-surface-mask"><em class="xref std std-option">-mask</em></a> or <a class="reference internal" href="#cmdoption-extract-pointset-surface-implicit"><em class="xref std std-option">-implicit</em></a> output. (default: bounding box)</p>
+<code class="descname">-reference</code><code class="descclassname"> &lt;image&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-reference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference image for <a class="reference internal" href="#cmdoption-extract-pointset-surface-mask"><code class="xref std std-option docutils literal"><span class="pre">-mask</span></code></a> or <a class="reference internal" href="#cmdoption-extract-pointset-surface-implicit"><code class="xref std std-option docutils literal"><span class="pre">-implicit</span></code></a> output. (default: bounding box)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-resolution">
-<tt class="descname">-resolution</tt><tt class="descclassname"> &lt;float&gt;</tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-resolution" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resolution of <a class="reference internal" href="#cmdoption-extract-pointset-surface-insphere"><em class="xref std std-option">-insphere</em></a>, <a class="reference internal" href="#cmdoption-extract-pointset-surface-mask"><em class="xref std std-option">-mask</em></a>, or <a class="reference internal" href="#cmdoption-extract-pointset-surface-implicit"><em class="xref std std-option">-implicit</em></a> output.
+<code class="descname">-resolution</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-resolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolution of <a class="reference internal" href="#cmdoption-extract-pointset-surface-insphere"><code class="xref std std-option docutils literal"><span class="pre">-insphere</span></code></a>, <a class="reference internal" href="#cmdoption-extract-pointset-surface-mask"><code class="xref std std-option docutils literal"><span class="pre">-mask</span></code></a>, or <a class="reference internal" href="#cmdoption-extract-pointset-surface-implicit"><code class="xref std std-option docutils literal"><span class="pre">-implicit</span></code></a> output.
 (default: fraction of length of bounding box diagonal)</p>
 </dd></dl>
 
@@ -166,31 +194,31 @@ computed from the volumes defined by the individual input surfaces.</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-v">
-<span id="cmdoption-extract-pointset-surface-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-extract-pointset-surface-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-debug">
-<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-debug" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-version">
-<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-version" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-extract-pointset-surface-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-revision">
-<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-revision" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-surface-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-extract-pointset-surface-h">
-<span id="cmdoption-extract-pointset-surface-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-extract-pointset-surface-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-extract-pointset-surface-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-surface-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -203,22 +231,22 @@ computed from the volumes defined by the individual input surfaces.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="extract-surface.html" title="extract-surface"
              >next</a></li>
         <li class="right" >
-          <a href="extract-image-region.html" title="extract-image-region"
+          <a href="extract-pointset-cells.html" title="extract-pointset-cells"
              >previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

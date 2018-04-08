@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,34 +24,34 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../index.html" />
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="transform-points" href="transform-points.html" />
-    <link rel="prev" title="smooth-surface" href="smooth-surface.html" />
+    <link rel="prev" title="subdivide-brain-image" href="subdivide-brain-image.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="transform-points.html" title="transform-points"
              accesskey="N">next</a></li>
         <li class="right" >
-          <a href="smooth-surface.html" title="smooth-surface"
+          <a href="subdivide-brain-image.html" title="subdivide-brain-image"
              accesskey="P">previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -59,9 +59,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
@@ -87,35 +84,193 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="transform-image">
 <h1>transform-image<a class="headerlink" href="#transform-image" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>transform-image &lt;source&gt; &lt;output&gt; [options]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">transform</span><span class="o">-</span><span class="n">image</span> <span class="o">&lt;</span><span class="n">source</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>Applies a transformation to an input image. Each voxel center of
-the target image is mapped by the given transformation to the space of
-the source image. The output intensity for the target voxel is the
-source image intensity interpolated at the mapped point.</p>
+<p>Applies one or more transformations to an input image. Each voxel center
+of the target image is mapped by the composition of the transformations to
+the space of the source image. The output intensity for the target voxel is
+the source image intensity interpolated at the mapped point and cast to
+the output data type. When the input transformation is the identity map,
+this command effectively resamples the input image on the finite discrete
+grid of the <a class="reference internal" href="#cmdoption-transform-image-target"><code class="xref std std-option docutils literal"><span class="pre">transform-image</span> <span class="pre">-target</span></code></a> image.</p>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-transform-image-arg-source">
-<tt class="descname">source</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-image-arg-source" title="Permalink to this definition">¶</a></dt>
+<code class="descname">source</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-image-arg-source" title="Permalink to this definition">¶</a></dt>
 <dd><p>Source image.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-image-arg-output">
-<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-image-arg-output" title="Permalink to this definition">¶</a></dt>
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-image-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transformed source image.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-transform-image-dofin">
+<code class="descname">-dofin</code><code class="descclassname"> &lt;file&gt;...</code><a class="headerlink" href="#cmdoption-transform-image-dofin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append transformation to composition or &#8216;Id&#8217;/&#8217;Identity&#8217;. (default: Id)
+This option can be given multiple times and/or accepts multiple arguments.
+The transformations are composed from left to right, i.e., when the arguments
+are &#8220;ffd.dof.gz aff.dof rig.dof&#8221;, the target image point is first mapped by
+the &#8220;ffd.dof.gz&#8221; transformation, then &#8220;aff.dof&#8221;, and finally &#8220;rig.dof&#8221;.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-invdof">
+<span id="cmdoption-transform-image-dofin_i"></span><code class="descname">-invdof</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-dofin_i</code><code class="descclassname"> &lt;file&gt;...</code><a class="headerlink" href="#cmdoption-transform-image-invdof" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append inverse of given transformations to composition.
+When multiple arguments are given, the composite transformation
+is inverted, i.e., the order is reversed and each transformation
+inverted separately. If the order should not be reversed, use
+option -invdof/-dofin_i before each argument.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-invert">
+<span id="cmdoption-transform-image-noinvert"></span><code class="descname">-invert</code><code class="descclassname"> [on|off]</code><code class="descclassname">, </code><code class="descname">-noinvert</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-image-invert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable inversion of composite transformation. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-interpolation">
+<span id="cmdoption-transform-image-interp"></span><code class="descname">-interpolation</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-interp</code><code class="descclassname"> &lt;mode&gt;</code><a class="headerlink" href="#cmdoption-transform-image-interpolation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpolation mode: (default: Linear)</p>
+<ul class="simple">
+<li>NN [with padding]</li>
+<li>Linear [with padding]</li>
+<li>Fast linear [with padding]</li>
+<li>BSpline [with padding]</li>
+<li>Cubic BSpline [with padding]</li>
+<li>Fast cubic BSpline [with padding]</li>
+<li>CSpline [with padding]</li>
+<li>SBased [with padding]</li>
+<li>Sinc [with padding]</li>
+<li>Gaussian [with padding]</li>
+</ul>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-labels">
+<code class="descname">-labels</code><code class="descclassname"> [&lt;n&gt;...|all]</code><a class="headerlink" href="#cmdoption-transform-image-labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform the specified segmentation labels. When no arguments or &#8220;all&#8221; is
+given, all input labels are transformed. When <a class="reference internal" href="#cmdoption-transform-image-interpolation"><code class="xref std std-option docutils literal"><span class="pre">-interpolation</span></code></a> mode
+is nearest neighbor (&#8220;NN&#8221;), the input label image is directly resampled
+by assigning the output the nearest label value. Otherwise, the default,
+the binary mask corresponding to each label is resampled using the selected
+interpolation mode (e.g., linear) and the resulting fuzzy segmentations
+converted back into a hard segmentation by assigning the label with the
+highest interpolated value (pseudo-probability). This results in smoother
+transformed hard segmentations with reduced NN interpolation artifacts.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-target">
+<code class="descname">-target</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-transform-image-target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target image. (default: source)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-target-affdof">
+<code class="descname">-target-affdof</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-transform-image-target-affdof" title="Permalink to this definition">¶</a></dt>
+<dd><p>Affine target header transformation. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-target-invdof">
+<code class="descname">-target-invdof</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-transform-image-target-invdof" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverse affine target header transformation. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-source-affdof">
+<code class="descname">-source-affdof</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-transform-image-source-affdof" title="Permalink to this definition">¶</a></dt>
+<dd><p>Affine source header transformation. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-source-invdof">
+<code class="descname">-source-invdof</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-transform-image-source-invdof" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverse affine source header transformation. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-apply-affdof">
+<code class="descname">-apply-affdof</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-image-apply-affdof" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply affine header transformation to output image header.
+When this option is not specified, the output image attributes
+are identical to the <a class="reference internal" href="#cmdoption-transform-image-target"><code class="xref std std-option docutils literal"><span class="pre">-target</span></code></a> image. When this option
+is given, the <a class="reference internal" href="#cmdoption-transform-image-target-affdof"><code class="xref std std-option docutils literal"><span class="pre">-target-affdof</span></code></a> or <a class="reference internal" href="#cmdoption-transform-image-target-invdof"><code class="xref std std-option docutils literal"><span class="pre">-target-invdof</span></code></a>,
+respectively, is applied to the output image attributes.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-spacing">
+<span id="cmdoption-transform-image-voxel-size"></span><code class="descname">-spacing</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-voxel-size</code><code class="descclassname"> &lt;dx&gt; [&lt;dy&gt; [&lt;dz&gt; [&lt;dt&gt;]]]</code><a class="headerlink" href="#cmdoption-transform-image-spacing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Voxel size of output image. (default: <a class="reference internal" href="#cmdoption-transform-image-target"><code class="xref std std-option docutils literal"><span class="pre">-target</span></code></a> spacing)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-type">
+<span id="cmdoption-transform-image-dtype"></span><span id="cmdoption-transform-image-datatype"></span><code class="descname">-type</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-dtype</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-datatype</code><code class="descclassname"> &lt;type&gt;</code><a class="headerlink" href="#cmdoption-transform-image-type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data type of output image. (default: data type of source)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-Tp">
+<span id="cmdoption-transform-image-target-padding"></span><code class="descname">-Tp</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-target-padding</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-transform-image-Tp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target padding value. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-Sp">
+<span id="cmdoption-transform-image-source-padding"></span><code class="descname">-Sp</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-source-padding</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-transform-image-Sp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Source padding value. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-padding">
+<code class="descname">-padding</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-transform-image-padding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set both <a class="reference internal" href="#cmdoption-transform-image-target-padding"><code class="xref std std-option docutils literal"><span class="pre">-target-padding</span></code></a> and <a class="reference internal" href="#cmdoption-transform-image-source-padding"><code class="xref std std-option docutils literal"><span class="pre">-source-padding</span></code></a> to same value.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-Tt">
+<span id="cmdoption-transform-image-target-time"></span><code class="descname">-Tt</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-target-time</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-transform-image-Tt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time point of target image. (default: torigin)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-St">
+<span id="cmdoption-transform-image-source-time"></span><code class="descname">-St</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-source-time</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-transform-image-St" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time point of source image. (default: torigin)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-2d">
+<span id="cmdoption-transform-image-no2d"></span><code class="descname">-2d</code><code class="descclassname"> [on|off]</code><code class="descclassname">, </code><code class="descname">-no2d</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-image-2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project transformed points to 2D, i.e., ignore mapped z coordinate. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-transform-image-3d">
+<code class="descname">-3d</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-image-3d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for <a class="reference internal" href="#cmdoption-transform-image-2d"><code class="xref std std-option docutils literal"><span class="pre">-2d</span></code></a> off.</p>
 </dd></dl>
 
 </div>
@@ -123,31 +278,31 @@ source image intensity interpolated at the mapped point.</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-transform-image-v">
-<span id="cmdoption-transform-image-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-transform-image-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-transform-image-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-transform-image-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-image-debug">
-<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-transform-image-debug" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-transform-image-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-image-version">
-<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-transform-image-version" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-transform-image-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-image-revision">
-<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-image-revision" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-image-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-image-h">
-<span id="cmdoption-transform-image-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-image-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-transform-image-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-image-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -156,7 +311,7 @@ source image intensity interpolated at the mapped point.</p>
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-transform-image-color">
-<span id="cmdoption-transform-image-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-image-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-transform-image-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-image-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -165,7 +320,7 @@ source image intensity interpolated at the mapped point.</p>
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-transform-image-threads">
-<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-transform-image-threads" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-transform-image-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -178,22 +333,22 @@ source image intensity interpolated at the mapped point.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="transform-points.html" title="transform-points"
              >next</a></li>
         <li class="right" >
-          <a href="smooth-surface.html" title="smooth-surface"
+          <a href="subdivide-brain-image.html" title="subdivide-brain-image"
              >previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

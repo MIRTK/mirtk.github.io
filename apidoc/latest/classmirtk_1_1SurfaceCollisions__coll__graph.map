@@ -1,3 +1,5 @@
 <map id="mirtk::SurfaceCollisions" name="mirtk::SurfaceCollisions">
-<area shape="rect" id="node2" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="29,6,155,157"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1SurfaceFilter.html" title="{mirtk::SurfaceFilter\n||# Initialize()\l# operator=()\l# SurfaceFilter()\l# SurfaceFilter()\l# ~SurfaceFilter()\l}" alt="" coords="52,651,184,797"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1MeshFilter.html" title="{mirtk::MeshFilter\n||+ GetOutput()\l+ mirtkOnOffMacro()\l+ Run()\l+ SetInput()\l+ SetInputData()\l+ Update()\l# Execute()\l# Finalize()\l# Initialize()\l# InitializeEdgeTable()\l# MeshFilter()\l# MeshFilter()\l# NewArray()\l# NewArray()\l# NewCellArray()\l# NewPointArray()\l# operator=()\l# ~MeshFilter()\l}" alt="" coords="42,249,195,602"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="56,6,180,199"/>
 </map>

@@ -1,0 +1,287 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>construct-atlas &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="convert-dof" href="convert-dof.html" />
+    <link rel="prev" title="compose-maps" href="compose-maps.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="convert-dof.html" title="convert-dof"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="compose-maps.html" title="compose-maps"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="construct-atlas">
+<h1>construct-atlas<a class="headerlink" href="#construct-atlas" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">construct</span><span class="o">-</span><span class="n">atlas</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span> <span class="n">MEANS</span> <span class="p">[</span><span class="n">MEANS</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span> <span class="n">SIGMA</span> <span class="p">[</span><span class="n">SIGMA</span> <span class="o">...</span><span class="p">]]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">o</span> <span class="n">OUTDIR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">w</span> <span class="n">TMPDIR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">e</span> <span class="n">ENERGY</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">c</span> <span class="n">CHANNELS</span> <span class="p">[</span><span class="n">CHANNELS</span> <span class="o">...</span><span class="p">]]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">m</span> <span class="n">MEASURES</span> <span class="p">[</span><span class="n">MEASURES</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">-</span><span class="n">b</span> <span class="n">BENDING</span> <span class="p">[</span><span class="n">BENDING</span> <span class="o">...</span><span class="p">]]</span>
+<span class="p">[</span><span class="o">--</span><span class="n">bins</span> <span class="n">BINS</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">window</span> <span class="n">WINDOW</span><span class="p">]</span>
+<span class="p">[</span><span class="o">--</span><span class="n">spacing</span> <span class="n">SPACING</span> <span class="p">[</span><span class="n">SPACING</span> <span class="o">...</span><span class="p">]]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">j</span> <span class="n">JACOBIAN</span> <span class="p">[</span><span class="n">JACOBIAN</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">bch</span><span class="o">-</span><span class="n">terms</span> <span class="n">BCHTERMS</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">g</span> <span class="n">GROWTH</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">i</span> <span class="n">START</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span> <span class="n">STEPS</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">q</span> <span class="n">LONGQUEUE</span><span class="p">]</span>
+<span class="p">[</span><span class="o">--</span><span class="n">short</span><span class="o">-</span><span class="n">queue</span> <span class="n">SHORTQUEUE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">THREADS</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span> <span class="n">VERBOSE</span><span class="p">]</span>
+<span class="n">config</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Construct (spatio-temporal) atlas from images of the same anatomy of different
+subjects. To construct a spatio-temporal atlas, images of subjects at
+different ages spread over the atlas time range are required. Please cite the
+following preprint when you use this command in your research (or the
+respective peer-reviewed article when accepted): Schuh et al., &#8220;Unbiased
+construction of a temporally consistent morphological atlas of neonatal brain
+development&#8221;, bioRxiv, 2018. doi:10.1101/251512</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-construct-atlas-arg-config">
+<code class="descname">config</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-construct-atlas-arg-config" title="Permalink to this definition">¶</a></dt>
+<dd><p>JSON file with atlas configuration.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-construct-atlas-h">
+<span id="cmdoption-construct-atlas--help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-construct-atlas-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-a">
+<span id="cmdoption-construct-atlas--ages"></span><span id="cmdoption-construct-atlas--means"></span><code class="descname">-a</code><code class="descclassname"> MEANS [MEANS ...]</code><code class="descclassname">, </code><code class="descname">--ages</code><code class="descclassname"> MEANS [MEANS ...]</code><code class="descclassname">, </code><code class="descname">--means</code><code class="descclassname"> MEANS [MEANS ...]</code><a class="headerlink" href="#cmdoption-construct-atlas-a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Discrete time points for which to construct atlas.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-s">
+<span id="cmdoption-construct-atlas--sigma"></span><code class="descname">-s</code><code class="descclassname"> SIGMA [SIGMA ...]</code><code class="descclassname">, </code><code class="descname">--sigma</code><code class="descclassname"> SIGMA [SIGMA ...]</code><a class="headerlink" href="#cmdoption-construct-atlas-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standard deviation of temporal kernel(s).</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-o">
+<span id="cmdoption-construct-atlas--output"></span><span id="cmdoption-construct-atlas--outdir"></span><code class="descname">-o</code><code class="descclassname"> OUTDIR</code><code class="descclassname">, </code><code class="descname">--output</code><code class="descclassname"> OUTDIR</code><code class="descclassname">, </code><code class="descname">--outdir</code><code class="descclassname"> OUTDIR</code><a class="headerlink" href="#cmdoption-construct-atlas-o" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output directory of final atlas.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-w">
+<span id="cmdoption-construct-atlas--workdir"></span><span id="cmdoption-construct-atlas--tmpdir"></span><code class="descname">-w</code><code class="descclassname"> TMPDIR</code><code class="descclassname">, </code><code class="descname">--workdir</code><code class="descclassname"> TMPDIR</code><code class="descclassname">, </code><code class="descname">--tmpdir</code><code class="descclassname"> TMPDIR</code><a class="headerlink" href="#cmdoption-construct-atlas-w" title="Permalink to this definition">¶</a></dt>
+<dd><p>Working directory for intermediate files.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-e">
+<span id="cmdoption-construct-atlas--energy"></span><code class="descname">-e</code><code class="descclassname"> ENERGY</code><code class="descclassname">, </code><code class="descname">--energy</code><code class="descclassname"> ENERGY</code><a class="headerlink" href="#cmdoption-construct-atlas-e" title="Permalink to this definition">¶</a></dt>
+<dd><p>Energy function of image registration (e.g., &#8216;asym&#8217;,
+sym&#8217;, &#8216;ic&#8217;).</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-c">
+<span id="cmdoption-construct-atlas--channels"></span><code class="descname">-c</code><code class="descclassname"> CHANNELS [CHANNELS ...]</code><code class="descclassname">, </code><code class="descname">--channels</code><code class="descclassname"> CHANNELS [CHANNELS ...]</code><a class="headerlink" href="#cmdoption-construct-atlas-c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Images to use for multi-channel registration.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-m">
+<span id="cmdoption-construct-atlas--measures"></span><code class="descname">-m</code><code class="descclassname"> MEASURES [MEASURES ...]</code><code class="descclassname">, </code><code class="descname">--measures</code><code class="descclassname"> MEASURES [MEASURES ...]</code><a class="headerlink" href="#cmdoption-construct-atlas-m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image (dis-)similarity measure to use for each
+channel.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-b">
+<span id="cmdoption-construct-atlas--bending"></span><code class="descname">-b</code><code class="descclassname"> BENDING [BENDING ...]</code><code class="descclassname">, </code><code class="descname">--bending</code><code class="descclassname"> BENDING [BENDING ...]</code><a class="headerlink" href="#cmdoption-construct-atlas-b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bending energy weight for each step.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas--bins">
+<code class="descname">--bins</code><code class="descclassname"> BINS</code><a class="headerlink" href="#cmdoption-construct-atlas--bins" title="Permalink to this definition">¶</a></dt>
+<dd><p>No. of bins to use for histogram-based measures.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas--window">
+<code class="descname">--window</code><code class="descclassname"> WINDOW</code><a class="headerlink" href="#cmdoption-construct-atlas--window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local window size for NCC measure in voxels.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas--spacing">
+<code class="descname">--spacing</code><code class="descclassname"> SPACING [SPACING ...]</code><a class="headerlink" href="#cmdoption-construct-atlas--spacing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Control point spacing for each step.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-j">
+<span id="cmdoption-construct-atlas--jacobian"></span><code class="descname">-j</code><code class="descclassname"> JACOBIAN [JACOBIAN ...]</code><code class="descclassname">, </code><code class="descname">--jacobian</code><code class="descclassname"> JACOBIAN [JACOBIAN ...]</code><a class="headerlink" href="#cmdoption-construct-atlas-j" title="Permalink to this definition">¶</a></dt>
+<dd><p>Jacobian penalty weight for each step.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas--bch-terms">
+<code class="descname">--bch-terms</code><code class="descclassname"> BCHTERMS  No. of BCH terms to use for composition of SV FFDs.</code><a class="headerlink" href="#cmdoption-construct-atlas--bch-terms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-g">
+<span id="cmdoption-construct-atlas--growth"></span><code class="descname">-g</code><code class="descclassname"> GROWTH</code><code class="descclassname">, </code><code class="descname">--growth</code><code class="descclassname"> GROWTH</code><a class="headerlink" href="#cmdoption-construct-atlas-g" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to joinedly estimate mean shape and change.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-i">
+<span id="cmdoption-construct-atlas--start"></span><code class="descname">-i</code><code class="descclassname"> START</code><code class="descclassname">, </code><code class="descname">--start</code><code class="descclassname"> START</code><a class="headerlink" href="#cmdoption-construct-atlas-i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Continue construction after the specified step.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-n">
+<span id="cmdoption-construct-atlas--steps"></span><code class="descname">-n</code><code class="descclassname"> STEPS</code><code class="descclassname">, </code><code class="descname">--steps</code><code class="descclassname"> STEPS</code><a class="headerlink" href="#cmdoption-construct-atlas-n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of steps of iterative atlas
+construction/refinement. Use &#8216;iterations&#8217; config entry
+if not specified (default: 10).</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-q">
+<span id="cmdoption-construct-atlas--queue"></span><span id="cmdoption-construct-atlas--long-queue"></span><code class="descname">-q</code><code class="descclassname"> LONGQUEUE</code><code class="descclassname">, </code><code class="descname">--queue</code><code class="descclassname"> LONGQUEUE</code><code class="descclassname">, </code><code class="descname">--long-queue</code><code class="descclassname"> LONGQUEUE</code><a class="headerlink" href="#cmdoption-construct-atlas-q" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of batch system queue. Use &#8216;condor&#8217; for HTCondor.
+Otherwise, the argument is assumed to be the name of a
+SLURM partition.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas--short-queue">
+<code class="descname">--short-queue</code><code class="descclassname"> SHORTQUEUE</code><a class="headerlink" href="#cmdoption-construct-atlas--short-queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of batch system queue to use for short running
+jobs (about 1-30 min). Use &#8211;long-queue by default.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-t">
+<span id="cmdoption-construct-atlas--threads"></span><code class="descname">-t</code><code class="descclassname"> THREADS</code><code class="descclassname">, </code><code class="descname">--threads</code><code class="descclassname"> THREADS</code><a class="headerlink" href="#cmdoption-construct-atlas-t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of CPU cores/threads to use.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-construct-atlas-v">
+<span id="cmdoption-construct-atlas--verbose"></span><code class="descname">-v</code><code class="descclassname"> VERBOSE</code><code class="descclassname">, </code><code class="descname">--verbose</code><code class="descclassname"> VERBOSE</code><a class="headerlink" href="#cmdoption-construct-atlas-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verbosity level of output messages: 0) no output, 1)
+report progress, 2) print command arguments.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="convert-dof.html" title="convert-dof"
+             >next</a></li>
+        <li class="right" >
+          <a href="compose-maps.html" title="compose-maps"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

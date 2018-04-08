@@ -1,0 +1,232 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>compose-dofs &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="compose-maps" href="compose-maps.html" />
+    <link rel="prev" title="combine-images" href="combine-images.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="compose-maps.html" title="compose-maps"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="combine-images.html" title="combine-images"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="compose-dofs">
+<h1>compose-dofs<a class="headerlink" href="#compose-dofs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">compose</span><span class="o">-</span><span class="n">dofs</span> <span class="o">&lt;</span><span class="n">T1</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">T2</span><span class="o">&gt;...</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">-</span><span class="n">target</span> <span class="o">&lt;</span><span class="n">image</span><span class="o">&gt;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Computes the composition T of the given input transformations such that</p>
+<div class="math">
+\[T(x) = Tn o ... o T2 o T1(x)\]</div>
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-compose-dofs-target">
+<code class="descname">-target</code><code class="descclassname"> &lt;image&gt;</code><a class="headerlink" href="#cmdoption-compose-dofs-target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target image on which images will be resampled using the composed transformation.
+The finite grid of the target image is used to determine an appropriate domain
+on which to approximate the displacement field of the composite transformation
+when <a class="reference internal" href="#cmdoption-compose-dofs-approximate"><code class="xref std std-option docutils literal"><span class="pre">-approximate</span></code></a> is given.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-dofs-rotation">
+<span id="cmdoption-compose-dofs-norotation"></span><code class="descname">-rotation</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-norotation</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-compose-dofs-rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to allow rotation    when composite transformation is affine. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-dofs-translation">
+<span id="cmdoption-compose-dofs-notranslation"></span><code class="descname">-translation</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-notranslation</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-compose-dofs-translation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to allow translation when composite transformation is affine. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-dofs-scaling">
+<span id="cmdoption-compose-dofs-noscaling"></span><code class="descname">-scaling</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noscaling</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-compose-dofs-scaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to allow scaling when composite transformation is affine. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-dofs-shearing">
+<span id="cmdoption-compose-dofs-noshearing"></span><code class="descname">-shearing</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noshearing</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-compose-dofs-shearing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to allow shearing when composite transformation is affine. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-dofs-approximate">
+<code class="descname">-approximate</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-compose-dofs-approximate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Approximate the composed transformation using a single FFD. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-dofs-scale">
+<code class="descname">-scale</code><code class="descclassname"> &lt;s1&gt; [s2...]</code><a class="headerlink" href="#cmdoption-compose-dofs-scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scaling factors for each input (SV) FFD in the same order as the positional
+input file name arguments. These factors can only be applied to single FFDs,
+and are mainly useful for velocity based transformations. For rigid, similarity,
+or affine transformations, use -1 to invert the input transformation. (default: 1)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-dofs-bch">
+<code class="descname">-bch</code><code class="descclassname"> [&lt;n&gt; [yes|no]]</code><a class="headerlink" href="#cmdoption-compose-dofs-bch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use Baker-Campbell-Hausdorff (BCH) formula to approximate composition of SV FFDs.
+All input transformations must be of type cubic B-spline SV FFD. Arguments
+are optional. The first argument is the number of BCH terms to use. The minimum
+is 2 terms, i.e., the sum of left and right velocity fields. The second argument
+is a boolean flag indicating whether or not the Lie brackets should be computed
+using the Jacobian of the vector fields (yes) or if it should be approximated
+as the difference of the compositions in either order. (default: 6 yes)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-dofs-nobch">
+<code class="descname">-nobch</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-compose-dofs-nobch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do not use BCH formula to compose SV FFDs. Instead, evaluate composite displacements
+and approximate these even when all input transformations are of type SV FFD.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-compose-dofs-v">
+<span id="cmdoption-compose-dofs-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-compose-dofs-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-dofs-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-compose-dofs-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-dofs-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-compose-dofs-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-dofs-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-compose-dofs-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-dofs-h">
+<span id="cmdoption-compose-dofs-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-compose-dofs-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="compose-maps.html" title="compose-maps"
+             >next</a></li>
+        <li class="right" >
+          <a href="combine-images.html" title="combine-images"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

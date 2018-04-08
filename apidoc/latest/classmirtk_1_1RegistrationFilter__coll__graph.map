@@ -1,4 +1,4 @@
 <map id="mirtk::RegistrationFilter" name="mirtk::RegistrationFilter">
-<area shape="rect" id="node2" href="$classmirtk_1_1Observable.html" title="{mirtk::Observable\n||+ AddObserver()\l+ Broadcast()\l+ ClearObservers()\l+ DeleteObserver()\l+ NotifyObservers()\l+ NumberOfObservers()\l+ ~Observable()\l# Observable()\l# Observable()\l# operator=()\l}" alt="" coords="5,206,168,415"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="24,6,149,157"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Observable.html" title="{mirtk::Observable\n||+ AddObserver()\l+ Broadcast()\l+ ClearObservers()\l+ DeleteObserver()\l+ NotifyObservers()\l+ NumberOfObservers()\l+ ~Observable()\l# Observable()\l# Observable()\l# operator=()\l}" alt="" coords="4,249,168,474"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="24,6,148,199"/>
 </map>

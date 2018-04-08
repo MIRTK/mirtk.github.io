@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../index.html" />
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="Modules" href="../modules.html" />
     <link rel="prev" title="transform-image" href="transform-image.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="transform-image.html" title="transform-image"
              accesskey="P">previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -59,9 +59,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
@@ -87,14 +84,14 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="transform-points">
 <h1>transform-points<a class="headerlink" href="#transform-points" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>transform-points [options]
-transform-points &lt;input&gt; &lt;output&gt; [options]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">transform</span><span class="o">-</span><span class="n">points</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">transform</span><span class="o">-</span><span class="n">points</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -106,72 +103,80 @@ point set file. The corresponding transformed coordinates are then written
 either to STDOUT or an output point set file, respectively. If multiple
 transformations are specified, these are applied in the order as they appear
 on the command line.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>Attention: When both :option:`transform-points -target` and :option:`transform-points -source` arguments are given,
+           the points are first mapped from target world to image space and then
+           the image to world transformation of the source image is applied.
+           This is a relict from the corresponding IRTK command...
+</pre></div>
+</div>
 </div>
 <div class="section" id="command-options">
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-transform-points-dofin">
-<tt class="descname">-dofin</tt><tt class="descclassname"> &lt;file&gt;...</tt><a class="headerlink" href="#cmdoption-transform-points-dofin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Transformation file. (default: identity)</p>
+<code class="descname">-dofin</code><code class="descclassname"> &lt;file&gt;...</code><a class="headerlink" href="#cmdoption-transform-points-dofin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transformation or image file. When an image file is given,
+the image to world transformation is applied. The <a class="reference internal" href="#cmdoption-transform-points-invert"><code class="xref std std-option docutils literal"><span class="pre">-invert</span></code></a>
+can be used to transform points from world to image space. (default: identity)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-invert">
-<tt class="descname">-invert</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-points-invert" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-invert</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-points-invert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Invert preceding transformation. (default: no)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-source">
-<tt class="descname">-source</tt><tt class="descclassname"> &lt;image&gt;</tt><a class="headerlink" href="#cmdoption-transform-points-source" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-source</code><code class="descclassname"> &lt;image&gt;</code><a class="headerlink" href="#cmdoption-transform-points-source" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reference source image. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-target">
-<tt class="descname">-target</tt><tt class="descclassname"> &lt;image&gt;</tt><a class="headerlink" href="#cmdoption-transform-points-target" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-target</code><code class="descclassname"> &lt;image&gt;</code><a class="headerlink" href="#cmdoption-transform-points-target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reference target image. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-partial">
-<tt class="descname">-partial</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-transform-points-partial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-partial</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-transform-points-partial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transform the first n points and copy the rest. (default: #points)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-normals">
-<tt class="descname">-normals</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-points-normals" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-normals</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-points-normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to recompute normals of input surface mesh. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-point-normals">
-<tt class="descname">-point-normals</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-points-point-normals" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-point-normals</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-points-point-normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to recompute point normals of input surface mesh. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-cell-normals">
-<tt class="descname">-cell-normals</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-points-cell-normals" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-cell-normals</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-points-cell-normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to recompute cell  normals of input surface mesh. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-compress">
-<span id="cmdoption-transform-points-nocompress"></span><tt class="descname">-compress</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocompress</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-points-compress" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-transform-points-nocompress"></span><code class="descname">-compress</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocompress</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-points-compress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable compression of XML VTK file. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-ascii">
-<tt class="descname">-ascii</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-points-ascii" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-ascii</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-points-ascii" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set file type of output legacy VTK file to ASCII.  (default: input file type)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-binary">
-<tt class="descname">-binary</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-points-binary" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-binary</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-points-binary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set file type of output legacy VTK file to BINARY. (default: input file type)</p>
 </dd></dl>
 
@@ -180,31 +185,31 @@ on the command line.</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-transform-points-v">
-<span id="cmdoption-transform-points-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-transform-points-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-transform-points-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-transform-points-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-debug">
-<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-transform-points-debug" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-transform-points-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-version">
-<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-transform-points-version" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-transform-points-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-revision">
-<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-points-revision" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-points-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-transform-points-h">
-<span id="cmdoption-transform-points-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-transform-points-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-transform-points-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-transform-points-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -217,7 +222,7 @@ on the command line.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -226,13 +231,13 @@ on the command line.</p>
         <li class="right" >
           <a href="transform-image.html" title="transform-image"
              >previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

@@ -18,6 +18,6 @@ var searchData=
   ['robustclosestpoint',['RobustClosestPoint',['../classmirtk_1_1RobustClosestPoint.html',1,'mirtk']]],
   ['robustmean',['RobustMean',['../classmirtk_1_1data_1_1statistic_1_1RobustMean.html',1,'mirtk::data::statistic']]],
   ['robustpointmatch',['RobustPointMatch',['../classmirtk_1_1RobustPointMatch.html',1,'mirtk']]],
-  ['run',['Run',['../classmirtk_1_1LieBracketImageFilter3DUtils_1_1Run.html',1,'mirtk::LieBracketImageFilter3DUtils']]],
-  ['run',['Run',['../classmirtk_1_1LieBracketImageFilter2DUtils_1_1Run.html',1,'mirtk::LieBracketImageFilter2DUtils']]]
+  ['run',['Run',['../classmirtk_1_1LieBracketImageFilter2DUtils_1_1Run.html',1,'mirtk::LieBracketImageFilter2DUtils']]],
+  ['run',['Run',['../classmirtk_1_1LieBracketImageFilter3DUtils_1_1Run.html',1,'mirtk::LieBracketImageFilter3DUtils']]]
 ];

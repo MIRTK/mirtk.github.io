@@ -1,0 +1,7 @@
+<map id="mirtk::data::statistic::MeanVar" name="mirtk::data::statistic::MeanVar">
+<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1statistic_1_1NormalDistribution.html" title="Robust evaluation of Gaussian mean and standard deviation. " alt="" coords="4,590,216,767"/>
+<area shape="rect" id="node9" href="$classmirtk_1_1data_1_1statistic_1_1StDev.html" title="Robust evaluation of standard deviation. " alt="" coords="242,606,453,751"/>
+<area shape="rect" id="node11" href="$classmirtk_1_1data_1_1statistic_1_1Var.html" title="Robust variance evaluation. " alt="" coords="479,614,691,743"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1Statistic.html" title="Base class of all data statistics. " alt="" coords="277,153,419,378"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="294,6,401,103"/>
+</map>

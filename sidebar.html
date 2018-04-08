@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,28 +24,28 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="index.html" />
+    <link rel="top" title="MIRTK" href="#" />
     <link rel="next" title="Medical Image Registration ToolKit (MIRTK)" href="index.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="index.html" title="Medical Image Registration ToolKit (MIRTK)"
              accesskey="N">next</a></li>
-        <li><a href="#">MIRTK</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -53,9 +53,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="#">Table Of Contents</a></h3>
@@ -81,7 +78,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="toctree-wrapper compound">
 <ul>
@@ -93,7 +90,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="getstarted.html">Get Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="getstarted.html#install-the-software">Install the software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getstarted.html#bash-completion">Bash completion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getstarted.html#enable-bash-completion">Enable Bash completion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="getstarted.html#run-the-commands">Run the commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="getstarted.html#write-your-own-application">Write your own application</a></li>
 </ul>
@@ -121,7 +118,9 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="modules.html#external-packages">External Packages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="modules.html#deformable">Deformable</a></li>
-<li class="toctree-l3"><a class="reference internal" href="modules.html#volumetric-mapping">Volumetric Mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#mapping">Mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#scripting">Scripting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#draw-em">Draw-EM</a></li>
 </ul>
 </li>
 </ul>
@@ -137,7 +136,11 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">News</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id1">2016</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id1">2018</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#release-2-0-0-apr-8">Release 2.0.0 (Apr 8)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id2">2016</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#release-1-1-0-apr-21">Release 1.1.0 (Apr 21)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#release-1-0-0-jan-15">Release 1.0.0 (Jan 15)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#release-1-0rc2-jan-13">Release 1.0rc2 (Jan 13)</a></li>
@@ -166,7 +169,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="publications.html#registration">Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publications.html#draw-em">Draw-EM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publications.html#deformable">Deformable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publications.html#point-set">Point Set</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="people.html">People</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="people.html#software-development">Software Development</a></li>
 <li class="toctree-l2"><a class="reference internal" href="people.html#contributors">Contributors</a></li>
@@ -182,18 +191,18 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="index.html" title="Medical Image Registration ToolKit (MIRTK)"
              >next</a></li>
-        <li><a href="#">MIRTK</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

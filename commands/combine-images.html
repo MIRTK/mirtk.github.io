@@ -1,0 +1,226 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>combine-images &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="compose-dofs" href="compose-dofs.html" />
+    <link rel="prev" title="close-scalars" href="close-scalars.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="compose-dofs.html" title="compose-dofs"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="close-scalars.html" title="close-scalars"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="combine-images">
+<h1>combine-images<a class="headerlink" href="#combine-images" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">combine</span><span class="o">-</span><span class="n">images</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;...</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">combine</span><span class="o">-</span><span class="n">images</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;...</span> <span class="o">-</span><span class="n">output</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">combine</span><span class="o">-</span><span class="n">images</span> <span class="o">-</span><span class="nb">input</span> <span class="o">&lt;</span><span class="n">volume</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">image</span> <span class="o">&lt;</span><span class="nb">slice</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">output</span> <span class="o">&lt;</span><span class="n">volume</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">combine</span><span class="o">-</span><span class="n">images</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Concatenate two or more either 2D images to form a 3D volume,
+or 3D volumes to form a 3D+t temporal sequence. All input images
+must have the same image attributes, except in either the third (2D)
+or the third and fourth (3D) image dimension.</p>
+<p>Moreover, given an <a class="reference internal" href="#cmdoption-combine-images-input"><code class="xref std std-option docutils literal"><span class="pre">combine-images</span> <span class="pre">-input</span></code></a> volume (sequence), additional
+slices (volumes) can be appended to it. Note that when <a class="reference internal" href="#cmdoption-combine-images-sort"><code class="xref std std-option docutils literal"><span class="pre">combine-images</span> <span class="pre">-sort</span></code></a>
+is enabled, the additional slices (volumes) can be interleaved with the
+existing volume (sequence), allowing inserting a slice (volume) anywhere
+not only after the last slice (volume) of the input volume (sequence).</p>
+<p>Note that the slice thickness of the output volume when concatenating slices
+is set equal the average slice thickness of the input images, unless it is
+overridden by the <a class="reference internal" href="#cmdoption-combine-images-spacing"><code class="xref std std-option docutils literal"><span class="pre">combine-images</span> <span class="pre">-spacing</span></code></a> value.</p>
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-combine-images-input">
+<code class="descname">-input</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-combine-images-input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read input -images from given volume/sequence.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-combine-images-output">
+<code class="descname">-output</code><code class="descclassname"> &lt;path&gt;</code><a class="headerlink" href="#cmdoption-combine-images-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output image file path. Last positional argument when option missing.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-combine-images-image">
+<code class="descname">-image</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-combine-images-image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add one input image. Option can be given multiple times.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-combine-images-images">
+<code class="descname">-images</code><code class="descclassname"> &lt;file&gt;...</code><a class="headerlink" href="#cmdoption-combine-images-images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add one or more input images. Option can be given multiple times.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-combine-images-sort">
+<code class="descname">-sort</code><code class="descclassname"> [on|off]</code><a class="headerlink" href="#cmdoption-combine-images-sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatically determine correct order of input images
+based on the distance along the third or fourth image axis.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-combine-images-nosort">
+<code class="descname">-nosort</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-combine-images-nosort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable sorting of input images, same as <a class="reference internal" href="#cmdoption-combine-images-sort"><code class="xref std std-option docutils literal"><span class="pre">-sort</span></code></a> off. (default)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-combine-images-start">
+<code class="descname">-start</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-combine-images-start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Position of first slice/frame of output volume/sequence.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-combine-images-spacing">
+<code class="descname">-spacing</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-combine-images-spacing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slice/Temporal spacing of output volume/sequence.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-combine-images-v">
+<span id="cmdoption-combine-images-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-combine-images-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-combine-images-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-combine-images-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-combine-images-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-combine-images-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-combine-images-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-combine-images-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-combine-images-h">
+<span id="cmdoption-combine-images-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-combine-images-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="compose-dofs.html" title="compose-dofs"
+             >next</a></li>
+        <li class="right" >
+          <a href="close-scalars.html" title="close-scalars"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

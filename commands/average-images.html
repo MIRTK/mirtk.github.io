@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,34 +24,34 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../index.html" />
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
     <link rel="up" title="Applications" href="../commands.html" />
-    <link rel="next" title="bisect-dof" href="bisect-dof.html" />
+    <link rel="next" title="average-measure" href="average-measure.html" />
     <link rel="prev" title="average-dofs" href="average-dofs.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="bisect-dof.html" title="bisect-dof"
+          <a href="average-measure.html" title="average-measure"
              accesskey="N">next</a></li>
         <li class="right" >
           <a href="average-dofs.html" title="average-dofs"
              accesskey="P">previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -59,9 +59,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
@@ -87,90 +84,180 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="average-images">
 <h1>average-images<a class="headerlink" href="#average-images" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>average-images &lt;output&gt; -images &lt;images.lst&gt; [options]
-average-images &lt;output&gt; -image &lt;image1&gt; [-dof &lt;dof1&gt;] -image &lt;image2&gt; [-dof &lt;dof2&gt;]... [options]
-average-images &lt;output&gt; &lt;image1&gt; [&lt;dof1&gt;] &lt;image2&gt; [&lt;dof2&gt;]... [options]
-average-images &lt;output&gt; &lt;sequence&gt; [options]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">average</span><span class="o">-</span><span class="n">images</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">images</span> <span class="o">&lt;</span><span class="n">images</span><span class="o">.</span><span class="n">lst</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">average</span><span class="o">-</span><span class="n">images</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">image</span> <span class="o">&lt;</span><span class="n">image1</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">w1</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="n">dof1</span><span class="o">&gt;...</span><span class="p">]</span> <span class="o">-</span><span class="n">image</span> <span class="o">&lt;</span><span class="n">image2</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">w2</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="n">dof2</span><span class="o">&gt;...</span><span class="p">]</span><span class="o">...</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">average</span><span class="o">-</span><span class="n">images</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">image1</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">dof1</span><span class="o">&gt;...</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">image2</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">dof2</span><span class="o">&gt;...</span><span class="p">]</span><span class="o">...</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">average</span><span class="o">-</span><span class="n">images</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">sequence</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>Computes voxelwise average image of the given (transformed) input images.</p>
-<p>The input images are optionally transformed by an image-to-average space transformation
-(<a class="reference internal" href="#cmdoption-average-images-dof"><em class="xref std std-option">average-images -dof</em></a>) or its inverse (<a class="reference internal" href="#cmdoption-average-images-dof_i"><em class="xref std std-option">average-images -dof_i</em></a>).</p>
+<p>Computes voxel-wise average image of the given (transformed) input images.</p>
+<p>The input images are optionally transformed by one or more image-to-average space
+transformation (<a class="reference internal" href="#cmdoption-average-images-dof"><code class="xref std std-option docutils literal"><span class="pre">average-images</span> <span class="pre">-dof</span></code></a>) or its inverse (<a class="reference internal" href="#cmdoption-average-images-dof_i"><code class="xref std std-option docutils literal"><span class="pre">average-images</span> <span class="pre">-dof_i</span></code></a>), respectively.
+When more than one transformation is given, these are concatenated via funtion
+composition.</p>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-average-images-arg-output">
-<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-images-arg-output" title="Permalink to this definition">¶</a></dt>
-<dd><p>Voxel-wise average image.</p>
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-images-arg-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Voxel-wise average image. When the <a class="reference internal" href="#cmdoption-average-images-label"><code class="xref std std-option docutils literal"><span class="pre">-label</span></code></a> is used multiple times,
+a unique file path is created for each fuzzy output segmentation.</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-average-images-images">
-<tt class="descname">-images</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-average-images-images" title="Permalink to this definition">¶</a></dt>
-<dd><p>Text file with N lines containing the file name of each input image,
-optionally a transformation file name (see <a class="reference internal" href="#cmdoption-average-images-dof"><em class="xref std std-option">-dof</em></a> and <a class="reference internal" href="#cmdoption-average-images-dof_i"><em class="xref std std-option">-dof_i</em></a>),
-optionally followed by a weight for a weighted output average (default weight is 1).
-The first line of the text file must specify the common base directory
-of all relative image and transformation file paths occurring on the
-subsequent N lines. A path starting with &#8216;./&#8217; must be relative to the
-directory containing the input text file itself.</p>
-</dd></dl>
-
+</div>
+<div class="section" id="input-options">
+<h2>Input options<a class="headerlink" href="#input-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-average-images-image">
-<tt class="descname">-image</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-average-images-image" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-image</code><code class="descclassname"> &lt;file&gt; [&lt;w&gt;]</code><a class="headerlink" href="#cmdoption-average-images-image" title="Permalink to this definition">¶</a></dt>
 <dd><p>A single input image.</p>
 </dd></dl>
 
 <dl class="option">
+<dt id="cmdoption-average-images-images">
+<code class="descname">-images</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-average-images-images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text file with N lines containing the file name of each input image,
+optionally a transformation file name (see <a class="reference internal" href="#cmdoption-average-images-dof"><code class="xref std std-option docutils literal"><span class="pre">-dof</span></code></a> and <a class="reference internal" href="#cmdoption-average-images-dof_i"><code class="xref std std-option docutils literal"><span class="pre">-dof_i</span></code></a>),
+followed by an optional weight for a weighted output average (default weight is 1).
+The first line of the text file must specify the common base directory
+of all relative image and transformation file paths occurring on the
+subsequent N lines. A path starting with &#8216;./&#8217; must be relative to the
+directory containing the input text file itself. Each transformation file
+path may be prefixed with &#8216;inv:&#8217; or &#8216;dof:&#8217; to indicate whether the inverse
+of the given transformation file maps points from the image world space to
+the common average world space or not. When omitted from a file path, &#8216;dof:&#8217;
+is implied, i.e., the transformation is assumed to map points from input image
+to average image world space (see <a class="reference internal" href="#cmdoption-average-images-dof"><code class="xref std std-option docutils literal"><span class="pre">-dof</span></code></a>).</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-images-delim">
+<span id="cmdoption-average-images-delimiter"></span><code class="descname">-delim</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-delimiter</code><code class="descclassname"> &lt;c&gt;</code><a class="headerlink" href="#cmdoption-average-images-delim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delimiter used in <a class="reference internal" href="#cmdoption-average-images-images"><code class="xref std std-option docutils literal"><span class="pre">-images</span></code></a> file.
+(default: &#8216;,&#8217; for .csv, &#8216;t&#8217; for .tsv, and &#8216; &#8216; otherwise)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-images-invert">
+<code class="descname">-invert</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-images-invert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invert transformations specified in <a class="reference internal" href="#cmdoption-average-images-images"><code class="xref std std-option docutils literal"><span class="pre">-images</span></code></a> file.</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-average-images-dof">
-<tt class="descname">-dof</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-average-images-dof" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dof</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-average-images-dof" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a transformation to be applied to the preceeding image. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-images-dof_i">
-<tt class="descname">-dof_i</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-average-images-dof_i" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dof_i</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-average-images-dof_i" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a transformation whose inverse is to be applied to the
-preceeding image. (default: none)</p>
+preceeding image similar to <a class="reference internal" href="#cmdoption-average-images-dof"><code class="xref std std-option docutils literal"><span class="pre">-dof</span></code></a>. (default: none)</p>
 </dd></dl>
 
 </div>
 <div class="section" id="command-options">
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
-<dt id="cmdoption-average-images-size">
-<tt class="descname">-size</tt><tt class="descclassname"> &lt;dx&gt; [&lt;dy&gt; [&lt;dz&gt;]]</tt><a class="headerlink" href="#cmdoption-average-images-size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Voxel size of intensity average image. (default: average of input images)</p>
+<dt id="cmdoption-average-images-reference">
+<span id="cmdoption-average-images-target"></span><code class="descname">-reference</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-target</code><code class="descclassname"> &lt;file&gt;|max-size|max-space|average</code><a class="headerlink" href="#cmdoption-average-images-reference" title="Permalink to this definition">¶</a></dt>
+<dd><p>When &lt;file&gt; name specified, use the attributes of this reference image for average image.
+When &#8220;max-size&#8221; is specified, the input image with the most number of voxels is used as
+reference, whereas &#8220;max-space&#8221; selects the image which occupies the largest amount world space.
+By default, an &#8220;average&#8221; voxel size and image orientation is computed from the input images
+and the image size adjusted such that the image bounding boxes of all (affinely transformed)
+input images are contained within the average image space. (default: average)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-images-voxel-size">
+<span id="cmdoption-average-images-spacing"></span><span id="cmdoption-average-images-size"></span><code class="descname">-voxel-size</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-spacing</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-size</code><code class="descclassname"> &lt;dx&gt; [&lt;dy&gt; [&lt;dz&gt;]]</code><a class="headerlink" href="#cmdoption-average-images-voxel-size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Voxel size of intensity average image. (default: <a class="reference internal" href="#cmdoption-average-images-reference"><code class="xref std std-option docutils literal"><span class="pre">-reference</span></code></a>)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-images-padding">
-<tt class="descname">-padding</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-average-images-padding" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-padding</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-average-images-padding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input padding and output background value. No input padding if not specified.
 Output background value zero by default or minimum average intensity minus 1. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-average-images-interp">
-<tt class="descname">-interp</tt><tt class="descclassname"> &lt;mode&gt;</tt><a class="headerlink" href="#cmdoption-average-images-interp" title="Permalink to this definition">¶</a></dt>
+<dt id="cmdoption-average-images-threshold">
+<code class="descname">-threshold</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-average-images-threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace average value by <a class="reference internal" href="#cmdoption-average-images-padding"><code class="xref std std-option docutils literal"><span class="pre">-padding</span></code></a> value when cumulative normalized weight
+is below the specified threshold in [0, 1). (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-images-normalize">
+<span id="cmdoption-average-images-normalization"></span><code class="descname">-normalize</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-normalization</code><code class="descclassname"> &lt;mode&gt;</code><a class="headerlink" href="#cmdoption-average-images-normalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input intensity normalization:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">none</span></code>:    Use input intensities unmodified. (default)</li>
+<li><code class="docutils literal"><span class="pre">mean</span></code>:    Divide by mean foreground value.</li>
+<li><code class="docutils literal"><span class="pre">median</span></code>:  Divide by median foreground value.</li>
+<li><code class="docutils literal"><span class="pre">z-score</span></code>: Subtract mean and divide by standard deviation.</li>
+<li><code class="docutils literal"><span class="pre">unit</span></code>:    Rescale input intensities to [0, 1].</li>
+<li><code class="docutils literal"><span class="pre">dist</span></code>:    Rescale input intensities to average mean and standard deviation of input images.</li>
+</ul>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-images-rescale">
+<span id="cmdoption-average-images-rescaling"></span><code class="descname">-rescale</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-rescaling</code><code class="descclassname"> &lt;mode&gt;|&lt;min&gt; &lt;max&gt;</code><a class="headerlink" href="#cmdoption-average-images-rescale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear rescaling of average intensity values:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">none</span></code>: No rescaling of averaged intensities. (default)</li>
+<li><code class="docutils literal"><span class="pre">unit</span></code>: Rescale average intensities to [0, 1].</li>
+<li><code class="docutils literal"><span class="pre">dist</span></code>: Rescale average intensities to average mean and standard deviation of input images.</li>
+<li><code class="docutils literal"><span class="pre">&lt;min&gt;</span> <span class="pre">&lt;max&gt;</span></code>: Rescale average intensities to specified output range.</li>
+</ul>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-images-margin">
+<code class="descname">-margin</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-average-images-margin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crop/pad average image and ensure a margin of &lt;n&gt; voxels at each boundary. (default: -1/off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-images-interpolation">
+<span id="cmdoption-average-images-interp"></span><code class="descname">-interpolation</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-interp</code><code class="descclassname"> &lt;mode&gt;</code><a class="headerlink" href="#cmdoption-average-images-interpolation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interpolation mode, e.g., NN, Linear, BSpline, Cubic, Sinc. (default: Linear)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-images-label">
-<tt class="descname">-label</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-average-images-label" title="Permalink to this definition">¶</a></dt>
-<dd><p>Segmentation label of which to create an average probability map.</p>
+<span id="cmdoption-average-images-labels"></span><code class="descname">-label</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-labels</code><code class="descclassname"> [&lt;path&gt;|&lt;value&gt;|&lt;from&gt;..&lt;to&gt;...]</code><a class="headerlink" href="#cmdoption-average-images-label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Segmentation label(s) of which to create an average probability map.
+When multiple labels are given, the corresponding segments are merged.
+This option can be given multiple times to create more than one average
+image for each segment. When only one &lt;output&gt; file name is given, it is
+modified to include the index of the segment corresponding to the order
+of the -label(s) options. Otherwise, specify a different output &lt;path&gt;
+as argument. A suffix corresponding to the respective label is appended to
+the output file path before the file name extension. When no argument is given
+the &lt;output&gt; path is used.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-images-datatype">
+<span id="cmdoption-average-images-dtype"></span><span id="cmdoption-average-images-type"></span><code class="descname">-datatype</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-dtype</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-type</code><code class="descclassname"> char|uchar|short|float|double</code><a class="headerlink" href="#cmdoption-average-images-datatype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data type of output image. The intermediate average image always has floating point data type.
+When this option is given, this average is cast to the respective output type before writing
+the result to the output image file. (default: float)</p>
 </dd></dl>
 
 </div>
@@ -178,31 +265,31 @@ Output background value zero by default or minimum average intensity minus 1. (d
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-average-images-v">
-<span id="cmdoption-average-images-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-average-images-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-average-images-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-average-images-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-images-debug">
-<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-average-images-debug" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-average-images-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-images-version">
-<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-average-images-version" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-average-images-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-images-revision">
-<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-images-revision" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-images-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-average-images-h">
-<span id="cmdoption-average-images-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-images-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-average-images-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-images-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -211,7 +298,7 @@ Output background value zero by default or minimum average intensity minus 1. (d
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-average-images-color">
-<span id="cmdoption-average-images-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-average-images-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-average-images-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-images-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -220,7 +307,7 @@ Output background value zero by default or minimum average intensity minus 1. (d
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-average-images-threads">
-<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-average-images-threads" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-average-images-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -233,22 +320,22 @@ Output background value zero by default or minimum average intensity minus 1. (d
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="bisect-dof.html" title="bisect-dof"
+          <a href="average-measure.html" title="average-measure"
              >next</a></li>
         <li class="right" >
           <a href="average-dofs.html" title="average-dofs"
              >previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

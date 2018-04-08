@@ -1,0 +1,5 @@
+<map id="mirtk::LeastSquaresConformalSurfaceMapper" name="mirtk::LeastSquaresConformalSurfaceMapper">
+<area shape="rect" id="node2" href="$classmirtk_1_1FreeBoundarySurfaceMapper.html" title="{mirtk::FreeBoundarySurface\lMapper\n||+ NumberOfComponents()\l+ ~FreeBoundarySurfaceMapper()\l# FreeBoundarySurfaceMapper()\l# FreeBoundarySurfaceMapper()\l# Initialize()\l# operator=()\l}" alt="" coords="5,571,229,749"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1SurfaceMapper.html" title="{mirtk::SurfaceMapper\n||+ Run()\l+ ~SurfaceMapper()\l# ComputeMap()\l# Finalize()\l# GetEdgeNeighborPoints()\l# GetPoint()\l# Initialize()\l# NumberOfInteriorPoints()\l# NumberOfPoints()\l# operator=()\l# Point()\l# SurfaceMapper()\l# SurfaceMapper()\l}" alt="" coords="25,249,209,522"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="55,6,179,199"/>
+</map>

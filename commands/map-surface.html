@@ -1,0 +1,240 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>map-surface &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="map-surface">
+<h1>map-surface<a class="headerlink" href="#map-surface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">map</span><span class="o">-</span><span class="n">surface</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>This tool computes a mapping for each point on the surface of a given input shape
+embedded in 3D space. The output is a (piecewise linear) function which assigns each
+point on the surface of the input shape one or more values. In case of non-closed surfaces,
+the output map can interpolate any values given on the boundary of the surface at the
+interior points of the surface. More common use cases are to compute a bijective mapping
+from one geometric shape to another geometric shape with identical topology. The resulting
+map is a parameterization of the surface of the input shape. Such parameterization can be
+used for texturing, object morphing, and surface registration.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-map-surface-arg-input">
+<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-map-surface-arg-input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Point set delineating the boundary of the map domain or name
+of primitive shape such as: &#8220;disk&#8221;, &#8220;square&#8221;, or &#8220;sphere&#8221;.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-map-surface-arg-output">
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-map-surface-arg-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>File path of output map. A piecewise linear map is stored as VTK file.
+Other maps are stored in a custom binary format.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="output-options">
+<h2>Output options<a class="headerlink" href="#output-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-map-surface-barycentric">
+<code class="descname">-barycentric</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-map-surface-barycentric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use spring constants based on generalized barycentric coordiantes.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-map-surface-mean-value">
+<code class="descname">-mean-value</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-map-surface-mean-value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use spring constants based on mean value coordinates.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-map-surface-conformal">
+<code class="descname">-conformal</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-map-surface-conformal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Conformal surface map or as-conformal-as-possible volumetric map.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-map-surface-harmonic">
+<code class="descname">-harmonic</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-map-surface-harmonic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Harmonic volumetric map.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-map-surface-p">
+<code class="descname">-p</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-map-surface-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exponent of harmonic energy term. When non-positive, solve for an
+approximate harmonic surface map using a spring network. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-map-surface-name">
+<code class="descname">-name</code><code class="descclassname"> &lt;string&gt;</code><a class="headerlink" href="#cmdoption-map-surface-name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of point data array used as fixed point map.  (default: tcoords)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-map-surface-mask">
+<code class="descname">-mask</code><code class="descclassname"> &lt;string&gt;</code><a class="headerlink" href="#cmdoption-map-surface-mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of point data array used as fixed point mask. (default: boundary)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-map-surface-max-iterations">
+<code class="descname">-max-iterations</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-map-surface-max-iterations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum no. of linear solver iterations. (default: size of problem)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-map-surface-v">
+<span id="cmdoption-map-surface-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-map-surface-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-map-surface-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-map-surface-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-map-surface-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-map-surface-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-map-surface-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-map-surface-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-map-surface-h">
+<span id="cmdoption-map-surface-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-map-surface-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="terminal-options">
+<h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-map-surface-color">
+<span id="cmdoption-map-surface-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-map-surface-color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable colored output. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="parallelization-options">
+<h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-map-surface-threads">
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-map-surface-threads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

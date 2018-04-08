@@ -19,6 +19,7 @@ for Linux and OS X is 2.8.12, while version 3.4 or newer is needed on Windows.
 For the compilation of the MIRTK source code, a C++ compiler with support for the
 `C++11`_ standard is required. On Windows, the minimum required Visual Studio compiler
 version is 18.0. A compatible compiler is shipped with Visual Studio 2013 or newer.
+For Unix operation systems, we recommend the use of the `GNU Compiler Collection`_ (GCC).
 
 To execute the :doc:`MIRTK commands <commands>`, a Python_ installation is required.
 Note that Python has to be installed before configuring the MIRTK build using CMake.
@@ -37,23 +38,21 @@ The MIRTK source code makes use of the following third-party libraries:
 Third-party library   Version  Included as              Required by module(s)                          Optionally used by
 ====================  =======  =======================  =============================================  ==================
 `Intel TBB`_          any      System                   No module                                      All modules
-Boost_                1.48     System or Git submodule  |Numerics|, |PointSet|, |Transformation|
-Eigen_                3.0      System or Git submodule  |Numerics|, |VolumetricMapping|
+Boost_                1.48     System                   |Numerics|, |PointSet|, |Transformation|
+Eigen_                3.0      System                   |Numerics|, |Mapping|
 ARPACK_ / UMFPACK_    any      System                   No module                                      |Numerics|
-VTK_                  6.0      System                   |PointSet|, |Deformable|, |VolumetricMapping|  |Common|, |Image|, |Registration|
+VTK_                  6.0      System                   |PointSet|, |Deformable|, |Mapping|            |Common|, |Image|, |Registration|
 libpng_               any      System                   No module                                      |Image|
 NiftiCLib_            any      System or Source code    No module                                      |IO|
 libLBFGS_             any      Source code              No module                                      |IO|
 ====================  =======  =======================  =============================================  ==================
 
-Only libraries marked as "Included as" **System** alone which are required by the modules
-to be build must be installed separately before building the MIRTK libraries and command-line
-tools. Boost_ and Eigen_ are a minimum requirement to build MIRTK. The needed source files of
-these header-only libraries can optionally be copied into the MIRTK `ThirdParty/` directory
-as described in the :ref:`download instructions <DownloadSources>`. The source code of
-the NiftiCLib_ and libLBFGS_ libraries are included in the basic download package and need
-not be installed. The WITH_NiftiCLib build option can be used, however, to force the use
-of an existing NiftiCLib installation. See :ref:`build configuration steps below <ConfigurationSteps>`.
+Boost_ and Eigen_ are a minimum requirement to build MIRTK. The source code of the NiftiCLib_ and
+libLBFGS_ libraries are included in the basic download package and need not be installed.
+The WITH_NiftiCLib build option can be used, however, to force the use of an existing NiftiCLib
+installation. See :ref:`build configuration steps below <ConfigurationSteps>`.
+
+The UMFPACK library is part of the `SuiteSparse <http://faculty.cse.tamu.edu/davis/suitesparse.html>`__ installation.
 
 The intra-module dependencies are as follows. When a module is enabled,
 all modules required by this module are automatically enabled as well.
@@ -69,7 +68,9 @@ Module               Requires module(s)                                         
 |PointSet|           |Common|, |Numerics|, |Image|, |Transformation|
 |Registration|       |Common|, |Numerics|, |Image|, |Transformation|               |PointSet|, |Deformable|
 |Deformable|         |Common|, |Numerics|, |Image|, |Transformation|, |PointSet|
-|VolumetricMapping|  |Common|, |Numerics|, |Image|, |PointSet|
+|Mapping|            |Common|, |Numerics|, |Image|, |PointSet|
+|Scripting|
+|DrawEM|             |Common|, |Numerics|, |Image|, |IO|
 ===================  ===========================================================   ========================================
 
 .. note::
@@ -261,6 +262,7 @@ The Bash completions are then available when a new Terminal window is opened.
 
 
 .. _C++11:     https://isocpp.org/wiki/faq/cpp11
+.. _GNU Compiler Collection: https://gcc.gnu.org/
 .. _Python:    https://www.python.org
 .. _Boost:     http://www.boost.org
 .. _Eigen:     http://eigen.tuxfamily.org

@@ -9,7 +9,7 @@ var searchData=
   ['ternaryforeachvoxelifbody_5f1const',['TernaryForEachVoxelIfBody_1Const',['../structmirtk_1_1TernaryForEachVoxelIfBody__1Const.html',1,'mirtk']]],
   ['ternaryforeachvoxelifbody_5f2const',['TernaryForEachVoxelIfBody_2Const',['../structmirtk_1_1TernaryForEachVoxelIfBody__2Const.html',1,'mirtk']]],
   ['ternaryforeachvoxelifbody_5fconst',['TernaryForEachVoxelIfBody_Const',['../structmirtk_1_1TernaryForEachVoxelIfBody__Const.html',1,'mirtk']]],
-  ['tetrahedralvolumeparameterizer',['TetrahedralVolumeParameterizer',['../classmirtk_1_1TetrahedralVolumeParameterizer.html',1,'mirtk']]],
+  ['tetrahedralmeshmapper',['TetrahedralMeshMapper',['../classmirtk_1_1TetrahedralMeshMapper.html',1,'mirtk']]],
   ['topologypreservationconstraint',['TopologyPreservationConstraint',['../classmirtk_1_1TopologyPreservationConstraint.html',1,'mirtk']]],
   ['transformation',['Transformation',['../classmirtk_1_1Transformation.html',1,'mirtk']]],
   ['transformationapproximationerror',['TransformationApproximationError',['../classmirtk_1_1TransformationApproximationError.html',1,'mirtk']]],

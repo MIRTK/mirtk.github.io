@@ -1,0 +1,4 @@
+<map id="mirtk::MeshlessVolumeMapper" name="mirtk::MeshlessVolumeMapper">
+<area shape="rect" id="node2" href="$classmirtk_1_1VolumeMapper.html" title="{mirtk::VolumeMapper\n||+ NumberOfComponents()\l+ Run()\l+ ~VolumeMapper()\l# Finalize()\l# Initialize()\l# InitializeBoundary()\l# operator=()\l# Solve()\l# VolumeMapper()\l# VolumeMapper()\l}" alt="" coords="33,249,212,474"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="60,6,184,199"/>
+</map>

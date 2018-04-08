@@ -1,0 +1,6 @@
+<map id="mirtk::MeshlessBiharmonicMap" name="mirtk::MeshlessBiharmonicMap">
+<area shape="rect" id="node2" href="$classmirtk_1_1MeshlessHarmonicMap.html" title="{mirtk::MeshlessHarmonicMap\n||+ Evaluate()\l+ Evaluate()\l+ MeshlessHarmonicMap()\l+ MeshlessHarmonicMap()\l+ NewCopy()\l+ operator=()\l+ ~MeshlessHarmonicMap()\l+ H()\l}" alt="" coords="10,926,205,1119"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1MeshlessMap.html" title="{mirtk::MeshlessMap\n||+ AddSourcePoint()\l+ BoundingBox()\l+ NumberOfComponents()\l+ NumberOfSourcePoints()\l+ ~MeshlessMap()\l# Initialize()\l# MeshlessMap()\l# MeshlessMap()\l# operator=()\l# ReadMap()\l# WriteMap()\l}" alt="" coords="17,635,199,877"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1Mapping.html" title="{mirtk::Mapping\n||+ Attributes()\l+ Attributes()\l+ BoundingBox()\l+ BoundingBox()\l+ BoundingBox()\l+ BoundingBox()\l+ Evaluate()\l+ Evaluate()\l+ Evaluate()\l+ Evaluate()\land 11 more...\l+ New()\l# Mapping()\l# Mapping()\l# operator=()\l# ReadMap()\l# WriteMap()\l}" alt="" coords="47,249,168,586"/>
+<area shape="rect" id="node8" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="46,6,169,199"/>
+</map>

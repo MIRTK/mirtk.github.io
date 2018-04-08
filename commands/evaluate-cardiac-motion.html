@@ -1,0 +1,242 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>evaluate-cardiac-motion &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="evaluate-distance" href="evaluate-distance.html" />
+    <link rel="prev" title="evaluate-atlas" href="evaluate-atlas.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="evaluate-distance.html" title="evaluate-distance"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="evaluate-atlas.html" title="evaluate-atlas"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="evaluate-cardiac-motion">
+<h1>evaluate-cardiac-motion<a class="headerlink" href="#evaluate-cardiac-motion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">evaluate</span><span class="o">-</span><span class="n">cardiac</span><span class="o">-</span><span class="n">motion</span> <span class="o">&lt;</span><span class="n">input_mesh</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output_mesh</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">image</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Evaluate cardiac motion. This command computes the displacement or strain
+at each vertex on a myocardial surface mesh.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-arg-input_mesh">
+<code class="descname">input_mesh</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-arg-input_mesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Myocardial mesh.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-arg-output_mesh">
+<code class="descname">output_mesh</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-arg-output_mesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>The output mesh which stores the vertex-wise motion data.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="required-options">
+<h2>Required options<a class="headerlink" href="#required-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-image">
+<code class="descname">-image</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cardiac image whose z-axis defines the longitudinal direction.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-dof">
+<span id="cmdoption-evaluate-cardiac-motion-dofin"></span><code class="descname">-dof</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-dofin</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-dof" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transformation with regard to the reference frame (end-diastolic frame).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-invert-zaxis">
+<code class="descname">-invert-zaxis</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-invert-zaxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this option if the longitudinal direction is the inverted z-axis of the image. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-displacement">
+<code class="descname">-displacement</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-displacement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the displacement. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-strain">
+<code class="descname">-strain</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-strain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the strain.       (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-save-local-coord">
+<code class="descname">-save-local-coord</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-save-local-coord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the local cardiac coordinate system in the output file. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-ascii">
+<code class="descname">-ascii</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-ascii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write legacy VTK files encoded in ASCII. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-binary">
+<code class="descname">-binary</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write legacy VTK files in binary form. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-compress">
+<code class="descname">-compress</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-compress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compress XML VTK files. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-nocompress">
+<code class="descname">-nocompress</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-nocompress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do not compress XML VTK files. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-v">
+<span id="cmdoption-evaluate-cardiac-motion-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-cardiac-motion-h">
+<span id="cmdoption-evaluate-cardiac-motion-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-cardiac-motion-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="evaluate-distance.html" title="evaluate-distance"
+             >next</a></li>
+        <li class="right" >
+          <a href="evaluate-atlas.html" title="evaluate-atlas"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

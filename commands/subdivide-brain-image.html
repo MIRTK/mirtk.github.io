@@ -1,0 +1,306 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>subdivide-brain-image &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="transform-image" href="transform-image.html" />
+    <link rel="prev" title="split-labels" href="split-labels.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="transform-image.html" title="transform-image"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="split-labels.html" title="split-labels"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="subdivide-brain-image">
+<h1>subdivide-brain-image<a class="headerlink" href="#subdivide-brain-image" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">subdivide</span><span class="o">-</span><span class="n">brain</span><span class="o">-</span><span class="n">image</span> <span class="p">[</span><span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">subdivide</span><span class="o">-</span><span class="n">brain</span><span class="o">-</span><span class="n">image</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>This program reads a structural brain segmentation and derives from it
+a segmentation of the brain volume into the following output labels.
+This output segmentation can then be used to reconstruct topologically
+correct (i.e., closed genus-0) surfaces of the cGM/WM interface for the
+left and right hemisphere, where subcortical and deep brain structures
+are enclosed by these so-called white surfaces. Additionally, the
+brainstem+cerebellum segment can be respresented by another closed
+surface mesh. The union of these reconstructured surfaces encloses
+the entire brain volume, yet excluding cortical grey matter.
+By deforming the joint brain surface towards the cGM/CSF interface,
+the pial surface which encloses the entire brain volume including
+subcortical structures can be obtained. The right/left hemisphere
+assignment of cortical grey matter follows from the point correspondences
+between white and pial surfaces, respectively, the RH/LH label may
+be assigned to white surface mesh nodes upon merging the right/left
+white surface meshes. See merge-surfaces -source-array option.</p>
+<p>Output labels:
+- 0: Background
+- 1: Cortical grey matter
+- 2: Cerebral white matter and deep brain structures of right hemisphere
+- 3: Cerebral white matter and deep brain structures of left  hemisphere
+- 4: Brainstem, including cerebellum when <a class="reference internal" href="#cmdoption-subdivide-brain-image-brainstem-and-cerebellum"><code class="xref std std-option docutils literal"><span class="pre">subdivide-brain-image</span> <span class="pre">-brainstem-and-cerebellum</span></code></a> is on
+- 5: Cerebellum, when <a class="reference internal" href="#cmdoption-subdivide-brain-image-brainstem-and-cerebellum"><code class="xref std std-option docutils literal"><span class="pre">subdivide-brain-image</span> <span class="pre">-brainstem-and-cerebellum</span></code></a> is off</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-arg-input">
+<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-subdivide-brain-image-arg-input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input  label image. See <a class="reference internal" href="#cmdoption-subdivide-brain-image-input-labels"><code class="xref std std-option docutils literal"><span class="pre">-input-labels</span></code></a>.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-arg-output">
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-subdivide-brain-image-arg-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output label image. See <a class="reference internal" href="#cmdoption-subdivide-brain-image-output-labels"><code class="xref std std-option docutils literal"><span class="pre">-output-labels</span></code></a>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-input-labels">
+<span id="cmdoption-subdivide-brain-image-input"></span><code class="descname">-input-labels</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-input</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-input-labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input segmentation label image, use either this option or &lt;input&gt; argument.
+For each of the following options which take a &lt;labels&gt; argument,
+the respective segmentation mask is derived from this input label
+image by merging the specified segments of this brain segmentation.
+Multiple integer labels can be specified as the &lt;labels&gt; argument,
+each separated by at least one space character. A range of labels
+can be specified as &lt;first&gt;..&lt;last&gt;. When the &lt;labels&gt; argument is
+a single argument that is neither an integer nor a label range,
+the argument is expected to be the name of a binary mask image file.
+This option is required when any of the other options has one or more
+&lt;labels&gt; arguments. It is ignored otherwise. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-output-labels">
+<span id="cmdoption-subdivide-brain-image-output"></span><code class="descname">-output-labels</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-output</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-output-labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output label image, use either this option or &lt;output&gt; argument.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-hemispheres">
+<code class="descname">-hemispheres</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-hemispheres" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hemispheres mask (0: outside, 1: right, 2: left) from
+which cutting plane is computed. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-right-hemisphere">
+<span id="cmdoption-subdivide-brain-image-rh"></span><code class="descname">-right-hemisphere</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-rh</code><code class="descclassname"> &lt;file&gt;|&lt;labels&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-right-hemisphere" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mask or labels of structures of right hemisphere used to compute cutting plane.
+This option is required when no <a class="reference internal" href="#cmdoption-subdivide-brain-image-hemispheres"><code class="xref std std-option docutils literal"><span class="pre">-hemispheres</span></code></a> mask is given.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-left-hemisphere">
+<span id="cmdoption-subdivide-brain-image-lh"></span><code class="descname">-left-hemisphere</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-lh</code><code class="descclassname"> &lt;file&gt;|&lt;labels&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-left-hemisphere" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mask or labels of structures of left  hemisphere used to compute cutting plane.
+This option is required when no <a class="reference internal" href="#cmdoption-subdivide-brain-image-hemispheres"><code class="xref std std-option docutils literal"><span class="pre">-hemispheres</span></code></a> mask is given.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-subcortical">
+<span id="cmdoption-subdivide-brain-image-sb"></span><code class="descname">-subcortical</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-sb</code><code class="descclassname"> &lt;file&gt;|&lt;labels&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-subcortical" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subcortical / deep brain structures segmentation mask or labels.
+When specified, these structures are cut into RH and LH. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-white-matter">
+<span id="cmdoption-subdivide-brain-image-wm"></span><code class="descname">-white-matter</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-wm</code><code class="descclassname"> &lt;file&gt;|&lt;labels&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-white-matter" title="Permalink to this definition">¶</a></dt>
+<dd><p>White matter segmentation mask or labels. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-grey-matter">
+<span id="cmdoption-subdivide-brain-image-gm"></span><code class="descname">-grey-matter</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-gm</code><code class="descclassname"> &lt;file&gt;|&lt;labels&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-grey-matter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grey matter segmentation mask or labels. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-brainstem">
+<span id="cmdoption-subdivide-brain-image-bs"></span><code class="descname">-brainstem</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-bs</code><code class="descclassname"> &lt;file&gt;|&lt;labels&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-brainstem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Brainstem segmentation mask or labels. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-cerebellum">
+<span id="cmdoption-subdivide-brain-image-cb"></span><code class="descname">-cerebellum</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-cb</code><code class="descclassname"> &lt;file&gt;|&lt;labels&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-cerebellum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cerebellum segmentation mask or labels. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-closing">
+<span id="cmdoption-subdivide-brain-image-closing-iterations"></span><code class="descname">-closing</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-closing-iterations</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-closing" title="Permalink to this definition">¶</a></dt>
+<dd><p>No. of iterations used to close holes between right/left subcortical,
+brainstem, and cerebellum segmentations. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-subcortical-closing">
+<code class="descname">-subcortical-closing</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-subcortical-closing" title="Permalink to this definition">¶</a></dt>
+<dd><p>No. of iterations used to close holes between right/left subcortical segmentation. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-brainstem-closing">
+<code class="descname">-brainstem-closing</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-brainstem-closing" title="Permalink to this definition">¶</a></dt>
+<dd><p>No. of iterations used to close holes in brainstem segmentation. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-cerebellum-closing">
+<code class="descname">-cerebellum-closing</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-cerebellum-closing" title="Permalink to this definition">¶</a></dt>
+<dd><p>No. of iterations used to close holes in cerebellum segmentation. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-brainstem-and-cerebellum">
+<span id="cmdoption-subdivide-brain-image-cerebellum-and-brainstem"></span><span id="cmdoption-subdivide-brain-image-bscb"></span><span id="cmdoption-subdivide-brain-image-cbbs"></span><code class="descname">-brainstem-and-cerebellum</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-cerebellum-and-brainstem</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-bscb</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-cbbs</code><code class="descclassname"> [on|off]</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-brainstem-and-cerebellum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to merge brainstem and cerebellum. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-v">
+<span id="cmdoption-subdivide-brain-image-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-subdivide-brain-image-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-subdivide-brain-image-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-subdivide-brain-image-h">
+<span id="cmdoption-subdivide-brain-image-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-subdivide-brain-image-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="transform-image.html" title="transform-image"
+             >next</a></li>
+        <li class="right" >
+          <a href="split-labels.html" title="split-labels"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

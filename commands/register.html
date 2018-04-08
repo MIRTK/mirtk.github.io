@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,34 +24,34 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../index.html" />
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
     <link rel="up" title="Applications" href="../commands.html" />
-    <link rel="next" title="remesh" href="remesh.html" />
+    <link rel="next" title="remesh-surface" href="remesh-surface.html" />
     <link rel="prev" title="reflect-image" href="reflect-image.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="remesh.html" title="remesh"
+          <a href="remesh-surface.html" title="remesh-surface"
              accesskey="N">next</a></li>
         <li class="right" >
           <a href="reflect-image.html" title="reflect-image"
              accesskey="P">previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -59,9 +59,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
@@ -87,21 +84,21 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="register">
 <h1>register<a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>register -images &lt;images.lst&gt; [options]
-register -image &lt;image1&gt; [-dof &lt;dof1&gt;] -image &lt;image2&gt; [-dof &lt;dof2&gt;]... [options]
-register -image &lt;image1&gt; &lt;image2&gt;... [options]
-register &lt;image1&gt; &lt;image2&gt;... [options]
-register &lt;image_sequence&gt; [options]
-register -pset &lt;pointset1&gt; [-dof &lt;dof1&gt;] -pset &lt;pointset2&gt; [-dof &lt;dof2&gt;]... [options]
-register &lt;dataset1&gt; &lt;dataset2&gt;... [options]
-register -pset &lt;pointset1&gt; &lt;pointset2&gt;... [options]
-register -image &lt;image1&gt; -points &lt;pointset1&gt; [-dof &lt;dof1&gt;]... [options]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">register</span> <span class="o">-</span><span class="n">images</span> <span class="o">&lt;</span><span class="n">images</span><span class="o">.</span><span class="n">lst</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">register</span> <span class="o">-</span><span class="n">image</span> <span class="o">&lt;</span><span class="n">image1</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="n">dof1</span><span class="o">&gt;</span><span class="p">]</span> <span class="o">-</span><span class="n">image</span> <span class="o">&lt;</span><span class="n">image2</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="n">dof2</span><span class="o">&gt;</span><span class="p">]</span><span class="o">...</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">register</span> <span class="o">-</span><span class="n">image</span> <span class="o">&lt;</span><span class="n">image1</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">image2</span><span class="o">&gt;...</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">register</span> <span class="o">&lt;</span><span class="n">image1</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">image2</span><span class="o">&gt;...</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">register</span> <span class="o">&lt;</span><span class="n">image_sequence</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">register</span> <span class="o">-</span><span class="n">pset</span> <span class="o">&lt;</span><span class="n">pointset1</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="n">dof1</span><span class="o">&gt;</span><span class="p">]</span> <span class="o">-</span><span class="n">pset</span> <span class="o">&lt;</span><span class="n">pointset2</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="n">dof2</span><span class="o">&gt;</span><span class="p">]</span><span class="o">...</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">register</span> <span class="o">&lt;</span><span class="n">dataset1</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">dataset2</span><span class="o">&gt;...</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">register</span> <span class="o">-</span><span class="n">pset</span> <span class="o">&lt;</span><span class="n">pointset1</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">pointset2</span><span class="o">&gt;...</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">register</span> <span class="o">-</span><span class="n">image</span> <span class="o">&lt;</span><span class="n">image1</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">points</span> <span class="o">&lt;</span><span class="n">pointset1</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="n">dof1</span><span class="o">&gt;</span><span class="p">]</span><span class="o">...</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -113,12 +110,15 @@ modalities) at different time points. For longitudinal data, the temporal origin
 identifies the time point that each input image belongs to. How all input images and polydata sets are
 registered with one another is determined by an energy function. This energy function is formulated in
 a simplified math expression using MATLAB-style indexing for the individual input files, i.e.,</p>
-<div class="highlight-python"><div class="highlight"><pre>Energy function =      SIM[Image dissimilarity](I(1), I(2:end) o T)
-                +      PDM[Point set distance](T o P(1), P(2:end))
-                + 1e-3 BE [Bending energy](T)
-                +    0 VP [Volume preservation](T)
-                +    0 JAC[Jacobian penalty](T)
-                +    0 Sparsity(T)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Energy</span> <span class="n">function</span> <span class="o">=</span>      <span class="n">SIM</span><span class="p">[</span><span class="n">Image</span> <span class="n">dissimilarity</span><span class="p">](</span><span class="n">I</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">I</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">end</span><span class="p">)</span> <span class="n">o</span> <span class="n">T</span><span class="p">)</span><span class="o">...</span>
+                <span class="o">+</span>      <span class="n">PDM</span><span class="p">[</span><span class="n">Point</span> <span class="nb">set</span> <span class="n">distance</span><span class="p">](</span><span class="n">T</span> <span class="n">o</span> <span class="n">P</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">P</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">end</span><span class="p">))</span><span class="o">...</span>
+                <span class="o">+</span> <span class="mi">1</span><span class="n">e</span><span class="o">-</span><span class="mi">3</span> <span class="n">BE</span><span class="p">[</span><span class="n">Bending</span> <span class="n">energy</span><span class="p">](</span><span class="n">T</span><span class="p">)</span><span class="o">...</span>
+                <span class="o">+</span>    <span class="mi">0</span> <span class="n">LE</span><span class="p">[</span><span class="n">Linear</span> <span class="n">energy</span><span class="p">](</span><span class="n">T</span><span class="p">)</span><span class="o">...</span>
+                <span class="o">+</span>    <span class="mi">0</span> <span class="n">TP</span><span class="p">[</span><span class="n">Topology</span> <span class="n">preservation</span><span class="p">](</span><span class="n">T</span><span class="p">)</span><span class="o">...</span>
+                <span class="o">+</span>    <span class="mi">0</span> <span class="n">VP</span><span class="p">[</span><span class="n">Volume</span> <span class="n">preservation</span><span class="p">](</span><span class="n">T</span><span class="p">)</span><span class="o">...</span>
+                <span class="o">+</span>    <span class="mi">0</span> <span class="n">LogJac</span><span class="p">[</span><span class="n">LogJac</span> <span class="n">penalty</span><span class="p">](</span><span class="n">T</span><span class="p">)</span><span class="o">...</span>
+                <span class="o">+</span>    <span class="mi">0</span> <span class="n">NegJac</span><span class="p">[</span><span class="n">NegJac</span> <span class="n">penalty</span><span class="p">](</span><span class="n">T</span><span class="p">)</span><span class="o">...</span>
+                <span class="o">+</span>    <span class="mi">0</span> <span class="n">Sparsity</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>where only energy terms with non-zero weights are active during the registration.
@@ -130,27 +130,31 @@ smoothness term, add &#8220;Bending energy weight = 0.01&#8221; to the configura
 use the -par option on the command-line. To enable volume preservation, set the
 parameter &#8220;Volume preservation weight&#8221; to a positive value.</p>
 </div>
-<div class="section" id="arguments">
-<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="output-options">
+<h2>Output options<a class="headerlink" href="#output-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-dofout">
-<tt class="descname">-dofout</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-dofout" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dofout</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write transformation to specified file.</p>
 </dd></dl>
 
-</div>
-<div class="section" id="command-options">
-<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
-<dt id="cmdoption-register-model">
-<tt class="descname">-model</tt><tt class="descclassname"> &lt;m1&gt;[+&lt;m2&gt;...]</tt><a class="headerlink" href="#cmdoption-register-model" title="Permalink to this definition">¶</a></dt>
-<dd><p>Transformation model(s). (default: Rigid+Affine+FFD)
-Alternatively, use &#8220;-par &#8216;Transformation model&#8217; &lt;name&gt;&#8221; (see <a class="reference internal" href="#cmdoption-register-par"><em class="xref std std-option">-par</em></a>).</p>
+<dt id="cmdoption-register-output">
+<code class="descname">-output</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write (first) transformed source image to specified file.
+Given the flexibility of the energy function formulation,
+this option may not always give the desired output and is
+limited to standard pairwise image registration using a
+single image dissimilarity term. Use transform-image command
+with the <a class="reference internal" href="#cmdoption-register-dofout"><code class="xref std std-option docutils literal"><span class="pre">-dofout</span></code></a> file as input otherwise.</p>
 </dd></dl>
 
+</div>
+<div class="section" id="input-options">
+<h2>Input options<a class="headerlink" href="#input-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-image">
-<tt class="descname">-image</tt><tt class="descclassname"> &lt;file&gt;...</tt><a class="headerlink" href="#cmdoption-register-image" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-image</code><code class="descclassname"> &lt;file&gt;...</code><a class="headerlink" href="#cmdoption-register-image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input image to be registered. The order in which the images are
 given on the command-line corresponds to the image indices used
 in the registration energy formulation. The first input image has
@@ -159,7 +163,7 @@ index 1 and is denoted by the symbol I(1) in the image similarity term.</p>
 
 <dl class="option">
 <dt id="cmdoption-register-pset">
-<tt class="descname">-pset</tt><tt class="descclassname"> &lt;file&gt;...</tt><a class="headerlink" href="#cmdoption-register-pset" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-pset</code><code class="descclassname"> &lt;file&gt;...</code><a class="headerlink" href="#cmdoption-register-pset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input points, curve(s), surface(s), or other simplicial complex(es).
 The order in which the point set files are given on the command-line
 corresponds to the point set indices used in the registration energy
@@ -170,23 +174,23 @@ measure (PDM) term.</p>
 
 <dl class="option">
 <dt id="cmdoption-register-dof">
-<tt class="descname">-dof</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-dof" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dof</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dof" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a pre-computed affine transformation to be applied to
-the preceeding image and/or polydata. Note the difference to <a class="reference internal" href="#cmdoption-register-dofin"><em class="xref std std-option">-dofin</em></a>,
-which specifies an initial estimate of the <a class="reference internal" href="#cmdoption-register-dofout"><em class="xref std std-option">-dofout</em></a> transformation.
+the preceeding image and/or polydata. Note the difference to <a class="reference internal" href="#cmdoption-register-dofin"><code class="xref std std-option docutils literal"><span class="pre">-dofin</span></code></a>,
+which specifies an initial estimate of the <a class="reference internal" href="#cmdoption-register-dofout"><code class="xref std std-option docutils literal"><span class="pre">-dofout</span></code></a> transformation.
 (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-dof_i">
-<tt class="descname">-dof_i</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-dof_i" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dof_i</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dof_i" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a pre-computed affine transformation whose inverse is to be
-applied to the preceeding image and/or polydata (see <a class="reference internal" href="#cmdoption-register-dof"><em class="xref std std-option">-dof</em></a>). (default: none)</p>
+applied to the preceeding image and/or polydata (see <a class="reference internal" href="#cmdoption-register-dof"><code class="xref std std-option docutils literal"><span class="pre">-dof</span></code></a>). (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-images">
-<tt class="descname">-images</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-images" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-images</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-images" title="Permalink to this definition">¶</a></dt>
 <dd><p>Text file with N lines containing the file names of each
 2D/3D input image, optionally followed by a space character and the
 associated (relative) acquisition time (in ms). If no acquisition
@@ -194,18 +198,18 @@ time is given, the temporal offset of the image header is used.
 Images specified as positional arguments are read before the images
 named in this (then optional) text file and the index of the images
 given in the text file are offset by the number of images named
-as positional arguments or using <a class="reference internal" href="#cmdoption-register-image"><em class="xref std std-option">-image</em></a>, respectively.</p>
+as positional arguments or using <a class="reference internal" href="#cmdoption-register-image"><code class="xref std std-option docutils literal"><span class="pre">-image</span></code></a>, respectively.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-psets">
-<tt class="descname">-psets</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-psets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Equivalent to <a class="reference internal" href="#cmdoption-register-images"><em class="xref std std-option">-images</em></a>, but for point sets (<a class="reference internal" href="#cmdoption-register-pset"><em class="xref std std-option">-pset</em></a>).</p>
+<code class="descname">-psets</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-psets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Equivalent to <a class="reference internal" href="#cmdoption-register-images"><code class="xref std std-option docutils literal"><span class="pre">-images</span></code></a>, but for point sets (<a class="reference internal" href="#cmdoption-register-pset"><code class="xref std std-option docutils literal"><span class="pre">-pset</span></code></a>).</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-dofs">
-<tt class="descname">-dofs</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-dofs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dofs</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read names of affine transformations of input images from
 specified text file. The affine transformations are set as
 if the images had been transformed by these before. Hence,
@@ -216,59 +220,181 @@ not included are assumed to not be further pre-transformed. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
+<dt id="cmdoption-register-dofins">
+<code class="descname">-dofins</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read pairwise transformations from the files specified
+in the given text file which lists for each pair-wise
+transformation the corresponding target image, followed
+by the source image and the name of the transformation file.
+Note that the target and source image names must be listed
+in the <a class="reference internal" href="#cmdoption-register-images"><code class="xref std std-option docutils literal"><span class="pre">-images</span></code></a> list file. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-dofin">
+<code class="descname">-dofin</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-dofin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read initial transformation from file if <a class="reference internal" href="#cmdoption-register-dofins"><code class="xref std std-option docutils literal"><span class="pre">-dofins</span></code></a> not specified.
+When no initial guess is given, and the first transformation model is a
+homogeneous transformation, a translation which aligns image foreground centers
+of mass is used. The identity mapping (&#8216;Id&#8217; or &#8216;identity&#8217;) is used as initial guess
+for deformable models unless the &lt;file&gt; argument is &#8216;guess&#8217; to align the centers.
+If the given transformation cannot be used directly as starting point of the
+registration, it will be approximated by an instance of the chosen transformation
+model at the initial resolution level. The input transformation may thus be of
+different type than the output transformation of the registration.
+(default: guess or Id/identity)</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-register-mask">
-<tt class="descname">-mask</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-mask" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-mask</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-mask" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reference mask which defines the domain within which to evaluate the
 energy function (i.e. image similarity). The registered images will
 thus be resampled within the corresponding domain of the world system.
 By default, the foreground of the target image defines this domain.</p>
 </dd></dl>
 
-<dl class="option">
-<dt id="cmdoption-register-dofins">
-<tt class="descname">-dofins</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-dofins" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read pairwise transformations from the files specified
-in the given text file which lists for each pair-wise
-transformation the corresponding target image, followed
-by the source image and the name of the transformation file.
-Note that the target and source image names must be listed
-in the <a class="reference internal" href="#cmdoption-register-images"><em class="xref std std-option">-images</em></a> list file. (default: none)</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-register-dofin">
-<tt class="descname">-dofin</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-dofin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read initial transformation from file if <a class="reference internal" href="#cmdoption-register-dofins"><em class="xref std std-option">-dofins</em></a> not specified.
-Otherwise, writes the initial transformation obtained by approximating
-the pairwise transformations to the named file.
-If the given transformation cannot be used directly as starting
-point of the registration, it will be approximated by an instance
-of the chosen transformation model at the initial resolution level.
-The input transformation may thus be of different type than the
-output transformation of the registration. (default: none)</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-register-par">
-<tt class="descname">-par</tt><tt class="descclassname"> &lt;name&gt; &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-register-par" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specify parameter value directly as command argument.</p>
-</dd></dl>
-
+</div>
+<div class="section" id="configuration-options">
+<h2>Configuration options<a class="headerlink" href="#configuration-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-parin">
-<tt class="descname">-parin</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-parin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read parameters from configuration file. If &#8220;stdin&#8221; or &#8220;cin&#8221;,
+<code class="descname">-parin</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-parin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read parameters from configuration file. If &lt;file&gt; is &#8220;stdin&#8221; or &#8220;cin&#8221;,
 the parameters are read from standard input instead. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
+<dt id="cmdoption-register-par">
+<code class="descname">-par</code><code class="descclassname"> &lt;name&gt; &lt;value&gt;</code><a class="headerlink" href="#cmdoption-register-par" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify any parameter value usually found in <a class="reference internal" href="#cmdoption-register-parin"><code class="xref std std-option docutils literal"><span class="pre">-parin</span></code></a> file as command argument.
+The other configuration options are convenient shortcuts for commonly customized parameters.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-model">
+<code class="descname">-model</code><code class="descclassname"> &lt;m1&gt;[+&lt;m2&gt;...]</code><a class="headerlink" href="#cmdoption-register-model" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;Transformation model&#8221;. Multiple models can be concatenated using a plus sign.
+(default: Rigid+Affine+FFD)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-multi-level-model">
+<span id="cmdoption-register-composition"></span><code class="descname">-multi-level-model</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-composition</code><code class="descclassname"> None|Sum|Fluid|LogSum</code><a class="headerlink" href="#cmdoption-register-multi-level-model" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;Multi-level transformation model&#8221; used to combine global affine transformation
+with the local free-form deformations at each resolution level. (default: Sum)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-sim">
+<code class="descname">-sim</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-register-sim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies concrete &#8220;Image (dis-)similarity&#8221; measure of SIM &#8220;Energy function&#8221; term.
+Most often used measures are MSE/SSD, NMI, and NCC/LNCC. (default: NMI)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-bins">
+<code class="descname">-bins</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-register-bins" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;No. of bins&#8221; used for NMI image similarity measure.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-window">
+<code class="descname">-window</code><code class="descclassname"> &lt;width&gt; [&lt;units&gt; [&lt;type&gt;]]</code><a class="headerlink" href="#cmdoption-register-window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local window used for (local) NCC/LNCC image similarity measure.
+A window &lt;width&gt; of zero corresponds to a global NCC measure.
+The &lt;units&gt; can be either &#8220;vox&#8221; (default) or &#8220;mm&#8221;. The type
+of the window can be &#8220;box&#8221; (default), &#8220;sigma&#8221;, &#8220;fwhm&#8221;, or &#8220;fwtm&#8221;,
+where the latter correspond to a Gaussian window with either the specified
+standard deviation, full width at half maximum, or full width at tenth maximum,
+respectively. The default is a box window with uniform weights for each voxel.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-interp">
+<span id="cmdoption-register-interpolation"></span><code class="descname">-interp</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-interpolation</code><code class="descclassname"> &lt;mode&gt;</code><a class="headerlink" href="#cmdoption-register-interp" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;Image interpolation&#8221; mode. (default: &#8220;Fast linear [with padding]&#8221;)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-extrap">
+<span id="cmdoption-register-extrapolation"></span><code class="descname">-extrap</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-extrapolation</code><code class="descclassname"> &lt;mode&gt;</code><a class="headerlink" href="#cmdoption-register-extrap" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;Image extrapolation&#8221; mode. (default: &#8220;Default&#8221; for used interpolation mode)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-levels">
+<code class="descname">-levels</code><code class="descclassname"> &lt;from&gt; [&lt;to&gt;]</code><a class="headerlink" href="#cmdoption-register-levels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Image/FFD resolution levels. The &lt;from&gt; number corresponds to the &#8220;No. of levels&#8221;,
+and the &lt;to&gt; number is the final level which is 1 by default.
+When images are given as input, the default number of levels is 4 and 1 otherwise.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-level">
+<code class="descname">-level</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-register-level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for <a class="reference internal" href="#cmdoption-register-levels"><code class="xref std std-option docutils literal"><span class="pre">-levels</span></code></a> &lt;n&gt; &lt;n&gt; which only performs the registration on a single level.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-bg">
+<span id="cmdoption-register-background"></span><span id="cmdoption-register-padding"></span><code class="descname">-bg</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-background</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-padding</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-register-bg" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;Background value&#8221; (threshold) of input and output images (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-ds">
+<code class="descname">-ds</code><code class="descclassname"> &lt;width&gt;</code><a class="headerlink" href="#cmdoption-register-ds" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;Control point spacing&#8221; of free-form deformation on highest resolution level. (default: 4x min voxel size)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-be">
+<code class="descname">-be</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-register-be" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;Bending energy weight&#8221; of free-form deformation. (default: 0.001)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-le">
+<code class="descname">-le</code><code class="descclassname"> &lt;w&gt; [&lt;lambda&gt;]</code><a class="headerlink" href="#cmdoption-register-le" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;Linear energy weight&#8221; of free-form deformation. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-tp">
+<code class="descname">-tp</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-register-tp" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;Topology preservation weight&#8221; of free-form deformation. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-vp">
+<code class="descname">-vp</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-register-vp" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;Volume preservation weight&#8221; of free-form deformation. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-lj">
+<span id="cmdoption-register-jl"></span><span id="cmdoption-register-log-jac"></span><span id="cmdoption-register-jac"></span><code class="descname">-lj</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-jl</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-log-jac</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-jac</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-register-lj" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;LogJac penalty weight&#8221; of free-form deformation. For a classic FFD transformation model
+this penalty term is equivalent to the volume preservation term. When applied to the SVFFD
+model, however, this penalty applies to the Jacobian determinant of the velocity field. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-register-nj">
+<span id="cmdoption-register-neg-jac"></span><code class="descname">-nj</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-neg-jac</code><code class="descclassname"> &lt;w&gt;</code><a class="headerlink" href="#cmdoption-register-nj" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8220;NegJac penalty weight&#8221; of free-form deformation. For a classic FFD transformation model
+this penalty term is equivalent to the volume preservation term. When applied to the SVFFD
+model, however, this penalty applies to the Jacobian determinant of the velocity field. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-register-parout">
-<tt class="descname">-parout</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-register-parout" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write parameters to the named configuration file. Note that after
-initializaton of the registration, an interim configuration file is
-written. This file is overwritten once the registration finished with
-final configuration used during the course of the registration.
-(default: none)</p>
+<code class="descname">-parout</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-register-parout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write parameters to the named configuration file. Note that after initialization of
+the registration, an interim configuration file is written. This file is overwritten
+once the registration finished with final configuration used during the course of the
+registration. (default: none)</p>
 </dd></dl>
 
 </div>
@@ -276,31 +402,31 @@ final configuration used during the course of the registration.
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-v">
-<span id="cmdoption-register-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-register-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-register-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-register-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 1)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-debug">
-<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-register-debug" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-register-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-version">
-<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-register-version" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-register-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-revision">
-<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-register-revision" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-register-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-register-h">
-<span id="cmdoption-register-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-register-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-register-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-register-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -309,7 +435,7 @@ final configuration used during the course of the registration.
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-color">
-<span id="cmdoption-register-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-register-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-register-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-register-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -318,7 +444,7 @@ final configuration used during the course of the registration.
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-register-threads">
-<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-register-threads" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-register-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -331,22 +457,22 @@ final configuration used during the course of the registration.
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="remesh.html" title="remesh"
+          <a href="remesh-surface.html" title="remesh-surface"
              >next</a></li>
         <li class="right" >
           <a href="reflect-image.html" title="reflect-image"
              >previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

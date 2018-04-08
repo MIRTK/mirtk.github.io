@@ -1,3 +1,439 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structmirtk_1_1RegisteredPointSet_1_1ScalingFunction.html" title="Feature scaling function parameters. " alt="" coords="6,5,178,46"/>
+<area shape="rect" id="node1" href="$classmirtk_1_1Object.html" title="mirtk::Object" alt="" coords="5,5151,101,5179"/>
+<area shape="rect" id="node3" href="$classmirtk_1_1GenericSparseMatrix.html" title="mirtk::GenericSparseMatrix\l\&lt; int \&gt;" alt="" coords="185,293,367,337"/>
+<area shape="rect" id="node9" href="$classmirtk_1_1Histogram1D.html" title="mirtk::Histogram1D\l\&lt; VoxelType \&gt;" alt="" coords="208,1007,344,1051"/>
+<area shape="rect" id="node11" href="$classmirtk_1_1ImageToImage.html" title="mirtk::ImageToImage\l\&lt; VoxelType \&gt;" alt="" coords="203,1075,349,1119"/>
+<area shape="rect" id="node17" href="$classmirtk_1_1BaseImage.html" title="mirtk::BaseImage" alt="" coords="213,1143,339,1171"/>
+<area shape="rect" id="node63" href="$classmirtk_1_1BoundaryMapper.html" title="mirtk::BoundaryMapper" alt="" coords="196,1810,356,1838"/>
+<area shape="rect" id="node73" href="$classmirtk_1_1BoundarySegment.html" title="mirtk::BoundarySegment" alt="" coords="192,1909,360,1937"/>
+<area shape="rect" id="node75" href="$classmirtk_1_1BoundarySegmentParameterizer.html" title="mirtk::BoundarySegmentParameterizer" alt="" coords="150,1961,402,1989"/>
+<area shape="rect" id="node83" href="$classmirtk_1_1Cifstream.html" title="mirtk::Cifstream" alt="" coords="219,2162,333,2190"/>
+<area shape="rect" id="node93" href="$classmirtk_1_1Cofstream.html" title="mirtk::Cofstream" alt="" coords="216,2285,336,2313"/>
+<area shape="rect" id="node105" href="$classmirtk_1_1data_1_1Selector.html" title="Base class of data selectors. " alt="" coords="206,2407,346,2435"/>
+<area shape="rect" id="node127" href="$classmirtk_1_1GenericSparseMatrix.html" title="mirtk::GenericSparseMatrix\l\&lt; TEntry \&gt;" alt="" coords="185,4093,367,4137"/>
+<area shape="rect" id="node129" href="$classmirtk_1_1Histogram1D.html" title="mirtk::Histogram1D\l\&lt; HistogramType \&gt;" alt="" coords="208,4161,344,4205"/>
+<area shape="rect" id="node131" href="$classmirtk_1_1Histogram2D.html" title="mirtk::Histogram2D\l\&lt; HistogramType \&gt;" alt="" coords="208,4229,344,4273"/>
+<area shape="rect" id="node133" href="$classmirtk_1_1ImageChannel.html" title="mirtk::ImageChannel\l\&lt; TImage \&gt;" alt="" coords="204,4297,348,4341"/>
+<area shape="rect" id="node135" href="$classmirtk_1_1ImageFrame.html" title="mirtk::ImageFrame\&lt;\l TChannel \&gt;" alt="" coords="206,4365,346,4409"/>
+<area shape="rect" id="node137" href="$classmirtk_1_1ImageFunction.html" title="mirtk::ImageFunction" alt="" coords="203,4433,349,4461"/>
+<area shape="rect" id="node379" href="$classmirtk_1_1ImageGradientFunction.html" title="mirtk::ImageGradientFunction" alt="" coords="178,4485,374,4513"/>
+<area shape="rect" id="node425" href="$classmirtk_1_1ImageSequence.html" title="mirtk::ImageSequence\l\&lt; TFrame \&gt;" alt="" coords="199,4537,353,4581"/>
+<area shape="rect" id="node427" href="$classmirtk_1_1ImageToImage.html" title="mirtk::ImageToImage\l\&lt; TVoxel \&gt;" alt="" coords="203,4605,349,4649"/>
+<area shape="rect" id="node485" href="$classmirtk_1_1ImageTransformation.html" title="mirtk::ImageTransformation" alt="" coords="184,5047,368,5075"/>
+<area shape="rect" id="node487" href="$classmirtk_1_1Mapping.html" title="mirtk::Mapping" alt="" coords="222,5099,330,5127"/>
+<area shape="rect" id="node497" href="$classmirtk_1_1Matrix.html" title="mirtk::Matrix" alt="" coords="229,5151,323,5179"/>
+<area shape="rect" id="node499" href="$classmirtk_1_1MeshFilter.html" title="mirtk::MeshFilter" alt="" coords="216,5203,336,5231"/>
+<area shape="rect" id="node539" href="$classmirtk_1_1NeighborhoodOffsets.html" title="mirtk::NeighborhoodOffsets" alt="" coords="184,5255,368,5283"/>
+<area shape="rect" id="node541" href="$classmirtk_1_1Observable.html" title="mirtk::Observable" alt="" coords="213,5662,339,5690"/>
+<area shape="rect" id="node757" href="$classmirtk_1_1Observer.html" title="mirtk::Observer" alt="" coords="220,5797,332,5825"/>
+<area shape="rect" id="node769" href="$classmirtk_1_1Plane.html" title="mirtk::Plane" alt="" coords="230,5849,322,5877"/>
+<area shape="rect" id="node771" href="$classmirtk_1_1PointLocator.html" title="mirtk::PointLocator" alt="" coords="210,5901,342,5929"/>
+<area shape="rect" id="node773" href="$classmirtk_1_1PointSet.html" title="mirtk::PointSet" alt="" coords="222,5953,330,5981"/>
+<area shape="rect" id="node777" href="$classmirtk_1_1Polyhedron.html" title="mirtk::Polyhedron" alt="" coords="213,6005,339,6033"/>
+<area shape="rect" id="node779" href="$classmirtk_1_1Polynomial.html" title="mirtk::Polynomial" alt="" coords="215,6057,337,6085"/>
+<area shape="rect" id="node781" href="$classmirtk_1_1RadialErrorFunction.html" title="mirtk::RadialErrorFunction" alt="" coords="188,6273,364,6301"/>
+<area shape="rect" id="node793" href="$classmirtk_1_1RegisteredPointSet.html" title="mirtk::RegisteredPointSet" alt="" coords="190,6325,362,6353"/>
+<area shape="rect" id="node797" href="$classmirtk_1_1ScalarFunction.html" title="mirtk::ScalarFunction" alt="" coords="203,6377,349,6405"/>
+<area shape="rect" id="node801" href="$classmirtk_1_1ScalarFunctionToImage.html" title="mirtk::ScalarFunctionToImage\l\&lt; VoxelType \&gt;" alt="" coords="177,6429,375,6473"/>
+<area shape="rect" id="node803" href="$classmirtk_1_1ScalingAndSquaring.html" title="mirtk::ScalingAndSquaring\l\&lt; TReal \&gt;" alt="" coords="187,6497,365,6541"/>
+<area shape="rect" id="node805" href="$classmirtk_1_1StoppingCriterion.html" title="mirtk::StoppingCriterion" alt="" coords="196,6587,356,6615"/>
+<area shape="rect" id="node813" href="$classmirtk_1_1SurfaceBoundary.html" title="mirtk::SurfaceBoundary" alt="" coords="196,6639,356,6667"/>
+<area shape="rect" id="node815" href="$classmirtk_1_1SurfaceMapper.html" title="mirtk::SurfaceMapper" alt="" coords="202,6691,350,6719"/>
+<area shape="rect" id="node855" href="$classmirtk_1_1TransformationJacobian.html" title="mirtk::TransformationJacobian" alt="" coords="176,6743,376,6771"/>
+<area shape="rect" id="node857" href="$classmirtk_1_1Vector.html" title="mirtk::Vector" alt="" coords="228,6795,324,6823"/>
+<area shape="rect" id="node859" href="$classmirtk_1_1Version.html" title="Software version object. " alt="" coords="225,6847,327,6875"/>
+<area shape="rect" id="node861" href="$classmirtk_1_1VolumeMapper.html" title="mirtk::VolumeMapper" alt="" coords="202,7043,350,7071"/>
+<area shape="rect" id="node5" href="$classmirtk_1_1EdgeConnectivity.html" title="mirtk::EdgeConnectivity" alt="" coords="478,249,639,277"/>
+<area shape="rect" id="node7" href="$classmirtk_1_1EdgeTable.html" title="mirtk::EdgeTable" alt="" coords="498,301,619,329"/>
+<area shape="rect" id="node13" href="$classmirtk_1_1DisplacementToVelocityField.html" title="mirtk::DisplacementToVelocity\lField\&lt; VoxelType \&gt;" alt="" coords="459,353,658,397"/>
+<area shape="rect" id="node15" href="$classmirtk_1_1DisplacementToVelocityFieldBCH.html" title="mirtk::DisplacementToVelocity\lFieldBCH\&lt; VoxelType \&gt;" alt="" coords="733,353,931,397"/>
+<area shape="rect" id="node19" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; BytePixel \&gt;" alt="" coords="488,421,629,465"/>
+<area shape="rect" id="node21" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; CPValue \&gt;" alt="" coords="488,489,629,533"/>
+<area shape="rect" id="node23" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; double \&gt;" alt="" coords="488,557,629,601"/>
+<area shape="rect" id="node27" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; GreyPixel \&gt;" alt="" coords="488,625,629,669"/>
+<area shape="rect" id="node29" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; int \&gt;" alt="" coords="488,693,629,737"/>
+<area shape="rect" id="node31" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; RealPixel \&gt;" alt="" coords="488,761,629,805"/>
+<area shape="rect" id="node35" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; RealType \&gt;" alt="" coords="488,829,629,873"/>
+<area shape="rect" id="node37" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; T1 \&gt;" alt="" coords="488,897,629,941"/>
+<area shape="rect" id="node39" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; T2 \&gt;" alt="" coords="488,965,629,1009"/>
+<area shape="rect" id="node41" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; T3 \&gt;" alt="" coords="488,1033,629,1077"/>
+<area shape="rect" id="node43" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; T4 \&gt;" alt="" coords="488,1101,629,1145"/>
+<area shape="rect" id="node45" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; T5 \&gt;" alt="" coords="488,1169,629,1213"/>
+<area shape="rect" id="node47" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; T6 \&gt;" alt="" coords="488,1237,629,1281"/>
+<area shape="rect" id="node49" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; T7 \&gt;" alt="" coords="488,1305,629,1349"/>
+<area shape="rect" id="node51" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; T8 \&gt;" alt="" coords="488,1373,629,1417"/>
+<area shape="rect" id="node53" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; T9 \&gt;" alt="" coords="488,1441,629,1485"/>
+<area shape="rect" id="node55" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; TData \&gt;" alt="" coords="488,1509,629,1553"/>
+<area shape="rect" id="node57" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; TReal \&gt;" alt="" coords="488,1577,629,1621"/>
+<area shape="rect" id="node59" href="$classmirtk_1_1GenericImage.html" title="mirtk::GenericImage\l\&lt; TVoxel \&gt;" alt="" coords="488,1645,629,1689"/>
+<area shape="rect" id="node61" href="$classmirtk_1_1HashImage.html" title="mirtk::HashImage\&lt; TVoxel \&gt;" alt="" coords="464,1713,653,1741"/>
+<area shape="rect" id="node25" href="$classmirtk_1_1RegisteredImage.html" title="mirtk::RegisteredImage" alt="" coords="752,565,912,593"/>
+<area shape="rect" id="node33" href="$classmirtk_1_1ImageTransformationCache.html" title="mirtk::ImageTransformation\lCache" alt="" coords="740,761,924,805"/>
+<area shape="rect" id="node65" href="$classmirtk_1_1BoundarySegmentMapper.html" title="mirtk::BoundarySegmentMapper" alt="" coords="452,1765,665,1793"/>
+<area shape="rect" id="node67" href="$classmirtk_1_1BoundaryToDiskMapper.html" title="mirtk::BoundaryToDiskMapper" alt="" coords="732,1589,932,1617"/>
+<area shape="rect" id="node69" href="$classmirtk_1_1BoundaryToPolygonMapper.html" title="mirtk::BoundaryToPolygon\lMapper" alt="" coords="744,1641,920,1685"/>
+<area shape="rect" id="node71" href="$classmirtk_1_1BoundaryToSquareMapper.html" title="mirtk::BoundaryToSquareMapper" alt="" coords="724,1709,940,1737"/>
+<area shape="rect" id="node77" href="$classmirtk_1_1ChordLengthBoundarySegmentParameterizer.html" title="mirtk::ChordLengthBoundary\lSegmentParameterizer" alt="" coords="463,1817,655,1861"/>
+<area shape="rect" id="node79" href="$classmirtk_1_1SubdividedBoundarySegmentParameterizer.html" title="mirtk::SubdividedBoundary\lSegmentParameterizer" alt="" coords="468,1885,649,1929"/>
+<area shape="rect" id="node81" href="$classmirtk_1_1UniformBoundarySegmentParameterizer.html" title="mirtk::UniformBoundarySegment\lParameterizer" alt="" coords="451,1953,666,1997"/>
+<area shape="rect" id="node85" href="$classmirtk_1_1ImageReader.html" title="mirtk::ImageReader" alt="" coords="489,2021,628,2049"/>
+<area shape="rect" id="node87" href="$classmirtk_1_1GIPLImageReader.html" title="mirtk::GIPLImageReader" alt="" coords="748,1761,916,1789"/>
+<area shape="rect" id="node89" href="$classmirtk_1_1NiftiImageReader.html" title="mirtk::NiftiImageReader" alt="" coords="751,1813,913,1841"/>
+<area shape="rect" id="node91" href="$classmirtk_1_1PGMImageReader.html" title="mirtk::PGMImageReader" alt="" coords="748,1865,916,1893"/>
+<area shape="rect" id="node95" href="$classmirtk_1_1ImageWriter.html" title="mirtk::ImageWriter" alt="" coords="494,2073,624,2101"/>
+<area shape="rect" id="node97" href="$classmirtk_1_1GIPLImageWriter.html" title="mirtk::GIPLImageWriter" alt="" coords="752,1917,912,1945"/>
+<area shape="rect" id="node99" href="$classmirtk_1_1NiftiImageWriter.html" title="mirtk::NiftiImageWriter" alt="" coords="756,1969,908,1997"/>
+<area shape="rect" id="node101" href="$classmirtk_1_1PGMImageWriter.html" title="mirtk::PGMImageWriter" alt="" coords="752,2021,912,2049"/>
+<area shape="rect" id="node103" href="$classmirtk_1_1PNGImageWriter.html" title="mirtk::PNGImageWriter" alt="" coords="753,2073,911,2101"/>
+<area shape="rect" id="node107" href="$classmirtk_1_1data_1_1LogicalOp.html" title="Combine one or more data selection criteria using a logical operator. " alt="" coords="483,2177,634,2205"/>
+<area shape="rect" id="node113" href="$classmirtk_1_1data_1_1SelectionCriterium.html" title="Base class of data selection criteria. " alt="" coords="459,2407,659,2435"/>
+<area shape="rect" id="node109" href="$classmirtk_1_1data_1_1LogicalAnd.html" title="Combine one or more data selection criteria using a logical AND. " alt="" coords="754,2125,910,2153"/>
+<area shape="rect" id="node111" href="$classmirtk_1_1data_1_1LogicalOr.html" title="Combine one or more data selection criteria using a logical OR. " alt="" coords="758,2177,906,2205"/>
+<area shape="rect" id="node115" href="$classmirtk_1_1data_1_1select_1_1Equal.html" title="Select data points with a value equal the specified value. " alt="" coords="769,2229,895,2273"/>
+<area shape="rect" id="node117" href="$classmirtk_1_1data_1_1select_1_1GreaterOrEqual.html" title="Select data points with a value greater than or equal the specified threshold. " alt="" coords="769,2297,895,2341"/>
+<area shape="rect" id="node119" href="$classmirtk_1_1data_1_1select_1_1GreaterThan.html" title="Select data points with a value greater than the specified threshold. " alt="" coords="769,2365,895,2409"/>
+<area shape="rect" id="node121" href="$classmirtk_1_1data_1_1select_1_1LessOrEqual.html" title="Select data points with a value less than or equal the specified threshold. " alt="" coords="769,2433,895,2477"/>
+<area shape="rect" id="node123" href="$classmirtk_1_1data_1_1select_1_1LessThan.html" title="Select data points with a value less than the specified threshold. " alt="" coords="769,2501,895,2545"/>
+<area shape="rect" id="node125" href="$classmirtk_1_1data_1_1select_1_1NotEqual.html" title="Select data points a value different from the specified value. " alt="" coords="769,2569,895,2613"/>
+<area shape="rect" id="node139" href="$classmirtk_1_1ExtrapolateImageFunction.html" title="mirtk::ExtrapolateImageFunction" alt="" coords="452,2713,665,2741"/>
+<area shape="rect" id="node179" href="$classmirtk_1_1InterpolateImageFunction.html" title="mirtk::InterpolateImageFunction" alt="" coords="454,3494,663,3522"/>
+<area shape="rect" id="node141" href="$classmirtk_1_1GenericExtrapolateImageFunction.html" title="mirtk::GenericExtrapolate\lImageFunction\&lt; BaseImage \&gt;" alt="" coords="732,2637,932,2681"/>
+<area shape="rect" id="node165" href="$classmirtk_1_1GenericExtrapolateImageFunction.html" title="mirtk::GenericExtrapolate\lImageFunction\&lt; TImage \&gt;" alt="" coords="743,2705,921,2749"/>
+<area shape="rect" id="node143" href="$classmirtk_1_1GenericConstExtrapolateImageFunction.html" title="mirtk::GenericConstExtrapolate\lImageFunction\&lt; BaseImage \&gt;" alt="" coords="1011,89,1218,133"/>
+<area shape="rect" id="node151" href="$classmirtk_1_1IndexExtrapolateImageFunction.html" title="mirtk::IndexExtrapolateImage\lFunction\&lt; BaseImage \&gt;" alt="" coords="1017,271,1212,315"/>
+<area shape="rect" id="node145" href="$classmirtk_1_1GenericConstExtrapolateImageFunctionWithPeriodicTime.html" title="mirtk::GenericConstExtrapolate\lImageFunctionWithPeriodicTime\l\&lt; BaseImage \&gt;" alt="" coords="1308,5,1521,65"/>
+<area shape="rect" id="node149" href="$classmirtk_1_1ConstExtrapolateImageFunction.html" title="mirtk::ConstExtrapolateImage\lFunction" alt="" coords="1316,89,1513,133"/>
+<area shape="rect" id="node147" href="$classmirtk_1_1ConstExtrapolateImageFunctionWithPeriodicTime.html" title="mirtk::ConstExtrapolateImage\lFunctionWithPeriodicTime" alt="" coords="1634,13,1830,57"/>
+<area shape="rect" id="node153" href="$classmirtk_1_1GenericMirrorExtrapolateImageFunction.html" title="mirtk::GenericMirrorExtrapolate\lImageFunction\&lt; BaseImage \&gt;" alt="" coords="1311,157,1518,201"/>
+<area shape="rect" id="node157" href="$classmirtk_1_1GenericNearestNeighborExtrapolateImageFunction.html" title="mirtk::GenericNearestNeighbor\lExtrapolateImageFunction\l\&lt; BaseImage \&gt;" alt="" coords="1312,225,1517,285"/>
+<area shape="rect" id="node161" href="$classmirtk_1_1GenericRepeatExtrapolateImageFunction.html" title="mirtk::GenericRepeatExtrapolate\lImageFunction\&lt; BaseImage \&gt;" alt="" coords="1307,309,1522,353"/>
+<area shape="rect" id="node155" href="$classmirtk_1_1MirrorExtrapolateImageFunction.html" title="mirtk::MirrorExtrapolate\lImageFunction" alt="" coords="1652,157,1812,201"/>
+<area shape="rect" id="node159" href="$classmirtk_1_1NearestNeighborExtrapolateImageFunction.html" title="mirtk::NearestNeighborExtrapolate\lImageFunction" alt="" coords="1619,233,1845,277"/>
+<area shape="rect" id="node163" href="$classmirtk_1_1RepeatExtrapolateImageFunction.html" title="mirtk::RepeatExtrapolate\lImageFunction" alt="" coords="1648,309,1816,353"/>
+<area shape="rect" id="node167" href="$classmirtk_1_1GenericConstExtrapolateImageFunction.html" title="mirtk::GenericConstExtrapolate\lImageFunction\&lt; TImage \&gt;" alt="" coords="1011,426,1218,470"/>
+<area shape="rect" id="node171" href="$classmirtk_1_1IndexExtrapolateImageFunction.html" title="mirtk::IndexExtrapolateImage\lFunction\&lt; TImage \&gt;" alt="" coords="1017,574,1212,618"/>
+<area shape="rect" id="node169" href="$classmirtk_1_1GenericConstExtrapolateImageFunctionWithPeriodicTime.html" title="mirtk::GenericConstExtrapolate\lImageFunctionWithPeriodicTime\l\&lt; TImage \&gt;" alt="" coords="1308,377,1521,437"/>
+<area shape="rect" id="node173" href="$classmirtk_1_1GenericMirrorExtrapolateImageFunction.html" title="mirtk::GenericMirrorExtrapolate\lImageFunction\&lt; TImage \&gt;" alt="" coords="1311,461,1518,505"/>
+<area shape="rect" id="node175" href="$classmirtk_1_1GenericNearestNeighborExtrapolateImageFunction.html" title="mirtk::GenericNearestNeighbor\lExtrapolateImageFunction\l\&lt; TImage \&gt;" alt="" coords="1312,529,1517,589"/>
+<area shape="rect" id="node177" href="$classmirtk_1_1GenericRepeatExtrapolateImageFunction.html" title="mirtk::GenericRepeatExtrapolate\lImageFunction\&lt; TImage \&gt;" alt="" coords="1307,613,1522,657"/>
+<area shape="rect" id="node181" href="$classmirtk_1_1GenericInterpolateImageFunction.html" title="mirtk::GenericInterpolate\lImageFunction\&lt; BaseImage \&gt;" alt="" coords="732,2773,932,2817"/>
+<area shape="rect" id="node299" href="$classmirtk_1_1GenericInterpolateImageFunction.html" title="mirtk::GenericInterpolate\lImageFunction\&lt; CPImage \&gt;" alt="" coords="738,3001,926,3045"/>
+<area shape="rect" id="node313" href="$classmirtk_1_1GenericInterpolateImageFunction.html" title="mirtk::GenericInterpolate\lImageFunction\&lt; ImageType \&gt;" alt="" coords="733,3361,931,3405"/>
+<area shape="rect" id="node317" href="$classmirtk_1_1GenericInterpolateImageFunction.html" title="mirtk::GenericInterpolate\lImageFunction\&lt; TImage \&gt;" alt="" coords="743,3610,921,3654"/>
+<area shape="rect" id="node377" href="$classmirtk_1_1ShapeBasedInterpolateImageFunction.html" title="mirtk::ShapeBasedInterpolate\lImageFunction" alt="" coords="734,3678,930,3722"/>
+<area shape="rect" id="node183" href="$classmirtk_1_1GenericBSplineInterpolateImageFunction.html" title="mirtk::GenericBSplineInterpolate\lImageFunction\&lt; BaseImage \&gt;" alt="" coords="1008,817,1221,861"/>
+<area shape="rect" id="node199" href="$classmirtk_1_1GenericCSplineInterpolateImageFunction.html" title="mirtk::GenericCSplineInterpolate\lImageFunction\&lt; BaseImage \&gt;" alt="" coords="1008,1089,1222,1133"/>
+<area shape="rect" id="node215" href="$classmirtk_1_1GenericCubicBSplineInterpolateImageFunction.html" title="mirtk::GenericCubicBSpline\lInterpolateImageFunction\l\&lt; BaseImage \&gt;" alt="" coords="1022,1393,1207,1453"/>
+<area shape="rect" id="node231" href="$classmirtk_1_1GenericFastCubicBSplineInterpolateImageFunction.html" title="mirtk::GenericFastCubicBSpline\lInterpolateImageFunction\l\&lt; BaseImage \&gt;" alt="" coords="1010,1713,1220,1773"/>
+<area shape="rect" id="node247" href="$classmirtk_1_1GenericGaussianInterpolateImageFunction.html" title="mirtk::GenericGaussianInterpolate\lImageFunction\&lt; BaseImage \&gt;" alt="" coords="1003,2001,1226,2045"/>
+<area shape="rect" id="node263" href="$classmirtk_1_1GenericLinearInterpolateImageFunction.html" title="mirtk::GenericLinearInterpolate\lImageFunction\&lt; BaseImage \&gt;" alt="" coords="1012,2273,1217,2317"/>
+<area shape="rect" id="node279" href="$classmirtk_1_1GenericNearestNeighborInterpolateImageFunction.html" title="mirtk::GenericNearestNeighbor\lInterpolateImageFunction\l\&lt; BaseImage \&gt;" alt="" coords="1012,2465,1217,2525"/>
+<area shape="rect" id="node283" href="$classmirtk_1_1GenericSincInterpolateImageFunction.html" title="mirtk::GenericSincInterpolate\lImageFunction\&lt; BaseImage \&gt;" alt="" coords="1015,2613,1215,2657"/>
+<area shape="rect" id="node185" href="$classmirtk_1_1GenericBSplineInterpolateImageFunction2D.html" title="mirtk::GenericBSplineInterpolate\lImageFunction2D\&lt; BaseImage \&gt;" alt="" coords="1306,681,1523,725"/>
+<area shape="rect" id="node189" href="$classmirtk_1_1GenericBSplineInterpolateImageFunction3D.html" title="mirtk::GenericBSplineInterpolate\lImageFunction3D\&lt; BaseImage \&gt;" alt="" coords="1306,749,1523,793"/>
+<area shape="rect" id="node193" href="$classmirtk_1_1GenericBSplineInterpolateImageFunction4D.html" title="mirtk::GenericBSplineInterpolate\lImageFunction4D\&lt; BaseImage \&gt;" alt="" coords="1306,817,1523,861"/>
+<area shape="rect" id="node197" href="$classmirtk_1_1BSplineInterpolateImageFunction.html" title="mirtk::BSplineInterpolate\lImageFunction" alt="" coords="1331,885,1498,929"/>
+<area shape="rect" id="node187" href="$classmirtk_1_1BSplineInterpolateImageFunction2D.html" title="mirtk::BSplineInterpolate\lImageFunction2D" alt="" coords="1649,681,1815,725"/>
+<area shape="rect" id="node191" href="$classmirtk_1_1BSplineInterpolateImageFunction3D.html" title="mirtk::BSplineInterpolate\lImageFunction3D" alt="" coords="1649,749,1815,793"/>
+<area shape="rect" id="node195" href="$classmirtk_1_1BSplineInterpolateImageFunction4D.html" title="mirtk::BSplineInterpolate\lImageFunction4D" alt="" coords="1649,817,1815,861"/>
+<area shape="rect" id="node201" href="$classmirtk_1_1GenericCSplineInterpolateImageFunction2D.html" title="mirtk::GenericCSplineInterpolate\lImageFunction2D\&lt; BaseImage \&gt;" alt="" coords="1306,953,1523,997"/>
+<area shape="rect" id="node205" href="$classmirtk_1_1GenericCSplineInterpolateImageFunction3D.html" title="mirtk::GenericCSplineInterpolate\lImageFunction3D\&lt; BaseImage \&gt;" alt="" coords="1306,1021,1523,1065"/>
+<area shape="rect" id="node209" href="$classmirtk_1_1GenericCSplineInterpolateImageFunction4D.html" title="mirtk::GenericCSplineInterpolate\lImageFunction4D\&lt; BaseImage \&gt;" alt="" coords="1306,1089,1523,1133"/>
+<area shape="rect" id="node213" href="$classmirtk_1_1CSplineInterpolateImageFunction.html" title="mirtk::CSplineInterpolate\lImageFunction" alt="" coords="1331,1157,1498,1201"/>
+<area shape="rect" id="node203" href="$classmirtk_1_1CSplineInterpolateImageFunction2D.html" title="mirtk::CSplineInterpolate\lImageFunction2D" alt="" coords="1648,953,1816,997"/>
+<area shape="rect" id="node207" href="$classmirtk_1_1CSplineInterpolateImageFunction3D.html" title="mirtk::CSplineInterpolate\lImageFunction3D" alt="" coords="1648,1021,1816,1065"/>
+<area shape="rect" id="node211" href="$classmirtk_1_1CSplineInterpolateImageFunction4D.html" title="mirtk::CSplineInterpolate\lImageFunction4D" alt="" coords="1648,1089,1816,1133"/>
+<area shape="rect" id="node217" href="$classmirtk_1_1GenericCubicBSplineInterpolateImageFunction2D.html" title="mirtk::GenericCubicBSpline\lInterpolateImageFunction2D\l\&lt; BaseImage \&gt;" alt="" coords="1320,1225,1509,1285"/>
+<area shape="rect" id="node221" href="$classmirtk_1_1GenericCubicBSplineInterpolateImageFunction3D.html" title="mirtk::GenericCubicBSpline\lInterpolateImageFunction3D\l\&lt; BaseImage \&gt;" alt="" coords="1320,1309,1509,1369"/>
+<area shape="rect" id="node225" href="$classmirtk_1_1GenericCubicBSplineInterpolateImageFunction4D.html" title="mirtk::GenericCubicBSpline\lInterpolateImageFunction4D\l\&lt; BaseImage \&gt;" alt="" coords="1320,1393,1509,1453"/>
+<area shape="rect" id="node229" href="$classmirtk_1_1CubicBSplineInterpolateImageFunction.html" title="mirtk::CubicBSplineInterpolate\lImageFunction" alt="" coords="1314,1477,1515,1521"/>
+<area shape="rect" id="node219" href="$classmirtk_1_1CubicBSplineInterpolateImageFunction2D.html" title="mirtk::CubicBSplineInterpolate\lImageFunction2D" alt="" coords="1632,1233,1832,1277"/>
+<area shape="rect" id="node223" href="$classmirtk_1_1CubicBSplineInterpolateImageFunction3D.html" title="mirtk::CubicBSplineInterpolate\lImageFunction3D" alt="" coords="1632,1317,1832,1361"/>
+<area shape="rect" id="node227" href="$classmirtk_1_1CubicBSplineInterpolateImageFunction4D.html" title="mirtk::CubicBSplineInterpolate\lImageFunction4D" alt="" coords="1632,1401,1832,1445"/>
+<area shape="rect" id="node233" href="$classmirtk_1_1GenericFastCubicBSplineInterpolateImageFunction2D.html" title="mirtk::GenericFastCubicBSpline\lInterpolateImageFunction2D\l\&lt; BaseImage \&gt;" alt="" coords="1310,1545,1520,1605"/>
+<area shape="rect" id="node237" href="$classmirtk_1_1GenericFastCubicBSplineInterpolateImageFunction3D.html" title="mirtk::GenericFastCubicBSpline\lInterpolateImageFunction3D\l\&lt; BaseImage \&gt;" alt="" coords="1310,1629,1520,1689"/>
+<area shape="rect" id="node241" href="$classmirtk_1_1GenericFastCubicBSplineInterpolateImageFunction4D.html" title="mirtk::GenericFastCubicBSpline\lInterpolateImageFunction4D\l\&lt; BaseImage \&gt;" alt="" coords="1310,1713,1520,1773"/>
+<area shape="rect" id="node245" href="$classmirtk_1_1FastCubicBSplineInterpolateImageFunction.html" title="mirtk::FastCubicBSplineInterpolate\lImageFunction" alt="" coords="1301,1797,1528,1841"/>
+<area shape="rect" id="node235" href="$classmirtk_1_1FastCubicBSplineInterpolateImageFunction2D.html" title="mirtk::FastCubicBSplineInterpolate\lImageFunction2D" alt="" coords="1619,1553,1845,1597"/>
+<area shape="rect" id="node239" href="$classmirtk_1_1FastCubicBSplineInterpolateImageFunction3D.html" title="mirtk::FastCubicBSplineInterpolate\lImageFunction3D" alt="" coords="1619,1637,1845,1681"/>
+<area shape="rect" id="node243" href="$classmirtk_1_1FastCubicBSplineInterpolateImageFunction4D.html" title="mirtk::FastCubicBSplineInterpolate\lImageFunction4D" alt="" coords="1619,1721,1845,1765"/>
+<area shape="rect" id="node249" href="$classmirtk_1_1GenericGaussianInterpolateImageFunction2D.html" title="mirtk::GenericGaussianInterpolate\lImageFunction2D\&lt; BaseImage \&gt;" alt="" coords="1303,1865,1526,1909"/>
+<area shape="rect" id="node253" href="$classmirtk_1_1GenericGaussianInterpolateImageFunction3D.html" title="mirtk::GenericGaussianInterpolate\lImageFunction3D\&lt; BaseImage \&gt;" alt="" coords="1303,1933,1526,1977"/>
+<area shape="rect" id="node257" href="$classmirtk_1_1GenericGaussianInterpolateImageFunction4D.html" title="mirtk::GenericGaussianInterpolate\lImageFunction4D\&lt; BaseImage \&gt;" alt="" coords="1303,2001,1526,2045"/>
+<area shape="rect" id="node261" href="$classmirtk_1_1GaussianInterpolateImageFunction.html" title="mirtk::GaussianInterpolate\lImageFunction" alt="" coords="1326,2069,1503,2113"/>
+<area shape="rect" id="node251" href="$classmirtk_1_1GaussianInterpolateImageFunction2D.html" title="mirtk::GaussianInterpolate\lImageFunction2D" alt="" coords="1644,1865,1820,1909"/>
+<area shape="rect" id="node255" href="$classmirtk_1_1GaussianInterpolateImageFunction3D.html" title="mirtk::GaussianInterpolate\lImageFunction3D" alt="" coords="1644,1933,1820,1977"/>
+<area shape="rect" id="node259" href="$classmirtk_1_1GaussianInterpolateImageFunction4D.html" title="mirtk::GaussianInterpolate\lImageFunction4D" alt="" coords="1644,2001,1820,2045"/>
+<area shape="rect" id="node265" href="$classmirtk_1_1GenericLinearInterpolateImageFunction2D.html" title="mirtk::GenericLinearInterpolate\lImageFunction2D\&lt; BaseImage \&gt;" alt="" coords="1306,2137,1523,2181"/>
+<area shape="rect" id="node269" href="$classmirtk_1_1GenericLinearInterpolateImageFunction3D.html" title="mirtk::GenericLinearInterpolate\lImageFunction3D\&lt; BaseImage \&gt;" alt="" coords="1306,2205,1523,2249"/>
+<area shape="rect" id="node273" href="$classmirtk_1_1GenericLinearInterpolateImageFunction4D.html" title="mirtk::GenericLinearInterpolate\lImageFunction4D\&lt; BaseImage \&gt;" alt="" coords="1306,2273,1523,2317"/>
+<area shape="rect" id="node277" href="$classmirtk_1_1LinearInterpolateImageFunction.html" title="mirtk::LinearInterpolate\lImageFunction" alt="" coords="1336,2341,1494,2385"/>
+<area shape="rect" id="node267" href="$classmirtk_1_1LinearInterpolateImageFunction2D.html" title="mirtk::LinearInterpolate\lImageFunction2D" alt="" coords="1653,2137,1811,2181"/>
+<area shape="rect" id="node271" href="$classmirtk_1_1LinearInterpolateImageFunction3D.html" title="mirtk::LinearInterpolate\lImageFunction3D" alt="" coords="1653,2205,1811,2249"/>
+<area shape="rect" id="node275" href="$classmirtk_1_1LinearInterpolateImageFunction4D.html" title="mirtk::LinearInterpolate\lImageFunction4D" alt="" coords="1653,2273,1811,2317"/>
+<area shape="rect" id="node281" href="$classmirtk_1_1NearestNeighborInterpolateImageFunction.html" title="mirtk::NearestNeighborInterpolate\lImageFunction" alt="" coords="1304,2409,1525,2453"/>
+<area shape="rect" id="node285" href="$classmirtk_1_1GenericSincInterpolateImageFunction2D.html" title="mirtk::GenericSincInterpolate\lImageFunction2D\&lt; BaseImage \&gt;" alt="" coords="1306,2477,1523,2521"/>
+<area shape="rect" id="node289" href="$classmirtk_1_1GenericSincInterpolateImageFunction3D.html" title="mirtk::GenericSincInterpolate\lImageFunction3D\&lt; BaseImage \&gt;" alt="" coords="1306,2545,1523,2589"/>
+<area shape="rect" id="node293" href="$classmirtk_1_1GenericSincInterpolateImageFunction4D.html" title="mirtk::GenericSincInterpolate\lImageFunction4D\&lt; BaseImage \&gt;" alt="" coords="1306,2613,1523,2657"/>
+<area shape="rect" id="node297" href="$classmirtk_1_1SincInterpolateImageFunction.html" title="mirtk::SincInterpolateImage\lFunction" alt="" coords="1323,2681,1506,2725"/>
+<area shape="rect" id="node287" href="$classmirtk_1_1SincInterpolateImageFunction2D.html" title="mirtk::SincInterpolateImage\lFunction2D" alt="" coords="1640,2477,1824,2521"/>
+<area shape="rect" id="node291" href="$classmirtk_1_1SincInterpolateImageFunction3D.html" title="mirtk::SincInterpolateImage\lFunction3D" alt="" coords="1640,2545,1824,2589"/>
+<area shape="rect" id="node295" href="$classmirtk_1_1SincInterpolateImageFunction4D.html" title="mirtk::SincInterpolateImage\lFunction4D" alt="" coords="1640,2613,1824,2657"/>
+<area shape="rect" id="node301" href="$classmirtk_1_1GenericFastCubicBSplineInterpolateImageFunction.html" title="mirtk::GenericFastCubicBSpline\lInterpolateImageFunction\l\&lt; CPImage \&gt;" alt="" coords="1010,2875,1220,2935"/>
+<area shape="rect" id="node309" href="$classmirtk_1_1GenericLinearInterpolateImageFunction.html" title="mirtk::GenericLinearInterpolate\lImageFunction\&lt; CPImage \&gt;" alt="" coords="1012,3001,1217,3045"/>
+<area shape="rect" id="node303" href="$classmirtk_1_1GenericFastCubicBSplineInterpolateImageFunction2D.html" title="mirtk::GenericFastCubicBSpline\lInterpolateImageFunction2D\l\&lt; CPImage \&gt;" alt="" coords="1310,2749,1520,2809"/>
+<area shape="rect" id="node305" href="$classmirtk_1_1GenericFastCubicBSplineInterpolateImageFunction3D.html" title="mirtk::GenericFastCubicBSpline\lInterpolateImageFunction3D\l\&lt; CPImage \&gt;" alt="" coords="1310,2833,1520,2893"/>
+<area shape="rect" id="node307" href="$classmirtk_1_1GenericFastCubicBSplineInterpolateImageFunction4D.html" title="mirtk::GenericFastCubicBSpline\lInterpolateImageFunction4D\l\&lt; CPImage \&gt;" alt="" coords="1310,2917,1520,2977"/>
+<area shape="rect" id="node311" href="$classmirtk_1_1GenericLinearInterpolateImageFunction4D.html" title="mirtk::GenericLinearInterpolate\lImageFunction4D\&lt; CPImage \&gt;" alt="" coords="1312,3001,1517,3045"/>
+<area shape="rect" id="node315" href="$classmirtk_1_1GenericLinearInterpolateImageFunction.html" title="mirtk::GenericLinearInterpolate\lImageFunction\&lt; ImageType \&gt;" alt="" coords="1012,3137,1217,3181"/>
+<area shape="rect" id="node319" href="$classmirtk_1_1GenericBSplineInterpolateImageFunction.html" title="mirtk::GenericBSplineInterpolate\lImageFunction\&lt; TImage \&gt;" alt="" coords="1008,3205,1221,3249"/>
+<area shape="rect" id="node327" href="$classmirtk_1_1GenericCSplineInterpolateImageFunction.html" title="mirtk::GenericCSplineInterpolate\lImageFunction\&lt; TImage \&gt;" alt="" coords="1008,3375,1222,3419"/>
+<area shape="rect" id="node335" href="$classmirtk_1_1GenericCubicBSplineInterpolateImageFunction.html" title="mirtk::GenericCubicBSpline\lInterpolateImageFunction\l\&lt; TImage \&gt;" alt="" coords="1022,3561,1207,3621"/>
+<area shape="rect" id="node343" href="$classmirtk_1_1GenericFastCubicBSplineInterpolateImageFunction.html" title="mirtk::GenericFastCubicBSpline\lInterpolateImageFunction\l\&lt; TImage \&gt;" alt="" coords="1010,3645,1220,3705"/>
+<area shape="rect" id="node351" href="$classmirtk_1_1GenericGaussianInterpolateImageFunction.html" title="mirtk::GenericGaussianInterpolate\lImageFunction\&lt; TImage \&gt;" alt="" coords="1003,3729,1226,3773"/>
+<area shape="rect" id="node359" href="$classmirtk_1_1GenericLinearInterpolateImageFunction.html" title="mirtk::GenericLinearInterpolate\lImageFunction\&lt; TImage \&gt;" alt="" coords="1012,3797,1217,3841"/>
+<area shape="rect" id="node367" href="$classmirtk_1_1GenericNearestNeighborInterpolateImageFunction.html" title="mirtk::GenericNearestNeighbor\lInterpolateImageFunction\l\&lt; TImage \&gt;" alt="" coords="1012,3865,1217,3925"/>
+<area shape="rect" id="node369" href="$classmirtk_1_1GenericSincInterpolateImageFunction.html" title="mirtk::GenericSincInterpolate\lImageFunction\&lt; TImage \&gt;" alt="" coords="1018,3949,1211,3993"/>
+<area shape="rect" id="node321" href="$classmirtk_1_1GenericBSplineInterpolateImageFunction2D.html" title="mirtk::GenericBSplineInterpolate\lImageFunction2D\&lt; TImage \&gt;" alt="" coords="1308,3069,1521,3113"/>
+<area shape="rect" id="node323" href="$classmirtk_1_1GenericBSplineInterpolateImageFunction3D.html" title="mirtk::GenericBSplineInterpolate\lImageFunction3D\&lt; TImage \&gt;" alt="" coords="1308,3137,1521,3181"/>
+<area shape="rect" id="node325" href="$classmirtk_1_1GenericBSplineInterpolateImageFunction4D.html" title="mirtk::GenericBSplineInterpolate\lImageFunction4D\&lt; TImage \&gt;" alt="" coords="1308,3205,1521,3249"/>
+<area shape="rect" id="node329" href="$classmirtk_1_1GenericCSplineInterpolateImageFunction2D.html" title="mirtk::GenericCSplineInterpolate\lImageFunction2D\&lt; TImage \&gt;" alt="" coords="1308,3273,1522,3317"/>
+<area shape="rect" id="node331" href="$classmirtk_1_1GenericCSplineInterpolateImageFunction3D.html" title="mirtk::GenericCSplineInterpolate\lImageFunction3D\&lt; TImage \&gt;" alt="" coords="1308,3341,1522,3385"/>
+<area shape="rect" id="node333" href="$classmirtk_1_1GenericCSplineInterpolateImageFunction4D.html" title="mirtk::GenericCSplineInterpolate\lImageFunction4D\&lt; TImage \&gt;" alt="" coords="1308,3409,1522,3453"/>
+<area shape="rect" id="node337" href="$classmirtk_1_1GenericCubicBSplineInterpolateImageFunction2D.html" title="mirtk::GenericCubicBSpline\lInterpolateImageFunction2D\l\&lt; TImage \&gt;" alt="" coords="1320,3477,1509,3537"/>
+<area shape="rect" id="node339" href="$classmirtk_1_1GenericCubicBSplineInterpolateImageFunction3D.html" title="mirtk::GenericCubicBSpline\lInterpolateImageFunction3D\l\&lt; TImage \&gt;" alt="" coords="1320,3561,1509,3621"/>
+<area shape="rect" id="node341" href="$classmirtk_1_1GenericCubicBSplineInterpolateImageFunction4D.html" title="mirtk::GenericCubicBSpline\lInterpolateImageFunction4D\l\&lt; TImage \&gt;" alt="" coords="1320,3645,1509,3705"/>
+<area shape="rect" id="node345" href="$classmirtk_1_1GenericFastCubicBSplineInterpolateImageFunction2D.html" title="mirtk::GenericFastCubicBSpline\lInterpolateImageFunction2D\l\&lt; TImage \&gt;" alt="" coords="1310,3729,1520,3789"/>
+<area shape="rect" id="node347" href="$classmirtk_1_1GenericFastCubicBSplineInterpolateImageFunction3D.html" title="mirtk::GenericFastCubicBSpline\lInterpolateImageFunction3D\l\&lt; TImage \&gt;" alt="" coords="1310,3813,1520,3873"/>
+<area shape="rect" id="node349" href="$classmirtk_1_1GenericFastCubicBSplineInterpolateImageFunction4D.html" title="mirtk::GenericFastCubicBSpline\lInterpolateImageFunction4D\l\&lt; TImage \&gt;" alt="" coords="1310,3897,1520,3957"/>
+<area shape="rect" id="node353" href="$classmirtk_1_1GenericGaussianInterpolateImageFunction2D.html" title="mirtk::GenericGaussianInterpolate\lImageFunction2D\&lt; TImage \&gt;" alt="" coords="1303,3981,1526,4025"/>
+<area shape="rect" id="node355" href="$classmirtk_1_1GenericGaussianInterpolateImageFunction3D.html" title="mirtk::GenericGaussianInterpolate\lImageFunction3D\&lt; TImage \&gt;" alt="" coords="1303,4049,1526,4093"/>
+<area shape="rect" id="node357" href="$classmirtk_1_1GenericGaussianInterpolateImageFunction4D.html" title="mirtk::GenericGaussianInterpolate\lImageFunction4D\&lt; TImage \&gt;" alt="" coords="1303,4117,1526,4161"/>
+<area shape="rect" id="node361" href="$classmirtk_1_1GenericLinearInterpolateImageFunction2D.html" title="mirtk::GenericLinearInterpolate\lImageFunction2D\&lt; TImage \&gt;" alt="" coords="1312,4185,1517,4229"/>
+<area shape="rect" id="node363" href="$classmirtk_1_1GenericLinearInterpolateImageFunction3D.html" title="mirtk::GenericLinearInterpolate\lImageFunction3D\&lt; TImage \&gt;" alt="" coords="1312,4253,1517,4297"/>
+<area shape="rect" id="node365" href="$classmirtk_1_1GenericLinearInterpolateImageFunction4D.html" title="mirtk::GenericLinearInterpolate\lImageFunction4D\&lt; TImage \&gt;" alt="" coords="1312,4321,1517,4365"/>
+<area shape="rect" id="node371" href="$classmirtk_1_1GenericSincInterpolateImageFunction2D.html" title="mirtk::GenericSincInterpolate\lImageFunction2D\&lt; TImage \&gt;" alt="" coords="1317,4389,1512,4433"/>
+<area shape="rect" id="node373" href="$classmirtk_1_1GenericSincInterpolateImageFunction3D.html" title="mirtk::GenericSincInterpolate\lImageFunction3D\&lt; TImage \&gt;" alt="" coords="1317,4457,1512,4501"/>
+<area shape="rect" id="node375" href="$classmirtk_1_1GenericSincInterpolateImageFunction4D.html" title="mirtk::GenericSincInterpolate\lImageFunction4D\&lt; TImage \&gt;" alt="" coords="1317,4525,1512,4569"/>
+<area shape="rect" id="node381" href="$classmirtk_1_1GenericImageGradientFunction.html" title="mirtk::GenericImageGradient\lFunction\&lt; BaseImage \&gt;" alt="" coords="462,3803,655,3847"/>
+<area shape="rect" id="node407" href="$classmirtk_1_1GenericImageGradientFunction.html" title="mirtk::GenericImageGradient\lFunction\&lt; ImageType \&gt;" alt="" coords="462,3871,655,3915"/>
+<area shape="rect" id="node411" href="$classmirtk_1_1GenericImageGradientFunction.html" title="mirtk::GenericImageGradient\lFunction\&lt; TImage \&gt;" alt="" coords="462,3939,655,3983"/>
+<area shape="rect" id="node383" href="$classmirtk_1_1GenericFastLinearImageGradientFunction.html" title="mirtk::GenericFastLinear\lImageGradientFunction\l\&lt; BaseImage \&gt;" alt="" coords="748,3943,916,4003"/>
+<area shape="rect" id="node395" href="$classmirtk_1_1GenericLinearImageGradientFunction.html" title="mirtk::GenericLinearImage\lGradientFunction\&lt; BaseImage \&gt;" alt="" coords="725,4027,939,4071"/>
+<area shape="rect" id="node385" href="$classmirtk_1_1GenericFastLinearImageGradientFunction2D.html" title="mirtk::GenericFastLinear\lImageGradientFunction2D\l\&lt; BaseImage \&gt;" alt="" coords="1026,4017,1204,4077"/>
+<area shape="rect" id="node389" href="$classmirtk_1_1GenericFastLinearImageGradientFunction3D.html" title="mirtk::GenericFastLinear\lImageGradientFunction3D\l\&lt; BaseImage \&gt;" alt="" coords="1026,4101,1204,4161"/>
+<area shape="rect" id="node393" href="$classmirtk_1_1FastLinearImageGradientFunction.html" title="mirtk::FastLinearImageGradient\lFunction" alt="" coords="1010,4185,1219,4229"/>
+<area shape="rect" id="node387" href="$classmirtk_1_1FastLinearImageGradientFunction2D.html" title="mirtk::FastLinearImageGradient\lFunction2D" alt="" coords="1310,4593,1519,4637"/>
+<area shape="rect" id="node391" href="$classmirtk_1_1FastLinearImageGradientFunction3D.html" title="mirtk::FastLinearImageGradient\lFunction3D" alt="" coords="1310,4661,1519,4705"/>
+<area shape="rect" id="node397" href="$classmirtk_1_1GenericLinearImageGradientFunction2D.html" title="mirtk::GenericLinearImage\lGradientFunction2D\&lt; BaseImage \&gt;" alt="" coords="999,4253,1230,4297"/>
+<area shape="rect" id="node401" href="$classmirtk_1_1GenericLinearImageGradientFunction3D.html" title="mirtk::GenericLinearImage\lGradientFunction3D\&lt; BaseImage \&gt;" alt="" coords="999,4321,1230,4365"/>
+<area shape="rect" id="node405" href="$classmirtk_1_1LinearImageGradientFunction.html" title="mirtk::LinearImageGradient\lFunction" alt="" coords="1023,4389,1206,4433"/>
+<area shape="rect" id="node399" href="$classmirtk_1_1LinearImageGradientFunction2D.html" title="mirtk::LinearImageGradient\lFunction2D" alt="" coords="1323,4729,1506,4773"/>
+<area shape="rect" id="node403" href="$classmirtk_1_1LinearImageGradientFunction3D.html" title="mirtk::LinearImageGradient\lFunction3D" alt="" coords="1323,4797,1506,4841"/>
+<area shape="rect" id="node409" href="$classmirtk_1_1GenericFastLinearImageGradientFunction.html" title="mirtk::GenericFastLinear\lImageGradientFunction\l\&lt; ImageType \&gt;" alt="" coords="748,4095,916,4155"/>
+<area shape="rect" id="node413" href="$classmirtk_1_1GenericFastLinearImageGradientFunction.html" title="mirtk::GenericFastLinear\lImageGradientFunction\l\&lt; TImage \&gt;" alt="" coords="748,4179,916,4239"/>
+<area shape="rect" id="node419" href="$classmirtk_1_1GenericLinearImageGradientFunction.html" title="mirtk::GenericLinearImage\lGradientFunction\&lt; TImage \&gt;" alt="" coords="736,4263,928,4307"/>
+<area shape="rect" id="node415" href="$classmirtk_1_1GenericFastLinearImageGradientFunction2D.html" title="mirtk::GenericFastLinear\lImageGradientFunction2D\l\&lt; TImage \&gt;" alt="" coords="1026,4457,1204,4517"/>
+<area shape="rect" id="node417" href="$classmirtk_1_1GenericFastLinearImageGradientFunction3D.html" title="mirtk::GenericFastLinear\lImageGradientFunction3D\l\&lt; TImage \&gt;" alt="" coords="1026,4541,1204,4601"/>
+<area shape="rect" id="node421" href="$classmirtk_1_1GenericLinearImageGradientFunction2D.html" title="mirtk::GenericLinearImage\lGradientFunction2D\&lt; TImage \&gt;" alt="" coords="1010,4625,1219,4669"/>
+<area shape="rect" id="node423" href="$classmirtk_1_1GenericLinearImageGradientFunction3D.html" title="mirtk::GenericLinearImage\lGradientFunction3D\&lt; TImage \&gt;" alt="" coords="1010,4693,1219,4737"/>
+<area shape="rect" id="node429" href="$classmirtk_1_1CityBlockDistanceTransform.html" title="mirtk::CityBlockDistance\lTransform\&lt; TVoxel \&gt;" alt="" coords="476,4007,641,4051"/>
+<area shape="rect" id="node431" href="$classmirtk_1_1Closing.html" title="mirtk::Closing\&lt; TVoxel \&gt;" alt="" coords="476,4075,641,4103"/>
+<area shape="rect" id="node433" href="$classmirtk_1_1ConnectedComponents.html" title="mirtk::ConnectedComponents\l\&lt; TVoxel \&gt;" alt="" coords="460,4127,658,4171"/>
+<area shape="rect" id="node435" href="$classmirtk_1_1Dilation.html" title="mirtk::Dilation\&lt; TVoxel \&gt;" alt="" coords="476,4195,641,4223"/>
+<area shape="rect" id="node437" href="$classmirtk_1_1DisplacementToVelocityField.html" title="mirtk::DisplacementToVelocity\lField\&lt; TVoxel \&gt;" alt="" coords="459,4247,658,4291"/>
+<area shape="rect" id="node439" href="$classmirtk_1_1Downsampling.html" title="mirtk::Downsampling\l\&lt; TVoxel \&gt;" alt="" coords="486,4315,631,4359"/>
+<area shape="rect" id="node441" href="$classmirtk_1_1Erosion.html" title="mirtk::Erosion\&lt; TVoxel \&gt;" alt="" coords="475,4383,642,4411"/>
+<area shape="rect" id="node443" href="$classmirtk_1_1GaussianPyramidFilter.html" title="mirtk::GaussianPyramidFilter\l\&lt; TVoxel \&gt;" alt="" coords="462,4435,655,4479"/>
+<area shape="rect" id="node445" href="$classmirtk_1_1GradientImageFilter.html" title="mirtk::GradientImageFilter\l\&lt; TVoxel \&gt;" alt="" coords="471,4503,646,4547"/>
+<area shape="rect" id="node447" href="$classmirtk_1_1HessianImageFilter.html" title="mirtk::HessianImageFilter\l\&lt; TVoxel \&gt;" alt="" coords="472,4571,645,4615"/>
+<area shape="rect" id="node449" href="$classmirtk_1_1HistogramMatching.html" title="mirtk::HistogramMatching\l\&lt; TVoxel \&gt;" alt="" coords="472,4639,645,4683"/>
+<area shape="rect" id="node451" href="$classmirtk_1_1LieBracketImageFilter.html" title="mirtk::LieBracketImageFilter\l\&lt; TVoxel \&gt;" alt="" coords="465,4707,652,4751"/>
+<area shape="rect" id="node459" href="$classmirtk_1_1Resampling.html" title="mirtk::Resampling\&lt;\l TVoxel \&gt;" alt="" coords="491,4775,627,4819"/>
+<area shape="rect" id="node463" href="$classmirtk_1_1SeparableConvolution.html" title="mirtk::SeparableConvolution\l\&lt; TVoxel, TKernel \&gt;" alt="" coords="464,4843,653,4887"/>
+<area shape="rect" id="node465" href="$classmirtk_1_1VelocityToDisplacementField.html" title="mirtk::VelocityToDisplacement\lField\&lt; TVoxel \&gt;" alt="" coords="459,4911,658,4955"/>
+<area shape="rect" id="node471" href="$classmirtk_1_1SeparableConvolution.html" title="mirtk::SeparableConvolution\l\&lt; TVoxel \&gt;" alt="" coords="464,4979,653,5023"/>
+<area shape="rect" id="node453" href="$classmirtk_1_1DifferenceOfCompositionLieBracketImageFilter3D.html" title="mirtk::DifferenceOfComposition\lLieBracketImageFilter3D\&lt;\l TVoxel \&gt;" alt="" coords="729,4331,935,4391"/>
+<area shape="rect" id="node455" href="$classmirtk_1_1LieBracketImageFilter2D.html" title="mirtk::LieBracketImageFilter2\lD\&lt; TVoxel \&gt;" alt="" coords="735,4415,929,4459"/>
+<area shape="rect" id="node457" href="$classmirtk_1_1LieBracketImageFilter3D.html" title="mirtk::LieBracketImageFilter3\lD\&lt; TVoxel \&gt;" alt="" coords="735,4483,929,4527"/>
+<area shape="rect" id="node461" href="$classmirtk_1_1ResamplingWithPadding.html" title="mirtk::ResamplingWithPadding\l\&lt; TVoxel \&gt;" alt="" coords="730,4551,934,4595"/>
+<area shape="rect" id="node467" href="$classmirtk_1_1VelocityToDisplacementFieldEuler.html" title="mirtk::VelocityToDisplacement\lFieldEuler\&lt; TVoxel \&gt;" alt="" coords="733,4619,931,4663"/>
+<area shape="rect" id="node469" href="$classmirtk_1_1VelocityToDisplacementFieldSS.html" title="mirtk::VelocityToDisplacement\lFieldSS\&lt; TVoxel \&gt;" alt="" coords="733,4687,931,4731"/>
+<area shape="rect" id="node473" href="$classmirtk_1_1CubicBSplineConvolution.html" title="mirtk::CubicBSplineConvolution\l\&lt; TVoxel \&gt;" alt="" coords="728,4755,936,4799"/>
+<area shape="rect" id="node475" href="$classmirtk_1_1GaussianBlurring.html" title="mirtk::GaussianBlurring\l\&lt; TVoxel \&gt;" alt="" coords="752,4823,912,4867"/>
+<area shape="rect" id="node477" href="$classmirtk_1_1GaussianBlurring2D.html" title="mirtk::GaussianBlurring2\lD\&lt; TVoxel \&gt;" alt="" coords="1031,4761,1198,4805"/>
+<area shape="rect" id="node479" href="$classmirtk_1_1GaussianBlurring4D.html" title="mirtk::GaussianBlurring4\lD\&lt; TVoxel \&gt;" alt="" coords="1031,4829,1198,4873"/>
+<area shape="rect" id="node481" href="$classmirtk_1_1GaussianBlurringWithPadding.html" title="mirtk::GaussianBlurringWith\lPadding\&lt; TVoxel \&gt;" alt="" coords="1021,4897,1208,4941"/>
+<area shape="rect" id="node483" href="$classmirtk_1_1GaussianBlurringWithPadding2D.html" title="mirtk::GaussianBlurringWith\lPadding2D\&lt; TVoxel \&gt;" alt="" coords="1321,4897,1508,4941"/>
+<area shape="rect" id="node489" href="$classmirtk_1_1MeshlessMap.html" title="mirtk::MeshlessMap" alt="" coords="489,5047,629,5075"/>
+<area shape="rect" id="node495" href="$classmirtk_1_1PiecewiseLinearMap.html" title="mirtk::PiecewiseLinearMap" alt="" coords="468,5099,649,5127"/>
+<area shape="rect" id="node491" href="$classmirtk_1_1MeshlessHarmonicMap.html" title="mirtk::MeshlessHarmonicMap" alt="" coords="734,4891,930,4919"/>
+<area shape="rect" id="node493" href="$classmirtk_1_1MeshlessBiharmonicMap.html" title="mirtk::MeshlessBiharmonicMap" alt="" coords="1011,4965,1218,4993"/>
+<area shape="rect" id="node501" href="$classmirtk_1_1CellDataFilter.html" title="mirtk::CellDataFilter" alt="" coords="489,5151,628,5179"/>
+<area shape="rect" id="node511" href="$classmirtk_1_1MeshSmoothing.html" title="mirtk::MeshSmoothing" alt="" coords="482,5203,636,5231"/>
+<area shape="rect" id="node513" href="$classmirtk_1_1PointDataFilter.html" title="mirtk::PointDataFilter" alt="" coords="486,5255,632,5283"/>
+<area shape="rect" id="node525" href="$classmirtk_1_1Stripper.html" title="mirtk::Stripper" alt="" coords="507,5307,611,5335"/>
+<area shape="rect" id="node527" href="$classmirtk_1_1SurfaceFilter.html" title="mirtk::SurfaceFilter" alt="" coords="492,5489,625,5517"/>
+<area shape="rect" id="node503" href="$classmirtk_1_1CloseCellData.html" title="mirtk::CloseCellData" alt="" coords="761,4943,903,4971"/>
+<area shape="rect" id="node505" href="$classmirtk_1_1DilateCellData.html" title="mirtk::DilateCellData" alt="" coords="761,4995,903,5023"/>
+<area shape="rect" id="node507" href="$classmirtk_1_1ErodeCellData.html" title="mirtk::ErodeCellData" alt="" coords="760,5047,904,5075"/>
+<area shape="rect" id="node509" href="$classmirtk_1_1OpenCellData.html" title="mirtk::OpenCellData" alt="" coords="761,5099,903,5127"/>
+<area shape="rect" id="node515" href="$classmirtk_1_1ClosePointData.html" title="mirtk::ClosePointData" alt="" coords="757,5151,907,5179"/>
+<area shape="rect" id="node517" href="$classmirtk_1_1DilatePointData.html" title="mirtk::DilatePointData" alt="" coords="757,5203,907,5231"/>
+<area shape="rect" id="node519" href="$classmirtk_1_1ErodePointData.html" title="mirtk::ErodePointData" alt="" coords="756,5255,908,5283"/>
+<area shape="rect" id="node521" href="$classmirtk_1_1MedianPointData.html" title="mirtk::MedianPointData" alt="" coords="752,5307,912,5335"/>
+<area shape="rect" id="node523" href="$classmirtk_1_1OpenPointData.html" title="mirtk::OpenPointData" alt="" coords="758,5359,906,5387"/>
+<area shape="rect" id="node529" href="$classmirtk_1_1ImageSurfaceStatistics.html" title="mirtk::ImageSurfaceStatistics" alt="" coords="735,5411,929,5439"/>
+<area shape="rect" id="node531" href="$classmirtk_1_1SurfaceCollisions.html" title="mirtk::SurfaceCollisions" alt="" coords="752,5463,912,5491"/>
+<area shape="rect" id="node533" href="$classmirtk_1_1SurfaceCurvature.html" title="mirtk::SurfaceCurvature" alt="" coords="751,5515,913,5543"/>
+<area shape="rect" id="node535" href="$classmirtk_1_1SurfacePatches.html" title="mirtk::SurfacePatches" alt="" coords="756,5567,908,5595"/>
+<area shape="rect" id="node537" href="$classmirtk_1_1SurfaceRemeshing.html" title="mirtk::SurfaceRemeshing" alt="" coords="746,5619,918,5647"/>
+<area shape="rect" id="node543" href="$classmirtk_1_1Configurable.html" title="mirtk::Configurable" alt="" coords="492,5558,625,5586"/>
+<area shape="rect" id="node655" href="$classmirtk_1_1LocalOptimizer.html" title="mirtk::LocalOptimizer" alt="" coords="485,5610,632,5638"/>
+<area shape="rect" id="node679" href="$classmirtk_1_1ObjectiveFunction.html" title="mirtk::ObjectiveFunction" alt="" coords="476,5662,641,5690"/>
+<area shape="rect" id="node687" href="$classmirtk_1_1PointCorrespondence.html" title="mirtk::PointCorrespondence" alt="" coords="465,5714,652,5742"/>
+<area shape="rect" id="node705" href="$classmirtk_1_1RegistrationFilter.html" title="mirtk::RegistrationFilter" alt="" coords="479,5766,638,5794"/>
+<area shape="rect" id="node709" href="$classmirtk_1_1Transformation.html" title="mirtk::Transformation" alt="" coords="485,5818,632,5846"/>
+<area shape="rect" id="node545" href="$classmirtk_1_1EnergyTerm.html" title="mirtk::EnergyTerm" alt="" coords="767,5671,897,5699"/>
+<area shape="rect" id="node547" href="$classmirtk_1_1DataFidelity.html" title="mirtk::DataFidelity" alt="" coords="1051,5142,1179,5170"/>
+<area shape="rect" id="node593" href="$classmirtk_1_1PointSetForce.html" title="mirtk::PointSetForce" alt="" coords="1044,5569,1186,5597"/>
+<area shape="rect" id="node637" href="$classmirtk_1_1TransformationConstraint.html" title="mirtk::TransformationConstraint" alt="" coords="1011,5671,1218,5699"/>
+<area shape="rect" id="node549" href="$classmirtk_1_1ImageSimilarity.html" title="mirtk::ImageSimilarity" alt="" coords="1340,4983,1489,5011"/>
+<area shape="rect" id="node581" href="$classmirtk_1_1MeanSquaredDisplacementError.html" title="mirtk::MeanSquaredDisplacement\lError" alt="" coords="1304,5103,1526,5147"/>
+<area shape="rect" id="node583" href="$classmirtk_1_1PointSetDistance.html" title="mirtk::PointSetDistance" alt="" coords="1335,5171,1495,5199"/>
+<area shape="rect" id="node551" href="$classmirtk_1_1GradientFieldSimilarity.html" title="mirtk::GradientFieldSimilarity" alt="" coords="1636,4645,1828,4673"/>
+<area shape="rect" id="node557" href="$classmirtk_1_1HistogramImageSimilarity.html" title="mirtk::HistogramImageSimilarity" alt="" coords="1627,4821,1837,4849"/>
+<area shape="rect" id="node573" href="$classmirtk_1_1NormalizedIntensityCrossCorrelation.html" title="mirtk::NormalizedIntensity\lCrossCorrelation" alt="" coords="1645,4975,1819,5019"/>
+<area shape="rect" id="node577" href="$classmirtk_1_1SumOfSquaredIntensityDifferences.html" title="mirtk::SumOfSquaredIntensity\lDifferences" alt="" coords="1632,5043,1832,5087"/>
+<area shape="rect" id="node553" href="$classmirtk_1_1NormalizedGradientFieldSimilarity.html" title="mirtk::NormalizedGradient\lFieldSimilarity" alt="" coords="1944,4538,2120,4582"/>
+<area shape="rect" id="node555" href="$classmirtk_1_1CosineOfNormalizedGradientField.html" title="mirtk::CosineOfNormalized\lGradientField" alt="" coords="2206,4538,2386,4582"/>
+<area shape="rect" id="node559" href="$classmirtk_1_1ImageCovariance.html" title="mirtk::ImageCovariance" alt="" coords="1951,4606,2113,4634"/>
+<area shape="rect" id="node561" href="$classmirtk_1_1IntensityCorrelationRatioXY.html" title="mirtk::IntensityCorrelation\lRatioXY" alt="" coords="1946,4658,2118,4702"/>
+<area shape="rect" id="node563" href="$classmirtk_1_1IntensityCorrelationRatioYX.html" title="mirtk::IntensityCorrelation\lRatioYX" alt="" coords="1946,4726,2118,4770"/>
+<area shape="rect" id="node565" href="$classmirtk_1_1JointImageEntropy.html" title="mirtk::JointImageEntropy" alt="" coords="1948,4794,2116,4822"/>
+<area shape="rect" id="node567" href="$classmirtk_1_1LabelConsistency.html" title="mirtk::LabelConsistency" alt="" coords="1951,4846,2113,4874"/>
+<area shape="rect" id="node569" href="$classmirtk_1_1MutualImageInformation.html" title="mirtk::MutualImageInformation" alt="" coords="1931,4898,2133,4926"/>
+<area shape="rect" id="node571" href="$classmirtk_1_1NormalizedMutualImageInformation.html" title="mirtk::NormalizedMutualImage\lInformation" alt="" coords="1931,4950,2133,4994"/>
+<area shape="rect" id="node575" href="$classmirtk_1_1IntensityCrossCorrelation.html" title="mirtk::IntensityCrossCorrelation" alt="" coords="1928,5018,2136,5046"/>
+<area shape="rect" id="node579" href="$classmirtk_1_1PeakSignalToNoiseRatio.html" title="mirtk::PeakSignalToNoise\lRatio" alt="" coords="1945,5070,2119,5114"/>
+<area shape="rect" id="node585" href="$classmirtk_1_1CurrentsDistance.html" title="mirtk::CurrentsDistance" alt="" coords="1652,5111,1812,5139"/>
+<area shape="rect" id="node587" href="$classmirtk_1_1PointCorrespondenceDistance.html" title="mirtk::PointCorrespondence\lDistance" alt="" coords="1639,5163,1825,5207"/>
+<area shape="rect" id="node591" href="$classmirtk_1_1SurfaceDistance.html" title="mirtk::SurfaceDistance" alt="" coords="1654,5231,1810,5259"/>
+<area shape="rect" id="node589" href="$classmirtk_1_1FiducialRegistrationError.html" title="mirtk::FiducialRegistration\lError" alt="" coords="1945,5163,2119,5207"/>
+<area shape="rect" id="node595" href="$classmirtk_1_1ExternalForce.html" title="mirtk::ExternalForce" alt="" coords="1344,5335,1485,5363"/>
+<area shape="rect" id="node609" href="$classmirtk_1_1InternalForce.html" title="mirtk::InternalForce" alt="" coords="1347,5569,1483,5597"/>
+<area shape="rect" id="node597" href="$classmirtk_1_1ImageEdgeForce.html" title="mirtk::ImageEdgeForce" alt="" coords="1652,5283,1812,5311"/>
+<area shape="rect" id="node599" href="$classmirtk_1_1SurfaceForce.html" title="mirtk::SurfaceForce" alt="" coords="1663,5335,1801,5363"/>
+<area shape="rect" id="node601" href="$classmirtk_1_1BalloonForce.html" title="mirtk::BalloonForce" alt="" coords="1964,5231,2100,5259"/>
+<area shape="rect" id="node603" href="$classmirtk_1_1ImageEdgeDistance.html" title="mirtk::ImageEdgeDistance" alt="" coords="1943,5283,2121,5311"/>
+<area shape="rect" id="node605" href="$classmirtk_1_1ImplicitSurfaceForce.html" title="mirtk::ImplicitSurfaceForce" alt="" coords="1942,5335,2122,5363"/>
+<area shape="rect" id="node607" href="$classmirtk_1_1ImplicitSurfaceDistance.html" title="mirtk::ImplicitSurfaceDistance" alt="" coords="2198,5335,2394,5363"/>
+<area shape="rect" id="node611" href="$classmirtk_1_1NormalForce.html" title="mirtk::NormalForce" alt="" coords="1665,5517,1799,5545"/>
+<area shape="rect" id="node613" href="$classmirtk_1_1StretchingForce.html" title="mirtk::StretchingForce" alt="" coords="1656,5569,1808,5597"/>
+<area shape="rect" id="node615" href="$classmirtk_1_1SurfaceConstraint.html" title="mirtk::SurfaceConstraint" alt="" coords="1650,5621,1814,5649"/>
+<area shape="rect" id="node617" href="$classmirtk_1_1CurvatureConstraint.html" title="mirtk::CurvatureConstraint" alt="" coords="1944,5387,2120,5415"/>
+<area shape="rect" id="node619" href="$classmirtk_1_1GaussCurvatureConstraint.html" title="mirtk::GaussCurvatureConstraint" alt="" coords="1924,5439,2140,5467"/>
+<area shape="rect" id="node621" href="$classmirtk_1_1InflationForce.html" title="mirtk::InflationForce" alt="" coords="1963,5491,2101,5519"/>
+<area shape="rect" id="node623" href="$classmirtk_1_1MaximumCurvatureConstraint.html" title="mirtk::MaximumCurvatureConstraint" alt="" coords="1915,5543,2149,5571"/>
+<area shape="rect" id="node625" href="$classmirtk_1_1MeanCurvatureConstraint.html" title="mirtk::MeanCurvatureConstraint" alt="" coords="1927,5595,2137,5623"/>
+<area shape="rect" id="node627" href="$classmirtk_1_1MetricDistortion.html" title="mirtk::MetricDistortion" alt="" coords="1957,5647,2107,5675"/>
+<area shape="rect" id="node629" href="$classmirtk_1_1NonSelfIntersectionConstraint.html" title="mirtk::NonSelfIntersection\lConstraint" alt="" coords="1945,5699,2119,5743"/>
+<area shape="rect" id="node631" href="$classmirtk_1_1QuadraticCurvatureConstraint.html" title="mirtk::QuadraticCurvature\lConstraint" alt="" coords="1945,5767,2119,5811"/>
+<area shape="rect" id="node633" href="$classmirtk_1_1RepulsiveForce.html" title="mirtk::RepulsiveForce" alt="" coords="1957,5835,2107,5863"/>
+<area shape="rect" id="node635" href="$classmirtk_1_1SpringForce.html" title="mirtk::SpringForce" alt="" coords="1967,5887,2097,5915"/>
+<area shape="rect" id="node639" href="$classmirtk_1_1JacobianConstraint.html" title="mirtk::JacobianConstraint" alt="" coords="1329,5630,1501,5658"/>
+<area shape="rect" id="node649" href="$classmirtk_1_1LinearElasticityConstraint.html" title="mirtk::LinearElasticityConstraint" alt="" coords="1311,5682,1519,5710"/>
+<area shape="rect" id="node651" href="$classmirtk_1_1SmoothnessConstraint.html" title="mirtk::SmoothnessConstraint" alt="" coords="1318,5734,1511,5762"/>
+<area shape="rect" id="node653" href="$classmirtk_1_1SparsityConstraint.html" title="mirtk::SparsityConstraint" alt="" coords="1331,5786,1498,5814"/>
+<area shape="rect" id="node641" href="$classmirtk_1_1LogJacobianConstraint.html" title="mirtk::LogJacobianConstraint" alt="" coords="1635,5798,1829,5826"/>
+<area shape="rect" id="node645" href="$classmirtk_1_1NegJacobianConstraint.html" title="mirtk::NegJacobianConstraint" alt="" coords="1634,5933,1830,5961"/>
+<area shape="rect" id="node643" href="$classmirtk_1_1VolumePreservationConstraint.html" title="mirtk::VolumePreservation\lConstraint" alt="" coords="1944,5939,2120,5983"/>
+<area shape="rect" id="node647" href="$classmirtk_1_1TopologyPreservationConstraint.html" title="mirtk::TopologyPreservation\lConstraint" alt="" coords="1939,6007,2125,6051"/>
+<area shape="rect" id="node657" href="$classmirtk_1_1EulerMethod.html" title="mirtk::EulerMethod" alt="" coords="765,5723,899,5751"/>
+<area shape="rect" id="node663" href="$classmirtk_1_1GradientDescent.html" title="mirtk::GradientDescent" alt="" coords="753,5775,911,5803"/>
+<area shape="rect" id="node667" href="$classmirtk_1_1LimitedMemoryBFGSDescent.html" title="mirtk::LimitedMemoryBFGSDescent" alt="" coords="715,5827,949,5855"/>
+<area shape="rect" id="node669" href="$classmirtk_1_1LineSearch.html" title="mirtk::LineSearch" alt="" coords="769,5879,895,5907"/>
+<area shape="rect" id="node659" href="$classmirtk_1_1EulerMethodWithDamping.html" title="mirtk::EulerMethodWithDamping" alt="" coords="1008,5723,1221,5751"/>
+<area shape="rect" id="node661" href="$classmirtk_1_1EulerMethodWithMomentum.html" title="mirtk::EulerMethodWithMomentum" alt="" coords="1001,5775,1228,5803"/>
+<area shape="rect" id="node665" href="$classmirtk_1_1ConjugateGradientDescent.html" title="mirtk::ConjugateGradient\lDescent" alt="" coords="1030,5827,1199,5871"/>
+<area shape="rect" id="node671" href="$classmirtk_1_1InexactLineSearch.html" title="mirtk::InexactLineSearch" alt="" coords="1031,5895,1199,5923"/>
+<area shape="rect" id="node673" href="$classmirtk_1_1AdaptiveLineSearch.html" title="mirtk::AdaptiveLineSearch" alt="" coords="1326,5843,1503,5871"/>
+<area shape="rect" id="node675" href="$classmirtk_1_1BrentLineSearch.html" title="mirtk::BrentLineSearch" alt="" coords="1336,5895,1493,5923"/>
+<area shape="rect" id="node677" href="$classmirtk_1_1MaxStepLineSearch.html" title="mirtk::MaxStepLineSearch" alt="" coords="1326,5947,1504,5975"/>
+<area shape="rect" id="node681" href="$classmirtk_1_1DeformableSurfaceModel.html" title="mirtk::DeformableSurface\lModel" alt="" coords="746,5931,918,5975"/>
+<area shape="rect" id="node683" href="$classmirtk_1_1RegistrationEnergy.html" title="mirtk::RegistrationEnergy" alt="" coords="746,5999,918,6027"/>
+<area shape="rect" id="node685" href="$classmirtk_1_1TransformationApproximationError.html" title="mirtk::TransformationApproximation\lError" alt="" coords="716,6051,948,6095"/>
+<area shape="rect" id="node689" href="$classmirtk_1_1ClosestCell.html" title="mirtk::ClosestCell" alt="" coords="769,6119,895,6147"/>
+<area shape="rect" id="node691" href="$classmirtk_1_1ClosestPoint.html" title="mirtk::ClosestPoint" alt="" coords="766,6171,898,6199"/>
+<area shape="rect" id="node695" href="$classmirtk_1_1FiducialMatch.html" title="mirtk::FiducialMatch" alt="" coords="762,6223,902,6251"/>
+<area shape="rect" id="node697" href="$classmirtk_1_1FuzzyCorrespondence.html" title="mirtk::FuzzyCorrespondence" alt="" coords="736,6275,928,6303"/>
+<area shape="rect" id="node703" href="$classmirtk_1_1SpectralMatch.html" title="mirtk::SpectralMatch" alt="" coords="761,6327,903,6355"/>
+<area shape="rect" id="node693" href="$classmirtk_1_1ClosestPointLabel.html" title="mirtk::ClosestPointLabel" alt="" coords="1032,6171,1197,6199"/>
+<area shape="rect" id="node699" href="$classmirtk_1_1RobustClosestPoint.html" title="mirtk::RobustClosestPoint" alt="" coords="1027,6234,1202,6262"/>
+<area shape="rect" id="node701" href="$classmirtk_1_1RobustPointMatch.html" title="mirtk::RobustPointMatch" alt="" coords="1031,6286,1198,6314"/>
+<area shape="rect" id="node707" href="$classmirtk_1_1GenericRegistrationFilter.html" title="mirtk::GenericRegistration\lFilter" alt="" coords="744,6379,920,6423"/>
+<area shape="rect" id="node711" href="$classmirtk_1_1FreeFormTransformation.html" title="mirtk::FreeFormTransformation" alt="" coords="729,6447,935,6475"/>
+<area shape="rect" id="node733" href="$classmirtk_1_1HomogeneousTransformation.html" title="mirtk::HomogeneousTransformation" alt="" coords="715,6499,949,6527"/>
+<area shape="rect" id="node745" href="$classmirtk_1_1MultiLevelTransformation.html" title="mirtk::MultiLevelTransformation" alt="" coords="729,6573,935,6601"/>
+<area shape="rect" id="node755" href="$classmirtk_1_1PartialBSplineFreeFormTransformationSV.html" title="mirtk::PartialBSplineFree\lFormTransformationSV" alt="" coords="748,6625,916,6669"/>
+<area shape="rect" id="node713" href="$classmirtk_1_1FreeFormTransformation3D.html" title="mirtk::FreeFormTransformation3D" alt="" coords="1003,6358,1226,6386"/>
+<area shape="rect" id="node723" href="$classmirtk_1_1FreeFormTransformation4D.html" title="mirtk::FreeFormTransformation4D" alt="" coords="1003,6419,1226,6447"/>
+<area shape="rect" id="node715" href="$classmirtk_1_1BSplineFreeFormTransformation3D.html" title="mirtk::BSplineFreeFormTransformation3D" alt="" coords="1281,6306,1549,6334"/>
+<area shape="rect" id="node721" href="$classmirtk_1_1LinearFreeFormTransformation3D.html" title="mirtk::LinearFreeFormTransformation3D" alt="" coords="1285,6358,1544,6386"/>
+<area shape="rect" id="node717" href="$classmirtk_1_1BSplineFreeFormTransformationStatistical.html" title="mirtk::BSplineFreeFormTransformation\lStatistical" alt="" coords="1606,6265,1858,6309"/>
+<area shape="rect" id="node719" href="$classmirtk_1_1BSplineFreeFormTransformationSV.html" title="mirtk::BSplineFreeFormTransformationSV" alt="" coords="1597,6333,1867,6361"/>
+<area shape="rect" id="node725" href="$classmirtk_1_1BSplineFreeFormTransformation4D.html" title="mirtk::BSplineFreeFormTransformation4D" alt="" coords="1281,6410,1549,6438"/>
+<area shape="rect" id="node729" href="$classmirtk_1_1LinearFreeFormTransformation4D.html" title="mirtk::LinearFreeFormTransformation4D" alt="" coords="1285,6462,1544,6490"/>
+<area shape="rect" id="node727" href="$classmirtk_1_1BSplineFreeFormTransformationTD.html" title="mirtk::BSplineFreeFormTransformationTD" alt="" coords="1597,6410,1867,6438"/>
+<area shape="rect" id="node731" href="$classmirtk_1_1LinearFreeFormTransformationTD.html" title="mirtk::LinearFreeFormTransformationTD" alt="" coords="1602,6462,1862,6490"/>
+<area shape="rect" id="node735" href="$classmirtk_1_1RigidTransformation.html" title="mirtk::RigidTransformation" alt="" coords="1026,6471,1203,6499"/>
+<area shape="rect" id="node737" href="$classmirtk_1_1SimilarityTransformation.html" title="mirtk::SimilarityTransformation" alt="" coords="1314,6514,1515,6542"/>
+<area shape="rect" id="node739" href="$classmirtk_1_1AffineTransformation.html" title="mirtk::AffineTransformation" alt="" coords="1642,6514,1822,6542"/>
+<area shape="rect" id="node741" href="$classmirtk_1_1InverseAffineTransformation.html" title="mirtk::InverseAffineTransformation" alt="" coords="1920,6487,2144,6515"/>
+<area shape="rect" id="node743" href="$classmirtk_1_1PartialAffineTransformation.html" title="mirtk::PartialAffineTransformation" alt="" coords="1923,6539,2141,6567"/>
+<area shape="rect" id="node747" href="$classmirtk_1_1FluidFreeFormTransformation.html" title="mirtk::FluidFreeFormTransformation" alt="" coords="998,6523,1232,6551"/>
+<area shape="rect" id="node749" href="$classmirtk_1_1MultiLevelFreeFormTransformation.html" title="mirtk::MultiLevelFreeForm\lTransformation" alt="" coords="1027,6575,1203,6619"/>
+<area shape="rect" id="node751" href="$classmirtk_1_1MultiLevelStationaryVelocityTransformation.html" title="mirtk::MultiLevelStationary\lVelocityTransformation" alt="" coords="1026,6643,1204,6687"/>
+<area shape="rect" id="node753" href="$classmirtk_1_1PartialMultiLevelStationaryVelocityTransformation.html" title="mirtk::PartialMultiLevel\lStationaryVelocityTransformation" alt="" coords="1006,6711,1223,6755"/>
+<area shape="rect" id="node759" href="$classmirtk_1_1DeformableSurfaceDebugger.html" title="mirtk::DeformableSurface\lDebugger" alt="" coords="472,5870,645,5914"/>
+<area shape="rect" id="node761" href="$classmirtk_1_1DeformableSurfaceLogger.html" title="mirtk::DeformableSurface\lLogger" alt="" coords="472,5938,645,5982"/>
+<area shape="rect" id="node763" href="$classmirtk_1_1EventDelegate.html" title="mirtk::EventDelegate" alt="" coords="486,6006,631,6034"/>
+<area shape="rect" id="node765" href="$classmirtk_1_1GenericRegistrationDebugger.html" title="mirtk::GenericRegistration\lDebugger" alt="" coords="471,6058,646,6102"/>
+<area shape="rect" id="node767" href="$classmirtk_1_1GenericRegistrationLogger.html" title="mirtk::GenericRegistration\lLogger" alt="" coords="471,6126,646,6170"/>
+<area shape="rect" id="node775" href="$classmirtk_1_1PointSamples.html" title="mirtk::PointSamples" alt="" coords="489,6194,629,6222"/>
+<area shape="rect" id="node783" href="$classmirtk_1_1CharbonnierErrorFunction.html" title="mirtk::CharbonnierErrorFunction" alt="" coords="453,6246,665,6274"/>
+<area shape="rect" id="node785" href="$classmirtk_1_1DistanceErrorFunction.html" title="mirtk::DistanceErrorFunction" alt="" coords="464,6298,654,6326"/>
+<area shape="rect" id="node787" href="$classmirtk_1_1GaussianErrorFunction.html" title="mirtk::GaussianErrorFunction" alt="" coords="461,6350,656,6378"/>
+<area shape="rect" id="node789" href="$classmirtk_1_1PeronaMalikErrorFunction.html" title="mirtk::PeronaMalikErrorFunction" alt="" coords="452,6402,665,6430"/>
+<area shape="rect" id="node791" href="$classmirtk_1_1SquaredErrorFunction.html" title="mirtk::SquaredErrorFunction" alt="" coords="464,6454,653,6482"/>
+<area shape="rect" id="node795" href="$classmirtk_1_1RegisteredSurface.html" title="mirtk::RegisteredSurface" alt="" coords="475,6506,643,6534"/>
+<area shape="rect" id="node799" href="$classmirtk_1_1ScalarGaussian.html" title="mirtk::ScalarGaussian" alt="" coords="483,6558,635,6586"/>
+<area shape="rect" id="node807" href="$classmirtk_1_1EnergyThreshold.html" title="mirtk::EnergyThreshold" alt="" coords="479,6610,638,6638"/>
+<area shape="rect" id="node809" href="$classmirtk_1_1InflationStoppingCriterion.html" title="mirtk::InflationStopping\lCriterion" alt="" coords="480,6662,637,6706"/>
+<area shape="rect" id="node811" href="$classmirtk_1_1MinActiveStoppingCriterion.html" title="mirtk::MinActiveStopping\lCriterion" alt="" coords="475,6730,643,6774"/>
+<area shape="rect" id="node817" href="$classmirtk_1_1FixedBoundarySurfaceMapper.html" title="mirtk::FixedBoundarySurface\lMapper" alt="" coords="462,6798,655,6842"/>
+<area shape="rect" id="node845" href="$classmirtk_1_1FreeBoundarySurfaceMapper.html" title="mirtk::FreeBoundarySurface\lMapper" alt="" coords="465,6866,653,6910"/>
+<area shape="rect" id="node851" href="$classmirtk_1_1SphericalSurfaceMapper.html" title="mirtk::SphericalSurfaceMapper" alt="" coords="456,6967,661,6995"/>
+<area shape="rect" id="node819" href="$classmirtk_1_1LinearFixedBoundarySurfaceMapper.html" title="mirtk::LinearFixedBoundary\lSurfaceMapper" alt="" coords="740,6779,924,6823"/>
+<area shape="rect" id="node821" href="$classmirtk_1_1NonSymmetricWeightsSurfaceMapper.html" title="mirtk::NonSymmetricWeights\lSurfaceMapper" alt="" coords="1018,6779,1211,6823"/>
+<area shape="rect" id="node837" href="$classmirtk_1_1SymmetricWeightsSurfaceMapper.html" title="mirtk::SymmetricWeightsSurface\lMapper" alt="" coords="1007,6938,1222,6982"/>
+<area shape="rect" id="node823" href="$classmirtk_1_1AuthalicSurfaceMapper.html" title="mirtk::AuthalicSurfaceMapper" alt="" coords="1317,6683,1513,6711"/>
+<area shape="rect" id="node825" href="$classmirtk_1_1IntrinsicSurfaceMapper.html" title="mirtk::IntrinsicSurfaceMapper" alt="" coords="1317,6735,1512,6763"/>
+<area shape="rect" id="node833" href="$classmirtk_1_1MeanValueSurfaceMapper.html" title="mirtk::MeanValueSurfaceMapper" alt="" coords="1307,6787,1522,6815"/>
+<area shape="rect" id="node835" href="$classmirtk_1_1ShapePreservingSurfaceMapper.html" title="mirtk::ShapePreservingSurface\lMapper" alt="" coords="1312,6839,1518,6883"/>
+<area shape="rect" id="node827" href="$classmirtk_1_1NearOptimalIntrinsicSurfaceMapper.html" title="mirtk::NearOptimalIntrinsic\lSurfaceMapper" alt="" coords="1643,6727,1821,6771"/>
+<area shape="rect" id="node829" href="$classmirtk_1_1IntrinsicLeastAreaDistortionSurfaceMapper.html" title="mirtk::IntrinsicLeastArea\lDistortionSurfaceMapper" alt="" coords="1948,6694,2116,6738"/>
+<area shape="rect" id="node831" href="$classmirtk_1_1IntrinsicLeastEdgeLengthDistortionSurfaceMapper.html" title="mirtk::IntrinsicLeastEdge\lLengthDistortionSurfaceMapper" alt="" coords="1927,6762,2137,6806"/>
+<area shape="rect" id="node839" href="$classmirtk_1_1ChordLengthSurfaceMapper.html" title="mirtk::ChordLengthSurface\lMapper" alt="" coords="1324,6907,1505,6951"/>
+<area shape="rect" id="node841" href="$classmirtk_1_1HarmonicSurfaceMapper.html" title="mirtk::HarmonicSurfaceMapper" alt="" coords="1312,6975,1518,7003"/>
+<area shape="rect" id="node843" href="$classmirtk_1_1UniformSurfaceMapper.html" title="mirtk::UniformSurfaceMapper" alt="" coords="1317,7027,1512,7055"/>
+<area shape="rect" id="node847" href="$classmirtk_1_1LeastSquaresConformalSurfaceMapper.html" title="mirtk::LeastSquaresConformal\lSurfaceMapper" alt="" coords="731,6847,933,6891"/>
+<area shape="rect" id="node849" href="$classmirtk_1_1SpectralConformalSurfaceMapper.html" title="mirtk::SpectralConformal\lSurfaceMapper" alt="" coords="748,6915,916,6959"/>
+<area shape="rect" id="node853" href="$classmirtk_1_1ConformalSurfaceFlattening.html" title="mirtk::ConformalSurfaceFlattening" alt="" coords="720,6983,944,7011"/>
+<area shape="rect" id="node863" href="$classmirtk_1_1MeshlessVolumeMapper.html" title="mirtk::MeshlessVolumeMapper" alt="" coords="457,7043,660,7071"/>
+<area shape="rect" id="node867" href="$classmirtk_1_1TetrahedralMeshMapper.html" title="mirtk::TetrahedralMeshMapper" alt="" coords="458,7103,660,7131"/>
+<area shape="rect" id="node865" href="$classmirtk_1_1MeshlessHarmonicVolumeMapper.html" title="mirtk::MeshlessHarmonicVolume\lMapper" alt="" coords="724,7035,940,7079"/>
+<area shape="rect" id="node869" href="$classmirtk_1_1LinearTetrahedralMeshMapper.html" title="mirtk::LinearTetrahedral\lMeshMapper" alt="" coords="751,7103,913,7147"/>
+<area shape="rect" id="node871" href="$classmirtk_1_1AsConformalAsPossibleMapper.html" title="mirtk::AsConformalAsPossible\lMapper" alt="" coords="1014,7069,1215,7113"/>
+<area shape="rect" id="node873" href="$classmirtk_1_1HarmonicTetrahedralMeshMapper.html" title="mirtk::HarmonicTetrahedral\lMeshMapper" alt="" coords="1024,7137,1205,7181"/>
 </map>

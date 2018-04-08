@@ -23,5 +23,7 @@ var searchData=
   ['octaryforeachvoxelifbody_5f6const',['OctaryForEachVoxelIfBody_6Const',['../structmirtk_1_1OctaryForEachVoxelIfBody__6Const.html',1,'mirtk']]],
   ['octaryforeachvoxelifbody_5f7const',['OctaryForEachVoxelIfBody_7Const',['../structmirtk_1_1OctaryForEachVoxelIfBody__7Const.html',1,'mirtk']]],
   ['octaryforeachvoxelifbody_5fconst',['OctaryForEachVoxelIfBody_Const',['../structmirtk_1_1OctaryForEachVoxelIfBody__Const.html',1,'mirtk']]],
-  ['op',['Op',['../classmirtk_1_1data_1_1Op.html',1,'mirtk::data']]]
+  ['op',['Op',['../classmirtk_1_1data_1_1Op.html',1,'mirtk::data']]],
+  ['opencelldata',['OpenCellData',['../classmirtk_1_1OpenCellData.html',1,'mirtk']]],
+  ['openpointdata',['OpenPointData',['../classmirtk_1_1OpenPointData.html',1,'mirtk']]]
 ];

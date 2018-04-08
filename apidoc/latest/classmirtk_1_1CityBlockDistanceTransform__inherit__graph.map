@@ -1,4 +1,4 @@
 <map id="mirtk::CityBlockDistanceTransform&lt; TVoxel &gt;" name="mirtk::CityBlockDistanceTransform&lt; TVoxel &gt;">
-<area shape="rect" id="node2" href="$classmirtk_1_1ImageToImage.html" title="{mirtk::ImageToImage\l\&lt; TVoxel \&gt;\n||+ ImageToImage()\l+ RequiresBuffering()\l+ Run()\l+ Run()\l+ ~ImageToImage()\l# Finalize()\l# Initialize()\l# Initialize()\l# mirtkAggregateMacro()\l# mirtkPublicAggregateMacro()\l# mirtkPublicAggregateMacro()\l}" alt="" coords="14,206,215,445"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="52,6,177,157"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1ImageToImage.html" title="{mirtk::ImageToImage\l\&lt; TVoxel \&gt;\n||+ ImageToImage()\l+ RequiresBuffering()\l+ Run()\l+ Run()\l+ ~ImageToImage()\l# Finalize()\l# Initialize()\l# Initialize()\l# mirtkAggregateMacro()\l# mirtkPublicAggregateMacro()\l# mirtkPublicAggregateMacro()\l}" alt="" coords="11,249,215,506"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="51,6,175,199"/>
 </map>

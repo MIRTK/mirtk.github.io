@@ -1,8 +1,12 @@
 var searchData=
 [
   ['s2i',['S2I',['../classmirtk_1_1BaseImage.html#a299eb7f11bb568c28d3435d12e65ecf2aa7905c0e7d1a8e48c10841a607bba0e9',1,'mirtk::BaseImage']]],
+  ['sd_5fimage',['SD_Image',['../classmirtk_1_1JacobianConstraint.html#a58caae79730c11891dcda36847815bfda0b62a42bbb54833d985a0b20140de31a',1,'mirtk::JacobianConstraint']]],
+  ['sd_5flattice',['SD_Lattice',['../classmirtk_1_1JacobianConstraint.html#a58caae79730c11891dcda36847815bfda2f8c0f4c6bac81f79bf3883931750f92',1,'mirtk::JacobianConstraint']]],
+  ['sd_5fshifted',['SD_Shifted',['../classmirtk_1_1JacobianConstraint.html#a58caae79730c11891dcda36847815bfda22a9a69fe80489405dd56a22779d3b3c',1,'mirtk::JacobianConstraint']]],
+  ['sd_5fsubdiv',['SD_SubDiv',['../classmirtk_1_1JacobianConstraint.html#a58caae79730c11891dcda36847815bfdac47042021c3997f1151b572b40523c82',1,'mirtk::JacobianConstraint']]],
   ['selfintersection',['SelfIntersection',['../classmirtk_1_1SurfaceCollisions.html#a4fed86a64222a6738f8f0e7911eee58aa37935f63fe3759d1e9cdf3bcc12ed40d',1,'mirtk::SurfaceCollisions']]],
-  ['shortest_5fedge',['SHORTEST_EDGE',['../classmirtk_1_1PolyDataRemeshing.html#a4c01955dc5dcfe6321754270e576f3c2aafc270a3fca2f6a667b6817d9c6a3952',1,'mirtk::PolyDataRemeshing']]],
+  ['shortest_5fedge',['SHORTEST_EDGE',['../classmirtk_1_1SurfaceRemeshing.html#af86d5796ce708ae6bc98ba96bc19820fa0ff8ca9419e92d5b517f4a23fa211c9a',1,'mirtk::SurfaceRemeshing']]],
   ['sim_5fcc',['SIM_CC',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5badcc266d58fc5c857cb91c0a76276f298',1,'mirtk']]],
   ['sim_5fcovar',['SIM_CoVar',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5ba3f967b65e2df0aafdc2d9fd3248e2745',1,'mirtk']]],
   ['sim_5fcr_5fxy',['SIM_CR_XY',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5baa2e200ad52e2b99c70a8c4522d83762b',1,'mirtk']]],
@@ -13,13 +17,18 @@ var searchData=
   ['sim_5flncc',['SIM_LNCC',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5ba841246096d8c3b78b5977edaaa470a91',1,'mirtk']]],
   ['sim_5fmi',['SIM_MI',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5babf17be98e3a496074e4365d38619b65e',1,'mirtk']]],
   ['sim_5fml',['SIM_ML',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5ba63ac9469bb68f898694e69437996eb16',1,'mirtk']]],
+  ['sim_5fncc',['SIM_NCC',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5ba3d41222907544918c09367f1e99a89fe',1,'mirtk']]],
   ['sim_5fngf_5fcos',['SIM_NGF_COS',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5bacea25a05a11e585376a14851b64137e0',1,'mirtk']]],
   ['sim_5fnmi',['SIM_NMI',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5ba0426fc5835f1dfb44e2976c868c7ae17',1,'mirtk']]],
   ['sim_5fpsnr',['SIM_PSNR',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5ba5aa808bb129603fb243c5a0b70748d29',1,'mirtk']]],
   ['sim_5fssd',['SIM_SSD',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5bafa5d1dd790e51cdafe421a2d6590b46f',1,'mirtk']]],
   ['sim_5funknown',['SIM_Unknown',['../namespacemirtk.html#a8a3fdd3fa82e85389d822fffd7294d5baac0a8609ca085ee88c5dabef367011b7',1,'mirtk']]],
+  ['smallestfirst',['SmallestFirst',['../classmirtk_1_1SurfacePatches.html#aa3c548050caeb9e93b1f30d364f20b49a433f6b68f98793a748b77664a6301eb2',1,'mirtk::SurfacePatches']]],
   ['spectralmatch',['SpectralMatch',['../classmirtk_1_1PointCorrespondence.html#a395d3a470b911e2432a5ad75f0bd0474ac7d506bd6141cad69f75ad3151762303',1,'mirtk::PointCorrespondence']]],
   ['squared',['Squared',['../classmirtk_1_1RadialErrorFunction.html#aaedf1ab900d502f62829a058a1430cf5a8742850f0c175551e369b2387294e9b2',1,'mirtk::RadialErrorFunction']]],
   ['startevent',['StartEvent',['../namespacemirtk.html#a713bab184e30352ae34d9d6b0605744dabe6d89095930a04bc023eea0155b4118',1,'mirtk']]],
-  ['statusevent',['StatusEvent',['../namespacemirtk.html#a713bab184e30352ae34d9d6b0605744da47876da7a63c4f80b254f1bd4d7e299b',1,'mirtk']]]
+  ['statusevent',['StatusEvent',['../namespacemirtk.html#a713bab184e30352ae34d9d6b0605744da47876da7a63c4f80b254f1bd4d7e299b',1,'mirtk']]],
+  ['strongestextremum',['StrongestExtremum',['../classmirtk_1_1ImageEdgeDistance.html#a8b4079a6baf4fabe5cde8fd01a69ff9dadb0ecc87a00a068d2816e1d8a2012ec4',1,'mirtk::ImageEdgeDistance']]],
+  ['strongestmaximum',['StrongestMaximum',['../classmirtk_1_1ImageEdgeDistance.html#a8b4079a6baf4fabe5cde8fd01a69ff9da6d9b7ae6f4055ac4790f3c2fa0679072',1,'mirtk::ImageEdgeDistance']]],
+  ['strongestminimum',['StrongestMinimum',['../classmirtk_1_1ImageEdgeDistance.html#a8b4079a6baf4fabe5cde8fd01a69ff9da1e573a9201ea512e92754e2d9cf51f93',1,'mirtk::ImageEdgeDistance']]]
 ];

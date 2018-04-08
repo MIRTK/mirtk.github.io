@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,18 +26,18 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="index.html" />
+    <link rel="top" title="MIRTK" href="sidebar.html" />
     <link rel="next" title="People" href="people.html" />
     <link rel="prev" title="Support" href="help.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -46,12 +46,12 @@
         <li class="right" >
           <a href="help.html" title="Support"
              accesskey="P">previous</a> |</li>
-        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -59,9 +59,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="sidebar.html">Table Of Contents</a></h3>
@@ -77,7 +74,13 @@
 <li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Support</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Publications</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Publications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#registration">Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#draw-em">Draw-EM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deformable">Deformable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#point-set">Point Set</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
 </ul>
 
@@ -87,34 +90,36 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="publications">
 <h1>Publications<a class="headerlink" href="#publications" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="registration">
+<h2>Registration<a class="headerlink" href="#registration" title="Permalink to this headline">¶</a></h2>
 <p><strong>Classic free-form deformation</strong></p>
 <p>The following papers introduce the classic B-spline free-form deformation (FFD) algorithm.</p>
-<table class="docutils citation" frame="void" id="miccai01" rules="none">
+<table class="docutils citation" frame="void" id="schnabel01" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[MICCAI01]</td><td><a class="reference external" href="http://link.springer.com/chapter/10.1007%2F3-540-45468-3_69">A generic framework for non-rigid registration based on non-uniform multi-level free-form deformations</a>. <br />
+<tr><td class="label">[Schnabel01]</td><td><a class="reference external" href="http://link.springer.com/chapter/10.1007%2F3-540-45468-3_69">A generic framework for non-rigid registration based on non-uniform multi-level free-form deformations</a>. <br />
 J. A. Schnabel, D. Rueckert, M. Quist, J. M. Blackall, A. D. Castellano Smith, T. Hartkens, G. P. Penney,
 W. A. Hall, H. Liu, C. L. Truwit, F.A. Gerritsen, D. L. G. Hill, and D.J. Hawkes.
 In 4th Int. Conf. on Medical Image Computing and Computer-Assisted Intervention (MICCAI &#8216;01),
 LNCS 2208:573-581, Utrecht, NL, October 2001.</td></tr>
 </tbody>
 </table>
-<table class="docutils citation" frame="void" id="tmi99" rules="none">
+<table class="docutils citation" frame="void" id="rueckert99" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[TMI99]</td><td><a class="reference external" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=796284">Non-rigid registration using free-form deformations: Application to breast MR images</a>. <br />
+<tr><td class="label">[Rueckert99]</td><td><a class="reference external" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=796284">Non-rigid registration using free-form deformations: Application to breast MR images</a>. <br />
 D. Rueckert, L. I. Sonoda, C. Hayes, D. L. G. Hill, M. O. Leach, and D. J. Hawkes.
 IEEE Transactions on Medical Imaging, 18(8):712-721, 1999.</td></tr>
 </tbody>
 </table>
-<table class="docutils citation" frame="void" id="jcat99" rules="none">
+<table class="docutils citation" frame="void" id="denton99" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[JCAT99]</td><td><a class="reference external" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.46.5218&amp;rep=rep1&amp;type=pdf">Comparison and evaluation of rigid and non-rigid registration of breast MR images</a>. <br />
+<tr><td class="label">[Denton99]</td><td><a class="reference external" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.46.5218&amp;rep=rep1&amp;type=pdf">Comparison and evaluation of rigid and non-rigid registration of breast MR images</a>. <br />
 E. R. E. Denton, L. I. Sonoda, D. Rueckert, S. C. Rankin, C. Hayes, M. Leach, D. L. G. Hill, and D. J. Hawkes.
 Journal of Computer Assisted Tomography, 23:800-805, 1999.</td></tr>
 </tbody>
@@ -122,10 +127,10 @@ Journal of Computer Assisted Tomography, 23:800-805, 1999.</td></tr>
 <p><strong>Sparse free-from deformation</strong></p>
 <p>The use of the sparsity constraint for the spatio-temporal registration of cardiac image sequences
 was first published in the following conference article.</p>
-<table class="docutils citation" frame="void" id="miccai12" rules="none">
+<table class="docutils citation" frame="void" id="shi12" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[MICCAI12]</td><td><a class="reference external" href="http://link.springer.com/chapter/10.1007%2F978-3-642-33418-4_81">Registration Using Sparse Free-Form Deformations</a>. <br />
+<tr><td class="label">[Shi12]</td><td><a class="reference external" href="http://link.springer.com/chapter/10.1007%2F978-3-642-33418-4_81">Registration Using Sparse Free-Form Deformations</a>. <br />
 W. Shi, X. Zhuang, L. Pizarro, W. Bai, H. Wang, K.-P. Tung, P. Edwards, and D. Rueckert.
 In 15th Int. Conf. on Medical Image Computing and Computer-Assisted Intervention (MICCAI &#8216;12),
 LNCS 7511:659-666, 2012.</td></tr>
@@ -134,36 +139,80 @@ LNCS 7511:659-666, 2012.</td></tr>
 <p><strong>Statistical free-from deformation</strong></p>
 <p>The following publications learn a statistical free-form deformation model from a training dataset
 to restrict the deformation on new images to the learned plausible deformations.</p>
-<table class="docutils citation" frame="void" id="tmi03" rules="none">
+<table class="docutils citation" frame="void" id="rueckert03" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[TMI03]</td><td><a class="reference external" href="http://link.springer.com/chapter/10.1007%2F3-540-45468-3_10">Automatic Construction of 3D Statistical Deformation Models Using Non-rigid Registration</a>. <br />
+<tr><td class="label">[Rueckert03]</td><td><a class="reference external" href="http://link.springer.com/chapter/10.1007%2F3-540-45468-3_10">Automatic Construction of 3D Statistical Deformation Models Using Non-rigid Registration</a>. <br />
 D. Rueckert, A. F. Frangi, J. A. Schnabel.
 In 4th Int. Conf. on Medical Image Computing and Computer-Assisted Intervention (MICCAI &#8216;01),
 LNCS 2208:77-84, Utrecht, NL, October 2001.</td></tr>
 </tbody>
 </table>
-<table class="docutils citation" frame="void" id="spie12" rules="none">
+<table class="docutils citation" frame="void" id="pszczolkowski12" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[SPIE12]</td><td><a class="reference external" href="http://pubs.doc.ic.ac.uk/SDM-nonrigid-registration/SDM-nonrigid-registration.pdf">Nonrigid free-form registration using landmark-based statistical deformation models.</a>. <br />
+<tr><td class="label">[Pszczolkowski12]</td><td><a class="reference external" href="http://pubs.doc.ic.ac.uk/SDM-nonrigid-registration/SDM-nonrigid-registration.pdf">Nonrigid free-form registration using landmark-based statistical deformation models.</a>. <br />
 S. Pszczolkowski, L. Pizarro, R. Guerrero, D. Rueckert.
-Proc. SPIE 8314, Medical Imaging 2012: Image Processing, 831418 (February 23, 2012)</td></tr>
+Proc. SPIE 8314, Medical Imaging 2012: Image Processing, 831418, February 2012.</td></tr>
 </tbody>
 </table>
 <p><strong>Symmetric/Diffeomorphic free-form deformation</strong></p>
 <p>The details and application of the symmetric diffeomorphic registration which parameterizes the
 non-rigid transformation by a stationary velocity field with B-spline interpolation can be found
 in the following workshop paper.</p>
-<table class="docutils citation" frame="void" id="stia14" rules="none">
+<table class="docutils citation" frame="void" id="schuh14" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[STIA14]</td><td><a class="reference external" href="http://andreasschuh.com/wp-content/uploads/2015/09/miccai2014-stia.pdf">Construction of a 4D Brain Atlas and Growth Model using Diffeomorphic Registration</a>. <br />
+<tr><td class="label">[Schuh14]</td><td><a class="reference external" href="http://andreasschuh.com/wp-content/uploads/2015/09/miccai2014-stia.pdf">Construction of a 4D Brain Atlas and Growth Model using Diffeomorphic Registration</a>. <br />
 A. Schuh, M. Murgasova, A. Makropoulos, C. Ledig, S. J. Counsell, J. V. Hajnal, P. Aljabar D. Rueckert.
 In 3rd MICCAI Workshop on Spatiotemporal Image Analysis for Longitudinal and Time-Series Image Data (STIA),
-LNCS 8682, pp. 27-37, Boston, MA (2014)</td></tr>
+LNCS 8682, pp. 27-37, Boston, MA, 2014.</td></tr>
 </tbody>
 </table>
+<table class="docutils citation" frame="void" id="schuh18" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Schuh18]</td><td><a class="reference external" href="https://www.biorxiv.org/content/early/2018/01/28/251512">Unbiased construction of a temporally consistent morphological atlas of neonatal brain development</a>. <br />
+A. Schuh, A. Makropoulos, E. C. Robinson, L. Cordero-Grande, E. Hughes, J. Hutter, A. N. Price, M. Murgasova, R. Pedro A. G. Teixeira, N. Tusor, J. K. Steinweg, S. Victor, M. A. Rutherford, J. V. Hajnal, A. D. Edwards, D. Rueckert.
+bioRxiv, 2018.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="draw-em">
+<h2>Draw-EM<a class="headerlink" href="#draw-em" title="Permalink to this headline">¶</a></h2>
+<p>When you use the Developing brain Region Annotation With Expectation-Maximization (Draw-EM) package, please cite the following article:</p>
+<table class="docutils citation" frame="void" id="makropoulos14" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Makropoulos14]</td><td><a class="reference external" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6810848">Automatic whole brain MRI segmentation of the developing neonatal brain</a>. <br />
+A. Makropoulos, I. S. Gousias, C. Ledig, P. Aljabar, A. Serag, J. V. Hajnal, A. D. Edwards, S. J. Counsell, D. Rueckert.
+IEEE Transactions on Medical Imaging, vol. 33 (9), pp. 1818-1831, 2014.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="deformable">
+<h2>Deformable<a class="headerlink" href="#deformable" title="Permalink to this headline">¶</a></h2>
+<p><strong>Neonatal cortex reconstruction</strong></p>
+<p>The reconstruction of the neonatal cortex from T2-weighted (and T1-weighted) brain MR images is detailed in:</p>
+<table class="docutils citation" frame="void" id="schuh17" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Schuh17]</td><td><a class="reference external" href="https://doi.org/10.1109/ISBI.2017.7950639">A deformable model for the reconstruction of the neonatal cortex</a>. <br />
+A. Schuh, A. Makropoulos, R. Wright, E. C. Robinson, N. Tusor, J. Steinweg, E. Hughes, L. Cordero-Grande, A. N. Price, J. Hutter, J. V. Hajnal, D. Rueckert.
+In 14th IEEE International Symposium on Biomedical Imaging (ISBI), April 2017.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="makropoulos18" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Makropoulos18]</td><td><a class="reference external" href="https://doi.org/10.1101/125526">The developing human connectome project: A minimal processing pipeline for neonatal cortical surface reconstruction</a>. <br />
+A. Makropoulos, E. C Robinson, A. Schuh, R. Wright, S. Fitzgibbon, J. Bozek, S. J. Counsell, J. Steinweg, J. Passerat-Palmbach, G. Lenz, F. Mortari, T. Tenev, E. P. Duff, M. Bastiani, L. Cordero-Grande, E. Hughes, N. Tusor, J.-D. Tournier, J. Hutter, A. N. Price, M. Murgasova, C. Kelly, M. A. Rutherford, S. M. Smith, A. D. Edwards, J. V. Hajnal, M. Jenkinson, D. Rueckert.
+NeuroImage, vol. 173, pp. 88-112, 2018.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="point-set">
+<h2>Point Set<a class="headerlink" href="#point-set" title="Permalink to this headline">¶</a></h2>
 <p><strong>Spectral surface matching</strong></p>
 <p>The spectral surface matching implementations are based on the MATLAB code provided by
 <a class="reference external" href="http://step.polymtl.ca/~rv101/projects.php">Herve Lombaert</a>.</p>
@@ -177,6 +226,7 @@ LNCS 7917:376-389, Asilomar, CA, USA, June 28-July 3, 2013.</td></tr>
 </tbody>
 </table>
 </div>
+</div>
 
 
           </div>
@@ -184,7 +234,7 @@ LNCS 7917:376-389, Asilomar, CA, USA, June 28-July 3, 2013.</td></tr>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -193,12 +243,12 @@ LNCS 7917:376-389, Asilomar, CA, USA, June 28-July 3, 2013.</td></tr>
         <li class="right" >
           <a href="help.html" title="Support"
              >previous</a> |</li>
-        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

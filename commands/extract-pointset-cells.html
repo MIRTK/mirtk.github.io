@@ -1,0 +1,253 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>extract-pointset-cells &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="extract-pointset-surface" href="extract-pointset-surface.html" />
+    <link rel="prev" title="extract-image-volume" href="extract-image-volume.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="extract-pointset-surface.html" title="extract-pointset-surface"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="extract-image-volume.html" title="extract-image-volume"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="extract-pointset-cells">
+<h1>extract-pointset-cells<a class="headerlink" href="#extract-pointset-cells" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">extract</span><span class="o">-</span><span class="n">pointset</span><span class="o">-</span><span class="n">cells</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Extract point set/surface elements which meet the specified criteria.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-arg-input">
+<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-cells-arg-input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input point set.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-arg-output">
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-cells-arg-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output point set.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-select">
+<code class="descname">-select</code><code class="descclassname"> &lt;name&gt; [&lt;j&gt;]</code><a class="headerlink" href="#cmdoption-extract-pointset-cells-select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use specified component of cell data array for selection criteria.
+By default, when &lt;j&gt; is not specified, the first component is used. (default: SCALARS)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-and">
+<code class="descname">-and</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-cells-and" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combine current selection criterium to the left of this option
+with the following criteria using a logical AND operator. (default)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-or">
+<code class="descname">-or</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-cells-or" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combine current selection criterium to the left of this option
+with the following criteria using a logical OR operator.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-eq">
+<code class="descname">-eq</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-cells-eq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select cells whose data value is equal the specified value.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-ne">
+<code class="descname">-ne</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-cells-ne" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select cells whose data value is not equal the specified value.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-lt">
+<code class="descname">-lt</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-cells-lt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select cells whose data value is less than the specified value.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-le">
+<code class="descname">-le</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-cells-le" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select cells whose data value is less than or equal the specified value.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-gt">
+<code class="descname">-gt</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-cells-gt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select cells whose data value is greater than the specified value.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-ge">
+<code class="descname">-ge</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-cells-ge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select cells whose data value is greater than or equal the specified value.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-surface">
+<span id="cmdoption-extract-pointset-cells-nosurface"></span><code class="descname">-surface</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nosurface</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-cells-surface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output surface of resulting point set. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-normals">
+<span id="cmdoption-extract-pointset-cells-nonormals"></span><code class="descname">-normals</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nonormals</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-cells-normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recalculate normals of output surface. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-origids">
+<code class="descname">-origids</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-extract-pointset-cells-origids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add original cell IDs as output cell data array of given name. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-v">
+<span id="cmdoption-extract-pointset-cells-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-extract-pointset-cells-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-extract-pointset-cells-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-extract-pointset-cells-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-cells-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-extract-pointset-cells-h">
+<span id="cmdoption-extract-pointset-cells-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-extract-pointset-cells-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="extract-pointset-surface.html" title="extract-pointset-surface"
+             >next</a></li>
+        <li class="right" >
+          <a href="extract-image-volume.html" title="extract-image-volume"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

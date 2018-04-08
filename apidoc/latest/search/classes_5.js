@@ -12,6 +12,7 @@ var searchData=
   ['fiducialregistrationerror',['FiducialRegistrationError',['../classmirtk_1_1FiducialRegistrationError.html',1,'mirtk']]],
   ['findclosestnpoints',['FindClosestNPoints',['../classmirtk_1_1SpectralDecomposition_1_1FindClosestNPoints.html',1,'mirtk::SpectralDecomposition']]],
   ['findclosestpoints',['FindClosestPoints',['../classmirtk_1_1SpectralDecomposition_1_1FindClosestPoints.html',1,'mirtk::SpectralDecomposition']]],
+  ['fixedboundarysurfacemapper',['FixedBoundarySurfaceMapper',['../classmirtk_1_1FixedBoundarySurfaceMapper.html',1,'mirtk']]],
   ['float2x2',['float2x2',['../structmirtk_1_1float2x2.html',1,'mirtk']]],
   ['float3x3',['float3x3',['../structmirtk_1_1float3x3.html',1,'mirtk']]],
   ['float3x4',['float3x4',['../structmirtk_1_1float3x4.html',1,'mirtk']]],
@@ -21,6 +22,7 @@ var searchData=
   ['foreachvoxelifbody',['ForEachVoxelIfBody',['../structmirtk_1_1ForEachVoxelIfBody.html',1,'mirtk']]],
   ['foreground',['Foreground',['../structmirtk_1_1ForEachVoxelDomain_1_1Foreground.html',1,'mirtk::ForEachVoxelDomain']]],
   ['foreground',['Foreground',['../structmirtk_1_1InterpolationDomain_1_1Foreground.html',1,'mirtk::InterpolationDomain']]],
+  ['freeboundarysurfacemapper',['FreeBoundarySurfaceMapper',['../classmirtk_1_1FreeBoundarySurfaceMapper.html',1,'mirtk']]],
   ['freeformtransformation',['FreeFormTransformation',['../classmirtk_1_1FreeFormTransformation.html',1,'mirtk']]],
   ['freeformtransformation3d',['FreeFormTransformation3D',['../classmirtk_1_1FreeFormTransformation3D.html',1,'mirtk']]],
   ['freeformtransformation4d',['FreeFormTransformation4D',['../classmirtk_1_1FreeFormTransformation4D.html',1,'mirtk']]],
@@ -45,7 +47,5 @@ var searchData=
   ['freeformtransformationintegrationrkf45',['FreeFormTransformationIntegrationRKF45',['../classmirtk_1_1FreeFormTransformationIntegrationRKF45.html',1,'mirtk']]],
   ['freeformtransformationintegrationrkh2',['FreeFormTransformationIntegrationRKH2',['../classmirtk_1_1FreeFormTransformationIntegrationRKH2.html',1,'mirtk']]],
   ['freeformtransformationrungekutta',['FreeFormTransformationRungeKutta',['../classmirtk_1_1FreeFormTransformationRungeKutta.html',1,'mirtk']]],
-  ['fundamentalmap',['FundamentalMap',['../classmirtk_1_1FundamentalMap.html',1,'mirtk']]],
-  ['fundamentalvolumeparameterizer',['FundamentalVolumeParameterizer',['../classmirtk_1_1FundamentalVolumeParameterizer.html',1,'mirtk']]],
   ['fuzzycorrespondence',['FuzzyCorrespondence',['../classmirtk_1_1FuzzyCorrespondence.html',1,'mirtk']]]
 ];

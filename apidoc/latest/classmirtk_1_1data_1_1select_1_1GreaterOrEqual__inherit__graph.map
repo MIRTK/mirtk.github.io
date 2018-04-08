@@ -1,0 +1,5 @@
+<map id="mirtk::data::select::GreaterOrEqual" name="mirtk::data::select::GreaterOrEqual">
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1SelectionCriterium.html" title="Base class of data selection criteria. " alt="" coords="4,395,203,493"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1data_1_1Selector.html" title="Base class of data selectors. " alt="" coords="34,249,173,346"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="42,6,165,199"/>
+</map>

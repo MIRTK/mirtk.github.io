@@ -1,0 +1,25 @@
+<map id="mirtk::data::Statistic" name="mirtk::data::Statistic">
+<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1statistic_1_1AbsPercentile.html" title="Absolute value percentile calculation. " alt="" coords="4,443,139,589"/>
+<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1statistic_1_1AverageAbsoluteDifference.html" title="Mean absolute difference/deviation around the specified value. " alt="" coords="164,435,367,597"/>
+<area shape="rect" id="node9" href="$classmirtk_1_1data_1_1statistic_1_1Count.html" title="Count number of masked values (mask != false) " alt="" coords="391,435,525,597"/>
+<area shape="rect" id="node11" href="$classmirtk_1_1data_1_1statistic_1_1Extrema.html" title="Get minimum and maximum values. " alt="" coords="551,427,763,605"/>
+<area shape="rect" id="node13" href="$classmirtk_1_1data_1_1statistic_1_1Max.html" title="Get maximum value. " alt="" coords="788,451,1000,581"/>
+<area shape="rect" id="node15" href="$classmirtk_1_1data_1_1statistic_1_1MaxAbs.html" title="Get maximum absolute value. " alt="" coords="1026,443,1237,589"/>
+<area shape="rect" id="node17" href="$classmirtk_1_1data_1_1statistic_1_1Mean.html" title="Robust mean/average evaluation. " alt="" coords="1263,443,1475,589"/>
+<area shape="rect" id="node19" href="$classmirtk_1_1data_1_1statistic_1_1MeanAbsoluteDifference.html" title="Mean absolute difference/deviation around the mean. " alt="" coords="1500,435,1712,597"/>
+<area shape="rect" id="node21" href="$classmirtk_1_1data_1_1statistic_1_1MeanVar.html" title="Base class of statistics which compute mean, variance, and/or standard deviation. ..." alt="" coords="1738,459,1872,573"/>
+<area shape="rect" id="node29" href="$classmirtk_1_1data_1_1statistic_1_1Median.html" title="Median value (50th percentile) " alt="" coords="1898,443,2109,589"/>
+<area shape="rect" id="node31" href="$classmirtk_1_1data_1_1statistic_1_1MedianAbsoluteDifference.html" title="Mean absolute difference/deviation around the median. " alt="" coords="2135,435,2347,597"/>
+<area shape="rect" id="node33" href="$classmirtk_1_1data_1_1statistic_1_1Min.html" title="Get minimum value. " alt="" coords="2372,451,2584,581"/>
+<area shape="rect" id="node35" href="$classmirtk_1_1data_1_1statistic_1_1MinAbs.html" title="Get minimum absolute value. " alt="" coords="2610,443,2821,589"/>
+<area shape="rect" id="node37" href="$classmirtk_1_1data_1_1statistic_1_1Percentile.html" title="Percentile calculation. " alt="" coords="2847,427,3045,605"/>
+<area shape="rect" id="node45" href="$classmirtk_1_1data_1_1statistic_1_1Range.html" title="Get value range. " alt="" coords="3071,443,3283,589"/>
+<area shape="rect" id="node47" href="$classmirtk_1_1data_1_1statistic_1_1Sum.html" title="Get sum of values. " alt="" coords="3308,451,3520,581"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1Op.html" title="Base class of all data operations. " alt="" coords="1651,6,1759,103"/>
+<area shape="rect" id="node23" href="$classmirtk_1_1data_1_1statistic_1_1NormalDistribution.html" title="Robust evaluation of Gaussian mean and standard deviation. " alt="" coords="1462,654,1673,831"/>
+<area shape="rect" id="node25" href="$classmirtk_1_1data_1_1statistic_1_1StDev.html" title="Robust evaluation of standard deviation. " alt="" coords="1699,670,1911,815"/>
+<area shape="rect" id="node27" href="$classmirtk_1_1data_1_1statistic_1_1Var.html" title="Robust variance evaluation. " alt="" coords="1936,678,2148,807"/>
+<area shape="rect" id="node39" href="$classmirtk_1_1data_1_1statistic_1_1LowerPercentileMean.html" title="Lower percentile mean calculation. " alt="" coords="2684,678,2853,807"/>
+<area shape="rect" id="node41" href="$classmirtk_1_1data_1_1statistic_1_1RobustMean.html" title="Robust mean calculation, ignoring values below and above a certain percentile. " alt="" coords="2879,678,3013,807"/>
+<area shape="rect" id="node43" href="$classmirtk_1_1data_1_1statistic_1_1UpperPercentileMean.html" title="Upper percentile mean calculation. " alt="" coords="3039,678,3208,807"/>
+</map>

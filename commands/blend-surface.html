@@ -1,0 +1,210 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>blend-surface &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="calculate-boundary-map" href="calculate-boundary-map.html" />
+    <link rel="prev" title="bisect-dof" href="bisect-dof.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="calculate-boundary-map.html" title="calculate-boundary-map"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="bisect-dof.html" title="bisect-dof"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="blend-surface">
+<h1>blend-surface<a class="headerlink" href="#blend-surface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">blend</span><span class="o">-</span><span class="n">surface</span> <span class="o">&lt;</span><span class="n">input1</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">input2</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Blends two surface meshes with index based one-to-one point correspondences
+by taking the point coordinates for selected points from the first surface
+mesh and all others from the second surface mesh. Points at the boundary of
+the point selection mask are blended between the two mesh positions of the
+corresponding points. For other points, i.e., those further away from the
+boundary, the blending factor is either 0 or 1.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-blend-surface-arg-input1">
+<code class="descname">input1</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blend-surface-arg-input1" title="Permalink to this definition">¶</a></dt>
+<dd><p>First  input surface.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-blend-surface-arg-input2">
+<code class="descname">input2</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blend-surface-arg-input2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Second input surface.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-blend-surface-arg-output">
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blend-surface-arg-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output surface.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="output-format-options">
+<h2>Output format options<a class="headerlink" href="#output-format-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-blend-surface-ascii">
+<span id="cmdoption-blend-surface-nobinary"></span><code class="descname">-ascii</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nobinary</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blend-surface-ascii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write legacy VTK in ASCII format. (default: input)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-blend-surface-binary">
+<span id="cmdoption-blend-surface-noascii"></span><code class="descname">-binary</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noascii</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blend-surface-binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write legacy VTK in binary format. (default: input)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-blend-surface-compress">
+<span id="cmdoption-blend-surface-nocompress"></span><code class="descname">-compress</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocompress</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blend-surface-compress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write XML VTK file with or without compression. (default: on)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-blend-surface-v">
+<span id="cmdoption-blend-surface-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-blend-surface-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-blend-surface-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-blend-surface-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-blend-surface-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-blend-surface-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-blend-surface-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blend-surface-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-blend-surface-h">
+<span id="cmdoption-blend-surface-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blend-surface-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="calculate-boundary-map.html" title="calculate-boundary-map"
+             >next</a></li>
+        <li class="right" >
+          <a href="bisect-dof.html" title="bisect-dof"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

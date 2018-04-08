@@ -2,8 +2,9 @@ var searchData=
 [
   ['nearestneighborextrapolateimagefunction',['NearestNeighborExtrapolateImageFunction',['../classmirtk_1_1NearestNeighborExtrapolateImageFunction.html',1,'mirtk']]],
   ['nearestneighborinterpolateimagefunction',['NearestNeighborInterpolateImageFunction',['../classmirtk_1_1NearestNeighborInterpolateImageFunction.html',1,'mirtk']]],
+  ['nearoptimalintrinsicsurfacemapper',['NearOptimalIntrinsicSurfaceMapper',['../classmirtk_1_1NearOptimalIntrinsicSurfaceMapper.html',1,'mirtk']]],
+  ['negjacobianconstraint',['NegJacobianConstraint',['../classmirtk_1_1NegJacobianConstraint.html',1,'mirtk']]],
   ['neighborhoodoffsets',['NeighborhoodOffsets',['../classmirtk_1_1NeighborhoodOffsets.html',1,'mirtk']]],
-  ['neighborinfo',['NeighborInfo',['../structmirtk_1_1CurvatureConstraint_1_1NeighborInfo.html',1,'mirtk::CurvatureConstraint']]],
   ['niftiimage',['NiftiImage',['../classmirtk_1_1NiftiImage.html',1,'mirtk']]],
   ['niftiimageinfo',['NiftiImageInfo',['../structmirtk_1_1NiftiImageInfo.html',1,'mirtk']]],
   ['niftiimagereader',['NiftiImageReader',['../classmirtk_1_1NiftiImageReader.html',1,'mirtk']]],
@@ -29,10 +30,13 @@ var searchData=
   ['nonaryforeachvoxelifbody_5f8const',['NonaryForEachVoxelIfBody_8Const',['../structmirtk_1_1NonaryForEachVoxelIfBody__8Const.html',1,'mirtk']]],
   ['nonaryforeachvoxelifbody_5fconst',['NonaryForEachVoxelIfBody_Const',['../structmirtk_1_1NonaryForEachVoxelIfBody__Const.html',1,'mirtk']]],
   ['nonselfintersectionconstraint',['NonSelfIntersectionConstraint',['../classmirtk_1_1NonSelfIntersectionConstraint.html',1,'mirtk']]],
+  ['nonsymmetricweightssurfacemapper',['NonSymmetricWeightsSurfaceMapper',['../classmirtk_1_1NonSymmetricWeightsSurfaceMapper.html',1,'mirtk']]],
   ['nop',['NOP',['../structmirtk_1_1NaryVoxelFunction_1_1NOP.html',1,'mirtk::NaryVoxelFunction']]],
   ['normaldistribution',['NormalDistribution',['../classmirtk_1_1data_1_1statistic_1_1NormalDistribution.html',1,'mirtk::data::statistic']]],
+  ['normalforce',['NormalForce',['../classmirtk_1_1NormalForce.html',1,'mirtk']]],
   ['normalizedgradientfieldsimilarity',['NormalizedGradientFieldSimilarity',['../classmirtk_1_1NormalizedGradientFieldSimilarity.html',1,'mirtk']]],
   ['normalizedintensitycrosscorrelation',['NormalizedIntensityCrossCorrelation',['../classmirtk_1_1NormalizedIntensityCrossCorrelation.html',1,'mirtk']]],
   ['normalizedmutualimageinformation',['NormalizedMutualImageInformation',['../classmirtk_1_1NormalizedMutualImageInformation.html',1,'mirtk']]],
-  ['notbackgroundvalue',['NotBackgroundValue',['../structmirtk_1_1ForEachVoxelDomain_1_1NotBackgroundValue.html',1,'mirtk::ForEachVoxelDomain']]]
+  ['notbackgroundvalue',['NotBackgroundValue',['../structmirtk_1_1ForEachVoxelDomain_1_1NotBackgroundValue.html',1,'mirtk::ForEachVoxelDomain']]],
+  ['notequal',['NotEqual',['../classmirtk_1_1data_1_1select_1_1NotEqual.html',1,'mirtk::data::select']]]
 ];

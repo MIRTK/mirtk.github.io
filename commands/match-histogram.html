@@ -1,0 +1,237 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>match-histogram &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="match-points" href="match-points.html" />
+    <link rel="prev" title="kmeans" href="kmeans.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="match-points.html" title="match-points"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="kmeans.html" title="kmeans"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="match-histogram">
+<h1>match-histogram<a class="headerlink" href="#match-histogram" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">match</span><span class="o">-</span><span class="n">histogram</span> <span class="o">&lt;</span><span class="n">target</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">source</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Matches the intensity distribution of the source image to match the
+distribution of the target image using a piecewise linear function [1].</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">Nyul</span><span class="p">,</span> <span class="n">Udupa</span><span class="p">,</span> <span class="ow">and</span> <span class="n">Zhang</span><span class="p">,</span> <span class="s2">&quot;New variants of a method of MRI scale standardization&quot;</span><span class="p">,</span>
+    <span class="n">IEEE</span> <span class="n">TMI</span> <span class="mi">19</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">pp</span><span class="o">.</span> <span class="mi">143</span><span class="o">-</span><span class="mi">150</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">dx</span><span class="o">.</span><span class="n">doi</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mf">10.1109</span><span class="o">/</span><span class="mf">42.836373</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-match-histogram-arg-target">
+<code class="descname">target</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-histogram-arg-target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reference image.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-match-histogram-arg-source">
+<code class="descname">source</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-histogram-arg-source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input image whose histogram should match the reference histogram.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-match-histogram-arg-output">
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-histogram-arg-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output image with histogram matching the reference histogram.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-match-histogram-Tp">
+<code class="descname">-Tp</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-match-histogram-Tp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-match-histogram-arg-Target">
+<code class="descname">Target</code><code class="descclassname"> padding value. (default: NaN)</code><a class="headerlink" href="#cmdoption-match-histogram-arg-Target" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-match-histogram-Sp">
+<code class="descname">-Sp</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-match-histogram-Sp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-match-histogram-arg-Source">
+<code class="descname">Source</code><code class="descclassname"> padding value. (default: NaN)</code><a class="headerlink" href="#cmdoption-match-histogram-arg-Source" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-match-histogram-dtype">
+<code class="descname">-dtype</code><code class="descclassname"> short|int|float|double</code><a class="headerlink" href="#cmdoption-match-histogram-dtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-match-histogram-arg-Data">
+<code class="descname">Data</code><code class="descclassname"> type of output image. (default: input data type)</code><a class="headerlink" href="#cmdoption-match-histogram-arg-Data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-match-histogram-v">
+<span id="cmdoption-match-histogram-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-match-histogram-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-match-histogram-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-match-histogram-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-match-histogram-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-match-histogram-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-match-histogram-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-histogram-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-match-histogram-h">
+<span id="cmdoption-match-histogram-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-histogram-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="terminal-options">
+<h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-match-histogram-color">
+<span id="cmdoption-match-histogram-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-match-histogram-color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable colored output. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="parallelization-options">
+<h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-match-histogram-threads">
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-match-histogram-threads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="match-points.html" title="match-points"
+             >next</a></li>
+        <li class="right" >
+          <a href="kmeans.html" title="kmeans"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

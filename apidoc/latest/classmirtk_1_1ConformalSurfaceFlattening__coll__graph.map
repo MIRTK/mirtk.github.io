@@ -1,0 +1,5 @@
+<map id="mirtk::ConformalSurfaceFlattening" name="mirtk::ConformalSurfaceFlattening">
+<area shape="rect" id="node2" href="$classmirtk_1_1SphericalSurfaceMapper.html" title="{mirtk::SphericalSurfaceMapper\n||+ NumberOfComponents()\l+ ~SphericalSurfaceMapper()\l# Initialize()\l# operator=()\l# SphericalSurfaceMapper()\l# SphericalSurfaceMapper()\l}" alt="" coords="14,571,217,733"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1SurfaceMapper.html" title="{mirtk::SurfaceMapper\n||+ Run()\l+ ~SurfaceMapper()\l# ComputeMap()\l# Finalize()\l# GetEdgeNeighborPoints()\l# GetPoint()\l# Initialize()\l# NumberOfInteriorPoints()\l# NumberOfPoints()\l# operator=()\l# Point()\l# SurfaceMapper()\l# SurfaceMapper()\l}" alt="" coords="23,249,208,522"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="54,6,177,199"/>
+</map>

@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,34 +24,34 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../index.html" />
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="calculate-logarithmic-map" href="calculate-logarithmic-map.html" />
-    <link rel="prev" title="calculate-exponential-map" href="calculate-exponential-map.html" />
+    <link rel="prev" title="calculate-gradients" href="calculate-gradients.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="calculate-logarithmic-map.html" title="calculate-logarithmic-map"
              accesskey="N">next</a></li>
         <li class="right" >
-          <a href="calculate-exponential-map.html" title="calculate-exponential-map"
+          <a href="calculate-gradients.html" title="calculate-gradients"
              accesskey="P">previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -59,9 +59,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
@@ -87,14 +84,14 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="calculate-lie-bracket">
 <h1>calculate-lie-bracket<a class="headerlink" href="#calculate-lie-bracket" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>calculate-lie-bracket &lt;x&gt; &lt;y&gt; &lt;z&gt;                                        [options]
-calculate-lie-bracket &lt;xx&gt; &lt;xy&gt; [&lt;xz&gt;] &lt;yx&gt; &lt;yy&gt; [&lt;yz&gt;] &lt;zx&gt; &lt;zy&gt; [&lt;zz&gt;] [options]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">calculate</span><span class="o">-</span><span class="n">lie</span><span class="o">-</span><span class="n">bracket</span> <span class="o">&lt;</span><span class="n">x</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">y</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">z</span><span class="o">&gt;</span>                                        <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">calculate</span><span class="o">-</span><span class="n">lie</span><span class="o">-</span><span class="n">bracket</span> <span class="o">&lt;</span><span class="n">xx</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">xy</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">xz</span><span class="o">&gt;</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">yx</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">yy</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">yz</span><span class="o">&gt;</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">zx</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">zy</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">zz</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -106,13 +103,13 @@ calculate-lie-bracket &lt;xx&gt; &lt;xy&gt; [&lt;xz&gt;] &lt;yx&gt; &lt;yy&gt; [
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-lie-bracket-jac">
-<tt class="descname">-jac</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-lie-bracket-jac" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-jac</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-lie-bracket-jac" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use Jacobian definition of the Lie bracket. (default)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-lie-bracket-dif">
-<tt class="descname">-dif</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-lie-bracket-dif" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dif</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-lie-bracket-dif" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use difference of compositions: <span class="math">\(z = x(y) - y(x)\)</span>.</p>
 </dd></dl>
 
@@ -121,31 +118,31 @@ calculate-lie-bracket &lt;xx&gt; &lt;xy&gt; [&lt;xz&gt;] &lt;yx&gt; &lt;yy&gt; [
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-lie-bracket-v">
-<span id="cmdoption-calculate-lie-bracket-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-calculate-lie-bracket-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-lie-bracket-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-calculate-lie-bracket-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-lie-bracket-debug">
-<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-calculate-lie-bracket-debug" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-calculate-lie-bracket-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-lie-bracket-version">
-<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-calculate-lie-bracket-version" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-calculate-lie-bracket-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-lie-bracket-revision">
-<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-lie-bracket-revision" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-lie-bracket-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-lie-bracket-h">
-<span id="cmdoption-calculate-lie-bracket-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-lie-bracket-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-lie-bracket-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-lie-bracket-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -154,7 +151,7 @@ calculate-lie-bracket &lt;xx&gt; &lt;xy&gt; [&lt;xz&gt;] &lt;yx&gt; &lt;yy&gt; [
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-lie-bracket-color">
-<span id="cmdoption-calculate-lie-bracket-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-lie-bracket-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-lie-bracket-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-lie-bracket-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -163,7 +160,7 @@ calculate-lie-bracket &lt;xx&gt; &lt;xy&gt; [&lt;xz&gt;] &lt;yx&gt; &lt;yy&gt; [
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-lie-bracket-threads">
-<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-calculate-lie-bracket-threads" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-calculate-lie-bracket-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -176,22 +173,22 @@ calculate-lie-bracket &lt;xx&gt; &lt;xy&gt; [&lt;xz&gt;] &lt;yx&gt; &lt;yy&gt; [
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="calculate-logarithmic-map.html" title="calculate-logarithmic-map"
              >next</a></li>
         <li class="right" >
-          <a href="calculate-exponential-map.html" title="calculate-exponential-map"
+          <a href="calculate-gradients.html" title="calculate-gradients"
              >previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

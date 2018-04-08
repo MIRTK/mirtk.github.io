@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,34 +24,34 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../index.html" />
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="convert-image" href="convert-image.html" />
-    <link rel="prev" title="concatenate-images" href="concatenate-images.html" />
+    <link rel="prev" title="construct-atlas" href="construct-atlas.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="convert-image.html" title="convert-image"
              accesskey="N">next</a></li>
         <li class="right" >
-          <a href="concatenate-images.html" title="concatenate-images"
+          <a href="construct-atlas.html" title="construct-atlas"
              accesskey="P">previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -59,9 +59,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
@@ -87,17 +84,17 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="convert-dof">
 <h1>convert-dof<a class="headerlink" href="#convert-dof" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>convert-dof &lt;input&gt; &lt;output&gt; [options]
-convert-dof &lt;input&gt; &lt;output&gt; -input-format  image [options] (3D+3 input  image)
-convert-dof &lt;input&gt; &lt;output&gt; -output-format image [options] (3D+3 output image)
-convert-dof &lt;dx&gt; &lt;dy&gt; &lt;dz&gt; &lt;output&gt; -input-format  image [options] (3x3D input  image)
-convert-dof &lt;input&gt; &lt;dx&gt; &lt;dy&gt; &lt;dz&gt;  -output-format image [options] (3x3D output image)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">convert</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">convert</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="nb">format</span>  <span class="n">image</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="p">(</span><span class="mi">3</span><span class="n">D</span><span class="o">+</span><span class="mi">3</span> <span class="nb">input</span>  <span class="n">image</span><span class="p">)</span>
+<span class="n">convert</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">output</span><span class="o">-</span><span class="nb">format</span> <span class="n">image</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="p">(</span><span class="mi">3</span><span class="n">D</span><span class="o">+</span><span class="mi">3</span> <span class="n">output</span> <span class="n">image</span><span class="p">)</span>
+<span class="n">convert</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="n">dx</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">dy</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">dz</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="nb">format</span>  <span class="n">image</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="p">(</span><span class="mi">3</span><span class="n">x3D</span> <span class="nb">input</span>  <span class="n">image</span><span class="p">)</span>
+<span class="n">convert</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">dx</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">dy</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">dz</span><span class="o">&gt;</span>  <span class="o">-</span><span class="n">output</span><span class="o">-</span><span class="nb">format</span> <span class="n">image</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span> <span class="p">(</span><span class="mi">3</span><span class="n">x3D</span> <span class="n">output</span> <span class="n">image</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -118,6 +115,18 @@ convert-dof &lt;input&gt; &lt;dx&gt; &lt;dy&gt; &lt;dz&gt;  -output-format image
 </tr>
 <tr class="row-odd"><td>disp_voxel</td>
 <td>Dense displacement field image with target space displacement vectors [voxel].</td>
+</tr>
+<tr class="row-even"><td>disp_itk|itk_disp</td>
+<td>Dense displacement field image in ITK format [mm].</td>
+</tr>
+<tr class="row-odd"><td>svf_world|svf</td>
+<td>Dense velocity field image with world space vectors [mm]. Requires input SVFFD.</td>
+</tr>
+<tr class="row-even"><td>svf_voxel</td>
+<td>Dense velocity field image with target space vectors [voxel]. Requires input SVFFD.</td>
+</tr>
+<tr class="row-odd"><td>svf_itk|itk_svf</td>
+<td>Dense velocity field image in ITK format (e.g., LogDemons) [mm]</td>
 </tr>
 <tr class="row-even"><td>mirtk</td>
 <td>MIRTK transformation file format.</td>
@@ -203,6 +212,12 @@ convert-dof &lt;input&gt; &lt;dx&gt; &lt;dy&gt; &lt;dz&gt;  -output-format image
 <tr class="row-odd"><td>f3d_spline_vel_grid</td>
 <td>Nifty Reg reg_f3d output control point velocity field.</td>
 </tr>
+<tr class="row-even"><td>elastix|elastix_ffd</td>
+<td>Elastix BSplineTransform parameters text file.</td>
+</tr>
+<tr class="row-odd"><td>dramms</td>
+<td>DRAMMS deformation field.</td>
+</tr>
 <tr class="row-even"><td>star_ccm</td>
 <td>Output file suitable for import in STAR CCM+.</td>
 </tr>
@@ -225,13 +240,13 @@ convert-dof &lt;input&gt; &lt;dx&gt; &lt;dy&gt; &lt;dz&gt;  -output-format image
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-convert-dof-arg-input">
-<tt class="descname">input</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-convert-dof-arg-input" title="Permalink to this definition">¶</a></dt>
+<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-convert-dof-arg-input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input  transformation file.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-arg-output">
-<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-convert-dof-arg-output" title="Permalink to this definition">¶</a></dt>
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-convert-dof-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output transformation file.</p>
 </dd></dl>
 
@@ -240,25 +255,25 @@ convert-dof &lt;input&gt; &lt;dx&gt; &lt;dy&gt; &lt;dz&gt;  -output-format image
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-convert-dof-input-format">
-<tt class="descname">-input-format</tt><tt class="descclassname">  &lt;format&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-input-format" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-input-format</code><code class="descclassname">  &lt;format&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-input-format" title="Permalink to this definition">¶</a></dt>
 <dd><p>Format of input file. (default: unknown)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-output-format">
-<tt class="descname">-output-format</tt><tt class="descclassname"> &lt;format&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-output-format" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-output-format</code><code class="descclassname"> &lt;format&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-output-format" title="Permalink to this definition">¶</a></dt>
 <dd><p>Format of output file. (default: .nii[.gz] -&gt; disp_world, .dof[.gz] -&gt; mirtk)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-format">
-<tt class="descname">-format</tt><tt class="descclassname"> &lt;format&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-format" title="Permalink to this definition">¶</a></dt>
-<dd><p>Short for <a class="reference internal" href="#cmdoption-convert-dof-output-format"><em class="xref std std-option">-output-format</em></a>.</p>
+<code class="descname">-format</code><code class="descclassname"> &lt;format&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Short for <a class="reference internal" href="#cmdoption-convert-dof-output-format"><code class="xref std std-option docutils literal"><span class="pre">-output-format</span></code></a>.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-dofin">
-<tt class="descname">-dofin</tt><tt class="descclassname"> &lt;fname&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-dofin" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dofin</code><code class="descclassname"> &lt;fname&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-dofin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Affine transformation component in MIRTK format which
 shall be removed from Nifty Reg&#8217;s FFD such that the
 resulting transformation is a MIRTK MFFD consisting
@@ -268,7 +283,7 @@ component of the input FFD. (default: none)</p>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-target">
-<tt class="descname">-target</tt><tt class="descclassname"> &lt;fname&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-target" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-target</code><code class="descclassname"> &lt;fname&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Target image. Required for from/to FSL format conversion.
 Also required when converting linear transformations to displacment
 fields or (M)FFD transformation types. (default: none)</p>
@@ -276,94 +291,94 @@ fields or (M)FFD transformation types. (default: none)</p>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-source">
-<tt class="descname">-source</tt><tt class="descclassname"> &lt;fname&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-source" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-source</code><code class="descclassname"> &lt;fname&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-source" title="Permalink to this definition">¶</a></dt>
 <dd><p>Source image. Required for from/to FSL format conversion. (default: none)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-points">
-<tt class="descname">-points</tt><tt class="descclassname"> &lt;fname&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-points" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-points</code><code class="descclassname"> &lt;fname&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input point set. Used for CSV/TSV and STAR-CCM+ output of transformed
 points. By default, all target or FFD lattice points are transformed.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-Tt">
-<tt class="descname">-Tt</tt><tt class="descclassname"> &lt;time&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-Tt" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-Tt</code><code class="descclassname"> &lt;time&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-Tt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Time point of target image. Used by 3D+t, TD, and SV FFDs.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-Ts">
-<tt class="descname">-Ts</tt><tt class="descclassname"> &lt;time&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-Ts" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-Ts</code><code class="descclassname"> &lt;time&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-Ts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Time point of source image. Used by 3D+t, TD, and SV FFDs.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-ds">
-<tt class="descname">-ds</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-ds" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-ds</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-ds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output control point spacing. (default: input spacing)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-dx">
-<tt class="descname">-dx</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-dx" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dx</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-dx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output control point spacing in x dimension. (default: input spacing)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-dy">
-<tt class="descname">-dy</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-dy" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dy</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-dy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output control point spacing in y dimension. (default: input spacing)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-dz">
-<tt class="descname">-dz</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-dz" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dz</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-dz" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output control point spacing in z dimension. (default: input spacing)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-dt">
-<tt class="descname">-dt</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-dt" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-dt</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-dt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Temporal sampling used for CSV/TSV and STAR-CCM+ output. (default: input spacing)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-t1">
-<span id="cmdoption-convert-dof-tmin"></span><tt class="descname">-t1</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-tmin</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-t1" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-convert-dof-tmin"></span><code class="descname">-t1</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-tmin</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-t1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lower time interval limit for output of CSV/TSV and STAR-CCM+ table. (default: -inf)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-t2">
-<span id="cmdoption-convert-dof-tmax"></span><tt class="descname">-t2</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-tmax</tt><tt class="descclassname"> &lt;value&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-t2" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-convert-dof-tmax"></span><code class="descname">-t2</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-tmax</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-t2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Upper time interval limit for output of CSV/TSV and STAR-CCM+ table. (default: +inf)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-scaling-steps">
-<tt class="descname">-scaling-steps</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-scaling-steps" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-scaling-steps</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-scaling-steps" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of scaling and squaring steps.
 In case of f3d_*_vel_*, use nifti1.intent_p2 by default.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-xyz_units">
-<tt class="descname">-xyz_units</tt><tt class="descclassname"> (m|mm|mu)</tt><a class="headerlink" href="#cmdoption-convert-dof-xyz_units" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-xyz_units</code><code class="descclassname"> (m|mm|mu)</code><a class="headerlink" href="#cmdoption-convert-dof-xyz_units" title="Permalink to this definition">¶</a></dt>
 <dd><p>Spatial units of original target NIfTI header
 if ignored by Nifty Reg&#8217;s reg_f3d. (default: mm)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-delimiter">
-<tt class="descname">-delimiter</tt><tt class="descclassname"> &lt;string&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-delimiter" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-delimiter</code><code class="descclassname"> &lt;string&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-delimiter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delimiting character sequence to use for CSV/TSV or STAR-CCM+ Table output.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-precision">
-<tt class="descname">-precision</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption-convert-dof-precision" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-precision</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-convert-dof-precision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of decimal digits for ASCII output of floating point values. (default: 5)</p>
 </dd></dl>
 
@@ -372,31 +387,31 @@ if ignored by Nifty Reg&#8217;s reg_f3d. (default: mm)</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-convert-dof-v">
-<span id="cmdoption-convert-dof-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-convert-dof-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-convert-dof-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-convert-dof-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-debug">
-<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-convert-dof-debug" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-convert-dof-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-version">
-<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-convert-dof-version" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-convert-dof-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-revision">
-<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-convert-dof-revision" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-convert-dof-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-convert-dof-h">
-<span id="cmdoption-convert-dof-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-convert-dof-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-convert-dof-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-convert-dof-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -409,22 +424,22 @@ if ignored by Nifty Reg&#8217;s reg_f3d. (default: mm)</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="convert-image.html" title="convert-image"
              >next</a></li>
         <li class="right" >
-          <a href="concatenate-images.html" title="concatenate-images"
+          <a href="construct-atlas.html" title="construct-atlas"
              >previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

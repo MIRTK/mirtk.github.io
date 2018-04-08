@@ -1,0 +1,278 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>recon-neonatal-cortex &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="reflect-image" href="reflect-image.html" />
+    <link rel="prev" title="project-onto-surface" href="project-onto-surface.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reflect-image.html" title="reflect-image"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="project-onto-surface.html" title="project-onto-surface"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="recon-neonatal-cortex">
+<h1>recon-neonatal-cortex<a class="headerlink" href="#recon-neonatal-cortex" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">recon</span><span class="o">-</span><span class="n">neonatal</span><span class="o">-</span><span class="n">cortex</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">r</span> <span class="n">WORK_DIR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">c</span> <span class="n">CONFIG</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">section</span> <span class="n">SECTION</span><span class="p">]</span>
+<span class="o">-</span><span class="n">s</span> <span class="n">SESSIONS</span> <span class="p">[</span><span class="n">SESSIONS</span> <span class="o">...</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">b</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">w</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">cerebrum</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">p</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">ensure</span><span class="o">-</span><span class="n">pial</span><span class="o">-</span><span class="ow">is</span><span class="o">-</span><span class="n">outside</span><span class="o">-</span><span class="n">white</span><span class="o">-</span><span class="n">surface</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">join</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">internal</span><span class="o">-</span><span class="n">mesh</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">join</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">brainstem</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">cerebellum</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">nocut</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">nocheck</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">keep</span><span class="o">-</span><span class="n">t1w</span><span class="o">-</span><span class="n">image</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">keep</span><span class="o">-</span><span class="n">t2w</span><span class="o">-</span><span class="n">image</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">keep</span><span class="o">-</span><span class="n">regions</span><span class="o">-</span><span class="n">mask</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">v</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">THREADS</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">q</span> <span class="n">QUEUE</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Reconstruct neonatal cortex from MR brain scan and Draw-EM segmentation</p>
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-h">
+<span id="cmdoption-recon-neonatal-cortex--help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-r">
+<span id="cmdoption-recon-neonatal-cortex-root"></span><span id="cmdoption-recon-neonatal-cortex--root"></span><span id="cmdoption-recon-neonatal-cortex-work-dir"></span><span id="cmdoption-recon-neonatal-cortex--work-dir"></span><code class="descname">-r</code><code class="descclassname"> WORK_DIR</code><code class="descclassname">, </code><code class="descname">-root</code><code class="descclassname"> WORK_DIR</code><code class="descclassname">, </code><code class="descname">--root</code><code class="descclassname"> WORK_DIR</code><code class="descclassname">, </code><code class="descname">-work-dir</code><code class="descclassname"> WORK_DIR</code><code class="descclassname">, </code><code class="descname">--work-dir</code><code class="descclassname"> WORK_DIR</code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Root working directory</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-c">
+<span id="cmdoption-recon-neonatal-cortex-config"></span><span id="cmdoption-recon-neonatal-cortex--config"></span><code class="descname">-c</code><code class="descclassname"> CONFIG</code><code class="descclassname">, </code><code class="descname">-config</code><code class="descclassname"> CONFIG</code><code class="descclassname">, </code><code class="descname">--config</code><code class="descclassname"> CONFIG</code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional custom configuration file</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-section">
+<span id="cmdoption-recon-neonatal-cortex--section"></span><code class="descname">-section</code><code class="descclassname"> SECTION</code><code class="descclassname">, </code><code class="descname">--section</code><code class="descclassname"> SECTION</code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration section name</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-s">
+<span id="cmdoption-recon-neonatal-cortex-sessions"></span><span id="cmdoption-recon-neonatal-cortex--sessions"></span><code class="descname">-s</code><code class="descclassname"> SESSIONS [SESSIONS ...]</code><code class="descclassname">, </code><code class="descname">-sessions</code><code class="descclassname"> SESSIONS [SESSIONS ...]</code><code class="descclassname">, </code><code class="descname">--sessions</code><code class="descclassname"> SESSIONS [SESSIONS ...]</code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Either list of &#8216;{SubjectId}[-{SessionId}]&#8217; strings or
+path of CSV file</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-b">
+<span id="cmdoption-recon-neonatal-cortex-brain"></span><span id="cmdoption-recon-neonatal-cortex--brain"></span><code class="descname">-b</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-brain</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--brain</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconstruct surface of brain mask</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-w">
+<span id="cmdoption-recon-neonatal-cortex-white"></span><span id="cmdoption-recon-neonatal-cortex--white"></span><code class="descname">-w</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-white</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--white</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-w" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconstruct white surface</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-cerebrum">
+<span id="cmdoption-recon-neonatal-cortex--cerebrum"></span><code class="descname">-cerebrum</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--cerebrum</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-cerebrum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconstruct/keep initial white surface</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-p">
+<span id="cmdoption-recon-neonatal-cortex-pial"></span><span id="cmdoption-recon-neonatal-cortex--pial"></span><code class="descname">-p</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-pial</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--pial</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconstruct pial surface</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-ensure-pial-is-outside-white-surface">
+<span id="cmdoption-recon-neonatal-cortex--ensure-pial-is-outside-white-surface"></span><code class="descname">-ensure-pial-is-outside-white-surface</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--ensure-pial-is-outside-white-surface</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-ensure-pial-is-outside-white-surface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensure that pial surface is strictly outside the white
+surface</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-join-with-internal-mesh">
+<span id="cmdoption-recon-neonatal-cortex--join-with-internal-mesh"></span><code class="descname">-join-with-internal-mesh</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--join-with-internal-mesh</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-join-with-internal-mesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Join final mesh with internal (hemispheres) dividier
+mesh</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-join-with-brainstem-and-cerebellum">
+<span id="cmdoption-recon-neonatal-cortex--join-with-brainstem-and-cerebellum"></span><code class="descname">-join-with-brainstem-and-cerebellum</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--join-with-brainstem-and-cerebellum</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-join-with-brainstem-and-cerebellum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge cerebrum surface mesh with brainstem and
+cerebellum surface mesh</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-nocut">
+<span id="cmdoption-recon-neonatal-cortex-nosplit"></span><span id="cmdoption-recon-neonatal-cortex--nocut"></span><span id="cmdoption-recon-neonatal-cortex--nosplit"></span><code class="descname">-nocut</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nosplit</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--nocut</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--nosplit</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-nocut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save individual (closed) genus-0 surfaces for each
+hemisphere</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-nocheck">
+<span id="cmdoption-recon-neonatal-cortex--nocheck"></span><code class="descname">-nocheck</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--nocheck</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-nocheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable consistency and self-intersection checks of
+(intermediate) surface meshes</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-keep-t1w-image">
+<span id="cmdoption-recon-neonatal-cortex--keep-t1w-image"></span><code class="descname">-keep-t1w-image</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--keep-t1w-image</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-keep-t1w-image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep resampled T1-weighted image even when no -debug
+option given</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-keep-t2w-image">
+<span id="cmdoption-recon-neonatal-cortex--keep-t2w-image"></span><code class="descname">-keep-t2w-image</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--keep-t2w-image</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-keep-t2w-image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep resampled T2-weighted image even when no -debug
+option given</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-keep-regions-mask">
+<span id="cmdoption-recon-neonatal-cortex--keep-regions-mask"></span><code class="descname">-keep-regions-mask</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--keep-regions-mask</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-keep-regions-mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep regions label image even when no -debug option
+given</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-f">
+<span id="cmdoption-recon-neonatal-cortex-force"></span><span id="cmdoption-recon-neonatal-cortex--force"></span><code class="descname">-f</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-force</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--force</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite existing output files</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-v">
+<span id="cmdoption-recon-neonatal-cortex-verbose"></span><span id="cmdoption-recon-neonatal-cortex--verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--verbose</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase verbosity of output messages</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-d">
+<span id="cmdoption-recon-neonatal-cortex-debug"></span><span id="cmdoption-recon-neonatal-cortex--debug"></span><code class="descname">-d</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-debug</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--debug</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep/write debug output in temp_dir</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-t">
+<span id="cmdoption-recon-neonatal-cortex-threads"></span><span id="cmdoption-recon-neonatal-cortex--threads"></span><code class="descname">-t</code><code class="descclassname"> THREADS</code><code class="descclassname">, </code><code class="descname">-threads</code><code class="descclassname"> THREADS</code><code class="descclassname">, </code><code class="descname">--threads</code><code class="descclassname"> THREADS</code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-t" title="Permalink to this definition">¶</a></dt>
+<dd><p>No. of cores to use for multi-threading</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-recon-neonatal-cortex-q">
+<span id="cmdoption-recon-neonatal-cortex-queue"></span><span id="cmdoption-recon-neonatal-cortex--queue"></span><code class="descname">-q</code><code class="descclassname"> QUEUE</code><code class="descclassname">, </code><code class="descname">-queue</code><code class="descclassname"> QUEUE</code><code class="descclassname">, </code><code class="descname">--queue</code><code class="descclassname"> QUEUE</code><a class="headerlink" href="#cmdoption-recon-neonatal-cortex-q" title="Permalink to this definition">¶</a></dt>
+<dd><p>SLURM partition/queue</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reflect-image.html" title="reflect-image"
+             >next</a></li>
+        <li class="right" >
+          <a href="project-onto-surface.html" title="project-onto-surface"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,269 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>average-measure &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="average-overlap" href="average-overlap.html" />
+    <link rel="prev" title="average-images" href="average-images.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="average-overlap.html" title="average-overlap"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="average-images.html" title="average-images"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="average-measure">
+<h1>average-measure<a class="headerlink" href="#average-measure" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">average</span><span class="o">-</span><span class="n">measure</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">n</span> <span class="n">NAME</span> <span class="p">[</span><span class="n">NAME</span> <span class="o">...</span><span class="p">]]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">roi</span><span class="o">-</span><span class="n">name</span> <span class="n">ROI_NAME</span> <span class="p">[</span><span class="n">ROI_NAME</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">-</span><span class="n">size</span> <span class="n">SIZE_TABLE</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">o</span> <span class="n">MEAN_TABLE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">sdev</span> <span class="n">SDEV_TABLE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">var</span> <span class="n">VAR_TABLE</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">se</span> <span class="n">SE_TABLE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">u</span><span class="p">]</span> <span class="o">-</span><span class="n">r</span> <span class="n">ROI</span> <span class="p">[</span><span class="n">ROI</span> <span class="o">...</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span> <span class="n">DELIM</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">s</span> <span class="n">SCALE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">digits</span> <span class="n">DIGITS</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">preload</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">transpose</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">header</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="nb">id</span> <span class="n">ID_NAME</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">noid</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span><span class="p">]</span>
+<span class="n">measure</span> <span class="p">[</span><span class="n">measure</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Average voxel-wise measure within each region of interest (ROI).</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-average-measure-arg-measure">
+<code class="descname">measure</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-measure-arg-measure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input image(s) of voxel-wise scalar measure.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-average-measure-h">
+<span id="cmdoption-average-measure--help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-measure-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-n">
+<span id="cmdoption-average-measure-name"></span><span id="cmdoption-average-measure-names"></span><span id="cmdoption-average-measure--name"></span><span id="cmdoption-average-measure--names"></span><code class="descname">-n</code><code class="descclassname"> NAME [NAME ...]</code><code class="descclassname">, </code><code class="descname">-name</code><code class="descclassname"> NAME [NAME ...]</code><code class="descclassname">, </code><code class="descname">-names</code><code class="descclassname"> NAME [NAME ...]</code><code class="descclassname">, </code><code class="descname">--name</code><code class="descclassname"> NAME [NAME ...]</code><code class="descclassname">, </code><code class="descname">--names</code><code class="descclassname"> NAME [NAME ...]</code><a class="headerlink" href="#cmdoption-average-measure-n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Names of input measures. Input file name excluding
+file name extension is used by default.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-roi-name">
+<span id="cmdoption-average-measure-roi-names"></span><span id="cmdoption-average-measure--roi-name"></span><span id="cmdoption-average-measure--roi-names"></span><code class="descname">-roi-name</code><code class="descclassname"> ROI_NAME [ROI_NAME ...]</code><code class="descclassname">, </code><code class="descname">-roi-names</code><code class="descclassname"> ROI_NAME [ROI_NAME ...]</code><code class="descclassname">, </code><code class="descname">--roi-name</code><code class="descclassname"> ROI_NAME [ROI_NAME ...]</code><code class="descclassname">, </code><code class="descname">--roi-names</code><code class="descclassname"> ROI_NAME [ROI_NAME ...]</code><a class="headerlink" href="#cmdoption-average-measure-roi-name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Names of ROIs. By default, one-based ROI IDs are
+generated.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-size">
+<span id="cmdoption-average-measure-roi-size"></span><span id="cmdoption-average-measure--size"></span><span id="cmdoption-average-measure--roi-size"></span><code class="descname">-size</code><code class="descclassname"> SIZE_TABLE</code><code class="descclassname">, </code><code class="descname">-roi-size</code><code class="descclassname"> SIZE_TABLE</code><code class="descclassname">, </code><code class="descname">--size</code><code class="descclassname"> SIZE_TABLE</code><code class="descclassname">, </code><code class="descname">--roi-size</code><code class="descclassname"> SIZE_TABLE</code><a class="headerlink" href="#cmdoption-average-measure-size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write sizes (sum of weights) of ROIs to specified
+file.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-o">
+<span id="cmdoption-average-measure-mean"></span><span id="cmdoption-average-measure-output"></span><span id="cmdoption-average-measure-table"></span><span id="cmdoption-average-measure--mean"></span><span id="cmdoption-average-measure--output"></span><span id="cmdoption-average-measure--table"></span><code class="descname">-o</code><code class="descclassname"> MEAN_TABLE</code><code class="descclassname">, </code><code class="descname">-mean</code><code class="descclassname"> MEAN_TABLE</code><code class="descclassname">, </code><code class="descname">-output</code><code class="descclassname"> MEAN_TABLE</code><code class="descclassname">, </code><code class="descname">-table</code><code class="descclassname"> MEAN_TABLE</code><code class="descclassname">, </code><code class="descname">--mean</code><code class="descclassname"> MEAN_TABLE</code><code class="descclassname">, </code><code class="descname">--output</code><code class="descclassname"> MEAN_TABLE</code><code class="descclassname">, </code><code class="descname">--table</code><code class="descclassname"> MEAN_TABLE</code><a class="headerlink" href="#cmdoption-average-measure-o" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write mean values to specified table</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-sdev">
+<span id="cmdoption-average-measure-stdev"></span><span id="cmdoption-average-measure-stddev"></span><span id="cmdoption-average-measure-standard-deviation"></span><span id="cmdoption-average-measure--sdev"></span><span id="cmdoption-average-measure--stdev"></span><span id="cmdoption-average-measure--stddev"></span><span id="cmdoption-average-measure--standard-deviation"></span><code class="descname">-sdev</code><code class="descclassname"> SDEV_TABLE</code><code class="descclassname">, </code><code class="descname">-stdev</code><code class="descclassname"> SDEV_TABLE</code><code class="descclassname">, </code><code class="descname">-stddev</code><code class="descclassname"> SDEV_TABLE</code><code class="descclassname">, </code><code class="descname">-standard-deviation</code><code class="descclassname"> SDEV_TABLE</code><code class="descclassname">, </code><code class="descname">--sdev</code><code class="descclassname"> SDEV_TABLE</code><code class="descclassname">, </code><code class="descname">--stdev</code><code class="descclassname"> SDEV_TABLE</code><code class="descclassname">, </code><code class="descname">--stddev</code><code class="descclassname"> SDEV_TABLE</code><code class="descclassname">, </code><code class="descname">--standard-deviation</code><code class="descclassname"> SDEV_TABLE</code><a class="headerlink" href="#cmdoption-average-measure-sdev" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write standard deviation of weighted measurements to
+specified file.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-var">
+<span id="cmdoption-average-measure-variance"></span><span id="cmdoption-average-measure--var"></span><span id="cmdoption-average-measure--variance"></span><code class="descname">-var</code><code class="descclassname"> VAR_TABLE</code><code class="descclassname">, </code><code class="descname">-variance</code><code class="descclassname"> VAR_TABLE</code><code class="descclassname">, </code><code class="descname">--var</code><code class="descclassname"> VAR_TABLE</code><code class="descclassname">, </code><code class="descname">--variance</code><code class="descclassname"> VAR_TABLE</code><a class="headerlink" href="#cmdoption-average-measure-var" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write variance of weighted measurements to specified
+file.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-se">
+<span id="cmdoption-average-measure-standard-error"></span><span id="cmdoption-average-measure--se"></span><span id="cmdoption-average-measure--standard-error"></span><code class="descname">-se</code><code class="descclassname"> SE_TABLE</code><code class="descclassname">, </code><code class="descname">-standard-error</code><code class="descclassname"> SE_TABLE</code><code class="descclassname">, </code><code class="descname">--se</code><code class="descclassname"> SE_TABLE</code><code class="descclassname">, </code><code class="descname">--standard-error</code><code class="descclassname"> SE_TABLE</code><a class="headerlink" href="#cmdoption-average-measure-se" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write standard error of weighted mean to specified
+file.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-u">
+<span id="cmdoption-average-measure-unbiased"></span><span id="cmdoption-average-measure--unbiased"></span><code class="descname">-u</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-unbiased</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--unbiased</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-measure-u" title="Permalink to this definition">¶</a></dt>
+<dd><p>When computing second moments, apply Bessel&#8217;s
+correction.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-r">
+<span id="cmdoption-average-measure-region"></span><span id="cmdoption-average-measure-roi"></span><span id="cmdoption-average-measure-roi-path"></span><span id="cmdoption-average-measure--region"></span><span id="cmdoption-average-measure--roi"></span><span id="cmdoption-average-measure--roi-path"></span><code class="descname">-r</code><code class="descclassname"> ROI [ROI ...]</code><code class="descclassname">, </code><code class="descname">-region</code><code class="descclassname"> ROI [ROI ...]</code><code class="descclassname">, </code><code class="descname">-roi</code><code class="descclassname"> ROI [ROI ...]</code><code class="descclassname">, </code><code class="descname">-roi-path</code><code class="descclassname"> ROI [ROI ...]</code><code class="descclassname">, </code><code class="descname">--region</code><code class="descclassname"> ROI [ROI ...]</code><code class="descclassname">, </code><code class="descname">--roi</code><code class="descclassname"> ROI [ROI ...]</code><code class="descclassname">, </code><code class="descname">--roi-path</code><code class="descclassname"> ROI [ROI ...]</code><a class="headerlink" href="#cmdoption-average-measure-r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Binary mask or segmentation probability map of ROI(s).</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-d">
+<span id="cmdoption-average-measure-delim"></span><span id="cmdoption-average-measure-delimiter"></span><span id="cmdoption-average-measure--delim"></span><span id="cmdoption-average-measure--delimiter"></span><code class="descname">-d</code><code class="descclassname"> DELIM</code><code class="descclassname">, </code><code class="descname">-delim</code><code class="descclassname"> DELIM</code><code class="descclassname">, </code><code class="descname">-delimiter</code><code class="descclassname"> DELIM</code><code class="descclassname">, </code><code class="descname">--delim</code><code class="descclassname"> DELIM</code><code class="descclassname">, </code><code class="descname">--delimiter</code><code class="descclassname"> DELIM</code><a class="headerlink" href="#cmdoption-average-measure-d" title="Permalink to this definition">¶</a></dt>
+<dd><p>String/character used to delimit table entries.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-s">
+<span id="cmdoption-average-measure-scale"></span><span id="cmdoption-average-measure--scale"></span><code class="descname">-s</code><code class="descclassname"> SCALE</code><code class="descclassname">, </code><code class="descname">-scale</code><code class="descclassname"> SCALE</code><code class="descclassname">, </code><code class="descname">--scale</code><code class="descclassname"> SCALE</code><a class="headerlink" href="#cmdoption-average-measure-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Common scaling factor by which to multiply input
+values.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-digits">
+<span id="cmdoption-average-measure-precision"></span><span id="cmdoption-average-measure--digits"></span><span id="cmdoption-average-measure--precision"></span><code class="descname">-digits</code><code class="descclassname"> DIGITS</code><code class="descclassname">, </code><code class="descname">-precision</code><code class="descclassname"> DIGITS</code><code class="descclassname">, </code><code class="descname">--digits</code><code class="descclassname"> DIGITS</code><code class="descclassname">, </code><code class="descname">--precision</code><code class="descclassname"> DIGITS</code><a class="headerlink" href="#cmdoption-average-measure-digits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of digits after the decimal point.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-preload">
+<span id="cmdoption-average-measure--preload"></span><code class="descname">-preload</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--preload</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-measure-preload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read each input image only once. Requires enough
+memory to preload all measures into memory.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-transpose">
+<span id="cmdoption-average-measure--transpose"></span><code class="descname">-transpose</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--transpose</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-measure-transpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transpose output table s.t. each row corresponds to an
+input measure</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-header">
+<span id="cmdoption-average-measure--header"></span><code class="descname">-header</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--header</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-measure-header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print table header</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-id">
+<span id="cmdoption-average-measure--id"></span><code class="descname">-id</code><code class="descclassname"> ID_NAME</code><code class="descclassname">, </code><code class="descname">--id</code><code class="descclassname"> ID_NAME</code><a class="headerlink" href="#cmdoption-average-measure-id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Header value of ID column</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-noid">
+<span id="cmdoption-average-measure--noid"></span><code class="descname">-noid</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--noid</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-measure-noid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do not print ID column</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-measure-a">
+<span id="cmdoption-average-measure-append"></span><span id="cmdoption-average-measure--append"></span><code class="descname">-a</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-append</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--append</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-measure-a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append results to existing table.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="average-overlap.html" title="average-overlap"
+             >next</a></li>
+        <li class="right" >
+          <a href="average-images.html" title="average-images"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

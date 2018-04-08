@@ -1,0 +1,734 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>calculate-element-wise &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="calculate-exponential-map" href="calculate-exponential-map.html" />
+    <link rel="prev" title="calculate-distance-map" href="calculate-distance-map.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="calculate-exponential-map.html" title="calculate-exponential-map"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="calculate-distance-map.html" title="calculate-distance-map"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="calculate-element-wise">
+<h1>calculate-element-wise<a class="headerlink" href="#calculate-element-wise" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">calculate</span><span class="o">-</span><span class="n">element</span><span class="o">-</span><span class="n">wise</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>This tool can be used for basic calculations from a sequence of data values read
+either from an image or a VTK pointset. It can be used, for example, to add two
+data sequences and to divide the result by a constant. The current sequence can
+be written to an output file again using <a class="reference internal" href="#cmdoption-calculate-element-wise-out"><code class="xref std std-option docutils literal"><span class="pre">calculate-element-wise</span> <span class="pre">-out</span></code></a>. Additionally, statistics
+of the current data sequence can be computed such as the mean or variance.
+The order of the data transformations and calculation of statistics is determined
+by the order of the command-line arguments.</p>
+<p>The data mask is used to include/exclude values from subsequent operations.
+Initially, all NaN values in the input data sequence are excluded.
+Further values can be excluded using one or more of the masking operations.
+Using the mask, operations can be performed on only a subset of the data,
+and the mask then reset using <a class="reference internal" href="#cmdoption-calculate-element-wise-reset-mask"><code class="xref std std-option docutils literal"><span class="pre">calculate-element-wise</span> <span class="pre">-reset-mask</span></code></a>.</p>
+<p>By default, data statistics are printed to STDOUT in a human readable format.
+This output can be appended to a text file using <a class="reference internal" href="#cmdoption-calculate-element-wise-append"><code class="xref std std-option docutils literal"><span class="pre">calculate-element-wise</span> <span class="pre">-append</span></code></a> instead.
+For a more machine readable output, e.g., as comma separated values (CSV),
+specify a delimiting string using <a class="reference internal" href="#cmdoption-calculate-element-wise-delimiter"><code class="xref std std-option docutils literal"><span class="pre">calculate-element-wise</span> <span class="pre">-delimiter</span></code></a>. In this case, a header
+line is also printed when <a class="reference internal" href="#cmdoption-calculate-element-wise-header"><code class="xref std std-option docutils literal"><span class="pre">calculate-element-wise</span> <span class="pre">-header</span></code></a> is given with optional user
+specified column names for the individual output values.</p>
+</div>
+<div class="section" id="input-options">
+<h2>Input options<a class="headerlink" href="#input-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-pd">
+<span id="cmdoption-calculate-element-wise-point-data"></span><span id="cmdoption-calculate-element-wise-scalars"></span><code class="descname">-pd</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-point-data</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-scalars</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-pd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of input point data array. (default: active SCALARS array)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-cd">
+<span id="cmdoption-calculate-element-wise-cell-data"></span><code class="descname">-cd</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-cell-data</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-cd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of input cell  data array. Overrides <a class="reference internal" href="#cmdoption-calculate-element-wise-pd"><code class="xref std std-option docutils literal"><span class="pre">-pd</span></code></a>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="data-masking-options">
+<h2>Data masking options<a class="headerlink" href="#data-masking-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-even">
+<code class="descname">-even</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-even" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values which are not an even number when cast to an integer.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-odd">
+<code class="descname">-odd</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-odd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values which are not an odd number when cast to an integer.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-label">
+<code class="descname">-label</code><code class="descclassname"> &lt;value|lower..upper&gt;...</code><a class="headerlink" href="#cmdoption-calculate-element-wise-label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Include data points with a value equal to either one of the given values.
+Closed intervals of values can be specified as &#8220;lower..upper&#8221;.
+For example, &#8220;-label 1 3 5..6 10 20..50&#8221;. This option is a shorthand for
+<a class="reference internal" href="#cmdoption-calculate-element-wise-mask-all"><code class="xref std std-option docutils literal"><span class="pre">-mask-all</span></code></a> <a class="reference internal" href="#cmdoption-calculate-element-wise-threshold-inside"><code class="xref std std-option docutils literal"><span class="pre">-threshold-inside</span></code></a> &lt;lower&gt; &lt;upper&gt; <a class="reference internal" href="#cmdoption-calculate-element-wise-invert-mask"><code class="xref std std-option docutils literal"><span class="pre">-invert-mask</span></code></a>
+where one <a class="reference internal" href="#cmdoption-calculate-element-wise-threshold-inside"><code class="xref std std-option docutils literal"><span class="pre">-threshold-inside</span></code></a> operation is performed for each argument.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-mask">
+<code class="descname">-mask</code><code class="descclassname"> &lt;value&gt;... | &lt;file&gt; [&lt;scalars&gt;] [&lt;value&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values equal a given threshold or with specified input mask &lt;value&gt;.
+The default mask value of values to be excluded is zero. When the input file
+is a point set file (e.g., .vtk, .vtp), the optional &lt;scalars&gt; argument can be
+used to specify the name of the point/cell data array to use as mask.
+Note that this operation does not modify the data values, but only marks them
+to be ignored from now on. Use <a class="reference internal" href="#cmdoption-calculate-element-wise-pad"><code class="xref std std-option docutils literal"><span class="pre">-pad</span></code></a> following this operation to
+replace these values by a constant background value.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-mask-all">
+<code class="descname">-mask-all</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-mask-all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude all values.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-reset-mask">
+<code class="descname">-reset-mask</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-reset-mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset mask to include all values again.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-invert-mask">
+<code class="descname">-invert-mask</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-invert-mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invert mask to include all values that where excluded before and
+exclude all values that were included before.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-set">
+<span id="cmdoption-calculate-element-wise-inside"></span><code class="descname">-set</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-inside</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set new value for all currently included data values.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-pad">
+<span id="cmdoption-calculate-element-wise-outside"></span><code class="descname">-pad</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-outside</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-pad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set new value for all currently excluded data values.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="data-thresholding-options">
+<h2>Data thresholding options<a class="headerlink" href="#data-thresholding-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold">
+<code class="descname">-threshold</code><code class="descclassname"> &lt;lower&gt; [&lt;upper&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>This masking operation is equivalent to <a class="reference internal" href="#cmdoption-calculate-element-wise-threshold-outside"><code class="xref std std-option docutils literal"><span class="pre">-threshold-outside</span></code></a>.
+When no upper threshold is specified, it defaults to +inf. Therefore,
+&#8220;-threshold 0&#8221; will exclude all negative values.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-percentile-threshold">
+<span id="cmdoption-calculate-element-wise-pct-threshold"></span><code class="descname">-percentile-threshold</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-pct-threshold</code><code class="descclassname"> &lt;lower&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-percentile-threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>This masking operation is equivalent to <a class="reference internal" href="#cmdoption-calculate-element-wise-threshold-outside-percentiles"><code class="xref std std-option docutils literal"><span class="pre">-threshold-outside-percentiles</span></code></a>.
+with an upper threshold of +inf. Therefore, &#8220;-threshold 0&#8221; excludes all negative values.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-percentiles">
+<span id="cmdoption-calculate-element-wise-threshold-pcts"></span><code class="descname">-threshold-percentiles</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-threshold-pcts</code><code class="descclassname"> &lt;lower&gt; &lt;upper&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-percentiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>This masking operation is equivalent to <a class="reference internal" href="#cmdoption-calculate-element-wise-threshold-outside-percentiles"><code class="xref std std-option docutils literal"><span class="pre">-threshold-outside-percentiles</span></code></a>.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-inside">
+<span id="cmdoption-calculate-element-wise-mask-inside"></span><code class="descname">-threshold-inside</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-inside</code><code class="descclassname"> &lt;lower&gt; &lt;upper&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-inside" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values which are inside a given closed interval.
+When the lower threshold is greater than the upper threshold,
+values less than or equal to the upper threshold and values greater
+than or equal to the lower threshold are excluded.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-inside-percentiles">
+<span id="cmdoption-calculate-element-wise-threshold-inside-pcts"></span><span id="cmdoption-calculate-element-wise-mask-inside-percentiles"></span><span id="cmdoption-calculate-element-wise-mask-inside-pct"></span><code class="descname">-threshold-inside-percentiles</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-threshold-inside-pcts</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-inside-percentiles</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-inside-pct</code><code class="descclassname"> &lt;lower&gt; &lt;upper&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-inside-percentiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values which are inside a given closed interval of percentiles.
+When the lower percentile is greater than the upper percentile,
+values less than or equal to the upper percentile and values greater
+than or equal to the lower percentile are excluded.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-outside">
+<span id="cmdoption-calculate-element-wise-mask-outside"></span><code class="descname">-threshold-outside</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-outside</code><code class="descclassname"> &lt;lower&gt; &lt;upper&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-outside" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values which are outside a given open interval.
+When the lower threshold is greater than the upper threshold,
+values inside the closed interval &lt;upper&gt;..&lt;lower&gt; are excluded.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-outside-percentiles">
+<span id="cmdoption-calculate-element-wise-threshold-outside-pcts"></span><span id="cmdoption-calculate-element-wise-mask-outside-percentiles"></span><span id="cmdoption-calculate-element-wise-mask-outside-pcts"></span><code class="descname">-threshold-outside-percentiles</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-threshold-outside-pcts</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-outside-percentiles</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-outside-pcts</code><code class="descclassname"> &lt;lower&gt; &lt;upper&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-outside-percentiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values which are outside a given open interval of percentiles.
+When the lower percentile is greater than the upper percentile,
+values inside the closed interval &lt;upper&gt;..&lt;lower&gt; are excluded.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-lt">
+<span id="cmdoption-calculate-element-wise-lower-threshold"></span><span id="cmdoption-calculate-element-wise-mask-lt"></span><code class="descname">-threshold-lt</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-lower-threshold</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-lt</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-lt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values less than a given threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-lt-percentile">
+<span id="cmdoption-calculate-element-wise-threshold-lt-pct"></span><span id="cmdoption-calculate-element-wise-lower-percentile-threshold"></span><span id="cmdoption-calculate-element-wise-lower-pct-threshold"></span><span id="cmdoption-calculate-element-wise-mask-lt-percentile"></span><span id="cmdoption-calculate-element-wise-mask-lt-pct"></span><code class="descname">-threshold-lt-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-threshold-lt-pct</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-lower-percentile-threshold</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-lower-pct-threshold</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-lt-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-lt-pct</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-lt-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values less than a given precentile.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-le">
+<span id="cmdoption-calculate-element-wise-mask-le"></span><span id="cmdoption-calculate-element-wise-mask-below"></span><code class="descname">-threshold-le</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-le</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-below</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-le" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values less than or equal to a given threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-le-percentile">
+<span id="cmdoption-calculate-element-wise-threshold-le-pct"></span><span id="cmdoption-calculate-element-wise-mask-le-percentile"></span><span id="cmdoption-calculate-element-wise-mask-le-pct"></span><span id="cmdoption-calculate-element-wise-mask-below-percentile"></span><span id="cmdoption-calculate-element-wise-mask-below-pct"></span><code class="descname">-threshold-le-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-threshold-le-pct</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-le-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-le-pct</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-below-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-below-pct</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-le-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values less than or equal to a given percentile.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-ge">
+<span id="cmdoption-calculate-element-wise-mask-ge"></span><span id="cmdoption-calculate-element-wise-mask-above"></span><code class="descname">-threshold-ge</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-ge</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-above</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-ge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values greater than or equal to a given threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-ge-percentile">
+<span id="cmdoption-calculate-element-wise-threshold-ge-pct"></span><span id="cmdoption-calculate-element-wise-mask-ge-percentile"></span><span id="cmdoption-calculate-element-wise-mask-ge-pct"></span><span id="cmdoption-calculate-element-wise-mask-above-percentile"></span><span id="cmdoption-calculate-element-wise-mask-above-pct"></span><code class="descname">-threshold-ge-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-threshold-ge-pct</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-ge-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-ge-pct</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-above-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-above-pct</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-ge-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values greater than or equal to a given percentile.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-gt">
+<span id="cmdoption-calculate-element-wise-upper-threshold"></span><span id="cmdoption-calculate-element-wise-mask-gt"></span><code class="descname">-threshold-gt</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-upper-threshold</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-gt</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-gt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values greater than a given threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-threshold-gt-percentile">
+<span id="cmdoption-calculate-element-wise-threshold-gt-pct"></span><span id="cmdoption-calculate-element-wise-upper-percentile-threshold"></span><span id="cmdoption-calculate-element-wise-upper-pct-threshold"></span><span id="cmdoption-calculate-element-wise-mask-gt-percentile"></span><span id="cmdoption-calculate-element-wise-mask-gt-pct"></span><code class="descname">-threshold-gt-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-threshold-gt-pct</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-upper-percentile-threshold</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-upper-pct-threshold</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-gt-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mask-gt-pct</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-threshold-gt-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exclude values greater than a given percentile.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="data-rescaling-options">
+<h2>Data rescaling options<a class="headerlink" href="#data-rescaling-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-binarize">
+<code class="descname">-binarize</code><code class="descclassname"> &lt;lower&gt; [&lt;upper&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-binarize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set values inside the closed interval &lt;lower&gt;..&lt;upper&gt; to one,
+and all other values to zero. The default upper threshold is +inf.
+When the lower threshold is greater than the upper threshold,
+values inside the closed interval &lt;upper&gt;..&lt;lower&gt; are set to zero
+and all other values to one instead. This operation is short for:
+<a class="reference internal" href="#cmdoption-calculate-element-wise-threshold-inside"><code class="xref std std-option docutils literal"><span class="pre">-threshold-inside</span></code></a> &lt;lower&gt; &lt;upper&gt; <a class="reference internal" href="#cmdoption-calculate-element-wise-set"><code class="xref std std-option docutils literal"><span class="pre">-set</span></code></a> 1 <a class="reference internal" href="#cmdoption-calculate-element-wise-pad"><code class="xref std std-option docutils literal"><span class="pre">-pad</span></code></a> 0</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-clamp">
+<code class="descname">-clamp</code><code class="descclassname"> &lt;lower&gt; &lt;upper&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-clamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp values which are less than a lower or greater than an upper threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-clamp-percentiles">
+<span id="cmdoption-calculate-element-wise-clamp-pcts"></span><code class="descname">-clamp-percentiles</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-clamp-pcts</code><code class="descclassname"> &lt;lower&gt; &lt;upper&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-clamp-percentiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp values which are less than a lower percentile or greater than an upper percentile.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-clamp-below">
+<span id="cmdoption-calculate-element-wise-clamp-lt"></span><code class="descname">-clamp-below</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-clamp-lt</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-clamp-below" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp values less than a given threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-clamp-below-percentile">
+<span id="cmdoption-calculate-element-wise-clamp-below-pct"></span><span id="cmdoption-calculate-element-wise-clamp-lt-percentile"></span><span id="cmdoption-calculate-element-wise-clamp-lt-pct"></span><code class="descname">-clamp-below-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-clamp-below-pct</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-clamp-lt-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-clamp-lt-pct</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-clamp-below-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp values less than a given percentile.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-clamp-above">
+<span id="cmdoption-calculate-element-wise-clamp-gt"></span><code class="descname">-clamp-above</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-clamp-gt</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-clamp-above" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp values greater than a given threshold.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-clamp-above-percentile">
+<span id="cmdoption-calculate-element-wise-clamp-above-pct"></span><span id="cmdoption-calculate-element-wise-clamp-gt-percentile"></span><span id="cmdoption-calculate-element-wise-clamp-gt-pct"></span><code class="descname">-clamp-above-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-clamp-above-pct</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-clamp-gt-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-clamp-gt-pct</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-clamp-above-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clamp values greater than a given percentile.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-rescale">
+<code class="descname">-rescale</code><code class="descclassname"> &lt;min&gt; &lt;max&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-rescale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linearly rescale values to the interval [min, max].</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-map">
+<code class="descname">-map</code><code class="descclassname"> &lt;from&gt; &lt;to&gt;...</code><a class="headerlink" href="#cmdoption-calculate-element-wise-map" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replaces values equal to &lt;from&gt; by the specified &lt;to&gt; value. Multiple pairs of &lt;from&gt;
+and &lt;to&gt; value replacements can be specified in order to perform the substitutions in
+one step. For example, to swap the two values 1 and 2, use <code class="docutils literal"><span class="pre">-map</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">2</span> <span class="pre">1</span></code>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="arithmetic-operation-options">
+<h2>Arithmetic operation options<a class="headerlink" href="#arithmetic-operation-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-add">
+<span id="cmdoption-calculate-element-wise-plus"></span><code class="descname">-add</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-plus</code><code class="descclassname"> &lt;value&gt; | &lt;file&gt; [&lt;scalars&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add constant value or data sequence read from specified file.
+Another name for this option is the &#8216;+&#8217; sign, see Examples.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-sub">
+<span id="cmdoption-calculate-element-wise-subtract"></span><span id="cmdoption-calculate-element-wise-minus"></span><code class="descname">-sub</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-subtract</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-minus</code><code class="descclassname"> &lt;value&gt; | &lt;file&gt; [&lt;scalars&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subtract constant value or data sequence read from specified file.
+Another name for this option is the &#8216;-&#8216; sign, see Examples.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-mul">
+<span id="cmdoption-calculate-element-wise-multiply-with"></span><span id="cmdoption-calculate-element-wise-times"></span><code class="descname">-mul</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-multiply-with</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-times</code><code class="descclassname"> &lt;value&gt; | &lt;file&gt; [&lt;scalars&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-mul" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiply by constant value or data sequence read from specified file.
+Another name for this option is the &#8216;*&#8217; sign, see Examples.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-div">
+<span id="cmdoption-calculate-element-wise-divide-by"></span><span id="cmdoption-calculate-element-wise-over"></span><code class="descname">-div</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-divide-by</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-over</code><code class="descclassname"> &lt;value&gt; | sum | &lt;file&gt; [&lt;scalars&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-div" title="Permalink to this definition">¶</a></dt>
+<dd><p>Divide by constant value or data sequence read from specified file.
+When the argument is &#8220;sum&#8221;, the divisor is the sum of the values.
+When dividing by zero values in the input file, the result is NaN.
+Use <a class="reference internal" href="#cmdoption-calculate-element-wise-mask"><code class="xref std std-option docutils literal"><span class="pre">-mask</span></code></a> with argument NaN and <a class="reference internal" href="#cmdoption-calculate-element-wise-pad"><code class="xref std std-option docutils literal"><span class="pre">-pad</span></code></a> to replace
+these undefined values by a constant such as zero.
+Another name for this option is the &#8216;/&#8217; sign, see Examples.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-div-with-zero">
+<code class="descname">-div-with-zero</code><code class="descclassname"> &lt;value&gt; | sum | &lt;file&gt; [&lt;scalars&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-div-with-zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Same as <a class="reference internal" href="#cmdoption-calculate-element-wise-div"><code class="xref std std-option docutils literal"><span class="pre">-div</span></code></a>, but set result to zero in case of division by zero.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-abs">
+<code class="descname">-abs</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-abs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace values by their respective absolute value.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-pow">
+<span id="cmdoption-calculate-element-wise-power"></span><code class="descname">-pow</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-power</code><code class="descclassname"> &lt;exponent&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-pow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise values to the power of the given exponent.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-sq">
+<span id="cmdoption-calculate-element-wise-square"></span><code class="descname">-sq</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-square</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-sq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise values to the power of 2 (i.e, -pow 2).</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-sqrt">
+<code class="descname">-sqrt</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-sqrt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate square root of each value (i.e, -pow .5).</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-exp">
+<code class="descname">-exp</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-exp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate exponential of data sequence.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-log">
+<code class="descname">-log</code><code class="descclassname"> [&lt;threshold&gt;] [&lt;base&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute logarithm after applying an optional threshold.
+(default threshold: min double, default base: e)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-lb">
+<span id="cmdoption-calculate-element-wise-log2"></span><code class="descname">-lb</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-log2</code><code class="descclassname"> [&lt;threshold&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-lb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute binary logarithm, alias for <a class="reference internal" href="#cmdoption-calculate-element-wise-log"><code class="xref std std-option docutils literal"><span class="pre">-log</span></code></a> with base 2.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-ln">
+<span id="cmdoption-calculate-element-wise-loge"></span><code class="descname">-ln</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-loge</code><code class="descclassname"> [&lt;threshold&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-ln" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute natural logarithm, alias for <a class="reference internal" href="#cmdoption-calculate-element-wise-log"><code class="xref std std-option docutils literal"><span class="pre">-log</span></code></a> with base e.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-lg">
+<span id="cmdoption-calculate-element-wise-log10"></span><code class="descname">-lg</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-log10</code><code class="descclassname"> [&lt;threshold&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-lg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute logarithm to base 10, alias for <a class="reference internal" href="#cmdoption-calculate-element-wise-log"><code class="xref std std-option docutils literal"><span class="pre">-log</span></code></a> with base 10.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="data-output-options">
+<h2>Data output options<a class="headerlink" href="#data-output-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-out">
+<span id="cmdoption-calculate-element-wise-o"></span><span id="cmdoption-calculate-element-wise-output"></span><code class="descname">-out</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-o</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-output</code><code class="descclassname"> &lt;file&gt; [&lt;type&gt;] [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-out" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write current data sequence to file in the format of the input file.
+Output data type can be: uchar, short, ushort, int, uint, float, double.
+The optional &lt;name&gt; argument can be used to save the modified data
+of an input point set data array with a different name along with the
+input data. Otherwise, the input data values are replaced by the modified
+values and stored with point data array name is unchanged.
+Another name for this option is the &#8216;=&#8217; sign, but the optional arguments are
+are not supported by this alternative notation. See Examples for usage.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="data-statistics-options">
+<h2>Data statistics options<a class="headerlink" href="#data-statistics-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-append">
+<code class="descname">-append</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append output to a file. (default: STDOUT)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-delimiter">
+<span id="cmdoption-calculate-element-wise-delim"></span><span id="cmdoption-calculate-element-wise-d"></span><span id="cmdoption-calculate-element-wise-sep"></span><code class="descname">-delimiter</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-delim</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-d</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-sep</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-delimiter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delimiting character(s). (default: &#8216;&#8217;)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-header">
+<code class="descname">-header</code><code class="descclassname"> [&lt;name&gt;...]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-header" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request output of header line if delimiter was specified as well.
+If the output is appended to a text file, the header is only printed
+if it does not exist. If no or fewer custom column names are given,
+the default names for each statistic are printed. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-prefix">
+<code class="descname">-prefix</code><code class="descclassname"> &lt;str&gt;...</code><a class="headerlink" href="#cmdoption-calculate-element-wise-prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>One or more prefix strings to print. If no delimiter is specified,
+the concatenated strings are printed before each line of the output.
+Otherwise, each prefix string is printed as entry for the first columns
+in the delimited output row, separated by the specified delimiter. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-precision">
+<span id="cmdoption-calculate-element-wise-digits"></span><code class="descname">-precision</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-digits</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-precision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of significant digits. (default: 5)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-median">
+<code class="descname">-median</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-median" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print median value, i.e., 50th percentile. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-mean">
+<span id="cmdoption-calculate-element-wise-avg"></span><span id="cmdoption-calculate-element-wise-average"></span><code class="descname">-mean</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-avg</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-average</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print mean value. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-variance">
+<span id="cmdoption-calculate-element-wise-var"></span><code class="descname">-variance</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-var</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-variance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print variance of values. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-sigma">
+<span id="cmdoption-calculate-element-wise-std"></span><span id="cmdoption-calculate-element-wise-stddev"></span><span id="cmdoption-calculate-element-wise-stdev"></span><span id="cmdoption-calculate-element-wise-sd"></span><code class="descname">-sigma</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-std</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-stddev</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-stdev</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-sd</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-sigma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print standard deviation of values. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-normal-distribution">
+<code class="descname">-normal-distribution</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-normal-distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print mean and standard deviation of values.
+Other option names: -mean+sigma, -mean+sd, -avg+std,... (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-mad">
+<span id="cmdoption-calculate-element-wise-mean-absolute-difference"></span><span id="cmdoption-calculate-element-wise-mean-absolute-deviation"></span><code class="descname">-mad</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mean-absolute-difference</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-mean-absolute-deviation</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-mad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print mean absolute difference/deviation around the mean. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-mad-median">
+<span id="cmdoption-calculate-element-wise-median-absolute-difference"></span><span id="cmdoption-calculate-element-wise-median-absolute-deviation"></span><code class="descname">-mad-median</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-median-absolute-difference</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-median-absolute-deviation</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-mad-median" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print mean absolute difference/deviation around the median. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-minimum">
+<span id="cmdoption-calculate-element-wise-min"></span><code class="descname">-minimum</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-min</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-minimum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print minimum value. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-maximum">
+<span id="cmdoption-calculate-element-wise-max"></span><code class="descname">-maximum</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-max</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-maximum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print maximum value. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-extrema">
+<span id="cmdoption-calculate-element-wise-minmax"></span><code class="descname">-extrema</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-minmax</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-extrema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print minimum and maximum value. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-range">
+<code class="descname">-range</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print range of values (i.e., max - min). (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-percentile">
+<span id="cmdoption-calculate-element-wise-pct"></span><span id="cmdoption-calculate-element-wise-p"></span><code class="descname">-percentile</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-pct</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-p</code><code class="descclassname"> &lt;n&gt;...</code><a class="headerlink" href="#cmdoption-calculate-element-wise-percentile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print n-th percentile. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-lower-percentile-mean">
+<span id="cmdoption-calculate-element-wise-lpctavg"></span><code class="descname">-lower-percentile-mean</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-lpctavg</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-lower-percentile-mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print mean intensity of values less than or equal to the n-th percentile. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-upper-percentile-mean">
+<span id="cmdoption-calculate-element-wise-upctavg"></span><code class="descname">-upper-percentile-mean</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-upctavg</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-calculate-element-wise-upper-percentile-mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print mean intensity of values greater than or equal to the n-th percentile. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-sum">
+<code class="descname">-sum</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print sum of values. Can be used to count values within a certain range using a thresholding
+followed by <a class="reference internal" href="#cmdoption-calculate-element-wise-set"><code class="xref std std-option docutils literal"><span class="pre">-set</span></code></a> 1 before summing these values. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-count">
+<code class="descname">-count</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print number of values inside the mask, i.e., values not currently excluded. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-v">
+<span id="cmdoption-calculate-element-wise-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-calculate-element-wise-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-h">
+<span id="cmdoption-calculate-element-wise-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="terminal-options">
+<h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-element-wise-color">
+<span id="cmdoption-calculate-element-wise-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-element-wise-color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable colored output. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><strong>Command</strong>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">calculate</span><span class="o">-</span><span class="n">element</span><span class="o">-</span><span class="n">wise</span> <span class="n">mni305</span><span class="o">.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<p><strong>Output/Description</strong>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>    Mean = 26.9753
+    Standard deviation = 50.3525
+    Extrema = [0, 254]
+    Range = 254
+
+calculate-element-wise mni305.nii.gz -pct 77
+    77th percentile = 25
+
+calculate-element-wise mni305.nii.gz -padding 25 -range -percentile 25 50 75 -prefix MNI305 &#39;[&gt;25]&#39;
+    MNI305 [&gt;25] range = 254
+    MNI305 [&gt;25] 25th percentile = 69
+    MNI305 [&gt;25] 50th percentile = 113
+    MNI305 [&gt;25] 75th percentile = 150
+
+calculate-element-wise mni305.nii.gz -d , -prefix MNI305
+    MNI305,26.9753,50.3525,0,254,254 [no newline at end of line]
+
+calculate-element-wise mni305.nii.gz -d , -prefix MNI305 -header
+    ,Mean,Sigma,Min,Max,Range
+    MNI305,26.9753,50.3525,0,254,254
+
+calculate-element-wise mni305.nii.gz -d , -prefix MNI305 -header ID Mean SD
+    ID,Mean,SD,Min,Max,Range
+    MNI305,26.9753,50.3525,0,254,254
+
+calculate-element-wise a.nii.gz + b.nii.gz = c.nii.gz
+
+calculate-element-wise a.vtk + b.nii.gz - 10 / c.nii = d.vtk
+    Adds data values at identical sequential memory indices in a and b,
+    subtracts the constant 10, and then divides by the values in image c.
+
+    Note: Operations are always executed from left to right,
+          i.e., no mathematical operator precedence is considered!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="calculate-exponential-map.html" title="calculate-exponential-map"
+             >next</a></li>
+        <li class="right" >
+          <a href="calculate-distance-map.html" title="calculate-distance-map"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,34 +24,34 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../index.html" />
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
     <link rel="up" title="Applications" href="../commands.html" />
-    <link rel="next" title="calculate-surface-spectrum" href="calculate-surface-spectrum.html" />
+    <link rel="next" title="calculate-surface-map" href="calculate-surface-map.html" />
     <link rel="prev" title="calculate-logarithmic-map" href="calculate-logarithmic-map.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="calculate-surface-spectrum.html" title="calculate-surface-spectrum"
+          <a href="calculate-surface-map.html" title="calculate-surface-map"
              accesskey="N">next</a></li>
         <li class="right" >
           <a href="calculate-logarithmic-map.html" title="calculate-logarithmic-map"
              accesskey="P">previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -59,9 +59,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
@@ -87,13 +84,13 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="calculate-surface-attributes">
 <h1>calculate-surface-attributes<a class="headerlink" href="#calculate-surface-attributes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>calculate-surface-attributes &lt;input&gt; &lt;output&gt; [options]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">calculate</span><span class="o">-</span><span class="n">surface</span><span class="o">-</span><span class="n">attributes</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -107,128 +104,302 @@ is triangulated beforehand if it contains non-triangular faces.</p>
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-arg-input">
-<tt class="descname">input</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-arg-input" title="Permalink to this definition">¶</a></dt>
-<dd><p>Input surface mesh.</p>
+<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-arg-input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input  surface mesh.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-arg-output">
-<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-arg-output" title="Permalink to this definition">¶</a></dt>
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output surface mesh.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="command-options">
-<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="normals-options">
+<h2>Normals options<a class="headerlink" href="#normals-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-normals">
-<span id="cmdoption-calculate-surface-attributes-point-normals"></span><tt class="descname">-normals</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-point-normals</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-normals" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-normals</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface point and cell normals.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-point-normals">
+<code class="descname">-point-normals</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-point-normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Surface point normals.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-cell-normals">
-<tt class="descname">-cell-normals</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-cell-normals" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-cell-normals</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-cell-normals" title="Permalink to this definition">¶</a></dt>
 <dd><p>Surface cell normals.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-auto-orient">
-<span id="cmdoption-calculate-surface-attributes-noauto-orient"></span><tt class="descname">-auto-orient</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-noauto-orient</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-auto-orient" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-surface-attributes-noauto-orient"></span><code class="descname">-auto-orient</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noauto-orient</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-auto-orient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable auto-orientation of normals. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-splitting">
-<span id="cmdoption-calculate-surface-attributes-nosplitting"></span><tt class="descname">-splitting</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nosplitting</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-splitting" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-surface-attributes-nosplitting"></span><code class="descname">-splitting</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nosplitting</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-splitting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable splitting of sharp edges. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-consistency">
-<span id="cmdoption-calculate-surface-attributes-noconsistency"></span><tt class="descname">-consistency</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-noconsistency</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-consistency" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-surface-attributes-noconsistency"></span><code class="descname">-consistency</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noconsistency</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-consistency" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable enforcement of vertex order consistency. (default: on)</p>
 </dd></dl>
 
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-flip-normals">
+<span id="cmdoption-calculate-surface-attributes-noflip-normals"></span><code class="descname">-flip-normals</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noflip-normals</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-flip-normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable flipping of normals. (default: off)</p>
+</dd></dl>
+
 </div>
-<div class="section" id="curvature-output-options">
-<h2>Curvature output options<a class="headerlink" href="#curvature-output-options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="curvature-options">
+<h2>Curvature options<a class="headerlink" href="#curvature-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
-<dt id="cmdoption-calculate-surface-attributes-H">
-<tt class="descname">-H</tt><tt class="descclassname"> [&lt;name&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-H" title="Permalink to this definition">¶</a></dt>
-<dd><p>Mean curvature.</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-calculate-surface-attributes-K">
-<tt class="descname">-K</tt><tt class="descclassname"> [&lt;name&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-K" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gauss curvature.</p>
-</dd></dl>
-
-<dl class="option">
-<dt id="cmdoption-calculate-surface-attributes-C">
-<tt class="descname">-C</tt><tt class="descclassname"> [&lt;name&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-C" title="Permalink to this definition">¶</a></dt>
-<dd><p>Curvedness.</p>
+<dt id="cmdoption-calculate-surface-attributes-k1k2">
+<code class="descname">-k1k2</code><code class="descclassname"> [&lt;name&gt;] [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-k1k2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Principal curvatures.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-k1">
-<tt class="descname">-k1</tt><tt class="descclassname"> [&lt;name&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-k1" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-k1</code><code class="descclassname"> [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-k1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimum curvature.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-k2">
-<tt class="descname">-k2</tt><tt class="descclassname"> [&lt;name&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-k2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-k2</code><code class="descclassname"> [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-k2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Maximum curvature.</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-calculate-surface-attributes-k1k2">
-<tt class="descname">-k1k2</tt><tt class="descclassname"> [&lt;name&gt;] [&lt;name&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-k1k2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Principal curvatures.</p>
-</dd></dl>
-
-<dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-e1">
-<tt class="descname">-e1</tt><tt class="descclassname"> [&lt;name&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-e1" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-e1</code><code class="descclassname"> [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-e1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Direction of minimum curvature.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-e2">
-<tt class="descname">-e2</tt><tt class="descclassname"> [&lt;name&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-e2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-e2</code><code class="descclassname"> [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-e2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Direction of maximum curvature.</p>
 </dd></dl>
 
 <dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-H">
+<code class="descname">-H</code><code class="descclassname"> [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-H" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mean curvature:  H = .5 * (k1 + k2).</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-K">
+<code class="descname">-K</code><code class="descclassname"> [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-K" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gauss curvature: K = k1 * k2.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-C">
+<code class="descname">-C</code><code class="descclassname"> [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-C" title="Permalink to this definition">¶</a></dt>
+<dd><p>Curvedness:      C = sqrt(.5 * (k1^2 + k2^2)).</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-normalize">
-<tt class="descname">-normalize</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-normalize" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-normalize</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-normalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Normalize curvature using volume of convex hull.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-vtk-curvatures">
-<tt class="descname">-vtk-curvatures</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-vtk-curvatures" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-vtk-curvatures</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-vtk-curvatures" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use vtkCurvatures when possible.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-robust-curvatures">
-<tt class="descname">-robust-curvatures</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-robust-curvatures" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-robust-curvatures</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-robust-curvatures" title="Permalink to this definition">¶</a></dt>
 <dd><p>Do not use vtkCurvatures. Instead, estimate the curvature
 tensor field and decompose it to obtain principle curvatures. (default)</p>
 </dd></dl>
 
+</div>
+<div class="section" id="parcellation-options">
+<h2>Parcellation options<a class="headerlink" href="#parcellation-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
-<dt id="cmdoption-calculate-surface-attributes-smooth">
-<tt class="descname">-smooth</tt><tt class="descclassname"> [&lt;niter&gt;] [&lt;sigma&gt;] [&lt;sigma2&gt;]</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-smooth" title="Permalink to this definition">¶</a></dt>
-<dd><p>Smooth calculated scalar curvature measures using a Gaussian smoothing kernel.
-If sigma2 is specified, an anisotropic kernel with standard deviation
-sigma along the direction of minimum curvature, and sigma2 in the
-direction of maximum curvature is used. If the value of sigma2 is &#8220;tensor&#8221;
-instead of a numeric value, the isotropic Gaussian kernel is oriented
-and scaled along each local geometry axis using the curvature tensor.</p>
+<dt id="cmdoption-calculate-surface-attributes-labels">
+<code class="descname">-labels</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of surface point and/or cell parcellation array.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-point-labels">
+<code class="descname">-point-labels</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-point-labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of surface point parcellation array.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-cell-labels">
+<code class="descname">-cell-labels</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-cell-labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of surface cell  parcellation array.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-border-mask">
+<code class="descname">-border-mask</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-border-mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add parcellation border mask to output surface mesh,
+where points/cells adjacent to a given point/cell
+belong to different parcels have a non-zero value.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="local-image-options">
+<h2>Local image options<a class="headerlink" href="#local-image-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-image">
+<code class="descname">-image</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input image file required by -gradient* and -patch* options.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-gradient-normal">
+<code class="descname">-gradient-normal</code><code class="descclassname"> [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-gradient-normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute image derivative in normal direction using cubic B-spline interpolation.
+The &lt;name&gt; of the output point data array is by default &#8216;ImageGradientNormal&#8217;. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-gradient-angle">
+<code class="descname">-gradient-angle</code><code class="descclassname"> [&lt;name&gt;]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-gradient-angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute cosine of angle made up by image gradient and normal vector using cubic
+B-spline interpolation for computing the image derivatives. The &lt;name&gt; of the output
+point data array is by default &#8216;ImageGradientAngle&#8217; (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-patch-name">
+<code class="descname">-patch-name</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-patch-name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of output point data array storing patch image statistics.
+(default: LocalImageStatistics)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-patch-size">
+<code class="descname">-patch-size</code><code class="descclassname"> &lt;nx&gt; [&lt;ny&gt; [&lt;nz&gt;]]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-patch-size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of image patches. When only &lt;nx&gt; is given, an image patch of size
+nx = ny = nz is used. When only &lt;nz&gt; is omitted, a 2D patch is used.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-patch-spacing">
+<code class="descname">-patch-spacing</code><code class="descclassname"> &lt;dx&gt; [&lt;dy&gt; [&lt;dz&gt;]]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-patch-spacing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spacing between patch sample points. When only &lt;dx&gt; is given, an isotropic
+sampling in all three dimensions of &lt;dx&gt; is used. When only &lt;dz&gt; is omitted,
+a 2D patch spacing is used with dz=0.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-patch-space">
+<code class="descname">-patch-space</code><code class="descclassname"> image|world|tangent</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-patch-space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coordinate system of patch. (default: tangent)</p>
+<ul class="simple">
+<li>world:   Patch is aligned with world coordinate system.</li>
+<li>image:   Patch is algined with image coordinate system.</li>
+<li>tangent: Each patch is aligned with the coordinate system made up</li>
+</ul>
+<p>by the normal vector and two orthonormal tangent vectors.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-patch-samples">
+<span id="cmdoption-calculate-surface-attributes-nopatch-samples"></span><code class="descname">-patch-samples</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nopatch-samples</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-patch-samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to store individual intensities interpolated at patch sample points.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-demean-patch">
+<code class="descname">-demean-patch</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-demean-patch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Substract mean intensity from individual <a class="reference internal" href="#cmdoption-calculate-surface-attributes-patch-samples"><code class="xref std std-option docutils literal"><span class="pre">-patch-samples</span></code></a>.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-whiten-patch">
+<code class="descname">-whiten-patch</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-whiten-patch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dividide individual <a class="reference internal" href="#cmdoption-calculate-surface-attributes-patch-samples"><code class="xref std std-option docutils literal"><span class="pre">-patch-samples</span></code></a> by standard deviation.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-patch-min">
+<code class="descname">-patch-min</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-patch-min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append minimum patch intensity to output point data array.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-patch-max">
+<code class="descname">-patch-max</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-patch-max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append maximum patch intensity to output point data array.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-patch-min-abs">
+<code class="descname">-patch-min-abs</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-patch-min-abs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append minimum absolute patch intensity to output point data array.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-patch-max-abs">
+<code class="descname">-patch-max-abs</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-patch-max-abs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append maximum absolute patch intensity to output point data array.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-patch-mean">
+<code class="descname">-patch-mean</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-patch-mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append mean patch intensity to output point data array.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-patch-sigma">
+<code class="descname">-patch-sigma</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-patch-sigma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append standard deviation of patch intensities to output point data array.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="smoothing-options">
+<h2>Smoothing options<a class="headerlink" href="#smoothing-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-smooth-iterations">
+<code class="descname">-smooth-iterations</code><code class="descclassname"> [&lt;niter&gt;]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-smooth-iterations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of smoothing iterations.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-calculate-surface-attributes-smooth-weighting">
+<code class="descname">-smooth-weighting</code><code class="descclassname"> &lt;name&gt; [options]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-smooth-weighting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Smooth scalar attributes using the named weighting function:</p>
+<ul class="simple">
+<li>&#8216;Gaussian&#8217;: Isotropic Gaussian smoothing kernel. (default)</li>
+<li>Options: [&lt;sigma&gt;]</li>
+<li>If sigma is not specified, it is automatically determined from the edges.</li>
+<li>&#8216;AnisotropicGaussian&#8217;: Anisotropic Gaussian smoothing kernel.</li>
+<li>Options: [&lt;sigma&gt;] [&lt;sigma2&gt;]</li>
+<li>If sigma is not specified, it is automatically determined from the edges.</li>
+<li>If sigma2 is specified, an anisotropic kernel with standard deviation</li>
+</ul>
+<p>sigma along the direction of minimum curvature, and sigma2 in the</p>
+<p>direction of maximum curvature is used.
+- If sigma2 is not specified, an isotropic Gaussian kernel used that is oriented</p>
+<p>and scaled along each local geometry axis using the curvature tensor.
+- &#8216;InverseDistance&#8217;: Inverse node distance.
+- Options: [&lt;bias&gt;]
+- If the bias is specified, the distance is estimated as 1/(dist+bias).
+- &#8216;Combinatorial&#8217;: Uniform node weights.</p>
 </dd></dl>
 
 </div>
@@ -236,31 +407,31 @@ and scaled along each local geometry axis using the curvature tensor.</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-v">
-<span id="cmdoption-calculate-surface-attributes-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-surface-attributes-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-debug">
-<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-debug" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-version">
-<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-version" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-revision">
-<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-revision" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-h">
-<span id="cmdoption-calculate-surface-attributes-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-surface-attributes-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -269,7 +440,7 @@ and scaled along each local geometry axis using the curvature tensor.</p>
 <h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-color">
-<span id="cmdoption-calculate-surface-attributes-nocolor"></span><tt class="descname">-color</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocolor</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-color" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-calculate-surface-attributes-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable/disable colored output. (default: off)</p>
 </dd></dl>
 
@@ -278,7 +449,7 @@ and scaled along each local geometry axis using the curvature tensor.</p>
 <h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-calculate-surface-attributes-threads">
-<tt class="descname">-threads</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-calculate-surface-attributes-threads" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-calculate-surface-attributes-threads" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
 </dd></dl>
 
@@ -291,22 +462,22 @@ and scaled along each local geometry axis using the curvature tensor.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="calculate-surface-spectrum.html" title="calculate-surface-spectrum"
+          <a href="calculate-surface-map.html" title="calculate-surface-map"
              >next</a></li>
         <li class="right" >
           <a href="calculate-logarithmic-map.html" title="calculate-logarithmic-map"
              >previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

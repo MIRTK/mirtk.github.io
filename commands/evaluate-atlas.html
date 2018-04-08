@@ -1,0 +1,189 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>evaluate-atlas &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="evaluate-cardiac-motion" href="evaluate-cardiac-motion.html" />
+    <link rel="prev" title="erode-scalars" href="erode-scalars.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="evaluate-cardiac-motion.html" title="evaluate-cardiac-motion"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="erode-scalars.html" title="erode-scalars"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="evaluate-atlas">
+<h1>evaluate-atlas<a class="headerlink" href="#evaluate-atlas" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">evaluate</span><span class="o">-</span><span class="n">atlas</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span> <span class="n">MEANS</span> <span class="p">[</span><span class="n">MEANS</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">-</span><span class="n">w</span> <span class="n">TMPDIR</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">i</span> <span class="n">STEP</span> <span class="p">[</span><span class="n">STEP</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">-</span><span class="n">q</span> <span class="n">QUEUE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">THREADS</span><span class="p">]</span>
+<span class="p">[</span><span class="o">-</span><span class="n">v</span> <span class="n">VERBOSE</span><span class="p">]</span>
+<span class="n">config</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Evaluate (spatio-temporal) atlas sharpness measures.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-atlas-arg-config">
+<code class="descname">config</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-atlas-arg-config" title="Permalink to this definition">¶</a></dt>
+<dd><p>JSON file with atlas configuration.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-evaluate-atlas-h">
+<span id="cmdoption-evaluate-atlas--help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-atlas-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-atlas-a">
+<span id="cmdoption-evaluate-atlas--ages"></span><span id="cmdoption-evaluate-atlas--means"></span><code class="descname">-a</code><code class="descclassname"> MEANS [MEANS ...]</code><code class="descclassname">, </code><code class="descname">--ages</code><code class="descclassname"> MEANS [MEANS ...]</code><code class="descclassname">, </code><code class="descname">--means</code><code class="descclassname"> MEANS [MEANS ...]</code><a class="headerlink" href="#cmdoption-evaluate-atlas-a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Discrete time points for which to perform evaluation.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-atlas-w">
+<span id="cmdoption-evaluate-atlas--workdir"></span><span id="cmdoption-evaluate-atlas--tmpdir"></span><code class="descname">-w</code><code class="descclassname"> TMPDIR</code><code class="descclassname">, </code><code class="descname">--workdir</code><code class="descclassname"> TMPDIR</code><code class="descclassname">, </code><code class="descname">--tmpdir</code><code class="descclassname"> TMPDIR</code><a class="headerlink" href="#cmdoption-evaluate-atlas-w" title="Permalink to this definition">¶</a></dt>
+<dd><p>Working directory of intermediate files.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-atlas-i">
+<span id="cmdoption-evaluate-atlas--step"></span><code class="descname">-i</code><code class="descclassname"> STEP [STEP ...]</code><code class="descclassname">, </code><code class="descname">--step</code><code class="descclassname"> STEP [STEP ...]</code><a class="headerlink" href="#cmdoption-evaluate-atlas-i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Atlas construction steps to evaluate. Evaluate all
+&#8216;iterations&#8217; specified in config otherwise (default:
+10).</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-atlas-q">
+<span id="cmdoption-evaluate-atlas--queue"></span><code class="descname">-q</code><code class="descclassname"> QUEUE</code><code class="descclassname">, </code><code class="descname">--queue</code><code class="descclassname"> QUEUE</code><a class="headerlink" href="#cmdoption-evaluate-atlas-q" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of batch system queue. Use &#8216;condor&#8217; for HTCondor.
+Otherwise, the argument is assumed to be the name of a
+SLURM partition.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-atlas-t">
+<span id="cmdoption-evaluate-atlas--threads"></span><code class="descname">-t</code><code class="descclassname"> THREADS</code><code class="descclassname">, </code><code class="descname">--threads</code><code class="descclassname"> THREADS</code><a class="headerlink" href="#cmdoption-evaluate-atlas-t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of CPU cores/threads to use.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-evaluate-atlas-v">
+<span id="cmdoption-evaluate-atlas--verbose"></span><code class="descname">-v</code><code class="descclassname"> VERBOSE</code><code class="descclassname">, </code><code class="descname">--verbose</code><code class="descclassname"> VERBOSE</code><a class="headerlink" href="#cmdoption-evaluate-atlas-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verbosity level of output messages: 0) no output, 1)
+report progress, 2) print command arguments.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="evaluate-cardiac-motion.html" title="evaluate-cardiac-motion"
+             >next</a></li>
+        <li class="right" >
+          <a href="erode-scalars.html" title="erode-scalars"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

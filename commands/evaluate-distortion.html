@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,19 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../index.html" />
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="evaluate-dof" href="evaluate-dof.html" />
     <link rel="prev" title="evaluate-distance" href="evaluate-distance.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,13 +45,13 @@
         <li class="right" >
           <a href="evaluate-distance.html" title="evaluate-distance"
              accesskey="P">previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -59,9 +59,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
@@ -87,39 +84,42 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="evaluate-distortion">
 <h1>evaluate-distortion<a class="headerlink" href="#evaluate-distortion" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>evaluate-distortion &lt;original&gt; &lt;deformed&gt; &lt;output&gt; [options]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">evaluate</span><span class="o">-</span><span class="n">distortion</span> <span class="o">&lt;</span><span class="n">original</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>Computes the distortion of a surface mesh under deformation and stores
-the results in the output dataset. If no output dataset is given, the
-mean and standard deviation are reported only.</p>
+<p>Computes the distortion of a surface mesh under deformation, when
+mapped to the surface of another solid with equivalent topology, or
+flattened to the plane or sphere, respectively.</p>
+<p>The distortion measures are stored as point/cell data of the output
+dataset. If no output file name is given, the mean and standard deviation
+are reported even when the verbose option -v is not given.</p>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-distortion-arg-original">
-<tt class="descname">original</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-distortion-arg-original" title="Permalink to this definition">¶</a></dt>
+<code class="descname">original</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distortion-arg-original" title="Permalink to this definition">¶</a></dt>
 <dd><p>File name of original dataset.</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-evaluate-distortion-arg-deformed">
-<tt class="descname">deformed</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-distortion-arg-deformed" title="Permalink to this definition">¶</a></dt>
-<dd><p>File name of deformed dataset.</p>
+<dt id="cmdoption-evaluate-distortion-arg-input">
+<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distortion-arg-input" title="Permalink to this definition">¶</a></dt>
+<dd><p>File name of deformed/mapped dataset.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-distortion-arg-output">
-<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-distortion-arg-output" title="Permalink to this definition">¶</a></dt>
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distortion-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>File name of output dataset.</p>
 </dd></dl>
 
@@ -127,15 +127,23 @@ mean and standard deviation are reported only.</p>
 <div class="section" id="command-options">
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
+<dt id="cmdoption-evaluate-distortion-angular">
+<code class="descname">-angular</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distortion-angular" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quantify angular distortion by computing the average ratio of normalized
+angles at each vertex before and after the mapping. This ratio is 1 when
+the angles of the original mesh are preserved in the input mesh.</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-evaluate-distortion-areal">
-<tt class="descname">-areal</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-distortion-areal" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute areal distortion of cells: log_2(area(deformed)/area(original)). (default)</p>
+<code class="descname">-areal</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distortion-areal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute areal distortion of cells: log_2(area(deformed)/area(original)).</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-distortion-abs-areal">
-<tt class="descname">-abs-areal</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-distortion-abs-areal" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute absolute value of <a class="reference internal" href="#cmdoption-evaluate-distortion-areal"><em class="xref std std-option">-areal</em></a> distortion.</p>
+<code class="descname">-abs-areal</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distortion-abs-areal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute absolute value of <a class="reference internal" href="#cmdoption-evaluate-distortion-areal"><code class="xref std std-option docutils literal"><span class="pre">-areal</span></code></a> distortion.</p>
 </dd></dl>
 
 </div>
@@ -143,31 +151,31 @@ mean and standard deviation are reported only.</p>
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-evaluate-distortion-v">
-<span id="cmdoption-evaluate-distortion-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-evaluate-distortion-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-evaluate-distortion-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-evaluate-distortion-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-distortion-debug">
-<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-evaluate-distortion-debug" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-evaluate-distortion-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-distortion-version">
-<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-evaluate-distortion-version" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-evaluate-distortion-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-distortion-revision">
-<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-distortion-revision" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distortion-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-evaluate-distortion-h">
-<span id="cmdoption-evaluate-distortion-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-evaluate-distortion-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-evaluate-distortion-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-evaluate-distortion-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -180,7 +188,7 @@ mean and standard deviation are reported only.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -189,13 +197,13 @@ mean and standard deviation are reported only.</p>
         <li class="right" >
           <a href="evaluate-distance.html" title="evaluate-distance"
              >previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

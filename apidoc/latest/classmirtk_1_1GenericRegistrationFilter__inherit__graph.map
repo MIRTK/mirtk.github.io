@@ -1,5 +1,5 @@
 <map id="mirtk::GenericRegistrationFilter" name="mirtk::GenericRegistrationFilter">
-<area shape="rect" id="node2" href="$classmirtk_1_1RegistrationFilter.html" title="{mirtk::RegistrationFilter\n||+ Output()\l+ Output()\l+ Read()\l+ Read()\l+ Run()\l+ Write()\l+ ~RegistrationFilter()\l# Output()\l# RegistrationFilter()\l}" alt="" coords="27,464,185,659"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Observable.html" title="{mirtk::Observable\n||+ AddObserver()\l+ Broadcast()\l+ ClearObservers()\l+ DeleteObserver()\l+ NotifyObservers()\l+ NumberOfObservers()\l+ ~Observable()\l# Observable()\l# Observable()\l# operator=()\l}" alt="" coords="25,206,188,415"/>
-<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="44,6,169,157"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1RegistrationFilter.html" title="{mirtk::RegistrationFilter\n||+ Output()\l+ Output()\l+ Read()\l+ Read()\l+ Run()\l+ Write()\l+ ~RegistrationFilter()\l# Output()\l# RegistrationFilter()\l}" alt="" coords="27,523,185,733"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Observable.html" title="{mirtk::Observable\n||+ AddObserver()\l+ Broadcast()\l+ ClearObservers()\l+ DeleteObserver()\l+ NotifyObservers()\l+ NumberOfObservers()\l+ ~Observable()\l# Observable()\l# Observable()\l# operator=()\l}" alt="" coords="24,249,188,474"/>
+<area shape="rect" id="node6" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="44,6,168,199"/>
 </map>

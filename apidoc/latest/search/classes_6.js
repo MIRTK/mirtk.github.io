@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['gausscurvatureconstraint',['GaussCurvatureConstraint',['../classmirtk_1_1GaussCurvatureConstraint.html',1,'mirtk']]],
   ['gaussianblurring',['GaussianBlurring',['../classmirtk_1_1GaussianBlurring.html',1,'mirtk']]],
   ['gaussianblurring2d',['GaussianBlurring2D',['../classmirtk_1_1GaussianBlurring2D.html',1,'mirtk']]],
   ['gaussianblurring4d',['GaussianBlurring4D',['../classmirtk_1_1GaussianBlurring4D.html',1,'mirtk']]],
@@ -69,9 +70,11 @@ var searchData=
   ['genericgaussianinterpolateimagefunction4d_3c_20baseimage_20_3e',['GenericGaussianInterpolateImageFunction4D&lt; BaseImage &gt;',['../classmirtk_1_1GenericGaussianInterpolateImageFunction4D.html',1,'mirtk']]],
   ['genericgaussianinterpolateimagefunction_3c_20baseimage_20_3e',['GenericGaussianInterpolateImageFunction&lt; BaseImage &gt;',['../classmirtk_1_1GenericGaussianInterpolateImageFunction.html',1,'mirtk']]],
   ['genericimage',['GenericImage',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
+  ['genericimage_3c_20bytepixel_20_3e',['GenericImage&lt; BytePixel &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20cpvalue_20_3e',['GenericImage&lt; CPValue &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20double_20_3e',['GenericImage&lt; double &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20greypixel_20_3e',['GenericImage&lt; GreyPixel &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
+  ['genericimage_3c_20int_20_3e',['GenericImage&lt; int &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20realpixel_20_3e',['GenericImage&lt; RealPixel &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20realtype_20_3e',['GenericImage&lt; RealType &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20t1_20_3e',['GenericImage&lt; T1 &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
@@ -85,7 +88,6 @@ var searchData=
   ['genericimage_3c_20t9_20_3e',['GenericImage&lt; T9 &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20tdata_20_3e',['GenericImage&lt; TData &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimage_3c_20treal_20_3e',['GenericImage&lt; TReal &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
-  ['genericimage_3c_20tvoxel_20_3e',['GenericImage&lt; TVoxel &gt;',['../classmirtk_1_1GenericImage.html',1,'mirtk']]],
   ['genericimagegradientfunction',['GenericImageGradientFunction',['../classmirtk_1_1GenericImageGradientFunction.html',1,'mirtk']]],
   ['genericimagegradientfunction_3c_20baseimage_20_3e',['GenericImageGradientFunction&lt; BaseImage &gt;',['../classmirtk_1_1GenericImageGradientFunction.html',1,'mirtk']]],
   ['genericimagegradientfunction_3c_20imagetype_20_3e',['GenericImageGradientFunction&lt; ImageType &gt;',['../classmirtk_1_1GenericImageGradientFunction.html',1,'mirtk']]],
@@ -139,5 +141,7 @@ var searchData=
   ['giplimagewriter',['GIPLImageWriter',['../classmirtk_1_1GIPLImageWriter.html',1,'mirtk']]],
   ['gradientdescent',['GradientDescent',['../classmirtk_1_1GradientDescent.html',1,'mirtk']]],
   ['gradientfieldsimilarity',['GradientFieldSimilarity',['../classmirtk_1_1GradientFieldSimilarity.html',1,'mirtk']]],
-  ['gradientimagefilter',['GradientImageFilter',['../classmirtk_1_1GradientImageFilter.html',1,'mirtk']]]
+  ['gradientimagefilter',['GradientImageFilter',['../classmirtk_1_1GradientImageFilter.html',1,'mirtk']]],
+  ['greaterorequal',['GreaterOrEqual',['../classmirtk_1_1data_1_1select_1_1GreaterOrEqual.html',1,'mirtk::data::select']]],
+  ['greaterthan',['GreaterThan',['../classmirtk_1_1data_1_1select_1_1GreaterThan.html',1,'mirtk::data::select']]]
 ];

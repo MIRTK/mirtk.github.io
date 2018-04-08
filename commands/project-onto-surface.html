@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,34 +24,34 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../index.html" />
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
     <link rel="up" title="Applications" href="../commands.html" />
-    <link rel="next" title="reflect-image" href="reflect-image.html" />
-    <link rel="prev" title="open-image" href="open-image.html" />
+    <link rel="next" title="recon-neonatal-cortex" href="recon-neonatal-cortex.html" />
+    <link rel="prev" title="open-scalars" href="open-scalars.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="reflect-image.html" title="reflect-image"
+          <a href="recon-neonatal-cortex.html" title="recon-neonatal-cortex"
              accesskey="N">next</a></li>
         <li class="right" >
-          <a href="open-image.html" title="open-image"
+          <a href="open-scalars.html" title="open-scalars"
              accesskey="P">previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -59,9 +59,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
@@ -87,37 +84,39 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="project-onto-surface">
 <h1>project-onto-surface<a class="headerlink" href="#project-onto-surface" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>project-onto-surface &lt;input&gt; &lt;output&gt; -image &lt;file&gt; [options]
-project-onto-surface &lt;input&gt; &lt;output&gt; -labels &lt;file&gt; [options]
-project-onto-surface &lt;input&gt; &lt;output&gt; -boundary [-nolabel-points] [-nolabel-cells] [-name &lt;scalars&gt;]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">-</span><span class="n">onto</span><span class="o">-</span><span class="n">surface</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">image</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">project</span><span class="o">-</span><span class="n">onto</span><span class="o">-</span><span class="n">surface</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">labels</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">project</span><span class="o">-</span><span class="n">onto</span><span class="o">-</span><span class="n">surface</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">constant</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;...</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">project</span><span class="o">-</span><span class="n">onto</span><span class="o">-</span><span class="n">surface</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">surface</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">-</span><span class="n">scalars</span> <span class="o">&lt;</span><span class="n">scalars</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">scalars_new_name</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">]</span>
+<span class="n">project</span><span class="o">-</span><span class="n">onto</span><span class="o">-</span><span class="n">surface</span> <span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">boundary</span> <span class="p">[</span><span class="o">-</span><span class="n">nolabel</span><span class="o">-</span><span class="n">points</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">nolabel</span><span class="o">-</span><span class="n">cells</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">scalars</span><span class="o">&gt;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Assign scalars or labels to either the vertices or the cells of a surface mesh.
-When the input as a real-valued image, the values are linearly interpolated.
-When the input is a segmentation labels image, the value assigned to a vertex/cell
-is the label of the nearest voxel in the given segmentation image. For the projection
-of cortical labels onto the WM/cGM or cGM/CSF boundary, use <a class="reference internal" href="#cmdoption-project-onto-surface-white"><em class="xref std std-option">project-onto-surface -white</em></a> or <a class="reference internal" href="#cmdoption-project-onto-surface-pial"><em class="xref std std-option">project-onto-surface -pial</em></a>.</p>
+When the input is a real-valued image, the values are linearly interpolated.
+When the input is a segmentation image, the value assigned to a vertex/cell is the
+label of the nearest voxel in the given segmentation image. For the projection of
+cortical labels onto the WM/GM or GM/CSF boundary, use <a class="reference internal" href="#cmdoption-project-onto-surface-white"><code class="xref std std-option docutils literal"><span class="pre">project-onto-surface</span> <span class="pre">-white</span></code></a> or <a class="reference internal" href="#cmdoption-project-onto-surface-pial"><code class="xref std std-option docutils literal"><span class="pre">project-onto-surface</span> <span class="pre">-pial</span></code></a>.</p>
 </div>
 <div class="section" id="arguments">
 <h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-project-onto-surface-arg-input">
-<tt class="descname">input</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-project-onto-surface-arg-input" title="Permalink to this definition">¶</a></dt>
+<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-arg-input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input surface mesh.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-project-onto-surface-arg-output">
-<tt class="descname">output</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-project-onto-surface-arg-output" title="Permalink to this definition">¶</a></dt>
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-arg-output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Output surface mesh.</p>
 </dd></dl>
 
@@ -125,63 +124,131 @@ of cortical labels onto the WM/cGM or cGM/CSF boundary, use <a class="reference 
 <div class="section" id="command-options">
 <h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
+<dt id="cmdoption-project-onto-surface-white">
+<code class="descname">-white</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-white" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input surface is cortical WM/GM boundary. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-pial">
+<code class="descname">-pial</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-pial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input surface is cortical GM/CSF boundary. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-project-onto-surface-image">
-<tt class="descname">-image</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-project-onto-surface-image" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-image</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input real-valued scalar/vector image.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-project-onto-surface-labels">
-<tt class="descname">-labels</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-project-onto-surface-labels" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-labels</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Input segmentation image with positive integer labels.</p>
 </dd></dl>
 
 <dl class="option">
+<dt id="cmdoption-project-onto-surface-surface">
+<code class="descname">-surface</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-surface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input surface from which to project scalars.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-constant">
+<code class="descname">-constant</code><code class="descclassname"> &lt;value&gt;...</code><a class="headerlink" href="#cmdoption-project-onto-surface-constant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign tuple of constant values to all points/cells.</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-project-onto-surface-name">
-<tt class="descname">-name</tt><tt class="descclassname"> &lt;name&gt;</tt><a class="headerlink" href="#cmdoption-project-onto-surface-name" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-name</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of output scalar array. (default: Scalars or Labels)</p>
 </dd></dl>
 
 <dl class="option">
+<dt id="cmdoption-project-onto-surface-type">
+<code class="descname">-type</code><code class="descclassname"> char|uchar|short|ushort|int|uint|float|double</code><a class="headerlink" href="#cmdoption-project-onto-surface-type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of output scalar array. (default: float)</p>
+</dd></dl>
+
+<dl class="option">
 <dt id="cmdoption-project-onto-surface-celldata">
-<span id="cmdoption-project-onto-surface-nocelldata"></span><tt class="descname">-celldata</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nocelldata</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-project-onto-surface-celldata" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-project-onto-surface-nocelldata"></span><code class="descname">-celldata</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocelldata</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-celldata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assign values to cells of input surface. (default: off)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-project-onto-surface-pointdata">
-<span id="cmdoption-project-onto-surface-nopointdata"></span><tt class="descname">-pointdata</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nopointdata</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-project-onto-surface-pointdata" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-project-onto-surface-nopointdata"></span><code class="descname">-pointdata</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nopointdata</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-pointdata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assign values to points of input surface. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-project-onto-surface-write-dilated-labels">
-<tt class="descname">-write-dilated-labels</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption-project-onto-surface-write-dilated-labels" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write image of dilated labels.</p>
+<dt id="cmdoption-project-onto-surface-fill">
+<span id="cmdoption-project-onto-surface-nofill"></span><code class="descname">-fill</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nofill</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-fill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fill holes/small patches in projected surface parcellation. (default: on)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-project-onto-surface-pial">
-<tt class="descname">-pial</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-project-onto-surface-pial" title="Permalink to this definition">¶</a></dt>
-<dd><p>Input surface is cortical cGM/CSF boundary.</p>
+<dt id="cmdoption-project-onto-surface-max-hole-size">
+<code class="descname">-max-hole-size</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-max-hole-size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only fill in holes with less than or exactly n points/cells.
+When non-positive, the largest -n holes are kept. A zero value is
+equivalent to -1, i.e., only the largest hole is kept. (default: max value)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-project-onto-surface-white">
-<tt class="descname">-white</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-project-onto-surface-white" title="Permalink to this definition">¶</a></dt>
-<dd><p>Input surface is cortical WM/cGM boundary.</p>
+<dt id="cmdoption-project-onto-surface-smooth">
+<code class="descname">-smooth</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-smooth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of iterations to smooth. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-project-onto-surface-min-size">
-<tt class="descname">-min-size</tt><tt class="descclassname"> &lt;n&gt;</tt><a class="headerlink" href="#cmdoption-project-onto-surface-min-size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Surface patches with less than n points are removed. (default: 0)</p>
+<code class="descname">-min-size</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-min-size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface patches with less than n points/cells are removed.
+When <a class="reference internal" href="#cmdoption-project-onto-surface-fill"><code class="xref std std-option docutils literal"><span class="pre">-fill</span></code></a> is given, the resulting holes are filled in
+using the non-zero labels of surrounding patches. Otherwise, the
+removed patches remain unlabeled (i.e., label value zero). (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
-<dt id="cmdoption-project-onto-surface-fill">
-<span id="cmdoption-project-onto-surface-nofill"></span><tt class="descname">-fill</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-nofill</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-project-onto-surface-fill" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fill holes in projected surface parcellation.</p>
+<dt id="cmdoption-project-onto-surface-min-ratio">
+<code class="descname">-min-ratio</code><code class="descclassname"> &lt;ratio&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-min-ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keep only components that are larger than ratio times the size
+of the largest connected component per label, with 0 &lt; ratio &lt;= 1.
+When <a class="reference internal" href="#cmdoption-project-onto-surface-fill"><code class="xref std std-option docutils literal"><span class="pre">-fill</span></code></a> is given, the resulting holes are filled in
+using the non-zero labels of surrounding patches. Otherwise, the
+removed patches remain unlabeled (i.e., label value zero). (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-scalars">
+<code class="descname">-scalars</code><code class="descclassname"> &lt;input_name&gt; [&lt;output_name&gt;]</code><a class="headerlink" href="#cmdoption-project-onto-surface-scalars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scalars to be projected from the input surface (can be defined multiple times).
+&lt;name2&gt; can be specified to set the name of the output scalar array.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-boundary">
+<code class="descname">-boundary</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-boundary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output boundary lines between surface parcels. (default: off)
+When no <a class="reference internal" href="#cmdoption-project-onto-surface-image"><code class="xref std std-option docutils literal"><span class="pre">-image</span></code></a> or <a class="reference internal" href="#cmdoption-project-onto-surface-labels"><code class="xref std std-option docutils literal"><span class="pre">-labels</span></code></a> input file is
+specified, the boundaries of the input parcellation given by
+the labels array with the specified <a class="reference internal" href="#cmdoption-project-onto-surface-name"><code class="xref std std-option docutils literal"><span class="pre">-name</span></code></a> are extracted.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-dilation-radius">
+<code class="descname">-dilation-radius</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-dilation-radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum distance of voxel from input label image boundary to be assigned
+this label during dilation before projecting these labels onto the surface. (default: inf)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-onto-surface-write-dilated-labels">
+<code class="descname">-write-dilated-labels</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-project-onto-surface-write-dilated-labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write image of dilated labels.</p>
 </dd></dl>
 
 </div>
@@ -189,31 +256,31 @@ of cortical labels onto the WM/cGM or cGM/CSF boundary, use <a class="reference 
 <h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
 <dl class="option">
 <dt id="cmdoption-project-onto-surface-v">
-<span id="cmdoption-project-onto-surface-verbose"></span><tt class="descname">-v</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-verbose</tt><tt class="descclassname"> [n]</tt><a class="headerlink" href="#cmdoption-project-onto-surface-v" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-project-onto-surface-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-project-onto-surface-v" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-project-onto-surface-debug">
-<tt class="descname">-debug</tt><tt class="descclassname"> [level]</tt><a class="headerlink" href="#cmdoption-project-onto-surface-debug" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-project-onto-surface-debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-project-onto-surface-version">
-<tt class="descname">-version</tt><tt class="descclassname"> [major.minor]</tt><a class="headerlink" href="#cmdoption-project-onto-surface-version" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-project-onto-surface-version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print version and exit or set version to emulate.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-project-onto-surface-revision">
-<tt class="descname">-revision</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-project-onto-surface-revision" title="Permalink to this definition">¶</a></dt>
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print revision (or version) number only and exit.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-project-onto-surface-h">
-<span id="cmdoption-project-onto-surface-help"></span><tt class="descname">-h</tt><tt class="descclassname"></tt><tt class="descclassname">, </tt><tt class="descname">-help</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-project-onto-surface-h" title="Permalink to this definition">¶</a></dt>
+<span id="cmdoption-project-onto-surface-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-project-onto-surface-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Print help and exit.</p>
 </dd></dl>
 
@@ -226,22 +293,22 @@ of cortical labels onto the WM/cGM or cGM/CSF boundary, use <a class="reference 
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="reflect-image.html" title="reflect-image"
+          <a href="recon-neonatal-cortex.html" title="recon-neonatal-cortex"
              >next</a></li>
         <li class="right" >
-          <a href="open-image.html" title="open-image"
+          <a href="open-scalars.html" title="open-scalars"
              >previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

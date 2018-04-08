@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['neonatalpialsurface',['NeonatalPialSurface',['../classmirtk_1_1ImageEdgeDistance.html#a8b4079a6baf4fabe5cde8fd01a69ff9daf4aba6cb69cc2115977bf4897e703ab5',1,'mirtk::ImageEdgeDistance']]],
+  ['neonatalwhitesurface',['NeonatalWhiteSurface',['../classmirtk_1_1ImageEdgeDistance.html#a8b4079a6baf4fabe5cde8fd01a69ff9da0e97ace82559b7fa346f73443b63552c',1,'mirtk::ImageEdgeDistance']]],
   ['nifti_5funits_5fhz',['NIFTI_UNITS_HZ',['../namespacemirtk.html#a8c5e9d64f9b5557cd73de6393bc36780a76edb4f885813de857fbbb2918bcf167',1,'mirtk']]],
   ['nifti_5funits_5fmeter',['NIFTI_UNITS_METER',['../namespacemirtk.html#a8c5e9d64f9b5557cd73de6393bc36780aec196df60a7273559737ceb9a33a5a6e',1,'mirtk']]],
   ['nifti_5funits_5fmicron',['NIFTI_UNITS_MICRON',['../namespacemirtk.html#a8c5e9d64f9b5557cd73de6393bc36780ab4c7463fa2e9b691138ee9ab31bae66a',1,'mirtk']]],
@@ -16,5 +18,7 @@ var searchData=
   ['nifti_5fxform_5ftalairach',['NIFTI_XFORM_TALAIRACH',['../namespacemirtk.html#a879095e0a9b483f59b131e0763a4fb6ba92573af157ffc92793dd01e93ccae18b',1,'mirtk']]],
   ['nifti_5fxform_5funknown',['NIFTI_XFORM_UNKNOWN',['../namespacemirtk.html#a879095e0a9b483f59b131e0763a4fb6baa3a38011b9223aa0949da95b4f5f7992',1,'mirtk']]],
   ['nocollision',['NoCollision',['../classmirtk_1_1SurfaceCollisions.html#a4fed86a64222a6738f8f0e7911eee58aa660d304a4d75aef6dce2141c48c8c52f',1,'mirtk::SurfaceCollisions']]],
-  ['normal',['Normal',['../classmirtk_1_1PolyDataCurvature.html#aef9441a27ec523be4153d9c7346a06d8ae19307db1074165870af2301b8041572',1,'mirtk::PolyDataCurvature']]]
+  ['noordering',['NoOrdering',['../classmirtk_1_1SurfacePatches.html#aa3c548050caeb9e93b1f30d364f20b49a92a4f9ad063a5d256059618c054bd37c',1,'mirtk::SurfacePatches']]],
+  ['normal',['Normal',['../classmirtk_1_1SurfaceCurvature.html#ac38c353a18906f3b18dd3f2d69245cd7a994d1c9dd032d4fc18e66bfc9f451f8d',1,'mirtk::SurfaceCurvature']]],
+  ['normaldeviation',['NormalDeviation',['../classmirtk_1_1MeshSmoothing.html#a2657e813efdba85594ccfd0706b37ecda3ce6c0a5f3e27a75fec9314af0e24533',1,'mirtk::MeshSmoothing']]]
 ];

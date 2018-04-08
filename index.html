@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,18 +26,18 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="#" />
+    <link rel="top" title="MIRTK" href="sidebar.html" />
     <link rel="next" title="Get Started" href="getstarted.html" />
     <link rel="prev" title="&lt;no title&gt;" href="sidebar.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -46,12 +46,12 @@
         <li class="right" >
           <a href="sidebar.html" title="&lt;no title&gt;"
              accesskey="P">previous</a> |</li>
-        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -59,14 +59,11 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="sidebar.html">Table Of Contents</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Overview</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#modules">Modules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
@@ -92,7 +89,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="medical-image-registration-toolkit-mirtk">
 <h1>Medical Image Registration ToolKit (MIRTK)<a class="headerlink" href="#medical-image-registration-toolkit-mirtk" title="Permalink to this headline">¶</a></h1>
@@ -104,7 +101,7 @@ as well as the reconstruction of cortical surface meshes. The modular project
 organization of the MIRTK enables the installation of selected modules.</p>
 <p>In the event you found the MIRTK useful, please consider giving appropriate credit
 to the software with a citation of the research article(s) describing the implemented
-algorithm(s). See the <a class="reference internal" href="publications.html"><em>list of publications</em></a> for suitable references.</p>
+algorithm(s). See the <a class="reference internal" href="publications.html"><span class="doc">list of publications</span></a> for suitable references.</p>
 <div class="section" id="modules">
 <h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
@@ -118,32 +115,38 @@ algorithm(s). See the <a class="reference internal" href="publications.html"><em
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="modules/common.html"><em>Common</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/common.html"><span class="doc">Common</span></a></td>
 <td>Base classes and common functions. (required)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="modules/numerics.html"><em>Numerics</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/numerics.html"><span class="doc">Numerics</span></a></td>
 <td>Utility types such as matrices and functions for numerical optimization.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="modules/image.html"><em>Image</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/image.html"><span class="doc">Image</span></a></td>
 <td>Image containers, interpolators, and basic image processing filters.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="modules/io.html"><em>I/O</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/io.html"><span class="doc">I/O</span></a></td>
 <td>I/O functions such as image and point set file readers and writers.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="modules/pointset.html"><em>Point Set</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/pointset.html"><span class="doc">Point Set</span></a></td>
 <td>VTK point set/surface filters. Required for point set/surface registration.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="modules/transformation.html"><em>Transformation</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/transformation.html"><span class="doc">Transformation</span></a></td>
 <td>Image and point set transformation types and regularization terms.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="modules/registration.html"><em>Registration</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="modules/registration.html"><span class="doc">Registration</span></a></td>
 <td>Image and point set registration library.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="modules/deformable.html"><em>Deformable</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="modules/deformable.html"><span class="doc">Deformable</span></a></td>
 <td>Library for Euler integration of deformable meshes such as cortical surfaces.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="modules/volumetricmapping.html"><em>Volumetric Mapping</em></a></td>
-<td>Filters for the volumetric mapping of brain volumes.</td>
+<tr class="row-even"><td><a class="reference internal" href="modules/mapping.html"><span class="doc">Mapping</span></a></td>
+<td>Filters for the mapping of brain surfaces and volumes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="modules/scripting.html"><span class="doc">Scripting</span></a></td>
+<td>Collection of auxiliary modules for scripting languages such as Python.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="modules/drawem.html"><span class="doc">Draw-EM</span></a></td>
+<td>Structural and tissue segmentation of neonatal brain MR images.</td>
 </tr>
 </tbody>
 </table>
@@ -158,79 +161,124 @@ algorithm(s). See the <a class="reference internal" href="publications.html"><em
 <col width="25%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="commands/average-dofs.html"><em>average-dofs</em></a></td>
-<td><a class="reference internal" href="commands/average-images.html"><em>average-images</em></a></td>
-<td><a class="reference internal" href="commands/bisect-dof.html"><em>bisect-dof</em></a></td>
-<td><a class="reference internal" href="commands/calculate.html"><em>calculate</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/aggregate-images.html"><span class="doc">aggregate-images</span></a></td>
+<td><a class="reference internal" href="commands/average-dofs.html"><span class="doc">average-dofs</span></a></td>
+<td><a class="reference internal" href="commands/average-images.html"><span class="doc">average-images</span></a></td>
+<td><a class="reference internal" href="commands/average-measure.html"><span class="doc">average-measure</span></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/calculate-distance-map.html"><em>calculate-distance-map</em></a></td>
-<td><a class="reference internal" href="commands/calculate-exponential-map.html"><em>calculate-exponential-map</em></a></td>
-<td><a class="reference internal" href="commands/calculate-lie-bracket.html"><em>calculate-lie-bracket</em></a></td>
-<td><a class="reference internal" href="commands/calculate-logarithmic-map.html"><em>calculate-logarithmic-map</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/average-overlap.html"><span class="doc">average-overlap</span></a></td>
+<td><a class="reference internal" href="commands/bisect-dof.html"><span class="doc">bisect-dof</span></a></td>
+<td><a class="reference internal" href="commands/blend-surface.html"><span class="doc">blend-surface</span></a></td>
+<td><a class="reference internal" href="commands/calculate-boundary-map.html"><span class="doc">calculate-boundary-map</span></a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/calculate-surface-attributes.html"><em>calculate-surface-attributes</em></a></td>
-<td><a class="reference internal" href="commands/calculate-surface-spectrum.html"><em>calculate-surface-spectrum</em></a></td>
-<td><a class="reference internal" href="commands/close-image.html"><em>close-image</em></a></td>
-<td><a class="reference internal" href="commands/concatenate-dofs.html"><em>concatenate-dofs</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/calculate-distance-map.html"><span class="doc">calculate-distance-map</span></a></td>
+<td><a class="reference internal" href="commands/calculate-element-wise.html"><span class="doc">calculate-element-wise</span></a></td>
+<td><a class="reference internal" href="commands/calculate-exponential-map.html"><span class="doc">calculate-exponential-map</span></a></td>
+<td><a class="reference internal" href="commands/calculate-filtering.html"><span class="doc">calculate-filtering</span></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/concatenate-images.html"><em>concatenate-images</em></a></td>
-<td><a class="reference internal" href="commands/convert-dof.html"><em>convert-dof</em></a></td>
-<td><a class="reference internal" href="commands/convert-image.html"><em>convert-image</em></a></td>
-<td><a class="reference internal" href="commands/convert-pointset.html"><em>convert-pointset</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/calculate-gradients.html"><span class="doc">calculate-gradients</span></a></td>
+<td><a class="reference internal" href="commands/calculate-lie-bracket.html"><span class="doc">calculate-lie-bracket</span></a></td>
+<td><a class="reference internal" href="commands/calculate-logarithmic-map.html"><span class="doc">calculate-logarithmic-map</span></a></td>
+<td><a class="reference internal" href="commands/calculate-surface-attributes.html"><span class="doc">calculate-surface-attributes</span></a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/convert-pointset-to-mat.html"><em>convert-pointset-to-mat</em></a></td>
-<td><a class="reference internal" href="commands/copy-pointset-attributes.html"><em>copy-pointset-attributes</em></a></td>
-<td><a class="reference internal" href="commands/copy-pointset-attributes-from-mat.html"><em>copy-pointset-attributes-from-mat</em></a></td>
-<td><a class="reference internal" href="commands/cut-brain.html"><em>cut-brain</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/calculate-surface-map.html"><span class="doc">calculate-surface-map</span></a></td>
+<td><a class="reference internal" href="commands/calculate-surface-spectrum.html"><span class="doc">calculate-surface-spectrum</span></a></td>
+<td><a class="reference internal" href="commands/calculate-volume-map.html"><span class="doc">calculate-volume-map</span></a></td>
+<td><a class="reference internal" href="commands/change-label.html"><span class="doc">change-label</span></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/decimate-surface.html"><em>decimate-surface</em></a></td>
-<td><a class="reference internal" href="commands/deform-mesh.html"><em>deform-mesh</em></a></td>
-<td><a class="reference internal" href="commands/delete-pointset-attributes.html"><em>delete-pointset-attributes</em></a></td>
-<td><a class="reference internal" href="commands/detect-edges.html"><em>detect-edges</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/close-image.html"><span class="doc">close-image</span></a></td>
+<td><a class="reference internal" href="commands/close-scalars.html"><span class="doc">close-scalars</span></a></td>
+<td><a class="reference internal" href="commands/combine-images.html"><span class="doc">combine-images</span></a></td>
+<td><a class="reference internal" href="commands/compose-dofs.html"><span class="doc">compose-dofs</span></a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/dilate-image.html"><em>dilate-image</em></a></td>
-<td><a class="reference internal" href="commands/downsample-image.html"><em>downsample-image</em></a></td>
-<td><a class="reference internal" href="commands/edit-dof.html"><em>edit-dof</em></a></td>
-<td><a class="reference internal" href="commands/edit-image.html"><em>edit-image</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/compose-maps.html"><span class="doc">compose-maps</span></a></td>
+<td><a class="reference internal" href="commands/construct-atlas.html"><span class="doc">construct-atlas</span></a></td>
+<td><a class="reference internal" href="commands/convert-dof.html"><span class="doc">convert-dof</span></a></td>
+<td><a class="reference internal" href="commands/convert-image.html"><span class="doc">convert-image</span></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/erode-image.html"><em>erode-image</em></a></td>
-<td><a class="reference internal" href="commands/evaluate-distance.html"><em>evaluate-distance</em></a></td>
-<td><a class="reference internal" href="commands/evaluate-distortion.html"><em>evaluate-distortion</em></a></td>
-<td><a class="reference internal" href="commands/evaluate-dof.html"><em>evaluate-dof</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/convert-pointset.html"><span class="doc">convert-pointset</span></a></td>
+<td><a class="reference internal" href="commands/copy-pointset-attributes.html"><span class="doc">copy-pointset-attributes</span></a></td>
+<td><a class="reference internal" href="commands/cut-brain.html"><span class="doc">cut-brain</span></a></td>
+<td><a class="reference internal" href="commands/decimate-surface.html"><span class="doc">decimate-surface</span></a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/evaluate-jacobian.html"><em>evaluate-jacobian</em></a></td>
-<td><a class="reference internal" href="commands/evaluate-overlap.html"><em>evaluate-overlap</em></a></td>
-<td><a class="reference internal" href="commands/evaluate-similarity.html"><em>evaluate-similarity</em></a></td>
-<td><a class="reference internal" href="commands/evaluate-surface-overlap.html"><em>evaluate-surface-overlap</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/deform-mesh.html"><span class="doc">deform-mesh</span></a></td>
+<td><a class="reference internal" href="commands/delete-pointset-attributes.html"><span class="doc">delete-pointset-attributes</span></a></td>
+<td><a class="reference internal" href="commands/detect-edges.html"><span class="doc">detect-edges</span></a></td>
+<td><a class="reference internal" href="commands/dilate-image.html"><span class="doc">dilate-image</span></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/extract-connected-components.html"><em>extract-connected-components</em></a></td>
-<td><a class="reference internal" href="commands/extract-connected-points.html"><em>extract-connected-points</em></a></td>
-<td><a class="reference internal" href="commands/extract-image-region.html"><em>extract-image-region</em></a></td>
-<td><a class="reference internal" href="commands/extract-pointset-surface.html"><em>extract-pointset-surface</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/dilate-scalars.html"><span class="doc">dilate-scalars</span></a></td>
+<td><a class="reference internal" href="commands/downsample-image.html"><span class="doc">downsample-image</span></a></td>
+<td><a class="reference internal" href="commands/draw-em.html"><span class="doc">draw-em</span></a></td>
+<td><a class="reference internal" href="commands/edit-dof.html"><span class="doc">edit-dof</span></a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/extract-surface.html"><em>extract-surface</em></a></td>
-<td><a class="reference internal" href="commands/flip-image.html"><em>flip-image</em></a></td>
-<td><a class="reference internal" href="commands/help-rst.html"><em>help-rst</em></a></td>
-<td><a class="reference internal" href="commands/info.html"><em>info</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/edit-image.html"><span class="doc">edit-image</span></a></td>
+<td><a class="reference internal" href="commands/em.html"><span class="doc">em</span></a></td>
+<td><a class="reference internal" href="commands/em-hard-segmentation.html"><span class="doc">em-hard-segmentation</span></a></td>
+<td><a class="reference internal" href="commands/erode-image.html"><span class="doc">erode-image</span></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/init-dof.html"><em>init-dof</em></a></td>
-<td><a class="reference internal" href="commands/invert-dof.html"><em>invert-dof</em></a></td>
-<td><a class="reference internal" href="commands/map.html"><em>map</em></a></td>
-<td><a class="reference internal" href="commands/match-points.html"><em>match-points</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/erode-scalars.html"><span class="doc">erode-scalars</span></a></td>
+<td><a class="reference internal" href="commands/evaluate-atlas.html"><span class="doc">evaluate-atlas</span></a></td>
+<td><a class="reference internal" href="commands/evaluate-cardiac-motion.html"><span class="doc">evaluate-cardiac-motion</span></a></td>
+<td><a class="reference internal" href="commands/evaluate-distance.html"><span class="doc">evaluate-distance</span></a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/offset-surface.html"><em>offset-surface</em></a></td>
-<td><a class="reference internal" href="commands/open-image.html"><em>open-image</em></a></td>
-<td><a class="reference internal" href="commands/project-onto-surface.html"><em>project-onto-surface</em></a></td>
-<td><a class="reference internal" href="commands/reflect-image.html"><em>reflect-image</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/evaluate-distortion.html"><span class="doc">evaluate-distortion</span></a></td>
+<td><a class="reference internal" href="commands/evaluate-dof.html"><span class="doc">evaluate-dof</span></a></td>
+<td><a class="reference internal" href="commands/evaluate-jacobian.html"><span class="doc">evaluate-jacobian</span></a></td>
+<td><a class="reference internal" href="commands/evaluate-overlap.html"><span class="doc">evaluate-overlap</span></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="commands/register.html"><em>register</em></a></td>
-<td><a class="reference internal" href="commands/remesh.html"><em>remesh</em></a></td>
-<td><a class="reference internal" href="commands/resample-image.html"><em>resample-image</em></a></td>
-<td><a class="reference internal" href="commands/smooth-image.html"><em>smooth-image</em></a></td>
+<tr class="row-even"><td><a class="reference internal" href="commands/evaluate-similarity.html"><span class="doc">evaluate-similarity</span></a></td>
+<td><a class="reference internal" href="commands/evaluate-surface-map.html"><span class="doc">evaluate-surface-map</span></a></td>
+<td><a class="reference internal" href="commands/evaluate-surface-mesh.html"><span class="doc">evaluate-surface-mesh</span></a></td>
+<td><a class="reference internal" href="commands/evaluate-surface-overlap.html"><span class="doc">evaluate-surface-overlap</span></a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="commands/smooth-surface.html"><em>smooth-surface</em></a></td>
-<td><a class="reference internal" href="commands/transform-image.html"><em>transform-image</em></a></td>
-<td><a class="reference internal" href="commands/transform-points.html"><em>transform-points</em></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="commands/evaluate-volume-map.html"><span class="doc">evaluate-volume-map</span></a></td>
+<td><a class="reference internal" href="commands/extract-connected-components.html"><span class="doc">extract-connected-components</span></a></td>
+<td><a class="reference internal" href="commands/extract-connected-points.html"><span class="doc">extract-connected-points</span></a></td>
+<td><a class="reference internal" href="commands/extract-image-region.html"><span class="doc">extract-image-region</span></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/extract-image-slice.html"><span class="doc">extract-image-slice</span></a></td>
+<td><a class="reference internal" href="commands/extract-image-volume.html"><span class="doc">extract-image-volume</span></a></td>
+<td><a class="reference internal" href="commands/extract-pointset-cells.html"><span class="doc">extract-pointset-cells</span></a></td>
+<td><a class="reference internal" href="commands/extract-pointset-surface.html"><span class="doc">extract-pointset-surface</span></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/extract-surface.html"><span class="doc">extract-surface</span></a></td>
+<td><a class="reference internal" href="commands/fill-holes.html"><span class="doc">fill-holes</span></a></td>
+<td><a class="reference internal" href="commands/fill-holes-nn-based.html"><span class="doc">fill-holes-nn-based</span></a></td>
+<td><a class="reference internal" href="commands/flip-image.html"><span class="doc">flip-image</span></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/help-rst.html"><span class="doc">help-rst</span></a></td>
+<td><a class="reference internal" href="commands/info.html"><span class="doc">info</span></a></td>
+<td><a class="reference internal" href="commands/init-dof.html"><span class="doc">init-dof</span></a></td>
+<td><a class="reference internal" href="commands/invert-dof.html"><span class="doc">invert-dof</span></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/kmeans.html"><span class="doc">kmeans</span></a></td>
+<td><a class="reference internal" href="commands/match-histogram.html"><span class="doc">match-histogram</span></a></td>
+<td><a class="reference internal" href="commands/match-points.html"><span class="doc">match-points</span></a></td>
+<td><a class="reference internal" href="commands/measure-volume.html"><span class="doc">measure-volume</span></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/merge-surfaces.html"><span class="doc">merge-surfaces</span></a></td>
+<td><a class="reference internal" href="commands/normalize.html"><span class="doc">normalize</span></a></td>
+<td><a class="reference internal" href="commands/offset-surface.html"><span class="doc">offset-surface</span></a></td>
+<td><a class="reference internal" href="commands/open-image.html"><span class="doc">open-image</span></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/open-scalars.html"><span class="doc">open-scalars</span></a></td>
+<td><a class="reference internal" href="commands/project-onto-surface.html"><span class="doc">project-onto-surface</span></a></td>
+<td><a class="reference internal" href="commands/recon-neonatal-cortex.html"><span class="doc">recon-neonatal-cortex</span></a></td>
+<td><a class="reference internal" href="commands/reflect-image.html"><span class="doc">reflect-image</span></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/register.html"><span class="doc">register</span></a></td>
+<td><a class="reference internal" href="commands/remesh-surface.html"><span class="doc">remesh-surface</span></a></td>
+<td><a class="reference internal" href="commands/resample-image.html"><span class="doc">resample-image</span></a></td>
+<td><a class="reference internal" href="commands/smooth-image.html"><span class="doc">smooth-image</span></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="commands/smooth-surface.html"><span class="doc">smooth-surface</span></a></td>
+<td><a class="reference internal" href="commands/split-labels.html"><span class="doc">split-labels</span></a></td>
+<td><a class="reference internal" href="commands/subdivide-brain-image.html"><span class="doc">subdivide-brain-image</span></a></td>
+<td><a class="reference internal" href="commands/transform-image.html"><span class="doc">transform-image</span></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="commands/transform-points.html"><span class="doc">transform-points</span></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
@@ -254,7 +302,7 @@ harmonic mapping of brain volumes were subsequently added to the MIRTK.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -263,12 +311,12 @@ harmonic mapping of brain volumes were subsequently added to the MIRTK.</p>
         <li class="right" >
           <a href="sidebar.html" title="&lt;no title&gt;"
              >previous</a> |</li>
-        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

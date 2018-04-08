@@ -1,4 +1,4 @@
 <map id="mirtk::PointCorrespondence" name="mirtk::PointCorrespondence">
-<area shape="rect" id="node2" href="$classmirtk_1_1Observable.html" title="{mirtk::Observable\n||+ AddObserver()\l+ Broadcast()\l+ ClearObservers()\l+ DeleteObserver()\l+ NotifyObservers()\l+ NumberOfObservers()\l+ ~Observable()\l# Observable()\l# Observable()\l# operator=()\l}" alt="" coords="72,206,235,415"/>
-<area shape="rect" id="node3" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l}" alt="" coords="91,6,216,157"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Observable.html" title="{mirtk::Observable\n||+ AddObserver()\l+ Broadcast()\l+ ClearObservers()\l+ DeleteObserver()\l+ NotifyObservers()\l+ NumberOfObservers()\l+ ~Observable()\l# Observable()\l# Observable()\l# operator=()\l}" alt="" coords="72,249,236,474"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="92,6,216,199"/>
 </map>

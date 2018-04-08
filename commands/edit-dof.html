@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,34 +24,34 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="../index.html" />
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
     <link rel="up" title="Applications" href="../commands.html" />
     <link rel="next" title="edit-image" href="edit-image.html" />
-    <link rel="prev" title="downsample-image" href="downsample-image.html" />
+    <link rel="prev" title="draw-em" href="draw-em.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="edit-image.html" title="edit-image"
              accesskey="N">next</a></li>
         <li class="right" >
-          <a href="downsample-image.html" title="downsample-image"
+          <a href="draw-em.html" title="draw-em"
              accesskey="P">previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -59,9 +59,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="../sidebar.html">Table Of Contents</a></h3>
@@ -87,13 +84,13 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="edit-dof">
 <h1>edit-dof<a class="headerlink" href="#edit-dof" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>edit-dof &lt;dofin&gt; &lt;dofout&gt; [options]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">edit</span><span class="o">-</span><span class="n">dof</span> <span class="o">&lt;</span><span class="n">dofin</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">dofout</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -115,13 +112,13 @@ some compound words. See examples below.</p>
 <div class="section" id="example-1">
 <h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p><strong>Command</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>edit-dof svffd.dof.gz svffd.dof.gz -number-of-integration-steps 128
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">edit</span><span class="o">-</span><span class="n">dof</span> <span class="n">svffd</span><span class="o">.</span><span class="n">dof</span><span class="o">.</span><span class="n">gz</span> <span class="n">svffd</span><span class="o">.</span><span class="n">dof</span><span class="o">.</span><span class="n">gz</span> <span class="o">-</span><span class="n">number</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">integration</span><span class="o">-</span><span class="n">steps</span> <span class="mi">128</span>
 </pre></div>
 </div>
 <p><strong>Output/Description</strong>:</p>
-<div class="highlight-python"><div class="highlight"><pre>The option &quot;-number-of-integration-steps&quot; used here corresponds to
-the parameter &quot;Number of integration steps&quot; of the SV FFD transformation.
-The new value for the parameter will be 128.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">option</span> <span class="s2">&quot;-number-of-integration-steps&quot;</span> <span class="n">used</span> <span class="n">here</span> <span class="n">corresponds</span> <span class="n">to</span>
+<span class="n">the</span> <span class="n">parameter</span> <span class="s2">&quot;Number of integration steps&quot;</span> <span class="n">of</span> <span class="n">the</span> <span class="n">SV</span> <span class="n">FFD</span> <span class="n">transformation</span><span class="o">.</span>
+<span class="n">The</span> <span class="n">new</span> <span class="n">value</span> <span class="k">for</span> <span class="n">the</span> <span class="n">parameter</span> <span class="n">will</span> <span class="n">be</span> <span class="mf">128.</span>
 </pre></div>
 </div>
 </div>
@@ -134,22 +131,22 @@ The new value for the parameter will be 128.
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="edit-image.html" title="edit-image"
              >next</a></li>
         <li class="right" >
-          <a href="downsample-image.html" title="downsample-image"
+          <a href="draw-em.html" title="draw-em"
              >previous</a> |</li>
-        <li><a href="../sidebar.html">MIRTK</a> &raquo;</li>
-          <li><a href="../commands.html" >Applications</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

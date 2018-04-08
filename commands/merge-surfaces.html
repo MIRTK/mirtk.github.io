@@ -1,0 +1,421 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>merge-surfaces &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="normalize" href="normalize.html" />
+    <link rel="prev" title="measure-volume" href="measure-volume.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="normalize.html" title="normalize"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="measure-volume.html" title="measure-volume"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="merge-surfaces">
+<h1>merge-surfaces<a class="headerlink" href="#merge-surfaces" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">merge</span><span class="o">-</span><span class="n">surfaces</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+<span class="n">merge</span><span class="o">-</span><span class="n">surfaces</span> <span class="p">[</span><span class="o">&lt;</span><span class="nb">input</span><span class="o">&gt;...</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">output</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Merge surface meshes at segmentation label boundaries. The input
+surfaces must follow closely the boundary of a segment in the given
+image segmentation. Two surfaces are then merged at the longest
+common intersection boundary. When the two surfaces share no such
+segmentation boundary, the surfaces are not connected.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-arg-input">
+<code class="descname">input</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-arg-input" title="Permalink to this definition">¶</a></dt>
+<dd><p>File name of input surface mesh.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-arg-output">
+<code class="descname">output</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-arg-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>File name of output surface mesh.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-i">
+<span id="cmdoption-merge-surfaces-input"></span><code class="descname">-i</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-input</code><code class="descclassname"> &lt;file&gt;...</code><a class="headerlink" href="#cmdoption-merge-surfaces-i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input surfaces. These are added to the list of input surfaces
+to be merged after the &lt;input&gt; arguments.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-o">
+<span id="cmdoption-merge-surfaces-output"></span><code class="descname">-o</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-output</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-o" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output surface file. When this option is given, the &lt;output&gt;
+argument is appended to the &lt;input&gt; surfaces before any surface
+specified using <a class="reference internal" href="#cmdoption-merge-surfaces-i"><code class="xref std std-option docutils literal"><span class="pre">-i</span></code></a>. Either this option or an &lt;output&gt;
+argument is required.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-labels">
+<code class="descname">-labels</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Segmentation labels image. Currently required.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-labels-percentage">
+<code class="descname">-labels-percentage</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-labels-percentage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Percentage of voxels within an input surface that must have the same label
+to be considered for determining boundaries between segments.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-source-array">
+<code class="descname">-source-array</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-source-array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add point/cell data array with the specified name with one-based
+labels corresponding to the input point set from which an output
+point/cell originates from. When the first input point set has
+a scalar array with the specified name, the labels of this first
+surface are preserved, while successive labels are offset by the
+maximum integer value of the input data array. This is useful when
+successively merging surface meshes instead of with a single execution
+of this command. (default: none)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-point-source-array">
+<code class="descname">-point-source-array</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-point-source-array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of output point data <a class="reference internal" href="#cmdoption-merge-surfaces-source-array"><code class="xref std std-option docutils literal"><span class="pre">-source-array</span></code></a>.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-cell-source-array">
+<code class="descname">-cell-source-array</code><code class="descclassname"> &lt;name&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-cell-source-array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of output cell data <a class="reference internal" href="#cmdoption-merge-surfaces-source-array"><code class="xref std std-option docutils literal"><span class="pre">-source-array</span></code></a>.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-join">
+<span id="cmdoption-merge-surfaces-nojoin"></span><code class="descname">-join</code><code class="descclassname"> [on|off]</code><code class="descclassname">, </code><code class="descname">-nojoin</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-join" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether to join surfaces at intersection boundaries.
+When off, the output data set has unconnected components.
+(default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-largest">
+<code class="descname">-largest</code><code class="descclassname"> [on|off]</code><a class="headerlink" href="#cmdoption-merge-surfaces-largest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retain only largest surface component after <a class="reference internal" href="#cmdoption-merge-surfaces-join"><code class="xref std std-option docutils literal"><span class="pre">-join</span></code></a> of boundaries. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-tolerance">
+<span id="cmdoption-merge-surfaces-tol"></span><code class="descname">-tolerance</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-tol</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-tolerance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum distance of an input cell from the segmentation
+boundary to be removed. The resulting intersection boundary
+edges are joined again after the removal of these cells.
+(default: max voxel size)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-smooth-boundaries">
+<span id="cmdoption-merge-surfaces-boundary-smoothing"></span><code class="descname">-smooth-boundaries</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-boundary-smoothing</code><code class="descclassname"> [&lt;n&gt;]</code><a class="headerlink" href="#cmdoption-merge-surfaces-smooth-boundaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of intersection boundary edge smoothing iterations.
+(default: 3)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-nosmooth-boundaries">
+<span id="cmdoption-merge-surfaces-noboundary-smoothing"></span><code class="descname">-nosmooth-boundaries</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noboundary-smoothing</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-nosmooth-boundaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable smoothing of boundaries, same as <a class="reference internal" href="#cmdoption-merge-surfaces-smooth-boundaries"><code class="xref std std-option docutils literal"><span class="pre">-smooth-boundaries</span></code></a> 0.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-remeshing">
+<span id="cmdoption-merge-surfaces-remesh"></span><code class="descname">-remeshing</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-remesh</code><code class="descclassname"> [&lt;n&gt;]</code><a class="headerlink" href="#cmdoption-merge-surfaces-remeshing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable remeshing of newly inserted triangles at intersection
+boundaries. The default number of remeshing iterations &lt;n&gt; is 3.
+A different value can be specified using this option or
+<a class="reference internal" href="#cmdoption-merge-surfaces-remeshing-iterations"><code class="xref std std-option docutils literal"><span class="pre">-remeshing-iterations</span></code></a>. (default: 3)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-remeshing-iterations">
+<span id="cmdoption-merge-surfaces-remesh-iterations"></span><code class="descname">-remeshing-iterations</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-remesh-iterations</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-remeshing-iterations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of intersection triangle remeshing iterations. (default: 3)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-noremeshing">
+<span id="cmdoption-merge-surfaces-noremesh"></span><code class="descname">-noremeshing</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-noremesh</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-noremeshing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable remeshing of newly inserted intersection triangles,
+same as <a class="reference internal" href="#cmdoption-merge-surfaces-remeshing"><code class="xref std std-option docutils literal"><span class="pre">-remeshing</span></code></a> or <a class="reference internal" href="#cmdoption-merge-surfaces-remeshing-iterations"><code class="xref std std-option docutils literal"><span class="pre">-remeshing-iterations</span></code></a> 0.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-edge-length">
+<code class="descname">-edge-length</code><code class="descclassname"> &lt;min&gt; [&lt;max&gt;]</code><a class="headerlink" href="#cmdoption-merge-surfaces-edge-length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edge length range for remeshing newly inserted triangles at
+intersection boundaries. When min and/or max edge length not
+specified, the range is chosen based on the mean local edge
+length of the input meshes at the intersection boundaries
+minus/plus <a class="reference internal" href="#cmdoption-merge-surfaces-edge-length-sigma"><code class="xref std std-option docutils literal"><span class="pre">-edge-length-sigma</span></code></a> times the local
+standard deviation of input mesh edge lengths.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-min-edge-length">
+<code class="descname">-min-edge-length</code><code class="descclassname"> &lt;min&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-min-edge-length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimum edge length for remeshing of newly inserted triangles.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-max-edge-length">
+<code class="descname">-max-edge-length</code><code class="descclassname"> &lt;min&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-max-edge-length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum edge length for remeshing of newly inserted triangles.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-edge-length-sigma">
+<code class="descname">-edge-length-sigma</code><code class="descclassname"> &lt;scale&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-edge-length-sigma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standard deviation scaling factor of local edge length standard
+deviation used to set min/max edge length range for local remeshing
+of newly inserted triangles at intersection boundaries. (default: 2)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-smoothing">
+<span id="cmdoption-merge-surfaces-smooth"></span><code class="descname">-smoothing</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-smooth</code><code class="descclassname"> [&lt;n&gt;]</code><a class="headerlink" href="#cmdoption-merge-surfaces-smoothing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable smoothing of merged surface points nearby intersection boundaries.
+When <a class="reference internal" href="#cmdoption-merge-surfaces-smoothing-mu"><code class="xref std std-option docutils literal"><span class="pre">-smoothing-mu</span></code></a> is zero or NaN, Gaussian weighting function
+is used for the mesh smoothing. Otherwise, a uniform weighting is used. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-smoothing-iterations">
+<span id="cmdoption-merge-surfaces-smooth-iterations"></span><code class="descname">-smoothing-iterations</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-smooth-iterations</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-smoothing-iterations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of intersection points smoothing iterations. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-nosmoothing">
+<span id="cmdoption-merge-surfaces-nosmooth"></span><code class="descname">-nosmoothing</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nosmooth</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-nosmoothing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable smoothing of nearby intersection points, same as
+<a class="reference internal" href="#cmdoption-merge-surfaces-smoothing"><code class="xref std std-option docutils literal"><span class="pre">-smoothing</span></code></a> or <a class="reference internal" href="#cmdoption-merge-surfaces-smoothing-iterations"><code class="xref std std-option docutils literal"><span class="pre">-smoothing-iterations</span></code></a> 0.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-smoothing-lambda">
+<span id="cmdoption-merge-surfaces-smooth-lambda"></span><code class="descname">-smoothing-lambda</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-smooth-lambda</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-smoothing-lambda" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lambda parameter used for odd iterations of Laplacian point <a class="reference internal" href="#cmdoption-merge-surfaces-smoothing"><code class="xref std std-option docutils literal"><span class="pre">-smoothing</span></code></a>.
+The default value is set based on the <a class="reference internal" href="#cmdoption-merge-surfaces-smooth-mu"><code class="xref std std-option docutils literal"><span class="pre">-smooth-mu</span></code></a> parameter. (default: abs(mu) - .01)
+When only <a class="reference internal" href="#cmdoption-merge-surfaces-smoothing-lambda"><code class="xref std std-option docutils literal"><span class="pre">-smoothing-lambda</span></code></a> is given, <a class="reference internal" href="#cmdoption-merge-surfaces-smoothing-mu"><code class="xref std std-option docutils literal"><span class="pre">-smoothing-mu</span></code></a> is set to
+to the same value and a Gaussian weighting function is used.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-smoothing-mu">
+<span id="cmdoption-merge-surfaces-smooth-mu"></span><code class="descname">-smoothing-mu</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-smooth-mu</code><code class="descclassname"> &lt;float&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-smoothing-mu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lambda parameter used for even iterations of Laplacian point <a class="reference internal" href="#cmdoption-merge-surfaces-smoothing"><code class="xref std std-option docutils literal"><span class="pre">-smoothing</span></code></a>.
+The default smoothing parameters avoid shrinking of the surface mesh
+and serve mainly to relax any small self-intersections that may have
+been introduced while joining the split input surfaces. (default: -.75)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-neighborhood">
+<span id="cmdoption-merge-surfaces-neighbourhood"></span><span id="cmdoption-merge-surfaces-radius"></span><code class="descname">-neighborhood</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-neighbourhood</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-radius</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-neighborhood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edge connectivity radius around intersection border cells/points used
+to define the local neighborhood for which to apply the remeshing and
+smoothing operations. See also <a class="reference internal" href="#cmdoption-merge-surfaces-remeshing-neighborhood"><code class="xref std std-option docutils literal"><span class="pre">-remeshing-neighborhood</span></code></a>.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-remeshing-neighborhood">
+<span id="cmdoption-merge-surfaces-remeshing-radius"></span><code class="descname">-remeshing-neighborhood</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-remeshing-radius</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-remeshing-neighborhood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edge connectivity radius around intersection border cells/points used
+to define neighborhood for which to apply the <a class="reference internal" href="#cmdoption-merge-surfaces-remeshing"><code class="xref std std-option docutils literal"><span class="pre">-remeshing</span></code></a>. (default: 3)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-smoothing-neighborhood">
+<span id="cmdoption-merge-surfaces-smoothing-radius"></span><code class="descname">-smoothing-neighborhood</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-smoothing-radius</code><code class="descclassname"> &lt;int&gt;</code><a class="headerlink" href="#cmdoption-merge-surfaces-smoothing-neighborhood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edge connectivity radius around intersection border cells/points used
+to define neighborhood for which to apply the <a class="reference internal" href="#cmdoption-merge-surfaces-smoothing"><code class="xref std std-option docutils literal"><span class="pre">-smoothing</span></code></a>. (default: 2)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-smooth-source">
+<span id="cmdoption-merge-surfaces-arg-source-smoothing"></span><code class="descname">-smooth-source</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">source-smoothing</code><code class="descclassname"> [&lt;n&gt;]</code><a class="headerlink" href="#cmdoption-merge-surfaces-smooth-source" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of iterations for which to smooth the <a class="reference internal" href="#cmdoption-merge-surfaces-source-array"><code class="xref std std-option docutils literal"><span class="pre">-source-array</span></code></a>
+labels to form smoother boundaries between intersection borders.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-dividers">
+<span id="cmdoption-merge-surfaces-nodividers"></span><code class="descname">-dividers</code><code class="descclassname"> [on|off]</code><code class="descclassname">, </code><code class="descname">-nodividers</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-dividers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable insertion of segmentation cutting planes at mesh intersections.
+The <a class="reference internal" href="#cmdoption-merge-surfaces-source-array"><code class="xref std std-option docutils literal"><span class="pre">-source-array</span></code></a> has unique negative labels for each such inserted
+divider surface patch which enable the extraction or removal of these
+dividers again when a genus-0 surface is required again. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-normals">
+<span id="cmdoption-merge-surfaces-nonormals"></span><code class="descname">-normals</code><code class="descclassname"> [on|off]</code><code class="descclassname">, </code><code class="descname">-nonormals</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable output of surface point and cell normals. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-point-normals">
+<span id="cmdoption-merge-surfaces-nopoint-normals"></span><code class="descname">-point-normals</code><code class="descclassname"> [on|off]</code><code class="descclassname">, </code><code class="descname">-nopoint-normals</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-point-normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable output of surface point normals. (default: on)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-cell-normals">
+<span id="cmdoption-merge-surfaces-nocell-normals"></span><code class="descname">-cell-normals</code><code class="descclassname"> [on|off]</code><code class="descclassname">, </code><code class="descname">-nocell-normals</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-cell-normals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable output of surface cell normals. (default: on)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-v">
+<span id="cmdoption-merge-surfaces-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-merge-surfaces-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-merge-surfaces-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-merge-surfaces-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-merge-surfaces-h">
+<span id="cmdoption-merge-surfaces-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-merge-surfaces-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="normalize.html" title="normalize"
+             >next</a></li>
+        <li class="right" >
+          <a href="measure-volume.html" title="measure-volume"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

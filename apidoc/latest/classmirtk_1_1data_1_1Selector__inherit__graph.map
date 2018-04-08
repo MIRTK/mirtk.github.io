@@ -1,0 +1,13 @@
+<map id="mirtk::data::Selector" name="mirtk::data::Selector">
+<area shape="rect" id="node5" href="$classmirtk_1_1data_1_1LogicalOp.html" title="Combine one or more data selection criteria using a logical operator. " alt="" coords="180,395,336,525"/>
+<area shape="rect" id="node11" href="$classmirtk_1_1data_1_1SelectionCriterium.html" title="Base class of data selection criteria. " alt="" coords="629,411,828,509"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="431,6,555,199"/>
+<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1LogicalAnd.html" title="Combine one or more data selection criteria using a logical AND. " alt="" coords="4,590,160,671"/>
+<area shape="rect" id="node9" href="$classmirtk_1_1data_1_1LogicalOr.html" title="Combine one or more data selection criteria using a logical OR. " alt="" coords="185,590,332,671"/>
+<area shape="rect" id="node13" href="$classmirtk_1_1data_1_1select_1_1Equal.html" title="Select data points with a value equal the specified value. " alt="" coords="357,574,483,687"/>
+<area shape="rect" id="node15" href="$classmirtk_1_1data_1_1select_1_1GreaterOrEqual.html" title="Select data points with a value greater than or equal the specified threshold. " alt="" coords="507,574,641,687"/>
+<area shape="rect" id="node17" href="$classmirtk_1_1data_1_1select_1_1GreaterThan.html" title="Select data points with a value greater than the specified threshold. " alt="" coords="666,574,792,687"/>
+<area shape="rect" id="node19" href="$classmirtk_1_1data_1_1select_1_1LessOrEqual.html" title="Select data points with a value less than or equal the specified threshold. " alt="" coords="816,574,941,687"/>
+<area shape="rect" id="node21" href="$classmirtk_1_1data_1_1select_1_1LessThan.html" title="Select data points with a value less than the specified threshold. " alt="" coords="965,574,1091,687"/>
+<area shape="rect" id="node23" href="$classmirtk_1_1data_1_1select_1_1NotEqual.html" title="Select data points a value different from the specified value. " alt="" coords="1114,574,1240,687"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="mirtk::data::SelectionCriterium" name="mirtk::data::SelectionCriterium">
+<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1select_1_1Equal.html" title="Select data points with a value equal the specified value. " alt="" coords="5,542,131,655"/>
+<area shape="rect" id="node9" href="$classmirtk_1_1data_1_1select_1_1GreaterOrEqual.html" title="Select data points with a value greater than or equal the specified threshold. " alt="" coords="155,542,289,655"/>
+<area shape="rect" id="node11" href="$classmirtk_1_1data_1_1select_1_1GreaterThan.html" title="Select data points with a value greater than the specified threshold. " alt="" coords="314,542,440,655"/>
+<area shape="rect" id="node13" href="$classmirtk_1_1data_1_1select_1_1LessOrEqual.html" title="Select data points with a value less than or equal the specified threshold. " alt="" coords="464,542,589,655"/>
+<area shape="rect" id="node15" href="$classmirtk_1_1data_1_1select_1_1LessThan.html" title="Select data points with a value less than the specified threshold. " alt="" coords="613,542,739,655"/>
+<area shape="rect" id="node17" href="$classmirtk_1_1data_1_1select_1_1NotEqual.html" title="Select data points a value different from the specified value. " alt="" coords="762,542,888,655"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1Selector.html" title="Base class of data selectors. " alt="" coords="382,249,521,346"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="390,6,513,199"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="mirtk::data::LogicalOp" name="mirtk::data::LogicalOp">
+<area shape="rect" id="node7" href="$classmirtk_1_1data_1_1LogicalAnd.html" title="Combine one or more data selection criteria using a logical AND. " alt="" coords="4,574,160,655"/>
+<area shape="rect" id="node9" href="$classmirtk_1_1data_1_1LogicalOr.html" title="Combine one or more data selection criteria using a logical OR. " alt="" coords="185,574,332,655"/>
+<area shape="rect" id="node2" href="$classmirtk_1_1data_1_1Selector.html" title="Base class of data selectors. " alt="" coords="101,249,240,346"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="108,6,232,199"/>
+</map>

@@ -1,0 +1,216 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>compose-maps &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="construct-atlas" href="construct-atlas.html" />
+    <link rel="prev" title="compose-dofs" href="compose-dofs.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="construct-atlas.html" title="construct-atlas"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="compose-dofs.html" title="compose-dofs"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="compose-maps">
+<h1>compose-maps<a class="headerlink" href="#compose-maps" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">compose</span><span class="o">-</span><span class="n">maps</span> <span class="o">&lt;</span><span class="n">f1</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">f2</span><span class="o">&gt;...</span> <span class="o">&lt;</span><span class="n">g</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Computes the composition g of the given input maps such that</p>
+<div class="math">
+\[g(x) = fn o ... o f2 o f1(x)\]</div>
+<p>The first input map, f1, must be a piecewise linear map defined at a discrete set of points.
+Values of the composite output map are computed for these input points only and the resulting
+map is also a piecewise linear map with identical discretized domain. All other maps, except
+the last one, fn, must have codomain dimension 2 or 3. Each input map can be either a surface
+map computed with the map-surface command, a volumetric map computed with the map-volume
+command, or one of the following analytic maps. Parameters of the analytic maps can be passed
+in parenthesis after the map name and must be separated by comma. See Examples below.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Mapping</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>SquareToDisk</td>
+<td>Map 2D points in a square to a disk bounded by the incircle.</td>
+</tr>
+<tr class="row-odd"><td>DiskToSquare</td>
+<td>Inverse of SquareToDisk.</td>
+</tr>
+<tr class="row-even"><td>StereographicProjection</td>
+<td>Stereographic projection from the sphere to the plane. Use argument
+&#8216;N&#8217; or &#8216;S&#8217; for a projection from the north pole or south pole,
+respectively. The default projection is to the plane at &#8216;z=0&#8217;.
+When the input points are within a disk, all points are mapped to
+hemisphere opposite of the projection pole.</td>
+</tr>
+<tr class="row-odd"><td>InverseStereographicProjection</td>
+<td>Inverse of StereographicProjection.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-compose-maps-v">
+<span id="cmdoption-compose-maps-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-compose-maps-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-maps-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-compose-maps-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-maps-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-compose-maps-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-maps-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-compose-maps-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-compose-maps-h">
+<span id="cmdoption-compose-maps-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-compose-maps-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p><strong>Command</strong>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">compose</span><span class="o">-</span><span class="n">maps</span> <span class="n">surface</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">disk</span><span class="o">.</span><span class="n">vtp</span> <span class="s1">&#39;InverseStereographicProjection(pole=N,r=1)&#39;</span> <span class="n">surface</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">southern</span><span class="o">-</span><span class="n">hemisphere</span><span class="o">.</span><span class="n">vtp</span>
+</pre></div>
+</div>
+<p><strong>Output/Description</strong>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Composes</span> <span class="n">the</span> <span class="n">given</span> <span class="nb">input</span> <span class="n">surface</span> <span class="nb">map</span> <span class="n">which</span> <span class="n">maps</span> <span class="n">each</span> <span class="n">point</span> <span class="n">on</span> <span class="n">a</span> <span class="n">surface</span> <span class="n">embedded</span> <span class="ow">in</span> <span class="mi">3</span><span class="n">D</span>
+<span class="n">Euclidean</span> <span class="n">space</span> <span class="n">to</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">disk</span> <span class="k">with</span> <span class="n">an</span> <span class="n">inverse</span> <span class="n">stereographic</span> <span class="n">projection</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">north</span> <span class="n">pole</span>
+<span class="n">to</span> <span class="n">the</span> <span class="n">plane</span> <span class="n">containing</span> <span class="n">the</span> <span class="n">disk</span><span class="o">.</span> <span class="n">The</span> <span class="n">resulting</span> <span class="n">piecewise</span> <span class="n">linear</span> <span class="n">surface</span> <span class="nb">map</span> <span class="n">projects</span> <span class="n">the</span>
+<span class="n">points</span> <span class="n">onto</span> <span class="n">the</span> <span class="n">southern</span> <span class="n">hemisphere</span> <span class="n">of</span> <span class="n">the</span> <span class="n">unit</span> <span class="n">sphere</span><span class="o">.</span> <span class="n">The</span> <span class="n">default</span> <span class="n">radius</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="ow">is</span> <span class="n">equal</span>
+<span class="n">to</span> <span class="n">the</span> <span class="n">maximum</span> <span class="n">distance</span> <span class="n">of</span> <span class="n">the</span> <span class="n">points</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">origin</span> <span class="n">along</span> <span class="n">the</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">y</span> <span class="n">axis</span><span class="p">,</span> <span class="n">respectively</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="construct-atlas.html" title="construct-atlas"
+             >next</a></li>
+        <li class="right" >
+          <a href="compose-dofs.html" title="compose-dofs"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

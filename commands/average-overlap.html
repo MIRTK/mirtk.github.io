@@ -1,0 +1,190 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>average-overlap &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="bisect-dof" href="bisect-dof.html" />
+    <link rel="prev" title="average-measure" href="average-measure.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="bisect-dof.html" title="bisect-dof"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="average-measure.html" title="average-measure"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="average-overlap">
+<h1>average-overlap<a class="headerlink" href="#average-overlap" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">average</span><span class="o">-</span><span class="n">overlap</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">micro</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">measure</span> <span class="n">MEASURE</span> <span class="p">[</span><span class="n">MEASURE</span> <span class="o">...</span><span class="p">]]</span>
+<span class="p">[</span><span class="o">--</span><span class="n">segment</span> <span class="n">NAME</span> <span class="n">LABEL</span><span class="o">...</span> <span class="p">[</span><span class="n">NAME</span> <span class="n">LABEL</span><span class="o">...</span> <span class="o">...</span><span class="p">]]</span>
+<span class="p">[</span><span class="o">--</span><span class="n">noheader</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">noid</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">output</span> <span class="n">OUTPUT</span><span class="p">]</span>
+<span class="n">tables</span> <span class="p">[</span><span class="n">tables</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>No description available.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-average-overlap-arg-tables">
+<code class="descname">tables</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-overlap-arg-tables" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of CSV files written by evaluate-overlap -table
+option.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-average-overlap-h">
+<span id="cmdoption-average-overlap--help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">--help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-overlap-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-overlap--micro">
+<span id="cmdoption-average-overlap-micro"></span><code class="descname">--micro</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-micro</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-overlap--micro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute micro-average of each measure instead of a
+macro-average.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-overlap--measure">
+<span id="cmdoption-average-overlap-measure"></span><span id="cmdoption-average-overlap--metric"></span><span id="cmdoption-average-overlap-metric"></span><code class="descname">--measure</code><code class="descclassname"> MEASURE [MEASURE ...]</code><code class="descclassname">, </code><code class="descname">-measure</code><code class="descclassname"> MEASURE [MEASURE ...]</code><code class="descclassname">, </code><code class="descname">--metric</code><code class="descclassname"> MEASURE [MEASURE ...]</code><code class="descclassname">, </code><code class="descname">-metric</code><code class="descclassname"> MEASURE [MEASURE ...]</code><a class="headerlink" href="#cmdoption-average-overlap--measure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overlap measure(s) to include in output, all by
+default.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-overlap--segment">
+<span id="cmdoption-average-overlap-segment"></span><code class="descname">--segment</code><code class="descclassname"> NAME LABEL... [NAME LABEL... ...]</code><code class="descclassname">, </code><code class="descname">-segment</code><code class="descclassname"> NAME LABEL... [NAME LABEL... ...]</code><a class="headerlink" href="#cmdoption-average-overlap--segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Average the overlap measures for the specified labels,
+LABEL must be integer or range &#8216;5..10&#8217;.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-overlap--noheader">
+<code class="descname">--noheader</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-overlap--noheader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input tables have no header row, cannot use &#8211;measure
+and &#8211;micro options then.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-overlap--noid">
+<code class="descname">--noid</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-average-overlap--noid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input tables have no label/subject ID column at index
+0.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-average-overlap--output">
+<span id="cmdoption-average-overlap-output"></span><code class="descname">--output</code><code class="descclassname"> OUTPUT</code><code class="descclassname">, </code><code class="descname">-output</code><code class="descclassname"> OUTPUT</code><a class="headerlink" href="#cmdoption-average-overlap--output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of output text file.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="bisect-dof.html" title="bisect-dof"
+             >next</a></li>
+        <li class="right" >
+          <a href="average-measure.html" title="average-measure"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

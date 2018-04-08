@@ -1,0 +1,281 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>aggregate-images &mdash; MIRTK</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v2.0 (8c2aa10)',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="MIRTK" href="../sidebar.html" />
+    <link rel="up" title="Applications" href="../commands.html" />
+    <link rel="next" title="average-dofs" href="average-dofs.html" />
+    <link rel="prev" title="Applications" href="../commands.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="average-dofs.html" title="average-dofs"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="../commands.html" title="Applications"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" accesskey="U">Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../sidebar.html">Table Of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getstarted.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commands.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc.html">Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="aggregate-images">
+<h1>aggregate-images<a class="headerlink" href="#aggregate-images" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">aggregate</span><span class="o">-</span><span class="n">images</span> <span class="o">&lt;</span><span class="n">mode</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">image</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">image</span><span class="o">&gt;...</span> <span class="o">-</span><span class="n">output</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Aggregates multiple (co-registered) input images into a single output image
+or report statistics thereof within a specified region of interest.
+The input images have to be defined in the same discrete finite image space.</p>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-aggregate-images-arg-mode">
+<code class="descname">mode</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-aggregate-images-arg-mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of function used to aggregate input values:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">mu</span></code>, <code class="docutils literal"><span class="pre">mean</span></code>, <code class="docutils literal"><span class="pre">average</span></code>, <code class="docutils literal"><span class="pre">avg</span></code>: Mean intensity.</li>
+<li><code class="docutils literal"><span class="pre">sd</span></code>, <code class="docutils literal"><span class="pre">stdev</span></code>, <code class="docutils literal"><span class="pre">stddev</span></code>, <code class="docutils literal"><span class="pre">sigma</span></code>: Standard deviation.</li>
+<li><code class="docutils literal"><span class="pre">gini</span></code>, <code class="docutils literal"><span class="pre">gini-coefficient</span></code>: Gini coefficient in [0, 1].</li>
+<li><code class="docutils literal"><span class="pre">theil</span></code>, <code class="docutils literal"><span class="pre">theil-index</span></code>: Theil index, equivalent to GE(1).</li>
+<li><code class="docutils literal"><span class="pre">entropy-index</span></code>, <code class="docutils literal"><span class="pre">ge</span></code>: Generalized entropy index (GE), see also <a class="reference internal" href="#cmdoption-aggregate-images-alpha"><code class="xref std std-option docutils literal"><span class="pre">-alpha</span></code></a>.&#8221;</li>
+<li><code class="docutils literal"><span class="pre">entropy</span></code>: Shannon entropy, see also <a class="reference internal" href="#cmdoption-aggregate-images-bins"><code class="xref std std-option docutils literal"><span class="pre">-bins</span></code></a> and <a class="reference internal" href="#cmdoption-aggregate-images-parzen"><code class="xref std std-option docutils literal"><span class="pre">-parzen</span></code></a>.</li>
+<li><code class="docutils literal"><span class="pre">mode</span></code>, <code class="docutils literal"><span class="pre">majority</span></code>: Smallest modal value, can also be used for majority voting of labels.</li>
+<li><code class="docutils literal"><span class="pre">label-consistency</span></code>, <code class="docutils literal"><span class="pre">overlap</span></code>: Mean Dice overlap of all pairs of labels.</li>
+</ul>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-arg-image">
+<code class="descname">image</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-aggregate-images-arg-image" title="Permalink to this definition">¶</a></dt>
+<dd><p>File names of at least two input images.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-output">
+<code class="descname">-output</code><code class="descclassname"> &lt;file&gt;</code><a class="headerlink" href="#cmdoption-aggregate-images-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Voxel-wise aggregate image.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="command-options">
+<h2>Command options<a class="headerlink" href="#command-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-aggregate-images-dtype">
+<code class="descname">-dtype</code><code class="descclassname"> char|uchar|short|ushort|int|uint|float|double</code><a class="headerlink" href="#cmdoption-aggregate-images-dtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data type of output image. (default: float)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-padding">
+<code class="descname">-padding</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-aggregate-images-padding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Background value of voxels to be ignored during <a class="reference internal" href="#cmdoption-aggregate-images-normalization"><code class="xref std std-option docutils literal"><span class="pre">-normalization</span></code></a> (default: NaN).</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-normalization">
+<span id="cmdoption-aggregate-images-normalize"></span><code class="descname">-normalization</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-normalize</code><code class="descclassname"> &lt;mode&gt;</code><a class="headerlink" href="#cmdoption-aggregate-images-normalization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Input intensity normalization:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">none</span></code>:    Use input intensities unmodified. (default)</li>
+<li><code class="docutils literal"><span class="pre">mean</span></code>:    Divide by mean foreground value.</li>
+<li><code class="docutils literal"><span class="pre">median</span></code>:  Divide by median foreground value.</li>
+<li><code class="docutils literal"><span class="pre">z-score</span></code>: Subtract mean and divide by standard deviation.</li>
+<li><code class="docutils literal"><span class="pre">unit</span></code>:    Rescale input intensities to [0, 1].</li>
+</ul>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-rescale">
+<code class="descname">-rescale</code><code class="descclassname"> [&lt;min&gt;] &lt;max&gt;</code><a class="headerlink" href="#cmdoption-aggregate-images-rescale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rescale normalized intensities to specified range. When &lt;min&gt; not specified,
+it is set to zero, i.e., the range is [0, &lt;max&gt;]. Intensities are only rescaled
+when &lt;min&gt; is less than &lt;max&gt;. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-threshold">
+<code class="descname">-threshold</code><code class="descclassname"> &lt;0-1&gt;</code><a class="headerlink" href="#cmdoption-aggregate-images-threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Percentage in [0, 1] of input images that must have a value not equal to the
+specified <a class="reference internal" href="#cmdoption-aggregate-images-padding"><code class="xref std std-option docutils literal"><span class="pre">-padding</span></code></a> value. Otherwise, the output value is background. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-alpha">
+<code class="descname">-alpha</code><code class="descclassname"> &lt;value&gt;</code><a class="headerlink" href="#cmdoption-aggregate-images-alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alpha value of the generalized entropy index, where alpha=0 is the mean log deviation, alpha=1
+is the Theil coefficient, and alpha=2 is half the squared coefficient of variation. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-bins">
+<code class="descname">-bins</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-aggregate-images-bins" title="Permalink to this definition">¶</a></dt>
+<dd><p>No. of bins used for histogram-based aggregation functions. (default: 64)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-parzen">
+<code class="descname">-parzen</code><code class="descclassname"> [yes|no|on|off]</code><a class="headerlink" href="#cmdoption-aggregate-images-parzen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use Parzen window based histogram estimation. (default: off)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-intersection">
+<code class="descname">-intersection</code><code class="descclassname"> [yes|no|on|off]</code><a class="headerlink" href="#cmdoption-aggregate-images-intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate aggregation function for every voxel for which no input value is
+equal the specified <a class="reference internal" href="#cmdoption-aggregate-images-padding"><code class="xref std std-option docutils literal"><span class="pre">-padding</span></code></a> value. By default, only voxels for which
+all input values are equal to the <a class="reference internal" href="#cmdoption-aggregate-images-padding"><code class="xref std std-option docutils literal"><span class="pre">-padding</span></code></a> value are excluded. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="standard-options">
+<h2>Standard options<a class="headerlink" href="#standard-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-aggregate-images-v">
+<span id="cmdoption-aggregate-images-verbose"></span><code class="descname">-v</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-verbose</code><code class="descclassname"> [n]</code><a class="headerlink" href="#cmdoption-aggregate-images-v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set verbosity of output messages. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-debug">
+<code class="descname">-debug</code><code class="descclassname"> [level]</code><a class="headerlink" href="#cmdoption-aggregate-images-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase/Set debug level for output of intermediate results. (default: 0)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-version">
+<code class="descname">-version</code><code class="descclassname"> [major.minor]</code><a class="headerlink" href="#cmdoption-aggregate-images-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print version and exit or set version to emulate.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-revision">
+<code class="descname">-revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-aggregate-images-revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print revision (or version) number only and exit.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-aggregate-images-h">
+<span id="cmdoption-aggregate-images-help"></span><code class="descname">-h</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-help</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-aggregate-images-h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print help and exit.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="terminal-options">
+<h2>Terminal options<a class="headerlink" href="#terminal-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-aggregate-images-color">
+<span id="cmdoption-aggregate-images-nocolor"></span><code class="descname">-color</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-nocolor</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-aggregate-images-color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable/disable colored output. (default: off)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="parallelization-options">
+<h2>Parallelization options<a class="headerlink" href="#parallelization-options" title="Permalink to this headline">¶</a></h2>
+<dl class="option">
+<dt id="cmdoption-aggregate-images-threads">
+<code class="descname">-threads</code><code class="descclassname"> &lt;n&gt;</code><a class="headerlink" href="#cmdoption-aggregate-images-threads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use maximal &lt;n&gt; threads for parallel execution. (default: automatic)</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="average-dofs.html" title="average-dofs"
+             >next</a></li>
+        <li class="right" >
+          <a href="../commands.html" title="Applications"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../sidebar.html">MIRTK</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../commands.html" >Applications</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

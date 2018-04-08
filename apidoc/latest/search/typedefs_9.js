@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['jacobianfield',['JacobianField',['../classmirtk_1_1ScalingAndSquaring.html#a65199550762915ff08cbef0a493bcc59',1,'mirtk::ScalingAndSquaring']]],
-  ['jointhistogramtype',['JointHistogramType',['../classmirtk_1_1HistogramImageSimilarity.html#a80c35840a3524615b54b864b140c4ab5',1,'mirtk::HistogramImageSimilarity']]]
+  ['kernel',['Kernel',['../classmirtk_1_1GenericSincInterpolateImageFunction.html#adec693f02718893e6853ab4793d79735',1,'mirtk::GenericSincInterpolateImageFunction']]],
+  ['kerneltype',['KernelType',['../classmirtk_1_1CubicBSplineConvolution.html#a9f67ba11440c551e0af04e98894c63d3',1,'mirtk::CubicBSplineConvolution::KernelType()'],['../classmirtk_1_1GaussianBlurring.html#ac05fc3b0b63b152e1d3b5edb01555417',1,'mirtk::GaussianBlurring::KernelType()'],['../classmirtk_1_1SeparableConvolution.html#acf0cb9c87a552f61f6af7fa3253ea7a4',1,'mirtk::SeparableConvolution::KernelType()']]]
 ];

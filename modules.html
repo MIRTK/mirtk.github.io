@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v1.1 (1abd31d)',
+        VERSION:     'v2.0 (8c2aa10)',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,18 +24,18 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
-    <link rel="top" title="MIRTK" href="index.html" />
+    <link rel="top" title="MIRTK" href="sidebar.html" />
     <link rel="next" title="Common Module" href="modules/common.html" />
     <link rel="prev" title="transform-points" href="commands/transform-points.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +44,12 @@
         <li class="right" >
           <a href="commands/transform-points.html" title="transform-points"
              accesskey="P">previous</a> |</li>
-        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -57,9 +57,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
 <h3><a href="sidebar.html">Table Of Contents</a></h3>
@@ -67,7 +64,7 @@
 <li class="toctree-l1"><a class="reference internal" href="index.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getstarted.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands.html">Applications</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Modules</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modules</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#core-modules">Core Modules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#common">Common</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#numerics">Numerics</a></li>
@@ -80,7 +77,9 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#external-packages">External Packages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#deformable">Deformable</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#volumetric-mapping">Volumetric Mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapping">Mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scripting">Scripting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#draw-em">Draw-EM</a></li>
 </ul>
 </li>
 </ul>
@@ -102,7 +101,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="modules">
 <span id="id1"></span><h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
@@ -116,14 +115,14 @@
 <p>The Common module of the Medical Image Registration ToolKit (MIRTK) defines the base
 classes from which other MIRTK classes are derived. It further contains common
 auxiliary functions and a simple command-line parsing library.</p>
-<p><a class="reference internal" href="modules/common.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/common.html"><span class="doc">[more]</span></a></p>
 </div>
 <div class="section" id="numerics">
 <h3>Numerics<a class="headerlink" href="#numerics" title="Permalink to this headline">¶</a></h3>
 <p>The Numerics module of the Medical Image Registration ToolKit (MIRTK) provides basic
 support for linear algebra computations. It further defines an abstract interface
 for objective functions to be minimized by one of the available iterative optimizers.</p>
-<p><a class="reference internal" href="modules/numerics.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/numerics.html"><span class="doc">[more]</span></a></p>
 </div>
 <div class="section" id="image">
 <h3>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h3>
@@ -132,7 +131,7 @@ and basic filters for imaging data sampled on a uniform grid. It contains image
 interpolation functions which enable the evaluation of these finite discrete images
 in an infinite continuous domain. This is in particular needed for the deformation of
 an image during and after registration.</p>
-<p><a class="reference internal" href="modules/image.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/image.html"><span class="doc">[more]</span></a></p>
 </div>
 <div class="section" id="i-o">
 <h3>I/O<a class="headerlink" href="#i-o" title="Permalink to this headline">¶</a></h3>
@@ -140,7 +139,7 @@ an image during and after registration.</p>
 reading and writing of image and point set files. Supported file formats are
 GIPL, PGM, and the <a class="reference external" href="http://nifti.nimh.nih.gov">NIfTI file format</a>.
 Image slices can further be written to PNG image files when the MIRTK was built WITH_PNG.</p>
-<p><a class="reference internal" href="modules/io.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/io.html"><span class="doc">[more]</span></a></p>
 </div>
 <div class="section" id="point-set">
 <h3>Point Set<a class="headerlink" href="#point-set" title="Permalink to this headline">¶</a></h3>
@@ -148,19 +147,19 @@ Image slices can further be written to PNG image files when the MIRTK was built 
 support for general point sets such as fidicual markers, surface meshes, and
 volumetric tetrahedral meshes. It defines different auxiliary types used to
 establish point correspondences between two given point sets/surface meshes.
-These correpondences can be utilized by the <a class="reference internal" href="modules/registration.html"><em>Registration</em></a> module to find a
+These correpondences can be utilized by the <a class="reference internal" href="modules/registration.html"><span class="doc">Registration</span></a> module to find a
 transformation that aligns two given point sets.</p>
-<p><a class="reference internal" href="modules/pointset.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/pointset.html"><span class="doc">[more]</span></a></p>
 </div>
 <div class="section" id="transformation">
 <h3>Transformation<a class="headerlink" href="#transformation" title="Permalink to this headline">¶</a></h3>
 <p>The Transformation module of the Medical Image Registration ToolKit (MIRTK)
-defines the different transformation models supported by the <a class="reference internal" href="modules/registration.html"><em>Registration</em></a>
+defines the different transformation models supported by the <a class="reference internal" href="modules/registration.html"><span class="doc">Registration</span></a>
 module. These include linear homogeneous transformation types and non-rigid
 free-form deformations. The Transformation module further includes a number
 of transformation constraint terms which can be used to regularize the
 registration problem.</p>
-<p><a class="reference internal" href="modules/transformation.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/transformation.html"><span class="doc">[more]</span></a></p>
 </div>
 <div class="section" id="registration">
 <span id="registrationabstract"></span><h3>Registration<a class="headerlink" href="#registration" title="Permalink to this headline">¶</a></h3>
@@ -171,7 +170,7 @@ minimization problem. The object function, referred to as registration energy
 in this context, is put together using the various energy terms. An energy
 term can be either an image (dis-)similarity measure, a transformation
 constraint, or a point set/surface constraint.</p>
-<p><a class="reference internal" href="modules/registration.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/registration.html"><span class="doc">[more]</span></a></p>
 </div>
 </div>
 <div class="section" id="external-packages">
@@ -183,21 +182,38 @@ These are either loosely bound optional modules or modules contributed by users.
 <h3>Deformable<a class="headerlink" href="#deformable" title="Permalink to this headline">¶</a></h3>
 <p>The Deformable module of the Medical Image Registration ToolKit (MIRTK) is a library
 for the Euler integration of deformable meshes such as cortical surfaces.
-The <a class="reference internal" href="commands/deform-mesh.html"><em>deform-mesh</em></a> command can be used to deform an initial mesh such as the convex hull
+The <a class="reference internal" href="commands/deform-mesh.html"><span class="doc">deform-mesh</span></a> command can be used to deform an initial mesh such as the convex hull
 of an input segmentation or a bounding sphere based on internal and external
 point set/surface forces. The integration is stopped when a suitable stopping criterion
 is fullfilled such as a fixed number of iterations, target objective function value,
 or surface smoothness (e.g., for cortical surface inflation). The internal forces
-can further be utilized by the <a class="reference internal" href="modules/registration.html"><em>Registration</em></a> module to constrain the transformation,
+can further be utilized by the <a class="reference internal" href="modules/registration.html"><span class="doc">Registration</span></a> module to constrain the transformation,
 for example, to constrain the cortical surface to remain smooth after transformation.</p>
-<p><a class="reference internal" href="modules/deformable.html"><em>[more]</em></a></p>
+<p><a class="reference internal" href="modules/deformable.html"><span class="doc">[more]</span></a></p>
 </div>
-<div class="section" id="volumetric-mapping">
-<h3>Volumetric Mapping<a class="headerlink" href="#volumetric-mapping" title="Permalink to this headline">¶</a></h3>
-<p>The Volumetric Mapping module of the Medical Image Registration ToolKit (MIRTK) is a library
-for the volumetric mapping of brain volumes. The <a class="reference internal" href="commands/map.html"><em>map</em></a> command can be used to
-compute such volumetric map and to apply it to an input tetrahedral mesh.</p>
-<p><a class="reference internal" href="modules/volumetricmapping.html"><em>[more]</em></a></p>
+<div class="section" id="mapping">
+<h3>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h3>
+<p>The Mapping module of the Medical Image Registration ToolKit (MIRTK) is a library
+for the mapping of brain surfaces and volumes. The <a class="reference internal" href="commands/map-surface.html"><span class="doc">map-surface</span></a>
+and <a class="reference internal" href="commands/map-volume.html"><span class="doc">map-volume</span></a> commands can be used to compute such (harmonic)
+surface or volumetric maps.</p>
+<p><a class="reference internal" href="modules/mapping.html"><span class="doc">[more]</span></a></p>
+</div>
+<div class="section" id="scripting">
+<h3>Scripting<a class="headerlink" href="#scripting" title="Permalink to this headline">¶</a></h3>
+<p>The Scripting module is a library of modules written in commonly used scripting
+languages which can be used to write custom scripts for medical image analysis.</p>
+<p><a class="reference internal" href="modules/scripting.html"><span class="doc">[more]</span></a></p>
+</div>
+<div class="section" id="draw-em">
+<h3>Draw-EM<a class="headerlink" href="#draw-em" title="Permalink to this headline">¶</a></h3>
+<p>The Developing brain Region Annotation With Expectation-Maximization (Draw-EM)
+module of the Medical Image Registration ToolKit (MIRTK) provides command-line
+tools for the automatic segmentation of neonatal brain MR images into the major
+tissue classes and a detailed structural segmentation. It is developed by
+<a class="reference external" href="http://www.doc.ic.ac.uk/~am411">Antonios Makropoulos</a>. Please cite his
+TMI paper when you use the Draw-EM segmentations in your research studies.</p>
+<p><a class="reference internal" href="modules/drawem.html"><span class="doc">[more]</span></a></p>
 </div>
 </div>
 </div>
@@ -208,7 +224,7 @@ compute such volumetric map and to apply it to an input tetrahedral mesh.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -217,12 +233,12 @@ compute such volumetric map and to apply it to an input tetrahedral mesh.</p>
         <li class="right" >
           <a href="commands/transform-points.html" title="transform-points"
              >previous</a> |</li>
-        <li><a href="sidebar.html">MIRTK</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="sidebar.html">MIRTK</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2013-2016 Imperial College London, Andreas Schuh.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2018 Imperial College London, Andreas Schuh.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

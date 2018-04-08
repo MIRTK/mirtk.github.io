@@ -1,6 +1,7 @@
 var searchData=
 [
   ['l2r',['L2R',['../classmirtk_1_1BaseImage.html#a299eb7f11bb568c28d3435d12e65ecf2a4ce1c630fb3a7192cff6eeaed1090b96',1,'mirtk::BaseImage']]],
+  ['largestfirst',['LargestFirst',['../classmirtk_1_1SurfacePatches.html#aa3c548050caeb9e93b1f30d364f20b49a6e699fc3d886f5917a3f888a17add9a5',1,'mirtk::SurfacePatches']]],
   ['linesearchendevent',['LineSearchEndEvent',['../namespacemirtk.html#a713bab184e30352ae34d9d6b0605744da6473aff5301a69fcfb6be97a71bf4b3f',1,'mirtk']]],
   ['linesearchiterationendevent',['LineSearchIterationEndEvent',['../namespacemirtk.html#a713bab184e30352ae34d9d6b0605744daa3c5b98229069435ef836ed60dfbe790',1,'mirtk']]],
   ['linesearchiterationstartevent',['LineSearchIterationStartEvent',['../namespacemirtk.html#a713bab184e30352ae34d9d6b0605744da17f476f00fa4924f1058caa36877ef96',1,'mirtk']]],

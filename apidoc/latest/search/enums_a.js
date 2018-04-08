@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['optimizationmethod',['OptimizationMethod',['../namespacemirtk.html#ad7cfacc210f05c4919d86f26070cbe55',1,'mirtk']]],
-  ['order',['Order',['../classmirtk_1_1PolyDataRemeshing.html#a4c01955dc5dcfe6321754270e576f3c2',1,'mirtk::PolyDataRemeshing']]],
-  ['orientationcode',['OrientationCode',['../classmirtk_1_1BaseImage.html#a299eb7f11bb568c28d3435d12e65ecf2',1,'mirtk::BaseImage']]],
-  ['outputtype',['OutputType',['../classmirtk_1_1HessianImageFilter.html#a78e0192a1807c57453f99accc24d9ddf',1,'mirtk::HessianImageFilter']]]
+  ['niftidatatype',['NiftiDataType',['../namespacemirtk.html#a188687d2edf551735f5b55cd7aad05a3',1,'mirtk']]],
+  ['niftiintent',['NiftiIntent',['../namespacemirtk.html#a4fbc382de23730ab4287f71a78d219cd',1,'mirtk']]],
+  ['niftiunits',['NiftiUnits',['../namespacemirtk.html#a8c5e9d64f9b5557cd73de6393bc36780',1,'mirtk']]],
+  ['niftixform',['NiftiXForm',['../namespacemirtk.html#a879095e0a9b483f59b131e0763a4fb6b',1,'mirtk']]]
 ];

@@ -1,0 +1,4 @@
+<map id="mirtk::FixedBoundarySurfaceMapper" name="mirtk::FixedBoundarySurfaceMapper">
+<area shape="rect" id="node2" href="$classmirtk_1_1SurfaceMapper.html" title="{mirtk::SurfaceMapper\n||+ Run()\l+ ~SurfaceMapper()\l# ComputeMap()\l# Finalize()\l# GetEdgeNeighborPoints()\l# GetPoint()\l# Initialize()\l# NumberOfInteriorPoints()\l# NumberOfPoints()\l# operator=()\l# Point()\l# SurfaceMapper()\l# SurfaceMapper()\l}" alt="" coords="27,249,212,522"/>
+<area shape="rect" id="node4" href="$classmirtk_1_1Object.html" title="{mirtk::Object\n||+ NameOfClass()\l+ Parameter()\l+ Parameter()\l+ Set()\l+ ~Object()\l+ NameOfType()\l# Throw()\l# ThrowStatic()\l}" alt="" coords="58,6,181,199"/>
+</map>
